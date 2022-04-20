@@ -2,7 +2,7 @@ import 'package:openapi_generator_annotations/openapi_generator_annotations.dart
 
 @Openapi(
   additionalProperties: AdditionalProperties(
-    pubName: 'tpsalesservice_mobile_api_client',
+    pubName: 'tepsalesservice_mobile_api_client',
     pubAuthor: 'Tecno&Pec',
     pubAuthorEmail: 'admin@tecnoepec.com.br',
     pubVersion: '1.0.0',
@@ -11,7 +11,7 @@ import 'package:openapi_generator_annotations/openapi_generator_annotations.dart
   ),
   inputSpecFile: 'swagger.json',
   generatorName: Generator.dioNext,
-  outputDirectory: '../tpsalesservice_mobile_api_client',
+  outputDirectory: '../tepsalesservice_mobile_api_client',
   alwaysRun: true,
   overwriteExistingFiles: true,
 )
