@@ -1,0 +1,1126 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Tep.Sales.Service API",
+    "description": "Tep.Sales.Service API",
+    "termsOfService": "https://github.com/",
+    "contact": {
+      "name": "Administrator",
+      "url": "https://github.com/jefersonmlopes",
+      "email": "admin@tecnoepec.com.br"
+    },
+    "license": {
+      "name": "Use under MIT License",
+      "url": "https://github.com/"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/tepsales/v1/audits": {
+      "get": {
+        "tags": [
+          "Audit"
+        ],
+        "summary": "Get All Audit by filter with pagination",
+        "parameters": [
+          {
+            "name": "parentId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "entity",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "action",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/ActionType"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "userCreated",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "userUpdated",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting atributes, sample: id.desc,name.asc",
+            "schema": {
+              "type": "string",
+              "description": "Sorting atributes, sample: id.desc,name.asc",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "7793353b-f9ba-454a-95d6-2f3e05182649"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllPagedAuditResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/templates/{id}": {
+      "delete": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Delete Template by Id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Template id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Template id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "fc285134-f4f5-4e26-a1aa-fb4513fb1e8e"
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Get Template by id",
+        "operationId": "GetByIdTemplate",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Template id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Template id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "15a2e3df-3410-481b-ac6c-1a0bda1713f7"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllTemplateResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Update part of Template",
+        "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Template/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Template id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Template id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "817e1e9a-cf29-4fc5-b5b8-f798b53eec02"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Atributes values",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                },
+                "description": "Atributes values"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Update Template",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Template Id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Template Id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "2428f3b6-7309-4ce7-8ca9-3f7cc0945674"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Template to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutTemplateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/templates/paged": {
+      "get": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Get All Template by filter with pagination",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting atributes, sample: id.desc,name.asc",
+            "schema": {
+              "type": "string",
+              "description": "Sorting atributes, sample: id.desc,name.asc",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "487b3b8b-bec3-43ed-a3dd-51a8c29cfbf4"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllPagedTemplateResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/templates/all": {
+      "get": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Get All Template by filter",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "limit",
+            "schema": {
+              "type": "integer",
+              "description": "limit",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting atributes, sample: id.desc,name.asc",
+            "schema": {
+              "type": "string",
+              "description": "Sorting atributes, sample: id.desc,name.asc",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "68c2b094-61a1-453d-b443-e99446ad73f6"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllTemplateResponse"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/templates": {
+      "post": {
+        "tags": [
+          "Template"
+        ],
+        "summary": "Create Template",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "46fb2df9-2147-4aa4-9840-2cabb26f3f99"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Template to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostTemplateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostTemplateResponse"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/version": {
+      "get": {
+        "tags": [
+          "Version"
+        ],
+        "summary": "Get Version",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "1e5133db-a99a-45b9-b534-658670550199"
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Ok - The request has succeeded."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ActionType": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "GetAllAuditResponse": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "parentId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "entity": {
+            "type": "string",
+            "nullable": true
+          },
+          "action": {
+            "$ref": "#/components/schemas/ActionType"
+          },
+          "data": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllPagedAuditResponse": {
+        "type": "object",
+        "properties": {
+          "currentPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lastRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetAllAuditResponse"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ErrorDetails": {
+        "type": "object",
+        "properties": {
+          "statusCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "errorCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllTemplateResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OperationType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "Operation": {
+        "type": "object",
+        "properties": {
+          "operationType": {
+            "$ref": "#/components/schemas/OperationType"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true
+          },
+          "op": {
+            "type": "string",
+            "nullable": true
+          },
+          "from": {
+            "type": "string",
+            "nullable": true
+          },
+          "value": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PutTemplateRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllPagedTemplateResponse": {
+        "type": "object",
+        "properties": {
+          "currentPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lastRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetAllTemplateResponse"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostTemplateRequest": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostTemplateResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using the Bearer scheme. \r\n\r\n Enter 'Bearer' [space] and then your token in the text input below.\r\n\r\nExample: \"Bearer 12345abcdef\"",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}
