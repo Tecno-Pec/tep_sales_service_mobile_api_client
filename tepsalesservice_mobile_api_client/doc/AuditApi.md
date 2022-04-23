@@ -60,9 +60,9 @@ Name | Type | Description  | Notes
  **userUpdated** | **String**|  | [optional] 
  **page** | **int**|  | [optional] 
  **pageSize** | **int**|  | [optional] 
- **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
+ **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7793353b-f9ba-454a-95d6-2f3e05182649']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fb4f06e7-c10a-48d1-aa55-277d67efbe21']
 
 ### Return type
 

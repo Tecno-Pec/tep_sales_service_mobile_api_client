@@ -77,6 +77,56 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 [*AuditApi*](doc\AuditApi.md) | [**tepsalesV1AuditsGet**](doc\AuditApi.md#tepsalesv1auditsget) | **GET** /tepsales/v1/audits | Get All Audit by filter with pagination
+[*CatalogApi*](doc\CatalogApi.md) | [**getByIdCatalog**](doc\CatalogApi.md#getbyidcatalog) | **GET** /tepsales/v1/catalogs/{id} | Get Catalog by id
+[*CatalogApi*](doc\CatalogApi.md) | [**tepsalesV1CatalogsAllGet**](doc\CatalogApi.md#tepsalesv1catalogsallget) | **GET** /tepsales/v1/catalogs/all | Get All Catalog by filter
+[*CatalogApi*](doc\CatalogApi.md) | [**tepsalesV1CatalogsIdDelete**](doc\CatalogApi.md#tepsalesv1catalogsiddelete) | **DELETE** /tepsales/v1/catalogs/{id} | Delete Catalog by Id
+[*CatalogApi*](doc\CatalogApi.md) | [**tepsalesV1CatalogsIdPatch**](doc\CatalogApi.md#tepsalesv1catalogsidpatch) | **PATCH** /tepsales/v1/catalogs/{id} | Update part of Catalog
+[*CatalogApi*](doc\CatalogApi.md) | [**tepsalesV1CatalogsIdPut**](doc\CatalogApi.md#tepsalesv1catalogsidput) | **PUT** /tepsales/v1/catalogs/{id} | Update Catalog
+[*CatalogApi*](doc\CatalogApi.md) | [**tepsalesV1CatalogsPagedGet**](doc\CatalogApi.md#tepsalesv1catalogspagedget) | **GET** /tepsales/v1/catalogs/paged | Get All Catalog by filter with pagination
+[*CatalogApi*](doc\CatalogApi.md) | [**tepsalesV1CatalogsPost**](doc\CatalogApi.md#tepsalesv1catalogspost) | **POST** /tepsales/v1/catalogs | Create Catalog
+[*ClientApi*](doc\ClientApi.md) | [**getByIdClient**](doc\ClientApi.md#getbyidclient) | **GET** /tepsales/v1/clients/{id} | Get Client by id
+[*ClientApi*](doc\ClientApi.md) | [**tepsalesV1ClientsAllGet**](doc\ClientApi.md#tepsalesv1clientsallget) | **GET** /tepsales/v1/clients/all | Get All Client by filter
+[*ClientApi*](doc\ClientApi.md) | [**tepsalesV1ClientsIdDelete**](doc\ClientApi.md#tepsalesv1clientsiddelete) | **DELETE** /tepsales/v1/clients/{id} | Delete Client by Id
+[*ClientApi*](doc\ClientApi.md) | [**tepsalesV1ClientsIdPatch**](doc\ClientApi.md#tepsalesv1clientsidpatch) | **PATCH** /tepsales/v1/clients/{id} | Update part of Client
+[*ClientApi*](doc\ClientApi.md) | [**tepsalesV1ClientsIdPut**](doc\ClientApi.md#tepsalesv1clientsidput) | **PUT** /tepsales/v1/clients/{id} | Update Client
+[*ClientApi*](doc\ClientApi.md) | [**tepsalesV1ClientsPagedGet**](doc\ClientApi.md#tepsalesv1clientspagedget) | **GET** /tepsales/v1/clients/paged | Get All Client by filter with pagination
+[*ClientApi*](doc\ClientApi.md) | [**tepsalesV1ClientsPost**](doc\ClientApi.md#tepsalesv1clientspost) | **POST** /tepsales/v1/clients | Create Client
+[*ClientPropertyApi*](doc\ClientPropertyApi.md) | [**getByIdClientProperty**](doc\ClientPropertyApi.md#getbyidclientproperty) | **GET** /tepsales/v1/clientProperties/{id} | Get ClientProperty by id
+[*ClientPropertyApi*](doc\ClientPropertyApi.md) | [**tepsalesV1ClientPropertiesAllGet**](doc\ClientPropertyApi.md#tepsalesv1clientpropertiesallget) | **GET** /tepsales/v1/clientProperties/all | Get All ClientProperty by filter
+[*ClientPropertyApi*](doc\ClientPropertyApi.md) | [**tepsalesV1ClientPropertiesIdDelete**](doc\ClientPropertyApi.md#tepsalesv1clientpropertiesiddelete) | **DELETE** /tepsales/v1/clientProperties/{id} | Delete ClientProperty by Id
+[*ClientPropertyApi*](doc\ClientPropertyApi.md) | [**tepsalesV1ClientPropertiesIdPatch**](doc\ClientPropertyApi.md#tepsalesv1clientpropertiesidpatch) | **PATCH** /tepsales/v1/clientProperties/{id} | Update part of ClientProperty
+[*ClientPropertyApi*](doc\ClientPropertyApi.md) | [**tepsalesV1ClientPropertiesIdPut**](doc\ClientPropertyApi.md#tepsalesv1clientpropertiesidput) | **PUT** /tepsales/v1/clientProperties/{id} | Update ClientProperty
+[*ClientPropertyApi*](doc\ClientPropertyApi.md) | [**tepsalesV1ClientPropertiesPagedGet**](doc\ClientPropertyApi.md#tepsalesv1clientpropertiespagedget) | **GET** /tepsales/v1/clientProperties/paged | Get All ClientProperty by filter with pagination
+[*ClientPropertyApi*](doc\ClientPropertyApi.md) | [**tepsalesV1ClientPropertiesPost**](doc\ClientPropertyApi.md#tepsalesv1clientpropertiespost) | **POST** /tepsales/v1/clientProperties | Create ClientProperty
+[*CompanyApi*](doc\CompanyApi.md) | [**getByIdCompany**](doc\CompanyApi.md#getbyidcompany) | **GET** /tepsales/v1/companies/{id} | Get Company by id
+[*CompanyApi*](doc\CompanyApi.md) | [**tepsalesV1CompaniesAllGet**](doc\CompanyApi.md#tepsalesv1companiesallget) | **GET** /tepsales/v1/companies/all | Get All Company by filter
+[*CompanyApi*](doc\CompanyApi.md) | [**tepsalesV1CompaniesIdDelete**](doc\CompanyApi.md#tepsalesv1companiesiddelete) | **DELETE** /tepsales/v1/companies/{id} | Delete Company by Id
+[*CompanyApi*](doc\CompanyApi.md) | [**tepsalesV1CompaniesIdPatch**](doc\CompanyApi.md#tepsalesv1companiesidpatch) | **PATCH** /tepsales/v1/companies/{id} | Update part of Company
+[*CompanyApi*](doc\CompanyApi.md) | [**tepsalesV1CompaniesIdPut**](doc\CompanyApi.md#tepsalesv1companiesidput) | **PUT** /tepsales/v1/companies/{id} | Update Company
+[*CompanyApi*](doc\CompanyApi.md) | [**tepsalesV1CompaniesPagedGet**](doc\CompanyApi.md#tepsalesv1companiespagedget) | **GET** /tepsales/v1/companies/paged | Get All Company by filter with pagination
+[*CompanyApi*](doc\CompanyApi.md) | [**tepsalesV1CompaniesPost**](doc\CompanyApi.md#tepsalesv1companiespost) | **POST** /tepsales/v1/companies | Create Company
+[*FreightApi*](doc\FreightApi.md) | [**getByIdFreight**](doc\FreightApi.md#getbyidfreight) | **GET** /tepsales/v1/freights/{id} | Get Freight by id
+[*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsAllGet**](doc\FreightApi.md#tepsalesv1freightsallget) | **GET** /tepsales/v1/freights/all | Get All Freight by filter
+[*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsIdDelete**](doc\FreightApi.md#tepsalesv1freightsiddelete) | **DELETE** /tepsales/v1/freights/{id} | Delete Freight by Id
+[*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsIdPatch**](doc\FreightApi.md#tepsalesv1freightsidpatch) | **PATCH** /tepsales/v1/freights/{id} | Update part of Freight
+[*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsIdPut**](doc\FreightApi.md#tepsalesv1freightsidput) | **PUT** /tepsales/v1/freights/{id} | Update Freight
+[*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsPagedGet**](doc\FreightApi.md#tepsalesv1freightspagedget) | **GET** /tepsales/v1/freights/paged | Get All Freight by filter with pagination
+[*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsPost**](doc\FreightApi.md#tepsalesv1freightspost) | **POST** /tepsales/v1/freights | Create Freight
+[*ProductApi*](doc\ProductApi.md) | [**getByIdProduct**](doc\ProductApi.md#getbyidproduct) | **GET** /tepsales/v1/products/{id} | Get Product by id
+[*ProductApi*](doc\ProductApi.md) | [**tepsalesV1ProductsAllCatalogVersionCatalogVersionGet**](doc\ProductApi.md#tepsalesv1productsallcatalogversioncatalogversionget) | **GET** /tepsales/v1/products/all/catalogVersion/{catalogVersion} | Get All Product by filter
+[*ProductApi*](doc\ProductApi.md) | [**tepsalesV1ProductsAllGet**](doc\ProductApi.md#tepsalesv1productsallget) | **GET** /tepsales/v1/products/all | Get All Product by filter
+[*ProductApi*](doc\ProductApi.md) | [**tepsalesV1ProductsIdDelete**](doc\ProductApi.md#tepsalesv1productsiddelete) | **DELETE** /tepsales/v1/products/{id} | Delete Product by Id
+[*ProductApi*](doc\ProductApi.md) | [**tepsalesV1ProductsIdPatch**](doc\ProductApi.md#tepsalesv1productsidpatch) | **PATCH** /tepsales/v1/products/{id} | Update part of Product
+[*ProductApi*](doc\ProductApi.md) | [**tepsalesV1ProductsIdPut**](doc\ProductApi.md#tepsalesv1productsidput) | **PUT** /tepsales/v1/products/{id} | Update Product
+[*ProductApi*](doc\ProductApi.md) | [**tepsalesV1ProductsPagedGet**](doc\ProductApi.md#tepsalesv1productspagedget) | **GET** /tepsales/v1/products/paged | Get All Product by filter with pagination
+[*ProductApi*](doc\ProductApi.md) | [**tepsalesV1ProductsPost**](doc\ProductApi.md#tepsalesv1productspost) | **POST** /tepsales/v1/products | Create Product
+[*ReasonCancelApi*](doc\ReasonCancelApi.md) | [**getByIdReasonCancel**](doc\ReasonCancelApi.md#getbyidreasoncancel) | **GET** /tepsales/v1/reasonscancels/{id} | Get ReasonCancel by id
+[*ReasonCancelApi*](doc\ReasonCancelApi.md) | [**tepsalesV1ReasonscancelsAllGet**](doc\ReasonCancelApi.md#tepsalesv1reasonscancelsallget) | **GET** /tepsales/v1/reasonscancels/all | Get All ReasonCancel by filter
+[*ReasonCancelApi*](doc\ReasonCancelApi.md) | [**tepsalesV1ReasonscancelsIdDelete**](doc\ReasonCancelApi.md#tepsalesv1reasonscancelsiddelete) | **DELETE** /tepsales/v1/reasonscancels/{id} | Delete ReasonCancel by Id
+[*ReasonCancelApi*](doc\ReasonCancelApi.md) | [**tepsalesV1ReasonscancelsIdPatch**](doc\ReasonCancelApi.md#tepsalesv1reasonscancelsidpatch) | **PATCH** /tepsales/v1/reasonscancels/{id} | Update part of ReasonCancel
+[*ReasonCancelApi*](doc\ReasonCancelApi.md) | [**tepsalesV1ReasonscancelsIdPut**](doc\ReasonCancelApi.md#tepsalesv1reasonscancelsidput) | **PUT** /tepsales/v1/reasonscancels/{id} | Update ReasonCancel
+[*ReasonCancelApi*](doc\ReasonCancelApi.md) | [**tepsalesV1ReasonscancelsPagedGet**](doc\ReasonCancelApi.md#tepsalesv1reasonscancelspagedget) | **GET** /tepsales/v1/reasonscancels/paged | Get All ReasonCancel by filter with pagination
+[*ReasonCancelApi*](doc\ReasonCancelApi.md) | [**tepsalesV1ReasonscancelsPost**](doc\ReasonCancelApi.md#tepsalesv1reasonscancelspost) | **POST** /tepsales/v1/reasonscancels | Create ReasonCancel
 [*TemplateApi*](doc\TemplateApi.md) | [**getByIdTemplate**](doc\TemplateApi.md#getbyidtemplate) | **GET** /tepsales/v1/templates/{id} | Get Template by id
 [*TemplateApi*](doc\TemplateApi.md) | [**tepsalesV1TemplatesAllGet**](doc\TemplateApi.md#tepsalesv1templatesallget) | **GET** /tepsales/v1/templates/all | Get All Template by filter
 [*TemplateApi*](doc\TemplateApi.md) | [**tepsalesV1TemplatesIdDelete**](doc\TemplateApi.md#tepsalesv1templatesiddelete) | **DELETE** /tepsales/v1/templates/{id} | Delete Template by Id
@@ -84,22 +134,95 @@ Class | Method | HTTP request | Description
 [*TemplateApi*](doc\TemplateApi.md) | [**tepsalesV1TemplatesIdPut**](doc\TemplateApi.md#tepsalesv1templatesidput) | **PUT** /tepsales/v1/templates/{id} | Update Template
 [*TemplateApi*](doc\TemplateApi.md) | [**tepsalesV1TemplatesPagedGet**](doc\TemplateApi.md#tepsalesv1templatespagedget) | **GET** /tepsales/v1/templates/paged | Get All Template by filter with pagination
 [*TemplateApi*](doc\TemplateApi.md) | [**tepsalesV1TemplatesPost**](doc\TemplateApi.md#tepsalesv1templatespost) | **POST** /tepsales/v1/templates | Create Template
+[*UserApi*](doc\UserApi.md) | [**getByIdUser**](doc\UserApi.md#getbyiduser) | **GET** /tepsales/v1/users/{id} | Get User by id
+[*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersAllGet**](doc\UserApi.md#tepsalesv1usersallget) | **GET** /tepsales/v1/users/all | Get All User by filter
+[*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersIdDelete**](doc\UserApi.md#tepsalesv1usersiddelete) | **DELETE** /tepsales/v1/users/{id} | Delete User by Id
+[*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersIdPatch**](doc\UserApi.md#tepsalesv1usersidpatch) | **PATCH** /tepsales/v1/users/{id} | Update part of User
+[*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersIdPut**](doc\UserApi.md#tepsalesv1usersidput) | **PUT** /tepsales/v1/users/{id} | Update User
+[*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersPagedGet**](doc\UserApi.md#tepsalesv1userspagedget) | **GET** /tepsales/v1/users/paged | Get All User by filter with pagination
+[*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersPost**](doc\UserApi.md#tepsalesv1userspost) | **POST** /tepsales/v1/users | Create User
+[*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersSinginPost**](doc\UserApi.md#tepsalesv1userssinginpost) | **POST** /tepsales/v1/users/singin | Create User
+[*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersSingupPost**](doc\UserApi.md#tepsalesv1userssinguppost) | **POST** /tepsales/v1/users/singup | Create User
+[*VehicleApi*](doc\VehicleApi.md) | [**getByIdVehicle**](doc\VehicleApi.md#getbyidvehicle) | **GET** /tepsales/v1/vehicles/{id} | Get Vehicle by id
+[*VehicleApi*](doc\VehicleApi.md) | [**tepsalesV1VehiclesAllGet**](doc\VehicleApi.md#tepsalesv1vehiclesallget) | **GET** /tepsales/v1/vehicles/all | Get All Vehicle by filter
+[*VehicleApi*](doc\VehicleApi.md) | [**tepsalesV1VehiclesIdDelete**](doc\VehicleApi.md#tepsalesv1vehiclesiddelete) | **DELETE** /tepsales/v1/vehicles/{id} | Delete Vehicle by Id
+[*VehicleApi*](doc\VehicleApi.md) | [**tepsalesV1VehiclesIdPatch**](doc\VehicleApi.md#tepsalesv1vehiclesidpatch) | **PATCH** /tepsales/v1/vehicles/{id} | Update part of Vehicle
+[*VehicleApi*](doc\VehicleApi.md) | [**tepsalesV1VehiclesIdPut**](doc\VehicleApi.md#tepsalesv1vehiclesidput) | **PUT** /tepsales/v1/vehicles/{id} | Update Vehicle
+[*VehicleApi*](doc\VehicleApi.md) | [**tepsalesV1VehiclesPagedGet**](doc\VehicleApi.md#tepsalesv1vehiclespagedget) | **GET** /tepsales/v1/vehicles/paged | Get All Vehicle by filter with pagination
+[*VehicleApi*](doc\VehicleApi.md) | [**tepsalesV1VehiclesPost**](doc\VehicleApi.md#tepsalesv1vehiclespost) | **POST** /tepsales/v1/vehicles | Create Vehicle
 [*VersionApi*](doc\VersionApi.md) | [**tepsalesV1VersionGet**](doc\VersionApi.md#tepsalesv1versionget) | **GET** /tepsales/v1/version | Get Version
 
 
 ## Documentation For Models
 
  - [ActionType](doc\ActionType.md)
+ - [Catalog](doc\Catalog.md)
  - [ErrorDetails](doc\ErrorDetails.md)
  - [GetAllAuditResponse](doc\GetAllAuditResponse.md)
+ - [GetAllCatalogResponse](doc\GetAllCatalogResponse.md)
+ - [GetAllClientPropertyResponse](doc\GetAllClientPropertyResponse.md)
+ - [GetAllClientResponse](doc\GetAllClientResponse.md)
+ - [GetAllCompanyResponse](doc\GetAllCompanyResponse.md)
+ - [GetAllFreightResponse](doc\GetAllFreightResponse.md)
+ - [GetAllLastCatalogVersionResponse](doc\GetAllLastCatalogVersionResponse.md)
  - [GetAllPagedAuditResponse](doc\GetAllPagedAuditResponse.md)
+ - [GetAllPagedCatalogResponse](doc\GetAllPagedCatalogResponse.md)
+ - [GetAllPagedClientPropertyResponse](doc\GetAllPagedClientPropertyResponse.md)
+ - [GetAllPagedClientResponse](doc\GetAllPagedClientResponse.md)
+ - [GetAllPagedCompanyResponse](doc\GetAllPagedCompanyResponse.md)
+ - [GetAllPagedFreightResponse](doc\GetAllPagedFreightResponse.md)
+ - [GetAllPagedProductResponse](doc\GetAllPagedProductResponse.md)
+ - [GetAllPagedReasonCancelResponse](doc\GetAllPagedReasonCancelResponse.md)
  - [GetAllPagedTemplateResponse](doc\GetAllPagedTemplateResponse.md)
+ - [GetAllPagedUserResponse](doc\GetAllPagedUserResponse.md)
+ - [GetAllPagedVehicleResponse](doc\GetAllPagedVehicleResponse.md)
+ - [GetAllProductResponse](doc\GetAllProductResponse.md)
+ - [GetAllReasonCancelResponse](doc\GetAllReasonCancelResponse.md)
  - [GetAllTemplateResponse](doc\GetAllTemplateResponse.md)
+ - [GetAllUserResponse](doc\GetAllUserResponse.md)
+ - [GetAllVehicleResponse](doc\GetAllVehicleResponse.md)
  - [Operation](doc\Operation.md)
  - [OperationType](doc\OperationType.md)
+ - [PostCatalogRequest](doc\PostCatalogRequest.md)
+ - [PostCatalogResponse](doc\PostCatalogResponse.md)
+ - [PostClientPropertyRequest](doc\PostClientPropertyRequest.md)
+ - [PostClientPropertyResponse](doc\PostClientPropertyResponse.md)
+ - [PostClientRequest](doc\PostClientRequest.md)
+ - [PostClientResponse](doc\PostClientResponse.md)
+ - [PostCompanyRequest](doc\PostCompanyRequest.md)
+ - [PostCompanyResponse](doc\PostCompanyResponse.md)
+ - [PostFreightRequest](doc\PostFreightRequest.md)
+ - [PostFreightResponse](doc\PostFreightResponse.md)
+ - [PostProductRequest](doc\PostProductRequest.md)
+ - [PostProductResponse](doc\PostProductResponse.md)
+ - [PostReasonCancelRequest](doc\PostReasonCancelRequest.md)
+ - [PostReasonCancelResponse](doc\PostReasonCancelResponse.md)
  - [PostTemplateRequest](doc\PostTemplateRequest.md)
  - [PostTemplateResponse](doc\PostTemplateResponse.md)
+ - [PostUserRequest](doc\PostUserRequest.md)
+ - [PostUserResponse](doc\PostUserResponse.md)
+ - [PostUserSinginRequest](doc\PostUserSinginRequest.md)
+ - [PostVehicleRequest](doc\PostVehicleRequest.md)
+ - [PostVehicleResponse](doc\PostVehicleResponse.md)
+ - [Product](doc\Product.md)
+ - [ProductDiscountRule](doc\ProductDiscountRule.md)
+ - [ProductDiscountTypeEnum](doc\ProductDiscountTypeEnum.md)
+ - [ProductDiscountWeightTypeEnum](doc\ProductDiscountWeightTypeEnum.md)
+ - [ProductFamilyEnum](doc\ProductFamilyEnum.md)
+ - [ProductPackage](doc\ProductPackage.md)
+ - [ProductPackageEnum](doc\ProductPackageEnum.md)
+ - [ProductPrice](doc\ProductPrice.md)
+ - [ProductPriceDeadlineEnum](doc\ProductPriceDeadlineEnum.md)
+ - [PutCatalogRequest](doc\PutCatalogRequest.md)
+ - [PutClientPropertyRequest](doc\PutClientPropertyRequest.md)
+ - [PutClientRequest](doc\PutClientRequest.md)
+ - [PutCompanyRequest](doc\PutCompanyRequest.md)
+ - [PutFreightRequest](doc\PutFreightRequest.md)
+ - [PutProductRequest](doc\PutProductRequest.md)
+ - [PutReasonCancelRequest](doc\PutReasonCancelRequest.md)
  - [PutTemplateRequest](doc\PutTemplateRequest.md)
+ - [PutUserRequest](doc\PutUserRequest.md)
+ - [PutVehicleRequest](doc\PutVehicleRequest.md)
 
 
 ## Documentation For Authorization

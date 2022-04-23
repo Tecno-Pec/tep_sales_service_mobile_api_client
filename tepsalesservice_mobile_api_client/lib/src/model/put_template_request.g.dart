@@ -8,22 +8,32 @@ part of 'put_template_request.dart';
 
 class _$PutTemplateRequest extends PutTemplateRequest {
   @override
+  final DateTime? createdAt;
+  @override
+  final DateTime? updatedAt;
+  @override
+  final String? userCreated;
+  @override
+  final String? userUpdated;
+  @override
   final String? id;
   @override
   final String? name;
   @override
   final int? businessId;
-  @override
-  final DateTime? createdAt;
-  @override
-  final DateTime? updatedAt;
 
   factory _$PutTemplateRequest(
           [void Function(PutTemplateRequestBuilder)? updates]) =>
       (new PutTemplateRequestBuilder()..update(updates)).build();
 
   _$PutTemplateRequest._(
-      {this.id, this.name, this.businessId, this.createdAt, this.updatedAt})
+      {this.createdAt,
+      this.updatedAt,
+      this.userCreated,
+      this.userUpdated,
+      this.id,
+      this.name,
+      this.businessId})
       : super._();
 
   @override
@@ -39,29 +49,39 @@ class _$PutTemplateRequest extends PutTemplateRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is PutTemplateRequest &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt &&
+        userCreated == other.userCreated &&
+        userUpdated == other.userUpdated &&
         id == other.id &&
         name == other.name &&
-        businessId == other.businessId &&
-        createdAt == other.createdAt &&
-        updatedAt == other.updatedAt;
+        businessId == other.businessId;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc($jc(0, id.hashCode), name.hashCode), businessId.hashCode),
-            createdAt.hashCode),
-        updatedAt.hashCode));
+        $jc(
+            $jc(
+                $jc(
+                    $jc($jc($jc(0, createdAt.hashCode), updatedAt.hashCode),
+                        userCreated.hashCode),
+                    userUpdated.hashCode),
+                id.hashCode),
+            name.hashCode),
+        businessId.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('PutTemplateRequest')
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt)
+          ..add('userCreated', userCreated)
+          ..add('userUpdated', userUpdated)
           ..add('id', id)
           ..add('name', name)
-          ..add('businessId', businessId)
-          ..add('createdAt', createdAt)
-          ..add('updatedAt', updatedAt))
+          ..add('businessId', businessId))
         .toString();
   }
 }
@@ -69,6 +89,22 @@ class _$PutTemplateRequest extends PutTemplateRequest {
 class PutTemplateRequestBuilder
     implements Builder<PutTemplateRequest, PutTemplateRequestBuilder> {
   _$PutTemplateRequest? _$v;
+
+  DateTime? _createdAt;
+  DateTime? get createdAt => _$this._createdAt;
+  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
+
+  DateTime? _updatedAt;
+  DateTime? get updatedAt => _$this._updatedAt;
+  set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
+
+  String? _userCreated;
+  String? get userCreated => _$this._userCreated;
+  set userCreated(String? userCreated) => _$this._userCreated = userCreated;
+
+  String? _userUpdated;
+  String? get userUpdated => _$this._userUpdated;
+  set userUpdated(String? userUpdated) => _$this._userUpdated = userUpdated;
 
   String? _id;
   String? get id => _$this._id;
@@ -82,14 +118,6 @@ class PutTemplateRequestBuilder
   int? get businessId => _$this._businessId;
   set businessId(int? businessId) => _$this._businessId = businessId;
 
-  DateTime? _createdAt;
-  DateTime? get createdAt => _$this._createdAt;
-  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
-
-  DateTime? _updatedAt;
-  DateTime? get updatedAt => _$this._updatedAt;
-  set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
-
   PutTemplateRequestBuilder() {
     PutTemplateRequest._defaults(this);
   }
@@ -97,11 +125,13 @@ class PutTemplateRequestBuilder
   PutTemplateRequestBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
+      _createdAt = $v.createdAt;
+      _updatedAt = $v.updatedAt;
+      _userCreated = $v.userCreated;
+      _userUpdated = $v.userUpdated;
       _id = $v.id;
       _name = $v.name;
       _businessId = $v.businessId;
-      _createdAt = $v.createdAt;
-      _updatedAt = $v.updatedAt;
       _$v = null;
     }
     return this;
@@ -122,11 +152,13 @@ class PutTemplateRequestBuilder
   _$PutTemplateRequest build() {
     final _$result = _$v ??
         new _$PutTemplateRequest._(
+            createdAt: createdAt,
+            updatedAt: updatedAt,
+            userCreated: userCreated,
+            userUpdated: userUpdated,
             id: id,
             name: name,
-            businessId: businessId,
-            createdAt: createdAt,
-            updatedAt: updatedAt);
+            businessId: businessId);
     replace(_$result);
     return _$result;
   }

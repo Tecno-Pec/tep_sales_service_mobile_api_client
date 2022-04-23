@@ -10,12 +10,26 @@ part 'post_template_request.g.dart';
 /// PostTemplateRequest
 ///
 /// Properties:
+/// * [createdAt] 
+/// * [updatedAt] 
+/// * [userCreated] 
+/// * [userUpdated] 
 /// * [id] 
 /// * [name] 
 /// * [businessId] 
-/// * [createdAt] 
-/// * [updatedAt] 
 abstract class PostTemplateRequest implements Built<PostTemplateRequest, PostTemplateRequestBuilder> {
+    @BuiltValueField(wireName: r'createdAt')
+    DateTime? get createdAt;
+
+    @BuiltValueField(wireName: r'updatedAt')
+    DateTime? get updatedAt;
+
+    @BuiltValueField(wireName: r'userCreated')
+    String? get userCreated;
+
+    @BuiltValueField(wireName: r'userUpdated')
+    String? get userUpdated;
+
     @BuiltValueField(wireName: r'id')
     String? get id;
 
@@ -24,12 +38,6 @@ abstract class PostTemplateRequest implements Built<PostTemplateRequest, PostTem
 
     @BuiltValueField(wireName: r'businessId')
     int? get businessId;
-
-    @BuiltValueField(wireName: r'createdAt')
-    DateTime? get createdAt;
-
-    @BuiltValueField(wireName: r'updatedAt')
-    DateTime? get updatedAt;
 
     PostTemplateRequest._();
 
@@ -53,6 +61,30 @@ class _$PostTemplateRequestSerializer implements StructuredSerializer<PostTempla
     Iterable<Object?> serialize(Serializers serializers, PostTemplateRequest object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
+        if (object.createdAt != null) {
+            result
+                ..add(r'createdAt')
+                ..add(serializers.serialize(object.createdAt,
+                    specifiedType: const FullType.nullable(DateTime)));
+        }
+        if (object.updatedAt != null) {
+            result
+                ..add(r'updatedAt')
+                ..add(serializers.serialize(object.updatedAt,
+                    specifiedType: const FullType.nullable(DateTime)));
+        }
+        if (object.userCreated != null) {
+            result
+                ..add(r'userCreated')
+                ..add(serializers.serialize(object.userCreated,
+                    specifiedType: const FullType.nullable(String)));
+        }
+        if (object.userUpdated != null) {
+            result
+                ..add(r'userUpdated')
+                ..add(serializers.serialize(object.userUpdated,
+                    specifiedType: const FullType.nullable(String)));
+        }
         if (object.id != null) {
             result
                 ..add(r'id')
@@ -71,18 +103,6 @@ class _$PostTemplateRequestSerializer implements StructuredSerializer<PostTempla
                 ..add(serializers.serialize(object.businessId,
                     specifiedType: const FullType(int)));
         }
-        if (object.createdAt != null) {
-            result
-                ..add(r'createdAt')
-                ..add(serializers.serialize(object.createdAt,
-                    specifiedType: const FullType.nullable(DateTime)));
-        }
-        if (object.updatedAt != null) {
-            result
-                ..add(r'updatedAt')
-                ..add(serializers.serialize(object.updatedAt,
-                    specifiedType: const FullType.nullable(DateTime)));
-        }
         return result;
     }
 
@@ -98,6 +118,30 @@ class _$PostTemplateRequestSerializer implements StructuredSerializer<PostTempla
             final Object? value = iterator.current;
             
             switch (key) {
+                case r'createdAt':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.createdAt = valueDes;
+                    break;
+                case r'updatedAt':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
+                    if (valueDes == null) continue;
+                    result.updatedAt = valueDes;
+                    break;
+                case r'userCreated':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userCreated = valueDes;
+                    break;
+                case r'userUpdated':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.userUpdated = valueDes;
+                    break;
                 case r'id':
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
@@ -113,18 +157,6 @@ class _$PostTemplateRequestSerializer implements StructuredSerializer<PostTempla
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
                     result.businessId = valueDes;
-                    break;
-                case r'createdAt':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
-                    if (valueDes == null) continue;
-                    result.createdAt = valueDes;
-                    break;
-                case r'updatedAt':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(DateTime)) as DateTime?;
-                    if (valueDes == null) continue;
-                    result.updatedAt = valueDes;
                     break;
             }
         }

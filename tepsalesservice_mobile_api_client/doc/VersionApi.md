@@ -41,7 +41,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1e5133db-a99a-45b9-b534-658670550199']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e4796f97-48b9-4e4a-aae5-a8c6bbf7cbc1']
 
 ### Return type
 

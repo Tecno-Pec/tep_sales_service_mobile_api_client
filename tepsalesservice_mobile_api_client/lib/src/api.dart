@@ -10,7 +10,16 @@ import 'package:tepsalesservice_mobile_api_client/src/auth/basic_auth.dart';
 import 'package:tepsalesservice_mobile_api_client/src/auth/bearer_auth.dart';
 import 'package:tepsalesservice_mobile_api_client/src/auth/oauth.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/audit_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/catalog_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/client_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/client_property_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/company_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/freight_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/product_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/reason_cancel_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/template_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/user_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/vehicle_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/version_api.dart';
 
 class TepsalesserviceMobileApiClient {
@@ -73,10 +82,64 @@ class TepsalesserviceMobileApiClient {
     return AuditApi(dio, serializers);
   }
 
+  /// Get CatalogApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  CatalogApi getCatalogApi() {
+    return CatalogApi(dio, serializers);
+  }
+
+  /// Get ClientApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ClientApi getClientApi() {
+    return ClientApi(dio, serializers);
+  }
+
+  /// Get ClientPropertyApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ClientPropertyApi getClientPropertyApi() {
+    return ClientPropertyApi(dio, serializers);
+  }
+
+  /// Get CompanyApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  CompanyApi getCompanyApi() {
+    return CompanyApi(dio, serializers);
+  }
+
+  /// Get FreightApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  FreightApi getFreightApi() {
+    return FreightApi(dio, serializers);
+  }
+
+  /// Get ProductApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ProductApi getProductApi() {
+    return ProductApi(dio, serializers);
+  }
+
+  /// Get ReasonCancelApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ReasonCancelApi getReasonCancelApi() {
+    return ReasonCancelApi(dio, serializers);
+  }
+
   /// Get TemplateApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   TemplateApi getTemplateApi() {
     return TemplateApi(dio, serializers);
+  }
+
+  /// Get UserApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  UserApi getUserApi() {
+    return UserApi(dio, serializers);
+  }
+
+  /// Get VehicleApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  VehicleApi getVehicleApi() {
+    return VehicleApi(dio, serializers);
   }
 
   /// Get VersionApi instance, base route and serializer can be overridden by a given but be careful,
