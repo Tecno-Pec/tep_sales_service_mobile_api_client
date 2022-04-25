@@ -15,6 +15,7 @@ part 'post_client_property_response.g.dart';
 /// * [userCreated] 
 /// * [userUpdated] 
 /// * [id] 
+/// * [addressName] 
 /// * [cep] 
 /// * [address] 
 /// * [neighborhood] 
@@ -25,6 +26,9 @@ part 'post_client_property_response.g.dart';
 /// * [latitude] 
 /// * [longitude] 
 /// * [distance] 
+/// * [earthDistance] 
+/// * [type] 
+/// * [ie] 
 /// * [clientId] 
 abstract class PostClientPropertyResponse implements Built<PostClientPropertyResponse, PostClientPropertyResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
@@ -41,6 +45,9 @@ abstract class PostClientPropertyResponse implements Built<PostClientPropertyRes
 
     @BuiltValueField(wireName: r'id')
     String? get id;
+
+    @BuiltValueField(wireName: r'addressName')
+    String? get addressName;
 
     @BuiltValueField(wireName: r'cep')
     String? get cep;
@@ -71,6 +78,15 @@ abstract class PostClientPropertyResponse implements Built<PostClientPropertyRes
 
     @BuiltValueField(wireName: r'distance')
     double? get distance;
+
+    @BuiltValueField(wireName: r'earthDistance')
+    double? get earthDistance;
+
+    @BuiltValueField(wireName: r'type')
+    String? get type;
+
+    @BuiltValueField(wireName: r'ie')
+    String? get ie;
 
     @BuiltValueField(wireName: r'clientId')
     String? get clientId;
@@ -126,6 +142,12 @@ class _$PostClientPropertyResponseSerializer implements StructuredSerializer<Pos
                 ..add(r'id')
                 ..add(serializers.serialize(object.id,
                     specifiedType: const FullType(String)));
+        }
+        if (object.addressName != null) {
+            result
+                ..add(r'addressName')
+                ..add(serializers.serialize(object.addressName,
+                    specifiedType: const FullType.nullable(String)));
         }
         if (object.cep != null) {
             result
@@ -187,6 +209,24 @@ class _$PostClientPropertyResponseSerializer implements StructuredSerializer<Pos
                 ..add(serializers.serialize(object.distance,
                     specifiedType: const FullType(double)));
         }
+        if (object.earthDistance != null) {
+            result
+                ..add(r'earthDistance')
+                ..add(serializers.serialize(object.earthDistance,
+                    specifiedType: const FullType(double)));
+        }
+        if (object.type != null) {
+            result
+                ..add(r'type')
+                ..add(serializers.serialize(object.type,
+                    specifiedType: const FullType.nullable(String)));
+        }
+        if (object.ie != null) {
+            result
+                ..add(r'ie')
+                ..add(serializers.serialize(object.ie,
+                    specifiedType: const FullType.nullable(String)));
+        }
         if (object.clientId != null) {
             result
                 ..add(r'clientId')
@@ -236,6 +276,12 @@ class _$PostClientPropertyResponseSerializer implements StructuredSerializer<Pos
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     result.id = valueDes;
+                    break;
+                case r'addressName':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.addressName = valueDes;
                     break;
                 case r'cep':
                     final valueDes = serializers.deserialize(value,
@@ -295,6 +341,23 @@ class _$PostClientPropertyResponseSerializer implements StructuredSerializer<Pos
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(double)) as double;
                     result.distance = valueDes;
+                    break;
+                case r'earthDistance':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(double)) as double;
+                    result.earthDistance = valueDes;
+                    break;
+                case r'type':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.type = valueDes;
+                    break;
+                case r'ie':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.ie = valueDes;
                     break;
                 case r'clientId':
                     final valueDes = serializers.deserialize(value,

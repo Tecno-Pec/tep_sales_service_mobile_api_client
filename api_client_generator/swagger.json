@@ -18,7 +18,9 @@
   "paths": {
     "/tepsales/v1/audits": {
       "get": {
-        "tags": ["Audit"],
+        "tags": [
+          "Audit"
+        ],
         "summary": "Get All Audit by filter with pagination",
         "parameters": [
           {
@@ -120,7 +122,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fb4f06e7-c10a-48d1-aa55-277d67efbe21"
+              "default": "6e0c785b-8825-4a76-b744-44840f44e8a7"
             }
           }
         ],
@@ -159,7 +161,9 @@
     },
     "/tepsales/v1/catalogs/{id}": {
       "delete": {
-        "tags": ["Catalog"],
+        "tags": [
+          "Catalog"
+        ],
         "summary": "Delete Catalog by Id",
         "parameters": [
           {
@@ -187,7 +191,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d4e9eb42-1ce0-4666-a192-8423ad8caa89"
+              "default": "0eea3375-b350-41f8-a875-73deaea82d67"
             }
           }
         ],
@@ -220,7 +224,9 @@
         }
       },
       "get": {
-        "tags": ["Catalog"],
+        "tags": [
+          "Catalog"
+        ],
         "summary": "Get Catalog by id",
         "operationId": "GetByIdCatalog",
         "parameters": [
@@ -249,7 +255,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "13526fe7-d007-49c7-bf12-5f3a99a39d5d"
+              "default": "d2cb1347-049f-4fc2-8be9-3c3041505171"
             }
           }
         ],
@@ -289,7 +295,9 @@
         }
       },
       "patch": {
-        "tags": ["Catalog"],
+        "tags": [
+          "Catalog"
+        ],
         "summary": "Update part of Catalog",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Catalog/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -318,7 +326,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9599e924-4d2b-42cb-ab11-3e2851f21397"
+              "default": "014dc9d6-82e2-4f4c-9998-6a4640865ff3"
             }
           }
         ],
@@ -386,7 +394,9 @@
         }
       },
       "put": {
-        "tags": ["Catalog"],
+        "tags": [
+          "Catalog"
+        ],
         "summary": "Update Catalog",
         "parameters": [
           {
@@ -414,7 +424,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "725773a6-36fe-423e-86d5-9d16f77488ab"
+              "default": "9e228ea3-16a5-4850-95c1-13e9a7702887"
             }
           }
         ],
@@ -479,7 +489,9 @@
     },
     "/tepsales/v1/catalogs/all": {
       "get": {
-        "tags": ["Catalog"],
+        "tags": [
+          "Catalog"
+        ],
         "summary": "Get All Catalog by filter",
         "parameters": [
           {
@@ -527,7 +539,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "de6d887f-4f0f-4ecc-b0d2-c03cf0462e74"
+              "default": "bda3cf24-6a02-4f3c-b4d8-810a7b214127"
             }
           }
         ],
@@ -569,7 +581,9 @@
     },
     "/tepsales/v1/catalogs/paged": {
       "get": {
-        "tags": ["Catalog"],
+        "tags": [
+          "Catalog"
+        ],
         "summary": "Get All Catalog by filter with pagination",
         "parameters": [
           {
@@ -622,7 +636,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "46d8a388-0ba7-48a3-863e-47376bdbdf88"
+              "default": "4a91ce0f-fb90-4619-ad0e-88343271f4cb"
             }
           }
         ],
@@ -661,7 +675,9 @@
     },
     "/tepsales/v1/catalogs": {
       "post": {
-        "tags": ["Catalog"],
+        "tags": [
+          "Catalog"
+        ],
         "summary": "Create Catalog",
         "parameters": [
           {
@@ -678,7 +694,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "33692f57-3e1e-405b-a4c4-f781e6a3c2bf"
+              "default": "094ab882-21dc-431f-98fc-b76d4c3175f3"
             }
           }
         ],
@@ -747,7 +763,9 @@
     },
     "/tepsales/v1/clients/{id}": {
       "delete": {
-        "tags": ["Client"],
+        "tags": [
+          "Client"
+        ],
         "summary": "Delete Client by Id",
         "parameters": [
           {
@@ -775,7 +793,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4effc066-a64a-4913-bba6-008513ca5da8"
+              "default": "c9e11558-f85f-4c21-84e9-4b48b93942bc"
             }
           }
         ],
@@ -808,7 +826,9 @@
         }
       },
       "get": {
-        "tags": ["Client"],
+        "tags": [
+          "Client"
+        ],
         "summary": "Get Client by id",
         "operationId": "GetByIdClient",
         "parameters": [
@@ -837,7 +857,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e1800e3b-9388-47fc-ab0c-1c9cf542e7ea"
+              "default": "113308ee-a6fc-4d0a-85b4-323554bd1f3a"
             }
           }
         ],
@@ -877,7 +897,9 @@
         }
       },
       "patch": {
-        "tags": ["Client"],
+        "tags": [
+          "Client"
+        ],
         "summary": "Update part of Client",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Client/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -906,7 +928,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "084372a8-b3e7-4f86-9692-fd2df102dfb4"
+              "default": "46adfba3-28d3-4cfb-b5ca-e318302132ec"
             }
           }
         ],
@@ -974,7 +996,9 @@
         }
       },
       "put": {
-        "tags": ["Client"],
+        "tags": [
+          "Client"
+        ],
         "summary": "Update Client",
         "parameters": [
           {
@@ -1002,7 +1026,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6259c691-8369-4b69-8e7e-211b26d6c4ea"
+              "default": "5b61a558-a6ae-435b-b460-cc249a5c17ac"
             }
           }
         ],
@@ -1067,7 +1091,9 @@
     },
     "/tepsales/v1/clients/all": {
       "get": {
-        "tags": ["Client"],
+        "tags": [
+          "Client"
+        ],
         "summary": "Get All Client by filter",
         "parameters": [
           {
@@ -1138,7 +1164,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "33377e0f-2423-4a8c-8df1-ae9fa480d956"
+              "default": "c5efa6fa-05ef-4d6b-94f7-1be1e42b047f"
             }
           }
         ],
@@ -1180,7 +1206,9 @@
     },
     "/tepsales/v1/clients/paged": {
       "get": {
-        "tags": ["Client"],
+        "tags": [
+          "Client"
+        ],
         "summary": "Get All Client by filter with pagination",
         "parameters": [
           {
@@ -1256,7 +1284,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "dedc74b4-5761-4407-bbe9-430c962201a5"
+              "default": "a81ac29d-81c0-4868-8036-eb24e78e9eb1"
             }
           }
         ],
@@ -1295,7 +1323,9 @@
     },
     "/tepsales/v1/clients": {
       "post": {
-        "tags": ["Client"],
+        "tags": [
+          "Client"
+        ],
         "summary": "Create Client",
         "parameters": [
           {
@@ -1312,7 +1342,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cad2e504-b349-48de-9f5c-d4f6efecd72a"
+              "default": "1da3ceef-6503-4bd0-8ae3-90c88b2b69df"
             }
           }
         ],
@@ -1381,7 +1411,9 @@
     },
     "/tepsales/v1/clientProperties/{id}": {
       "delete": {
-        "tags": ["ClientProperty"],
+        "tags": [
+          "ClientProperty"
+        ],
         "summary": "Delete ClientProperty by Id",
         "parameters": [
           {
@@ -1409,7 +1441,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "941d6994-c9aa-4176-938d-8490bdf91a43"
+              "default": "6a20b403-20fd-4373-8ad4-afeadf54e52b"
             }
           }
         ],
@@ -1442,7 +1474,9 @@
         }
       },
       "get": {
-        "tags": ["ClientProperty"],
+        "tags": [
+          "ClientProperty"
+        ],
         "summary": "Get ClientProperty by id",
         "operationId": "GetByIdClientProperty",
         "parameters": [
@@ -1471,7 +1505,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "42d7e498-6774-4c49-9cdd-74fff601e7c0"
+              "default": "1f61fb93-f1f4-485f-9b4d-4045953dabbd"
             }
           }
         ],
@@ -1511,7 +1545,9 @@
         }
       },
       "patch": {
-        "tags": ["ClientProperty"],
+        "tags": [
+          "ClientProperty"
+        ],
         "summary": "Update part of ClientProperty",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/ClientProperty/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -1540,7 +1576,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "833aff0b-b482-4874-9f3d-8ad689e54c24"
+              "default": "cfabf180-43a3-42ea-9738-e1908e73b86c"
             }
           }
         ],
@@ -1608,7 +1644,9 @@
         }
       },
       "put": {
-        "tags": ["ClientProperty"],
+        "tags": [
+          "ClientProperty"
+        ],
         "summary": "Update ClientProperty",
         "parameters": [
           {
@@ -1636,7 +1674,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c6a51fbe-e39e-4707-a6d9-287cfaba6f58"
+              "default": "0f66a61a-5b10-4898-8480-c5926dbf3a26"
             }
           }
         ],
@@ -1701,7 +1739,9 @@
     },
     "/tepsales/v1/clientProperties/all": {
       "get": {
-        "tags": ["ClientProperty"],
+        "tags": [
+          "ClientProperty"
+        ],
         "summary": "Get All ClientProperty by filter",
         "parameters": [
           {
@@ -1748,7 +1788,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "34acd568-6aa4-4db9-97e4-6a9c900d3f9e"
+              "default": "8a181b31-cf38-4c0b-b232-9e5650cbdab1"
             }
           }
         ],
@@ -1790,7 +1830,9 @@
     },
     "/tepsales/v1/clientProperties/paged": {
       "get": {
-        "tags": ["ClientProperty"],
+        "tags": [
+          "ClientProperty"
+        ],
         "summary": "Get All ClientProperty by filter with pagination",
         "parameters": [
           {
@@ -1842,7 +1884,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "36cbc92a-ccaf-4987-a7ed-fca03be093b4"
+              "default": "e26be03f-0c23-4b47-95cd-9b1f1e91b960"
             }
           }
         ],
@@ -1881,7 +1923,9 @@
     },
     "/tepsales/v1/clientProperties": {
       "post": {
-        "tags": ["ClientProperty"],
+        "tags": [
+          "ClientProperty"
+        ],
         "summary": "Create ClientProperty",
         "parameters": [
           {
@@ -1898,7 +1942,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0ce43d15-5e6d-4dea-bf72-66e80721eeb4"
+              "default": "4d5f624b-1cb3-4397-9780-7e1118bd444f"
             }
           }
         ],
@@ -1967,7 +2011,9 @@
     },
     "/tepsales/v1/companies/{id}": {
       "delete": {
-        "tags": ["Company"],
+        "tags": [
+          "Company"
+        ],
         "summary": "Delete Company by Id",
         "parameters": [
           {
@@ -1995,7 +2041,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6436549c-01de-45ab-84c4-9ef7bca500fe"
+              "default": "aa04ca23-97b6-4a06-95d1-571c9b658372"
             }
           }
         ],
@@ -2028,7 +2074,9 @@
         }
       },
       "get": {
-        "tags": ["Company"],
+        "tags": [
+          "Company"
+        ],
         "summary": "Get Company by id",
         "operationId": "GetByIdCompany",
         "parameters": [
@@ -2057,7 +2105,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fe650563-a144-4522-9936-0ce2f8dc795b"
+              "default": "81d2b958-d790-4bb3-9a57-4bc6ed524d58"
             }
           }
         ],
@@ -2097,7 +2145,9 @@
         }
       },
       "patch": {
-        "tags": ["Company"],
+        "tags": [
+          "Company"
+        ],
         "summary": "Update part of Company",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Company/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -2126,7 +2176,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f7300e34-d3b2-48cf-860e-42728c134d00"
+              "default": "3b91b3b8-804a-4467-8dd0-3df211d38d42"
             }
           }
         ],
@@ -2194,7 +2244,9 @@
         }
       },
       "put": {
-        "tags": ["Company"],
+        "tags": [
+          "Company"
+        ],
         "summary": "Update Company",
         "parameters": [
           {
@@ -2222,7 +2274,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "998fed4c-a60f-4978-a121-c9acfbf4e752"
+              "default": "14d2557b-d093-43d6-8f2c-2c70591a4a81"
             }
           }
         ],
@@ -2287,7 +2339,9 @@
     },
     "/tepsales/v1/companies/all": {
       "get": {
-        "tags": ["Company"],
+        "tags": [
+          "Company"
+        ],
         "summary": "Get All Company by filter",
         "parameters": [
           {
@@ -2342,7 +2396,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "84ce4e09-9fab-4bbe-8b18-aab24b482db2"
+              "default": "f46023e3-25b1-4b75-82d1-19c52cbb1ec5"
             }
           }
         ],
@@ -2384,7 +2438,9 @@
     },
     "/tepsales/v1/companies/paged": {
       "get": {
-        "tags": ["Company"],
+        "tags": [
+          "Company"
+        ],
         "summary": "Get All Company by filter with pagination",
         "parameters": [
           {
@@ -2444,7 +2500,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7f99b3c1-feea-41f3-b273-832eb515dcda"
+              "default": "204d6527-559b-4c64-99e8-95754b04b380"
             }
           }
         ],
@@ -2483,7 +2539,9 @@
     },
     "/tepsales/v1/companies": {
       "post": {
-        "tags": ["Company"],
+        "tags": [
+          "Company"
+        ],
         "summary": "Create Company",
         "parameters": [
           {
@@ -2500,7 +2558,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cb308f79-60f4-4494-8d80-94c394f33a8b"
+              "default": "46592637-28af-424b-8434-27a60065b951"
             }
           }
         ],
@@ -2569,7 +2627,9 @@
     },
     "/tepsales/v1/freights/{id}": {
       "delete": {
-        "tags": ["Freight"],
+        "tags": [
+          "Freight"
+        ],
         "summary": "Delete Freight by Id",
         "parameters": [
           {
@@ -2597,7 +2657,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2f99fc70-a686-499b-b18c-ac24e1f98391"
+              "default": "f0d29ea9-9a74-4e02-9bf2-6af241c36e75"
             }
           }
         ],
@@ -2630,7 +2690,9 @@
         }
       },
       "get": {
-        "tags": ["Freight"],
+        "tags": [
+          "Freight"
+        ],
         "summary": "Get Freight by id",
         "operationId": "GetByIdFreight",
         "parameters": [
@@ -2659,7 +2721,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "bff02caf-6448-4441-95f3-787a38552b13"
+              "default": "9dcfeb44-44c3-4408-b0da-f964b1a1dc08"
             }
           }
         ],
@@ -2699,7 +2761,9 @@
         }
       },
       "patch": {
-        "tags": ["Freight"],
+        "tags": [
+          "Freight"
+        ],
         "summary": "Update part of Freight",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Freight/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -2728,7 +2792,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "807840d0-f172-4436-9c83-bbbee75d67c3"
+              "default": "0c92bee5-d837-490b-8534-c11f484d4332"
             }
           }
         ],
@@ -2796,7 +2860,9 @@
         }
       },
       "put": {
-        "tags": ["Freight"],
+        "tags": [
+          "Freight"
+        ],
         "summary": "Update Freight",
         "parameters": [
           {
@@ -2824,7 +2890,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "011f8ecd-b2d9-4f59-bd77-269b87e75b6d"
+              "default": "26025f10-9aff-4227-9e3d-b507a703e7e0"
             }
           }
         ],
@@ -2889,7 +2955,9 @@
     },
     "/tepsales/v1/freights/all": {
       "get": {
-        "tags": ["Freight"],
+        "tags": [
+          "Freight"
+        ],
         "summary": "Get All Freight by filter",
         "parameters": [
           {
@@ -2964,7 +3032,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c94b6175-73e4-4545-87a8-d4967a0dbdd8"
+              "default": "4ce810c2-17e2-4c03-bc45-dd8112b755d2"
             }
           }
         ],
@@ -3006,7 +3074,9 @@
     },
     "/tepsales/v1/freights/paged": {
       "get": {
-        "tags": ["Freight"],
+        "tags": [
+          "Freight"
+        ],
         "summary": "Get All Freight by filter with pagination",
         "parameters": [
           {
@@ -3086,7 +3156,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7ad6427e-ad43-423b-b057-cbc05801971e"
+              "default": "d876eb76-baaa-47ca-94a7-a8ea4d16be1a"
             }
           }
         ],
@@ -3125,7 +3195,9 @@
     },
     "/tepsales/v1/freights": {
       "post": {
-        "tags": ["Freight"],
+        "tags": [
+          "Freight"
+        ],
         "summary": "Create Freight",
         "parameters": [
           {
@@ -3142,7 +3214,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ff009520-c85e-4f64-9d81-57040156f763"
+              "default": "e7201ffd-a824-49b0-8847-c909f21a6c87"
             }
           }
         ],
@@ -3211,7 +3283,9 @@
     },
     "/tepsales/v1/products/{id}": {
       "delete": {
-        "tags": ["Product"],
+        "tags": [
+          "Product"
+        ],
         "summary": "Delete Product by Id",
         "parameters": [
           {
@@ -3239,7 +3313,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "555a0f10-66ec-462e-987c-54153dd7f481"
+              "default": "dd026dff-f3d7-42b3-bc37-5b2ab0556dd8"
             }
           }
         ],
@@ -3272,7 +3346,9 @@
         }
       },
       "get": {
-        "tags": ["Product"],
+        "tags": [
+          "Product"
+        ],
         "summary": "Get Product by id",
         "operationId": "GetByIdProduct",
         "parameters": [
@@ -3301,7 +3377,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b19821d7-485c-4a7b-bdc2-e33c85a991e4"
+              "default": "99219c26-ca54-4900-8d00-a33d81bf9ca1"
             }
           }
         ],
@@ -3341,7 +3417,9 @@
         }
       },
       "patch": {
-        "tags": ["Product"],
+        "tags": [
+          "Product"
+        ],
         "summary": "Update part of Product",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Product/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -3370,7 +3448,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "42812a3d-9366-4d28-a4c2-dee4e13fbcc1"
+              "default": "3f7d18da-1575-477e-833e-7019b6244f80"
             }
           }
         ],
@@ -3438,7 +3516,9 @@
         }
       },
       "put": {
-        "tags": ["Product"],
+        "tags": [
+          "Product"
+        ],
         "summary": "Update Product",
         "parameters": [
           {
@@ -3466,7 +3546,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f1b7511c-068a-44b1-89da-00ae41285c83"
+              "default": "53e50c7a-93fa-4e2b-9009-cf856de4da76"
             }
           }
         ],
@@ -3531,7 +3611,9 @@
     },
     "/tepsales/v1/products/all/catalogVersion/{catalogVersion}": {
       "get": {
-        "tags": ["Product"],
+        "tags": [
+          "Product"
+        ],
         "summary": "Get All Product by filter",
         "parameters": [
           {
@@ -3559,7 +3641,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "795c4bd4-52df-4b45-a582-6ae3c68cd3b3"
+              "default": "27faca61-2491-4879-abe5-43b49e66d5cd"
             }
           }
         ],
@@ -3598,7 +3680,9 @@
     },
     "/tepsales/v1/products/paged": {
       "get": {
-        "tags": ["Product"],
+        "tags": [
+          "Product"
+        ],
         "summary": "Get All Product by filter with pagination",
         "parameters": [
           {
@@ -3682,7 +3766,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "44a179af-1d3e-4825-af4a-6e150781b69b"
+              "default": "ce5121bf-03ba-42a1-8f61-10059b630a4a"
             }
           }
         ],
@@ -3721,7 +3805,9 @@
     },
     "/tepsales/v1/products/all": {
       "get": {
-        "tags": ["Product"],
+        "tags": [
+          "Product"
+        ],
         "summary": "Get All Product by filter",
         "parameters": [
           {
@@ -3792,7 +3878,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "91756e7f-8d83-4f43-9f63-9156264091b7"
+              "default": "6cedd173-b66f-4f7b-9121-e93712362934"
             }
           }
         ],
@@ -3834,7 +3920,9 @@
     },
     "/tepsales/v1/products": {
       "post": {
-        "tags": ["Product"],
+        "tags": [
+          "Product"
+        ],
         "summary": "Create Product",
         "parameters": [
           {
@@ -3851,7 +3939,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "40ded20d-e4cb-4fd9-8430-71e32d12d512"
+              "default": "7afbf82e-bd68-4c44-91c5-e49514e33f2b"
             }
           }
         ],
@@ -3920,7 +4008,9 @@
     },
     "/tepsales/v1/reasonscancels/{id}": {
       "delete": {
-        "tags": ["ReasonCancel"],
+        "tags": [
+          "ReasonCancel"
+        ],
         "summary": "Delete ReasonCancel by Id",
         "parameters": [
           {
@@ -3948,7 +4038,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8695360a-921b-4855-90d9-94f1d39a9bbf"
+              "default": "ca4f808f-7bd3-4cfc-9a22-e9e55a212bef"
             }
           }
         ],
@@ -3981,7 +4071,9 @@
         }
       },
       "get": {
-        "tags": ["ReasonCancel"],
+        "tags": [
+          "ReasonCancel"
+        ],
         "summary": "Get ReasonCancel by id",
         "operationId": "GetByIdReasonCancel",
         "parameters": [
@@ -4010,7 +4102,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "00c3f924-b6a2-4b73-babf-631fed299b31"
+              "default": "1ba1b5d9-cbda-43af-9e9b-8136aa99f3bc"
             }
           }
         ],
@@ -4050,7 +4142,9 @@
         }
       },
       "patch": {
-        "tags": ["ReasonCancel"],
+        "tags": [
+          "ReasonCancel"
+        ],
         "summary": "Update part of ReasonCancel",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/ReasonCancel/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -4079,7 +4173,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e681d60f-1dd5-42bd-9c14-6c4048594c70"
+              "default": "1683c06b-2c9e-4497-9958-e7fbfc87d0f9"
             }
           }
         ],
@@ -4147,7 +4241,9 @@
         }
       },
       "put": {
-        "tags": ["ReasonCancel"],
+        "tags": [
+          "ReasonCancel"
+        ],
         "summary": "Update ReasonCancel",
         "parameters": [
           {
@@ -4175,7 +4271,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c1acd26d-f10b-4c7c-abeb-401714fa8d92"
+              "default": "ff52c14b-7a0c-46b8-908f-54d42b684555"
             }
           }
         ],
@@ -4240,7 +4336,9 @@
     },
     "/tepsales/v1/reasonscancels/paged": {
       "get": {
-        "tags": ["ReasonCancel"],
+        "tags": [
+          "ReasonCancel"
+        ],
         "summary": "Get All ReasonCancel by filter with pagination",
         "parameters": [
           {
@@ -4300,7 +4398,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c61eb496-31e4-476c-a5fb-86b0d75cd60e"
+              "default": "0ea18612-bf7d-4b3a-95b7-e4230811c4a0"
             }
           }
         ],
@@ -4339,7 +4437,9 @@
     },
     "/tepsales/v1/reasonscancels/all": {
       "get": {
-        "tags": ["ReasonCancel"],
+        "tags": [
+          "ReasonCancel"
+        ],
         "summary": "Get All ReasonCancel by filter",
         "parameters": [
           {
@@ -4394,7 +4494,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3093b319-3ac4-49a1-badb-46e6854a79c4"
+              "default": "d9ce03f1-1385-49a4-abce-a9c4d1c014f5"
             }
           }
         ],
@@ -4436,7 +4536,9 @@
     },
     "/tepsales/v1/reasonscancels": {
       "post": {
-        "tags": ["ReasonCancel"],
+        "tags": [
+          "ReasonCancel"
+        ],
         "summary": "Create ReasonCancel",
         "parameters": [
           {
@@ -4453,7 +4555,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "42491d78-4ccd-4ead-903b-38ec0c376c64"
+              "default": "8e506a42-751b-4164-b389-a5c936e30b8c"
             }
           }
         ],
@@ -4522,7 +4624,9 @@
     },
     "/tepsales/v1/templates/{id}": {
       "delete": {
-        "tags": ["Template"],
+        "tags": [
+          "Template"
+        ],
         "summary": "Delete Template by Id",
         "parameters": [
           {
@@ -4550,7 +4654,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "860f2efc-5998-4b2c-af10-caed773b3030"
+              "default": "e23dcf7c-8d41-40c7-b54c-b4fce3b7db8e"
             }
           }
         ],
@@ -4583,7 +4687,9 @@
         }
       },
       "get": {
-        "tags": ["Template"],
+        "tags": [
+          "Template"
+        ],
         "summary": "Get Template by id",
         "operationId": "GetByIdTemplate",
         "parameters": [
@@ -4612,7 +4718,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "63b8ba0d-43be-468a-bf19-96f8c76c3ea5"
+              "default": "35f76126-bb7b-4162-8b5f-30be6f8d35d2"
             }
           }
         ],
@@ -4652,7 +4758,9 @@
         }
       },
       "patch": {
-        "tags": ["Template"],
+        "tags": [
+          "Template"
+        ],
         "summary": "Update part of Template",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Template/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -4681,7 +4789,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ee38dd2f-510b-4663-a38a-774297fc9b92"
+              "default": "eb3fd409-6709-4d85-bb7d-273340ce00da"
             }
           }
         ],
@@ -4749,7 +4857,9 @@
         }
       },
       "put": {
-        "tags": ["Template"],
+        "tags": [
+          "Template"
+        ],
         "summary": "Update Template",
         "parameters": [
           {
@@ -4777,7 +4887,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d3f39722-8886-4fa4-bd11-9666df491acc"
+              "default": "06aef41a-6c34-4d9b-9f9e-db31c094be83"
             }
           }
         ],
@@ -4842,7 +4952,9 @@
     },
     "/tepsales/v1/templates/paged": {
       "get": {
-        "tags": ["Template"],
+        "tags": [
+          "Template"
+        ],
         "summary": "Get All Template by filter with pagination",
         "parameters": [
           {
@@ -4894,7 +5006,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "85210938-634c-4634-b1a3-96bf3773e0d4"
+              "default": "e1a0c540-2169-47be-9cb1-f8ec775378bf"
             }
           }
         ],
@@ -4933,7 +5045,9 @@
     },
     "/tepsales/v1/templates/all": {
       "get": {
-        "tags": ["Template"],
+        "tags": [
+          "Template"
+        ],
         "summary": "Get All Template by filter",
         "parameters": [
           {
@@ -4980,7 +5094,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "649408fa-b0fe-4dd2-8819-9428b95409de"
+              "default": "f541ecee-76aa-44b3-8f6b-3a80e990262a"
             }
           }
         ],
@@ -5022,7 +5136,9 @@
     },
     "/tepsales/v1/templates": {
       "post": {
-        "tags": ["Template"],
+        "tags": [
+          "Template"
+        ],
         "summary": "Create Template",
         "parameters": [
           {
@@ -5039,7 +5155,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "bebe79f1-5406-4af0-a108-e526465f1304"
+              "default": "ca318e65-83df-4914-920e-58651e06c432"
             }
           }
         ],
@@ -5108,7 +5224,9 @@
     },
     "/tepsales/v1/users/{id}": {
       "delete": {
-        "tags": ["User"],
+        "tags": [
+          "User"
+        ],
         "summary": "Delete User by Id",
         "parameters": [
           {
@@ -5136,7 +5254,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e32c244e-988e-4fa4-8f48-4714c92377a0"
+              "default": "f1ad3861-21ba-4a89-9f0a-e7b3c6952bd4"
             }
           }
         ],
@@ -5169,7 +5287,9 @@
         }
       },
       "get": {
-        "tags": ["User"],
+        "tags": [
+          "User"
+        ],
         "summary": "Get User by id",
         "operationId": "GetByIdUser",
         "parameters": [
@@ -5198,7 +5318,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8f4dbf53-9ee4-4e91-825e-a94e9e191310"
+              "default": "8d941d1f-e3ae-48d4-851c-0231893a086c"
             }
           }
         ],
@@ -5238,7 +5358,9 @@
         }
       },
       "patch": {
-        "tags": ["User"],
+        "tags": [
+          "User"
+        ],
         "summary": "Update part of User",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/User/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -5267,7 +5389,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6527ced4-949e-477d-bdcf-4b9fd2132188"
+              "default": "db700a4a-5095-4de3-828e-539ba451e12a"
             }
           }
         ],
@@ -5335,7 +5457,9 @@
         }
       },
       "put": {
-        "tags": ["User"],
+        "tags": [
+          "User"
+        ],
         "summary": "Update User",
         "parameters": [
           {
@@ -5363,7 +5487,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8e07951d-9d49-48be-8de6-c3a48c11b790"
+              "default": "cdc9c02e-64e0-4f81-9e5a-6e7a5f49adf9"
             }
           }
         ],
@@ -5428,7 +5552,9 @@
     },
     "/tepsales/v1/users/paged": {
       "get": {
-        "tags": ["User"],
+        "tags": [
+          "User"
+        ],
         "summary": "Get All User by filter with pagination",
         "parameters": [
           {
@@ -5503,7 +5629,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "99b6d19a-7928-4c0b-b394-9f22fe3d1989"
+              "default": "42cbe0ea-cd43-4b7e-a67b-e45bd4929f06"
             }
           }
         ],
@@ -5542,7 +5668,9 @@
     },
     "/tepsales/v1/users/all": {
       "get": {
-        "tags": ["User"],
+        "tags": [
+          "User"
+        ],
         "summary": "Get All User by filter",
         "parameters": [
           {
@@ -5611,7 +5739,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7d607f83-2d34-4cfc-8638-de28c2c5e33a"
+              "default": "e353bee4-2cef-49f9-8564-e92fb354623a"
             }
           }
         ],
@@ -5653,7 +5781,9 @@
     },
     "/tepsales/v1/users": {
       "post": {
-        "tags": ["User"],
+        "tags": [
+          "User"
+        ],
         "summary": "Create User",
         "parameters": [
           {
@@ -5670,7 +5800,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "20cd3290-f8d6-4657-88bf-f1a3c225bb0b"
+              "default": "a1f38b7f-7142-4fed-ac2f-95cfecb84f88"
             }
           }
         ],
@@ -5739,7 +5869,9 @@
     },
     "/tepsales/v1/users/singin": {
       "post": {
-        "tags": ["User"],
+        "tags": [
+          "User"
+        ],
         "summary": "Create User",
         "parameters": [
           {
@@ -5756,7 +5888,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "11836a70-fb0c-4459-b3fe-e44f9c6842ff"
+              "default": "343d0990-c13e-412f-8f94-8bcaf0d2c3d4"
             }
           }
         ],
@@ -5825,7 +5957,9 @@
     },
     "/tepsales/v1/users/singup": {
       "post": {
-        "tags": ["User"],
+        "tags": [
+          "User"
+        ],
         "summary": "Create User",
         "parameters": [
           {
@@ -5842,7 +5976,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6e8c14f4-2395-4d5e-9ecc-5eac69dd9348"
+              "default": "e714c36c-a387-4b5d-babd-8a3886c140ea"
             }
           }
         ],
@@ -5911,7 +6045,9 @@
     },
     "/tepsales/v1/vehicles/{id}": {
       "delete": {
-        "tags": ["Vehicle"],
+        "tags": [
+          "Vehicle"
+        ],
         "summary": "Delete Vehicle by Id",
         "parameters": [
           {
@@ -5939,7 +6075,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "bf78b2ed-5b55-470d-83e6-439ad08441d6"
+              "default": "a851d61e-3bb2-4175-a1a9-361010c1ff76"
             }
           }
         ],
@@ -5972,7 +6108,9 @@
         }
       },
       "get": {
-        "tags": ["Vehicle"],
+        "tags": [
+          "Vehicle"
+        ],
         "summary": "Get Vehicle by id",
         "operationId": "GetByIdVehicle",
         "parameters": [
@@ -6001,7 +6139,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c90e2871-2956-4a4d-b7b0-3fc6d0031bfe"
+              "default": "c8d1e839-7f41-4456-9462-a764434c31e1"
             }
           }
         ],
@@ -6041,7 +6179,9 @@
         }
       },
       "patch": {
-        "tags": ["Vehicle"],
+        "tags": [
+          "Vehicle"
+        ],
         "summary": "Update part of Vehicle",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Vehicle/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -6070,7 +6210,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "40db2745-8ca0-4663-aaad-5b65df8acd8e"
+              "default": "9e13bec2-a0f3-47fa-98e4-c31445b770d6"
             }
           }
         ],
@@ -6138,7 +6278,9 @@
         }
       },
       "put": {
-        "tags": ["Vehicle"],
+        "tags": [
+          "Vehicle"
+        ],
         "summary": "Update Vehicle",
         "parameters": [
           {
@@ -6166,7 +6308,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "95df604f-da7c-4cb0-a8ea-072e3c2a844a"
+              "default": "bfe62ed1-88f8-47b9-9863-2331f8afe6b9"
             }
           }
         ],
@@ -6231,7 +6373,9 @@
     },
     "/tepsales/v1/vehicles/paged": {
       "get": {
-        "tags": ["Vehicle"],
+        "tags": [
+          "Vehicle"
+        ],
         "summary": "Get All Vehicle by filter with pagination",
         "parameters": [
           {
@@ -6301,7 +6445,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "06a266ef-40be-4a91-a9d5-51c3e1934cdb"
+              "default": "ff23b4af-c69b-401a-804e-3cc29e343b97"
             }
           }
         ],
@@ -6340,7 +6484,9 @@
     },
     "/tepsales/v1/vehicles/all": {
       "get": {
-        "tags": ["Vehicle"],
+        "tags": [
+          "Vehicle"
+        ],
         "summary": "Get All Vehicle by filter",
         "parameters": [
           {
@@ -6405,7 +6551,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c341ce38-79ba-44da-935c-58bfe32f463d"
+              "default": "3fe8a8e1-2755-4963-bd7f-5933cc553075"
             }
           }
         ],
@@ -6447,7 +6593,9 @@
     },
     "/tepsales/v1/vehicles": {
       "post": {
-        "tags": ["Vehicle"],
+        "tags": [
+          "Vehicle"
+        ],
         "summary": "Create Vehicle",
         "parameters": [
           {
@@ -6464,7 +6612,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "49326894-5546-42bf-a3da-0c8259bd3f02"
+              "default": "b71392a2-7b06-4f0a-a775-7f7628947bba"
             }
           }
         ],
@@ -6533,7 +6681,9 @@
     },
     "/tepsales/v1/version": {
       "get": {
-        "tags": ["Version"],
+        "tags": [
+          "Version"
+        ],
         "summary": "Get Version",
         "parameters": [
           {
@@ -6550,7 +6700,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e4796f97-48b9-4e4a-aae5-a8c6bbf7cbc1"
+              "default": "c8c894ae-d777-49b6-a6cc-b5336c92c093"
             }
           }
         ],
@@ -6587,7 +6737,11 @@
   "components": {
     "schemas": {
       "ActionType": {
-        "enum": [1, 2, 3],
+        "enum": [
+          1,
+          2,
+          3
+        ],
         "type": "integer",
         "format": "int32"
       },
@@ -6725,7 +6879,15 @@
         "additionalProperties": false
       },
       "OperationType": {
-        "enum": [0, 1, 2, 3, 4, 5, 6],
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
         "type": "integer",
         "format": "int32"
       },
@@ -7124,6 +7286,10 @@
             "type": "string",
             "format": "uuid"
           },
+          "addressName": {
+            "type": "string",
+            "nullable": true
+          },
           "cep": {
             "type": "string",
             "nullable": true
@@ -7163,6 +7329,18 @@
           "distance": {
             "type": "number",
             "format": "double"
+          },
+          "earthDistance": {
+            "type": "number",
+            "format": "double"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ie": {
+            "type": "string",
+            "nullable": true
           },
           "clientId": {
             "type": "string",
@@ -7196,6 +7374,10 @@
             "type": "string",
             "format": "uuid"
           },
+          "addressName": {
+            "type": "string",
+            "nullable": true
+          },
           "cep": {
             "type": "string",
             "nullable": true
@@ -7235,6 +7417,18 @@
           "distance": {
             "type": "number",
             "format": "double"
+          },
+          "earthDistance": {
+            "type": "number",
+            "format": "double"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ie": {
+            "type": "string",
+            "nullable": true
           },
           "clientId": {
             "type": "string",
@@ -7305,6 +7499,10 @@
             "type": "string",
             "format": "uuid"
           },
+          "addressName": {
+            "type": "string",
+            "nullable": true
+          },
           "cep": {
             "type": "string",
             "nullable": true
@@ -7344,6 +7542,18 @@
           "distance": {
             "type": "number",
             "format": "double"
+          },
+          "earthDistance": {
+            "type": "number",
+            "format": "double"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ie": {
+            "type": "string",
+            "nullable": true
           },
           "clientId": {
             "type": "string",
@@ -7377,6 +7587,10 @@
             "type": "string",
             "format": "uuid"
           },
+          "addressName": {
+            "type": "string",
+            "nullable": true
+          },
           "cep": {
             "type": "string",
             "nullable": true
@@ -7416,6 +7630,18 @@
           "distance": {
             "type": "number",
             "format": "double"
+          },
+          "earthDistance": {
+            "type": "number",
+            "format": "double"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ie": {
+            "type": "string",
+            "nullable": true
           },
           "clientId": {
             "type": "string",
@@ -7931,7 +8157,10 @@
         "additionalProperties": false
       },
       "ProductPackageEnum": {
-        "enum": [1, 2],
+        "enum": [
+          1,
+          2
+        ],
         "type": "integer",
         "format": "int32"
       },
@@ -7949,12 +8178,27 @@
         "additionalProperties": false
       },
       "ProductFamilyEnum": {
-        "enum": [1, 2, 3, 4, 5, 6],
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
         "type": "integer",
         "format": "int32"
       },
       "ProductPriceDeadlineEnum": {
-        "enum": [1, 2, 3, 4, 5, 6, 7],
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
         "type": "integer",
         "format": "int32"
       },
@@ -7972,12 +8216,18 @@
         "additionalProperties": false
       },
       "ProductDiscountWeightTypeEnum": {
-        "enum": [1, 2],
+        "enum": [
+          1,
+          2
+        ],
         "type": "integer",
         "format": "int32"
       },
       "ProductDiscountTypeEnum": {
-        "enum": [1, 2],
+        "enum": [
+          1,
+          2
+        ],
         "type": "integer",
         "format": "int32"
       },
@@ -9331,7 +9581,9 @@
   },
   "security": [
     {
-      "Bearer": []
+      "Bearer": [
+        
+      ]
     }
   ]
 }

@@ -18,6 +18,8 @@ class _$GetAllClientPropertyResponse extends GetAllClientPropertyResponse {
   @override
   final String? id;
   @override
+  final String? addressName;
+  @override
   final String? cep;
   @override
   final String? address;
@@ -38,6 +40,12 @@ class _$GetAllClientPropertyResponse extends GetAllClientPropertyResponse {
   @override
   final double? distance;
   @override
+  final double? earthDistance;
+  @override
+  final String? type;
+  @override
+  final String? ie;
+  @override
   final String? clientId;
 
   factory _$GetAllClientPropertyResponse(
@@ -50,6 +58,7 @@ class _$GetAllClientPropertyResponse extends GetAllClientPropertyResponse {
       this.userCreated,
       this.userUpdated,
       this.id,
+      this.addressName,
       this.cep,
       this.address,
       this.neighborhood,
@@ -60,6 +69,9 @@ class _$GetAllClientPropertyResponse extends GetAllClientPropertyResponse {
       this.latitude,
       this.longitude,
       this.distance,
+      this.earthDistance,
+      this.type,
+      this.ie,
       this.clientId})
       : super._();
 
@@ -81,6 +93,7 @@ class _$GetAllClientPropertyResponse extends GetAllClientPropertyResponse {
         userCreated == other.userCreated &&
         userUpdated == other.userUpdated &&
         id == other.id &&
+        addressName == other.addressName &&
         cep == other.cep &&
         address == other.address &&
         neighborhood == other.neighborhood &&
@@ -91,6 +104,9 @@ class _$GetAllClientPropertyResponse extends GetAllClientPropertyResponse {
         latitude == other.latitude &&
         longitude == other.longitude &&
         distance == other.distance &&
+        earthDistance == other.earthDistance &&
+        type == other.type &&
+        ie == other.ie &&
         clientId == other.clientId;
   }
 
@@ -112,25 +128,27 @@ class _$GetAllClientPropertyResponse extends GetAllClientPropertyResponse {
                                                         $jc(
                                                             $jc(
                                                                 $jc(
-                                                                    0,
-                                                                    createdAt
-                                                                        .hashCode),
-                                                                updatedAt
-                                                                    .hashCode),
-                                                            userCreated
-                                                                .hashCode),
-                                                        userUpdated.hashCode),
-                                                    id.hashCode),
-                                                cep.hashCode),
-                                            address.hashCode),
-                                        neighborhood.hashCode),
-                                    number.hashCode),
-                                state.hashCode),
-                            city.hashCode),
-                        complement.hashCode),
-                    latitude.hashCode),
-                longitude.hashCode),
-            distance.hashCode),
+                                                                    $jc(
+                                                                        $jc(
+                                                                            $jc($jc(0, createdAt.hashCode),
+                                                                                updatedAt.hashCode),
+                                                                            userCreated.hashCode),
+                                                                        userUpdated.hashCode),
+                                                                    id.hashCode),
+                                                                addressName.hashCode),
+                                                            cep.hashCode),
+                                                        address.hashCode),
+                                                    neighborhood.hashCode),
+                                                number.hashCode),
+                                            state.hashCode),
+                                        city.hashCode),
+                                    complement.hashCode),
+                                latitude.hashCode),
+                            longitude.hashCode),
+                        distance.hashCode),
+                    earthDistance.hashCode),
+                type.hashCode),
+            ie.hashCode),
         clientId.hashCode));
   }
 
@@ -142,6 +160,7 @@ class _$GetAllClientPropertyResponse extends GetAllClientPropertyResponse {
           ..add('userCreated', userCreated)
           ..add('userUpdated', userUpdated)
           ..add('id', id)
+          ..add('addressName', addressName)
           ..add('cep', cep)
           ..add('address', address)
           ..add('neighborhood', neighborhood)
@@ -152,6 +171,9 @@ class _$GetAllClientPropertyResponse extends GetAllClientPropertyResponse {
           ..add('latitude', latitude)
           ..add('longitude', longitude)
           ..add('distance', distance)
+          ..add('earthDistance', earthDistance)
+          ..add('type', type)
+          ..add('ie', ie)
           ..add('clientId', clientId))
         .toString();
   }
@@ -182,6 +204,10 @@ class GetAllClientPropertyResponseBuilder
   String? _id;
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
+
+  String? _addressName;
+  String? get addressName => _$this._addressName;
+  set addressName(String? addressName) => _$this._addressName = addressName;
 
   String? _cep;
   String? get cep => _$this._cep;
@@ -223,6 +249,19 @@ class GetAllClientPropertyResponseBuilder
   double? get distance => _$this._distance;
   set distance(double? distance) => _$this._distance = distance;
 
+  double? _earthDistance;
+  double? get earthDistance => _$this._earthDistance;
+  set earthDistance(double? earthDistance) =>
+      _$this._earthDistance = earthDistance;
+
+  String? _type;
+  String? get type => _$this._type;
+  set type(String? type) => _$this._type = type;
+
+  String? _ie;
+  String? get ie => _$this._ie;
+  set ie(String? ie) => _$this._ie = ie;
+
   String? _clientId;
   String? get clientId => _$this._clientId;
   set clientId(String? clientId) => _$this._clientId = clientId;
@@ -239,6 +278,7 @@ class GetAllClientPropertyResponseBuilder
       _userCreated = $v.userCreated;
       _userUpdated = $v.userUpdated;
       _id = $v.id;
+      _addressName = $v.addressName;
       _cep = $v.cep;
       _address = $v.address;
       _neighborhood = $v.neighborhood;
@@ -249,6 +289,9 @@ class GetAllClientPropertyResponseBuilder
       _latitude = $v.latitude;
       _longitude = $v.longitude;
       _distance = $v.distance;
+      _earthDistance = $v.earthDistance;
+      _type = $v.type;
+      _ie = $v.ie;
       _clientId = $v.clientId;
       _$v = null;
     }
@@ -275,6 +318,7 @@ class GetAllClientPropertyResponseBuilder
             userCreated: userCreated,
             userUpdated: userUpdated,
             id: id,
+            addressName: addressName,
             cep: cep,
             address: address,
             neighborhood: neighborhood,
@@ -285,6 +329,9 @@ class GetAllClientPropertyResponseBuilder
             latitude: latitude,
             longitude: longitude,
             distance: distance,
+            earthDistance: earthDistance,
+            type: type,
+            ie: ie,
             clientId: clientId);
     replace(_$result);
     return _$result;
