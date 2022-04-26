@@ -44,7 +44,7 @@ class ClientPropertyApi {
   Future<Response<GetAllClientPropertyResponse>> getByIdClientProperty({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '1f61fb93-f1f4-485f-9b4d-4045953dabbd',
+    String? xCsrfToken = '294eb95c-b4c6-4b73-ab04-1f9fb936fa8d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -135,7 +135,7 @@ class ClientPropertyApi {
     int? limit = 100,
     String? sort = 'Id.asc',
     String? xApiKey,
-    String? xCsrfToken = '8a181b31-cf38-4c0b-b232-9e5650cbdab1',
+    String? xCsrfToken = 'f10ebd6e-c765-46ad-a899-bc0cdf489d43',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -229,7 +229,7 @@ class ClientPropertyApi {
   Future<Response<void>> tepsalesV1ClientPropertiesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '6a20b403-20fd-4373-8ad4-afeadf54e52b',
+    String? xCsrfToken = 'b0d7f8a0-7a14-4efa-b5fc-3d92e302976e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -291,7 +291,7 @@ class ClientPropertyApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'cfabf180-43a3-42ea-9738-e1908e73b86c',
+    String? xCsrfToken = '9ad98425-e220-4fbe-855d-9f37ae6f6345',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -371,7 +371,7 @@ class ClientPropertyApi {
   Future<Response<void>> tepsalesV1ClientPropertiesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '0f66a61a-5b10-4898-8480-c5926dbf3a26',
+    String? xCsrfToken = 'da715331-4654-45a3-91d8-d73bbc2758d2',
     PutClientPropertyRequest? putClientPropertyRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -457,7 +457,7 @@ class ClientPropertyApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'e26be03f-0c23-4b47-95cd-9b1f1e91b960',
+    String? xCsrfToken = '942cf407-a32c-4ae6-94ca-ebe373093e0b',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -551,7 +551,7 @@ class ClientPropertyApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostClientPropertyResponse>> tepsalesV1ClientPropertiesPost({ 
     String? xApiKey,
-    String? xCsrfToken = '4d5f624b-1cb3-4397-9780-7e1118bd444f',
+    String? xCsrfToken = '812b6f17-f2f7-4aba-8250-bca9100c7f7d',
     PostClientPropertyRequest? postClientPropertyRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

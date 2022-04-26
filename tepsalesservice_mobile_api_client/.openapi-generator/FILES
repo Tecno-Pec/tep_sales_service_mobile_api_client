@@ -77,6 +77,7 @@ doc/PutTemplateRequest.md
 doc/PutUserRequest.md
 doc/PutVehicleRequest.md
 doc/ReasonCancelApi.md
+doc/SigninResponse.md
 doc/TemplateApi.md
 doc/UserApi.md
 doc/VehicleApi.md
@@ -170,6 +171,8 @@ lib/src/model/put_reason_cancel_request.dart
 lib/src/model/put_template_request.dart
 lib/src/model/put_user_request.dart
 lib/src/model/put_vehicle_request.dart
+lib/src/model/signin_response.dart
 lib/src/serializers.dart
 lib/tepsalesservice_mobile_api_client.dart
 pubspec.yaml
+test/signin_response_test.dart

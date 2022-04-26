@@ -57,7 +57,7 @@ class AuditApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '6e0c785b-8825-4a76-b744-44840f44e8a7',
+    String? xCsrfToken = 'f0fec74e-70ad-4a02-abfd-931a893532b4',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,

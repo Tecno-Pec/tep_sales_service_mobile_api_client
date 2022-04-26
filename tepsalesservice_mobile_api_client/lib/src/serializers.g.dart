@@ -75,6 +75,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PutTemplateRequest.serializer)
       ..add(PutUserRequest.serializer)
       ..add(PutVehicleRequest.serializer)
+      ..add(SigninResponse.serializer)
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetAllAuditResponse)]),

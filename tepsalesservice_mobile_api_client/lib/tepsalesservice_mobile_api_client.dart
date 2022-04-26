@@ -90,3 +90,4 @@ export 'package:tepsalesservice_mobile_api_client/src/model/put_reason_cancel_re
 export 'package:tepsalesservice_mobile_api_client/src/model/put_template_request.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/put_user_request.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/put_vehicle_request.dart';
+export 'package:tepsalesservice_mobile_api_client/src/model/signin_response.dart';

@@ -223,6 +223,7 @@ Class | Method | HTTP request | Description
  - [PutTemplateRequest](doc\PutTemplateRequest.md)
  - [PutUserRequest](doc\PutUserRequest.md)
  - [PutVehicleRequest](doc\PutVehicleRequest.md)
+ - [SigninResponse](doc\SigninResponse.md)
 
 
 ## Documentation For Authorization
