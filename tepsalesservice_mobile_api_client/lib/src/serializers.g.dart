@@ -8,43 +8,62 @@ part of 'serializers.dart';
 
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ActionType.serializer)
+      ..add(AddressTypeEnum.serializer)
       ..add(Catalog.serializer)
       ..add(ErrorDetails.serializer)
+      ..add(GetAllAddressResponse.serializer)
       ..add(GetAllAuditResponse.serializer)
       ..add(GetAllCatalogResponse.serializer)
-      ..add(GetAllClientPropertyResponse.serializer)
       ..add(GetAllClientResponse.serializer)
       ..add(GetAllCompanyResponse.serializer)
       ..add(GetAllFreightResponse.serializer)
+      ..add(GetAllFreightTableResponse.serializer)
       ..add(GetAllLastCatalogVersionResponse.serializer)
+      ..add(GetAllPagedAddressResponse.serializer)
       ..add(GetAllPagedAuditResponse.serializer)
       ..add(GetAllPagedCatalogResponse.serializer)
-      ..add(GetAllPagedClientPropertyResponse.serializer)
       ..add(GetAllPagedClientResponse.serializer)
       ..add(GetAllPagedCompanyResponse.serializer)
       ..add(GetAllPagedFreightResponse.serializer)
+      ..add(GetAllPagedFreightTableResponse.serializer)
+      ..add(GetAllPagedPaymentConditionResponse.serializer)
+      ..add(GetAllPagedProductGroupResponse.serializer)
+      ..add(GetAllPagedProductLineResponse.serializer)
       ..add(GetAllPagedProductResponse.serializer)
       ..add(GetAllPagedReasonCancelResponse.serializer)
       ..add(GetAllPagedTemplateResponse.serializer)
       ..add(GetAllPagedUserResponse.serializer)
       ..add(GetAllPagedVehicleResponse.serializer)
+      ..add(GetAllPagedVehicleTypeResponse.serializer)
+      ..add(GetAllPaymentConditionResponse.serializer)
+      ..add(GetAllProductGroupResponse.serializer)
+      ..add(GetAllProductLineResponse.serializer)
       ..add(GetAllProductResponse.serializer)
       ..add(GetAllReasonCancelResponse.serializer)
       ..add(GetAllTemplateResponse.serializer)
       ..add(GetAllUserResponse.serializer)
       ..add(GetAllVehicleResponse.serializer)
+      ..add(GetAllVehicleTypeResponse.serializer)
       ..add(Operation.serializer)
       ..add(OperationType.serializer)
+      ..add(PostAddressRequest.serializer)
+      ..add(PostAddressResponse.serializer)
       ..add(PostCatalogRequest.serializer)
       ..add(PostCatalogResponse.serializer)
-      ..add(PostClientPropertyRequest.serializer)
-      ..add(PostClientPropertyResponse.serializer)
       ..add(PostClientRequest.serializer)
       ..add(PostClientResponse.serializer)
       ..add(PostCompanyRequest.serializer)
       ..add(PostCompanyResponse.serializer)
       ..add(PostFreightRequest.serializer)
       ..add(PostFreightResponse.serializer)
+      ..add(PostFreightTableRequest.serializer)
+      ..add(PostFreightTableResponse.serializer)
+      ..add(PostPaymentConditionRequest.serializer)
+      ..add(PostPaymentConditionResponse.serializer)
+      ..add(PostProductGroupRequest.serializer)
+      ..add(PostProductGroupResponse.serializer)
+      ..add(PostProductLineRequest.serializer)
+      ..add(PostProductLineResponse.serializer)
       ..add(PostProductRequest.serializer)
       ..add(PostProductResponse.serializer)
       ..add(PostReasonCancelRequest.serializer)
@@ -53,9 +72,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PostTemplateResponse.serializer)
       ..add(PostUserRequest.serializer)
       ..add(PostUserResponse.serializer)
-      ..add(PostUserSinginRequest.serializer)
+      ..add(PostUserSignInRequest.serializer)
+      ..add(PostUserSignInResponse.serializer)
       ..add(PostVehicleRequest.serializer)
       ..add(PostVehicleResponse.serializer)
+      ..add(PostVehicleTypeRequest.serializer)
+      ..add(PostVehicleTypeResponse.serializer)
       ..add(Product.serializer)
       ..add(ProductDiscountRule.serializer)
       ..add(ProductDiscountTypeEnum.serializer)
@@ -65,17 +87,25 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ProductPackageEnum.serializer)
       ..add(ProductPrice.serializer)
       ..add(ProductPriceDeadlineEnum.serializer)
+      ..add(PutAddressRequest.serializer)
       ..add(PutCatalogRequest.serializer)
-      ..add(PutClientPropertyRequest.serializer)
       ..add(PutClientRequest.serializer)
       ..add(PutCompanyRequest.serializer)
       ..add(PutFreightRequest.serializer)
+      ..add(PutFreightTableRequest.serializer)
+      ..add(PutPaymentConditionRequest.serializer)
+      ..add(PutProductGroupRequest.serializer)
+      ..add(PutProductLineRequest.serializer)
       ..add(PutProductRequest.serializer)
       ..add(PutReasonCancelRequest.serializer)
       ..add(PutTemplateRequest.serializer)
       ..add(PutUserRequest.serializer)
       ..add(PutVehicleRequest.serializer)
-      ..add(SigninResponse.serializer)
+      ..add(PutVehicleTypeRequest.serializer)
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GetAllAddressResponse)]),
+          () => new ListBuilder<GetAllAddressResponse>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetAllAuditResponse)]),
@@ -84,10 +114,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(GetAllCatalogResponse)]),
           () => new ListBuilder<GetAllCatalogResponse>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(GetAllClientPropertyResponse)]),
-          () => new ListBuilder<GetAllClientPropertyResponse>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetAllClientResponse)]),
@@ -100,6 +126,22 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(GetAllFreightResponse)]),
           () => new ListBuilder<GetAllFreightResponse>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GetAllFreightTableResponse)]),
+          () => new ListBuilder<GetAllFreightTableResponse>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GetAllPaymentConditionResponse)]),
+          () => new ListBuilder<GetAllPaymentConditionResponse>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GetAllProductGroupResponse)]),
+          () => new ListBuilder<GetAllProductGroupResponse>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GetAllProductLineResponse)]),
+          () => new ListBuilder<GetAllProductLineResponse>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetAllProductResponse)]),
@@ -119,6 +161,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(GetAllVehicleResponse)]),
           () => new ListBuilder<GetAllVehicleResponse>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GetAllVehicleTypeResponse)]),
+          () => new ListBuilder<GetAllVehicleTypeResponse>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Product)]),
           () => new ListBuilder<Product>())

@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'put_client_request.dart';
+part of 'post_product_line_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$PutClientRequest extends PutClientRequest {
+class _$PostProductLineResponse extends PostProductLineResponse {
   @override
   final DateTime? createdAt;
   @override
@@ -20,56 +20,45 @@ class _$PutClientRequest extends PutClientRequest {
   @override
   final String? name;
   @override
-  final String? document;
-  @override
-  final String? phone;
-  @override
-  final String? ie;
-  @override
-  final String? email;
+  final String? description;
   @override
   final String? externalCode;
 
-  factory _$PutClientRequest(
-          [void Function(PutClientRequestBuilder)? updates]) =>
-      (new PutClientRequestBuilder()..update(updates)).build();
+  factory _$PostProductLineResponse(
+          [void Function(PostProductLineResponseBuilder)? updates]) =>
+      (new PostProductLineResponseBuilder()..update(updates)).build();
 
-  _$PutClientRequest._(
+  _$PostProductLineResponse._(
       {this.createdAt,
       this.updatedAt,
       this.userCreated,
       this.userUpdated,
       this.id,
       this.name,
-      this.document,
-      this.phone,
-      this.ie,
-      this.email,
+      this.description,
       this.externalCode})
       : super._();
 
   @override
-  PutClientRequest rebuild(void Function(PutClientRequestBuilder) updates) =>
+  PostProductLineResponse rebuild(
+          void Function(PostProductLineResponseBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  PutClientRequestBuilder toBuilder() =>
-      new PutClientRequestBuilder()..replace(this);
+  PostProductLineResponseBuilder toBuilder() =>
+      new PostProductLineResponseBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is PutClientRequest &&
+    return other is PostProductLineResponse &&
         createdAt == other.createdAt &&
         updatedAt == other.updatedAt &&
         userCreated == other.userCreated &&
         userUpdated == other.userUpdated &&
         id == other.id &&
         name == other.name &&
-        document == other.document &&
-        phone == other.phone &&
-        ie == other.ie &&
-        email == other.email &&
+        description == other.description &&
         externalCode == other.externalCode;
   }
 
@@ -80,44 +69,34 @@ class _$PutClientRequest extends PutClientRequest {
             $jc(
                 $jc(
                     $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc($jc(0, createdAt.hashCode),
-                                            updatedAt.hashCode),
-                                        userCreated.hashCode),
-                                    userUpdated.hashCode),
-                                id.hashCode),
-                            name.hashCode),
-                        document.hashCode),
-                    phone.hashCode),
-                ie.hashCode),
-            email.hashCode),
+                        $jc($jc($jc(0, createdAt.hashCode), updatedAt.hashCode),
+                            userCreated.hashCode),
+                        userUpdated.hashCode),
+                    id.hashCode),
+                name.hashCode),
+            description.hashCode),
         externalCode.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('PutClientRequest')
+    return (newBuiltValueToStringHelper('PostProductLineResponse')
           ..add('createdAt', createdAt)
           ..add('updatedAt', updatedAt)
           ..add('userCreated', userCreated)
           ..add('userUpdated', userUpdated)
           ..add('id', id)
           ..add('name', name)
-          ..add('document', document)
-          ..add('phone', phone)
-          ..add('ie', ie)
-          ..add('email', email)
+          ..add('description', description)
           ..add('externalCode', externalCode))
         .toString();
   }
 }
 
-class PutClientRequestBuilder
-    implements Builder<PutClientRequest, PutClientRequestBuilder> {
-  _$PutClientRequest? _$v;
+class PostProductLineResponseBuilder
+    implements
+        Builder<PostProductLineResponse, PostProductLineResponseBuilder> {
+  _$PostProductLineResponse? _$v;
 
   DateTime? _createdAt;
   DateTime? get createdAt => _$this._createdAt;
@@ -143,31 +122,19 @@ class PutClientRequestBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
-  String? _document;
-  String? get document => _$this._document;
-  set document(String? document) => _$this._document = document;
-
-  String? _phone;
-  String? get phone => _$this._phone;
-  set phone(String? phone) => _$this._phone = phone;
-
-  String? _ie;
-  String? get ie => _$this._ie;
-  set ie(String? ie) => _$this._ie = ie;
-
-  String? _email;
-  String? get email => _$this._email;
-  set email(String? email) => _$this._email = email;
+  String? _description;
+  String? get description => _$this._description;
+  set description(String? description) => _$this._description = description;
 
   String? _externalCode;
   String? get externalCode => _$this._externalCode;
   set externalCode(String? externalCode) => _$this._externalCode = externalCode;
 
-  PutClientRequestBuilder() {
-    PutClientRequest._defaults(this);
+  PostProductLineResponseBuilder() {
+    PostProductLineResponse._defaults(this);
   }
 
-  PutClientRequestBuilder get _$this {
+  PostProductLineResponseBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _createdAt = $v.createdAt;
@@ -176,10 +143,7 @@ class PutClientRequestBuilder
       _userUpdated = $v.userUpdated;
       _id = $v.id;
       _name = $v.name;
-      _document = $v.document;
-      _phone = $v.phone;
-      _ie = $v.ie;
-      _email = $v.email;
+      _description = $v.description;
       _externalCode = $v.externalCode;
       _$v = null;
     }
@@ -187,30 +151,27 @@ class PutClientRequestBuilder
   }
 
   @override
-  void replace(PutClientRequest other) {
+  void replace(PostProductLineResponse other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$PutClientRequest;
+    _$v = other as _$PostProductLineResponse;
   }
 
   @override
-  void update(void Function(PutClientRequestBuilder)? updates) {
+  void update(void Function(PostProductLineResponseBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  _$PutClientRequest build() {
+  _$PostProductLineResponse build() {
     final _$result = _$v ??
-        new _$PutClientRequest._(
+        new _$PostProductLineResponse._(
             createdAt: createdAt,
             updatedAt: updatedAt,
             userCreated: userCreated,
             userUpdated: userUpdated,
             id: id,
             name: name,
-            document: document,
-            phone: phone,
-            ie: ie,
-            email: email,
+            description: description,
             externalCode: externalCode);
     replace(_$result);
     return _$result;

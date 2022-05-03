@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'put_client_request.dart';
+part of 'put_payment_condition_request.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$PutClientRequest extends PutClientRequest {
+class _$PutPaymentConditionRequest extends PutPaymentConditionRequest {
   @override
   final DateTime? createdAt;
   @override
@@ -20,56 +20,41 @@ class _$PutClientRequest extends PutClientRequest {
   @override
   final String? name;
   @override
-  final String? document;
-  @override
-  final String? phone;
-  @override
-  final String? ie;
-  @override
-  final String? email;
-  @override
   final String? externalCode;
 
-  factory _$PutClientRequest(
-          [void Function(PutClientRequestBuilder)? updates]) =>
-      (new PutClientRequestBuilder()..update(updates)).build();
+  factory _$PutPaymentConditionRequest(
+          [void Function(PutPaymentConditionRequestBuilder)? updates]) =>
+      (new PutPaymentConditionRequestBuilder()..update(updates)).build();
 
-  _$PutClientRequest._(
+  _$PutPaymentConditionRequest._(
       {this.createdAt,
       this.updatedAt,
       this.userCreated,
       this.userUpdated,
       this.id,
       this.name,
-      this.document,
-      this.phone,
-      this.ie,
-      this.email,
       this.externalCode})
       : super._();
 
   @override
-  PutClientRequest rebuild(void Function(PutClientRequestBuilder) updates) =>
+  PutPaymentConditionRequest rebuild(
+          void Function(PutPaymentConditionRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  PutClientRequestBuilder toBuilder() =>
-      new PutClientRequestBuilder()..replace(this);
+  PutPaymentConditionRequestBuilder toBuilder() =>
+      new PutPaymentConditionRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is PutClientRequest &&
+    return other is PutPaymentConditionRequest &&
         createdAt == other.createdAt &&
         updatedAt == other.updatedAt &&
         userCreated == other.userCreated &&
         userUpdated == other.userUpdated &&
         id == other.id &&
         name == other.name &&
-        document == other.document &&
-        phone == other.phone &&
-        ie == other.ie &&
-        email == other.email &&
         externalCode == other.externalCode;
   }
 
@@ -79,45 +64,32 @@ class _$PutClientRequest extends PutClientRequest {
         $jc(
             $jc(
                 $jc(
-                    $jc(
-                        $jc(
-                            $jc(
-                                $jc(
-                                    $jc(
-                                        $jc($jc(0, createdAt.hashCode),
-                                            updatedAt.hashCode),
-                                        userCreated.hashCode),
-                                    userUpdated.hashCode),
-                                id.hashCode),
-                            name.hashCode),
-                        document.hashCode),
-                    phone.hashCode),
-                ie.hashCode),
-            email.hashCode),
+                    $jc($jc($jc(0, createdAt.hashCode), updatedAt.hashCode),
+                        userCreated.hashCode),
+                    userUpdated.hashCode),
+                id.hashCode),
+            name.hashCode),
         externalCode.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('PutClientRequest')
+    return (newBuiltValueToStringHelper('PutPaymentConditionRequest')
           ..add('createdAt', createdAt)
           ..add('updatedAt', updatedAt)
           ..add('userCreated', userCreated)
           ..add('userUpdated', userUpdated)
           ..add('id', id)
           ..add('name', name)
-          ..add('document', document)
-          ..add('phone', phone)
-          ..add('ie', ie)
-          ..add('email', email)
           ..add('externalCode', externalCode))
         .toString();
   }
 }
 
-class PutClientRequestBuilder
-    implements Builder<PutClientRequest, PutClientRequestBuilder> {
-  _$PutClientRequest? _$v;
+class PutPaymentConditionRequestBuilder
+    implements
+        Builder<PutPaymentConditionRequest, PutPaymentConditionRequestBuilder> {
+  _$PutPaymentConditionRequest? _$v;
 
   DateTime? _createdAt;
   DateTime? get createdAt => _$this._createdAt;
@@ -143,31 +115,15 @@ class PutClientRequestBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
-  String? _document;
-  String? get document => _$this._document;
-  set document(String? document) => _$this._document = document;
-
-  String? _phone;
-  String? get phone => _$this._phone;
-  set phone(String? phone) => _$this._phone = phone;
-
-  String? _ie;
-  String? get ie => _$this._ie;
-  set ie(String? ie) => _$this._ie = ie;
-
-  String? _email;
-  String? get email => _$this._email;
-  set email(String? email) => _$this._email = email;
-
   String? _externalCode;
   String? get externalCode => _$this._externalCode;
   set externalCode(String? externalCode) => _$this._externalCode = externalCode;
 
-  PutClientRequestBuilder() {
-    PutClientRequest._defaults(this);
+  PutPaymentConditionRequestBuilder() {
+    PutPaymentConditionRequest._defaults(this);
   }
 
-  PutClientRequestBuilder get _$this {
+  PutPaymentConditionRequestBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _createdAt = $v.createdAt;
@@ -176,10 +132,6 @@ class PutClientRequestBuilder
       _userUpdated = $v.userUpdated;
       _id = $v.id;
       _name = $v.name;
-      _document = $v.document;
-      _phone = $v.phone;
-      _ie = $v.ie;
-      _email = $v.email;
       _externalCode = $v.externalCode;
       _$v = null;
     }
@@ -187,30 +139,26 @@ class PutClientRequestBuilder
   }
 
   @override
-  void replace(PutClientRequest other) {
+  void replace(PutPaymentConditionRequest other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$PutClientRequest;
+    _$v = other as _$PutPaymentConditionRequest;
   }
 
   @override
-  void update(void Function(PutClientRequestBuilder)? updates) {
+  void update(void Function(PutPaymentConditionRequestBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  _$PutClientRequest build() {
+  _$PutPaymentConditionRequest build() {
     final _$result = _$v ??
-        new _$PutClientRequest._(
+        new _$PutPaymentConditionRequest._(
             createdAt: createdAt,
             updatedAt: updatedAt,
             userCreated: userCreated,
             userUpdated: userUpdated,
             id: id,
             name: name,
-            document: document,
-            phone: phone,
-            ie: ie,
-            email: email,
             externalCode: externalCode);
     replace(_$result);
     return _$result;

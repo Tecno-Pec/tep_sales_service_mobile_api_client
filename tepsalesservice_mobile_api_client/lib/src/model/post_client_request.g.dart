@@ -25,6 +25,10 @@ class _$PostClientRequest extends PostClientRequest {
   final String? phone;
   @override
   final String? ie;
+  @override
+  final String? email;
+  @override
+  final String? externalCode;
 
   factory _$PostClientRequest(
           [void Function(PostClientRequestBuilder)? updates]) =>
@@ -39,7 +43,9 @@ class _$PostClientRequest extends PostClientRequest {
       this.name,
       this.document,
       this.phone,
-      this.ie})
+      this.ie,
+      this.email,
+      this.externalCode})
       : super._();
 
   @override
@@ -62,7 +68,9 @@ class _$PostClientRequest extends PostClientRequest {
         name == other.name &&
         document == other.document &&
         phone == other.phone &&
-        ie == other.ie;
+        ie == other.ie &&
+        email == other.email &&
+        externalCode == other.externalCode;
   }
 
   @override
@@ -74,15 +82,19 @@ class _$PostClientRequest extends PostClientRequest {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, createdAt.hashCode),
-                                    updatedAt.hashCode),
-                                userCreated.hashCode),
-                            userUpdated.hashCode),
-                        id.hashCode),
-                    name.hashCode),
-                document.hashCode),
-            phone.hashCode),
-        ie.hashCode));
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, createdAt.hashCode),
+                                            updatedAt.hashCode),
+                                        userCreated.hashCode),
+                                    userUpdated.hashCode),
+                                id.hashCode),
+                            name.hashCode),
+                        document.hashCode),
+                    phone.hashCode),
+                ie.hashCode),
+            email.hashCode),
+        externalCode.hashCode));
   }
 
   @override
@@ -96,7 +108,9 @@ class _$PostClientRequest extends PostClientRequest {
           ..add('name', name)
           ..add('document', document)
           ..add('phone', phone)
-          ..add('ie', ie))
+          ..add('ie', ie)
+          ..add('email', email)
+          ..add('externalCode', externalCode))
         .toString();
   }
 }
@@ -141,6 +155,14 @@ class PostClientRequestBuilder
   String? get ie => _$this._ie;
   set ie(String? ie) => _$this._ie = ie;
 
+  String? _email;
+  String? get email => _$this._email;
+  set email(String? email) => _$this._email = email;
+
+  String? _externalCode;
+  String? get externalCode => _$this._externalCode;
+  set externalCode(String? externalCode) => _$this._externalCode = externalCode;
+
   PostClientRequestBuilder() {
     PostClientRequest._defaults(this);
   }
@@ -157,6 +179,8 @@ class PostClientRequestBuilder
       _document = $v.document;
       _phone = $v.phone;
       _ie = $v.ie;
+      _email = $v.email;
+      _externalCode = $v.externalCode;
       _$v = null;
     }
     return this;
@@ -185,7 +209,9 @@ class PostClientRequestBuilder
             name: name,
             document: document,
             phone: phone,
-            ie: ie);
+            ie: ie,
+            email: email,
+            externalCode: externalCode);
     replace(_$result);
     return _$result;
   }
