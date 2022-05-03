@@ -19,6 +19,8 @@ part 'post_client_request.g.dart';
 /// * [document] 
 /// * [phone] 
 /// * [ie] 
+/// * [email] 
+/// * [externalCode] 
 abstract class PostClientRequest implements Built<PostClientRequest, PostClientRequestBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;
@@ -46,6 +48,12 @@ abstract class PostClientRequest implements Built<PostClientRequest, PostClientR
 
     @BuiltValueField(wireName: r'ie')
     String? get ie;
+
+    @BuiltValueField(wireName: r'email')
+    String? get email;
+
+    @BuiltValueField(wireName: r'externalCode')
+    String? get externalCode;
 
     PostClientRequest._();
 
@@ -123,6 +131,18 @@ class _$PostClientRequestSerializer implements StructuredSerializer<PostClientRe
                 ..add(serializers.serialize(object.ie,
                     specifiedType: const FullType.nullable(String)));
         }
+        if (object.email != null) {
+            result
+                ..add(r'email')
+                ..add(serializers.serialize(object.email,
+                    specifiedType: const FullType.nullable(String)));
+        }
+        if (object.externalCode != null) {
+            result
+                ..add(r'externalCode')
+                ..add(serializers.serialize(object.externalCode,
+                    specifiedType: const FullType.nullable(String)));
+        }
         return result;
     }
 
@@ -190,6 +210,18 @@ class _$PostClientRequestSerializer implements StructuredSerializer<PostClientRe
                         specifiedType: const FullType.nullable(String)) as String?;
                     if (valueDes == null) continue;
                     result.ie = valueDes;
+                    break;
+                case r'email':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.email = valueDes;
+                    break;
+                case r'externalCode':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType.nullable(String)) as String?;
+                    if (valueDes == null) continue;
+                    result.externalCode = valueDes;
                     break;
             }
         }

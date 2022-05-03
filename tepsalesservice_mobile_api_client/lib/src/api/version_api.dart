@@ -34,7 +34,7 @@ class VersionApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> tepsalesV1VersionGet({ 
     String? xApiKey,
-    String? xCsrfToken = 'fe3ea3a3-6ded-4bc5-9997-67576effc88c',
+    String? xCsrfToken = '5c0f9ad6-5645-44b3-a170-4c4560a46f26',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,

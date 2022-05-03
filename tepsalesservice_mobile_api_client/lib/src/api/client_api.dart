@@ -44,7 +44,7 @@ class ClientApi {
   Future<Response<GetAllClientResponse>> getByIdClient({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '36231890-492f-4157-9600-11158610e062',
+    String? xCsrfToken = '0c488a11-ea92-4685-87c0-42bccb302f8d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -120,6 +120,8 @@ class ClientApi {
   /// * [document] 
   /// * [phone] 
   /// * [ie] 
+  /// * [email] 
+  /// * [externalCode] 
   /// * [limit] - limit
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
   /// * [xApiKey] - Your Api Key
@@ -138,10 +140,12 @@ class ClientApi {
     String? document,
     String? phone,
     String? ie,
+    String? email,
+    String? externalCode,
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '285e1fd5-3a19-4ba5-a964-ef6744fa19ae',
+    String? xCsrfToken = 'ac490561-de49-4c3f-ae3c-88aa4ec32e74',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -176,6 +180,8 @@ class ClientApi {
       r'document': encodeQueryParameter(_serializers, document, const FullType(String)),
       r'phone': encodeQueryParameter(_serializers, phone, const FullType(String)),
       r'ie': encodeQueryParameter(_serializers, ie, const FullType(String)),
+      r'email': encodeQueryParameter(_serializers, email, const FullType(String)),
+      r'externalCode': encodeQueryParameter(_serializers, externalCode, const FullType(String)),
       if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
       r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
     };
@@ -238,7 +244,7 @@ class ClientApi {
   Future<Response<void>> tepsalesV1ClientsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '4a00e5a7-14c7-45c8-bfa1-fb128f823b0f',
+    String? xCsrfToken = '3532580b-1d73-486f-9ce8-8ca1ba6137ed',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -300,7 +306,7 @@ class ClientApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '28d5c851-9941-4a22-8d59-a24f018a7688',
+    String? xCsrfToken = '61cae895-194f-438a-973e-d12b43b56313',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -380,7 +386,7 @@ class ClientApi {
   Future<Response<void>> tepsalesV1ClientsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '69d67f55-8ffb-40ca-a680-567aab88230b',
+    String? xCsrfToken = 'd53a3102-b147-48fd-8621-2eb9bcc1079a',
     PutClientRequest? putClientRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -449,6 +455,8 @@ class ClientApi {
   /// * [document] 
   /// * [phone] 
   /// * [ie] 
+  /// * [email] 
+  /// * [externalCode] 
   /// * [page] 
   /// * [pageSize] 
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
@@ -468,11 +476,13 @@ class ClientApi {
     String? document,
     String? phone,
     String? ie,
+    String? email,
+    String? externalCode,
     int? page,
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '83c2ec08-3e08-428c-8e8e-c0ae80398edb',
+    String? xCsrfToken = 'e7035ff6-f4e5-448a-899e-0555a748dd55',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -507,6 +517,8 @@ class ClientApi {
       r'document': encodeQueryParameter(_serializers, document, const FullType(String)),
       r'phone': encodeQueryParameter(_serializers, phone, const FullType(String)),
       r'ie': encodeQueryParameter(_serializers, ie, const FullType(String)),
+      r'email': encodeQueryParameter(_serializers, email, const FullType(String)),
+      r'externalCode': encodeQueryParameter(_serializers, externalCode, const FullType(String)),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
       r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
@@ -569,7 +581,7 @@ class ClientApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostClientResponse>> tepsalesV1ClientsPost({ 
     String? xApiKey,
-    String? xCsrfToken = '001b3689-1eb1-42ff-bd68-049a55f3d166',
+    String? xCsrfToken = '24f842f5-50fc-4fa6-b612-e62e5ffcfc66',
     PostClientRequest? postClientRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

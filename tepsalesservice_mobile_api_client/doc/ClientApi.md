@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Client id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '36231890-492f-4157-9600-11158610e062']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0c488a11-ea92-4685-87c0-42bccb302f8d']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1ClientsAllGet**
-> BuiltList<GetAllClientResponse> tepsalesV1ClientsAllGet(name, document, phone, ie, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllClientResponse> tepsalesV1ClientsAllGet(name, document, phone, ie, email, externalCode, limit, sort, xApiKey, xCsrfToken)
 
 Get All Client by filter
 
@@ -85,13 +85,15 @@ final String name = name_example; // String |
 final String document = document_example; // String | 
 final String phone = phone_example; // String | 
 final String ie = ie_example; // String | 
+final String email = email_example; // String | 
+final String externalCode = externalCode_example; // String | 
 final int limit = 56; // int | limit
 final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1ClientsAllGet(name, document, phone, ie, limit, sort, xApiKey, xCsrfToken);
+    final response = api.tepsalesV1ClientsAllGet(name, document, phone, ie, email, externalCode, limit, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ClientApi->tepsalesV1ClientsAllGet: $e\n');
@@ -106,10 +108,12 @@ Name | Type | Description  | Notes
  **document** | **String**|  | [optional] 
  **phone** | **String**|  | [optional] 
  **ie** | **String**|  | [optional] 
+ **email** | **String**|  | [optional] 
+ **externalCode** | **String**|  | [optional] 
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '285e1fd5-3a19-4ba5-a964-ef6744fa19ae']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ac490561-de49-4c3f-ae3c-88aa4ec32e74']
 
 ### Return type
 
@@ -157,7 +161,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Client id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4a00e5a7-14c7-45c8-bfa1-fb128f823b0f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3532580b-1d73-486f-9ce8-8ca1ba6137ed']
 
 ### Return type
 
@@ -209,7 +213,7 @@ Name | Type | Description  | Notes
  **id** | **String**| Client id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '28d5c851-9941-4a22-8d59-a24f018a7688']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '61cae895-194f-438a-973e-d12b43b56313']
 
 ### Return type
 
@@ -258,7 +262,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Client Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '69d67f55-8ffb-40ca-a680-567aab88230b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd53a3102-b147-48fd-8621-2eb9bcc1079a']
  **putClientRequest** | [**PutClientRequest**](PutClientRequest.md)| Client to update | [optional] 
 
 ### Return type
@@ -277,7 +281,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1ClientsPagedGet**
-> GetAllPagedClientResponse tepsalesV1ClientsPagedGet(name, document, phone, ie, page, pageSize, sort, xApiKey, xCsrfToken)
+> GetAllPagedClientResponse tepsalesV1ClientsPagedGet(name, document, phone, ie, email, externalCode, page, pageSize, sort, xApiKey, xCsrfToken)
 
 Get All Client by filter with pagination
 
@@ -294,6 +298,8 @@ final String name = name_example; // String |
 final String document = document_example; // String | 
 final String phone = phone_example; // String | 
 final String ie = ie_example; // String | 
+final String email = email_example; // String | 
+final String externalCode = externalCode_example; // String | 
 final int page = 56; // int | 
 final int pageSize = 56; // int | 
 final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
@@ -301,7 +307,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1ClientsPagedGet(name, document, phone, ie, page, pageSize, sort, xApiKey, xCsrfToken);
+    final response = api.tepsalesV1ClientsPagedGet(name, document, phone, ie, email, externalCode, page, pageSize, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ClientApi->tepsalesV1ClientsPagedGet: $e\n');
@@ -316,11 +322,13 @@ Name | Type | Description  | Notes
  **document** | **String**|  | [optional] 
  **phone** | **String**|  | [optional] 
  **ie** | **String**|  | [optional] 
+ **email** | **String**|  | [optional] 
+ **externalCode** | **String**|  | [optional] 
  **page** | **int**|  | [optional] 
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '83c2ec08-3e08-428c-8e8e-c0ae80398edb']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e7035ff6-f4e5-448a-899e-0555a748dd55']
 
 ### Return type
 
@@ -368,7 +376,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '001b3689-1eb1-42ff-bd68-049a55f3d166']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '24f842f5-50fc-4fa6-b612-e62e5ffcfc66']
  **postClientRequest** | [**PostClientRequest**](PostClientRequest.md)| Client to create | [optional] 
 
 ### Return type

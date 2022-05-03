@@ -16,8 +16,8 @@ Method | HTTP request | Description
 [**tepsalesV1UsersIdPut**](UserApi.md#tepsalesv1usersidput) | **PUT** /tepsales/v1/users/{id} | Update User
 [**tepsalesV1UsersPagedGet**](UserApi.md#tepsalesv1userspagedget) | **GET** /tepsales/v1/users/paged | Get All User by filter with pagination
 [**tepsalesV1UsersPost**](UserApi.md#tepsalesv1userspost) | **POST** /tepsales/v1/users | Create User
-[**tepsalesV1UsersSinginPost**](UserApi.md#tepsalesv1userssinginpost) | **POST** /tepsales/v1/users/singin | Create User
-[**tepsalesV1UsersSingupPost**](UserApi.md#tepsalesv1userssinguppost) | **POST** /tepsales/v1/users/singup | Create User
+[**tepsalesV1UsersSigninPost**](UserApi.md#tepsalesv1userssigninpost) | **POST** /tepsales/v1/users/signin | Create User
+[**tepsalesV1UsersSignupPost**](UserApi.md#tepsalesv1userssignuppost) | **POST** /tepsales/v1/users/signup | Create User
 
 
 # **getByIdUser**
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ec85d894-8998-49c3-af70-f42b31356149']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a8a37b0c-e7ce-4305-8be3-0300eafd467c']
 
 ### Return type
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e8090671-07bf-412e-935a-ae681854920e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7be5aeec-5471-4088-99df-240dd57bed64']
 
 ### Return type
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '08c4cb5b-c93c-455d-ac98-ce2a60571e86']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0d06b77f-49bf-465c-898a-e6f6a93b7cd4']
 
 ### Return type
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
  **id** | **String**| User id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1e13f663-a43a-4fbf-a263-4273d1faf7ba']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '41e32003-49a9-4172-b318-a69747ef379b']
 
 ### Return type
 
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7d3cdad9-de35-409f-b240-9be25ca41966']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '30cd13c0-03f6-43b5-bb41-afde90f9217e']
  **putUserRequest** | [**PutUserRequest**](PutUserRequest.md)| User to update | [optional] 
 
 ### Return type
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1e873406-7a84-4425-b82d-6b6d2f9fedb6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd9816068-6883-4d67-b5ca-ba55ba1851a5']
 
 ### Return type
 
@@ -370,7 +370,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7f874b9e-2e16-4aee-81a2-1d684238445e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c8279071-b8b5-4a3a-8ba3-b04a786a2265']
  **postUserRequest** | [**PostUserRequest**](PostUserRequest.md)| User to create | [optional] 
 
 ### Return type
@@ -388,8 +388,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **tepsalesV1UsersSinginPost**
-> SigninResponse tepsalesV1UsersSinginPost(xApiKey, xCsrfToken, postUserSinginRequest)
+# **tepsalesV1UsersSigninPost**
+> PostUserSignInResponse tepsalesV1UsersSigninPost(xApiKey, xCsrfToken, postUserSignInRequest)
 
 Create User
 
@@ -404,13 +404,13 @@ import 'package:tepsalesservice_mobile_api_client/api.dart';
 final api = TepsalesserviceMobileApiClient().getUserApi();
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PostUserSinginRequest postUserSinginRequest = ; // PostUserSinginRequest | User to create
+final PostUserSignInRequest postUserSignInRequest = ; // PostUserSignInRequest | User to create
 
 try {
-    final response = api.tepsalesV1UsersSinginPost(xApiKey, xCsrfToken, postUserSinginRequest);
+    final response = api.tepsalesV1UsersSigninPost(xApiKey, xCsrfToken, postUserSignInRequest);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UserApi->tepsalesV1UsersSinginPost: $e\n');
+    print('Exception when calling UserApi->tepsalesV1UsersSigninPost: $e\n');
 }
 ```
 
@@ -419,12 +419,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4332c87c-f1c6-4c83-abea-d832fb939760']
- **postUserSinginRequest** | [**PostUserSinginRequest**](PostUserSinginRequest.md)| User to create | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7b55c905-649a-470e-b322-33d7b52d8c19']
+ **postUserSignInRequest** | [**PostUserSignInRequest**](PostUserSignInRequest.md)| User to create | [optional] 
 
 ### Return type
 
-[**SigninResponse**](SigninResponse.md)
+[**PostUserSignInResponse**](PostUserSignInResponse.md)
 
 ### Authorization
 
@@ -437,8 +437,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **tepsalesV1UsersSingupPost**
-> PostUserResponse tepsalesV1UsersSingupPost(xApiKey, xCsrfToken, postUserRequest)
+# **tepsalesV1UsersSignupPost**
+> PostUserResponse tepsalesV1UsersSignupPost(xApiKey, xCsrfToken, postUserRequest)
 
 Create User
 
@@ -456,10 +456,10 @@ final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final PostUserRequest postUserRequest = ; // PostUserRequest | User to create
 
 try {
-    final response = api.tepsalesV1UsersSingupPost(xApiKey, xCsrfToken, postUserRequest);
+    final response = api.tepsalesV1UsersSignupPost(xApiKey, xCsrfToken, postUserRequest);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling UserApi->tepsalesV1UsersSingupPost: $e\n');
+    print('Exception when calling UserApi->tepsalesV1UsersSignupPost: $e\n');
 }
 ```
 
@@ -468,7 +468,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ee0f5faf-22f3-4ec5-bc02-59cffdeaa26d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '44307536-33c9-4dfb-849a-6eabe8b3fb6b']
  **postUserRequest** | [**PostUserRequest**](PostUserRequest.md)| User to create | [optional] 
 
 ### Return type

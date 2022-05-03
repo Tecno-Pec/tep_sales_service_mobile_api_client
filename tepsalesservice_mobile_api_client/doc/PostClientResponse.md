@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **document** | **String** |  | [optional] 
 **phone** | **String** |  | [optional] 
 **ie** | **String** |  | [optional] 
+**email** | **String** |  | [optional] 
+**externalCode** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
