@@ -44,7 +44,7 @@ class ProductGroupApi {
   Future<Response<GetAllProductGroupResponse>> getByExternalCodeProductGroupController({ 
     required String externalCode,
     String? xApiKey,
-    String? xCsrfToken = 'e570c0ad-d782-457c-9aae-e41b88b67843',
+    String? xCsrfToken = '2327cba8-f427-4b74-ac13-980a67a6d0ce',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -131,7 +131,7 @@ class ProductGroupApi {
   Future<Response<GetAllProductGroupResponse>> getByIdProductGroup({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '499a3f7c-e571-4129-9153-41cc7325a995',
+    String? xCsrfToken = '461714f9-a961-4dc4-87ac-fa906c92600d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -222,7 +222,7 @@ class ProductGroupApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '1deabc37-340b-4466-b712-85bc80c8f444',
+    String? xCsrfToken = '7227a3a1-59c0-4f05-9fde-6669e996f478',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -316,7 +316,7 @@ class ProductGroupApi {
   Future<Response<void>> tepsalesV1ProductGroupsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'cc8fba91-a191-4ace-9916-bba89a6437ad',
+    String? xCsrfToken = 'cfc58ba5-3952-4096-a06c-776f6395c4f1',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -378,7 +378,7 @@ class ProductGroupApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'cc28c528-8962-4b04-9646-286022fb3430',
+    String? xCsrfToken = '3a39c0c9-4e02-4200-982c-d23c4c8c1f4d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -458,7 +458,7 @@ class ProductGroupApi {
   Future<Response<void>> tepsalesV1ProductGroupsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '3af5404b-2e52-4955-bf39-0b8e269dbb22',
+    String? xCsrfToken = '2dbd2ab4-75a6-46d0-896f-936a8ad3f774',
     PutProductGroupRequest? putProductGroupRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -544,7 +544,7 @@ class ProductGroupApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '8165764a-3463-4958-9c33-7cbdf1da2c05',
+    String? xCsrfToken = '0b195748-a066-447e-af07-2628e88403ff',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -638,7 +638,7 @@ class ProductGroupApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostProductGroupResponse>> tepsalesV1ProductGroupsPost({ 
     String? xApiKey,
-    String? xCsrfToken = '7ac41ffc-abe8-4508-b172-6ef0fb22044e',
+    String? xCsrfToken = 'd85eb910-2fcb-4e77-98d2-7b7c6a464712',
     PostProductGroupRequest? postProductGroupRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

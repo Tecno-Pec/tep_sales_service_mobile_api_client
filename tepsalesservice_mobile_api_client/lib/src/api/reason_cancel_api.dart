@@ -44,7 +44,7 @@ class ReasonCancelApi {
   Future<Response<GetAllReasonCancelResponse>> getByIdReasonCancel({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '34c83dcf-4855-45dd-a177-47b2afa1d772',
+    String? xCsrfToken = '476223d7-01e6-4556-9deb-7b37533fdbca',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -137,7 +137,7 @@ class ReasonCancelApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '04b333df-f1d6-4691-9880-1538a5160ef5',
+    String? xCsrfToken = '94458a48-d77d-4840-bf3c-d025fa0dae88',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -232,7 +232,7 @@ class ReasonCancelApi {
   Future<Response<void>> tepsalesV1ReasonscancelsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'a1ab04a1-e810-46b6-b8ee-2adc539b2ee2',
+    String? xCsrfToken = '5a181c04-0f8c-479f-bfd4-2e2947397bff',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -294,7 +294,7 @@ class ReasonCancelApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '54cd26e1-e320-49c6-8cac-aeb8b4461d00',
+    String? xCsrfToken = '8cd8ca82-d57a-487a-b5f5-293a7e47def0',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -374,7 +374,7 @@ class ReasonCancelApi {
   Future<Response<void>> tepsalesV1ReasonscancelsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '30041f60-67cc-4615-82a2-6c2a75e374b2',
+    String? xCsrfToken = '1bbcd743-458e-40cf-928d-19bc41f52b53',
     PutReasonCancelRequest? putReasonCancelRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -462,7 +462,7 @@ class ReasonCancelApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '8c036290-f3b9-4dd9-b35b-a7e5d9e8187c',
+    String? xCsrfToken = '75dfd2aa-dcde-4a6d-9c0f-0bd5c8eb795b',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -557,7 +557,7 @@ class ReasonCancelApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostReasonCancelResponse>> tepsalesV1ReasonscancelsPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'eb111f48-d74a-4598-9ab5-b5ce530c5214',
+    String? xCsrfToken = 'cd65f409-939d-478f-b592-d7b037fba202',
     PostReasonCancelRequest? postReasonCancelRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

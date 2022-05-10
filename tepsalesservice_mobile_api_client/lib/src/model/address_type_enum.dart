@@ -12,6 +12,8 @@ class AddressTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireNumber: 1)
   static const AddressTypeEnum number1 = _$number1;
+  @BuiltValueEnumConst(wireNumber: 2)
+  static const AddressTypeEnum number2 = _$number2;
 
   static Serializer<AddressTypeEnum> get serializer => _$addressTypeEnumSerializer;
 

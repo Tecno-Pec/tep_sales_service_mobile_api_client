@@ -18,9 +18,7 @@
   "paths": {
     "/tepsales/v1/addresses/{id}": {
       "delete": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Delete Address by Id",
         "parameters": [
           {
@@ -48,7 +46,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1f7e39dd-3bb2-4e51-859f-e183644ef384"
+              "default": "a5e60aad-f380-44db-8f02-bcb7f29e8f59"
             }
           }
         ],
@@ -81,9 +79,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Get Address by id",
         "operationId": "GetByIdAddress",
         "parameters": [
@@ -112,7 +108,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f2bd8c5b-c8b7-4887-9cb2-db68e415eac2"
+              "default": "552731f0-1fdf-4105-abfc-d55cb5ac1d35"
             }
           }
         ],
@@ -152,9 +148,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Update part of Address",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Address/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -183,7 +177,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cbccb399-869c-49e1-ac3e-d137f258a642"
+              "default": "05f69918-09bc-4dcb-a117-a867e87f9e3a"
             }
           }
         ],
@@ -251,9 +245,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Update Address",
         "parameters": [
           {
@@ -281,7 +273,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b946c268-9fa9-4fbc-8f0c-9369b32aec9a"
+              "default": "9283f508-b585-412d-9203-3190359ead3a"
             }
           }
         ],
@@ -346,9 +338,7 @@
     },
     "/tepsales/v1/addresses/all": {
       "get": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Get All Address by filter",
         "parameters": [
           {
@@ -419,7 +409,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a9fe8456-02b7-4259-990f-95bc5315e021"
+              "default": "ed194468-43c6-4059-bb0c-b8907719d339"
             }
           }
         ],
@@ -461,9 +451,7 @@
     },
     "/tepsales/v1/addresses/paged": {
       "get": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Get All Address by filter with pagination",
         "parameters": [
           {
@@ -539,7 +527,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b179d827-d3f7-4c47-bf43-6e303c2d4ff2"
+              "default": "a5d103e3-9af0-447f-b2b1-5b20c829a764"
             }
           }
         ],
@@ -578,9 +566,7 @@
     },
     "/tepsales/v1/addresses": {
       "post": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Create Address",
         "parameters": [
           {
@@ -597,7 +583,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3193d908-f8ce-4880-b6dc-a88e04c8bb65"
+              "default": "3498f805-4e98-4bea-9d68-ef8d958365fb"
             }
           }
         ],
@@ -666,9 +652,7 @@
     },
     "/tepsales/v1/audits": {
       "get": {
-        "tags": [
-          "Audit"
-        ],
+        "tags": ["Audit"],
         "summary": "Get All Audit by filter with pagination",
         "parameters": [
           {
@@ -770,7 +754,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fe59d175-2e9b-4e56-b424-7e8e4ee721f6"
+              "default": "df5335c4-0848-4c5f-adf8-318c899ed60f"
             }
           }
         ],
@@ -809,9 +793,7 @@
     },
     "/tepsales/v1/catalogs/{id}": {
       "delete": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Delete Catalog by Id",
         "parameters": [
           {
@@ -839,7 +821,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1e3f64a7-bfe7-49d1-aaaa-2dfc90585800"
+              "default": "8da656dd-415f-468d-9f58-7583d8d2bc38"
             }
           }
         ],
@@ -872,9 +854,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Get Catalog by id",
         "operationId": "GetByIdCatalog",
         "parameters": [
@@ -903,7 +883,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a9f85ef3-2b71-413a-a768-02be5c1b3512"
+              "default": "3de89596-cf87-41d8-9568-d7cd73f9d385"
             }
           }
         ],
@@ -943,9 +923,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Update part of Catalog",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Catalog/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -974,7 +952,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a868ad8d-c013-41b6-b050-3ed2d1d5911b"
+              "default": "3c923911-104f-4470-ae59-e3307942abae"
             }
           }
         ],
@@ -1042,9 +1020,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Update Catalog",
         "parameters": [
           {
@@ -1072,7 +1048,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6ba8b2d5-fe66-47be-beba-fb9b1edf7212"
+              "default": "c2bb46e2-34b5-422d-97b5-c671c76a0187"
             }
           }
         ],
@@ -1137,9 +1113,7 @@
     },
     "/tepsales/v1/catalogs/all": {
       "get": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Get All Catalog by filter",
         "parameters": [
           {
@@ -1187,7 +1161,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fa62b9c4-7db0-4adf-8a8e-f0e8ae823534"
+              "default": "e804eb81-e6dc-4472-9ec1-dc99c05157ab"
             }
           }
         ],
@@ -1229,9 +1203,7 @@
     },
     "/tepsales/v1/catalogs/paged": {
       "get": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Get All Catalog by filter with pagination",
         "parameters": [
           {
@@ -1284,7 +1256,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "05ed6d7e-d912-4e23-87ba-9af185082bb3"
+              "default": "9ffc6c9e-8fbc-4ccf-b126-ac19135da834"
             }
           }
         ],
@@ -1323,9 +1295,7 @@
     },
     "/tepsales/v1/catalogs": {
       "post": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Create Catalog",
         "parameters": [
           {
@@ -1342,7 +1312,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fd170f64-a000-4c23-83f5-8274a269ddd1"
+              "default": "adae2a2e-9a2d-466f-a11d-c68aa8216ff7"
             }
           }
         ],
@@ -1411,9 +1381,7 @@
     },
     "/tepsales/v1/clients/{id}": {
       "delete": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Delete Client by Id",
         "parameters": [
           {
@@ -1441,7 +1409,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3532580b-1d73-486f-9ce8-8ca1ba6137ed"
+              "default": "3671f9ee-ac29-4162-82ce-0f5088e3b365"
             }
           }
         ],
@@ -1474,9 +1442,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Get Client by id",
         "operationId": "GetByIdClient",
         "parameters": [
@@ -1505,7 +1471,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0c488a11-ea92-4685-87c0-42bccb302f8d"
+              "default": "38b96bd1-afd1-4093-8117-a8760b7d5e8f"
             }
           }
         ],
@@ -1545,9 +1511,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Update part of Client",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Client/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -1576,7 +1540,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "61cae895-194f-438a-973e-d12b43b56313"
+              "default": "b26ab511-3c42-4131-9a1e-77db13a79653"
             }
           }
         ],
@@ -1644,9 +1608,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Update Client",
         "parameters": [
           {
@@ -1674,7 +1636,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d53a3102-b147-48fd-8621-2eb9bcc1079a"
+              "default": "87fa8398-cf88-41c8-b580-1b4d85dd1597"
             }
           }
         ],
@@ -1739,9 +1701,7 @@
     },
     "/tepsales/v1/clients/all": {
       "get": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Get All Client by filter",
         "parameters": [
           {
@@ -1828,7 +1788,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ac490561-de49-4c3f-ae3c-88aa4ec32e74"
+              "default": "706e5b0c-cb37-4e43-9c67-0787a1d624c6"
             }
           }
         ],
@@ -1870,9 +1830,7 @@
     },
     "/tepsales/v1/clients/paged": {
       "get": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Get All Client by filter with pagination",
         "parameters": [
           {
@@ -1964,7 +1922,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e7035ff6-f4e5-448a-899e-0555a748dd55"
+              "default": "31b2acfe-2956-422f-9d6f-430e4149a983"
             }
           }
         ],
@@ -2003,9 +1961,7 @@
     },
     "/tepsales/v1/clients": {
       "post": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Create Client",
         "parameters": [
           {
@@ -2022,7 +1978,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "24f842f5-50fc-4fa6-b612-e62e5ffcfc66"
+              "default": "815bbad7-485b-4692-bfc0-06ca5bd8f2ed"
             }
           }
         ],
@@ -2091,9 +2047,7 @@
     },
     "/tepsales/v1/companies/{id}": {
       "delete": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Delete Company by Id",
         "parameters": [
           {
@@ -2121,7 +2075,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4294164c-c5c2-4ec4-813b-ac870dddb335"
+              "default": "87570afa-c6a9-4e43-a45d-332110bfe78a"
             }
           }
         ],
@@ -2154,9 +2108,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Get Company by id",
         "operationId": "GetByIdCompany",
         "parameters": [
@@ -2185,7 +2137,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "089c757c-fcee-468b-b32a-13156d6ba54f"
+              "default": "36c1a6df-46d3-4d31-8af3-da25dc7cd7fb"
             }
           }
         ],
@@ -2225,9 +2177,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Update part of Company",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Company/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -2256,7 +2206,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "93559e88-ff57-4650-afe7-df66bef0c291"
+              "default": "f319ec7b-7395-4a11-a865-fa88d4ce00e8"
             }
           }
         ],
@@ -2324,9 +2274,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Update Company",
         "parameters": [
           {
@@ -2354,7 +2302,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "dc66c6ef-63ba-4607-974d-304b0a4a8b9d"
+              "default": "04939c03-63db-40c8-8095-314a96189787"
             }
           }
         ],
@@ -2419,9 +2367,7 @@
     },
     "/tepsales/v1/companies/all": {
       "get": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Get All Company by filter",
         "parameters": [
           {
@@ -2476,7 +2422,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "727f28ab-7a48-429c-8dab-b060e45041a7"
+              "default": "5a2922db-de7a-4eb2-82d2-7f164d09bca8"
             }
           }
         ],
@@ -2518,9 +2464,7 @@
     },
     "/tepsales/v1/companies/paged": {
       "get": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Get All Company by filter with pagination",
         "parameters": [
           {
@@ -2580,7 +2524,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "43f5901e-8b60-4a09-99c8-b606853bbb39"
+              "default": "b1479523-d2b1-4d6a-b211-4947a9341844"
             }
           }
         ],
@@ -2619,9 +2563,7 @@
     },
     "/tepsales/v1/companies": {
       "post": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Create Company",
         "parameters": [
           {
@@ -2638,7 +2580,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f377a171-cb26-43c4-b2bc-4dd306d32491"
+              "default": "c616317a-132f-4cd7-b891-9fbf32902f18"
             }
           }
         ],
@@ -2705,21 +2647,19 @@
         }
       }
     },
-    "/tepsales/v1/freights/{id}": {
+    "/tepsales/v1/distribuitionsCenters/{id}": {
       "delete": {
-        "tags": [
-          "Freight"
-        ],
-        "summary": "Delete Freight by Id",
+        "tags": ["DistribuitionCenter"],
+        "summary": "Delete DistribuitionCenter by Id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Freight id",
+            "description": "DistribuitionCenter id",
             "required": true,
             "schema": {
               "type": "string",
-              "description": "Freight id",
+              "description": "DistribuitionCenter id",
               "format": "uuid"
             }
           },
@@ -2737,7 +2677,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "357a167c-ffdb-48f1-b460-af7b1accbf97"
+              "default": "b4e5e51c-4e78-4697-8c70-676afbe56aab"
             }
           }
         ],
@@ -2770,20 +2710,18 @@
         }
       },
       "get": {
-        "tags": [
-          "Freight"
-        ],
-        "summary": "Get Freight by id",
-        "operationId": "GetByIdFreight",
+        "tags": ["DistribuitionCenter"],
+        "summary": "Get DistribuitionCenter by id",
+        "operationId": "GetByIdDistribuitionCenter",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Freight id",
+            "description": "DistribuitionCenter id",
             "required": true,
             "schema": {
               "type": "string",
-              "description": "Freight id",
+              "description": "DistribuitionCenter id",
               "format": "uuid"
             }
           },
@@ -2801,7 +2739,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6b0bebc4-587a-4900-946c-a09e956f6097"
+              "default": "02b86a8c-5610-49f3-879e-7be8a6f69be5"
             }
           }
         ],
@@ -2811,7 +2749,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetAllFreightResponse"
+                  "$ref": "#/components/schemas/GetAllDistribuitionCenterResponse"
                 }
               }
             }
@@ -2841,20 +2779,18 @@
         }
       },
       "patch": {
-        "tags": [
-          "Freight"
-        ],
-        "summary": "Update part of Freight",
-        "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Freight/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
+        "tags": ["DistribuitionCenter"],
+        "summary": "Update part of DistribuitionCenter",
+        "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/DistribuitionCenter/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Freight id",
+            "description": "DistribuitionCenter id",
             "required": true,
             "schema": {
               "type": "string",
-              "description": "Freight id",
+              "description": "DistribuitionCenter id",
               "format": "uuid"
             }
           },
@@ -2872,7 +2808,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "67196204-e790-45f9-896d-e7b406f394f6"
+              "default": "7899fdf0-d83c-432f-926d-20b61d7069ca"
             }
           }
         ],
@@ -2940,9 +2876,625 @@
         }
       },
       "put": {
-        "tags": [
-          "Freight"
+        "tags": ["DistribuitionCenter"],
+        "summary": "Update DistribuitionCenter",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "DistribuitionCenter Id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "DistribuitionCenter Id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "58534f66-b62f-47d8-aeb4-96d0b06eccbc"
+            }
+          }
         ],
+        "requestBody": {
+          "description": "DistribuitionCenter to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutDistribuitionCenterRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/distribuitionsCenters/all": {
+      "get": {
+        "tags": ["DistribuitionCenter"],
+        "summary": "Get All DistribuitionCenter by filter",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "document",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "externalCode",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "limit",
+            "schema": {
+              "type": "integer",
+              "description": "limit",
+              "format": "int32",
+              "default": 100
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting atributes, sample: id.desc,name.asc",
+            "schema": {
+              "type": "string",
+              "description": "Sorting atributes, sample: id.desc,name.asc",
+              "default": "Id.desc",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "0c159b9b-dd09-46e9-96a5-23ce0784f5e9"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllDistribuitionCenterResponse"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/distribuitionsCenters/paged": {
+      "get": {
+        "tags": ["DistribuitionCenter"],
+        "summary": "Get All DistribuitionCenter by filter with pagination",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "document",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "externalCode",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting atributes, sample: id.desc,name.asc",
+            "schema": {
+              "type": "string",
+              "description": "Sorting atributes, sample: id.desc,name.asc",
+              "default": "Id.desc",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "27bbb695-bad4-46b0-8c7e-ba4e7c0dcee2"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllPagedDistribuitionCenterResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/distribuitionsCenters": {
+      "post": {
+        "tags": ["DistribuitionCenter"],
+        "summary": "Create DistribuitionCenter",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "8836aad4-bc60-4d10-96be-e6791565c624"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "DistribuitionCenter to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostDistribuitionCenterRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostDistribuitionCenterResponse"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/freights/{id}": {
+      "delete": {
+        "tags": ["Freight"],
+        "summary": "Delete Freight by Id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Freight id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Freight id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "3cb718f7-6bbb-4183-8a0d-5f587eb1afbf"
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "get": {
+        "tags": ["Freight"],
+        "summary": "Get Freight by id",
+        "operationId": "GetByIdFreight",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Freight id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Freight id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "636f47ed-fff3-4d9f-954a-1b4ebb2f3b5f"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllFreightResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "patch": {
+        "tags": ["Freight"],
+        "summary": "Update part of Freight",
+        "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Freight/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Freight id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Freight id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "3778ce12-075e-4380-be92-d01d1459f69f"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Atributes values",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                },
+                "description": "Atributes values"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "put": {
+        "tags": ["Freight"],
         "summary": "Update Freight",
         "parameters": [
           {
@@ -2970,7 +3522,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c33a7fba-c5a1-4251-b64a-10d121acd1f5"
+              "default": "8a4b658f-ecc9-42f7-a985-679cd259604a"
             }
           }
         ],
@@ -3035,9 +3587,7 @@
     },
     "/tepsales/v1/freights/all": {
       "get": {
-        "tags": [
-          "Freight"
-        ],
+        "tags": ["Freight"],
         "summary": "Get All Freight by filter",
         "parameters": [
           {
@@ -3112,7 +3662,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "51a563a7-10c4-41d6-924a-9335a4def6c8"
+              "default": "b295bfe5-fdd1-47ab-95cb-330e2a311088"
             }
           }
         ],
@@ -3154,9 +3704,7 @@
     },
     "/tepsales/v1/freights/paged": {
       "get": {
-        "tags": [
-          "Freight"
-        ],
+        "tags": ["Freight"],
         "summary": "Get All Freight by filter with pagination",
         "parameters": [
           {
@@ -3236,7 +3784,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0f0b567b-322b-415a-bae5-87d7c9d86810"
+              "default": "69026557-9609-4169-a5d2-b930f813b83d"
             }
           }
         ],
@@ -3275,9 +3823,7 @@
     },
     "/tepsales/v1/freights": {
       "post": {
-        "tags": [
-          "Freight"
-        ],
+        "tags": ["Freight"],
         "summary": "Create Freight",
         "parameters": [
           {
@@ -3294,7 +3840,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c4fd8c1f-c6d7-4cc6-802c-3deb7a707569"
+              "default": "04f9e794-3d0d-49f5-b159-3b665d267615"
             }
           }
         ],
@@ -3363,9 +3909,7 @@
     },
     "/tepsales/v1/freightTables/{id}": {
       "delete": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Delete FreightTable by Id",
         "parameters": [
           {
@@ -3393,7 +3937,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "bcdd0064-2f23-4224-9b6f-1b0d5ebd7b01"
+              "default": "82549df4-1cb3-4a4b-ad75-c6837c103872"
             }
           }
         ],
@@ -3426,9 +3970,7 @@
         }
       },
       "get": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Get FreightTable by id",
         "operationId": "GetByIdFreightTable",
         "parameters": [
@@ -3457,7 +3999,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "aaa64986-f019-4df8-af21-6c3684033708"
+              "default": "9f5841db-3205-442b-93b8-9c01057a0fbc"
             }
           }
         ],
@@ -3497,9 +4039,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Update part of FreightTable",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/FreightTable/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -3528,7 +4068,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "5484eae1-12e3-4061-9f28-7ba2fa63f983"
+              "default": "4584be9b-1499-4512-8991-82838c7861bf"
             }
           }
         ],
@@ -3596,9 +4136,7 @@
         }
       },
       "put": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Update FreightTable",
         "parameters": [
           {
@@ -3626,7 +4164,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "91f20799-1659-4ca6-bffe-05b987adca7b"
+              "default": "7b926ef2-2ee0-47d8-bd58-f3485881b458"
             }
           }
         ],
@@ -3691,9 +4229,7 @@
     },
     "/tepsales/v1/freightTables/all": {
       "get": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Get All FreightTable by filter",
         "parameters": [
           {
@@ -3767,7 +4303,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "78d14a19-0f77-4536-ab3e-47a6c8f2c072"
+              "default": "ccd51db7-e3da-47ad-9380-e0ed69b03338"
             }
           }
         ],
@@ -3809,9 +4345,7 @@
     },
     "/tepsales/v1/freightTables/paged": {
       "get": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Get All FreightTable by filter with pagination",
         "parameters": [
           {
@@ -3890,7 +4424,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "16835754-3332-44e6-a708-01e16b4a9ef2"
+              "default": "9e0dd21d-cac1-454b-b229-4da44b18d9da"
             }
           }
         ],
@@ -3929,9 +4463,7 @@
     },
     "/tepsales/v1/freightTables": {
       "post": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Create FreightTable",
         "parameters": [
           {
@@ -3948,7 +4480,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c5405eb2-e8d5-4ada-b4c7-9d315b31fe00"
+              "default": "ef5bb808-85d3-4a30-9350-778c59a4f0b5"
             }
           }
         ],
@@ -4017,9 +4549,7 @@
     },
     "/tepsales/v1/paymentConditions/{id}": {
       "delete": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Delete PaymentCondition by Id",
         "parameters": [
           {
@@ -4047,7 +4577,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7c6ee872-bee2-4629-82a3-a4f0a5183120"
+              "default": "8d455f46-12e8-4c9e-a9c1-4c4fc8ea4356"
             }
           }
         ],
@@ -4080,9 +4610,7 @@
         }
       },
       "get": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Get PaymentCondition by id",
         "operationId": "GetByIdPaymentCondition",
         "parameters": [
@@ -4111,7 +4639,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3b185fb7-5fcf-457e-97e7-42fcb766ba6a"
+              "default": "bfacc8c7-14d2-42e4-9518-f48616d2867a"
             }
           }
         ],
@@ -4151,9 +4679,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Update part of PaymentCondition",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/PaymentCondition/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -4182,7 +4708,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3f508243-2d4a-46e9-a6db-d2c809a648fe"
+              "default": "f81a70be-828f-41ec-a056-bce93570a960"
             }
           }
         ],
@@ -4250,9 +4776,7 @@
         }
       },
       "put": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Update PaymentCondition",
         "parameters": [
           {
@@ -4280,7 +4804,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "22a742b3-1871-48ab-a1aa-45cb1ec21072"
+              "default": "178bf4ff-093d-4207-b56d-defc614cd2f5"
             }
           }
         ],
@@ -4345,9 +4869,7 @@
     },
     "/tepsales/v1/paymentConditions/paged": {
       "get": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Get All PaymentCondition by filter with pagination",
         "parameters": [
           {
@@ -4407,7 +4929,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "07625953-d457-4c83-a117-64fab924b894"
+              "default": "4732c20c-58dd-459a-ae30-d9a044dbbc37"
             }
           }
         ],
@@ -4446,9 +4968,7 @@
     },
     "/tepsales/v1/paymentConditions/all": {
       "get": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Get All PaymentCondition by filter",
         "parameters": [
           {
@@ -4503,7 +5023,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cdab820a-4d84-492e-9a7d-a93acb6bfebe"
+              "default": "e8716938-cda9-459b-9e31-d8be88670e9c"
             }
           }
         ],
@@ -4545,9 +5065,7 @@
     },
     "/tepsales/v1/paymentConditions": {
       "post": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Create PaymentCondition",
         "parameters": [
           {
@@ -4564,7 +5082,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "51da3ebf-011e-40b8-844c-ef148886005f"
+              "default": "00d36cfb-3a45-4246-8ab1-bfc3dd056d66"
             }
           }
         ],
@@ -4631,21 +5149,19 @@
         }
       }
     },
-    "/tepsales/v1/products/{id}": {
+    "/tepsales/v1/paymentPriceTables/{id}": {
       "delete": {
-        "tags": [
-          "Product"
-        ],
-        "summary": "Delete Product by Id",
+        "tags": ["PaymentPriceTable"],
+        "summary": "Delete PaymentPriceTable by Id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Product id",
+            "description": "PaymentPriceTable id",
             "required": true,
             "schema": {
               "type": "string",
-              "description": "Product id",
+              "description": "PaymentPriceTable id",
               "format": "uuid"
             }
           },
@@ -4663,7 +5179,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b134f69f-e761-4663-a089-55b96d9b74db"
+              "default": "cade921c-5575-424e-9e16-ef46d40cff5f"
             }
           }
         ],
@@ -4696,20 +5212,18 @@
         }
       },
       "get": {
-        "tags": [
-          "Product"
-        ],
-        "summary": "Get Product by id",
-        "operationId": "GetByIdProduct",
+        "tags": ["PaymentPriceTable"],
+        "summary": "Get PaymentPriceTable by id",
+        "operationId": "GetByIdPaymentPriceTable",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Product id",
+            "description": "PaymentPriceTable id",
             "required": true,
             "schema": {
               "type": "string",
-              "description": "Product id",
+              "description": "PaymentPriceTable id",
               "format": "uuid"
             }
           },
@@ -4727,7 +5241,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cbcad30d-9e61-4267-b4b6-80214bcd85bd"
+              "default": "b5c31fa3-64c8-4573-8e3a-78ced1b2cd63"
             }
           }
         ],
@@ -4737,7 +5251,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetAllProductResponse"
+                  "$ref": "#/components/schemas/GetAllPaymentPriceTableResponse"
                 }
               }
             }
@@ -4767,20 +5281,18 @@
         }
       },
       "patch": {
-        "tags": [
-          "Product"
-        ],
-        "summary": "Update part of Product",
-        "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Product/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
+        "tags": ["PaymentPriceTable"],
+        "summary": "Update part of PaymentPriceTable",
+        "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/PaymentPriceTable/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "Product id",
+            "description": "PaymentPriceTable id",
             "required": true,
             "schema": {
               "type": "string",
-              "description": "Product id",
+              "description": "PaymentPriceTable id",
               "format": "uuid"
             }
           },
@@ -4798,7 +5310,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ddbac8ae-29ea-48e9-bbb3-1ab3c5ee3e0a"
+              "default": "cf3dfc6a-032b-4930-bf7b-68483304ba6b"
             }
           }
         ],
@@ -4866,9 +5378,1838 @@
         }
       },
       "put": {
-        "tags": [
-          "Product"
+        "tags": ["PaymentPriceTable"],
+        "summary": "Update PaymentPriceTable",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PaymentPriceTable Id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "PaymentPriceTable Id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "aa8b534a-7e97-4912-821e-45d5dd4a44b5"
+            }
+          }
         ],
+        "requestBody": {
+          "description": "PaymentPriceTable to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutPaymentPriceTableRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/paymentPriceTables/paged": {
+      "get": {
+        "tags": ["PaymentPriceTable"],
+        "summary": "Get All PaymentPriceTable by filter with pagination",
+        "parameters": [
+          {
+            "name": "paymentConditionId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "priceTableId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting atributes, sample: id.desc,name.asc",
+            "schema": {
+              "type": "string",
+              "description": "Sorting atributes, sample: id.desc,name.asc",
+              "default": "Id.desc",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "b4253035-3032-422a-a30c-bb799c001f9b"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllPagedPaymentPriceTableResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/paymentPriceTables/all": {
+      "get": {
+        "tags": ["PaymentPriceTable"],
+        "summary": "Get All PaymentPriceTable by filter",
+        "parameters": [
+          {
+            "name": "paymentConditionId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "priceTableId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "limit",
+            "schema": {
+              "type": "integer",
+              "description": "limit",
+              "format": "int32",
+              "default": 100
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting atributes, sample: id.desc,name.asc",
+            "schema": {
+              "type": "string",
+              "description": "Sorting atributes, sample: id.desc,name.asc",
+              "default": "Id.desc",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "a4e68935-7cf5-4ea5-959c-d1841ee832bc"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllPaymentPriceTableResponse"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/paymentPriceTables": {
+      "post": {
+        "tags": ["PaymentPriceTable"],
+        "summary": "Create PaymentPriceTable",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "5a7a0a64-d564-4ea3-a1cb-46647ecb94ac"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "PaymentPriceTable to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostPaymentPriceTableRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostPaymentPriceTableResponse"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/priceTables/{id}": {
+      "delete": {
+        "tags": ["PriceTable"],
+        "summary": "Delete PriceTable by Id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PriceTable id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "PriceTable id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "3650572e-97e5-4b52-ac2d-44c2732bee16"
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "get": {
+        "tags": ["PriceTable"],
+        "summary": "Get PriceTable by id",
+        "operationId": "GetByIdPriceTable",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PriceTable id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "PriceTable id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "ab78685b-34aa-4d16-9017-760c551e45f6"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllPriceTableResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "patch": {
+        "tags": ["PriceTable"],
+        "summary": "Update part of PriceTable",
+        "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/PriceTable/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PriceTable id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "PriceTable id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "339a26d0-e363-41a0-b910-47709011731f"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Atributes values",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                },
+                "description": "Atributes values"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "put": {
+        "tags": ["PriceTable"],
+        "summary": "Update PriceTable",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PriceTable Id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "PriceTable Id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "b4695631-c869-414c-a463-4a932d743c64"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "PriceTable to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutPriceTableRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/priceTables/paged": {
+      "get": {
+        "tags": ["PriceTable"],
+        "summary": "Get All PriceTable by filter with pagination",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "paymentConditionId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "operationType",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/TablePriceOperationTypeEnum"
+            }
+          },
+          {
+            "name": "externalCode",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting atributes, sample: id.desc,name.asc",
+            "schema": {
+              "type": "string",
+              "description": "Sorting atributes, sample: id.desc,name.asc",
+              "default": "Id.desc",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "204572fd-0e02-41bd-bf1e-8981bf022bc6"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllPagedPriceTableResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/priceTables/all": {
+      "get": {
+        "tags": ["PriceTable"],
+        "summary": "Get All PriceTable by filter",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "limit",
+            "schema": {
+              "type": "integer",
+              "description": "limit",
+              "format": "int32",
+              "default": 100
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting atributes, sample: id.desc,name.asc",
+            "schema": {
+              "type": "string",
+              "description": "Sorting atributes, sample: id.desc,name.asc",
+              "default": "Id.desc",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "5ec1eb8a-962e-4624-ae32-dde2db2a6af9"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllPriceTableResponse"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/priceTables": {
+      "post": {
+        "tags": ["PriceTable"],
+        "summary": "Create PriceTable",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "3bf24ce8-3e65-4762-8a39-10d0a67addf4"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "PriceTable to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostPriceTableRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostPriceTableResponse"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/priceTableitens/{id}": {
+      "delete": {
+        "tags": ["PriceTableItem"],
+        "summary": "Delete PriceTableItem by Id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PriceTableItem id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "PriceTableItem id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "935abb75-048d-44d6-889e-ac5921f1aa6c"
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "get": {
+        "tags": ["PriceTableItem"],
+        "summary": "Get PriceTableItem by id",
+        "operationId": "GetByIdPriceTableItem",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PriceTableItem id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "PriceTableItem id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "f0a519fa-4c19-4910-a501-c6b572fd3d8e"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllPriceTableItemResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "patch": {
+        "tags": ["PriceTableItem"],
+        "summary": "Update part of PriceTableItem",
+        "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/PriceTableItem/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PriceTableItem id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "PriceTableItem id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "9e2db587-16b4-4479-ac5b-2d215e16e151"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Atributes values",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                },
+                "description": "Atributes values"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "put": {
+        "tags": ["PriceTableItem"],
+        "summary": "Update PriceTableItem",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PriceTableItem Id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "PriceTableItem Id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "225508cc-3835-4f44-b31f-c12794f7fc84"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "PriceTableItem to update",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutPriceTableItemRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/priceTableitens/paged": {
+      "get": {
+        "tags": ["PriceTableItem"],
+        "summary": "Get All PriceTableItem by filter with pagination",
+        "parameters": [
+          {
+            "name": "priceTableId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "productId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting atributes, sample: id.desc,name.asc",
+            "schema": {
+              "type": "string",
+              "description": "Sorting atributes, sample: id.desc,name.asc",
+              "default": "Id.desc",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "beec4878-9d71-4bab-957c-e4d86e0955ab"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllPagedPriceTableItemResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/priceTableitens/all": {
+      "get": {
+        "tags": ["PriceTableItem"],
+        "summary": "Get All PriceTableItem by filter",
+        "parameters": [
+          {
+            "name": "priceTableId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "productId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "limit",
+            "schema": {
+              "type": "integer",
+              "description": "limit",
+              "format": "int32",
+              "default": 100
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sorting atributes, sample: id.desc,name.asc",
+            "schema": {
+              "type": "string",
+              "description": "Sorting atributes, sample: id.desc,name.asc",
+              "default": "Id.desc",
+              "nullable": true
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "edd2cdc7-4cd3-4439-bc1e-b2e336ad1bda"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllPriceTableItemResponse"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/priceTableitens": {
+      "post": {
+        "tags": ["PriceTableItem"],
+        "summary": "Create PriceTableItem",
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "ba19115b-7bb8-47f5-bd09-d0e26e247ecb"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "PriceTableItem to create",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostPriceTableItemRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostPriceTableItemResponse"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          }
+        }
+      }
+    },
+    "/tepsales/v1/products/{id}": {
+      "delete": {
+        "tags": ["Product"],
+        "summary": "Delete Product by Id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Product id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Product id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "dbd2b82a-f538-42ad-95c6-3403dc21492e"
+            }
+          }
+        ],
+        "responses": {
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "get": {
+        "tags": ["Product"],
+        "summary": "Get Product by id",
+        "operationId": "GetByIdProduct",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Product id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Product id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "44bf17a8-9927-4fea-a862-df61384cb616"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok - The request has succeeded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllProductResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "patch": {
+        "tags": ["Product"],
+        "summary": "Update part of Product",
+        "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Product/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Product id",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Product id",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "description": "Your Api Key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "x-csrf-token",
+            "in": "header",
+            "description": "CSRF Protection",
+            "schema": {
+              "type": "string",
+              "default": "6fd0afb4-e8b6-4b75-a8dd-736385a51695"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Atributes values",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Operation"
+                },
+                "description": "Atributes values"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "412": {
+            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorDetails"
+                }
+              }
+            }
+          },
+          "204": {
+            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+          },
+          "400": {
+            "description": "Bad Request – This means that client-side input fails validation."
+          },
+          "401": {
+            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
+          },
+          "403": {
+            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
+          },
+          "404": {
+            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
+          }
+        }
+      },
+      "put": {
+        "tags": ["Product"],
         "summary": "Update Product",
         "parameters": [
           {
@@ -4896,7 +7237,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7278bd23-5d5c-4a26-9366-cf6560b7ca39"
+              "default": "f02d9253-15cb-49eb-a0fc-d7ca416b5a18"
             }
           }
         ],
@@ -4959,89 +7300,11 @@
         }
       }
     },
-    "/tepsales/v1/products/all/catalogVersion/{catalogVersion}": {
-      "get": {
-        "tags": [
-          "Product"
-        ],
-        "summary": "Get All Product by filter",
-        "parameters": [
-          {
-            "name": "catalogVersion",
-            "in": "path",
-            "description": "catalogVersion",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "description": "catalogVersion",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "aefa6427-5944-4e6a-a3ff-ddf79a625695"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok - The request has succeeded.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetAllLastCatalogVersionResponse"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          }
-        }
-      }
-    },
     "/tepsales/v1/products/paged": {
       "get": {
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "summary": "Get All Product by filter with pagination",
         "parameters": [
-          {
-            "name": "family",
-            "in": "query",
-            "schema": {
-              "$ref": "#/components/schemas/ProductFamilyEnum"
-            }
-          },
           {
             "name": "code",
             "in": "query",
@@ -5067,7 +7330,16 @@
             }
           },
           {
-            "name": "catalogId",
+            "name": "productLineId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "productGroupId",
             "in": "query",
             "schema": {
               "type": "string",
@@ -5116,7 +7388,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0d9e111f-38eb-48ff-a4e1-07892622ca4a"
+              "default": "a1c1b786-1d37-49c5-b07d-9c18d2537edb"
             }
           }
         ],
@@ -5155,18 +7427,9 @@
     },
     "/tepsales/v1/products/all": {
       "get": {
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "summary": "Get All Product by filter",
         "parameters": [
-          {
-            "name": "family",
-            "in": "query",
-            "schema": {
-              "$ref": "#/components/schemas/ProductFamilyEnum"
-            }
-          },
           {
             "name": "name",
             "in": "query",
@@ -5184,7 +7447,16 @@
             }
           },
           {
-            "name": "catalogId",
+            "name": "productLineId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "nullable": true
+            }
+          },
+          {
+            "name": "productGroupId",
             "in": "query",
             "schema": {
               "type": "string",
@@ -5228,7 +7500,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e565e4c9-fb1b-49cd-b893-d61a1c1e405a"
+              "default": "63421ba1-f21e-45dd-aaa8-950fa03199cc"
             }
           }
         ],
@@ -5270,9 +7542,7 @@
     },
     "/tepsales/v1/products": {
       "post": {
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "summary": "Create Product",
         "parameters": [
           {
@@ -5289,7 +7559,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "848c21f9-34e9-478d-84ef-157b1f246a62"
+              "default": "b6bf5e36-7746-4203-a3cc-e18a421cb6cd"
             }
           }
         ],
@@ -5358,9 +7628,7 @@
     },
     "/tepsales/v1/productGroups/{id}": {
       "delete": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Delete ProductGroup by Id",
         "parameters": [
           {
@@ -5388,7 +7656,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cc8fba91-a191-4ace-9916-bba89a6437ad"
+              "default": "cfc58ba5-3952-4096-a06c-776f6395c4f1"
             }
           }
         ],
@@ -5421,9 +7689,7 @@
         }
       },
       "get": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Get ProductGroup by id",
         "operationId": "GetByIdProductGroup",
         "parameters": [
@@ -5452,7 +7718,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "499a3f7c-e571-4129-9153-41cc7325a995"
+              "default": "461714f9-a961-4dc4-87ac-fa906c92600d"
             }
           }
         ],
@@ -5492,9 +7758,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Update part of ProductGroup",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/ProductGroup/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -5523,7 +7787,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cc28c528-8962-4b04-9646-286022fb3430"
+              "default": "3a39c0c9-4e02-4200-982c-d23c4c8c1f4d"
             }
           }
         ],
@@ -5591,9 +7855,7 @@
         }
       },
       "put": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Update ProductGroup",
         "parameters": [
           {
@@ -5621,7 +7883,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3af5404b-2e52-4955-bf39-0b8e269dbb22"
+              "default": "2dbd2ab4-75a6-46d0-896f-936a8ad3f774"
             }
           }
         ],
@@ -5686,9 +7948,7 @@
     },
     "/tepsales/v1/productGroups/paged": {
       "get": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Get All ProductGroup by filter with pagination",
         "parameters": [
           {
@@ -5740,7 +8000,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8165764a-3463-4958-9c33-7cbdf1da2c05"
+              "default": "0b195748-a066-447e-af07-2628e88403ff"
             }
           }
         ],
@@ -5779,9 +8039,7 @@
     },
     "/tepsales/v1/productGroups/all": {
       "get": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Get All ProductGroup by filter",
         "parameters": [
           {
@@ -5828,7 +8086,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1deabc37-340b-4466-b712-85bc80c8f444"
+              "default": "7227a3a1-59c0-4f05-9fde-6669e996f478"
             }
           }
         ],
@@ -5870,9 +8128,7 @@
     },
     "/tepsales/v1/productGroups/integration/{externalCode}": {
       "get": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Get ProductGroup by external Code",
         "operationId": "GetByExternalCodeProductGroupController",
         "parameters": [
@@ -5900,7 +8156,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e570c0ad-d782-457c-9aae-e41b88b67843"
+              "default": "2327cba8-f427-4b74-ac13-980a67a6d0ce"
             }
           }
         ],
@@ -5942,9 +8198,7 @@
     },
     "/tepsales/v1/productGroups": {
       "post": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Create ProductGroup",
         "parameters": [
           {
@@ -5961,7 +8215,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7ac41ffc-abe8-4508-b172-6ef0fb22044e"
+              "default": "d85eb910-2fcb-4e77-98d2-7b7c6a464712"
             }
           }
         ],
@@ -6030,9 +8284,7 @@
     },
     "/tepsales/v1/productLines/{id}": {
       "delete": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Delete ProductLine by Id",
         "parameters": [
           {
@@ -6060,7 +8312,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "eaaf45b8-cbef-4066-aa20-6313184b6135"
+              "default": "115f4d33-c986-4e38-a305-2558934f550e"
             }
           }
         ],
@@ -6093,9 +8345,7 @@
         }
       },
       "get": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Get ProductLine by id",
         "operationId": "GetByIdProductLine",
         "parameters": [
@@ -6124,7 +8374,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4c566d1f-d720-4fc8-b948-a9383b6037f8"
+              "default": "d9971bad-7f47-4b07-a049-58993ec4309c"
             }
           }
         ],
@@ -6164,9 +8414,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Update part of ProductLine",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/ProductLine/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -6195,7 +8443,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d821c780-15a7-42e3-9277-a18b24abfdd2"
+              "default": "d067cd2f-ae9f-4e14-b5ca-5456c69983ff"
             }
           }
         ],
@@ -6263,9 +8511,7 @@
         }
       },
       "put": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Update ProductLine",
         "parameters": [
           {
@@ -6293,7 +8539,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "67571b77-30dc-4ec6-9748-ae06bf8e9ec4"
+              "default": "5313b3d3-5b44-405a-9c49-985e12cce8de"
             }
           }
         ],
@@ -6358,9 +8604,7 @@
     },
     "/tepsales/v1/productLines/paged": {
       "get": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Get All ProductLine by filter with pagination",
         "parameters": [
           {
@@ -6412,7 +8656,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c9c275cd-b25a-40c4-a77a-2b1ebf0d7696"
+              "default": "ab3ec769-bf2b-4056-b17d-a6517ce1f44e"
             }
           }
         ],
@@ -6451,9 +8695,7 @@
     },
     "/tepsales/v1/productLines/all": {
       "get": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Get All ProductLine by filter",
         "parameters": [
           {
@@ -6500,7 +8742,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b4629866-b042-4c5c-b083-25489f52a52a"
+              "default": "0abfcf0d-264c-47e4-8be1-a3809b906a45"
             }
           }
         ],
@@ -6542,9 +8784,7 @@
     },
     "/tepsales/v1/productLines": {
       "post": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Create ProductLine",
         "parameters": [
           {
@@ -6561,7 +8801,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a44f71f7-7a4c-44c2-bd53-98b3b25cfc6f"
+              "default": "69e88f3b-d0a8-46f8-a1ea-f2204743a907"
             }
           }
         ],
@@ -6630,9 +8870,7 @@
     },
     "/tepsales/v1/reasonscancels/{id}": {
       "delete": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Delete ReasonCancel by Id",
         "parameters": [
           {
@@ -6660,7 +8898,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a1ab04a1-e810-46b6-b8ee-2adc539b2ee2"
+              "default": "5a181c04-0f8c-479f-bfd4-2e2947397bff"
             }
           }
         ],
@@ -6693,9 +8931,7 @@
         }
       },
       "get": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Get ReasonCancel by id",
         "operationId": "GetByIdReasonCancel",
         "parameters": [
@@ -6724,7 +8960,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "34c83dcf-4855-45dd-a177-47b2afa1d772"
+              "default": "476223d7-01e6-4556-9deb-7b37533fdbca"
             }
           }
         ],
@@ -6764,9 +9000,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Update part of ReasonCancel",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/ReasonCancel/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -6795,7 +9029,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "54cd26e1-e320-49c6-8cac-aeb8b4461d00"
+              "default": "8cd8ca82-d57a-487a-b5f5-293a7e47def0"
             }
           }
         ],
@@ -6863,9 +9097,7 @@
         }
       },
       "put": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Update ReasonCancel",
         "parameters": [
           {
@@ -6893,7 +9125,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "30041f60-67cc-4615-82a2-6c2a75e374b2"
+              "default": "1bbcd743-458e-40cf-928d-19bc41f52b53"
             }
           }
         ],
@@ -6958,9 +9190,7 @@
     },
     "/tepsales/v1/reasonscancels/paged": {
       "get": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Get All ReasonCancel by filter with pagination",
         "parameters": [
           {
@@ -7020,7 +9250,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8c036290-f3b9-4dd9-b35b-a7e5d9e8187c"
+              "default": "75dfd2aa-dcde-4a6d-9c0f-0bd5c8eb795b"
             }
           }
         ],
@@ -7059,9 +9289,7 @@
     },
     "/tepsales/v1/reasonscancels/all": {
       "get": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Get All ReasonCancel by filter",
         "parameters": [
           {
@@ -7116,7 +9344,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "04b333df-f1d6-4691-9880-1538a5160ef5"
+              "default": "94458a48-d77d-4840-bf3c-d025fa0dae88"
             }
           }
         ],
@@ -7158,9 +9386,7 @@
     },
     "/tepsales/v1/reasonscancels": {
       "post": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Create ReasonCancel",
         "parameters": [
           {
@@ -7177,7 +9403,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "eb111f48-d74a-4598-9ab5-b5ce530c5214"
+              "default": "cd65f409-939d-478f-b592-d7b037fba202"
             }
           }
         ],
@@ -7246,9 +9472,7 @@
     },
     "/tepsales/v1/templates/{id}": {
       "delete": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Delete Template by Id",
         "parameters": [
           {
@@ -7276,7 +9500,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d189ebd3-ab88-45e1-9db3-fd29abc23f58"
+              "default": "5ac61466-e123-41ee-90c1-82b9b18b6118"
             }
           }
         ],
@@ -7309,9 +9533,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Get Template by id",
         "operationId": "GetByIdTemplate",
         "parameters": [
@@ -7340,7 +9562,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "18493b40-fef0-4eeb-92dd-60f8ae14da5b"
+              "default": "72c6c352-f8f3-4f59-b187-2790c74f21e6"
             }
           }
         ],
@@ -7380,9 +9602,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Update part of Template",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Template/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -7411,7 +9631,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4a5e5c19-12ca-48e8-b585-853f681abecb"
+              "default": "3c07236b-a05c-47e8-ac94-1baa2c7881f4"
             }
           }
         ],
@@ -7479,9 +9699,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Update Template",
         "parameters": [
           {
@@ -7509,7 +9727,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "11ebdddc-271f-4e3e-b4d4-65ac9a26caee"
+              "default": "33270939-0898-4eb7-ae5b-9f78b4b3fbbd"
             }
           }
         ],
@@ -7574,9 +9792,7 @@
     },
     "/tepsales/v1/templates/paged": {
       "get": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Get All Template by filter with pagination",
         "parameters": [
           {
@@ -7628,7 +9844,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "94c4be19-72e9-4c1a-b399-9256984155e7"
+              "default": "baf32e05-c3c1-4037-a725-72f7adf13812"
             }
           }
         ],
@@ -7667,9 +9883,7 @@
     },
     "/tepsales/v1/templates/all": {
       "get": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Get All Template by filter",
         "parameters": [
           {
@@ -7716,7 +9930,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1c48a1f1-0416-4889-849d-842b7390e26e"
+              "default": "7959a42d-45f5-4f8c-a01f-d241aed3ddfd"
             }
           }
         ],
@@ -7758,9 +9972,7 @@
     },
     "/tepsales/v1/templates": {
       "post": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Create Template",
         "parameters": [
           {
@@ -7777,7 +9989,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2787768a-fce3-4cac-9243-3f55a16db625"
+              "default": "21717734-5b88-471a-8511-4679dbd394c1"
             }
           }
         ],
@@ -7846,9 +10058,7 @@
     },
     "/tepsales/v1/users/{id}": {
       "delete": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Delete User by Id",
         "parameters": [
           {
@@ -7876,7 +10086,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0d06b77f-49bf-465c-898a-e6f6a93b7cd4"
+              "default": "0a05e8e1-a7df-46bf-83fc-6ab7a5f6c3ae"
             }
           }
         ],
@@ -7909,9 +10119,7 @@
         }
       },
       "get": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Get User by id",
         "operationId": "GetByIdUser",
         "parameters": [
@@ -7940,7 +10148,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a8a37b0c-e7ce-4305-8be3-0300eafd467c"
+              "default": "31e1aa69-ec93-412a-9b37-136501d0e158"
             }
           }
         ],
@@ -7980,9 +10188,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Update part of User",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/User/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -8011,7 +10217,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "41e32003-49a9-4172-b318-a69747ef379b"
+              "default": "272baf5b-07c4-4c1e-bac7-83fcc4f075f9"
             }
           }
         ],
@@ -8079,9 +10285,7 @@
         }
       },
       "put": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Update User",
         "parameters": [
           {
@@ -8109,7 +10313,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "30cd13c0-03f6-43b5-bb41-afde90f9217e"
+              "default": "d62b63a7-1049-48a3-bcb2-60d98d999d4f"
             }
           }
         ],
@@ -8174,9 +10378,7 @@
     },
     "/tepsales/v1/users/paged": {
       "get": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Get All User by filter with pagination",
         "parameters": [
           {
@@ -8251,7 +10453,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d9816068-6883-4d67-b5ca-ba55ba1851a5"
+              "default": "2d6b63da-db13-4842-b852-9511a3f49471"
             }
           }
         ],
@@ -8290,9 +10492,7 @@
     },
     "/tepsales/v1/users/all": {
       "get": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Get All User by filter",
         "parameters": [
           {
@@ -8361,7 +10561,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7be5aeec-5471-4088-99df-240dd57bed64"
+              "default": "e4e63c08-1f7c-4375-b277-b16605174333"
             }
           }
         ],
@@ -8403,9 +10603,7 @@
     },
     "/tepsales/v1/users": {
       "post": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Create User",
         "parameters": [
           {
@@ -8422,7 +10620,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c8279071-b8b5-4a3a-8ba3-b04a786a2265"
+              "default": "ed987242-7eac-4e5d-bf2e-3faf7cdf9132"
             }
           }
         ],
@@ -8491,9 +10689,7 @@
     },
     "/tepsales/v1/users/signin": {
       "post": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Create User",
         "parameters": [
           {
@@ -8510,7 +10706,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7b55c905-649a-470e-b322-33d7b52d8c19"
+              "default": "f7430553-1569-4266-a1d5-fd47432c9128"
             }
           }
         ],
@@ -8579,9 +10775,7 @@
     },
     "/tepsales/v1/users/signup": {
       "post": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Create User",
         "parameters": [
           {
@@ -8598,7 +10792,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "44307536-33c9-4dfb-849a-6eabe8b3fb6b"
+              "default": "f7b16e22-a453-4081-af2b-4805e4958062"
             }
           }
         ],
@@ -8667,9 +10861,7 @@
     },
     "/tepsales/v1/vehicles/{id}": {
       "delete": {
-        "tags": [
-          "Vehicle"
-        ],
+        "tags": ["Vehicle"],
         "summary": "Delete Vehicle by Id",
         "parameters": [
           {
@@ -8697,7 +10889,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1cd5dc27-1c84-4391-9352-73922e0fc779"
+              "default": "45f5f126-f506-45b3-9392-8d170d2ab28b"
             }
           }
         ],
@@ -8730,9 +10922,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Vehicle"
-        ],
+        "tags": ["Vehicle"],
         "summary": "Get Vehicle by id",
         "operationId": "GetByIdVehicle",
         "parameters": [
@@ -8761,7 +10951,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "38498459-731d-474d-b380-aa4efff3f156"
+              "default": "4354900c-3673-44fe-a9b7-ceb577dec01c"
             }
           }
         ],
@@ -8801,9 +10991,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Vehicle"
-        ],
+        "tags": ["Vehicle"],
         "summary": "Update part of Vehicle",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Vehicle/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -8832,7 +11020,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "de09f30c-14df-4551-b991-9219836fbeee"
+              "default": "da2bfe55-67ce-4b00-b5f0-55b34fa814f3"
             }
           }
         ],
@@ -8900,9 +11088,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Vehicle"
-        ],
+        "tags": ["Vehicle"],
         "summary": "Update Vehicle",
         "parameters": [
           {
@@ -8930,7 +11116,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "11eb9463-c186-47db-8fd5-a4d26f620fd6"
+              "default": "cce4c51e-94be-40da-9d65-b2436d63ae58"
             }
           }
         ],
@@ -8995,9 +11181,7 @@
     },
     "/tepsales/v1/vehicles/paged": {
       "get": {
-        "tags": [
-          "Vehicle"
-        ],
+        "tags": ["Vehicle"],
         "summary": "Get All Vehicle by filter with pagination",
         "parameters": [
           {
@@ -9067,7 +11251,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "50e7656c-04de-4b37-b845-7507db8c7d8c"
+              "default": "420d3157-bbaa-47e4-9e16-8a5483760ace"
             }
           }
         ],
@@ -9106,9 +11290,7 @@
     },
     "/tepsales/v1/vehicles/all": {
       "get": {
-        "tags": [
-          "Vehicle"
-        ],
+        "tags": ["Vehicle"],
         "summary": "Get All Vehicle by filter",
         "parameters": [
           {
@@ -9173,7 +11355,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "010ab5a4-2163-49ce-b368-b81742506647"
+              "default": "7847e5e1-058e-42f6-a42c-5fe6207fea67"
             }
           }
         ],
@@ -9215,9 +11397,7 @@
     },
     "/tepsales/v1/vehicles": {
       "post": {
-        "tags": [
-          "Vehicle"
-        ],
+        "tags": ["Vehicle"],
         "summary": "Create Vehicle",
         "parameters": [
           {
@@ -9234,7 +11414,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ac77f81b-90a3-40cb-8566-9b91b5246f16"
+              "default": "d0f07e68-3452-4ae9-902a-499c5155a9ba"
             }
           }
         ],
@@ -9303,9 +11483,7 @@
     },
     "/tepsales/v1/vehicleCapacities/{id}": {
       "delete": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Delete VehicleType by Id",
         "parameters": [
           {
@@ -9333,7 +11511,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6cf28694-30b2-4c65-b9ad-018521d0735b"
+              "default": "befcddc0-59ae-46c7-8715-a913e3aa713e"
             }
           }
         ],
@@ -9366,9 +11544,7 @@
         }
       },
       "get": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Get VehicleType by id",
         "operationId": "GetByIdVehicleType",
         "parameters": [
@@ -9397,7 +11573,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "17567d6e-8982-4d72-bac3-d80e45b69ef1"
+              "default": "718a20a7-5ce6-40f2-90c4-cc3c97d6cd02"
             }
           }
         ],
@@ -9437,9 +11613,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Update part of VehicleType",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/VehicleType/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -9468,7 +11642,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0272d716-d44a-4cb8-8ceb-836b3252bf40"
+              "default": "a06cc081-c148-4903-b96e-c5be9d384767"
             }
           }
         ],
@@ -9536,9 +11710,7 @@
         }
       },
       "put": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Update VehicleType",
         "parameters": [
           {
@@ -9566,7 +11738,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9926cc26-bb64-4c0e-81f0-9b27e95cde1d"
+              "default": "f9648104-4473-4d18-885f-4d9a06306ab5"
             }
           }
         ],
@@ -9631,9 +11803,7 @@
     },
     "/tepsales/v1/vehicleCapacities/paged": {
       "get": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Get All VehicleType by filter with pagination",
         "parameters": [
           {
@@ -9693,7 +11863,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c59c75da-662e-44bb-ad3f-a1448bc91836"
+              "default": "f8f2c122-98c8-4c70-8d50-e625e63abdb4"
             }
           }
         ],
@@ -9732,9 +11902,7 @@
     },
     "/tepsales/v1/vehicleCapacities/all": {
       "get": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Get All VehicleType by filter",
         "parameters": [
           {
@@ -9789,7 +11957,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "72b8807f-a1a3-42f3-bde1-18ed1dda898c"
+              "default": "fc92a405-26a9-4095-aabe-ab0198c46c07"
             }
           }
         ],
@@ -9831,9 +11999,7 @@
     },
     "/tepsales/v1/vehicleCapacities": {
       "post": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Create VehicleType",
         "parameters": [
           {
@@ -9850,7 +12016,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "99cda9ee-c42f-4f93-8bdb-3cb5da4bed09"
+              "default": "04ce9cf5-eb36-4140-b51a-acd608a151d2"
             }
           }
         ],
@@ -9919,9 +12085,7 @@
     },
     "/tepsales/v1/version": {
       "get": {
-        "tags": [
-          "Version"
-        ],
+        "tags": ["Version"],
         "summary": "Get Version",
         "parameters": [
           {
@@ -9938,7 +12102,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "5c0f9ad6-5645-44b3-a170-4c4560a46f26"
+              "default": "14d2a9f6-fd96-435a-9f28-e422d1875635"
             }
           }
         ],
@@ -9996,9 +12160,7 @@
         "additionalProperties": false
       },
       "AddressTypeEnum": {
-        "enum": [
-          1
-        ],
+        "enum": [1, 2],
         "type": "integer",
         "format": "int32"
       },
@@ -10082,15 +12244,7 @@
         "additionalProperties": false
       },
       "OperationType": {
-        "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
+        "enum": [0, 1, 2, 3, 4, 5, 6],
         "type": "integer",
         "format": "int32"
       },
@@ -10393,11 +12547,7 @@
         "additionalProperties": false
       },
       "ActionType": {
-        "enum": [
-          1,
-          2,
-          3
-        ],
+        "enum": [1, 2, 3],
         "type": "integer",
         "format": "int32"
       },
@@ -11068,6 +13218,263 @@
           "document": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllDistribuitionCenterResponse": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "document": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "ie": {
+            "type": "string",
+            "nullable": true
+          },
+          "externalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "$ref": "#/components/schemas/GetAllAddressResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PutDistribuitionCenterRequest": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "document": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "ie": {
+            "type": "string",
+            "nullable": true
+          },
+          "externalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "$ref": "#/components/schemas/GetAllAddressResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllPagedDistribuitionCenterResponse": {
+        "type": "object",
+        "properties": {
+          "currentPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lastRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetAllDistribuitionCenterResponse"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostDistribuitionCenterRequest": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "document": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "ie": {
+            "type": "string",
+            "nullable": true
+          },
+          "externalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "$ref": "#/components/schemas/GetAllAddressResponse"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostDistribuitionCenterResponse": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "document": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "ie": {
+            "type": "string",
+            "nullable": true
+          },
+          "externalCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "$ref": "#/components/schemas/GetAllAddressResponse"
           }
         },
         "additionalProperties": false
@@ -11819,98 +14226,608 @@
         },
         "additionalProperties": false
       },
-      "ProductPackageEnum": {
-        "enum": [
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "ProductPackage": {
+      "GetAllPaymentPriceTableResponse": {
         "type": "object",
         "properties": {
-          "weightkilograms": {
-            "type": "number",
-            "format": "double"
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           },
-          "packageType": {
-            "$ref": "#/components/schemas/ProductPackageEnum"
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "paymentConditionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "priceTableId": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false
       },
-      "ProductFamilyEnum": {
-        "enum": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "ProductPriceDeadlineEnum": {
-        "enum": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "ProductPrice": {
+      "PutPaymentPriceTableRequest": {
         "type": "object",
         "properties": {
-          "price": {
-            "type": "number",
-            "format": "double"
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           },
-          "priceDeadline": {
-            "$ref": "#/components/schemas/ProductPriceDeadlineEnum"
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "paymentConditionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "priceTableId": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false
       },
-      "ProductDiscountWeightTypeEnum": {
-        "enum": [
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "ProductDiscountTypeEnum": {
-        "enum": [
-          1,
-          2
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "ProductDiscountRule": {
+      "GetAllPagedPaymentPriceTableResponse": {
         "type": "object",
         "properties": {
-          "discountWeightType": {
-            "$ref": "#/components/schemas/ProductDiscountWeightTypeEnum"
+          "currentPage": {
+            "type": "integer",
+            "format": "int32"
           },
-          "packageType": {
-            "$ref": "#/components/schemas/ProductPackageEnum"
+          "pageCount": {
+            "type": "integer",
+            "format": "int32"
           },
-          "minQuantity": {
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lastRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetAllPaymentPriceTableResponse"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostPaymentPriceTableRequest": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "paymentConditionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "priceTableId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostPaymentPriceTableResponse": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "paymentConditionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "priceTableId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TablePriceOperationTypeEnum": {
+        "enum": [0, 1],
+        "type": "integer",
+        "format": "int32"
+      },
+      "GetAllPriceTableResponse": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentConditionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "operationType": {
+            "$ref": "#/components/schemas/TablePriceOperationTypeEnum"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "externalCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PutPriceTableRequest": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentConditionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "operationType": {
+            "$ref": "#/components/schemas/TablePriceOperationTypeEnum"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "externalCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllPagedPriceTableResponse": {
+        "type": "object",
+        "properties": {
+          "currentPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lastRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetAllPriceTableResponse"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostPriceTableRequest": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentConditionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "operationType": {
+            "$ref": "#/components/schemas/TablePriceOperationTypeEnum"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "externalCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostPriceTableResponse": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentConditionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "operationType": {
+            "$ref": "#/components/schemas/TablePriceOperationTypeEnum"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "externalCode": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllPriceTableItemResponse": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "priceTableId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "productId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "value": {
             "type": "number",
             "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PutPriceTableItemRequest": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           },
-          "discountType": {
-            "$ref": "#/components/schemas/ProductDiscountTypeEnum"
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           },
-          "discount": {
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "priceTableId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "productId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "value": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAllPagedPriceTableItemResponse": {
+        "type": "object",
+        "properties": {
+          "currentPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rowCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "firstRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lastRowOnPage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "results": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetAllPriceTableItemResponse"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostPriceTableItemRequest": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "priceTableId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "productId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "value": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostPriceTableItemResponse": {
+        "type": "object",
+        "properties": {
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userCreated": {
+            "type": "string",
+            "nullable": true
+          },
+          "userUpdated": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "priceTableId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "productId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "value": {
             "type": "number",
             "format": "double"
           }
@@ -11942,15 +14859,17 @@
             "type": "string",
             "format": "uuid"
           },
-          "productPackages": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductPackage"
-            },
-            "nullable": true
+          "productGroupId": {
+            "type": "string",
+            "format": "uuid"
           },
-          "family": {
-            "$ref": "#/components/schemas/ProductFamilyEnum"
+          "productLineId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "weightkilograms": {
+            "type": "number",
+            "format": "double"
           },
           "code": {
             "type": "string",
@@ -11963,24 +14882,6 @@
           "description": {
             "type": "string",
             "nullable": true
-          },
-          "prices": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductPrice"
-            },
-            "nullable": true
-          },
-          "discountRules": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductDiscountRule"
-            },
-            "nullable": true
-          },
-          "discountCommission": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -12010,15 +14911,17 @@
             "type": "string",
             "format": "uuid"
           },
-          "productPackages": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductPackage"
-            },
-            "nullable": true
+          "productGroupId": {
+            "type": "string",
+            "format": "uuid"
           },
-          "family": {
-            "$ref": "#/components/schemas/ProductFamilyEnum"
+          "productLineId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "weightkilograms": {
+            "type": "number",
+            "format": "double"
           },
           "code": {
             "type": "string",
@@ -12030,168 +14933,6 @@
           },
           "description": {
             "type": "string",
-            "nullable": true
-          },
-          "prices": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductPrice"
-            },
-            "nullable": true
-          },
-          "discountRules": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductDiscountRule"
-            },
-            "nullable": true
-          },
-          "discountCommission": {
-            "type": "number",
-            "format": "double"
-          }
-        },
-        "additionalProperties": false
-      },
-      "DocumentVersion": {
-        "type": "object",
-        "additionalProperties": false
-      },
-      "Catalog": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "userCreated": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "userUpdated": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "version": {
-            "$ref": "#/components/schemas/DocumentVersion"
-          },
-          "companyId": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "catalogVersion": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "Product": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "userCreated": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "userUpdated": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "version": {
-            "$ref": "#/components/schemas/DocumentVersion"
-          },
-          "companyId": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
-          },
-          "productPackages": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductPackage"
-            },
-            "nullable": true
-          },
-          "family": {
-            "$ref": "#/components/schemas/ProductFamilyEnum"
-          },
-          "code": {
-            "type": "string",
-            "nullable": true
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "description": {
-            "type": "string",
-            "nullable": true
-          },
-          "prices": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductPrice"
-            },
-            "nullable": true
-          },
-          "discountRules": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductDiscountRule"
-            },
-            "nullable": true
-          },
-          "discountCommission": {
-            "type": "number",
-            "format": "double"
-          },
-          "catalogId": {
-            "type": "string",
-            "format": "uuid"
-          }
-        },
-        "additionalProperties": false
-      },
-      "GetAllLastCatalogVersionResponse": {
-        "type": "object",
-        "properties": {
-          "catalog": {
-            "$ref": "#/components/schemas/Catalog"
-          },
-          "products": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Product"
-            },
             "nullable": true
           }
         },
@@ -12259,15 +15000,17 @@
             "type": "string",
             "format": "uuid"
           },
-          "productPackages": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductPackage"
-            },
-            "nullable": true
+          "productGroupId": {
+            "type": "string",
+            "format": "uuid"
           },
-          "family": {
-            "$ref": "#/components/schemas/ProductFamilyEnum"
+          "productLineId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "weightkilograms": {
+            "type": "number",
+            "format": "double"
           },
           "code": {
             "type": "string",
@@ -12280,24 +15023,6 @@
           "description": {
             "type": "string",
             "nullable": true
-          },
-          "prices": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductPrice"
-            },
-            "nullable": true
-          },
-          "discountRules": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductDiscountRule"
-            },
-            "nullable": true
-          },
-          "discountCommission": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -12327,15 +15052,17 @@
             "type": "string",
             "format": "uuid"
           },
-          "productPackages": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductPackage"
-            },
-            "nullable": true
+          "productGroupId": {
+            "type": "string",
+            "format": "uuid"
           },
-          "family": {
-            "$ref": "#/components/schemas/ProductFamilyEnum"
+          "productLineId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "weightkilograms": {
+            "type": "number",
+            "format": "double"
           },
           "code": {
             "type": "string",
@@ -12348,24 +15075,6 @@
           "description": {
             "type": "string",
             "nullable": true
-          },
-          "prices": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductPrice"
-            },
-            "nullable": true
-          },
-          "discountRules": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ProductDiscountRule"
-            },
-            "nullable": true
-          },
-          "discountCommission": {
-            "type": "number",
-            "format": "double"
           }
         },
         "additionalProperties": false
@@ -13861,7 +16570,7 @@
   },
   "security": [
     {
-      "Bearer": [ ]
+      "Bearer": []
     }
   ]
 }

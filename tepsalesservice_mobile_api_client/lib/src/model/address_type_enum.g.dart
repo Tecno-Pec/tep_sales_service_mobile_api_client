@@ -7,11 +7,14 @@ part of 'address_type_enum.dart';
 // **************************************************************************
 
 const AddressTypeEnum _$number1 = const AddressTypeEnum._('number1');
+const AddressTypeEnum _$number2 = const AddressTypeEnum._('number2');
 
 AddressTypeEnum _$valueOf(String name) {
   switch (name) {
     case 'number1':
       return _$number1;
+    case 'number2':
+      return _$number2;
     default:
       throw new ArgumentError(name);
   }
@@ -20,11 +23,13 @@ AddressTypeEnum _$valueOf(String name) {
 final BuiltSet<AddressTypeEnum> _$values =
     new BuiltSet<AddressTypeEnum>(const <AddressTypeEnum>[
   _$number1,
+  _$number2,
 ]);
 
 class _$AddressTypeEnumMeta {
   const _$AddressTypeEnumMeta();
   AddressTypeEnum get number1 => _$number1;
+  AddressTypeEnum get number2 => _$number2;
   AddressTypeEnum valueOf(String name) => _$valueOf(name);
   BuiltSet<AddressTypeEnum> get values => _$values;
 }
@@ -41,9 +46,11 @@ class _$AddressTypeEnumSerializer
     implements PrimitiveSerializer<AddressTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'number1': 1,
+    'number2': 2,
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     1: 'number1',
+    2: 'number2',
   };
 
   @override

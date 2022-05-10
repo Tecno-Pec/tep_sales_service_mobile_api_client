@@ -14,24 +14,27 @@ import 'package:tepsalesservice_mobile_api_client/src/model/date.dart';
 
 import 'package:tepsalesservice_mobile_api_client/src/model/action_type.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/address_type_enum.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/catalog.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/error_details.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_address_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_audit_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_catalog_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_client_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_company_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/get_all_distribuition_center_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_freight_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_freight_table_response.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/get_all_last_catalog_version_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_address_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_audit_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_catalog_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_client_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_company_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_distribuition_center_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_freight_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_freight_table_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_payment_condition_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_payment_price_table_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_price_table_item_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_price_table_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_product_group_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_product_line_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_product_response.dart';
@@ -41,6 +44,9 @@ import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_user_r
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_vehicle_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_vehicle_type_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_payment_condition_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/get_all_payment_price_table_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/get_all_price_table_item_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/get_all_price_table_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_product_group_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_product_line_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_product_response.dart';
@@ -59,12 +65,20 @@ import 'package:tepsalesservice_mobile_api_client/src/model/post_client_request.
 import 'package:tepsalesservice_mobile_api_client/src/model/post_client_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_company_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_company_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/post_distribuition_center_request.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/post_distribuition_center_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_freight_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_freight_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_freight_table_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_freight_table_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_payment_condition_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_payment_condition_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/post_payment_price_table_request.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/post_payment_price_table_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/post_price_table_item_request.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/post_price_table_item_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/post_price_table_request.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/post_price_table_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_product_group_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_product_group_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_product_line_request.dart';
@@ -83,22 +97,17 @@ import 'package:tepsalesservice_mobile_api_client/src/model/post_vehicle_request
 import 'package:tepsalesservice_mobile_api_client/src/model/post_vehicle_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_vehicle_type_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_vehicle_type_response.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product_discount_rule.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product_discount_type_enum.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product_discount_weight_type_enum.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product_family_enum.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product_package.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product_package_enum.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product_price.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product_price_deadline_enum.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_address_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_catalog_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_client_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_company_request.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/put_distribuition_center_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_freight_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_freight_table_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_payment_condition_request.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/put_payment_price_table_request.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/put_price_table_item_request.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/put_price_table_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_product_group_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_product_line_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_product_request.dart';
@@ -107,30 +116,34 @@ import 'package:tepsalesservice_mobile_api_client/src/model/put_template_request
 import 'package:tepsalesservice_mobile_api_client/src/model/put_user_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_vehicle_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_vehicle_type_request.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/table_price_operation_type_enum.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
   ActionType,
   AddressTypeEnum,
-  Catalog,
   ErrorDetails,
   GetAllAddressResponse,
   GetAllAuditResponse,
   GetAllCatalogResponse,
   GetAllClientResponse,
   GetAllCompanyResponse,
+  GetAllDistribuitionCenterResponse,
   GetAllFreightResponse,
   GetAllFreightTableResponse,
-  GetAllLastCatalogVersionResponse,
   GetAllPagedAddressResponse,
   GetAllPagedAuditResponse,
   GetAllPagedCatalogResponse,
   GetAllPagedClientResponse,
   GetAllPagedCompanyResponse,
+  GetAllPagedDistribuitionCenterResponse,
   GetAllPagedFreightResponse,
   GetAllPagedFreightTableResponse,
   GetAllPagedPaymentConditionResponse,
+  GetAllPagedPaymentPriceTableResponse,
+  GetAllPagedPriceTableItemResponse,
+  GetAllPagedPriceTableResponse,
   GetAllPagedProductGroupResponse,
   GetAllPagedProductLineResponse,
   GetAllPagedProductResponse,
@@ -140,6 +153,9 @@ part 'serializers.g.dart';
   GetAllPagedVehicleResponse,
   GetAllPagedVehicleTypeResponse,
   GetAllPaymentConditionResponse,
+  GetAllPaymentPriceTableResponse,
+  GetAllPriceTableItemResponse,
+  GetAllPriceTableResponse,
   GetAllProductGroupResponse,
   GetAllProductLineResponse,
   GetAllProductResponse,
@@ -158,12 +174,20 @@ part 'serializers.g.dart';
   PostClientResponse,
   PostCompanyRequest,
   PostCompanyResponse,
+  PostDistribuitionCenterRequest,
+  PostDistribuitionCenterResponse,
   PostFreightRequest,
   PostFreightResponse,
   PostFreightTableRequest,
   PostFreightTableResponse,
   PostPaymentConditionRequest,
   PostPaymentConditionResponse,
+  PostPaymentPriceTableRequest,
+  PostPaymentPriceTableResponse,
+  PostPriceTableItemRequest,
+  PostPriceTableItemResponse,
+  PostPriceTableRequest,
+  PostPriceTableResponse,
   PostProductGroupRequest,
   PostProductGroupResponse,
   PostProductLineRequest,
@@ -182,22 +206,17 @@ part 'serializers.g.dart';
   PostVehicleResponse,
   PostVehicleTypeRequest,
   PostVehicleTypeResponse,
-  Product,
-  ProductDiscountRule,
-  ProductDiscountTypeEnum,
-  ProductDiscountWeightTypeEnum,
-  ProductFamilyEnum,
-  ProductPackage,
-  ProductPackageEnum,
-  ProductPrice,
-  ProductPriceDeadlineEnum,
   PutAddressRequest,
   PutCatalogRequest,
   PutClientRequest,
   PutCompanyRequest,
+  PutDistribuitionCenterRequest,
   PutFreightRequest,
   PutFreightTableRequest,
   PutPaymentConditionRequest,
+  PutPaymentPriceTableRequest,
+  PutPriceTableItemRequest,
+  PutPriceTableRequest,
   PutProductGroupRequest,
   PutProductLineRequest,
   PutProductRequest,
@@ -206,6 +225,7 @@ part 'serializers.g.dart';
   PutUserRequest,
   PutVehicleRequest,
   PutVehicleTypeRequest,
+  TablePriceOperationTypeEnum,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
@@ -241,6 +261,14 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<Operation>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(GetAllDistribuitionCenterResponse)]),
+        () => ListBuilder<GetAllDistribuitionCenterResponse>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Operation)]),
+        () => ListBuilder<Operation>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(GetAllFreightResponse)]),
         () => ListBuilder<GetAllFreightResponse>(),
       )
@@ -259,6 +287,30 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(GetAllPaymentConditionResponse)]),
         () => ListBuilder<GetAllPaymentConditionResponse>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Operation)]),
+        () => ListBuilder<Operation>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(GetAllPaymentPriceTableResponse)]),
+        () => ListBuilder<GetAllPaymentPriceTableResponse>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Operation)]),
+        () => ListBuilder<Operation>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(GetAllPriceTableResponse)]),
+        () => ListBuilder<GetAllPriceTableResponse>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Operation)]),
+        () => ListBuilder<Operation>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(GetAllPriceTableItemResponse)]),
+        () => ListBuilder<GetAllPriceTableItemResponse>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Operation)]),

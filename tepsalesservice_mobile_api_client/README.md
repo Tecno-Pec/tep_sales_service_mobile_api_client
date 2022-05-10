@@ -96,6 +96,13 @@ Class | Method | HTTP request | Description
 [*CompanyApi*](doc\CompanyApi.md) | [**tepsalesV1CompaniesIdPut**](doc\CompanyApi.md#tepsalesv1companiesidput) | **PUT** /tepsales/v1/companies/{id} | Update Company
 [*CompanyApi*](doc\CompanyApi.md) | [**tepsalesV1CompaniesPagedGet**](doc\CompanyApi.md#tepsalesv1companiespagedget) | **GET** /tepsales/v1/companies/paged | Get All Company by filter with pagination
 [*CompanyApi*](doc\CompanyApi.md) | [**tepsalesV1CompaniesPost**](doc\CompanyApi.md#tepsalesv1companiespost) | **POST** /tepsales/v1/companies | Create Company
+[*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**getByIdDistribuitionCenter**](doc\DistribuitionCenterApi.md#getbyiddistribuitioncenter) | **GET** /tepsales/v1/distribuitionsCenters/{id} | Get DistribuitionCenter by id
+[*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**tepsalesV1DistribuitionsCentersAllGet**](doc\DistribuitionCenterApi.md#tepsalesv1distribuitionscentersallget) | **GET** /tepsales/v1/distribuitionsCenters/all | Get All DistribuitionCenter by filter
+[*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**tepsalesV1DistribuitionsCentersIdDelete**](doc\DistribuitionCenterApi.md#tepsalesv1distribuitionscentersiddelete) | **DELETE** /tepsales/v1/distribuitionsCenters/{id} | Delete DistribuitionCenter by Id
+[*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**tepsalesV1DistribuitionsCentersIdPatch**](doc\DistribuitionCenterApi.md#tepsalesv1distribuitionscentersidpatch) | **PATCH** /tepsales/v1/distribuitionsCenters/{id} | Update part of DistribuitionCenter
+[*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**tepsalesV1DistribuitionsCentersIdPut**](doc\DistribuitionCenterApi.md#tepsalesv1distribuitionscentersidput) | **PUT** /tepsales/v1/distribuitionsCenters/{id} | Update DistribuitionCenter
+[*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**tepsalesV1DistribuitionsCentersPagedGet**](doc\DistribuitionCenterApi.md#tepsalesv1distribuitionscenterspagedget) | **GET** /tepsales/v1/distribuitionsCenters/paged | Get All DistribuitionCenter by filter with pagination
+[*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**tepsalesV1DistribuitionsCentersPost**](doc\DistribuitionCenterApi.md#tepsalesv1distribuitionscenterspost) | **POST** /tepsales/v1/distribuitionsCenters | Create DistribuitionCenter
 [*FreightApi*](doc\FreightApi.md) | [**getByIdFreight**](doc\FreightApi.md#getbyidfreight) | **GET** /tepsales/v1/freights/{id} | Get Freight by id
 [*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsAllGet**](doc\FreightApi.md#tepsalesv1freightsallget) | **GET** /tepsales/v1/freights/all | Get All Freight by filter
 [*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsIdDelete**](doc\FreightApi.md#tepsalesv1freightsiddelete) | **DELETE** /tepsales/v1/freights/{id} | Delete Freight by Id
@@ -117,8 +124,28 @@ Class | Method | HTTP request | Description
 [*PaymentConditionApi*](doc\PaymentConditionApi.md) | [**tepsalesV1PaymentConditionsIdPut**](doc\PaymentConditionApi.md#tepsalesv1paymentconditionsidput) | **PUT** /tepsales/v1/paymentConditions/{id} | Update PaymentCondition
 [*PaymentConditionApi*](doc\PaymentConditionApi.md) | [**tepsalesV1PaymentConditionsPagedGet**](doc\PaymentConditionApi.md#tepsalesv1paymentconditionspagedget) | **GET** /tepsales/v1/paymentConditions/paged | Get All PaymentCondition by filter with pagination
 [*PaymentConditionApi*](doc\PaymentConditionApi.md) | [**tepsalesV1PaymentConditionsPost**](doc\PaymentConditionApi.md#tepsalesv1paymentconditionspost) | **POST** /tepsales/v1/paymentConditions | Create PaymentCondition
+[*PaymentPriceTableApi*](doc\PaymentPriceTableApi.md) | [**getByIdPaymentPriceTable**](doc\PaymentPriceTableApi.md#getbyidpaymentpricetable) | **GET** /tepsales/v1/paymentPriceTables/{id} | Get PaymentPriceTable by id
+[*PaymentPriceTableApi*](doc\PaymentPriceTableApi.md) | [**tepsalesV1PaymentPriceTablesAllGet**](doc\PaymentPriceTableApi.md#tepsalesv1paymentpricetablesallget) | **GET** /tepsales/v1/paymentPriceTables/all | Get All PaymentPriceTable by filter
+[*PaymentPriceTableApi*](doc\PaymentPriceTableApi.md) | [**tepsalesV1PaymentPriceTablesIdDelete**](doc\PaymentPriceTableApi.md#tepsalesv1paymentpricetablesiddelete) | **DELETE** /tepsales/v1/paymentPriceTables/{id} | Delete PaymentPriceTable by Id
+[*PaymentPriceTableApi*](doc\PaymentPriceTableApi.md) | [**tepsalesV1PaymentPriceTablesIdPatch**](doc\PaymentPriceTableApi.md#tepsalesv1paymentpricetablesidpatch) | **PATCH** /tepsales/v1/paymentPriceTables/{id} | Update part of PaymentPriceTable
+[*PaymentPriceTableApi*](doc\PaymentPriceTableApi.md) | [**tepsalesV1PaymentPriceTablesIdPut**](doc\PaymentPriceTableApi.md#tepsalesv1paymentpricetablesidput) | **PUT** /tepsales/v1/paymentPriceTables/{id} | Update PaymentPriceTable
+[*PaymentPriceTableApi*](doc\PaymentPriceTableApi.md) | [**tepsalesV1PaymentPriceTablesPagedGet**](doc\PaymentPriceTableApi.md#tepsalesv1paymentpricetablespagedget) | **GET** /tepsales/v1/paymentPriceTables/paged | Get All PaymentPriceTable by filter with pagination
+[*PaymentPriceTableApi*](doc\PaymentPriceTableApi.md) | [**tepsalesV1PaymentPriceTablesPost**](doc\PaymentPriceTableApi.md#tepsalesv1paymentpricetablespost) | **POST** /tepsales/v1/paymentPriceTables | Create PaymentPriceTable
+[*PriceTableApi*](doc\PriceTableApi.md) | [**getByIdPriceTable**](doc\PriceTableApi.md#getbyidpricetable) | **GET** /tepsales/v1/priceTables/{id} | Get PriceTable by id
+[*PriceTableApi*](doc\PriceTableApi.md) | [**tepsalesV1PriceTablesAllGet**](doc\PriceTableApi.md#tepsalesv1pricetablesallget) | **GET** /tepsales/v1/priceTables/all | Get All PriceTable by filter
+[*PriceTableApi*](doc\PriceTableApi.md) | [**tepsalesV1PriceTablesIdDelete**](doc\PriceTableApi.md#tepsalesv1pricetablesiddelete) | **DELETE** /tepsales/v1/priceTables/{id} | Delete PriceTable by Id
+[*PriceTableApi*](doc\PriceTableApi.md) | [**tepsalesV1PriceTablesIdPatch**](doc\PriceTableApi.md#tepsalesv1pricetablesidpatch) | **PATCH** /tepsales/v1/priceTables/{id} | Update part of PriceTable
+[*PriceTableApi*](doc\PriceTableApi.md) | [**tepsalesV1PriceTablesIdPut**](doc\PriceTableApi.md#tepsalesv1pricetablesidput) | **PUT** /tepsales/v1/priceTables/{id} | Update PriceTable
+[*PriceTableApi*](doc\PriceTableApi.md) | [**tepsalesV1PriceTablesPagedGet**](doc\PriceTableApi.md#tepsalesv1pricetablespagedget) | **GET** /tepsales/v1/priceTables/paged | Get All PriceTable by filter with pagination
+[*PriceTableApi*](doc\PriceTableApi.md) | [**tepsalesV1PriceTablesPost**](doc\PriceTableApi.md#tepsalesv1pricetablespost) | **POST** /tepsales/v1/priceTables | Create PriceTable
+[*PriceTableItemApi*](doc\PriceTableItemApi.md) | [**getByIdPriceTableItem**](doc\PriceTableItemApi.md#getbyidpricetableitem) | **GET** /tepsales/v1/priceTableitens/{id} | Get PriceTableItem by id
+[*PriceTableItemApi*](doc\PriceTableItemApi.md) | [**tepsalesV1PriceTableitensAllGet**](doc\PriceTableItemApi.md#tepsalesv1pricetableitensallget) | **GET** /tepsales/v1/priceTableitens/all | Get All PriceTableItem by filter
+[*PriceTableItemApi*](doc\PriceTableItemApi.md) | [**tepsalesV1PriceTableitensIdDelete**](doc\PriceTableItemApi.md#tepsalesv1pricetableitensiddelete) | **DELETE** /tepsales/v1/priceTableitens/{id} | Delete PriceTableItem by Id
+[*PriceTableItemApi*](doc\PriceTableItemApi.md) | [**tepsalesV1PriceTableitensIdPatch**](doc\PriceTableItemApi.md#tepsalesv1pricetableitensidpatch) | **PATCH** /tepsales/v1/priceTableitens/{id} | Update part of PriceTableItem
+[*PriceTableItemApi*](doc\PriceTableItemApi.md) | [**tepsalesV1PriceTableitensIdPut**](doc\PriceTableItemApi.md#tepsalesv1pricetableitensidput) | **PUT** /tepsales/v1/priceTableitens/{id} | Update PriceTableItem
+[*PriceTableItemApi*](doc\PriceTableItemApi.md) | [**tepsalesV1PriceTableitensPagedGet**](doc\PriceTableItemApi.md#tepsalesv1pricetableitenspagedget) | **GET** /tepsales/v1/priceTableitens/paged | Get All PriceTableItem by filter with pagination
+[*PriceTableItemApi*](doc\PriceTableItemApi.md) | [**tepsalesV1PriceTableitensPost**](doc\PriceTableItemApi.md#tepsalesv1pricetableitenspost) | **POST** /tepsales/v1/priceTableitens | Create PriceTableItem
 [*ProductApi*](doc\ProductApi.md) | [**getByIdProduct**](doc\ProductApi.md#getbyidproduct) | **GET** /tepsales/v1/products/{id} | Get Product by id
-[*ProductApi*](doc\ProductApi.md) | [**tepsalesV1ProductsAllCatalogVersionCatalogVersionGet**](doc\ProductApi.md#tepsalesv1productsallcatalogversioncatalogversionget) | **GET** /tepsales/v1/products/all/catalogVersion/{catalogVersion} | Get All Product by filter
 [*ProductApi*](doc\ProductApi.md) | [**tepsalesV1ProductsAllGet**](doc\ProductApi.md#tepsalesv1productsallget) | **GET** /tepsales/v1/products/all | Get All Product by filter
 [*ProductApi*](doc\ProductApi.md) | [**tepsalesV1ProductsIdDelete**](doc\ProductApi.md#tepsalesv1productsiddelete) | **DELETE** /tepsales/v1/products/{id} | Delete Product by Id
 [*ProductApi*](doc\ProductApi.md) | [**tepsalesV1ProductsIdPatch**](doc\ProductApi.md#tepsalesv1productsidpatch) | **PATCH** /tepsales/v1/products/{id} | Update part of Product
@@ -184,24 +211,27 @@ Class | Method | HTTP request | Description
 
  - [ActionType](doc\ActionType.md)
  - [AddressTypeEnum](doc\AddressTypeEnum.md)
- - [Catalog](doc\Catalog.md)
  - [ErrorDetails](doc\ErrorDetails.md)
  - [GetAllAddressResponse](doc\GetAllAddressResponse.md)
  - [GetAllAuditResponse](doc\GetAllAuditResponse.md)
  - [GetAllCatalogResponse](doc\GetAllCatalogResponse.md)
  - [GetAllClientResponse](doc\GetAllClientResponse.md)
  - [GetAllCompanyResponse](doc\GetAllCompanyResponse.md)
+ - [GetAllDistribuitionCenterResponse](doc\GetAllDistribuitionCenterResponse.md)
  - [GetAllFreightResponse](doc\GetAllFreightResponse.md)
  - [GetAllFreightTableResponse](doc\GetAllFreightTableResponse.md)
- - [GetAllLastCatalogVersionResponse](doc\GetAllLastCatalogVersionResponse.md)
  - [GetAllPagedAddressResponse](doc\GetAllPagedAddressResponse.md)
  - [GetAllPagedAuditResponse](doc\GetAllPagedAuditResponse.md)
  - [GetAllPagedCatalogResponse](doc\GetAllPagedCatalogResponse.md)
  - [GetAllPagedClientResponse](doc\GetAllPagedClientResponse.md)
  - [GetAllPagedCompanyResponse](doc\GetAllPagedCompanyResponse.md)
+ - [GetAllPagedDistribuitionCenterResponse](doc\GetAllPagedDistribuitionCenterResponse.md)
  - [GetAllPagedFreightResponse](doc\GetAllPagedFreightResponse.md)
  - [GetAllPagedFreightTableResponse](doc\GetAllPagedFreightTableResponse.md)
  - [GetAllPagedPaymentConditionResponse](doc\GetAllPagedPaymentConditionResponse.md)
+ - [GetAllPagedPaymentPriceTableResponse](doc\GetAllPagedPaymentPriceTableResponse.md)
+ - [GetAllPagedPriceTableItemResponse](doc\GetAllPagedPriceTableItemResponse.md)
+ - [GetAllPagedPriceTableResponse](doc\GetAllPagedPriceTableResponse.md)
  - [GetAllPagedProductGroupResponse](doc\GetAllPagedProductGroupResponse.md)
  - [GetAllPagedProductLineResponse](doc\GetAllPagedProductLineResponse.md)
  - [GetAllPagedProductResponse](doc\GetAllPagedProductResponse.md)
@@ -211,6 +241,9 @@ Class | Method | HTTP request | Description
  - [GetAllPagedVehicleResponse](doc\GetAllPagedVehicleResponse.md)
  - [GetAllPagedVehicleTypeResponse](doc\GetAllPagedVehicleTypeResponse.md)
  - [GetAllPaymentConditionResponse](doc\GetAllPaymentConditionResponse.md)
+ - [GetAllPaymentPriceTableResponse](doc\GetAllPaymentPriceTableResponse.md)
+ - [GetAllPriceTableItemResponse](doc\GetAllPriceTableItemResponse.md)
+ - [GetAllPriceTableResponse](doc\GetAllPriceTableResponse.md)
  - [GetAllProductGroupResponse](doc\GetAllProductGroupResponse.md)
  - [GetAllProductLineResponse](doc\GetAllProductLineResponse.md)
  - [GetAllProductResponse](doc\GetAllProductResponse.md)
@@ -229,12 +262,20 @@ Class | Method | HTTP request | Description
  - [PostClientResponse](doc\PostClientResponse.md)
  - [PostCompanyRequest](doc\PostCompanyRequest.md)
  - [PostCompanyResponse](doc\PostCompanyResponse.md)
+ - [PostDistribuitionCenterRequest](doc\PostDistribuitionCenterRequest.md)
+ - [PostDistribuitionCenterResponse](doc\PostDistribuitionCenterResponse.md)
  - [PostFreightRequest](doc\PostFreightRequest.md)
  - [PostFreightResponse](doc\PostFreightResponse.md)
  - [PostFreightTableRequest](doc\PostFreightTableRequest.md)
  - [PostFreightTableResponse](doc\PostFreightTableResponse.md)
  - [PostPaymentConditionRequest](doc\PostPaymentConditionRequest.md)
  - [PostPaymentConditionResponse](doc\PostPaymentConditionResponse.md)
+ - [PostPaymentPriceTableRequest](doc\PostPaymentPriceTableRequest.md)
+ - [PostPaymentPriceTableResponse](doc\PostPaymentPriceTableResponse.md)
+ - [PostPriceTableItemRequest](doc\PostPriceTableItemRequest.md)
+ - [PostPriceTableItemResponse](doc\PostPriceTableItemResponse.md)
+ - [PostPriceTableRequest](doc\PostPriceTableRequest.md)
+ - [PostPriceTableResponse](doc\PostPriceTableResponse.md)
  - [PostProductGroupRequest](doc\PostProductGroupRequest.md)
  - [PostProductGroupResponse](doc\PostProductGroupResponse.md)
  - [PostProductLineRequest](doc\PostProductLineRequest.md)
@@ -253,22 +294,17 @@ Class | Method | HTTP request | Description
  - [PostVehicleResponse](doc\PostVehicleResponse.md)
  - [PostVehicleTypeRequest](doc\PostVehicleTypeRequest.md)
  - [PostVehicleTypeResponse](doc\PostVehicleTypeResponse.md)
- - [Product](doc\Product.md)
- - [ProductDiscountRule](doc\ProductDiscountRule.md)
- - [ProductDiscountTypeEnum](doc\ProductDiscountTypeEnum.md)
- - [ProductDiscountWeightTypeEnum](doc\ProductDiscountWeightTypeEnum.md)
- - [ProductFamilyEnum](doc\ProductFamilyEnum.md)
- - [ProductPackage](doc\ProductPackage.md)
- - [ProductPackageEnum](doc\ProductPackageEnum.md)
- - [ProductPrice](doc\ProductPrice.md)
- - [ProductPriceDeadlineEnum](doc\ProductPriceDeadlineEnum.md)
  - [PutAddressRequest](doc\PutAddressRequest.md)
  - [PutCatalogRequest](doc\PutCatalogRequest.md)
  - [PutClientRequest](doc\PutClientRequest.md)
  - [PutCompanyRequest](doc\PutCompanyRequest.md)
+ - [PutDistribuitionCenterRequest](doc\PutDistribuitionCenterRequest.md)
  - [PutFreightRequest](doc\PutFreightRequest.md)
  - [PutFreightTableRequest](doc\PutFreightTableRequest.md)
  - [PutPaymentConditionRequest](doc\PutPaymentConditionRequest.md)
+ - [PutPaymentPriceTableRequest](doc\PutPaymentPriceTableRequest.md)
+ - [PutPriceTableItemRequest](doc\PutPriceTableItemRequest.md)
+ - [PutPriceTableRequest](doc\PutPriceTableRequest.md)
  - [PutProductGroupRequest](doc\PutProductGroupRequest.md)
  - [PutProductLineRequest](doc\PutProductLineRequest.md)
  - [PutProductRequest](doc\PutProductRequest.md)
@@ -277,6 +313,7 @@ Class | Method | HTTP request | Description
  - [PutUserRequest](doc\PutUserRequest.md)
  - [PutVehicleRequest](doc\PutVehicleRequest.md)
  - [PutVehicleTypeRequest](doc\PutVehicleTypeRequest.md)
+ - [TablePriceOperationTypeEnum](doc\TablePriceOperationTypeEnum.md)
 
 
 ## Documentation For Authorization

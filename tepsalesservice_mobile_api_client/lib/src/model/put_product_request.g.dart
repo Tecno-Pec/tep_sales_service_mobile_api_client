@@ -18,21 +18,17 @@ class _$PutProductRequest extends PutProductRequest {
   @override
   final String? id;
   @override
-  final BuiltList<ProductPackage>? productPackages;
+  final String? productGroupId;
   @override
-  final ProductFamilyEnum? family;
+  final String? productLineId;
+  @override
+  final double? weightkilograms;
   @override
   final String? code;
   @override
   final String? name;
   @override
   final String? description;
-  @override
-  final BuiltList<ProductPrice>? prices;
-  @override
-  final BuiltList<ProductDiscountRule>? discountRules;
-  @override
-  final double? discountCommission;
 
   factory _$PutProductRequest(
           [void Function(PutProductRequestBuilder)? updates]) =>
@@ -44,14 +40,12 @@ class _$PutProductRequest extends PutProductRequest {
       this.userCreated,
       this.userUpdated,
       this.id,
-      this.productPackages,
-      this.family,
+      this.productGroupId,
+      this.productLineId,
+      this.weightkilograms,
       this.code,
       this.name,
-      this.description,
-      this.prices,
-      this.discountRules,
-      this.discountCommission})
+      this.description})
       : super._();
 
   @override
@@ -71,14 +65,12 @@ class _$PutProductRequest extends PutProductRequest {
         userCreated == other.userCreated &&
         userUpdated == other.userUpdated &&
         id == other.id &&
-        productPackages == other.productPackages &&
-        family == other.family &&
+        productGroupId == other.productGroupId &&
+        productLineId == other.productLineId &&
+        weightkilograms == other.weightkilograms &&
         code == other.code &&
         name == other.name &&
-        description == other.description &&
-        prices == other.prices &&
-        discountRules == other.discountRules &&
-        discountCommission == other.discountCommission;
+        description == other.description;
   }
 
   @override
@@ -92,21 +84,17 @@ class _$PutProductRequest extends PutProductRequest {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc(
-                                            $jc(
-                                                $jc($jc(0, createdAt.hashCode),
-                                                    updatedAt.hashCode),
-                                                userCreated.hashCode),
-                                            userUpdated.hashCode),
-                                        id.hashCode),
-                                    productPackages.hashCode),
-                                family.hashCode),
-                            code.hashCode),
-                        name.hashCode),
-                    description.hashCode),
-                prices.hashCode),
-            discountRules.hashCode),
-        discountCommission.hashCode));
+                                        $jc($jc(0, createdAt.hashCode),
+                                            updatedAt.hashCode),
+                                        userCreated.hashCode),
+                                    userUpdated.hashCode),
+                                id.hashCode),
+                            productGroupId.hashCode),
+                        productLineId.hashCode),
+                    weightkilograms.hashCode),
+                code.hashCode),
+            name.hashCode),
+        description.hashCode));
   }
 
   @override
@@ -117,14 +105,12 @@ class _$PutProductRequest extends PutProductRequest {
           ..add('userCreated', userCreated)
           ..add('userUpdated', userUpdated)
           ..add('id', id)
-          ..add('productPackages', productPackages)
-          ..add('family', family)
+          ..add('productGroupId', productGroupId)
+          ..add('productLineId', productLineId)
+          ..add('weightkilograms', weightkilograms)
           ..add('code', code)
           ..add('name', name)
-          ..add('description', description)
-          ..add('prices', prices)
-          ..add('discountRules', discountRules)
-          ..add('discountCommission', discountCommission))
+          ..add('description', description))
         .toString();
   }
 }
@@ -153,15 +139,20 @@ class PutProductRequestBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  ListBuilder<ProductPackage>? _productPackages;
-  ListBuilder<ProductPackage> get productPackages =>
-      _$this._productPackages ??= new ListBuilder<ProductPackage>();
-  set productPackages(ListBuilder<ProductPackage>? productPackages) =>
-      _$this._productPackages = productPackages;
+  String? _productGroupId;
+  String? get productGroupId => _$this._productGroupId;
+  set productGroupId(String? productGroupId) =>
+      _$this._productGroupId = productGroupId;
 
-  ProductFamilyEnum? _family;
-  ProductFamilyEnum? get family => _$this._family;
-  set family(ProductFamilyEnum? family) => _$this._family = family;
+  String? _productLineId;
+  String? get productLineId => _$this._productLineId;
+  set productLineId(String? productLineId) =>
+      _$this._productLineId = productLineId;
+
+  double? _weightkilograms;
+  double? get weightkilograms => _$this._weightkilograms;
+  set weightkilograms(double? weightkilograms) =>
+      _$this._weightkilograms = weightkilograms;
 
   String? _code;
   String? get code => _$this._code;
@@ -175,22 +166,6 @@ class PutProductRequestBuilder
   String? get description => _$this._description;
   set description(String? description) => _$this._description = description;
 
-  ListBuilder<ProductPrice>? _prices;
-  ListBuilder<ProductPrice> get prices =>
-      _$this._prices ??= new ListBuilder<ProductPrice>();
-  set prices(ListBuilder<ProductPrice>? prices) => _$this._prices = prices;
-
-  ListBuilder<ProductDiscountRule>? _discountRules;
-  ListBuilder<ProductDiscountRule> get discountRules =>
-      _$this._discountRules ??= new ListBuilder<ProductDiscountRule>();
-  set discountRules(ListBuilder<ProductDiscountRule>? discountRules) =>
-      _$this._discountRules = discountRules;
-
-  double? _discountCommission;
-  double? get discountCommission => _$this._discountCommission;
-  set discountCommission(double? discountCommission) =>
-      _$this._discountCommission = discountCommission;
-
   PutProductRequestBuilder() {
     PutProductRequest._defaults(this);
   }
@@ -203,14 +178,12 @@ class PutProductRequestBuilder
       _userCreated = $v.userCreated;
       _userUpdated = $v.userUpdated;
       _id = $v.id;
-      _productPackages = $v.productPackages?.toBuilder();
-      _family = $v.family;
+      _productGroupId = $v.productGroupId;
+      _productLineId = $v.productLineId;
+      _weightkilograms = $v.weightkilograms;
       _code = $v.code;
       _name = $v.name;
       _description = $v.description;
-      _prices = $v.prices?.toBuilder();
-      _discountRules = $v.discountRules?.toBuilder();
-      _discountCommission = $v.discountCommission;
       _$v = null;
     }
     return this;
@@ -229,39 +202,19 @@ class PutProductRequestBuilder
 
   @override
   _$PutProductRequest build() {
-    _$PutProductRequest _$result;
-    try {
-      _$result = _$v ??
-          new _$PutProductRequest._(
-              createdAt: createdAt,
-              updatedAt: updatedAt,
-              userCreated: userCreated,
-              userUpdated: userUpdated,
-              id: id,
-              productPackages: _productPackages?.build(),
-              family: family,
-              code: code,
-              name: name,
-              description: description,
-              prices: _prices?.build(),
-              discountRules: _discountRules?.build(),
-              discountCommission: discountCommission);
-    } catch (_) {
-      late String _$failedField;
-      try {
-        _$failedField = 'productPackages';
-        _productPackages?.build();
-
-        _$failedField = 'prices';
-        _prices?.build();
-        _$failedField = 'discountRules';
-        _discountRules?.build();
-      } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            'PutProductRequest', _$failedField, e.toString());
-      }
-      rethrow;
-    }
+    final _$result = _$v ??
+        new _$PutProductRequest._(
+            createdAt: createdAt,
+            updatedAt: updatedAt,
+            userCreated: userCreated,
+            userUpdated: userUpdated,
+            id: id,
+            productGroupId: productGroupId,
+            productLineId: productLineId,
+            weightkilograms: weightkilograms,
+            code: code,
+            name: name,
+            description: description);
     replace(_$result);
     return _$result;
   }

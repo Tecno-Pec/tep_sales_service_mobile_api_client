@@ -2,11 +2,6 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:tepsalesservice_mobile_api_client/src/model/product_price.dart';
-import 'package:built_collection/built_collection.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product_family_enum.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product_discount_rule.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product_package.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -20,14 +15,12 @@ part 'get_all_product_response.g.dart';
 /// * [userCreated] 
 /// * [userUpdated] 
 /// * [id] 
-/// * [productPackages] 
-/// * [family] 
+/// * [productGroupId] 
+/// * [productLineId] 
+/// * [weightkilograms] 
 /// * [code] 
 /// * [name] 
 /// * [description] 
-/// * [prices] 
-/// * [discountRules] 
-/// * [discountCommission] 
 abstract class GetAllProductResponse implements Built<GetAllProductResponse, GetAllProductResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;
@@ -44,12 +37,14 @@ abstract class GetAllProductResponse implements Built<GetAllProductResponse, Get
     @BuiltValueField(wireName: r'id')
     String? get id;
 
-    @BuiltValueField(wireName: r'productPackages')
-    BuiltList<ProductPackage>? get productPackages;
+    @BuiltValueField(wireName: r'productGroupId')
+    String? get productGroupId;
 
-    @BuiltValueField(wireName: r'family')
-    ProductFamilyEnum? get family;
-    // enum familyEnum {  1,  2,  3,  4,  5,  6,  };
+    @BuiltValueField(wireName: r'productLineId')
+    String? get productLineId;
+
+    @BuiltValueField(wireName: r'weightkilograms')
+    double? get weightkilograms;
 
     @BuiltValueField(wireName: r'code')
     String? get code;
@@ -59,15 +54,6 @@ abstract class GetAllProductResponse implements Built<GetAllProductResponse, Get
 
     @BuiltValueField(wireName: r'description')
     String? get description;
-
-    @BuiltValueField(wireName: r'prices')
-    BuiltList<ProductPrice>? get prices;
-
-    @BuiltValueField(wireName: r'discountRules')
-    BuiltList<ProductDiscountRule>? get discountRules;
-
-    @BuiltValueField(wireName: r'discountCommission')
-    double? get discountCommission;
 
     GetAllProductResponse._();
 
@@ -121,17 +107,23 @@ class _$GetAllProductResponseSerializer implements StructuredSerializer<GetAllPr
                 ..add(serializers.serialize(object.id,
                     specifiedType: const FullType(String)));
         }
-        if (object.productPackages != null) {
+        if (object.productGroupId != null) {
             result
-                ..add(r'productPackages')
-                ..add(serializers.serialize(object.productPackages,
-                    specifiedType: const FullType.nullable(BuiltList, [FullType(ProductPackage)])));
+                ..add(r'productGroupId')
+                ..add(serializers.serialize(object.productGroupId,
+                    specifiedType: const FullType(String)));
         }
-        if (object.family != null) {
+        if (object.productLineId != null) {
             result
-                ..add(r'family')
-                ..add(serializers.serialize(object.family,
-                    specifiedType: const FullType(ProductFamilyEnum)));
+                ..add(r'productLineId')
+                ..add(serializers.serialize(object.productLineId,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.weightkilograms != null) {
+            result
+                ..add(r'weightkilograms')
+                ..add(serializers.serialize(object.weightkilograms,
+                    specifiedType: const FullType(double)));
         }
         if (object.code != null) {
             result
@@ -150,24 +142,6 @@ class _$GetAllProductResponseSerializer implements StructuredSerializer<GetAllPr
                 ..add(r'description')
                 ..add(serializers.serialize(object.description,
                     specifiedType: const FullType.nullable(String)));
-        }
-        if (object.prices != null) {
-            result
-                ..add(r'prices')
-                ..add(serializers.serialize(object.prices,
-                    specifiedType: const FullType.nullable(BuiltList, [FullType(ProductPrice)])));
-        }
-        if (object.discountRules != null) {
-            result
-                ..add(r'discountRules')
-                ..add(serializers.serialize(object.discountRules,
-                    specifiedType: const FullType.nullable(BuiltList, [FullType(ProductDiscountRule)])));
-        }
-        if (object.discountCommission != null) {
-            result
-                ..add(r'discountCommission')
-                ..add(serializers.serialize(object.discountCommission,
-                    specifiedType: const FullType(double)));
         }
         return result;
     }
@@ -213,16 +187,20 @@ class _$GetAllProductResponseSerializer implements StructuredSerializer<GetAllPr
                         specifiedType: const FullType(String)) as String;
                     result.id = valueDes;
                     break;
-                case r'productPackages':
+                case r'productGroupId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(BuiltList, [FullType(ProductPackage)])) as BuiltList<ProductPackage>?;
-                    if (valueDes == null) continue;
-                    result.productPackages.replace(valueDes);
+                        specifiedType: const FullType(String)) as String;
+                    result.productGroupId = valueDes;
                     break;
-                case r'family':
+                case r'productLineId':
                     final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(ProductFamilyEnum)) as ProductFamilyEnum;
-                    result.family = valueDes;
+                        specifiedType: const FullType(String)) as String;
+                    result.productLineId = valueDes;
+                    break;
+                case r'weightkilograms':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(double)) as double;
+                    result.weightkilograms = valueDes;
                     break;
                 case r'code':
                     final valueDes = serializers.deserialize(value,
@@ -241,23 +219,6 @@ class _$GetAllProductResponseSerializer implements StructuredSerializer<GetAllPr
                         specifiedType: const FullType.nullable(String)) as String?;
                     if (valueDes == null) continue;
                     result.description = valueDes;
-                    break;
-                case r'prices':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(BuiltList, [FullType(ProductPrice)])) as BuiltList<ProductPrice>?;
-                    if (valueDes == null) continue;
-                    result.prices.replace(valueDes);
-                    break;
-                case r'discountRules':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType.nullable(BuiltList, [FullType(ProductDiscountRule)])) as BuiltList<ProductDiscountRule>?;
-                    if (valueDes == null) continue;
-                    result.discountRules.replace(valueDes);
-                    break;
-                case r'discountCommission':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(double)) as double;
-                    result.discountCommission = valueDes;
                     break;
             }
         }

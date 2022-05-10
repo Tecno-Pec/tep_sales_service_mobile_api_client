@@ -14,9 +14,13 @@ import 'package:tepsalesservice_mobile_api_client/src/api/audit_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/catalog_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/client_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/company_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/distribuition_center_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/freight_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/freight_table_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/payment_condition_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/payment_price_table_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/price_table_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/price_table_item_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/product_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/product_group_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/product_line_api.dart';
@@ -111,6 +115,12 @@ class TepsalesserviceMobileApiClient {
     return CompanyApi(dio, serializers);
   }
 
+  /// Get DistribuitionCenterApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  DistribuitionCenterApi getDistribuitionCenterApi() {
+    return DistribuitionCenterApi(dio, serializers);
+  }
+
   /// Get FreightApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   FreightApi getFreightApi() {
@@ -127,6 +137,24 @@ class TepsalesserviceMobileApiClient {
   /// by doing that all interceptors will not be executed
   PaymentConditionApi getPaymentConditionApi() {
     return PaymentConditionApi(dio, serializers);
+  }
+
+  /// Get PaymentPriceTableApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  PaymentPriceTableApi getPaymentPriceTableApi() {
+    return PaymentPriceTableApi(dio, serializers);
+  }
+
+  /// Get PriceTableApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  PriceTableApi getPriceTableApi() {
+    return PriceTableApi(dio, serializers);
+  }
+
+  /// Get PriceTableItemApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  PriceTableItemApi getPriceTableItemApi() {
+    return PriceTableItemApi(dio, serializers);
   }
 
   /// Get ProductApi instance, base route and serializer can be overridden by a given but be careful,

@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Vehicle id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '38498459-731d-474d-b380-aa4efff3f156']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4354900c-3673-44fe-a9b7-ceb577dec01c']
 
 ### Return type
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '010ab5a4-2163-49ce-b368-b81742506647']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7847e5e1-058e-42f6-a42c-5fe6207fea67']
 
 ### Return type
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Vehicle id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1cd5dc27-1c84-4391-9352-73922e0fc779']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '45f5f126-f506-45b3-9392-8d170d2ab28b']
 
 ### Return type
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
  **id** | **String**| Vehicle id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'de09f30c-14df-4551-b991-9219836fbeee']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'da2bfe55-67ce-4b00-b5f0-55b34fa814f3']
 
 ### Return type
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Vehicle Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '11eb9463-c186-47db-8fd5-a4d26f620fd6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cce4c51e-94be-40da-9d65-b2436d63ae58']
  **putVehicleRequest** | [**PutVehicleRequest**](PutVehicleRequest.md)| Vehicle to update | [optional] 
 
 ### Return type
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '50e7656c-04de-4b37-b845-7507db8c7d8c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '420d3157-bbaa-47e4-9e16-8a5483760ace']
 
 ### Return type
 
@@ -364,7 +364,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ac77f81b-90a3-40cb-8566-9b91b5246f16']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd0f07e68-3452-4ae9-902a-499c5155a9ba']
  **postVehicleRequest** | [**PostVehicleRequest**](PostVehicleRequest.md)| Vehicle to create | [optional] 
 
 ### Return type

@@ -9,24 +9,27 @@ part of 'serializers.dart';
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ActionType.serializer)
       ..add(AddressTypeEnum.serializer)
-      ..add(Catalog.serializer)
       ..add(ErrorDetails.serializer)
       ..add(GetAllAddressResponse.serializer)
       ..add(GetAllAuditResponse.serializer)
       ..add(GetAllCatalogResponse.serializer)
       ..add(GetAllClientResponse.serializer)
       ..add(GetAllCompanyResponse.serializer)
+      ..add(GetAllDistribuitionCenterResponse.serializer)
       ..add(GetAllFreightResponse.serializer)
       ..add(GetAllFreightTableResponse.serializer)
-      ..add(GetAllLastCatalogVersionResponse.serializer)
       ..add(GetAllPagedAddressResponse.serializer)
       ..add(GetAllPagedAuditResponse.serializer)
       ..add(GetAllPagedCatalogResponse.serializer)
       ..add(GetAllPagedClientResponse.serializer)
       ..add(GetAllPagedCompanyResponse.serializer)
+      ..add(GetAllPagedDistribuitionCenterResponse.serializer)
       ..add(GetAllPagedFreightResponse.serializer)
       ..add(GetAllPagedFreightTableResponse.serializer)
       ..add(GetAllPagedPaymentConditionResponse.serializer)
+      ..add(GetAllPagedPaymentPriceTableResponse.serializer)
+      ..add(GetAllPagedPriceTableItemResponse.serializer)
+      ..add(GetAllPagedPriceTableResponse.serializer)
       ..add(GetAllPagedProductGroupResponse.serializer)
       ..add(GetAllPagedProductLineResponse.serializer)
       ..add(GetAllPagedProductResponse.serializer)
@@ -36,6 +39,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GetAllPagedVehicleResponse.serializer)
       ..add(GetAllPagedVehicleTypeResponse.serializer)
       ..add(GetAllPaymentConditionResponse.serializer)
+      ..add(GetAllPaymentPriceTableResponse.serializer)
+      ..add(GetAllPriceTableItemResponse.serializer)
+      ..add(GetAllPriceTableResponse.serializer)
       ..add(GetAllProductGroupResponse.serializer)
       ..add(GetAllProductLineResponse.serializer)
       ..add(GetAllProductResponse.serializer)
@@ -54,12 +60,20 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PostClientResponse.serializer)
       ..add(PostCompanyRequest.serializer)
       ..add(PostCompanyResponse.serializer)
+      ..add(PostDistribuitionCenterRequest.serializer)
+      ..add(PostDistribuitionCenterResponse.serializer)
       ..add(PostFreightRequest.serializer)
       ..add(PostFreightResponse.serializer)
       ..add(PostFreightTableRequest.serializer)
       ..add(PostFreightTableResponse.serializer)
       ..add(PostPaymentConditionRequest.serializer)
       ..add(PostPaymentConditionResponse.serializer)
+      ..add(PostPaymentPriceTableRequest.serializer)
+      ..add(PostPaymentPriceTableResponse.serializer)
+      ..add(PostPriceTableItemRequest.serializer)
+      ..add(PostPriceTableItemResponse.serializer)
+      ..add(PostPriceTableRequest.serializer)
+      ..add(PostPriceTableResponse.serializer)
       ..add(PostProductGroupRequest.serializer)
       ..add(PostProductGroupResponse.serializer)
       ..add(PostProductLineRequest.serializer)
@@ -78,22 +92,17 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PostVehicleResponse.serializer)
       ..add(PostVehicleTypeRequest.serializer)
       ..add(PostVehicleTypeResponse.serializer)
-      ..add(Product.serializer)
-      ..add(ProductDiscountRule.serializer)
-      ..add(ProductDiscountTypeEnum.serializer)
-      ..add(ProductDiscountWeightTypeEnum.serializer)
-      ..add(ProductFamilyEnum.serializer)
-      ..add(ProductPackage.serializer)
-      ..add(ProductPackageEnum.serializer)
-      ..add(ProductPrice.serializer)
-      ..add(ProductPriceDeadlineEnum.serializer)
       ..add(PutAddressRequest.serializer)
       ..add(PutCatalogRequest.serializer)
       ..add(PutClientRequest.serializer)
       ..add(PutCompanyRequest.serializer)
+      ..add(PutDistribuitionCenterRequest.serializer)
       ..add(PutFreightRequest.serializer)
       ..add(PutFreightTableRequest.serializer)
       ..add(PutPaymentConditionRequest.serializer)
+      ..add(PutPaymentPriceTableRequest.serializer)
+      ..add(PutPriceTableItemRequest.serializer)
+      ..add(PutPriceTableRequest.serializer)
       ..add(PutProductGroupRequest.serializer)
       ..add(PutProductLineRequest.serializer)
       ..add(PutProductRequest.serializer)
@@ -102,6 +111,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PutUserRequest.serializer)
       ..add(PutVehicleRequest.serializer)
       ..add(PutVehicleTypeRequest.serializer)
+      ..add(TablePriceOperationTypeEnum.serializer)
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetAllAddressResponse)]),
@@ -123,6 +133,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
               BuiltList, const [const FullType(GetAllCompanyResponse)]),
           () => new ListBuilder<GetAllCompanyResponse>())
       ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GetAllDistribuitionCenterResponse)]),
+          () => new ListBuilder<GetAllDistribuitionCenterResponse>())
+      ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetAllFreightResponse)]),
           () => new ListBuilder<GetAllFreightResponse>())
@@ -134,6 +148,18 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList,
               const [const FullType(GetAllPaymentConditionResponse)]),
           () => new ListBuilder<GetAllPaymentConditionResponse>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(GetAllPaymentPriceTableResponse)]),
+          () => new ListBuilder<GetAllPaymentPriceTableResponse>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GetAllPriceTableItemResponse)]),
+          () => new ListBuilder<GetAllPriceTableItemResponse>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(GetAllPriceTableResponse)]),
+          () => new ListBuilder<GetAllPriceTableResponse>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(GetAllProductGroupResponse)]),
@@ -165,59 +191,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(GetAllVehicleTypeResponse)]),
           () => new ListBuilder<GetAllVehicleTypeResponse>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Product)]),
-          () => new ListBuilder<Product>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ProductPackage)]),
-          () => new ListBuilder<ProductPackage>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ProductPrice)]),
-          () => new ListBuilder<ProductPrice>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(ProductDiscountRule)]),
-          () => new ListBuilder<ProductDiscountRule>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ProductPackage)]),
-          () => new ListBuilder<ProductPackage>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ProductPrice)]),
-          () => new ListBuilder<ProductPrice>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(ProductDiscountRule)]),
-          () => new ListBuilder<ProductDiscountRule>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ProductPackage)]),
-          () => new ListBuilder<ProductPackage>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ProductPrice)]),
-          () => new ListBuilder<ProductPrice>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(ProductDiscountRule)]),
-          () => new ListBuilder<ProductDiscountRule>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ProductPackage)]),
-          () => new ListBuilder<ProductPackage>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ProductPrice)]),
-          () => new ListBuilder<ProductPrice>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(ProductDiscountRule)]),
-          () => new ListBuilder<ProductDiscountRule>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ProductPackage)]),
-          () => new ListBuilder<ProductPackage>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(ProductPrice)]),
-          () => new ListBuilder<ProductPrice>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(ProductDiscountRule)]),
-          () => new ListBuilder<ProductDiscountRule>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>()))

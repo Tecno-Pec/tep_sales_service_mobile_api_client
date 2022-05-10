@@ -80,7 +80,7 @@ abstract class PostAddressResponse implements Built<PostAddressResponse, PostAdd
 
     @BuiltValueField(wireName: r'type')
     AddressTypeEnum? get type;
-    // enum typeEnum {  1,  };
+    // enum typeEnum {  1,  2,  };
 
     @BuiltValueField(wireName: r'externalCode')
     String? get externalCode;

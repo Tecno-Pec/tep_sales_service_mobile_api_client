@@ -10,13 +10,11 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api_util.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/error_details.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/get_all_last_catalog_version_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_product_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_product_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/operation.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_product_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_product_response.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/product_family_enum.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_product_request.dart';
 
 class ProductApi {
@@ -46,7 +44,7 @@ class ProductApi {
   Future<Response<GetAllProductResponse>> getByIdProduct({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'cbcad30d-9e61-4267-b4b6-80214bcd85bd',
+    String? xCsrfToken = '44bf17a8-9927-4fea-a862-df61384cb616',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -118,97 +116,10 @@ class ProductApi {
   /// 
   ///
   /// Parameters:
-  /// * [catalogVersion] - catalogVersion
-  /// * [xApiKey] - Your Api Key
-  /// * [xCsrfToken] - CSRF Protection
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [GetAllLastCatalogVersionResponse] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<GetAllLastCatalogVersionResponse>> tepsalesV1ProductsAllCatalogVersionCatalogVersionGet({ 
-    required int catalogVersion,
-    String? xApiKey,
-    String? xCsrfToken = 'aefa6427-5944-4e6a-a3ff-ddf79a625695',
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/tepsales/v1/products/all/catalogVersion/{catalogVersion}'.replaceAll('{' r'catalogVersion' '}', catalogVersion.toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        if (xApiKey != null) r'x-api-key': xApiKey,
-        if (xCsrfToken != null) r'x-csrf-token': xCsrfToken,
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'apiKey',
-            'name': 'Bearer',
-            'keyName': 'Authorization',
-            'where': 'header',
-          },
-        ],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    GetAllLastCatalogVersionResponse _responseData;
-
-    try {
-      const _responseType = FullType(GetAllLastCatalogVersionResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as GetAllLastCatalogVersionResponse;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<GetAllLastCatalogVersionResponse>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// Get All Product by filter
-  /// 
-  ///
-  /// Parameters:
-  /// * [family] 
   /// * [name] 
   /// * [description] 
-  /// * [catalogId] 
+  /// * [productLineId] 
+  /// * [productGroupId] 
   /// * [limit] - limit
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
   /// * [xApiKey] - Your Api Key
@@ -223,14 +134,14 @@ class ProductApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<GetAllProductResponse>] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<GetAllProductResponse>>> tepsalesV1ProductsAllGet({ 
-    ProductFamilyEnum? family,
     String? name,
     String? description,
-    String? catalogId,
+    String? productLineId,
+    String? productGroupId,
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'e565e4c9-fb1b-49cd-b893-d61a1c1e405a',
+    String? xCsrfToken = '63421ba1-f21e-45dd-aaa8-950fa03199cc',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -261,10 +172,10 @@ class ProductApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (family != null) r'family': encodeQueryParameter(_serializers, family, const FullType(ProductFamilyEnum)),
       r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
       r'description': encodeQueryParameter(_serializers, description, const FullType(String)),
-      r'catalogId': encodeQueryParameter(_serializers, catalogId, const FullType(String)),
+      r'productLineId': encodeQueryParameter(_serializers, productLineId, const FullType(String)),
+      r'productGroupId': encodeQueryParameter(_serializers, productGroupId, const FullType(String)),
       if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
       r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
     };
@@ -327,7 +238,7 @@ class ProductApi {
   Future<Response<void>> tepsalesV1ProductsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'b134f69f-e761-4663-a089-55b96d9b74db',
+    String? xCsrfToken = 'dbd2b82a-f538-42ad-95c6-3403dc21492e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -389,7 +300,7 @@ class ProductApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'ddbac8ae-29ea-48e9-bbb3-1ab3c5ee3e0a',
+    String? xCsrfToken = '6fd0afb4-e8b6-4b75-a8dd-736385a51695',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -469,7 +380,7 @@ class ProductApi {
   Future<Response<void>> tepsalesV1ProductsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '7278bd23-5d5c-4a26-9366-cf6560b7ca39',
+    String? xCsrfToken = 'f02d9253-15cb-49eb-a0fc-d7ca416b5a18',
     PutProductRequest? putProductRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -534,11 +445,11 @@ class ProductApi {
   /// 
   ///
   /// Parameters:
-  /// * [family] 
   /// * [code] 
   /// * [name] 
   /// * [description] 
-  /// * [catalogId] 
+  /// * [productLineId] 
+  /// * [productGroupId] 
   /// * [page] 
   /// * [pageSize] 
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
@@ -554,16 +465,16 @@ class ProductApi {
   /// Returns a [Future] containing a [Response] with a [GetAllPagedProductResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllPagedProductResponse>> tepsalesV1ProductsPagedGet({ 
-    ProductFamilyEnum? family,
     String? code,
     String? name,
     String? description,
-    String? catalogId,
+    String? productLineId,
+    String? productGroupId,
     int? page,
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '0d9e111f-38eb-48ff-a4e1-07892622ca4a',
+    String? xCsrfToken = 'a1c1b786-1d37-49c5-b07d-9c18d2537edb',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -594,11 +505,11 @@ class ProductApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (family != null) r'family': encodeQueryParameter(_serializers, family, const FullType(ProductFamilyEnum)),
       r'code': encodeQueryParameter(_serializers, code, const FullType(String)),
       r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
       r'description': encodeQueryParameter(_serializers, description, const FullType(String)),
-      r'catalogId': encodeQueryParameter(_serializers, catalogId, const FullType(String)),
+      r'productLineId': encodeQueryParameter(_serializers, productLineId, const FullType(String)),
+      r'productGroupId': encodeQueryParameter(_serializers, productGroupId, const FullType(String)),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
       r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
@@ -661,7 +572,7 @@ class ProductApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostProductResponse>> tepsalesV1ProductsPost({ 
     String? xApiKey,
-    String? xCsrfToken = '848c21f9-34e9-478d-84ef-157b1f246a62',
+    String? xCsrfToken = 'b6bf5e36-7746-4203-a3cc-e18a421cb6cd',
     PostProductRequest? postProductRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
