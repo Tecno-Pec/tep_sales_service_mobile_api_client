@@ -15,6 +15,7 @@ import 'package:tepsalesservice_mobile_api_client/src/api/catalog_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/client_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/company_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/distribuition_center_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/distribuition_center_client_address_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/freight_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/freight_table_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/payment_condition_api.dart';
@@ -119,6 +120,12 @@ class TepsalesserviceMobileApiClient {
   /// by doing that all interceptors will not be executed
   DistribuitionCenterApi getDistribuitionCenterApi() {
     return DistribuitionCenterApi(dio, serializers);
+  }
+
+  /// Get DistribuitionCenterClientAddressApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  DistribuitionCenterClientAddressApi getDistribuitionCenterClientAddressApi() {
+    return DistribuitionCenterClientAddressApi(dio, serializers);
   }
 
   /// Get FreightApi instance, base route and serializer can be overridden by a given but be careful,

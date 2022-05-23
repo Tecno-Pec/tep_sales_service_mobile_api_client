@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **userUpdated** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
-**paymentConditionId** | **String** |  | [optional] 
 **operationType** | [**TablePriceOperationTypeEnum**](TablePriceOperationTypeEnum.md) |  | [optional] 
 **description** | **String** |  | [optional] 
 **externalCode** | **String** |  | [optional] 

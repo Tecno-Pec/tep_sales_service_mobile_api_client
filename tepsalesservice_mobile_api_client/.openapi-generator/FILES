@@ -9,6 +9,7 @@ doc/CatalogApi.md
 doc/ClientApi.md
 doc/CompanyApi.md
 doc/DistribuitionCenterApi.md
+doc/DistribuitionCenterClientAddressApi.md
 doc/ErrorDetails.md
 doc/FreightApi.md
 doc/FreightTableApi.md
@@ -17,6 +18,7 @@ doc/GetAllAuditResponse.md
 doc/GetAllCatalogResponse.md
 doc/GetAllClientResponse.md
 doc/GetAllCompanyResponse.md
+doc/GetAllDistribuitionCenterClientAddressResponse.md
 doc/GetAllDistribuitionCenterResponse.md
 doc/GetAllFreightResponse.md
 doc/GetAllFreightTableResponse.md
@@ -25,6 +27,7 @@ doc/GetAllPagedAuditResponse.md
 doc/GetAllPagedCatalogResponse.md
 doc/GetAllPagedClientResponse.md
 doc/GetAllPagedCompanyResponse.md
+doc/GetAllPagedDistribuitionCenterClientAddressResponse.md
 doc/GetAllPagedDistribuitionCenterResponse.md
 doc/GetAllPagedFreightResponse.md
 doc/GetAllPagedFreightTableResponse.md
@@ -64,6 +67,8 @@ doc/PostClientRequest.md
 doc/PostClientResponse.md
 doc/PostCompanyRequest.md
 doc/PostCompanyResponse.md
+doc/PostDistribuitionCenterClientAddressRequest.md
+doc/PostDistribuitionCenterClientAddressResponse.md
 doc/PostDistribuitionCenterRequest.md
 doc/PostDistribuitionCenterResponse.md
 doc/PostFreightRequest.md
@@ -105,6 +110,7 @@ doc/PutAddressRequest.md
 doc/PutCatalogRequest.md
 doc/PutClientRequest.md
 doc/PutCompanyRequest.md
+doc/PutDistribuitionCenterClientAddressRequest.md
 doc/PutDistribuitionCenterRequest.md
 doc/PutFreightRequest.md
 doc/PutFreightTableRequest.md
@@ -134,6 +140,7 @@ lib/src/api/catalog_api.dart
 lib/src/api/client_api.dart
 lib/src/api/company_api.dart
 lib/src/api/distribuition_center_api.dart
+lib/src/api/distribuition_center_client_address_api.dart
 lib/src/api/freight_api.dart
 lib/src/api/freight_table_api.dart
 lib/src/api/payment_condition_api.dart
@@ -165,6 +172,7 @@ lib/src/model/get_all_audit_response.dart
 lib/src/model/get_all_catalog_response.dart
 lib/src/model/get_all_client_response.dart
 lib/src/model/get_all_company_response.dart
+lib/src/model/get_all_distribuition_center_client_address_response.dart
 lib/src/model/get_all_distribuition_center_response.dart
 lib/src/model/get_all_freight_response.dart
 lib/src/model/get_all_freight_table_response.dart
@@ -173,6 +181,7 @@ lib/src/model/get_all_paged_audit_response.dart
 lib/src/model/get_all_paged_catalog_response.dart
 lib/src/model/get_all_paged_client_response.dart
 lib/src/model/get_all_paged_company_response.dart
+lib/src/model/get_all_paged_distribuition_center_client_address_response.dart
 lib/src/model/get_all_paged_distribuition_center_response.dart
 lib/src/model/get_all_paged_freight_response.dart
 lib/src/model/get_all_paged_freight_table_response.dart
@@ -210,6 +219,8 @@ lib/src/model/post_client_request.dart
 lib/src/model/post_client_response.dart
 lib/src/model/post_company_request.dart
 lib/src/model/post_company_response.dart
+lib/src/model/post_distribuition_center_client_address_request.dart
+lib/src/model/post_distribuition_center_client_address_response.dart
 lib/src/model/post_distribuition_center_request.dart
 lib/src/model/post_distribuition_center_response.dart
 lib/src/model/post_freight_request.dart
@@ -246,6 +257,7 @@ lib/src/model/put_address_request.dart
 lib/src/model/put_catalog_request.dart
 lib/src/model/put_client_request.dart
 lib/src/model/put_company_request.dart
+lib/src/model/put_distribuition_center_client_address_request.dart
 lib/src/model/put_distribuition_center_request.dart
 lib/src/model/put_freight_request.dart
 lib/src/model/put_freight_table_request.dart
@@ -265,3 +277,9 @@ lib/src/model/table_price_operation_type_enum.dart
 lib/src/serializers.dart
 lib/tepsalesservice_mobile_api_client.dart
 pubspec.yaml
+test/distribuition_center_client_address_api_test.dart
+test/get_all_distribuition_center_client_address_response_test.dart
+test/get_all_paged_distribuition_center_client_address_response_test.dart
+test/post_distribuition_center_client_address_request_test.dart
+test/post_distribuition_center_client_address_response_test.dart
+test/put_distribuition_center_client_address_request_test.dart

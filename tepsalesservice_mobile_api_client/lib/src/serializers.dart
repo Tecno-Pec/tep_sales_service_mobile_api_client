@@ -20,6 +20,7 @@ import 'package:tepsalesservice_mobile_api_client/src/model/get_all_audit_respon
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_catalog_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_client_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_company_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/get_all_distribuition_center_client_address_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_distribuition_center_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_freight_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_freight_table_response.dart';
@@ -28,6 +29,7 @@ import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_audit_
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_catalog_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_client_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_company_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_distribuition_center_client_address_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_distribuition_center_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_freight_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_freight_table_response.dart';
@@ -65,6 +67,8 @@ import 'package:tepsalesservice_mobile_api_client/src/model/post_client_request.
 import 'package:tepsalesservice_mobile_api_client/src/model/post_client_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_company_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_company_response.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/post_distribuition_center_client_address_request.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/post_distribuition_center_client_address_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_distribuition_center_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_distribuition_center_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_freight_request.dart';
@@ -101,6 +105,7 @@ import 'package:tepsalesservice_mobile_api_client/src/model/put_address_request.
 import 'package:tepsalesservice_mobile_api_client/src/model/put_catalog_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_client_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_company_request.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/put_distribuition_center_client_address_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_distribuition_center_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_freight_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_freight_table_request.dart';
@@ -129,6 +134,7 @@ part 'serializers.g.dart';
   GetAllCatalogResponse,
   GetAllClientResponse,
   GetAllCompanyResponse,
+  GetAllDistribuitionCenterClientAddressResponse,
   GetAllDistribuitionCenterResponse,
   GetAllFreightResponse,
   GetAllFreightTableResponse,
@@ -137,6 +143,7 @@ part 'serializers.g.dart';
   GetAllPagedCatalogResponse,
   GetAllPagedClientResponse,
   GetAllPagedCompanyResponse,
+  GetAllPagedDistribuitionCenterClientAddressResponse,
   GetAllPagedDistribuitionCenterResponse,
   GetAllPagedFreightResponse,
   GetAllPagedFreightTableResponse,
@@ -174,6 +181,8 @@ part 'serializers.g.dart';
   PostClientResponse,
   PostCompanyRequest,
   PostCompanyResponse,
+  PostDistribuitionCenterClientAddressRequest,
+  PostDistribuitionCenterClientAddressResponse,
   PostDistribuitionCenterRequest,
   PostDistribuitionCenterResponse,
   PostFreightRequest,
@@ -210,6 +219,7 @@ part 'serializers.g.dart';
   PutCatalogRequest,
   PutClientRequest,
   PutCompanyRequest,
+  PutDistribuitionCenterClientAddressRequest,
   PutDistribuitionCenterRequest,
   PutFreightRequest,
   PutFreightTableRequest,
@@ -263,6 +273,14 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(GetAllDistribuitionCenterResponse)]),
         () => ListBuilder<GetAllDistribuitionCenterResponse>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Operation)]),
+        () => ListBuilder<Operation>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(GetAllDistribuitionCenterClientAddressResponse)]),
+        () => ListBuilder<GetAllDistribuitionCenterClientAddressResponse>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Operation)]),

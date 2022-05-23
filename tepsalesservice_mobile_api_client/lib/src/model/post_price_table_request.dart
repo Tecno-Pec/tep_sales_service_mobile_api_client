@@ -17,7 +17,6 @@ part 'post_price_table_request.g.dart';
 /// * [userUpdated] 
 /// * [id] 
 /// * [name] 
-/// * [paymentConditionId] 
 /// * [operationType] 
 /// * [description] 
 /// * [externalCode] 
@@ -40,12 +39,9 @@ abstract class PostPriceTableRequest implements Built<PostPriceTableRequest, Pos
     @BuiltValueField(wireName: r'name')
     String? get name;
 
-    @BuiltValueField(wireName: r'paymentConditionId')
-    String? get paymentConditionId;
-
     @BuiltValueField(wireName: r'operationType')
     TablePriceOperationTypeEnum? get operationType;
-    // enum operationTypeEnum {  0,  1,  };
+    // enum operationTypeEnum {  1,  2,  };
 
     @BuiltValueField(wireName: r'description')
     String? get description;
@@ -110,12 +106,6 @@ class _$PostPriceTableRequestSerializer implements StructuredSerializer<PostPric
                 ..add(r'name')
                 ..add(serializers.serialize(object.name,
                     specifiedType: const FullType.nullable(String)));
-        }
-        if (object.paymentConditionId != null) {
-            result
-                ..add(r'paymentConditionId')
-                ..add(serializers.serialize(object.paymentConditionId,
-                    specifiedType: const FullType(String)));
         }
         if (object.operationType != null) {
             result
@@ -184,11 +174,6 @@ class _$PostPriceTableRequestSerializer implements StructuredSerializer<PostPric
                         specifiedType: const FullType.nullable(String)) as String?;
                     if (valueDes == null) continue;
                     result.name = valueDes;
-                    break;
-                case r'paymentConditionId':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    result.paymentConditionId = valueDes;
                     break;
                 case r'operationType':
                     final valueDes = serializers.deserialize(value,

@@ -103,6 +103,13 @@ Class | Method | HTTP request | Description
 [*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**tepsalesV1DistribuitionsCentersIdPut**](doc\DistribuitionCenterApi.md#tepsalesv1distribuitionscentersidput) | **PUT** /tepsales/v1/distribuitionsCenters/{id} | Update DistribuitionCenter
 [*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**tepsalesV1DistribuitionsCentersPagedGet**](doc\DistribuitionCenterApi.md#tepsalesv1distribuitionscenterspagedget) | **GET** /tepsales/v1/distribuitionsCenters/paged | Get All DistribuitionCenter by filter with pagination
 [*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**tepsalesV1DistribuitionsCentersPost**](doc\DistribuitionCenterApi.md#tepsalesv1distribuitionscenterspost) | **POST** /tepsales/v1/distribuitionsCenters | Create DistribuitionCenter
+[*DistribuitionCenterClientAddressApi*](doc\DistribuitionCenterClientAddressApi.md) | [**getByIdDistribuitionCenterClientAddress**](doc\DistribuitionCenterClientAddressApi.md#getbyiddistribuitioncenterclientaddress) | **GET** /tepsales/v1/distribuitionCenterClientAddress/{id} | Get DistribuitionCenterClientAddress by id
+[*DistribuitionCenterClientAddressApi*](doc\DistribuitionCenterClientAddressApi.md) | [**tepsalesV1DistribuitionCenterClientAddressAllGet**](doc\DistribuitionCenterClientAddressApi.md#tepsalesv1distribuitioncenterclientaddressallget) | **GET** /tepsales/v1/distribuitionCenterClientAddress/all | Get All DistribuitionCenterClientAddress by filter
+[*DistribuitionCenterClientAddressApi*](doc\DistribuitionCenterClientAddressApi.md) | [**tepsalesV1DistribuitionCenterClientAddressIdDelete**](doc\DistribuitionCenterClientAddressApi.md#tepsalesv1distribuitioncenterclientaddressiddelete) | **DELETE** /tepsales/v1/distribuitionCenterClientAddress/{id} | Delete DistribuitionCenterClientAddress by Id
+[*DistribuitionCenterClientAddressApi*](doc\DistribuitionCenterClientAddressApi.md) | [**tepsalesV1DistribuitionCenterClientAddressIdPatch**](doc\DistribuitionCenterClientAddressApi.md#tepsalesv1distribuitioncenterclientaddressidpatch) | **PATCH** /tepsales/v1/distribuitionCenterClientAddress/{id} | Update part of DistribuitionCenterClientAddress
+[*DistribuitionCenterClientAddressApi*](doc\DistribuitionCenterClientAddressApi.md) | [**tepsalesV1DistribuitionCenterClientAddressIdPut**](doc\DistribuitionCenterClientAddressApi.md#tepsalesv1distribuitioncenterclientaddressidput) | **PUT** /tepsales/v1/distribuitionCenterClientAddress/{id} | Update DistribuitionCenterClientAddress
+[*DistribuitionCenterClientAddressApi*](doc\DistribuitionCenterClientAddressApi.md) | [**tepsalesV1DistribuitionCenterClientAddressPagedGet**](doc\DistribuitionCenterClientAddressApi.md#tepsalesv1distribuitioncenterclientaddresspagedget) | **GET** /tepsales/v1/distribuitionCenterClientAddress/paged | Get All DistribuitionCenterClientAddress by filter with pagination
+[*DistribuitionCenterClientAddressApi*](doc\DistribuitionCenterClientAddressApi.md) | [**tepsalesV1DistribuitionCenterClientAddressPost**](doc\DistribuitionCenterClientAddressApi.md#tepsalesv1distribuitioncenterclientaddresspost) | **POST** /tepsales/v1/distribuitionCenterClientAddress | Create DistribuitionCenterClientAddress
 [*FreightApi*](doc\FreightApi.md) | [**getByIdFreight**](doc\FreightApi.md#getbyidfreight) | **GET** /tepsales/v1/freights/{id} | Get Freight by id
 [*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsAllGet**](doc\FreightApi.md#tepsalesv1freightsallget) | **GET** /tepsales/v1/freights/all | Get All Freight by filter
 [*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsIdDelete**](doc\FreightApi.md#tepsalesv1freightsiddelete) | **DELETE** /tepsales/v1/freights/{id} | Delete Freight by Id
@@ -217,6 +224,7 @@ Class | Method | HTTP request | Description
  - [GetAllCatalogResponse](doc\GetAllCatalogResponse.md)
  - [GetAllClientResponse](doc\GetAllClientResponse.md)
  - [GetAllCompanyResponse](doc\GetAllCompanyResponse.md)
+ - [GetAllDistribuitionCenterClientAddressResponse](doc\GetAllDistribuitionCenterClientAddressResponse.md)
  - [GetAllDistribuitionCenterResponse](doc\GetAllDistribuitionCenterResponse.md)
  - [GetAllFreightResponse](doc\GetAllFreightResponse.md)
  - [GetAllFreightTableResponse](doc\GetAllFreightTableResponse.md)
@@ -225,6 +233,7 @@ Class | Method | HTTP request | Description
  - [GetAllPagedCatalogResponse](doc\GetAllPagedCatalogResponse.md)
  - [GetAllPagedClientResponse](doc\GetAllPagedClientResponse.md)
  - [GetAllPagedCompanyResponse](doc\GetAllPagedCompanyResponse.md)
+ - [GetAllPagedDistribuitionCenterClientAddressResponse](doc\GetAllPagedDistribuitionCenterClientAddressResponse.md)
  - [GetAllPagedDistribuitionCenterResponse](doc\GetAllPagedDistribuitionCenterResponse.md)
  - [GetAllPagedFreightResponse](doc\GetAllPagedFreightResponse.md)
  - [GetAllPagedFreightTableResponse](doc\GetAllPagedFreightTableResponse.md)
@@ -262,6 +271,8 @@ Class | Method | HTTP request | Description
  - [PostClientResponse](doc\PostClientResponse.md)
  - [PostCompanyRequest](doc\PostCompanyRequest.md)
  - [PostCompanyResponse](doc\PostCompanyResponse.md)
+ - [PostDistribuitionCenterClientAddressRequest](doc\PostDistribuitionCenterClientAddressRequest.md)
+ - [PostDistribuitionCenterClientAddressResponse](doc\PostDistribuitionCenterClientAddressResponse.md)
  - [PostDistribuitionCenterRequest](doc\PostDistribuitionCenterRequest.md)
  - [PostDistribuitionCenterResponse](doc\PostDistribuitionCenterResponse.md)
  - [PostFreightRequest](doc\PostFreightRequest.md)
@@ -298,6 +309,7 @@ Class | Method | HTTP request | Description
  - [PutCatalogRequest](doc\PutCatalogRequest.md)
  - [PutClientRequest](doc\PutClientRequest.md)
  - [PutCompanyRequest](doc\PutCompanyRequest.md)
+ - [PutDistribuitionCenterClientAddressRequest](doc\PutDistribuitionCenterClientAddressRequest.md)
  - [PutDistribuitionCenterRequest](doc\PutDistribuitionCenterRequest.md)
  - [PutFreightRequest](doc\PutFreightRequest.md)
  - [PutFreightTableRequest](doc\PutFreightTableRequest.md)

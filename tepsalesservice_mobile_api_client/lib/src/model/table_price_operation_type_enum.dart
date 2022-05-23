@@ -10,10 +10,10 @@ part 'table_price_operation_type_enum.g.dart';
 
 class TablePriceOperationTypeEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireNumber: 0)
-  static const TablePriceOperationTypeEnum number0 = _$number0;
   @BuiltValueEnumConst(wireNumber: 1)
   static const TablePriceOperationTypeEnum number1 = _$number1;
+  @BuiltValueEnumConst(wireNumber: 2)
+  static const TablePriceOperationTypeEnum number2 = _$number2;
 
   static Serializer<TablePriceOperationTypeEnum> get serializer => _$tablePriceOperationTypeEnumSerializer;
 
