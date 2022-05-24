@@ -20,8 +20,6 @@ class _$GetAllPriceTableResponse extends GetAllPriceTableResponse {
   @override
   final String? name;
   @override
-  final String? paymentConditionId;
-  @override
   final TablePriceOperationTypeEnum? operationType;
   @override
   final String? description;
@@ -39,7 +37,6 @@ class _$GetAllPriceTableResponse extends GetAllPriceTableResponse {
       this.userUpdated,
       this.id,
       this.name,
-      this.paymentConditionId,
       this.operationType,
       this.description,
       this.externalCode})
@@ -64,7 +61,6 @@ class _$GetAllPriceTableResponse extends GetAllPriceTableResponse {
         userUpdated == other.userUpdated &&
         id == other.id &&
         name == other.name &&
-        paymentConditionId == other.paymentConditionId &&
         operationType == other.operationType &&
         description == other.description &&
         externalCode == other.externalCode;
@@ -79,14 +75,12 @@ class _$GetAllPriceTableResponse extends GetAllPriceTableResponse {
                     $jc(
                         $jc(
                             $jc(
-                                $jc(
-                                    $jc($jc(0, createdAt.hashCode),
-                                        updatedAt.hashCode),
-                                    userCreated.hashCode),
-                                userUpdated.hashCode),
-                            id.hashCode),
-                        name.hashCode),
-                    paymentConditionId.hashCode),
+                                $jc($jc(0, createdAt.hashCode),
+                                    updatedAt.hashCode),
+                                userCreated.hashCode),
+                            userUpdated.hashCode),
+                        id.hashCode),
+                    name.hashCode),
                 operationType.hashCode),
             description.hashCode),
         externalCode.hashCode));
@@ -101,7 +95,6 @@ class _$GetAllPriceTableResponse extends GetAllPriceTableResponse {
           ..add('userUpdated', userUpdated)
           ..add('id', id)
           ..add('name', name)
-          ..add('paymentConditionId', paymentConditionId)
           ..add('operationType', operationType)
           ..add('description', description)
           ..add('externalCode', externalCode))
@@ -138,11 +131,6 @@ class GetAllPriceTableResponseBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
-  String? _paymentConditionId;
-  String? get paymentConditionId => _$this._paymentConditionId;
-  set paymentConditionId(String? paymentConditionId) =>
-      _$this._paymentConditionId = paymentConditionId;
-
   TablePriceOperationTypeEnum? _operationType;
   TablePriceOperationTypeEnum? get operationType => _$this._operationType;
   set operationType(TablePriceOperationTypeEnum? operationType) =>
@@ -169,7 +157,6 @@ class GetAllPriceTableResponseBuilder
       _userUpdated = $v.userUpdated;
       _id = $v.id;
       _name = $v.name;
-      _paymentConditionId = $v.paymentConditionId;
       _operationType = $v.operationType;
       _description = $v.description;
       _externalCode = $v.externalCode;
@@ -199,7 +186,6 @@ class GetAllPriceTableResponseBuilder
             userUpdated: userUpdated,
             id: id,
             name: name,
-            paymentConditionId: paymentConditionId,
             operationType: operationType,
             description: description,
             externalCode: externalCode);

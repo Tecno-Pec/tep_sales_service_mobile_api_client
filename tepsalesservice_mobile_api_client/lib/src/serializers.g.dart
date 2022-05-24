@@ -15,6 +15,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GetAllCatalogResponse.serializer)
       ..add(GetAllClientResponse.serializer)
       ..add(GetAllCompanyResponse.serializer)
+      ..add(GetAllDistribuitionCenterClientAddressResponse.serializer)
       ..add(GetAllDistribuitionCenterResponse.serializer)
       ..add(GetAllFreightResponse.serializer)
       ..add(GetAllFreightTableResponse.serializer)
@@ -23,6 +24,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(GetAllPagedCatalogResponse.serializer)
       ..add(GetAllPagedClientResponse.serializer)
       ..add(GetAllPagedCompanyResponse.serializer)
+      ..add(GetAllPagedDistribuitionCenterClientAddressResponse.serializer)
       ..add(GetAllPagedDistribuitionCenterResponse.serializer)
       ..add(GetAllPagedFreightResponse.serializer)
       ..add(GetAllPagedFreightTableResponse.serializer)
@@ -60,6 +62,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PostClientResponse.serializer)
       ..add(PostCompanyRequest.serializer)
       ..add(PostCompanyResponse.serializer)
+      ..add(PostDistribuitionCenterClientAddressRequest.serializer)
+      ..add(PostDistribuitionCenterClientAddressResponse.serializer)
       ..add(PostDistribuitionCenterRequest.serializer)
       ..add(PostDistribuitionCenterResponse.serializer)
       ..add(PostFreightRequest.serializer)
@@ -96,6 +100,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PutCatalogRequest.serializer)
       ..add(PutClientRequest.serializer)
       ..add(PutCompanyRequest.serializer)
+      ..add(PutDistribuitionCenterClientAddressRequest.serializer)
       ..add(PutDistribuitionCenterRequest.serializer)
       ..add(PutFreightRequest.serializer)
       ..add(PutFreightTableRequest.serializer)
@@ -132,6 +137,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(GetAllCompanyResponse)]),
           () => new ListBuilder<GetAllCompanyResponse>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(GetAllDistribuitionCenterClientAddressResponse)
+          ]),
+          () =>
+              new ListBuilder<GetAllDistribuitionCenterClientAddressResponse>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(GetAllDistribuitionCenterResponse)]),

@@ -6,17 +6,17 @@ part of 'table_price_operation_type_enum.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-const TablePriceOperationTypeEnum _$number0 =
-    const TablePriceOperationTypeEnum._('number0');
 const TablePriceOperationTypeEnum _$number1 =
     const TablePriceOperationTypeEnum._('number1');
+const TablePriceOperationTypeEnum _$number2 =
+    const TablePriceOperationTypeEnum._('number2');
 
 TablePriceOperationTypeEnum _$valueOf(String name) {
   switch (name) {
-    case 'number0':
-      return _$number0;
     case 'number1':
       return _$number1;
+    case 'number2':
+      return _$number2;
     default:
       throw new ArgumentError(name);
   }
@@ -24,14 +24,14 @@ TablePriceOperationTypeEnum _$valueOf(String name) {
 
 final BuiltSet<TablePriceOperationTypeEnum> _$values = new BuiltSet<
     TablePriceOperationTypeEnum>(const <TablePriceOperationTypeEnum>[
-  _$number0,
   _$number1,
+  _$number2,
 ]);
 
 class _$TablePriceOperationTypeEnumMeta {
   const _$TablePriceOperationTypeEnumMeta();
-  TablePriceOperationTypeEnum get number0 => _$number0;
   TablePriceOperationTypeEnum get number1 => _$number1;
+  TablePriceOperationTypeEnum get number2 => _$number2;
   TablePriceOperationTypeEnum valueOf(String name) => _$valueOf(name);
   BuiltSet<TablePriceOperationTypeEnum> get values => _$values;
 }
@@ -49,12 +49,12 @@ Serializer<TablePriceOperationTypeEnum>
 class _$TablePriceOperationTypeEnumSerializer
     implements PrimitiveSerializer<TablePriceOperationTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'number0': 0,
     'number1': 1,
+    'number2': 2,
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    0: 'number0',
     1: 'number1',
+    2: 'number2',
   };
 
   @override
