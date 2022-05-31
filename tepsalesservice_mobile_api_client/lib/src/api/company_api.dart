@@ -44,7 +44,7 @@ class CompanyApi {
   Future<Response<GetAllCompanyResponse>> getByIdCompany({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '0dd334b3-7790-4802-ac40-f2d955710151',
+    String? xCsrfToken = '05399aee-7bc9-4bed-bdb8-cbbc917cfa72',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -137,7 +137,7 @@ class CompanyApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'c8a27dff-d112-49f6-a188-614ede1a7cc9',
+    String? xCsrfToken = '962c3517-8434-403e-855b-5e7e433921d4',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -232,7 +232,7 @@ class CompanyApi {
   Future<Response<void>> tepsalesV1CompaniesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'b6c4305d-6572-494f-b218-1860229a83cc',
+    String? xCsrfToken = '49ea7038-4007-42b8-9980-91b38564be8e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -294,7 +294,7 @@ class CompanyApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '77a06e77-4e75-4ba7-8832-b756a18b9fd6',
+    String? xCsrfToken = '61b7449a-9807-4dbf-b2e5-8905c724dfd6',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -374,7 +374,7 @@ class CompanyApi {
   Future<Response<void>> tepsalesV1CompaniesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'cc42f5f3-3707-4ab0-ad76-098d188fa0bd',
+    String? xCsrfToken = '383a7a5f-6ac2-4f17-85d8-bfe4a058f237',
     PutCompanyRequest? putCompanyRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -462,7 +462,7 @@ class CompanyApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '8695031d-647a-46e2-9523-b8038ce49088',
+    String? xCsrfToken = '4d92b9a1-9e6e-4508-a3ce-922a3c918dd8',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -557,7 +557,7 @@ class CompanyApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostCompanyResponse>> tepsalesV1CompaniesPost({ 
     String? xApiKey,
-    String? xCsrfToken = '26b4dd15-d4f2-441f-8427-61aa5c101ebf',
+    String? xCsrfToken = 'efaa0e75-4ac0-47a0-9803-ac4a372372ef',
     PostCompanyRequest? postCompanyRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

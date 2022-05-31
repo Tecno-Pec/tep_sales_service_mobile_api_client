@@ -219,6 +219,7 @@ Class | Method | HTTP request | Description
  - [ActionType](doc\ActionType.md)
  - [AddressTypeEnum](doc\AddressTypeEnum.md)
  - [ErrorDetails](doc\ErrorDetails.md)
+ - [FromTypeEnum](doc\FromTypeEnum.md)
  - [GetAllAddressResponse](doc\GetAllAddressResponse.md)
  - [GetAllAuditResponse](doc\GetAllAuditResponse.md)
  - [GetAllCatalogResponse](doc\GetAllCatalogResponse.md)

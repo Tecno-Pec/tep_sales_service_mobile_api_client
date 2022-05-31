@@ -42,6 +42,8 @@ class _$PostAddressRequest extends PostAddressRequest {
   @override
   final AddressTypeEnum? type;
   @override
+  final FromTypeEnum? fromType;
+  @override
   final String? externalCode;
 
   factory _$PostAddressRequest(
@@ -66,6 +68,7 @@ class _$PostAddressRequest extends PostAddressRequest {
       this.latitude,
       this.longitude,
       this.type,
+      this.fromType,
       this.externalCode})
       : super._();
 
@@ -99,6 +102,7 @@ class _$PostAddressRequest extends PostAddressRequest {
         latitude == other.latitude &&
         longitude == other.longitude &&
         type == other.type &&
+        fromType == other.fromType &&
         externalCode == other.externalCode;
   }
 
@@ -122,28 +126,30 @@ class _$PostAddressRequest extends PostAddressRequest {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            0,
-                                                                            createdAt
+                                                                            $jc(
+                                                                                0,
+                                                                                createdAt
+                                                                                    .hashCode),
+                                                                            updatedAt
                                                                                 .hashCode),
-                                                                        updatedAt
+                                                                        userCreated
                                                                             .hashCode),
-                                                                    userCreated
+                                                                    userUpdated
                                                                         .hashCode),
-                                                                userUpdated
-                                                                    .hashCode),
-                                                            id.hashCode),
-                                                        parentId.hashCode),
-                                                    name.hashCode),
-                                                zipCode.hashCode),
-                                            street.hashCode),
-                                        neighborhood.hashCode),
-                                    number.hashCode),
-                                state.hashCode),
-                            city.hashCode),
-                        complement.hashCode),
-                    latitude.hashCode),
-                longitude.hashCode),
-            type.hashCode),
+                                                                id.hashCode),
+                                                            parentId.hashCode),
+                                                        name.hashCode),
+                                                    zipCode.hashCode),
+                                                street.hashCode),
+                                            neighborhood.hashCode),
+                                        number.hashCode),
+                                    state.hashCode),
+                                city.hashCode),
+                            complement.hashCode),
+                        latitude.hashCode),
+                    longitude.hashCode),
+                type.hashCode),
+            fromType.hashCode),
         externalCode.hashCode));
   }
 
@@ -167,6 +173,7 @@ class _$PostAddressRequest extends PostAddressRequest {
           ..add('latitude', latitude)
           ..add('longitude', longitude)
           ..add('type', type)
+          ..add('fromType', fromType)
           ..add('externalCode', externalCode))
         .toString();
   }
@@ -244,6 +251,10 @@ class PostAddressRequestBuilder
   AddressTypeEnum? get type => _$this._type;
   set type(AddressTypeEnum? type) => _$this._type = type;
 
+  FromTypeEnum? _fromType;
+  FromTypeEnum? get fromType => _$this._fromType;
+  set fromType(FromTypeEnum? fromType) => _$this._fromType = fromType;
+
   String? _externalCode;
   String? get externalCode => _$this._externalCode;
   set externalCode(String? externalCode) => _$this._externalCode = externalCode;
@@ -272,6 +283,7 @@ class PostAddressRequestBuilder
       _latitude = $v.latitude;
       _longitude = $v.longitude;
       _type = $v.type;
+      _fromType = $v.fromType;
       _externalCode = $v.externalCode;
       _$v = null;
     }
@@ -310,6 +322,7 @@ class PostAddressRequestBuilder
             latitude: latitude,
             longitude: longitude,
             type: type,
+            fromType: fromType,
             externalCode: externalCode);
     replace(_$result);
     return _$result;

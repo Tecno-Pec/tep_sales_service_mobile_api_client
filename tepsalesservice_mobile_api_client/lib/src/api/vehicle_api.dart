@@ -44,7 +44,7 @@ class VehicleApi {
   Future<Response<GetAllVehicleResponse>> getByIdVehicle({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '072bceba-a767-4b4e-9d54-acfbe67970a1',
+    String? xCsrfToken = 'e59b9d93-82e3-4adf-9f10-18fb01977f88',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -139,7 +139,7 @@ class VehicleApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'cf618569-a06a-4983-994c-df297b84a471',
+    String? xCsrfToken = '86f0ef88-5c28-4887-86e6-82a03b1bd16e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -235,7 +235,7 @@ class VehicleApi {
   Future<Response<void>> tepsalesV1VehiclesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'c69a65ca-9616-408a-b5f9-fbe1433eb4a7',
+    String? xCsrfToken = 'b684c7d5-7692-405f-bce4-67e1a6aa69e1',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -297,7 +297,7 @@ class VehicleApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'fc598d7f-7200-480a-a1a5-f871b7c55a81',
+    String? xCsrfToken = 'fa75b457-be65-422e-9a94-513a82ccab4e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -377,7 +377,7 @@ class VehicleApi {
   Future<Response<void>> tepsalesV1VehiclesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'ceb9ebb8-f251-44df-8eae-288749115c8b',
+    String? xCsrfToken = '8f275196-ae56-40dc-aef2-2fb5e7a05e86',
     PutVehicleRequest? putVehicleRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -467,7 +467,7 @@ class VehicleApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '165db850-3ed0-416b-82a9-39fff0623058',
+    String? xCsrfToken = 'd2d5dfae-40d0-4f12-be1b-a7560287c6b8',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -563,7 +563,7 @@ class VehicleApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostVehicleResponse>> tepsalesV1VehiclesPost({ 
     String? xApiKey,
-    String? xCsrfToken = '008ee62d-21a9-4987-a573-64ac791eaebf',
+    String? xCsrfToken = '97a0e7d6-1353-4ff6-9250-638ad798e488',
     PostVehicleRequest? postVehicleRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

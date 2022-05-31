@@ -13,6 +13,7 @@ doc/DistribuitionCenterClientAddressApi.md
 doc/ErrorDetails.md
 doc/FreightApi.md
 doc/FreightTableApi.md
+doc/FromTypeEnum.md
 doc/GetAllAddressResponse.md
 doc/GetAllAuditResponse.md
 doc/GetAllCatalogResponse.md
@@ -167,6 +168,7 @@ lib/src/model/action_type.dart
 lib/src/model/address_type_enum.dart
 lib/src/model/date.dart
 lib/src/model/error_details.dart
+lib/src/model/from_type_enum.dart
 lib/src/model/get_all_address_response.dart
 lib/src/model/get_all_audit_response.dart
 lib/src/model/get_all_catalog_response.dart
@@ -277,3 +279,4 @@ lib/src/model/table_price_operation_type_enum.dart
 lib/src/serializers.dart
 lib/tepsalesservice_mobile_api_client.dart
 pubspec.yaml
+test/from_type_enum_test.dart

@@ -42,6 +42,8 @@ class _$PutAddressRequest extends PutAddressRequest {
   @override
   final AddressTypeEnum? type;
   @override
+  final FromTypeEnum? fromType;
+  @override
   final String? externalCode;
 
   factory _$PutAddressRequest(
@@ -66,6 +68,7 @@ class _$PutAddressRequest extends PutAddressRequest {
       this.latitude,
       this.longitude,
       this.type,
+      this.fromType,
       this.externalCode})
       : super._();
 
@@ -98,6 +101,7 @@ class _$PutAddressRequest extends PutAddressRequest {
         latitude == other.latitude &&
         longitude == other.longitude &&
         type == other.type &&
+        fromType == other.fromType &&
         externalCode == other.externalCode;
   }
 
@@ -121,28 +125,30 @@ class _$PutAddressRequest extends PutAddressRequest {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            0,
-                                                                            createdAt
+                                                                            $jc(
+                                                                                0,
+                                                                                createdAt
+                                                                                    .hashCode),
+                                                                            updatedAt
                                                                                 .hashCode),
-                                                                        updatedAt
+                                                                        userCreated
                                                                             .hashCode),
-                                                                    userCreated
+                                                                    userUpdated
                                                                         .hashCode),
-                                                                userUpdated
-                                                                    .hashCode),
-                                                            id.hashCode),
-                                                        parentId.hashCode),
-                                                    name.hashCode),
-                                                zipCode.hashCode),
-                                            street.hashCode),
-                                        neighborhood.hashCode),
-                                    number.hashCode),
-                                state.hashCode),
-                            city.hashCode),
-                        complement.hashCode),
-                    latitude.hashCode),
-                longitude.hashCode),
-            type.hashCode),
+                                                                id.hashCode),
+                                                            parentId.hashCode),
+                                                        name.hashCode),
+                                                    zipCode.hashCode),
+                                                street.hashCode),
+                                            neighborhood.hashCode),
+                                        number.hashCode),
+                                    state.hashCode),
+                                city.hashCode),
+                            complement.hashCode),
+                        latitude.hashCode),
+                    longitude.hashCode),
+                type.hashCode),
+            fromType.hashCode),
         externalCode.hashCode));
   }
 
@@ -166,6 +172,7 @@ class _$PutAddressRequest extends PutAddressRequest {
           ..add('latitude', latitude)
           ..add('longitude', longitude)
           ..add('type', type)
+          ..add('fromType', fromType)
           ..add('externalCode', externalCode))
         .toString();
   }
@@ -243,6 +250,10 @@ class PutAddressRequestBuilder
   AddressTypeEnum? get type => _$this._type;
   set type(AddressTypeEnum? type) => _$this._type = type;
 
+  FromTypeEnum? _fromType;
+  FromTypeEnum? get fromType => _$this._fromType;
+  set fromType(FromTypeEnum? fromType) => _$this._fromType = fromType;
+
   String? _externalCode;
   String? get externalCode => _$this._externalCode;
   set externalCode(String? externalCode) => _$this._externalCode = externalCode;
@@ -271,6 +282,7 @@ class PutAddressRequestBuilder
       _latitude = $v.latitude;
       _longitude = $v.longitude;
       _type = $v.type;
+      _fromType = $v.fromType;
       _externalCode = $v.externalCode;
       _$v = null;
     }
@@ -309,6 +321,7 @@ class PutAddressRequestBuilder
             latitude: latitude,
             longitude: longitude,
             type: type,
+            fromType: fromType,
             externalCode: externalCode);
     replace(_$result);
     return _$result;

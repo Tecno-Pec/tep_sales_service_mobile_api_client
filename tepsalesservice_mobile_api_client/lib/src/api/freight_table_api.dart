@@ -44,7 +44,7 @@ class FreightTableApi {
   Future<Response<GetAllFreightTableResponse>> getByIdFreightTable({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'cf2b9fa7-7570-4a72-a29a-9fd2baeb55d8',
+    String? xCsrfToken = '6157df2a-aebb-4186-a690-cb990215aae5',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -141,7 +141,7 @@ class FreightTableApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '39b8a883-c16e-4a2d-82b6-ffeaf094a588',
+    String? xCsrfToken = '9abdd264-276c-4c43-b392-78b9f90c0554',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -238,7 +238,7 @@ class FreightTableApi {
   Future<Response<void>> tepsalesV1FreightTablesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'fd436884-4937-4892-804d-fd10e245274f',
+    String? xCsrfToken = '1c9c0c05-cbe5-41f8-80e9-8e26e04345c2',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -300,7 +300,7 @@ class FreightTableApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'c99a8174-d03b-4c83-9dd3-7268e4ff919f',
+    String? xCsrfToken = 'b54132a1-d899-4186-9950-3ed68267f96c',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -380,7 +380,7 @@ class FreightTableApi {
   Future<Response<void>> tepsalesV1FreightTablesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'e6ba8c1e-b8ee-47da-8fa3-40a4b7db97eb',
+    String? xCsrfToken = 'd02346ff-d9d1-4a20-826a-e6cc38e5e643',
     PutFreightTableRequest? putFreightTableRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -472,7 +472,7 @@ class FreightTableApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '4591d1a5-b235-498e-aeae-862beb7f2343',
+    String? xCsrfToken = '41dd7a3e-847e-4a75-a0e2-42cf26c7143b',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -569,7 +569,7 @@ class FreightTableApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostFreightTableResponse>> tepsalesV1FreightTablesPost({ 
     String? xApiKey,
-    String? xCsrfToken = '2ac85b86-0a2e-4b2b-948a-977286813bc2',
+    String? xCsrfToken = '112385bc-f025-4825-b180-7e69b9a9835f',
     PostFreightTableRequest? postFreightTableRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

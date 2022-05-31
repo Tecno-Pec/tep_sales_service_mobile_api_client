@@ -44,7 +44,7 @@ class CatalogApi {
   Future<Response<GetAllCatalogResponse>> getByIdCatalog({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'c316236c-d8c7-488e-926e-bb914c39a9bf',
+    String? xCsrfToken = '3c62d25a-aaf5-4f58-838b-8f06c571c68b',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -135,7 +135,7 @@ class CatalogApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'c1eccd25-2c7a-41c1-a044-860d342a3cb1',
+    String? xCsrfToken = '1a3eb8d6-7a01-408c-a200-e1e9f8a788cf',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -229,7 +229,7 @@ class CatalogApi {
   Future<Response<void>> tepsalesV1CatalogsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'f9a45547-288e-4663-b547-319e818c9468',
+    String? xCsrfToken = '9e5dfbc4-7478-4af2-9ddb-222d79048bd3',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -291,7 +291,7 @@ class CatalogApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '02656fe8-29e6-4118-89cc-01603b064d2f',
+    String? xCsrfToken = 'c83b1c8c-eea9-4d6e-bfa1-e1dabf94060c',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -371,7 +371,7 @@ class CatalogApi {
   Future<Response<void>> tepsalesV1CatalogsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'bc4818fd-c426-49f9-aabb-954ed56996c2',
+    String? xCsrfToken = 'feeab4e3-8ef5-4cef-80fc-1dc175c19bff',
     PutCatalogRequest? putCatalogRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -457,7 +457,7 @@ class CatalogApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'f9b64e8c-cee5-48fa-8f49-e76efaae91ba',
+    String? xCsrfToken = '941307ae-9046-4b55-9851-69cc085cc2d2',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -551,7 +551,7 @@ class CatalogApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostCatalogResponse>> tepsalesV1CatalogsPost({ 
     String? xApiKey,
-    String? xCsrfToken = '791d1069-13df-4dc1-ba69-d5001211e4f4',
+    String? xCsrfToken = '3c6299f4-3a8d-495a-8d65-21a2c7e9fdd2',
     PostCatalogRequest? postCatalogRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

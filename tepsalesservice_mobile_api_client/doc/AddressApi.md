@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Address id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0f230de4-ff78-43a0-b22a-99fc400b5849']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a9598256-7d95-4905-bf39-e43c8c4e51bc']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1AddressesAllGet**
-> BuiltList<GetAllAddressResponse> tepsalesV1AddressesAllGet(parentId, name, type, externalCode, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllAddressResponse> tepsalesV1AddressesAllGet(parentId, name, type, fromType, externalCode, limit, sort, xApiKey, xCsrfToken)
 
 Get All Address by filter
 
@@ -84,6 +84,7 @@ final api = TepsalesserviceMobileApiClient().getAddressApi();
 final String parentId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 final String name = name_example; // String | 
 final AddressTypeEnum type = ; // AddressTypeEnum | 
+final FromTypeEnum fromType = ; // FromTypeEnum | 
 final String externalCode = externalCode_example; // String | 
 final int limit = 56; // int | limit
 final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
@@ -91,7 +92,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1AddressesAllGet(parentId, name, type, externalCode, limit, sort, xApiKey, xCsrfToken);
+    final response = api.tepsalesV1AddressesAllGet(parentId, name, type, fromType, externalCode, limit, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling AddressApi->tepsalesV1AddressesAllGet: $e\n');
@@ -105,11 +106,12 @@ Name | Type | Description  | Notes
  **parentId** | **String**|  | [optional] 
  **name** | **String**|  | [optional] 
  **type** | [**AddressTypeEnum**](.md)|  | [optional] 
+ **fromType** | [**FromTypeEnum**](.md)|  | [optional] 
  **externalCode** | **String**|  | [optional] 
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.asc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '909d16ac-e0ef-4f50-a4c2-cb5735249253']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6ae8d712-696b-4b94-b16b-036b1be40b01']
 
 ### Return type
 
@@ -157,7 +159,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Address id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e5f2079b-9dd4-467d-8237-7e9491b492a6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd3e8c448-3951-4d50-8369-096ce93b2ea3']
 
 ### Return type
 
@@ -209,7 +211,7 @@ Name | Type | Description  | Notes
  **id** | **String**| Address id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0e304728-aaf6-48d3-8084-434af00e8756']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3ac43386-da40-4d20-ad52-003672a812fb']
 
 ### Return type
 
@@ -258,7 +260,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Address Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b029b972-4e20-498e-bf1a-a9c6322944c4']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '82e71b95-1b90-4f01-9e36-ad3a617cedb0']
  **putAddressRequest** | [**PutAddressRequest**](PutAddressRequest.md)| Address to update | [optional] 
 
 ### Return type
@@ -320,7 +322,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '03ff5ee5-826d-4962-a0d5-91670323cd0c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '380f88ae-da63-4fb4-9d90-4cb0fa39b235']
 
 ### Return type
 
@@ -368,7 +370,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '227a5fc9-1d21-45a5-96c6-ec06248ce3a6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e5f75522-2e27-4bbe-9a73-2d2961edb8df']
  **postAddressRequest** | [**PostAddressRequest**](PostAddressRequest.md)| Address to create | [optional] 
 
 ### Return type

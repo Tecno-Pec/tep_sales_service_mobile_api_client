@@ -44,7 +44,7 @@ class ProductApi {
   Future<Response<GetAllProductResponse>> getByIdProduct({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '65604ad1-2489-4435-a1f7-738e14a9cd60',
+    String? xCsrfToken = '1c9a9ae6-c86b-4b4b-b65e-7bff9430245e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -141,7 +141,7 @@ class ProductApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '5f4cdff8-7ddf-460f-aeb1-3e068f137ba8',
+    String? xCsrfToken = '44e749c2-97f6-454f-afba-598d9c3fbd5a',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -238,7 +238,7 @@ class ProductApi {
   Future<Response<void>> tepsalesV1ProductsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'de56736a-ffde-436e-9ac1-08f88e9c87db',
+    String? xCsrfToken = '3babfcf9-2a21-4ede-9993-218792fef4d7',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -300,7 +300,7 @@ class ProductApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '926fa5a3-6c7e-43cc-805c-46767e1fff83',
+    String? xCsrfToken = 'e0374441-cac8-4ceb-89c9-1975fb2be5e3',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -380,7 +380,7 @@ class ProductApi {
   Future<Response<void>> tepsalesV1ProductsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '9b17847b-6eae-497c-a16a-4f6f7a26f363',
+    String? xCsrfToken = '49cadf18-ec2b-4471-9143-2439f230ede1',
     PutProductRequest? putProductRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -474,7 +474,7 @@ class ProductApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'f946c3b6-8d5c-4668-9d37-7aa66af381da',
+    String? xCsrfToken = '83e28766-9ed2-4333-9469-9c43d44d2b05',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -572,7 +572,7 @@ class ProductApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostProductResponse>> tepsalesV1ProductsPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'a2a72594-141c-48c5-a3fa-34845d7cd21d',
+    String? xCsrfToken = '057c0647-6bfd-4212-8b7a-af1f24e01865',
     PostProductRequest? postProductRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

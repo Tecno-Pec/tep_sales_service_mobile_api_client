@@ -35,6 +35,7 @@ export 'package:tepsalesservice_mobile_api_client/src/api/version_api.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/action_type.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/address_type_enum.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/error_details.dart';
+export 'package:tepsalesservice_mobile_api_client/src/model/from_type_enum.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_address_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_audit_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_catalog_response.dart';

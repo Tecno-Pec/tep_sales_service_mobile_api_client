@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ProductLine id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fff161cc-751c-43f2-9936-db29b563fc05']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fd0f1020-a118-49e0-a5ec-0e422d740c43']
 
 ### Return type
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '00fcf922-f1c8-4e32-ae46-66b5a4978550']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ba9bc2a8-4592-4012-859e-10057a41def2']
 
 ### Return type
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ProductLine id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3505f2c3-1677-453e-a514-8ccb1739bedd']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '34e4ba4b-af1c-418b-bd9b-b96227622121']
 
 ### Return type
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
  **id** | **String**| ProductLine id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4499fee0-9673-481d-8945-0f0dfeb892cd']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '443c5a8c-0bc2-4696-8bdf-5dfba78353bf']
 
 ### Return type
 
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ProductLine Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '65a8b10b-bb02-4bb2-a298-fe4bef2b738b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fd5154bc-2ced-4192-981c-32f6009358a8']
  **putProductLineRequest** | [**PutProductLineRequest**](PutProductLineRequest.md)| ProductLine to update | [optional] 
 
 ### Return type
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3b39d749-aca3-4237-9c35-d0fbdc3fb4fd']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f665e1fe-5c00-46a4-828d-6eb56d777d89']
 
 ### Return type
 
@@ -356,7 +356,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'da1a3af5-78c5-4b6f-8af0-58afd29145e5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9b301066-257c-4d71-9f15-183d268b1b8f']
  **postProductLineRequest** | [**PostProductLineRequest**](PostProductLineRequest.md)| ProductLine to create | [optional] 
 
 ### Return type
