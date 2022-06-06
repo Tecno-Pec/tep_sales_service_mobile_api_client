@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **userCreated** | **String** |  | [optional] 
 **userUpdated** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 
-**priceTableId** | **String** |  | [optional] 
+**paymentPriceTableId** | **String** |  | [optional] 
 **productId** | **String** |  | [optional] 
 **value** | **double** |  | [optional] 
 

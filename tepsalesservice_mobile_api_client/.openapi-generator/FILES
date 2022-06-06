@@ -279,4 +279,3 @@ lib/src/model/table_price_operation_type_enum.dart
 lib/src/serializers.dart
 lib/tepsalesservice_mobile_api_client.dart
 pubspec.yaml
-test/from_type_enum_test.dart

@@ -15,7 +15,7 @@ part 'get_all_price_table_item_response.g.dart';
 /// * [userCreated] 
 /// * [userUpdated] 
 /// * [id] 
-/// * [priceTableId] 
+/// * [paymentPriceTableId] 
 /// * [productId] 
 /// * [value] 
 abstract class GetAllPriceTableItemResponse implements Built<GetAllPriceTableItemResponse, GetAllPriceTableItemResponseBuilder> {
@@ -34,8 +34,8 @@ abstract class GetAllPriceTableItemResponse implements Built<GetAllPriceTableIte
     @BuiltValueField(wireName: r'id')
     String? get id;
 
-    @BuiltValueField(wireName: r'priceTableId')
-    String? get priceTableId;
+    @BuiltValueField(wireName: r'paymentPriceTableId')
+    String? get paymentPriceTableId;
 
     @BuiltValueField(wireName: r'productId')
     String? get productId;
@@ -95,10 +95,10 @@ class _$GetAllPriceTableItemResponseSerializer implements StructuredSerializer<G
                 ..add(serializers.serialize(object.id,
                     specifiedType: const FullType(String)));
         }
-        if (object.priceTableId != null) {
+        if (object.paymentPriceTableId != null) {
             result
-                ..add(r'priceTableId')
-                ..add(serializers.serialize(object.priceTableId,
+                ..add(r'paymentPriceTableId')
+                ..add(serializers.serialize(object.paymentPriceTableId,
                     specifiedType: const FullType(String)));
         }
         if (object.productId != null) {
@@ -157,10 +157,10 @@ class _$GetAllPriceTableItemResponseSerializer implements StructuredSerializer<G
                         specifiedType: const FullType(String)) as String;
                     result.id = valueDes;
                     break;
-                case r'priceTableId':
+                case r'paymentPriceTableId':
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
-                    result.priceTableId = valueDes;
+                    result.paymentPriceTableId = valueDes;
                     break;
                 case r'productId':
                     final valueDes = serializers.deserialize(value,

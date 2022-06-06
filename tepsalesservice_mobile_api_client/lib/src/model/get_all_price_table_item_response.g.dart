@@ -18,7 +18,7 @@ class _$GetAllPriceTableItemResponse extends GetAllPriceTableItemResponse {
   @override
   final String? id;
   @override
-  final String? priceTableId;
+  final String? paymentPriceTableId;
   @override
   final String? productId;
   @override
@@ -34,7 +34,7 @@ class _$GetAllPriceTableItemResponse extends GetAllPriceTableItemResponse {
       this.userCreated,
       this.userUpdated,
       this.id,
-      this.priceTableId,
+      this.paymentPriceTableId,
       this.productId,
       this.value})
       : super._();
@@ -57,7 +57,7 @@ class _$GetAllPriceTableItemResponse extends GetAllPriceTableItemResponse {
         userCreated == other.userCreated &&
         userUpdated == other.userUpdated &&
         id == other.id &&
-        priceTableId == other.priceTableId &&
+        paymentPriceTableId == other.paymentPriceTableId &&
         productId == other.productId &&
         value == other.value;
   }
@@ -73,7 +73,7 @@ class _$GetAllPriceTableItemResponse extends GetAllPriceTableItemResponse {
                             userCreated.hashCode),
                         userUpdated.hashCode),
                     id.hashCode),
-                priceTableId.hashCode),
+                paymentPriceTableId.hashCode),
             productId.hashCode),
         value.hashCode));
   }
@@ -86,7 +86,7 @@ class _$GetAllPriceTableItemResponse extends GetAllPriceTableItemResponse {
           ..add('userCreated', userCreated)
           ..add('userUpdated', userUpdated)
           ..add('id', id)
-          ..add('priceTableId', priceTableId)
+          ..add('paymentPriceTableId', paymentPriceTableId)
           ..add('productId', productId)
           ..add('value', value))
         .toString();
@@ -119,9 +119,10 @@ class GetAllPriceTableItemResponseBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  String? _priceTableId;
-  String? get priceTableId => _$this._priceTableId;
-  set priceTableId(String? priceTableId) => _$this._priceTableId = priceTableId;
+  String? _paymentPriceTableId;
+  String? get paymentPriceTableId => _$this._paymentPriceTableId;
+  set paymentPriceTableId(String? paymentPriceTableId) =>
+      _$this._paymentPriceTableId = paymentPriceTableId;
 
   String? _productId;
   String? get productId => _$this._productId;
@@ -143,7 +144,7 @@ class GetAllPriceTableItemResponseBuilder
       _userCreated = $v.userCreated;
       _userUpdated = $v.userUpdated;
       _id = $v.id;
-      _priceTableId = $v.priceTableId;
+      _paymentPriceTableId = $v.paymentPriceTableId;
       _productId = $v.productId;
       _value = $v.value;
       _$v = null;
@@ -171,7 +172,7 @@ class GetAllPriceTableItemResponseBuilder
             userCreated: userCreated,
             userUpdated: userUpdated,
             id: id,
-            priceTableId: priceTableId,
+            paymentPriceTableId: paymentPriceTableId,
             productId: productId,
             value: value);
     replace(_$result);
