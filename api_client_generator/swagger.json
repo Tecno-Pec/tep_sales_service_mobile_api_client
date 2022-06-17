@@ -18,9 +18,7 @@
   "paths": {
     "/tepsales/v1/addresses/{id}": {
       "delete": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Delete Address by Id",
         "parameters": [
           {
@@ -48,7 +46,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a10c0e65-a3e9-4639-a055-e801248c9b86"
+              "default": "04f2e5ed-6926-43a0-9696-a60414d5a466"
             }
           }
         ],
@@ -81,9 +79,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Get Address by id",
         "operationId": "GetByIdAddress",
         "parameters": [
@@ -112,7 +108,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "daa81803-e87b-4130-a49d-2d9216e7694f"
+              "default": "7339805f-643d-4e50-853c-c337a53dc936"
             }
           }
         ],
@@ -152,9 +148,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Update part of Address",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Address/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -183,7 +177,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "00be708f-5863-424f-995f-4853a6274015"
+              "default": "c0c066fe-ffff-447e-b1c2-1e605a5e7804"
             }
           }
         ],
@@ -251,9 +245,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Update Address",
         "parameters": [
           {
@@ -281,7 +273,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c576d25a-133e-47e5-af66-7c0346e0b650"
+              "default": "3d57a435-08fa-4bc3-9fa4-9a0c86034dc7"
             }
           }
         ],
@@ -346,9 +338,7 @@
     },
     "/tepsales/v1/addresses/all": {
       "get": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Get All Address by filter",
         "parameters": [
           {
@@ -426,7 +416,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "75f21b78-6be6-481b-b710-8c081b4fee4f"
+              "default": "c15d74d8-1733-452a-b4d2-8643c863acc6"
             }
           }
         ],
@@ -468,9 +458,7 @@
     },
     "/tepsales/v1/addresses/paged": {
       "get": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Get All Address by filter with pagination",
         "parameters": [
           {
@@ -553,7 +541,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a202e93e-5347-4b25-85bb-205be47cbd73"
+              "default": "41debb62-6caf-4683-be8b-18ee44d6f99a"
             }
           }
         ],
@@ -592,9 +580,7 @@
     },
     "/tepsales/v1/addresses": {
       "post": {
-        "tags": [
-          "Address"
-        ],
+        "tags": ["Address"],
         "summary": "Create Address",
         "parameters": [
           {
@@ -611,7 +597,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9e0fb583-db61-4645-aa53-58e5ef23c720"
+              "default": "66b0d444-cfda-418f-9587-1def202e1867"
             }
           }
         ],
@@ -680,9 +666,7 @@
     },
     "/tepsales/v1/audits": {
       "get": {
-        "tags": [
-          "Audit"
-        ],
+        "tags": ["Audit"],
         "summary": "Get All Audit by filter with pagination",
         "parameters": [
           {
@@ -784,7 +768,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "92b31091-517f-4a0a-95f6-55b2ee1dd576"
+              "default": "37e2aac1-49d1-43ed-ae67-e7d3225ee99d"
             }
           }
         ],
@@ -823,9 +807,7 @@
     },
     "/tepsales/v1/catalogs/{id}": {
       "delete": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Delete Catalog by Id",
         "parameters": [
           {
@@ -853,7 +835,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "680da7ed-4907-4723-8927-1ba0ce2f9cd0"
+              "default": "86d8f268-2546-435e-a02d-705f664f1a2e"
             }
           }
         ],
@@ -886,9 +868,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Get Catalog by id",
         "operationId": "GetByIdCatalog",
         "parameters": [
@@ -917,7 +897,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d9a91e25-b9e6-4b08-a477-293c157b55b1"
+              "default": "d5d6e044-07e6-4215-9089-5ad077b36892"
             }
           }
         ],
@@ -957,9 +937,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Update part of Catalog",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Catalog/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -988,7 +966,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a8e9fe5c-c330-418e-845a-ccd52020a2ba"
+              "default": "05723516-3c5f-49e3-b52d-f9801415460a"
             }
           }
         ],
@@ -1056,9 +1034,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Update Catalog",
         "parameters": [
           {
@@ -1086,7 +1062,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6c936904-7ae7-4ed6-8739-e37c74062850"
+              "default": "0f78f98e-d368-4093-b976-47697e45eec4"
             }
           }
         ],
@@ -1151,9 +1127,7 @@
     },
     "/tepsales/v1/catalogs/all": {
       "get": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Get All Catalog by filter",
         "parameters": [
           {
@@ -1201,7 +1175,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "82ecbdfa-8b7e-4878-9a42-e2b103c88ddb"
+              "default": "91e2c82d-0c84-4455-b1f1-7e4ab7d1c863"
             }
           }
         ],
@@ -1243,9 +1217,7 @@
     },
     "/tepsales/v1/catalogs/paged": {
       "get": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Get All Catalog by filter with pagination",
         "parameters": [
           {
@@ -1298,7 +1270,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ef4ffa83-1e6b-4f37-82b1-91442b98c5e8"
+              "default": "5127234d-04a2-439d-9d7d-238f6f3c2b51"
             }
           }
         ],
@@ -1337,9 +1309,7 @@
     },
     "/tepsales/v1/catalogs": {
       "post": {
-        "tags": [
-          "Catalog"
-        ],
+        "tags": ["Catalog"],
         "summary": "Create Catalog",
         "parameters": [
           {
@@ -1356,7 +1326,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e050aab3-06bf-4688-87b9-e6f2505f4530"
+              "default": "c9e45828-7730-4263-905a-f8e05a2628cc"
             }
           }
         ],
@@ -1425,9 +1395,7 @@
     },
     "/tepsales/v1/clients/{id}": {
       "delete": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Delete Client by Id",
         "parameters": [
           {
@@ -1455,7 +1423,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d2f4b803-acb7-4de2-ba31-2b25550ac106"
+              "default": "8bb0bd01-0c99-45a9-8d67-bb9c6bb49c00"
             }
           }
         ],
@@ -1488,9 +1456,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Get Client by id",
         "operationId": "GetByIdClient",
         "parameters": [
@@ -1519,7 +1485,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b9c8ec02-9ac4-44bf-af0e-31874539540a"
+              "default": "8451115f-bb22-4330-bd36-77341d20ef6e"
             }
           }
         ],
@@ -1559,9 +1525,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Update part of Client",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Client/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -1590,7 +1554,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "98c097d2-552c-43e8-9f70-d30f7fff9a88"
+              "default": "b119c77f-8fb2-4424-8cf8-14af48a60b3f"
             }
           }
         ],
@@ -1658,9 +1622,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Update Client",
         "parameters": [
           {
@@ -1688,7 +1650,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f9631f85-4336-4191-a84e-b2cd02ae9f43"
+              "default": "beea618b-175f-4238-96c6-1997e9b0f192"
             }
           }
         ],
@@ -1753,9 +1715,7 @@
     },
     "/tepsales/v1/clients/all": {
       "get": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Get All Client by filter",
         "parameters": [
           {
@@ -1842,7 +1802,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "235cae0d-4414-4469-b8a4-4c00f4e6f296"
+              "default": "61b3d262-68b6-4067-b9ab-41c35b346aeb"
             }
           }
         ],
@@ -1884,9 +1844,7 @@
     },
     "/tepsales/v1/clients/paged": {
       "get": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Get All Client by filter with pagination",
         "parameters": [
           {
@@ -1978,7 +1936,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b7be8164-38ea-44aa-bcc3-0f58f277cc8d"
+              "default": "2ae24501-7fea-416c-aecd-2c8ee3c64915"
             }
           }
         ],
@@ -2017,9 +1975,7 @@
     },
     "/tepsales/v1/clients": {
       "post": {
-        "tags": [
-          "Client"
-        ],
+        "tags": ["Client"],
         "summary": "Create Client",
         "parameters": [
           {
@@ -2036,7 +1992,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "68fc428f-c88c-41c2-8976-b9748a9a19cb"
+              "default": "e48830b8-67ba-43e0-92c4-3f59f7158b06"
             }
           }
         ],
@@ -2105,9 +2061,7 @@
     },
     "/tepsales/v1/companies/{id}": {
       "delete": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Delete Company by Id",
         "parameters": [
           {
@@ -2135,7 +2089,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e5917ccb-6188-40f2-bb8d-224d28414680"
+              "default": "0ed285de-4f03-45b9-98ee-25bdf29038e0"
             }
           }
         ],
@@ -2168,9 +2122,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Get Company by id",
         "operationId": "GetByIdCompany",
         "parameters": [
@@ -2199,7 +2151,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8d469152-bc83-46c6-88ac-f8952ca33eba"
+              "default": "d85fc89c-e2e2-4a4d-bdf3-12ab7a6bd67e"
             }
           }
         ],
@@ -2239,9 +2191,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Update part of Company",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Company/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -2270,7 +2220,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ef2d06a9-f413-4460-9e0d-f352e170aeca"
+              "default": "8f73f3ce-757e-4384-a356-dc2bd7ba4e96"
             }
           }
         ],
@@ -2338,9 +2288,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Update Company",
         "parameters": [
           {
@@ -2368,7 +2316,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b55e58ca-4aa2-4d3f-b6d9-201c9c626ded"
+              "default": "7069fdbe-a766-4816-b094-237775787bf3"
             }
           }
         ],
@@ -2433,9 +2381,7 @@
     },
     "/tepsales/v1/companies/all": {
       "get": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Get All Company by filter",
         "parameters": [
           {
@@ -2490,7 +2436,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9c5b8dfb-18ad-4b83-8ff0-eb31a17d9f3b"
+              "default": "9d8bbe59-d8e9-47c4-a55c-a177dba246d3"
             }
           }
         ],
@@ -2532,9 +2478,7 @@
     },
     "/tepsales/v1/companies/paged": {
       "get": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Get All Company by filter with pagination",
         "parameters": [
           {
@@ -2594,7 +2538,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4f2da3f1-a09d-46ff-b631-38665188b3c9"
+              "default": "339a5c5f-d963-4398-a99c-932855998677"
             }
           }
         ],
@@ -2633,9 +2577,7 @@
     },
     "/tepsales/v1/companies": {
       "post": {
-        "tags": [
-          "Company"
-        ],
+        "tags": ["Company"],
         "summary": "Create Company",
         "parameters": [
           {
@@ -2652,7 +2594,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f18ea494-e5cd-47e6-a784-e36b32394e3b"
+              "default": "42d04dd2-5012-4194-9a0a-93bbd6ca90a1"
             }
           }
         ],
@@ -2721,9 +2663,7 @@
     },
     "/tepsales/v1/distribuitionsCenters/{id}": {
       "delete": {
-        "tags": [
-          "DistribuitionCenter"
-        ],
+        "tags": ["DistribuitionCenter"],
         "summary": "Delete DistribuitionCenter by Id",
         "parameters": [
           {
@@ -2751,7 +2691,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "09fb8dc3-6581-442d-b4cb-da1e1384abae"
+              "default": "479aff6a-b0fb-4093-a3d0-dfdbca1c4c98"
             }
           }
         ],
@@ -2784,9 +2724,7 @@
         }
       },
       "get": {
-        "tags": [
-          "DistribuitionCenter"
-        ],
+        "tags": ["DistribuitionCenter"],
         "summary": "Get DistribuitionCenter by id",
         "operationId": "GetByIdDistribuitionCenter",
         "parameters": [
@@ -2815,7 +2753,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "5eed42d6-afd9-4717-8925-ca53f0e06409"
+              "default": "07ed8579-a1ae-421e-8435-f80cc3de4d53"
             }
           }
         ],
@@ -2855,9 +2793,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "DistribuitionCenter"
-        ],
+        "tags": ["DistribuitionCenter"],
         "summary": "Update part of DistribuitionCenter",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/DistribuitionCenter/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -2886,7 +2822,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a5ff230d-ee2b-4750-bced-abb8e6801c44"
+              "default": "a4ed8b33-34f8-4830-9044-beefe82539ef"
             }
           }
         ],
@@ -2954,9 +2890,7 @@
         }
       },
       "put": {
-        "tags": [
-          "DistribuitionCenter"
-        ],
+        "tags": ["DistribuitionCenter"],
         "summary": "Update DistribuitionCenter",
         "parameters": [
           {
@@ -2984,7 +2918,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b2889880-5c46-49a1-bd03-4b026d16881a"
+              "default": "5a16bbc1-2223-47d0-b495-017b1704337c"
             }
           }
         ],
@@ -3049,9 +2983,7 @@
     },
     "/tepsales/v1/distribuitionsCenters/all": {
       "get": {
-        "tags": [
-          "DistribuitionCenter"
-        ],
+        "tags": ["DistribuitionCenter"],
         "summary": "Get All DistribuitionCenter by filter",
         "parameters": [
           {
@@ -3114,7 +3046,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3306652d-ba68-4911-8f8c-34ab7c3bc611"
+              "default": "96e6d70c-9abe-4e09-b049-b71264664666"
             }
           }
         ],
@@ -3156,9 +3088,7 @@
     },
     "/tepsales/v1/distribuitionsCenters/paged": {
       "get": {
-        "tags": [
-          "DistribuitionCenter"
-        ],
+        "tags": ["DistribuitionCenter"],
         "summary": "Get All DistribuitionCenter by filter with pagination",
         "parameters": [
           {
@@ -3226,7 +3156,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1cfd5bd9-1e96-4eb3-8155-b4d5d55a326e"
+              "default": "b14081df-d36b-44bf-8592-f8ee30243d70"
             }
           }
         ],
@@ -3265,9 +3195,7 @@
     },
     "/tepsales/v1/distribuitionsCenters": {
       "post": {
-        "tags": [
-          "DistribuitionCenter"
-        ],
+        "tags": ["DistribuitionCenter"],
         "summary": "Create DistribuitionCenter",
         "parameters": [
           {
@@ -3284,7 +3212,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cf34b20f-ca6f-4f90-8f88-7229469f2cf2"
+              "default": "f53b3bdb-074f-4035-9ab4-55c8f429c3a2"
             }
           }
         ],
@@ -3353,9 +3281,7 @@
     },
     "/tepsales/v1/distribuitionCenterClientAddress/{id}": {
       "delete": {
-        "tags": [
-          "DistribuitionCenterClientAddress"
-        ],
+        "tags": ["DistribuitionCenterClientAddress"],
         "summary": "Delete DistribuitionCenterClientAddress by Id",
         "parameters": [
           {
@@ -3383,7 +3309,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8e67cf90-9c4c-4b14-a5d0-d678cda27174"
+              "default": "6f555a07-e91c-4b3a-9b3e-f5e4159452ad"
             }
           }
         ],
@@ -3416,9 +3342,7 @@
         }
       },
       "get": {
-        "tags": [
-          "DistribuitionCenterClientAddress"
-        ],
+        "tags": ["DistribuitionCenterClientAddress"],
         "summary": "Get DistribuitionCenterClientAddress by id",
         "operationId": "GetByIdDistribuitionCenterClientAddress",
         "parameters": [
@@ -3447,7 +3371,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ea7b6cd8-c9d3-4ecf-86b9-93053635765b"
+              "default": "d7e2235e-856b-4600-8999-5f87f7d44123"
             }
           }
         ],
@@ -3487,9 +3411,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "DistribuitionCenterClientAddress"
-        ],
+        "tags": ["DistribuitionCenterClientAddress"],
         "summary": "Update part of DistribuitionCenterClientAddress",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/DistribuitionCenterClientAddress/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -3518,7 +3440,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "bbdbb55f-f3c3-4b3b-a881-e36d8191ad15"
+              "default": "5028b705-beba-446b-bfb8-ef8dcb4d153d"
             }
           }
         ],
@@ -3586,9 +3508,7 @@
         }
       },
       "put": {
-        "tags": [
-          "DistribuitionCenterClientAddress"
-        ],
+        "tags": ["DistribuitionCenterClientAddress"],
         "summary": "Update DistribuitionCenterClientAddress",
         "parameters": [
           {
@@ -3616,7 +3536,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c5021e42-c479-4b0b-9eb1-129db1189f1c"
+              "default": "78528e50-4650-4597-9460-eaf4aa04b6fa"
             }
           }
         ],
@@ -3681,9 +3601,7 @@
     },
     "/tepsales/v1/distribuitionCenterClientAddress/all": {
       "get": {
-        "tags": [
-          "DistribuitionCenterClientAddress"
-        ],
+        "tags": ["DistribuitionCenterClientAddress"],
         "summary": "Get All DistribuitionCenterClientAddress by filter",
         "parameters": [
           {
@@ -3738,7 +3656,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6a83192a-747a-48ff-b8e7-b2128d6ecfc2"
+              "default": "69815712-0b54-4a08-9091-eab5017d996e"
             }
           }
         ],
@@ -3780,9 +3698,7 @@
     },
     "/tepsales/v1/distribuitionCenterClientAddress/paged": {
       "get": {
-        "tags": [
-          "DistribuitionCenterClientAddress"
-        ],
+        "tags": ["DistribuitionCenterClientAddress"],
         "summary": "Get All DistribuitionCenterClientAddress by filter with pagination",
         "parameters": [
           {
@@ -3842,7 +3758,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "5a1b56b6-d94f-40aa-991a-0b7a3cec2323"
+              "default": "4fd0c00c-069f-48c6-802f-6fc87d75e3b5"
             }
           }
         ],
@@ -3881,9 +3797,7 @@
     },
     "/tepsales/v1/distribuitionCenterClientAddress": {
       "post": {
-        "tags": [
-          "DistribuitionCenterClientAddress"
-        ],
+        "tags": ["DistribuitionCenterClientAddress"],
         "summary": "Create DistribuitionCenterClientAddress",
         "parameters": [
           {
@@ -3900,7 +3814,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "19f23ce6-1b7c-4945-ae1c-cfc5df1dd250"
+              "default": "55d46364-667c-4533-ac47-56a426fc2260"
             }
           }
         ],
@@ -3967,667 +3881,9 @@
         }
       }
     },
-    "/tepsales/v1/freights/{id}": {
-      "delete": {
-        "tags": [
-          "Freight"
-        ],
-        "summary": "Delete Freight by Id",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Freight id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Freight id",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "382432eb-201a-4d2e-9229-bd60d3488866"
-            }
-          }
-        ],
-        "responses": {
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "204": {
-            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          },
-          "404": {
-            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Freight"
-        ],
-        "summary": "Get Freight by id",
-        "operationId": "GetByIdFreight",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Freight id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Freight id",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "dbd1e7ce-3bdd-4369-95f8-fa58a1f45070"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok - The request has succeeded.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetAllFreightResponse"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          },
-          "404": {
-            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Freight"
-        ],
-        "summary": "Update part of Freight",
-        "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Freight/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Freight id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Freight id",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "b7161e5d-b454-4469-a2a8-a7c90935f77f"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Atributes values",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                },
-                "description": "Atributes values"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "412": {
-            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "204": {
-            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          },
-          "404": {
-            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Freight"
-        ],
-        "summary": "Update Freight",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Freight Id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Freight Id",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "45d7799d-0a98-4aaa-9f22-6ecb36219062"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Freight to update",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PutFreightRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "412": {
-            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "204": {
-            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          },
-          "404": {
-            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
-          }
-        }
-      }
-    },
-    "/tepsales/v1/freights/all": {
-      "get": {
-        "tags": [
-          "Freight"
-        ],
-        "summary": "Get All Freight by filter",
-        "parameters": [
-          {
-            "name": "code",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "freightVersion",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "distance",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "weightClass",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "limit",
-            "schema": {
-              "type": "integer",
-              "description": "limit",
-              "format": "int32",
-              "default": 100
-            }
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "Sorting atributes, sample: id.desc,name.asc",
-            "schema": {
-              "type": "string",
-              "description": "Sorting atributes, sample: id.desc,name.asc",
-              "default": "Id.desc",
-              "nullable": true
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "042b19f3-51ec-4fed-bdf6-fdfcaeefb541"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok - The request has succeeded.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetAllFreightResponse"
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          }
-        }
-      }
-    },
-    "/tepsales/v1/freights/paged": {
-      "get": {
-        "tags": [
-          "Freight"
-        ],
-        "summary": "Get All Freight by filter with pagination",
-        "parameters": [
-          {
-            "name": "code",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "freightVersion",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "distance",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "weightClass",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "Sorting atributes, sample: id.desc,name.asc",
-            "schema": {
-              "type": "string",
-              "description": "Sorting atributes, sample: id.desc,name.asc",
-              "default": "Id.desc",
-              "nullable": true
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "ecad0e2d-f234-468a-9d8f-4e175c008fb9"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok - The request has succeeded.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetAllPagedFreightResponse"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          }
-        }
-      }
-    },
-    "/tepsales/v1/freights": {
-      "post": {
-        "tags": [
-          "Freight"
-        ],
-        "summary": "Create Freight",
-        "parameters": [
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "fcc65ff5-c867-4f7b-b310-b59551518eb6"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Freight to create",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PostFreightRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PostFreightResponse"
-                }
-              }
-            }
-          },
-          "412": {
-            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          }
-        }
-      }
-    },
     "/tepsales/v1/freightTables/{id}": {
       "delete": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Delete FreightTable by Id",
         "parameters": [
           {
@@ -4655,7 +3911,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a73d3f05-ba66-4114-9e08-794165820a04"
+              "default": "e7197881-257f-4b1e-941e-75148993b6e1"
             }
           }
         ],
@@ -4688,9 +3944,7 @@
         }
       },
       "get": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Get FreightTable by id",
         "operationId": "GetByIdFreightTable",
         "parameters": [
@@ -4719,7 +3973,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3b4d5d1c-1353-4726-94a4-0a3318a36e20"
+              "default": "fd340fb0-e593-4572-93e9-ad9c3e134b00"
             }
           }
         ],
@@ -4759,9 +4013,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Update part of FreightTable",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/FreightTable/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -4790,7 +4042,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8337bcc8-29c5-4f11-906a-debcbc2f9b4e"
+              "default": "46235b6e-109b-4bd0-bcb3-c91023c8e457"
             }
           }
         ],
@@ -4858,9 +4110,7 @@
         }
       },
       "put": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Update FreightTable",
         "parameters": [
           {
@@ -4888,7 +4138,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1903c34e-b61f-4643-b82c-38b5e3e89dfe"
+              "default": "237e5b62-429e-4ae8-b472-a8dc26a030f2"
             }
           }
         ],
@@ -4953,9 +4203,7 @@
     },
     "/tepsales/v1/freightTables/all": {
       "get": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Get All FreightTable by filter",
         "parameters": [
           {
@@ -5029,7 +4277,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2caf3f76-ff53-43b2-b775-d5418f14c135"
+              "default": "feb0d891-c13d-4dd1-a4c5-44a94d388764"
             }
           }
         ],
@@ -5071,9 +4319,7 @@
     },
     "/tepsales/v1/freightTables/paged": {
       "get": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Get All FreightTable by filter with pagination",
         "parameters": [
           {
@@ -5152,7 +4398,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c8c3c1aa-c759-458d-8193-289807fb554f"
+              "default": "7e7d484f-a6a3-4055-9604-1fa7f5a493e0"
             }
           }
         ],
@@ -5191,9 +4437,7 @@
     },
     "/tepsales/v1/freightTables": {
       "post": {
-        "tags": [
-          "FreightTable"
-        ],
+        "tags": ["FreightTable"],
         "summary": "Create FreightTable",
         "parameters": [
           {
@@ -5210,7 +4454,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "bf5f5951-f4fc-490b-9391-cf479ea898e1"
+              "default": "88f00796-ef0b-46d9-b288-99e839fe77dc"
             }
           }
         ],
@@ -5279,9 +4523,7 @@
     },
     "/tepsales/v1/paymentConditions/{id}": {
       "delete": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Delete PaymentCondition by Id",
         "parameters": [
           {
@@ -5309,7 +4551,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ed03475c-688c-4d9f-99a7-17a5cf9aaabe"
+              "default": "033085e3-687b-4e9f-941b-6250eb9bfe6d"
             }
           }
         ],
@@ -5342,9 +4584,7 @@
         }
       },
       "get": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Get PaymentCondition by id",
         "operationId": "GetByIdPaymentCondition",
         "parameters": [
@@ -5373,7 +4613,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8cd63fc3-9a29-4066-9469-f7afdb3fd4e7"
+              "default": "e5c941c8-5662-4af7-b441-82d2f65dc717"
             }
           }
         ],
@@ -5413,9 +4653,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Update part of PaymentCondition",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/PaymentCondition/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -5444,7 +4682,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2d21181e-8f22-46ae-82ae-a368bc798767"
+              "default": "5fbe650a-191a-40c8-8b57-020616084299"
             }
           }
         ],
@@ -5512,9 +4750,7 @@
         }
       },
       "put": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Update PaymentCondition",
         "parameters": [
           {
@@ -5542,7 +4778,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "362276a7-597b-41d0-a095-9b3dbae54410"
+              "default": "33c41467-12d9-435f-8af8-dd936e7841f4"
             }
           }
         ],
@@ -5607,9 +4843,7 @@
     },
     "/tepsales/v1/paymentConditions/paged": {
       "get": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Get All PaymentCondition by filter with pagination",
         "parameters": [
           {
@@ -5669,7 +4903,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c96cd4a4-296d-422c-a3a5-b42003e3c08f"
+              "default": "819b6213-747d-48d6-bb07-20b78b62faf5"
             }
           }
         ],
@@ -5708,9 +4942,7 @@
     },
     "/tepsales/v1/paymentConditions/all": {
       "get": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Get All PaymentCondition by filter",
         "parameters": [
           {
@@ -5765,7 +4997,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "902e244c-62b3-4126-9169-4c28cd9a3145"
+              "default": "3158faf5-e2ab-41ef-9c74-e18d45c4bb8b"
             }
           }
         ],
@@ -5807,9 +5039,7 @@
     },
     "/tepsales/v1/paymentConditions": {
       "post": {
-        "tags": [
-          "PaymentCondition"
-        ],
+        "tags": ["PaymentCondition"],
         "summary": "Create PaymentCondition",
         "parameters": [
           {
@@ -5826,7 +5056,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "90d88aa6-4a95-4c52-8730-668496ef9fab"
+              "default": "04849bfa-a515-40b2-ad4f-afa623274d66"
             }
           }
         ],
@@ -5895,9 +5125,7 @@
     },
     "/tepsales/v1/paymentPriceTables/{id}": {
       "delete": {
-        "tags": [
-          "PaymentPriceTable"
-        ],
+        "tags": ["PaymentPriceTable"],
         "summary": "Delete PaymentPriceTable by Id",
         "parameters": [
           {
@@ -5925,7 +5153,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "93bdfc9a-32da-4168-819d-1c8f97182a88"
+              "default": "51692292-902b-49b6-9d3c-ce662c449d78"
             }
           }
         ],
@@ -5958,9 +5186,7 @@
         }
       },
       "get": {
-        "tags": [
-          "PaymentPriceTable"
-        ],
+        "tags": ["PaymentPriceTable"],
         "summary": "Get PaymentPriceTable by id",
         "operationId": "GetByIdPaymentPriceTable",
         "parameters": [
@@ -5989,7 +5215,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b3affa12-c7e5-472f-b12c-eb930082b6c2"
+              "default": "255ba320-6a7c-4109-9f42-e1f9c8e613b9"
             }
           }
         ],
@@ -6029,9 +5255,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "PaymentPriceTable"
-        ],
+        "tags": ["PaymentPriceTable"],
         "summary": "Update part of PaymentPriceTable",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/PaymentPriceTable/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -6060,7 +5284,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f88737de-de41-4dc9-894b-64c66a2dacb8"
+              "default": "85884e8f-b553-4f5c-bad0-63175c111ed8"
             }
           }
         ],
@@ -6128,9 +5352,7 @@
         }
       },
       "put": {
-        "tags": [
-          "PaymentPriceTable"
-        ],
+        "tags": ["PaymentPriceTable"],
         "summary": "Update PaymentPriceTable",
         "parameters": [
           {
@@ -6158,7 +5380,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "23715c14-0052-4593-b075-973ee98dd487"
+              "default": "60b031d3-eef6-49ff-9b4c-7c00acfd0a98"
             }
           }
         ],
@@ -6223,9 +5445,7 @@
     },
     "/tepsales/v1/paymentPriceTables/paged": {
       "get": {
-        "tags": [
-          "PaymentPriceTable"
-        ],
+        "tags": ["PaymentPriceTable"],
         "summary": "Get All PaymentPriceTable by filter with pagination",
         "parameters": [
           {
@@ -6287,7 +5507,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e874ee19-1ed9-4ea0-bf1c-9f5937e844f4"
+              "default": "2a269abb-7e9a-405e-8c4b-d911a8182053"
             }
           }
         ],
@@ -6326,9 +5546,7 @@
     },
     "/tepsales/v1/paymentPriceTables/all": {
       "get": {
-        "tags": [
-          "PaymentPriceTable"
-        ],
+        "tags": ["PaymentPriceTable"],
         "summary": "Get All PaymentPriceTable by filter",
         "parameters": [
           {
@@ -6385,7 +5603,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0b6cda8a-8e41-4125-8a6e-720846f2ae1e"
+              "default": "b1afa4e2-4da5-4c97-a603-0bfab0db1b3e"
             }
           }
         ],
@@ -6427,9 +5645,7 @@
     },
     "/tepsales/v1/paymentPriceTables": {
       "post": {
-        "tags": [
-          "PaymentPriceTable"
-        ],
+        "tags": ["PaymentPriceTable"],
         "summary": "Create PaymentPriceTable",
         "parameters": [
           {
@@ -6446,7 +5662,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "344dabe7-3b43-4fe9-a5f7-6daa6248c140"
+              "default": "02916725-48b0-4940-bd51-82c3a1460c98"
             }
           }
         ],
@@ -6515,9 +5731,7 @@
     },
     "/tepsales/v1/priceTables/{id}": {
       "delete": {
-        "tags": [
-          "PriceTable"
-        ],
+        "tags": ["PriceTable"],
         "summary": "Delete PriceTable by Id",
         "parameters": [
           {
@@ -6545,7 +5759,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "75a1b13b-5471-4435-90ea-06032aa85ee3"
+              "default": "8ca0f08d-a9a8-44db-816e-035e92c81230"
             }
           }
         ],
@@ -6578,9 +5792,7 @@
         }
       },
       "get": {
-        "tags": [
-          "PriceTable"
-        ],
+        "tags": ["PriceTable"],
         "summary": "Get PriceTable by id",
         "operationId": "GetByIdPriceTable",
         "parameters": [
@@ -6609,7 +5821,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "082a7115-3bd5-4442-bc8f-29c61151e371"
+              "default": "0e1f7346-f419-449c-98e5-6f76531a1782"
             }
           }
         ],
@@ -6649,9 +5861,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "PriceTable"
-        ],
+        "tags": ["PriceTable"],
         "summary": "Update part of PriceTable",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/PriceTable/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -6680,7 +5890,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "033e99ff-4e5b-423d-a778-fd1310a4957b"
+              "default": "d9667766-2948-4a18-b492-f4f4ce5aa3c9"
             }
           }
         ],
@@ -6748,9 +5958,7 @@
         }
       },
       "put": {
-        "tags": [
-          "PriceTable"
-        ],
+        "tags": ["PriceTable"],
         "summary": "Update PriceTable",
         "parameters": [
           {
@@ -6778,7 +5986,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "bb0d3214-ce62-4466-a866-f10947910e10"
+              "default": "17c356b6-d0d6-422a-9ed7-c89ccba571ec"
             }
           }
         ],
@@ -6843,9 +6051,7 @@
     },
     "/tepsales/v1/priceTables/paged": {
       "get": {
-        "tags": [
-          "PriceTable"
-        ],
+        "tags": ["PriceTable"],
         "summary": "Get All PriceTable by filter with pagination",
         "parameters": [
           {
@@ -6930,7 +6136,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "79938097-455e-451f-9d3d-aa336dd54272"
+              "default": "7a358f39-d0c4-4fd2-8022-411de6102825"
             }
           }
         ],
@@ -6969,9 +6175,7 @@
     },
     "/tepsales/v1/priceTables/all": {
       "get": {
-        "tags": [
-          "PriceTable"
-        ],
+        "tags": ["PriceTable"],
         "summary": "Get All PriceTable by filter",
         "parameters": [
           {
@@ -7018,7 +6222,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f9d23407-1b1c-4011-9f72-81bd5e38b451"
+              "default": "3dd560ae-67ae-4ed7-9f4c-0df5e4ef0a92"
             }
           }
         ],
@@ -7060,9 +6264,7 @@
     },
     "/tepsales/v1/priceTables": {
       "post": {
-        "tags": [
-          "PriceTable"
-        ],
+        "tags": ["PriceTable"],
         "summary": "Create PriceTable",
         "parameters": [
           {
@@ -7079,7 +6281,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b0080594-2c87-4d34-8810-a356b70751dd"
+              "default": "324b6046-b988-4463-921d-67c2d99d950d"
             }
           }
         ],
@@ -7148,9 +6350,7 @@
     },
     "/tepsales/v1/priceTableitens/{id}": {
       "delete": {
-        "tags": [
-          "PriceTableItem"
-        ],
+        "tags": ["PriceTableItem"],
         "summary": "Delete PriceTableItem by Id",
         "parameters": [
           {
@@ -7178,7 +6378,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f5785b45-85ac-487f-be88-cb1e0a3df7a8"
+              "default": "76aac84f-e6cc-4e20-97fd-cbb426aa11b5"
             }
           }
         ],
@@ -7211,9 +6411,7 @@
         }
       },
       "get": {
-        "tags": [
-          "PriceTableItem"
-        ],
+        "tags": ["PriceTableItem"],
         "summary": "Get PriceTableItem by id",
         "operationId": "GetByIdPriceTableItem",
         "parameters": [
@@ -7242,7 +6440,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fdbcb770-8150-4ede-a909-5acec9a52ce5"
+              "default": "c8afe059-d635-4fe2-9331-c0200b860978"
             }
           }
         ],
@@ -7282,9 +6480,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "PriceTableItem"
-        ],
+        "tags": ["PriceTableItem"],
         "summary": "Update part of PriceTableItem",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/PriceTableItem/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -7313,7 +6509,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "91896e8d-78dc-4384-83db-f7552629f5d4"
+              "default": "d4d0004a-c11a-42c6-b4ed-933bdd179f9a"
             }
           }
         ],
@@ -7381,9 +6577,7 @@
         }
       },
       "put": {
-        "tags": [
-          "PriceTableItem"
-        ],
+        "tags": ["PriceTableItem"],
         "summary": "Update PriceTableItem",
         "parameters": [
           {
@@ -7411,7 +6605,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "68cca702-cc73-413b-86e4-acbb22cead21"
+              "default": "8803b701-606f-4af2-8e7a-50e511c427dd"
             }
           }
         ],
@@ -7476,9 +6670,7 @@
     },
     "/tepsales/v1/priceTableitens/paged": {
       "get": {
-        "tags": [
-          "PriceTableItem"
-        ],
+        "tags": ["PriceTableItem"],
         "summary": "Get All PriceTableItem by filter with pagination",
         "parameters": [
           {
@@ -7540,7 +6732,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "962f7742-ba48-48e1-8d48-f78bccf727c2"
+              "default": "e95aaccb-30b2-4e1f-b706-4da4bc03a786"
             }
           }
         ],
@@ -7579,9 +6771,7 @@
     },
     "/tepsales/v1/priceTableitens/all": {
       "get": {
-        "tags": [
-          "PriceTableItem"
-        ],
+        "tags": ["PriceTableItem"],
         "summary": "Get All PriceTableItem by filter",
         "parameters": [
           {
@@ -7638,7 +6828,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4dbcd1b6-18aa-4663-a08f-71f413435ff0"
+              "default": "b5a8df19-0e3e-47eb-996e-27b6ece02f58"
             }
           }
         ],
@@ -7680,9 +6870,7 @@
     },
     "/tepsales/v1/priceTableitens": {
       "post": {
-        "tags": [
-          "PriceTableItem"
-        ],
+        "tags": ["PriceTableItem"],
         "summary": "Create PriceTableItem",
         "parameters": [
           {
@@ -7699,7 +6887,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "940727cc-a56f-4037-beb7-52a4fc8fc87c"
+              "default": "88a8cf3c-b009-4b96-9ff6-565e31f3c52d"
             }
           }
         ],
@@ -7768,9 +6956,7 @@
     },
     "/tepsales/v1/products/{id}": {
       "delete": {
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "summary": "Delete Product by Id",
         "parameters": [
           {
@@ -7798,7 +6984,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "ea5453cc-caad-44e2-b867-f7377ef64b92"
+              "default": "55571f48-688f-485a-b868-680331b432d0"
             }
           }
         ],
@@ -7831,9 +7017,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "summary": "Get Product by id",
         "operationId": "GetByIdProduct",
         "parameters": [
@@ -7862,7 +7046,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "64b0003a-f335-430c-9be4-50201cfa2477"
+              "default": "bde5a996-c724-4711-91b3-dbe9155ad101"
             }
           }
         ],
@@ -7902,9 +7086,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "summary": "Update part of Product",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Product/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -7933,7 +7115,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "36ca2ee8-d0d6-4fcd-9dbf-40e60723cff3"
+              "default": "07c5e0ab-1a22-4095-92d7-57f075e3e31c"
             }
           }
         ],
@@ -8001,9 +7183,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "summary": "Update Product",
         "parameters": [
           {
@@ -8031,7 +7211,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fb8728c6-56ea-4493-bd4b-d98f5de3e9c1"
+              "default": "ead8dbe9-9881-43db-88e6-fb76afecfc6e"
             }
           }
         ],
@@ -8096,9 +7276,7 @@
     },
     "/tepsales/v1/products/paged": {
       "get": {
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "summary": "Get All Product by filter with pagination",
         "parameters": [
           {
@@ -8184,7 +7362,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "717a48a1-91af-4c22-b573-be9e2f0943fb"
+              "default": "da5dcdcc-d5fb-4a1e-9c2f-b4855d6c010a"
             }
           }
         ],
@@ -8223,9 +7401,7 @@
     },
     "/tepsales/v1/products/all": {
       "get": {
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "summary": "Get All Product by filter",
         "parameters": [
           {
@@ -8298,7 +7474,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "d9badbff-2426-4006-bcbf-ea55158e5fbb"
+              "default": "bcf66860-b5b4-41d4-b9c3-fd4312d41d1f"
             }
           }
         ],
@@ -8340,9 +7516,7 @@
     },
     "/tepsales/v1/products": {
       "post": {
-        "tags": [
-          "Product"
-        ],
+        "tags": ["Product"],
         "summary": "Create Product",
         "parameters": [
           {
@@ -8359,7 +7533,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "282610d4-a5b8-4ef2-8e10-d8b28e1eaf86"
+              "default": "5be1326d-3807-4bf9-87b3-367f1dcd9f37"
             }
           }
         ],
@@ -8428,9 +7602,7 @@
     },
     "/tepsales/v1/productGroups/{id}": {
       "delete": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Delete ProductGroup by Id",
         "parameters": [
           {
@@ -8458,7 +7630,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e48c405a-b52a-462a-a0f6-d5823b092b3e"
+              "default": "14ab64d2-c34e-4c44-9bd0-ab9a7ce9f6d5"
             }
           }
         ],
@@ -8491,9 +7663,7 @@
         }
       },
       "get": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Get ProductGroup by id",
         "operationId": "GetByIdProductGroup",
         "parameters": [
@@ -8522,7 +7692,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a3a9eae8-d118-4cf0-a945-b39157a3f44d"
+              "default": "edd2526b-9a81-4778-b587-713134d22a10"
             }
           }
         ],
@@ -8562,9 +7732,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Update part of ProductGroup",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/ProductGroup/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -8593,7 +7761,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2aa8292a-1f0b-4d5e-8b14-e75192b9af5d"
+              "default": "6878beb1-8cdf-4a94-83c2-4d660c3779e2"
             }
           }
         ],
@@ -8661,9 +7829,7 @@
         }
       },
       "put": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Update ProductGroup",
         "parameters": [
           {
@@ -8691,7 +7857,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a5b631f8-4797-4d5b-b4fd-731a3fcf9042"
+              "default": "785f8aad-ad62-4adf-a129-e62ce8e44b89"
             }
           }
         ],
@@ -8756,9 +7922,7 @@
     },
     "/tepsales/v1/productGroups/paged": {
       "get": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Get All ProductGroup by filter with pagination",
         "parameters": [
           {
@@ -8810,7 +7974,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a2d55953-7c14-4e21-bdef-822e4c8de409"
+              "default": "0aa37ce2-f010-411f-b7d2-f8816dceb207"
             }
           }
         ],
@@ -8849,9 +8013,7 @@
     },
     "/tepsales/v1/productGroups/all": {
       "get": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Get All ProductGroup by filter",
         "parameters": [
           {
@@ -8898,7 +8060,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "0346407a-a1e9-4ea0-b70e-684bcc500148"
+              "default": "337abae4-7a16-4777-a299-b4ff0ecdf360"
             }
           }
         ],
@@ -8940,9 +8102,7 @@
     },
     "/tepsales/v1/productGroups/integration/{externalCode}": {
       "get": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Get ProductGroup by external Code",
         "operationId": "GetByExternalCodeProductGroupController",
         "parameters": [
@@ -8970,7 +8130,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4bae0415-ed17-4cd0-92d4-ab6fbedc1e6d"
+              "default": "16500d08-62c4-4743-855b-f1ccead16347"
             }
           }
         ],
@@ -9012,9 +8172,7 @@
     },
     "/tepsales/v1/productGroups": {
       "post": {
-        "tags": [
-          "ProductGroup"
-        ],
+        "tags": ["ProductGroup"],
         "summary": "Create ProductGroup",
         "parameters": [
           {
@@ -9031,7 +8189,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "caa64b86-f95d-48dd-9a9f-a631384263e4"
+              "default": "00304a04-8664-4b5a-9dd5-c13bb59b219c"
             }
           }
         ],
@@ -9100,9 +8258,7 @@
     },
     "/tepsales/v1/productLines/{id}": {
       "delete": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Delete ProductLine by Id",
         "parameters": [
           {
@@ -9130,7 +8286,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7d4666fb-b9d7-46d7-ae26-d9893b08c41c"
+              "default": "fa42b49f-9bfe-42c5-b4f6-57ae3e5d5d98"
             }
           }
         ],
@@ -9163,9 +8319,7 @@
         }
       },
       "get": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Get ProductLine by id",
         "operationId": "GetByIdProductLine",
         "parameters": [
@@ -9194,7 +8348,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4f31a09b-ec22-4811-b8df-191a5b0cd510"
+              "default": "3261d6e7-4a75-4bde-b954-a7dcae9cbd57"
             }
           }
         ],
@@ -9234,9 +8388,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Update part of ProductLine",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/ProductLine/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -9265,7 +8417,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1e33af99-6d9e-42b6-b7fe-9f70261dfff1"
+              "default": "a3d88d36-7f63-41d6-983b-9454a15e28dd"
             }
           }
         ],
@@ -9333,9 +8485,7 @@
         }
       },
       "put": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Update ProductLine",
         "parameters": [
           {
@@ -9363,7 +8513,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "7349c510-353c-4cdf-a682-0e13a95c8f13"
+              "default": "542fd18d-dc07-4ada-8914-d5ad568bef42"
             }
           }
         ],
@@ -9428,9 +8578,7 @@
     },
     "/tepsales/v1/productLines/paged": {
       "get": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Get All ProductLine by filter with pagination",
         "parameters": [
           {
@@ -9482,7 +8630,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b09a4068-e5b2-433a-9e57-f38e9d8dd054"
+              "default": "6cc7c858-7451-469b-aa45-5697c60128fe"
             }
           }
         ],
@@ -9521,9 +8669,7 @@
     },
     "/tepsales/v1/productLines/all": {
       "get": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Get All ProductLine by filter",
         "parameters": [
           {
@@ -9570,7 +8716,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "35c15d3f-89b2-4da6-b4e1-5a112cc5093b"
+              "default": "cc666872-2f23-4c5f-b09c-7bc5e1e10a9f"
             }
           }
         ],
@@ -9612,9 +8758,7 @@
     },
     "/tepsales/v1/productLines": {
       "post": {
-        "tags": [
-          "ProductLine"
-        ],
+        "tags": ["ProductLine"],
         "summary": "Create ProductLine",
         "parameters": [
           {
@@ -9631,7 +8775,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "107f3558-fdad-4c93-886e-88b93c29724b"
+              "default": "c10ea994-d95d-495f-bd40-b167e0f785e7"
             }
           }
         ],
@@ -9700,9 +8844,7 @@
     },
     "/tepsales/v1/reasonscancels/{id}": {
       "delete": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Delete ReasonCancel by Id",
         "parameters": [
           {
@@ -9730,7 +8872,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "5cbbd766-3133-4bcd-a31e-ef09921b5b69"
+              "default": "ba0c8a2c-a1ef-49f7-a541-326cfd26e53b"
             }
           }
         ],
@@ -9763,9 +8905,7 @@
         }
       },
       "get": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Get ReasonCancel by id",
         "operationId": "GetByIdReasonCancel",
         "parameters": [
@@ -9794,7 +8934,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "2c866472-8813-4348-8e50-2e35a90e4219"
+              "default": "7ceb1c5b-a3b0-4bac-971f-e93fb465c4ce"
             }
           }
         ],
@@ -9834,9 +8974,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Update part of ReasonCancel",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/ReasonCancel/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -9865,7 +9003,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b1b0c8c3-80ab-4c10-984e-995d819dc2c9"
+              "default": "8288a639-81c1-4c5d-b9b6-65e77b07078b"
             }
           }
         ],
@@ -9933,9 +9071,7 @@
         }
       },
       "put": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Update ReasonCancel",
         "parameters": [
           {
@@ -9963,7 +9099,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cb240d25-068d-41a1-8c34-58ad32c99d7e"
+              "default": "daeee5b0-2730-49e2-be6b-f8cdf88e4bc2"
             }
           }
         ],
@@ -10028,9 +9164,7 @@
     },
     "/tepsales/v1/reasonscancels/paged": {
       "get": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Get All ReasonCancel by filter with pagination",
         "parameters": [
           {
@@ -10090,7 +9224,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "6057e306-097c-41e6-800b-074133333a92"
+              "default": "cb8ae897-c0ce-404c-95bd-9a25d69739e0"
             }
           }
         ],
@@ -10129,9 +9263,7 @@
     },
     "/tepsales/v1/reasonscancels/all": {
       "get": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Get All ReasonCancel by filter",
         "parameters": [
           {
@@ -10186,7 +9318,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c587fbdc-b06d-42eb-beca-5f48f58e4a20"
+              "default": "bc08a1da-e5b4-4e55-8688-f29f22172fc3"
             }
           }
         ],
@@ -10228,9 +9360,7 @@
     },
     "/tepsales/v1/reasonscancels": {
       "post": {
-        "tags": [
-          "ReasonCancel"
-        ],
+        "tags": ["ReasonCancel"],
         "summary": "Create ReasonCancel",
         "parameters": [
           {
@@ -10247,7 +9377,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a4839534-d162-4643-962a-828ee51e1fa5"
+              "default": "23fda426-98dd-4de6-b7bc-c46049b9a61e"
             }
           }
         ],
@@ -10316,9 +9446,7 @@
     },
     "/tepsales/v1/templates/{id}": {
       "delete": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Delete Template by Id",
         "parameters": [
           {
@@ -10346,7 +9474,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c98eac4c-2be3-45cf-8cef-69e070d57be1"
+              "default": "77beb192-6b41-4a95-a6e7-53f421140199"
             }
           }
         ],
@@ -10379,9 +9507,7 @@
         }
       },
       "get": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Get Template by id",
         "operationId": "GetByIdTemplate",
         "parameters": [
@@ -10410,7 +9536,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8753d7fb-ac4b-47c1-9246-084554b776da"
+              "default": "09e92ac0-ab9d-4213-9b1d-017a8dc97cb4"
             }
           }
         ],
@@ -10450,9 +9576,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Update part of Template",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Template/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -10481,7 +9605,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "c83cf4ba-7f21-4fab-bdad-6ce8ef15d869"
+              "default": "19c2c96d-8838-439c-a559-06e1b8360a58"
             }
           }
         ],
@@ -10549,9 +9673,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Update Template",
         "parameters": [
           {
@@ -10579,7 +9701,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "25c9e69e-b2ed-4381-b2cc-242b21ea1bed"
+              "default": "75e748ef-1a6c-4fb4-9486-501aba1b6776"
             }
           }
         ],
@@ -10644,9 +9766,7 @@
     },
     "/tepsales/v1/templates/paged": {
       "get": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Get All Template by filter with pagination",
         "parameters": [
           {
@@ -10698,7 +9818,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "3d18c46b-e243-4e57-831d-437a55094887"
+              "default": "04640065-cd6a-4e53-8305-f7137f926bc0"
             }
           }
         ],
@@ -10737,9 +9857,7 @@
     },
     "/tepsales/v1/templates/all": {
       "get": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Get All Template by filter",
         "parameters": [
           {
@@ -10786,7 +9904,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cf456950-6c2a-4d3d-9ada-7317e1e9453f"
+              "default": "197520eb-3df6-40ee-b876-41bdf9115a68"
             }
           }
         ],
@@ -10828,9 +9946,7 @@
     },
     "/tepsales/v1/templates": {
       "post": {
-        "tags": [
-          "Template"
-        ],
+        "tags": ["Template"],
         "summary": "Create Template",
         "parameters": [
           {
@@ -10847,7 +9963,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "77186afa-73c1-43db-9b9d-67b57cb2cca3"
+              "default": "1e60b715-1898-4377-a23c-6385fc461d6e"
             }
           }
         ],
@@ -10916,9 +10032,7 @@
     },
     "/tepsales/v1/users/{id}": {
       "delete": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Delete User by Id",
         "parameters": [
           {
@@ -10946,7 +10060,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f0162d99-6084-4240-86c6-7d5f24d77a6a"
+              "default": "a4020bc5-f4b5-40fe-bdb4-b5fd534f9ff2"
             }
           }
         ],
@@ -10979,9 +10093,7 @@
         }
       },
       "get": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Get User by id",
         "operationId": "GetByIdUser",
         "parameters": [
@@ -11010,7 +10122,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "4f7ebf32-ea78-4214-985f-61995c691aff"
+              "default": "d2cb14e8-294b-420f-918f-e8ed3fcd087d"
             }
           }
         ],
@@ -11050,9 +10162,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Update part of User",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/User/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -11081,7 +10191,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "871c29d4-369d-4f95-9a0e-ed73beee0707"
+              "default": "4cf9c16a-35cc-43a3-af80-227c9fa8933b"
             }
           }
         ],
@@ -11149,9 +10259,7 @@
         }
       },
       "put": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Update User",
         "parameters": [
           {
@@ -11179,7 +10287,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "cda9ada9-39eb-4a6c-a814-846177a7c30d"
+              "default": "1629689a-9e23-487d-bcfb-488a8ee3fdd0"
             }
           }
         ],
@@ -11244,9 +10352,7 @@
     },
     "/tepsales/v1/users/paged": {
       "get": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Get All User by filter with pagination",
         "parameters": [
           {
@@ -11321,7 +10427,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "e3e37194-2529-48cc-a008-9d1048855742"
+              "default": "8ff2a02b-4b1d-4ffe-9593-f50bd0e2919c"
             }
           }
         ],
@@ -11360,9 +10466,7 @@
     },
     "/tepsales/v1/users/all": {
       "get": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Get All User by filter",
         "parameters": [
           {
@@ -11431,7 +10535,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "f82f793d-259f-47a2-99c2-28c6f1ba720e"
+              "default": "c542a381-5519-486d-9317-9d60a3c0e282"
             }
           }
         ],
@@ -11473,9 +10577,7 @@
     },
     "/tepsales/v1/users": {
       "post": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Create User",
         "parameters": [
           {
@@ -11492,7 +10594,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "9f8d7bbd-a35f-4cb9-9be7-10c0ad714477"
+              "default": "5ba82b21-f15a-4424-be00-1c614097e7a5"
             }
           }
         ],
@@ -11561,9 +10663,7 @@
     },
     "/tepsales/v1/users/signin": {
       "post": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Create User",
         "parameters": [
           {
@@ -11580,7 +10680,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "1f2f67ce-bdf4-4527-b1ef-e88eb7643a3c"
+              "default": "4df3e5e0-2975-447a-851e-b9cb9787c31c"
             }
           }
         ],
@@ -11649,9 +10749,7 @@
     },
     "/tepsales/v1/users/signup": {
       "post": {
-        "tags": [
-          "User"
-        ],
+        "tags": ["User"],
         "summary": "Create User",
         "parameters": [
           {
@@ -11668,7 +10766,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "b9a98ef9-8fbe-4dfa-bc6d-a27882655a73"
+              "default": "e3edebc6-f388-40e6-a65b-449f16665923"
             }
           }
         ],
@@ -11735,647 +10833,9 @@
         }
       }
     },
-    "/tepsales/v1/vehicles/{id}": {
-      "delete": {
-        "tags": [
-          "Vehicle"
-        ],
-        "summary": "Delete Vehicle by Id",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Vehicle id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Vehicle id",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "e0b0576b-02e9-41d3-8c6c-6921e8d7192b"
-            }
-          }
-        ],
-        "responses": {
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "204": {
-            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          },
-          "404": {
-            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Vehicle"
-        ],
-        "summary": "Get Vehicle by id",
-        "operationId": "GetByIdVehicle",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Vehicle id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Vehicle id",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "1444f66c-d49f-4018-92d0-b904dcaebe2d"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok - The request has succeeded.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetAllVehicleResponse"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          },
-          "404": {
-            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
-          }
-        }
-      },
-      "patch": {
-        "tags": [
-          "Vehicle"
-        ],
-        "summary": "Update part of Vehicle",
-        "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/Vehicle/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Vehicle id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Vehicle id",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "856bdb57-aff6-4125-8f9f-8530bf85474c"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Atributes values",
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/Operation"
-                },
-                "description": "Atributes values"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "412": {
-            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "204": {
-            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          },
-          "404": {
-            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Vehicle"
-        ],
-        "summary": "Update Vehicle",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Vehicle Id",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "Vehicle Id",
-              "format": "uuid"
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "1fa20ffc-aa0b-4c2f-b64c-b83c3538423d"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Vehicle to update",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PutVehicleRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "412": {
-            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "204": {
-            "description": "No Content - There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          },
-          "404": {
-            "description": "Not Found – The server can not find requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid but the resource itself does not exist. Servers may also send this response instead of 403 to hide the existence of a resource from an unauthorized client. This response code is probably the most famous one due to its frequent occurence on the web."
-          }
-        }
-      }
-    },
-    "/tepsales/v1/vehicles/paged": {
-      "get": {
-        "tags": [
-          "Vehicle"
-        ],
-        "summary": "Get All Vehicle by filter with pagination",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "nullable": true
-            }
-          },
-          {
-            "name": "capacity",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "minCapacity",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "page",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "pageSize",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "Sorting atributes, sample: id.desc,name.asc",
-            "schema": {
-              "type": "string",
-              "description": "Sorting atributes, sample: id.desc,name.asc",
-              "default": "Id.desc",
-              "nullable": true
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "eba26b4c-8735-47cc-a178-071c2e838bcc"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok - The request has succeeded.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/GetAllPagedVehicleResponse"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          }
-        }
-      }
-    },
-    "/tepsales/v1/vehicles/all": {
-      "get": {
-        "tags": [
-          "Vehicle"
-        ],
-        "summary": "Get All Vehicle by filter",
-        "parameters": [
-          {
-            "name": "name",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "nullable": true
-            }
-          },
-          {
-            "name": "capacity",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "minCapacity",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32",
-              "nullable": true
-            }
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "limit",
-            "schema": {
-              "type": "integer",
-              "description": "limit",
-              "format": "int32",
-              "default": 100
-            }
-          },
-          {
-            "name": "sort",
-            "in": "query",
-            "description": "Sorting atributes, sample: id.desc,name.asc",
-            "schema": {
-              "type": "string",
-              "description": "Sorting atributes, sample: id.desc,name.asc",
-              "default": "Id.desc",
-              "nullable": true
-            }
-          },
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "8646e059-8621-44ca-9f36-0c035cdd0af1"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Ok - The request has succeeded.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/GetAllVehicleResponse"
-                  }
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          }
-        }
-      }
-    },
-    "/tepsales/v1/vehicles": {
-      "post": {
-        "tags": [
-          "Vehicle"
-        ],
-        "summary": "Create Vehicle",
-        "parameters": [
-          {
-            "name": "x-api-key",
-            "in": "header",
-            "description": "Your Api Key",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "x-csrf-token",
-            "in": "header",
-            "description": "CSRF Protection",
-            "schema": {
-              "type": "string",
-              "default": "3c4725c3-e6ce-4dbb-ad3d-45111d408158"
-            }
-          }
-        ],
-        "requestBody": {
-          "description": "Vehicle to create",
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PostVehicleRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created - The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a POST request, or after some PUT requests.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/PostVehicleResponse"
-                }
-              }
-            }
-          },
-          "412": {
-            "description": "Precondition Failed - The client has indicated preconditions in its headers which the server does not meet.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Intertal Server Error - The server has encountered a situation it doesn't know how to handle.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorDetails"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request – This means that client-side input fails validation."
-          },
-          "401": {
-            "description": "Unauthorized – This means the user isn’t not authorized to access a resource. It usually returns when the user isn’t authenticated."
-          },
-          "403": {
-            "description": "Forbidden – This means the user is authenticated, but it’s not allowed to access a resource."
-          }
-        }
-      }
-    },
     "/tepsales/v1/vehicleCapacities/{id}": {
       "delete": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Delete VehicleType by Id",
         "parameters": [
           {
@@ -12403,7 +10863,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "45e787b5-0f7a-41ea-b949-1d519702131d"
+              "default": "1642ec04-9cec-406c-9b52-86d34e8ac50f"
             }
           }
         ],
@@ -12436,9 +10896,7 @@
         }
       },
       "get": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Get VehicleType by id",
         "operationId": "GetByIdVehicleType",
         "parameters": [
@@ -12467,7 +10925,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "69dd5874-bfaf-41c5-b381-3c458d2d7856"
+              "default": "e9230a00-406c-4c48-84bb-e4bbdfb762b9"
             }
           }
         ],
@@ -12507,9 +10965,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Update part of VehicleType",
         "description": "Sample request:\r\n            \r\n    PATCH /tepsales/v1/VehicleType/{id}\r\n    [\r\n        {\r\n            \"op\": \"replace\",\r\n            \"path\": \"/atribute_name\",\r\n            \"value\": \"new value\"\r\n        }\r\n    ]",
         "parameters": [
@@ -12538,7 +10994,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "94bf6e92-f006-412a-b033-50f70d368108"
+              "default": "64bda910-7163-4830-b931-290688e7ad05"
             }
           }
         ],
@@ -12606,9 +11062,7 @@
         }
       },
       "put": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Update VehicleType",
         "parameters": [
           {
@@ -12636,7 +11090,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "a97afa5a-4ab6-45af-b277-bde66c71c9df"
+              "default": "ba58f7f9-d0d3-4198-a49f-014d0bc791a3"
             }
           }
         ],
@@ -12701,9 +11155,7 @@
     },
     "/tepsales/v1/vehicleCapacities/paged": {
       "get": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Get All VehicleType by filter with pagination",
         "parameters": [
           {
@@ -12763,7 +11215,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "fe32d962-995a-481a-8d2a-13ffbf06e4fb"
+              "default": "b172b0c0-4bf5-4d9f-86f8-0b9a17239eba"
             }
           }
         ],
@@ -12802,9 +11254,7 @@
     },
     "/tepsales/v1/vehicleCapacities/all": {
       "get": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Get All VehicleType by filter",
         "parameters": [
           {
@@ -12859,7 +11309,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "744b5449-7ff6-49ce-b73d-cb0d26b287de"
+              "default": "c75f9cf6-3f64-439c-b245-ff87ab1b60d0"
             }
           }
         ],
@@ -12901,9 +11351,7 @@
     },
     "/tepsales/v1/vehicleCapacities": {
       "post": {
-        "tags": [
-          "VehicleType"
-        ],
+        "tags": ["VehicleType"],
         "summary": "Create VehicleType",
         "parameters": [
           {
@@ -12920,7 +11368,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "8dbefb62-6c4d-47f5-b794-e7d1763bc6c8"
+              "default": "b1ca60f6-cf2f-48a3-b5f5-383718476433"
             }
           }
         ],
@@ -12989,9 +11437,7 @@
     },
     "/tepsales/v1/version": {
       "get": {
-        "tags": [
-          "Version"
-        ],
+        "tags": ["Version"],
         "summary": "Get Version",
         "parameters": [
           {
@@ -13008,7 +11454,7 @@
             "description": "CSRF Protection",
             "schema": {
               "type": "string",
-              "default": "50f0a0de-c78c-4c58-92e8-6f3cb15fb7d6"
+              "default": "0b05dbe5-4c70-4432-9e7a-a9610de4303e"
             }
           }
         ],
@@ -13066,18 +11512,12 @@
         "additionalProperties": false
       },
       "AddressTypeEnum": {
-        "enum": [
-          1,
-          2
-        ],
+        "enum": [1, 2],
         "type": "integer",
         "format": "int32"
       },
       "FromTypeEnum": {
-        "enum": [
-          1,
-          2
-        ],
+        "enum": [1, 2],
         "type": "integer",
         "format": "int32"
       },
@@ -13164,15 +11604,7 @@
         "additionalProperties": false
       },
       "OperationType": {
-        "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
+        "enum": [0, 1, 2, 3, 4, 5, 6],
         "type": "integer",
         "format": "int32"
       },
@@ -13484,11 +11916,7 @@
         "additionalProperties": false
       },
       "ActionType": {
-        "enum": [
-          1,
-          2,
-          3
-        ],
+        "enum": [1, 2, 3],
         "type": "integer",
         "format": "int32"
       },
@@ -14633,331 +13061,6 @@
         },
         "additionalProperties": false
       },
-      "GetAllFreightResponse": {
-        "type": "object",
-        "properties": {
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "userCreated": {
-            "type": "string",
-            "nullable": true
-          },
-          "userUpdated": {
-            "type": "string",
-            "nullable": true
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "code": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "freightVersion": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "distance": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "untilSevenDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "fourteenDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "twentyEightDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "fortyTwoDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "fiftySixDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "eightyFourDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "oneHundredTwelveDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "weightClass": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "PutFreightRequest": {
-        "type": "object",
-        "properties": {
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "userCreated": {
-            "type": "string",
-            "nullable": true
-          },
-          "userUpdated": {
-            "type": "string",
-            "nullable": true
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "code": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "freightVersion": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "distance": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "untilSevenDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "fourteenDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "twentyEightDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "fortyTwoDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "fiftySixDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "eightyFourDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "oneHundredTwelveDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "weightClass": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "GetAllPagedFreightResponse": {
-        "type": "object",
-        "properties": {
-          "currentPage": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "pageCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "pageSize": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "rowCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "firstRowOnPage": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "lastRowOnPage": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "results": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GetAllFreightResponse"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "PostFreightRequest": {
-        "type": "object",
-        "properties": {
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "userCreated": {
-            "type": "string",
-            "nullable": true
-          },
-          "userUpdated": {
-            "type": "string",
-            "nullable": true
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "code": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "freightVersion": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "distance": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "untilSevenDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "fourteenDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "twentyEightDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "fortyTwoDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "fiftySixDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "eightyFourDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "oneHundredTwelveDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "weightClass": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "PostFreightResponse": {
-        "type": "object",
-        "properties": {
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "userCreated": {
-            "type": "string",
-            "nullable": true
-          },
-          "userUpdated": {
-            "type": "string",
-            "nullable": true
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "code": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "freightVersion": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "distance": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "untilSevenDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "fourteenDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "twentyEightDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "fortyTwoDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "fiftySixDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "eightyFourDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "oneHundredTwelveDays": {
-            "type": "number",
-            "format": "double"
-          },
-          "weightClass": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
       "GetAllFreightTableResponse": {
         "type": "object",
         "properties": {
@@ -15562,10 +13665,7 @@
         "additionalProperties": false
       },
       "TablePriceOperationTypeEnum": {
-        "enum": [
-          1,
-          2
-        ],
+        "enum": [1, 2],
         "type": "integer",
         "format": "int32"
       },
@@ -17289,203 +15389,6 @@
         },
         "additionalProperties": false
       },
-      "GetAllVehicleResponse": {
-        "type": "object",
-        "properties": {
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "userCreated": {
-            "type": "string",
-            "nullable": true
-          },
-          "userUpdated": {
-            "type": "string",
-            "nullable": true
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "capacity": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "minCapacity": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "PutVehicleRequest": {
-        "type": "object",
-        "properties": {
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "userCreated": {
-            "type": "string",
-            "nullable": true
-          },
-          "userUpdated": {
-            "type": "string",
-            "nullable": true
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "capacity": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "minCapacity": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "GetAllPagedVehicleResponse": {
-        "type": "object",
-        "properties": {
-          "currentPage": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "pageCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "pageSize": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "rowCount": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "firstRowOnPage": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "lastRowOnPage": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "results": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GetAllVehicleResponse"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "PostVehicleRequest": {
-        "type": "object",
-        "properties": {
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "userCreated": {
-            "type": "string",
-            "nullable": true
-          },
-          "userUpdated": {
-            "type": "string",
-            "nullable": true
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "capacity": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "minCapacity": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
-      "PostVehicleResponse": {
-        "type": "object",
-        "properties": {
-          "createdAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time",
-            "nullable": true
-          },
-          "userCreated": {
-            "type": "string",
-            "nullable": true
-          },
-          "userUpdated": {
-            "type": "string",
-            "nullable": true
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "capacity": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "minCapacity": {
-            "type": "integer",
-            "format": "int32"
-          }
-        },
-        "additionalProperties": false
-      },
       "GetAllVehicleTypeResponse": {
         "type": "object",
         "properties": {
@@ -17711,7 +15614,7 @@
   },
   "security": [
     {
-      "Bearer": [ ]
+      "Bearer": []
     }
   ]
 }

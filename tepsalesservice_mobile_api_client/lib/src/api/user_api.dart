@@ -46,7 +46,7 @@ class UserApi {
   Future<Response<GetAllUserResponse>> getByIdUser({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '4f7ebf32-ea78-4214-985f-61995c691aff',
+    String? xCsrfToken = 'd2cb14e8-294b-420f-918f-e8ed3fcd087d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -143,7 +143,7 @@ class UserApi {
     int? limit,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken = 'f82f793d-259f-47a2-99c2-28c6f1ba720e',
+    String? xCsrfToken = 'c542a381-5519-486d-9317-9d60a3c0e282',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -240,7 +240,7 @@ class UserApi {
   Future<Response<void>> tepsalesV1UsersIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'f0162d99-6084-4240-86c6-7d5f24d77a6a',
+    String? xCsrfToken = 'a4020bc5-f4b5-40fe-bdb4-b5fd534f9ff2',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -302,7 +302,7 @@ class UserApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '871c29d4-369d-4f95-9a0e-ed73beee0707',
+    String? xCsrfToken = '4cf9c16a-35cc-43a3-af80-227c9fa8933b',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -382,7 +382,7 @@ class UserApi {
   Future<Response<void>> tepsalesV1UsersIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'cda9ada9-39eb-4a6c-a814-846177a7c30d',
+    String? xCsrfToken = '1629689a-9e23-487d-bcfb-488a8ee3fdd0',
     PutUserRequest? putUserRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -474,7 +474,7 @@ class UserApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken = 'e3e37194-2529-48cc-a008-9d1048855742',
+    String? xCsrfToken = '8ff2a02b-4b1d-4ffe-9593-f50bd0e2919c',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -571,7 +571,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostUserResponse>> tepsalesV1UsersPost({ 
     String? xApiKey,
-    String? xCsrfToken = '9f8d7bbd-a35f-4cb9-9be7-10c0ad714477',
+    String? xCsrfToken = '5ba82b21-f15a-4424-be00-1c614097e7a5',
     PostUserRequest? postUserRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -677,7 +677,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostUserSignInResponse>> tepsalesV1UsersSigninPost({ 
     String? xApiKey,
-    String? xCsrfToken = '1f2f67ce-bdf4-4527-b1ef-e88eb7643a3c',
+    String? xCsrfToken = '4df3e5e0-2975-447a-851e-b9cb9787c31c',
     PostUserSignInRequest? postUserSignInRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -783,7 +783,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostUserResponse>> tepsalesV1UsersSignupPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'b9a98ef9-8fbe-4dfa-bc6d-a27882655a73',
+    String? xCsrfToken = 'e3edebc6-f388-40e6-a65b-449f16665923',
     PostUserRequest? postUserRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

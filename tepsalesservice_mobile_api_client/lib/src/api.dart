@@ -16,7 +16,6 @@ import 'package:tepsalesservice_mobile_api_client/src/api/client_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/company_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/distribuition_center_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/distribuition_center_client_address_api.dart';
-import 'package:tepsalesservice_mobile_api_client/src/api/freight_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/freight_table_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/payment_condition_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/payment_price_table_api.dart';
@@ -28,7 +27,6 @@ import 'package:tepsalesservice_mobile_api_client/src/api/product_line_api.dart'
 import 'package:tepsalesservice_mobile_api_client/src/api/reason_cancel_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/template_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/user_api.dart';
-import 'package:tepsalesservice_mobile_api_client/src/api/vehicle_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/vehicle_type_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/version_api.dart';
 
@@ -128,12 +126,6 @@ class TepsalesserviceMobileApiClient {
     return DistribuitionCenterClientAddressApi(dio, serializers);
   }
 
-  /// Get FreightApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  FreightApi getFreightApi() {
-    return FreightApi(dio, serializers);
-  }
-
   /// Get FreightTableApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   FreightTableApi getFreightTableApi() {
@@ -198,12 +190,6 @@ class TepsalesserviceMobileApiClient {
   /// by doing that all interceptors will not be executed
   UserApi getUserApi() {
     return UserApi(dio, serializers);
-  }
-
-  /// Get VehicleApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  VehicleApi getVehicleApi() {
-    return VehicleApi(dio, serializers);
   }
 
   /// Get VehicleTypeApi instance, base route and serializer can be overridden by a given but be careful,

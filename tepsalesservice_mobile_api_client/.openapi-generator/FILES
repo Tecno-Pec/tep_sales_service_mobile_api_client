@@ -11,7 +11,6 @@ doc/CompanyApi.md
 doc/DistribuitionCenterApi.md
 doc/DistribuitionCenterClientAddressApi.md
 doc/ErrorDetails.md
-doc/FreightApi.md
 doc/FreightTableApi.md
 doc/FromTypeEnum.md
 doc/GetAllAddressResponse.md
@@ -21,7 +20,6 @@ doc/GetAllClientResponse.md
 doc/GetAllCompanyResponse.md
 doc/GetAllDistribuitionCenterClientAddressResponse.md
 doc/GetAllDistribuitionCenterResponse.md
-doc/GetAllFreightResponse.md
 doc/GetAllFreightTableResponse.md
 doc/GetAllPagedAddressResponse.md
 doc/GetAllPagedAuditResponse.md
@@ -30,7 +28,6 @@ doc/GetAllPagedClientResponse.md
 doc/GetAllPagedCompanyResponse.md
 doc/GetAllPagedDistribuitionCenterClientAddressResponse.md
 doc/GetAllPagedDistribuitionCenterResponse.md
-doc/GetAllPagedFreightResponse.md
 doc/GetAllPagedFreightTableResponse.md
 doc/GetAllPagedPaymentConditionResponse.md
 doc/GetAllPagedPaymentPriceTableResponse.md
@@ -42,7 +39,6 @@ doc/GetAllPagedProductResponse.md
 doc/GetAllPagedReasonCancelResponse.md
 doc/GetAllPagedTemplateResponse.md
 doc/GetAllPagedUserResponse.md
-doc/GetAllPagedVehicleResponse.md
 doc/GetAllPagedVehicleTypeResponse.md
 doc/GetAllPaymentConditionResponse.md
 doc/GetAllPaymentPriceTableResponse.md
@@ -54,7 +50,6 @@ doc/GetAllProductResponse.md
 doc/GetAllReasonCancelResponse.md
 doc/GetAllTemplateResponse.md
 doc/GetAllUserResponse.md
-doc/GetAllVehicleResponse.md
 doc/GetAllVehicleTypeResponse.md
 doc/Operation.md
 doc/OperationType.md
@@ -72,8 +67,6 @@ doc/PostDistribuitionCenterClientAddressRequest.md
 doc/PostDistribuitionCenterClientAddressResponse.md
 doc/PostDistribuitionCenterRequest.md
 doc/PostDistribuitionCenterResponse.md
-doc/PostFreightRequest.md
-doc/PostFreightResponse.md
 doc/PostFreightTableRequest.md
 doc/PostFreightTableResponse.md
 doc/PostPaymentConditionRequest.md
@@ -98,8 +91,6 @@ doc/PostUserRequest.md
 doc/PostUserResponse.md
 doc/PostUserSignInRequest.md
 doc/PostUserSignInResponse.md
-doc/PostVehicleRequest.md
-doc/PostVehicleResponse.md
 doc/PostVehicleTypeRequest.md
 doc/PostVehicleTypeResponse.md
 doc/PriceTableApi.md
@@ -113,7 +104,6 @@ doc/PutClientRequest.md
 doc/PutCompanyRequest.md
 doc/PutDistribuitionCenterClientAddressRequest.md
 doc/PutDistribuitionCenterRequest.md
-doc/PutFreightRequest.md
 doc/PutFreightTableRequest.md
 doc/PutPaymentConditionRequest.md
 doc/PutPaymentPriceTableRequest.md
@@ -125,13 +115,11 @@ doc/PutProductRequest.md
 doc/PutReasonCancelRequest.md
 doc/PutTemplateRequest.md
 doc/PutUserRequest.md
-doc/PutVehicleRequest.md
 doc/PutVehicleTypeRequest.md
 doc/ReasonCancelApi.md
 doc/TablePriceOperationTypeEnum.md
 doc/TemplateApi.md
 doc/UserApi.md
-doc/VehicleApi.md
 doc/VehicleTypeApi.md
 doc/VersionApi.md
 lib/src/api.dart
@@ -142,7 +130,6 @@ lib/src/api/client_api.dart
 lib/src/api/company_api.dart
 lib/src/api/distribuition_center_api.dart
 lib/src/api/distribuition_center_client_address_api.dart
-lib/src/api/freight_api.dart
 lib/src/api/freight_table_api.dart
 lib/src/api/payment_condition_api.dart
 lib/src/api/payment_price_table_api.dart
@@ -154,7 +141,6 @@ lib/src/api/product_line_api.dart
 lib/src/api/reason_cancel_api.dart
 lib/src/api/template_api.dart
 lib/src/api/user_api.dart
-lib/src/api/vehicle_api.dart
 lib/src/api/vehicle_type_api.dart
 lib/src/api/version_api.dart
 lib/src/api_util.dart
@@ -176,7 +162,6 @@ lib/src/model/get_all_client_response.dart
 lib/src/model/get_all_company_response.dart
 lib/src/model/get_all_distribuition_center_client_address_response.dart
 lib/src/model/get_all_distribuition_center_response.dart
-lib/src/model/get_all_freight_response.dart
 lib/src/model/get_all_freight_table_response.dart
 lib/src/model/get_all_paged_address_response.dart
 lib/src/model/get_all_paged_audit_response.dart
@@ -185,7 +170,6 @@ lib/src/model/get_all_paged_client_response.dart
 lib/src/model/get_all_paged_company_response.dart
 lib/src/model/get_all_paged_distribuition_center_client_address_response.dart
 lib/src/model/get_all_paged_distribuition_center_response.dart
-lib/src/model/get_all_paged_freight_response.dart
 lib/src/model/get_all_paged_freight_table_response.dart
 lib/src/model/get_all_paged_payment_condition_response.dart
 lib/src/model/get_all_paged_payment_price_table_response.dart
@@ -197,7 +181,6 @@ lib/src/model/get_all_paged_product_response.dart
 lib/src/model/get_all_paged_reason_cancel_response.dart
 lib/src/model/get_all_paged_template_response.dart
 lib/src/model/get_all_paged_user_response.dart
-lib/src/model/get_all_paged_vehicle_response.dart
 lib/src/model/get_all_paged_vehicle_type_response.dart
 lib/src/model/get_all_payment_condition_response.dart
 lib/src/model/get_all_payment_price_table_response.dart
@@ -209,7 +192,6 @@ lib/src/model/get_all_product_response.dart
 lib/src/model/get_all_reason_cancel_response.dart
 lib/src/model/get_all_template_response.dart
 lib/src/model/get_all_user_response.dart
-lib/src/model/get_all_vehicle_response.dart
 lib/src/model/get_all_vehicle_type_response.dart
 lib/src/model/operation.dart
 lib/src/model/operation_type.dart
@@ -225,8 +207,6 @@ lib/src/model/post_distribuition_center_client_address_request.dart
 lib/src/model/post_distribuition_center_client_address_response.dart
 lib/src/model/post_distribuition_center_request.dart
 lib/src/model/post_distribuition_center_response.dart
-lib/src/model/post_freight_request.dart
-lib/src/model/post_freight_response.dart
 lib/src/model/post_freight_table_request.dart
 lib/src/model/post_freight_table_response.dart
 lib/src/model/post_payment_condition_request.dart
@@ -251,8 +231,6 @@ lib/src/model/post_user_request.dart
 lib/src/model/post_user_response.dart
 lib/src/model/post_user_sign_in_request.dart
 lib/src/model/post_user_sign_in_response.dart
-lib/src/model/post_vehicle_request.dart
-lib/src/model/post_vehicle_response.dart
 lib/src/model/post_vehicle_type_request.dart
 lib/src/model/post_vehicle_type_response.dart
 lib/src/model/put_address_request.dart
@@ -261,7 +239,6 @@ lib/src/model/put_client_request.dart
 lib/src/model/put_company_request.dart
 lib/src/model/put_distribuition_center_client_address_request.dart
 lib/src/model/put_distribuition_center_request.dart
-lib/src/model/put_freight_request.dart
 lib/src/model/put_freight_table_request.dart
 lib/src/model/put_payment_condition_request.dart
 lib/src/model/put_payment_price_table_request.dart
@@ -273,7 +250,6 @@ lib/src/model/put_product_request.dart
 lib/src/model/put_reason_cancel_request.dart
 lib/src/model/put_template_request.dart
 lib/src/model/put_user_request.dart
-lib/src/model/put_vehicle_request.dart
 lib/src/model/put_vehicle_type_request.dart
 lib/src/model/table_price_operation_type_enum.dart
 lib/src/serializers.dart

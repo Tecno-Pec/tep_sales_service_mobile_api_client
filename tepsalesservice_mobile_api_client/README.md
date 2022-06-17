@@ -110,13 +110,6 @@ Class | Method | HTTP request | Description
 [*DistribuitionCenterClientAddressApi*](doc\DistribuitionCenterClientAddressApi.md) | [**tepsalesV1DistribuitionCenterClientAddressIdPut**](doc\DistribuitionCenterClientAddressApi.md#tepsalesv1distribuitioncenterclientaddressidput) | **PUT** /tepsales/v1/distribuitionCenterClientAddress/{id} | Update DistribuitionCenterClientAddress
 [*DistribuitionCenterClientAddressApi*](doc\DistribuitionCenterClientAddressApi.md) | [**tepsalesV1DistribuitionCenterClientAddressPagedGet**](doc\DistribuitionCenterClientAddressApi.md#tepsalesv1distribuitioncenterclientaddresspagedget) | **GET** /tepsales/v1/distribuitionCenterClientAddress/paged | Get All DistribuitionCenterClientAddress by filter with pagination
 [*DistribuitionCenterClientAddressApi*](doc\DistribuitionCenterClientAddressApi.md) | [**tepsalesV1DistribuitionCenterClientAddressPost**](doc\DistribuitionCenterClientAddressApi.md#tepsalesv1distribuitioncenterclientaddresspost) | **POST** /tepsales/v1/distribuitionCenterClientAddress | Create DistribuitionCenterClientAddress
-[*FreightApi*](doc\FreightApi.md) | [**getByIdFreight**](doc\FreightApi.md#getbyidfreight) | **GET** /tepsales/v1/freights/{id} | Get Freight by id
-[*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsAllGet**](doc\FreightApi.md#tepsalesv1freightsallget) | **GET** /tepsales/v1/freights/all | Get All Freight by filter
-[*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsIdDelete**](doc\FreightApi.md#tepsalesv1freightsiddelete) | **DELETE** /tepsales/v1/freights/{id} | Delete Freight by Id
-[*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsIdPatch**](doc\FreightApi.md#tepsalesv1freightsidpatch) | **PATCH** /tepsales/v1/freights/{id} | Update part of Freight
-[*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsIdPut**](doc\FreightApi.md#tepsalesv1freightsidput) | **PUT** /tepsales/v1/freights/{id} | Update Freight
-[*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsPagedGet**](doc\FreightApi.md#tepsalesv1freightspagedget) | **GET** /tepsales/v1/freights/paged | Get All Freight by filter with pagination
-[*FreightApi*](doc\FreightApi.md) | [**tepsalesV1FreightsPost**](doc\FreightApi.md#tepsalesv1freightspost) | **POST** /tepsales/v1/freights | Create Freight
 [*FreightTableApi*](doc\FreightTableApi.md) | [**getByIdFreightTable**](doc\FreightTableApi.md#getbyidfreighttable) | **GET** /tepsales/v1/freightTables/{id} | Get FreightTable by id
 [*FreightTableApi*](doc\FreightTableApi.md) | [**tepsalesV1FreightTablesAllGet**](doc\FreightTableApi.md#tepsalesv1freighttablesallget) | **GET** /tepsales/v1/freightTables/all | Get All FreightTable by filter
 [*FreightTableApi*](doc\FreightTableApi.md) | [**tepsalesV1FreightTablesIdDelete**](doc\FreightTableApi.md#tepsalesv1freighttablesiddelete) | **DELETE** /tepsales/v1/freightTables/{id} | Delete FreightTable by Id
@@ -197,13 +190,6 @@ Class | Method | HTTP request | Description
 [*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersPost**](doc\UserApi.md#tepsalesv1userspost) | **POST** /tepsales/v1/users | Create User
 [*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersSigninPost**](doc\UserApi.md#tepsalesv1userssigninpost) | **POST** /tepsales/v1/users/signin | Create User
 [*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersSignupPost**](doc\UserApi.md#tepsalesv1userssignuppost) | **POST** /tepsales/v1/users/signup | Create User
-[*VehicleApi*](doc\VehicleApi.md) | [**getByIdVehicle**](doc\VehicleApi.md#getbyidvehicle) | **GET** /tepsales/v1/vehicles/{id} | Get Vehicle by id
-[*VehicleApi*](doc\VehicleApi.md) | [**tepsalesV1VehiclesAllGet**](doc\VehicleApi.md#tepsalesv1vehiclesallget) | **GET** /tepsales/v1/vehicles/all | Get All Vehicle by filter
-[*VehicleApi*](doc\VehicleApi.md) | [**tepsalesV1VehiclesIdDelete**](doc\VehicleApi.md#tepsalesv1vehiclesiddelete) | **DELETE** /tepsales/v1/vehicles/{id} | Delete Vehicle by Id
-[*VehicleApi*](doc\VehicleApi.md) | [**tepsalesV1VehiclesIdPatch**](doc\VehicleApi.md#tepsalesv1vehiclesidpatch) | **PATCH** /tepsales/v1/vehicles/{id} | Update part of Vehicle
-[*VehicleApi*](doc\VehicleApi.md) | [**tepsalesV1VehiclesIdPut**](doc\VehicleApi.md#tepsalesv1vehiclesidput) | **PUT** /tepsales/v1/vehicles/{id} | Update Vehicle
-[*VehicleApi*](doc\VehicleApi.md) | [**tepsalesV1VehiclesPagedGet**](doc\VehicleApi.md#tepsalesv1vehiclespagedget) | **GET** /tepsales/v1/vehicles/paged | Get All Vehicle by filter with pagination
-[*VehicleApi*](doc\VehicleApi.md) | [**tepsalesV1VehiclesPost**](doc\VehicleApi.md#tepsalesv1vehiclespost) | **POST** /tepsales/v1/vehicles | Create Vehicle
 [*VehicleTypeApi*](doc\VehicleTypeApi.md) | [**getByIdVehicleType**](doc\VehicleTypeApi.md#getbyidvehicletype) | **GET** /tepsales/v1/vehicleCapacities/{id} | Get VehicleType by id
 [*VehicleTypeApi*](doc\VehicleTypeApi.md) | [**tepsalesV1VehicleCapacitiesAllGet**](doc\VehicleTypeApi.md#tepsalesv1vehiclecapacitiesallget) | **GET** /tepsales/v1/vehicleCapacities/all | Get All VehicleType by filter
 [*VehicleTypeApi*](doc\VehicleTypeApi.md) | [**tepsalesV1VehicleCapacitiesIdDelete**](doc\VehicleTypeApi.md#tepsalesv1vehiclecapacitiesiddelete) | **DELETE** /tepsales/v1/vehicleCapacities/{id} | Delete VehicleType by Id
@@ -227,7 +213,6 @@ Class | Method | HTTP request | Description
  - [GetAllCompanyResponse](doc\GetAllCompanyResponse.md)
  - [GetAllDistribuitionCenterClientAddressResponse](doc\GetAllDistribuitionCenterClientAddressResponse.md)
  - [GetAllDistribuitionCenterResponse](doc\GetAllDistribuitionCenterResponse.md)
- - [GetAllFreightResponse](doc\GetAllFreightResponse.md)
  - [GetAllFreightTableResponse](doc\GetAllFreightTableResponse.md)
  - [GetAllPagedAddressResponse](doc\GetAllPagedAddressResponse.md)
  - [GetAllPagedAuditResponse](doc\GetAllPagedAuditResponse.md)
@@ -236,7 +221,6 @@ Class | Method | HTTP request | Description
  - [GetAllPagedCompanyResponse](doc\GetAllPagedCompanyResponse.md)
  - [GetAllPagedDistribuitionCenterClientAddressResponse](doc\GetAllPagedDistribuitionCenterClientAddressResponse.md)
  - [GetAllPagedDistribuitionCenterResponse](doc\GetAllPagedDistribuitionCenterResponse.md)
- - [GetAllPagedFreightResponse](doc\GetAllPagedFreightResponse.md)
  - [GetAllPagedFreightTableResponse](doc\GetAllPagedFreightTableResponse.md)
  - [GetAllPagedPaymentConditionResponse](doc\GetAllPagedPaymentConditionResponse.md)
  - [GetAllPagedPaymentPriceTableResponse](doc\GetAllPagedPaymentPriceTableResponse.md)
@@ -248,7 +232,6 @@ Class | Method | HTTP request | Description
  - [GetAllPagedReasonCancelResponse](doc\GetAllPagedReasonCancelResponse.md)
  - [GetAllPagedTemplateResponse](doc\GetAllPagedTemplateResponse.md)
  - [GetAllPagedUserResponse](doc\GetAllPagedUserResponse.md)
- - [GetAllPagedVehicleResponse](doc\GetAllPagedVehicleResponse.md)
  - [GetAllPagedVehicleTypeResponse](doc\GetAllPagedVehicleTypeResponse.md)
  - [GetAllPaymentConditionResponse](doc\GetAllPaymentConditionResponse.md)
  - [GetAllPaymentPriceTableResponse](doc\GetAllPaymentPriceTableResponse.md)
@@ -260,7 +243,6 @@ Class | Method | HTTP request | Description
  - [GetAllReasonCancelResponse](doc\GetAllReasonCancelResponse.md)
  - [GetAllTemplateResponse](doc\GetAllTemplateResponse.md)
  - [GetAllUserResponse](doc\GetAllUserResponse.md)
- - [GetAllVehicleResponse](doc\GetAllVehicleResponse.md)
  - [GetAllVehicleTypeResponse](doc\GetAllVehicleTypeResponse.md)
  - [Operation](doc\Operation.md)
  - [OperationType](doc\OperationType.md)
@@ -276,8 +258,6 @@ Class | Method | HTTP request | Description
  - [PostDistribuitionCenterClientAddressResponse](doc\PostDistribuitionCenterClientAddressResponse.md)
  - [PostDistribuitionCenterRequest](doc\PostDistribuitionCenterRequest.md)
  - [PostDistribuitionCenterResponse](doc\PostDistribuitionCenterResponse.md)
- - [PostFreightRequest](doc\PostFreightRequest.md)
- - [PostFreightResponse](doc\PostFreightResponse.md)
  - [PostFreightTableRequest](doc\PostFreightTableRequest.md)
  - [PostFreightTableResponse](doc\PostFreightTableResponse.md)
  - [PostPaymentConditionRequest](doc\PostPaymentConditionRequest.md)
@@ -302,8 +282,6 @@ Class | Method | HTTP request | Description
  - [PostUserResponse](doc\PostUserResponse.md)
  - [PostUserSignInRequest](doc\PostUserSignInRequest.md)
  - [PostUserSignInResponse](doc\PostUserSignInResponse.md)
- - [PostVehicleRequest](doc\PostVehicleRequest.md)
- - [PostVehicleResponse](doc\PostVehicleResponse.md)
  - [PostVehicleTypeRequest](doc\PostVehicleTypeRequest.md)
  - [PostVehicleTypeResponse](doc\PostVehicleTypeResponse.md)
  - [PutAddressRequest](doc\PutAddressRequest.md)
@@ -312,7 +290,6 @@ Class | Method | HTTP request | Description
  - [PutCompanyRequest](doc\PutCompanyRequest.md)
  - [PutDistribuitionCenterClientAddressRequest](doc\PutDistribuitionCenterClientAddressRequest.md)
  - [PutDistribuitionCenterRequest](doc\PutDistribuitionCenterRequest.md)
- - [PutFreightRequest](doc\PutFreightRequest.md)
  - [PutFreightTableRequest](doc\PutFreightTableRequest.md)
  - [PutPaymentConditionRequest](doc\PutPaymentConditionRequest.md)
  - [PutPaymentPriceTableRequest](doc\PutPaymentPriceTableRequest.md)
@@ -324,7 +301,6 @@ Class | Method | HTTP request | Description
  - [PutReasonCancelRequest](doc\PutReasonCancelRequest.md)
  - [PutTemplateRequest](doc\PutTemplateRequest.md)
  - [PutUserRequest](doc\PutUserRequest.md)
- - [PutVehicleRequest](doc\PutVehicleRequest.md)
  - [PutVehicleTypeRequest](doc\PutVehicleTypeRequest.md)
  - [TablePriceOperationTypeEnum](doc\TablePriceOperationTypeEnum.md)
 
