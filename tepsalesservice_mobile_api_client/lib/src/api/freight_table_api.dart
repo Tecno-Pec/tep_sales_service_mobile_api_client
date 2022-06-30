@@ -16,6 +16,7 @@ import 'package:tepsalesservice_mobile_api_client/src/model/operation.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_freight_table_request.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/post_freight_table_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/put_freight_table_request.dart';
+import 'package:tepsalesservice_mobile_api_client/src/model/table_price_operation_type_enum.dart';
 
 class FreightTableApi {
 
@@ -44,7 +45,7 @@ class FreightTableApi {
   Future<Response<GetAllFreightTableResponse>> getByIdFreightTable({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'fd340fb0-e593-4572-93e9-ad9c3e134b00',
+    String? xCsrfToken = '282867cf-5127-4e3f-8297-0f63fdd72f6a',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -120,6 +121,7 @@ class FreightTableApi {
   /// * [vehicleTypeId] 
   /// * [kilometers] 
   /// * [isFractional] 
+  /// * [operationType] 
   /// * [limit] - limit
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
   /// * [xApiKey] - Your Api Key
@@ -138,10 +140,11 @@ class FreightTableApi {
     String? vehicleTypeId,
     double? kilometers,
     bool? isFractional,
+    TablePriceOperationTypeEnum? operationType,
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'feb0d891-c13d-4dd1-a4c5-44a94d388764',
+    String? xCsrfToken = 'b692bcfd-bbd2-40b7-99c9-55ed3501e716',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -176,6 +179,7 @@ class FreightTableApi {
       r'vehicleTypeId': encodeQueryParameter(_serializers, vehicleTypeId, const FullType(String)),
       r'kilometers': encodeQueryParameter(_serializers, kilometers, const FullType(double)),
       r'isFractional': encodeQueryParameter(_serializers, isFractional, const FullType(bool)),
+      if (operationType != null) r'operationType': encodeQueryParameter(_serializers, operationType, const FullType(TablePriceOperationTypeEnum)),
       if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
       r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
     };
@@ -238,7 +242,7 @@ class FreightTableApi {
   Future<Response<void>> tepsalesV1FreightTablesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'e7197881-257f-4b1e-941e-75148993b6e1',
+    String? xCsrfToken = 'dbc5c85e-04cb-411e-a9e3-5293e7c2d456',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -300,7 +304,7 @@ class FreightTableApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '46235b6e-109b-4bd0-bcb3-c91023c8e457',
+    String? xCsrfToken = '26b2a160-7469-4463-984c-49db983134c6',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -380,7 +384,7 @@ class FreightTableApi {
   Future<Response<void>> tepsalesV1FreightTablesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '237e5b62-429e-4ae8-b472-a8dc26a030f2',
+    String? xCsrfToken = '4925ca67-42dc-44b9-a32d-2c98bd3564c3',
     PutFreightTableRequest? putFreightTableRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -449,6 +453,7 @@ class FreightTableApi {
   /// * [vehicleTypeId] 
   /// * [kilometers] 
   /// * [isFractional] 
+  /// * [operationType] 
   /// * [page] 
   /// * [pageSize] 
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
@@ -468,11 +473,12 @@ class FreightTableApi {
     String? vehicleTypeId,
     double? kilometers,
     bool? isFractional,
+    TablePriceOperationTypeEnum? operationType,
     int? page,
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '7e7d484f-a6a3-4055-9604-1fa7f5a493e0',
+    String? xCsrfToken = '0da17a01-d9a5-4e62-8a44-8c779016d83c',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -507,6 +513,7 @@ class FreightTableApi {
       r'vehicleTypeId': encodeQueryParameter(_serializers, vehicleTypeId, const FullType(String)),
       r'kilometers': encodeQueryParameter(_serializers, kilometers, const FullType(double)),
       r'isFractional': encodeQueryParameter(_serializers, isFractional, const FullType(bool)),
+      if (operationType != null) r'operationType': encodeQueryParameter(_serializers, operationType, const FullType(TablePriceOperationTypeEnum)),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
       r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
@@ -569,7 +576,7 @@ class FreightTableApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostFreightTableResponse>> tepsalesV1FreightTablesPost({ 
     String? xApiKey,
-    String? xCsrfToken = '88f00796-ef0b-46d9-b288-99e839fe77dc',
+    String? xCsrfToken = '7d964e8f-939f-46f0-bb6e-a7e3bd776f22',
     PostFreightTableRequest? postFreightTableRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **productGroupId** | **String** |  | [optional] 
 **productLineId** | **String** |  | [optional] 
 **weightkilograms** | **double** |  | [optional] 
-**code** | **String** |  | [optional] 
+**externalCode** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 

@@ -14,6 +14,7 @@ import 'package:tepsalesservice_mobile_api_client/src/api/audit_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/catalog_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/client_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/company_api.dart';
+import 'package:tepsalesservice_mobile_api_client/src/api/discount_rule_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/distribuition_center_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/distribuition_center_client_address_api.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api/freight_table_api.dart';
@@ -112,6 +113,12 @@ class TepsalesserviceMobileApiClient {
   /// by doing that all interceptors will not be executed
   CompanyApi getCompanyApi() {
     return CompanyApi(dio, serializers);
+  }
+
+  /// Get DiscountRuleApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  DiscountRuleApi getDiscountRuleApi() {
+    return DiscountRuleApi(dio, serializers);
   }
 
   /// Get DistribuitionCenterApi instance, base route and serializer can be overridden by a given but be careful,

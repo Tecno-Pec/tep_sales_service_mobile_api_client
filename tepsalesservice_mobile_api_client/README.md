@@ -96,6 +96,13 @@ Class | Method | HTTP request | Description
 [*CompanyApi*](doc\CompanyApi.md) | [**tepsalesV1CompaniesIdPut**](doc\CompanyApi.md#tepsalesv1companiesidput) | **PUT** /tepsales/v1/companies/{id} | Update Company
 [*CompanyApi*](doc\CompanyApi.md) | [**tepsalesV1CompaniesPagedGet**](doc\CompanyApi.md#tepsalesv1companiespagedget) | **GET** /tepsales/v1/companies/paged | Get All Company by filter with pagination
 [*CompanyApi*](doc\CompanyApi.md) | [**tepsalesV1CompaniesPost**](doc\CompanyApi.md#tepsalesv1companiespost) | **POST** /tepsales/v1/companies | Create Company
+[*DiscountRuleApi*](doc\DiscountRuleApi.md) | [**getByIdDiscountRule**](doc\DiscountRuleApi.md#getbyiddiscountrule) | **GET** /tepsales/v1/discountRules/{id} | Get DiscountRule by id
+[*DiscountRuleApi*](doc\DiscountRuleApi.md) | [**tepsalesV1DiscountRulesAllGet**](doc\DiscountRuleApi.md#tepsalesv1discountrulesallget) | **GET** /tepsales/v1/discountRules/all | Get All DiscountRule by filter
+[*DiscountRuleApi*](doc\DiscountRuleApi.md) | [**tepsalesV1DiscountRulesIdDelete**](doc\DiscountRuleApi.md#tepsalesv1discountrulesiddelete) | **DELETE** /tepsales/v1/discountRules/{id} | Delete DiscountRule by Id
+[*DiscountRuleApi*](doc\DiscountRuleApi.md) | [**tepsalesV1DiscountRulesIdPatch**](doc\DiscountRuleApi.md#tepsalesv1discountrulesidpatch) | **PATCH** /tepsales/v1/discountRules/{id} | Update part of DiscountRule
+[*DiscountRuleApi*](doc\DiscountRuleApi.md) | [**tepsalesV1DiscountRulesIdPut**](doc\DiscountRuleApi.md#tepsalesv1discountrulesidput) | **PUT** /tepsales/v1/discountRules/{id} | Update DiscountRule
+[*DiscountRuleApi*](doc\DiscountRuleApi.md) | [**tepsalesV1DiscountRulesPagedGet**](doc\DiscountRuleApi.md#tepsalesv1discountrulespagedget) | **GET** /tepsales/v1/discountRules/paged | Get All DiscountRule by filter with pagination
+[*DiscountRuleApi*](doc\DiscountRuleApi.md) | [**tepsalesV1DiscountRulesPost**](doc\DiscountRuleApi.md#tepsalesv1discountrulespost) | **POST** /tepsales/v1/discountRules | Create DiscountRule
 [*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**getByIdDistribuitionCenter**](doc\DistribuitionCenterApi.md#getbyiddistribuitioncenter) | **GET** /tepsales/v1/distribuitionsCenters/{id} | Get DistribuitionCenter by id
 [*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**tepsalesV1DistribuitionsCentersAllGet**](doc\DistribuitionCenterApi.md#tepsalesv1distribuitionscentersallget) | **GET** /tepsales/v1/distribuitionsCenters/all | Get All DistribuitionCenter by filter
 [*DistribuitionCenterApi*](doc\DistribuitionCenterApi.md) | [**tepsalesV1DistribuitionsCentersIdDelete**](doc\DistribuitionCenterApi.md#tepsalesv1distribuitionscentersiddelete) | **DELETE** /tepsales/v1/distribuitionsCenters/{id} | Delete DistribuitionCenter by Id
@@ -204,13 +211,15 @@ Class | Method | HTTP request | Description
 
  - [ActionType](doc\ActionType.md)
  - [AddressTypeEnum](doc\AddressTypeEnum.md)
+ - [DiscountTypeEnum](doc\DiscountTypeEnum.md)
+ - [DiscountWeightTypeEnum](doc\DiscountWeightTypeEnum.md)
  - [ErrorDetails](doc\ErrorDetails.md)
- - [FromTypeEnum](doc\FromTypeEnum.md)
  - [GetAllAddressResponse](doc\GetAllAddressResponse.md)
  - [GetAllAuditResponse](doc\GetAllAuditResponse.md)
  - [GetAllCatalogResponse](doc\GetAllCatalogResponse.md)
  - [GetAllClientResponse](doc\GetAllClientResponse.md)
  - [GetAllCompanyResponse](doc\GetAllCompanyResponse.md)
+ - [GetAllDiscountRuleResponse](doc\GetAllDiscountRuleResponse.md)
  - [GetAllDistribuitionCenterClientAddressResponse](doc\GetAllDistribuitionCenterClientAddressResponse.md)
  - [GetAllDistribuitionCenterResponse](doc\GetAllDistribuitionCenterResponse.md)
  - [GetAllFreightTableResponse](doc\GetAllFreightTableResponse.md)
@@ -219,6 +228,7 @@ Class | Method | HTTP request | Description
  - [GetAllPagedCatalogResponse](doc\GetAllPagedCatalogResponse.md)
  - [GetAllPagedClientResponse](doc\GetAllPagedClientResponse.md)
  - [GetAllPagedCompanyResponse](doc\GetAllPagedCompanyResponse.md)
+ - [GetAllPagedDiscountRuleResponse](doc\GetAllPagedDiscountRuleResponse.md)
  - [GetAllPagedDistribuitionCenterClientAddressResponse](doc\GetAllPagedDistribuitionCenterClientAddressResponse.md)
  - [GetAllPagedDistribuitionCenterResponse](doc\GetAllPagedDistribuitionCenterResponse.md)
  - [GetAllPagedFreightTableResponse](doc\GetAllPagedFreightTableResponse.md)
@@ -254,6 +264,8 @@ Class | Method | HTTP request | Description
  - [PostClientResponse](doc\PostClientResponse.md)
  - [PostCompanyRequest](doc\PostCompanyRequest.md)
  - [PostCompanyResponse](doc\PostCompanyResponse.md)
+ - [PostDiscountRuleRequest](doc\PostDiscountRuleRequest.md)
+ - [PostDiscountRuleResponse](doc\PostDiscountRuleResponse.md)
  - [PostDistribuitionCenterClientAddressRequest](doc\PostDistribuitionCenterClientAddressRequest.md)
  - [PostDistribuitionCenterClientAddressResponse](doc\PostDistribuitionCenterClientAddressResponse.md)
  - [PostDistribuitionCenterRequest](doc\PostDistribuitionCenterRequest.md)
@@ -288,6 +300,7 @@ Class | Method | HTTP request | Description
  - [PutCatalogRequest](doc\PutCatalogRequest.md)
  - [PutClientRequest](doc\PutClientRequest.md)
  - [PutCompanyRequest](doc\PutCompanyRequest.md)
+ - [PutDiscountRuleRequest](doc\PutDiscountRuleRequest.md)
  - [PutDistribuitionCenterClientAddressRequest](doc\PutDistribuitionCenterClientAddressRequest.md)
  - [PutDistribuitionCenterRequest](doc\PutDistribuitionCenterRequest.md)
  - [PutFreightTableRequest](doc\PutFreightTableRequest.md)
@@ -302,6 +315,7 @@ Class | Method | HTTP request | Description
  - [PutTemplateRequest](doc\PutTemplateRequest.md)
  - [PutUserRequest](doc\PutUserRequest.md)
  - [PutVehicleTypeRequest](doc\PutVehicleTypeRequest.md)
+ - [ReferenceTypeEnum](doc\ReferenceTypeEnum.md)
  - [TablePriceOperationTypeEnum](doc\TablePriceOperationTypeEnum.md)
 
 

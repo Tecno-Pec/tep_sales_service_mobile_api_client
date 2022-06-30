@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:tepsalesservice_mobile_api_client/src/model/table_price_operation_type_enum.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -21,6 +22,7 @@ part 'put_freight_table_request.g.dart';
 /// * [finalKilometer] 
 /// * [value] 
 /// * [isFractional] 
+/// * [operationType] 
 abstract class PutFreightTableRequest implements Built<PutFreightTableRequest, PutFreightTableRequestBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;
@@ -54,6 +56,10 @@ abstract class PutFreightTableRequest implements Built<PutFreightTableRequest, P
 
     @BuiltValueField(wireName: r'isFractional')
     bool? get isFractional;
+
+    @BuiltValueField(wireName: r'operationType')
+    TablePriceOperationTypeEnum? get operationType;
+    // enum operationTypeEnum {  1,  2,  };
 
     PutFreightTableRequest._();
 
@@ -143,6 +149,12 @@ class _$PutFreightTableRequestSerializer implements StructuredSerializer<PutFrei
                 ..add(serializers.serialize(object.isFractional,
                     specifiedType: const FullType(bool)));
         }
+        if (object.operationType != null) {
+            result
+                ..add(r'operationType')
+                ..add(serializers.serialize(object.operationType,
+                    specifiedType: const FullType(TablePriceOperationTypeEnum)));
+        }
         return result;
     }
 
@@ -216,6 +228,11 @@ class _$PutFreightTableRequestSerializer implements StructuredSerializer<PutFrei
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
                     result.isFractional = valueDes;
+                    break;
+                case r'operationType':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(TablePriceOperationTypeEnum)) as TablePriceOperationTypeEnum;
+                    result.operationType = valueDes;
                     break;
             }
         }

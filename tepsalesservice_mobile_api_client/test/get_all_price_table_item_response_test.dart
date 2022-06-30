@@ -32,8 +32,8 @@ void main() {
       // TODO
     });
 
-    // String priceTableId
-    test('to test the property `priceTableId`', () async {
+    // String paymentPriceTableId
+    test('to test the property `paymentPriceTableId`', () async {
       // TODO
     });
 

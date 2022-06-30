@@ -62,5 +62,10 @@ void main() {
       // TODO
     });
 
+    // TablePriceOperationTypeEnum operationType
+    test('to test the property `operationType`', () async {
+      // TODO
+    });
+
   });
 }

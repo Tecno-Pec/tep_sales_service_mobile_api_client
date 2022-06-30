@@ -16,7 +16,7 @@ void main() {
 
     // Get All Client by filter
     //
-    //Future<BuiltList<GetAllClientResponse>> tepsalesV1ClientsAllGet({ String name, String document, String phone, String ie, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<GetAllClientResponse>> tepsalesV1ClientsAllGet({ String name, String document, String phone, String ie, String email, String externalCode, int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1ClientsAllGet', () async {
       // TODO
     });
@@ -46,7 +46,7 @@ void main() {
 
     // Get All Client by filter with pagination
     //
-    //Future<GetAllPagedClientResponse> tepsalesV1ClientsPagedGet({ String name, String document, String phone, String ie, int page, int pageSize, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<GetAllPagedClientResponse> tepsalesV1ClientsPagedGet({ String name, String document, String phone, String ie, String email, String externalCode, int page, int pageSize, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1ClientsPagedGet', () async {
       // TODO
     });

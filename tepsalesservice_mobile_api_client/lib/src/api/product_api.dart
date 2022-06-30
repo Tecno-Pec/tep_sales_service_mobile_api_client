@@ -44,7 +44,7 @@ class ProductApi {
   Future<Response<GetAllProductResponse>> getByIdProduct({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'bde5a996-c724-4711-91b3-dbe9155ad101',
+    String? xCsrfToken = '0d7ef6a5-b6a8-4ff2-8483-765d80ebae81',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -116,6 +116,7 @@ class ProductApi {
   /// 
   ///
   /// Parameters:
+  /// * [externalCode] 
   /// * [name] 
   /// * [description] 
   /// * [productLineId] 
@@ -134,6 +135,7 @@ class ProductApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<GetAllProductResponse>] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<GetAllProductResponse>>> tepsalesV1ProductsAllGet({ 
+    String? externalCode,
     String? name,
     String? description,
     String? productLineId,
@@ -141,7 +143,7 @@ class ProductApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'bcf66860-b5b4-41d4-b9c3-fd4312d41d1f',
+    String? xCsrfToken = '374538db-1081-435c-8fb9-f56ee3263a57',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -172,6 +174,7 @@ class ProductApi {
     );
 
     final _queryParameters = <String, dynamic>{
+      r'externalCode': encodeQueryParameter(_serializers, externalCode, const FullType(String)),
       r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
       r'description': encodeQueryParameter(_serializers, description, const FullType(String)),
       r'productLineId': encodeQueryParameter(_serializers, productLineId, const FullType(String)),
@@ -238,7 +241,7 @@ class ProductApi {
   Future<Response<void>> tepsalesV1ProductsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '55571f48-688f-485a-b868-680331b432d0',
+    String? xCsrfToken = 'ba633e26-e345-48fb-9b48-a67c94fef5cd',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -300,7 +303,7 @@ class ProductApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '07c5e0ab-1a22-4095-92d7-57f075e3e31c',
+    String? xCsrfToken = '6b5580ae-6eff-4c5f-b9c4-4a8d6e9054b9',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -380,7 +383,7 @@ class ProductApi {
   Future<Response<void>> tepsalesV1ProductsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'ead8dbe9-9881-43db-88e6-fb76afecfc6e',
+    String? xCsrfToken = '785659b4-b372-4652-8a3b-24ecf2f43bd2',
     PutProductRequest? putProductRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -445,7 +448,7 @@ class ProductApi {
   /// 
   ///
   /// Parameters:
-  /// * [code] 
+  /// * [externalCode] 
   /// * [name] 
   /// * [description] 
   /// * [productLineId] 
@@ -465,7 +468,7 @@ class ProductApi {
   /// Returns a [Future] containing a [Response] with a [GetAllPagedProductResponse] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllPagedProductResponse>> tepsalesV1ProductsPagedGet({ 
-    String? code,
+    String? externalCode,
     String? name,
     String? description,
     String? productLineId,
@@ -474,7 +477,7 @@ class ProductApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'da5dcdcc-d5fb-4a1e-9c2f-b4855d6c010a',
+    String? xCsrfToken = '331e2f33-326b-48c0-950e-1bcb140f740b',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -505,7 +508,7 @@ class ProductApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      r'code': encodeQueryParameter(_serializers, code, const FullType(String)),
+      r'externalCode': encodeQueryParameter(_serializers, externalCode, const FullType(String)),
       r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
       r'description': encodeQueryParameter(_serializers, description, const FullType(String)),
       r'productLineId': encodeQueryParameter(_serializers, productLineId, const FullType(String)),
@@ -572,7 +575,7 @@ class ProductApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostProductResponse>> tepsalesV1ProductsPost({ 
     String? xApiKey,
-    String? xCsrfToken = '5be1326d-3807-4bf9-87b3-367f1dcd9f37',
+    String? xCsrfToken = '98a733de-ec63-46a2-8b0f-48fa82850119',
     PostProductRequest? postProductRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

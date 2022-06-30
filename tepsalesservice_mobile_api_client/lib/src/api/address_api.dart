@@ -11,7 +11,6 @@ import 'package:built_collection/built_collection.dart';
 import 'package:tepsalesservice_mobile_api_client/src/api_util.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/address_type_enum.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/error_details.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/from_type_enum.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_address_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_address_response.dart';
 import 'package:tepsalesservice_mobile_api_client/src/model/operation.dart';
@@ -46,7 +45,7 @@ class AddressApi {
   Future<Response<GetAllAddressResponse>> getByIdAddress({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '7339805f-643d-4e50-853c-c337a53dc936',
+    String? xCsrfToken = '7e0e6be5-eb36-4631-96ba-6eaef8956aad',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -121,7 +120,6 @@ class AddressApi {
   /// * [parentId] 
   /// * [name] 
   /// * [type] 
-  /// * [fromType] 
   /// * [externalCode] 
   /// * [limit] - limit
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
@@ -140,12 +138,11 @@ class AddressApi {
     String? parentId,
     String? name,
     AddressTypeEnum? type,
-    FromTypeEnum? fromType,
     String? externalCode,
     int? limit = 100,
     String? sort = 'Id.asc',
     String? xApiKey,
-    String? xCsrfToken = 'c15d74d8-1733-452a-b4d2-8643c863acc6',
+    String? xCsrfToken = '2749d1bd-045b-4939-aaa0-315a899cdfb8',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -179,7 +176,6 @@ class AddressApi {
       r'parentId': encodeQueryParameter(_serializers, parentId, const FullType(String)),
       r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
       if (type != null) r'type': encodeQueryParameter(_serializers, type, const FullType(AddressTypeEnum)),
-      if (fromType != null) r'fromType': encodeQueryParameter(_serializers, fromType, const FullType(FromTypeEnum)),
       r'externalCode': encodeQueryParameter(_serializers, externalCode, const FullType(String)),
       if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
       r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
@@ -243,7 +239,7 @@ class AddressApi {
   Future<Response<void>> tepsalesV1AddressesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '04f2e5ed-6926-43a0-9696-a60414d5a466',
+    String? xCsrfToken = '509f3570-6f31-4bf3-bf1c-3e35a731601c',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -305,7 +301,7 @@ class AddressApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'c0c066fe-ffff-447e-b1c2-1e605a5e7804',
+    String? xCsrfToken = 'dda1eabd-ad23-45b3-a4be-7b27e50073e5',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -385,7 +381,7 @@ class AddressApi {
   Future<Response<void>> tepsalesV1AddressesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '3d57a435-08fa-4bc3-9fa4-9a0c86034dc7',
+    String? xCsrfToken = '8ba05b1f-0ad0-4c10-8369-c38f8d1eca86',
     PutAddressRequest? putAddressRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -453,7 +449,6 @@ class AddressApi {
   /// * [parentId] 
   /// * [name] 
   /// * [type] 
-  /// * [fromType] 
   /// * [externalCode] 
   /// * [page] 
   /// * [pageSize] 
@@ -473,13 +468,12 @@ class AddressApi {
     String? parentId,
     String? name,
     AddressTypeEnum? type,
-    FromTypeEnum? fromType,
     String? externalCode,
     int? page,
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '41debb62-6caf-4683-be8b-18ee44d6f99a',
+    String? xCsrfToken = 'b668daa5-519d-4991-b42e-91562a350ab1',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -513,7 +507,6 @@ class AddressApi {
       r'parentId': encodeQueryParameter(_serializers, parentId, const FullType(String)),
       r'name': encodeQueryParameter(_serializers, name, const FullType(String)),
       if (type != null) r'type': encodeQueryParameter(_serializers, type, const FullType(AddressTypeEnum)),
-      if (fromType != null) r'fromType': encodeQueryParameter(_serializers, fromType, const FullType(FromTypeEnum)),
       r'externalCode': encodeQueryParameter(_serializers, externalCode, const FullType(String)),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
@@ -577,7 +570,7 @@ class AddressApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostAddressResponse>> tepsalesV1AddressesPost({ 
     String? xApiKey,
-    String? xCsrfToken = '66b0d444-cfda-418f-9587-1def202e1867',
+    String? xCsrfToken = '39b5ea4e-0864-4cdd-881e-20323dabd533',
     PostAddressRequest? postAddressRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

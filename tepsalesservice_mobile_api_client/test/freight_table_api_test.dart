@@ -16,7 +16,7 @@ void main() {
 
     // Get All FreightTable by filter
     //
-    //Future<BuiltList<GetAllFreightTableResponse>> tepsalesV1FreightTablesAllGet({ String paymentConditionId, String vehicleTypeId, double kilometers, bool isFractional, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<GetAllFreightTableResponse>> tepsalesV1FreightTablesAllGet({ String paymentConditionId, String vehicleTypeId, double kilometers, bool isFractional, TablePriceOperationTypeEnum operationType, int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1FreightTablesAllGet', () async {
       // TODO
     });
@@ -46,7 +46,7 @@ void main() {
 
     // Get All FreightTable by filter with pagination
     //
-    //Future<GetAllPagedFreightTableResponse> tepsalesV1FreightTablesPagedGet({ String paymentConditionId, String vehicleTypeId, double kilometers, bool isFractional, int page, int pageSize, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<GetAllPagedFreightTableResponse> tepsalesV1FreightTablesPagedGet({ String paymentConditionId, String vehicleTypeId, double kilometers, bool isFractional, TablePriceOperationTypeEnum operationType, int page, int pageSize, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1FreightTablesPagedGet', () async {
       // TODO
     });

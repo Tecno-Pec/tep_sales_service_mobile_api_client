@@ -2,6 +2,7 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+import 'package:tepsalesservice_mobile_api_client/src/model/table_price_operation_type_enum.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -21,6 +22,7 @@ part 'get_all_freight_table_response.g.dart';
 /// * [finalKilometer] 
 /// * [value] 
 /// * [isFractional] 
+/// * [operationType] 
 abstract class GetAllFreightTableResponse implements Built<GetAllFreightTableResponse, GetAllFreightTableResponseBuilder> {
     @BuiltValueField(wireName: r'createdAt')
     DateTime? get createdAt;
@@ -54,6 +56,10 @@ abstract class GetAllFreightTableResponse implements Built<GetAllFreightTableRes
 
     @BuiltValueField(wireName: r'isFractional')
     bool? get isFractional;
+
+    @BuiltValueField(wireName: r'operationType')
+    TablePriceOperationTypeEnum? get operationType;
+    // enum operationTypeEnum {  1,  2,  };
 
     GetAllFreightTableResponse._();
 
@@ -143,6 +149,12 @@ class _$GetAllFreightTableResponseSerializer implements StructuredSerializer<Get
                 ..add(serializers.serialize(object.isFractional,
                     specifiedType: const FullType(bool)));
         }
+        if (object.operationType != null) {
+            result
+                ..add(r'operationType')
+                ..add(serializers.serialize(object.operationType,
+                    specifiedType: const FullType(TablePriceOperationTypeEnum)));
+        }
         return result;
     }
 
@@ -216,6 +228,11 @@ class _$GetAllFreightTableResponseSerializer implements StructuredSerializer<Get
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(bool)) as bool;
                     result.isFractional = valueDes;
+                    break;
+                case r'operationType':
+                    final valueDes = serializers.deserialize(value,
+                        specifiedType: const FullType(TablePriceOperationTypeEnum)) as TablePriceOperationTypeEnum;
+                    result.operationType = valueDes;
                     break;
             }
         }

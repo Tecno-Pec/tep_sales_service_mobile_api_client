@@ -60,15 +60,15 @@ void main() {
 
     // Create User
     //
-    //Future<PostUserResponse> tepsalesV1UsersSinginPost({ String xApiKey, String xCsrfToken, PostUserSinginRequest postUserSinginRequest }) async
-    test('test tepsalesV1UsersSinginPost', () async {
+    //Future<PostUserSignInResponse> tepsalesV1UsersSigninPost({ String xApiKey, String xCsrfToken, PostUserSignInRequest postUserSignInRequest }) async
+    test('test tepsalesV1UsersSigninPost', () async {
       // TODO
     });
 
     // Create User
     //
-    //Future<PostUserResponse> tepsalesV1UsersSingupPost({ String xApiKey, String xCsrfToken, PostUserRequest postUserRequest }) async
-    test('test tepsalesV1UsersSingupPost', () async {
+    //Future<PostUserResponse> tepsalesV1UsersSignupPost({ String xApiKey, String xCsrfToken, PostUserRequest postUserRequest }) async
+    test('test tepsalesV1UsersSignupPost', () async {
       // TODO
     });
 

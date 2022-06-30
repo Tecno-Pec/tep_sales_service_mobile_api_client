@@ -14,6 +14,7 @@ export 'package:tepsalesservice_mobile_api_client/src/api/audit_api.dart';
 export 'package:tepsalesservice_mobile_api_client/src/api/catalog_api.dart';
 export 'package:tepsalesservice_mobile_api_client/src/api/client_api.dart';
 export 'package:tepsalesservice_mobile_api_client/src/api/company_api.dart';
+export 'package:tepsalesservice_mobile_api_client/src/api/discount_rule_api.dart';
 export 'package:tepsalesservice_mobile_api_client/src/api/distribuition_center_api.dart';
 export 'package:tepsalesservice_mobile_api_client/src/api/distribuition_center_client_address_api.dart';
 export 'package:tepsalesservice_mobile_api_client/src/api/freight_table_api.dart';
@@ -32,13 +33,15 @@ export 'package:tepsalesservice_mobile_api_client/src/api/version_api.dart';
 
 export 'package:tepsalesservice_mobile_api_client/src/model/action_type.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/address_type_enum.dart';
+export 'package:tepsalesservice_mobile_api_client/src/model/discount_type_enum.dart';
+export 'package:tepsalesservice_mobile_api_client/src/model/discount_weight_type_enum.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/error_details.dart';
-export 'package:tepsalesservice_mobile_api_client/src/model/from_type_enum.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_address_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_audit_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_catalog_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_client_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_company_response.dart';
+export 'package:tepsalesservice_mobile_api_client/src/model/get_all_discount_rule_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_distribuition_center_client_address_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_distribuition_center_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_freight_table_response.dart';
@@ -47,6 +50,7 @@ export 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_audit_
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_catalog_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_client_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_company_response.dart';
+export 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_discount_rule_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_distribuition_center_client_address_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_distribuition_center_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/get_all_paged_freight_table_response.dart';
@@ -82,6 +86,8 @@ export 'package:tepsalesservice_mobile_api_client/src/model/post_client_request.
 export 'package:tepsalesservice_mobile_api_client/src/model/post_client_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/post_company_request.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/post_company_response.dart';
+export 'package:tepsalesservice_mobile_api_client/src/model/post_discount_rule_request.dart';
+export 'package:tepsalesservice_mobile_api_client/src/model/post_discount_rule_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/post_distribuition_center_client_address_request.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/post_distribuition_center_client_address_response.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/post_distribuition_center_request.dart';
@@ -116,6 +122,7 @@ export 'package:tepsalesservice_mobile_api_client/src/model/put_address_request.
 export 'package:tepsalesservice_mobile_api_client/src/model/put_catalog_request.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/put_client_request.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/put_company_request.dart';
+export 'package:tepsalesservice_mobile_api_client/src/model/put_discount_rule_request.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/put_distribuition_center_client_address_request.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/put_distribuition_center_request.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/put_freight_table_request.dart';
@@ -130,4 +137,5 @@ export 'package:tepsalesservice_mobile_api_client/src/model/put_reason_cancel_re
 export 'package:tepsalesservice_mobile_api_client/src/model/put_template_request.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/put_user_request.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/put_vehicle_type_request.dart';
+export 'package:tepsalesservice_mobile_api_client/src/model/reference_type_enum.dart';
 export 'package:tepsalesservice_mobile_api_client/src/model/table_price_operation_type_enum.dart';

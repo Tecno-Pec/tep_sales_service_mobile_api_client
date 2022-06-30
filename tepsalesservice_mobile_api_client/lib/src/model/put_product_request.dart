@@ -18,7 +18,7 @@ part 'put_product_request.g.dart';
 /// * [productGroupId] 
 /// * [productLineId] 
 /// * [weightkilograms] 
-/// * [code] 
+/// * [externalCode] 
 /// * [name] 
 /// * [description] 
 abstract class PutProductRequest implements Built<PutProductRequest, PutProductRequestBuilder> {
@@ -46,8 +46,8 @@ abstract class PutProductRequest implements Built<PutProductRequest, PutProductR
     @BuiltValueField(wireName: r'weightkilograms')
     double? get weightkilograms;
 
-    @BuiltValueField(wireName: r'code')
-    String? get code;
+    @BuiltValueField(wireName: r'externalCode')
+    String? get externalCode;
 
     @BuiltValueField(wireName: r'name')
     String? get name;
@@ -125,10 +125,10 @@ class _$PutProductRequestSerializer implements StructuredSerializer<PutProductRe
                 ..add(serializers.serialize(object.weightkilograms,
                     specifiedType: const FullType(double)));
         }
-        if (object.code != null) {
+        if (object.externalCode != null) {
             result
-                ..add(r'code')
-                ..add(serializers.serialize(object.code,
+                ..add(r'externalCode')
+                ..add(serializers.serialize(object.externalCode,
                     specifiedType: const FullType.nullable(String)));
         }
         if (object.name != null) {
@@ -202,11 +202,11 @@ class _$PutProductRequestSerializer implements StructuredSerializer<PutProductRe
                         specifiedType: const FullType(double)) as double;
                     result.weightkilograms = valueDes;
                     break;
-                case r'code':
+                case r'externalCode':
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType.nullable(String)) as String?;
                     if (valueDes == null) continue;
-                    result.code = valueDes;
+                    result.externalCode = valueDes;
                     break;
                 case r'name':
                     final valueDes = serializers.deserialize(value,

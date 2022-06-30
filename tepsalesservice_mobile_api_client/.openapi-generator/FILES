@@ -8,16 +8,19 @@ doc/AuditApi.md
 doc/CatalogApi.md
 doc/ClientApi.md
 doc/CompanyApi.md
+doc/DiscountRuleApi.md
+doc/DiscountTypeEnum.md
+doc/DiscountWeightTypeEnum.md
 doc/DistribuitionCenterApi.md
 doc/DistribuitionCenterClientAddressApi.md
 doc/ErrorDetails.md
 doc/FreightTableApi.md
-doc/FromTypeEnum.md
 doc/GetAllAddressResponse.md
 doc/GetAllAuditResponse.md
 doc/GetAllCatalogResponse.md
 doc/GetAllClientResponse.md
 doc/GetAllCompanyResponse.md
+doc/GetAllDiscountRuleResponse.md
 doc/GetAllDistribuitionCenterClientAddressResponse.md
 doc/GetAllDistribuitionCenterResponse.md
 doc/GetAllFreightTableResponse.md
@@ -26,6 +29,7 @@ doc/GetAllPagedAuditResponse.md
 doc/GetAllPagedCatalogResponse.md
 doc/GetAllPagedClientResponse.md
 doc/GetAllPagedCompanyResponse.md
+doc/GetAllPagedDiscountRuleResponse.md
 doc/GetAllPagedDistribuitionCenterClientAddressResponse.md
 doc/GetAllPagedDistribuitionCenterResponse.md
 doc/GetAllPagedFreightTableResponse.md
@@ -63,6 +67,8 @@ doc/PostClientRequest.md
 doc/PostClientResponse.md
 doc/PostCompanyRequest.md
 doc/PostCompanyResponse.md
+doc/PostDiscountRuleRequest.md
+doc/PostDiscountRuleResponse.md
 doc/PostDistribuitionCenterClientAddressRequest.md
 doc/PostDistribuitionCenterClientAddressResponse.md
 doc/PostDistribuitionCenterRequest.md
@@ -102,6 +108,7 @@ doc/PutAddressRequest.md
 doc/PutCatalogRequest.md
 doc/PutClientRequest.md
 doc/PutCompanyRequest.md
+doc/PutDiscountRuleRequest.md
 doc/PutDistribuitionCenterClientAddressRequest.md
 doc/PutDistribuitionCenterRequest.md
 doc/PutFreightTableRequest.md
@@ -117,6 +124,7 @@ doc/PutTemplateRequest.md
 doc/PutUserRequest.md
 doc/PutVehicleTypeRequest.md
 doc/ReasonCancelApi.md
+doc/ReferenceTypeEnum.md
 doc/TablePriceOperationTypeEnum.md
 doc/TemplateApi.md
 doc/UserApi.md
@@ -128,6 +136,7 @@ lib/src/api/audit_api.dart
 lib/src/api/catalog_api.dart
 lib/src/api/client_api.dart
 lib/src/api/company_api.dart
+lib/src/api/discount_rule_api.dart
 lib/src/api/distribuition_center_api.dart
 lib/src/api/distribuition_center_client_address_api.dart
 lib/src/api/freight_table_api.dart
@@ -153,13 +162,15 @@ lib/src/date_serializer.dart
 lib/src/model/action_type.dart
 lib/src/model/address_type_enum.dart
 lib/src/model/date.dart
+lib/src/model/discount_type_enum.dart
+lib/src/model/discount_weight_type_enum.dart
 lib/src/model/error_details.dart
-lib/src/model/from_type_enum.dart
 lib/src/model/get_all_address_response.dart
 lib/src/model/get_all_audit_response.dart
 lib/src/model/get_all_catalog_response.dart
 lib/src/model/get_all_client_response.dart
 lib/src/model/get_all_company_response.dart
+lib/src/model/get_all_discount_rule_response.dart
 lib/src/model/get_all_distribuition_center_client_address_response.dart
 lib/src/model/get_all_distribuition_center_response.dart
 lib/src/model/get_all_freight_table_response.dart
@@ -168,6 +179,7 @@ lib/src/model/get_all_paged_audit_response.dart
 lib/src/model/get_all_paged_catalog_response.dart
 lib/src/model/get_all_paged_client_response.dart
 lib/src/model/get_all_paged_company_response.dart
+lib/src/model/get_all_paged_discount_rule_response.dart
 lib/src/model/get_all_paged_distribuition_center_client_address_response.dart
 lib/src/model/get_all_paged_distribuition_center_response.dart
 lib/src/model/get_all_paged_freight_table_response.dart
@@ -203,6 +215,8 @@ lib/src/model/post_client_request.dart
 lib/src/model/post_client_response.dart
 lib/src/model/post_company_request.dart
 lib/src/model/post_company_response.dart
+lib/src/model/post_discount_rule_request.dart
+lib/src/model/post_discount_rule_response.dart
 lib/src/model/post_distribuition_center_client_address_request.dart
 lib/src/model/post_distribuition_center_client_address_response.dart
 lib/src/model/post_distribuition_center_request.dart
@@ -237,6 +251,7 @@ lib/src/model/put_address_request.dart
 lib/src/model/put_catalog_request.dart
 lib/src/model/put_client_request.dart
 lib/src/model/put_company_request.dart
+lib/src/model/put_discount_rule_request.dart
 lib/src/model/put_distribuition_center_client_address_request.dart
 lib/src/model/put_distribuition_center_request.dart
 lib/src/model/put_freight_table_request.dart
@@ -251,6 +266,7 @@ lib/src/model/put_reason_cancel_request.dart
 lib/src/model/put_template_request.dart
 lib/src/model/put_user_request.dart
 lib/src/model/put_vehicle_type_request.dart
+lib/src/model/reference_type_enum.dart
 lib/src/model/table_price_operation_type_enum.dart
 lib/src/serializers.dart
 lib/tepsalesservice_mobile_api_client.dart

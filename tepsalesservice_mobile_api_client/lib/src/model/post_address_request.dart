@@ -3,7 +3,6 @@
 //
 
 import 'package:tepsalesservice_mobile_api_client/src/model/address_type_enum.dart';
-import 'package:tepsalesservice_mobile_api_client/src/model/from_type_enum.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -29,7 +28,6 @@ part 'post_address_request.g.dart';
 /// * [latitude] 
 /// * [longitude] 
 /// * [type] 
-/// * [fromType] 
 /// * [externalCode] 
 abstract class PostAddressRequest implements Built<PostAddressRequest, PostAddressRequestBuilder> {
     @BuiltValueField(wireName: r'createdAt')
@@ -83,10 +81,6 @@ abstract class PostAddressRequest implements Built<PostAddressRequest, PostAddre
     @BuiltValueField(wireName: r'type')
     AddressTypeEnum? get type;
     // enum typeEnum {  1,  2,  };
-
-    @BuiltValueField(wireName: r'fromType')
-    FromTypeEnum? get fromType;
-    // enum fromTypeEnum {  1,  2,  };
 
     @BuiltValueField(wireName: r'externalCode')
     String? get externalCode;
@@ -215,12 +209,6 @@ class _$PostAddressRequestSerializer implements StructuredSerializer<PostAddress
                 ..add(serializers.serialize(object.type,
                     specifiedType: const FullType(AddressTypeEnum)));
         }
-        if (object.fromType != null) {
-            result
-                ..add(r'fromType')
-                ..add(serializers.serialize(object.fromType,
-                    specifiedType: const FullType(FromTypeEnum)));
-        }
         if (object.externalCode != null) {
             result
                 ..add(r'externalCode')
@@ -338,11 +326,6 @@ class _$PostAddressRequestSerializer implements StructuredSerializer<PostAddress
                     final valueDes = serializers.deserialize(value,
                         specifiedType: const FullType(AddressTypeEnum)) as AddressTypeEnum;
                     result.type = valueDes;
-                    break;
-                case r'fromType':
-                    final valueDes = serializers.deserialize(value,
-                        specifiedType: const FullType(FromTypeEnum)) as FromTypeEnum;
-                    result.fromType = valueDes;
                     break;
                 case r'externalCode':
                     final valueDes = serializers.deserialize(value,

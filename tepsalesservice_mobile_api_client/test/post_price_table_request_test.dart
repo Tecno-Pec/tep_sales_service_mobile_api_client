@@ -37,11 +37,6 @@ void main() {
       // TODO
     });
 
-    // String paymentConditionId
-    test('to test the property `paymentConditionId`', () async {
-      // TODO
-    });
-
     // TablePriceOperationTypeEnum operationType
     test('to test the property `operationType`', () async {
       // TODO

@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ReasonCancel id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7ceb1c5b-a3b0-4bac-971f-e93fb465c4ce']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '868c8ec8-56f3-42ab-aadc-dfc9d5f24672']
 
 ### Return type
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bc08a1da-e5b4-4e55-8688-f29f22172fc3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dc382860-123c-47c6-b90b-34408714e3f4']
 
 ### Return type
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ReasonCancel id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ba0c8a2c-a1ef-49f7-a541-326cfd26e53b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'edf131c2-8e73-4734-9d56-af8edd97a164']
 
 ### Return type
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
  **id** | **String**| ReasonCancel id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8288a639-81c1-4c5d-b9b6-65e77b07078b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bf97f46e-3166-4340-b23b-048fa45faf7a']
 
 ### Return type
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ReasonCancel Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'daeee5b0-2730-49e2-be6b-f8cdf88e4bc2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '986bcbbc-77c3-4006-a39e-e582bc9ed11f']
  **putReasonCancelRequest** | [**PutReasonCancelRequest**](PutReasonCancelRequest.md)| ReasonCancel to update | [optional] 
 
 ### Return type
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cb8ae897-c0ce-404c-95bd-9a25d69739e0']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c77cfd09-1727-40ef-b98e-57193e9de5ab']
 
 ### Return type
 
@@ -360,7 +360,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '23fda426-98dd-4de6-b7bc-c46049b9a61e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4ee6f8a5-907b-4753-8418-18a69ebc642e']
  **postReasonCancelRequest** | [**PostReasonCancelRequest**](PostReasonCancelRequest.md)| ReasonCancel to create | [optional] 
 
 ### Return type

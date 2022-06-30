@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Product id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bde5a996-c724-4711-91b3-dbe9155ad101']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0d7ef6a5-b6a8-4ff2-8483-765d80ebae81']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1ProductsAllGet**
-> BuiltList<GetAllProductResponse> tepsalesV1ProductsAllGet(name, description, productLineId, productGroupId, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllProductResponse> tepsalesV1ProductsAllGet(externalCode, name, description, productLineId, productGroupId, limit, sort, xApiKey, xCsrfToken)
 
 Get All Product by filter
 
@@ -81,6 +81,7 @@ import 'package:tepsalesservice_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = TepsalesserviceMobileApiClient().getProductApi();
+final String externalCode = externalCode_example; // String | 
 final String name = name_example; // String | 
 final String description = description_example; // String | 
 final String productLineId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -91,7 +92,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1ProductsAllGet(name, description, productLineId, productGroupId, limit, sort, xApiKey, xCsrfToken);
+    final response = api.tepsalesV1ProductsAllGet(externalCode, name, description, productLineId, productGroupId, limit, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ProductApi->tepsalesV1ProductsAllGet: $e\n');
@@ -102,6 +103,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **externalCode** | **String**|  | [optional] 
  **name** | **String**|  | [optional] 
  **description** | **String**|  | [optional] 
  **productLineId** | **String**|  | [optional] 
@@ -109,7 +111,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bcf66860-b5b4-41d4-b9c3-fd4312d41d1f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '374538db-1081-435c-8fb9-f56ee3263a57']
 
 ### Return type
 
@@ -157,7 +159,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Product id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '55571f48-688f-485a-b868-680331b432d0']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ba633e26-e345-48fb-9b48-a67c94fef5cd']
 
 ### Return type
 
@@ -209,7 +211,7 @@ Name | Type | Description  | Notes
  **id** | **String**| Product id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '07c5e0ab-1a22-4095-92d7-57f075e3e31c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6b5580ae-6eff-4c5f-b9c4-4a8d6e9054b9']
 
 ### Return type
 
@@ -258,7 +260,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Product Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ead8dbe9-9881-43db-88e6-fb76afecfc6e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '785659b4-b372-4652-8a3b-24ecf2f43bd2']
  **putProductRequest** | [**PutProductRequest**](PutProductRequest.md)| Product to update | [optional] 
 
 ### Return type
@@ -277,7 +279,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1ProductsPagedGet**
-> GetAllPagedProductResponse tepsalesV1ProductsPagedGet(code, name, description, productLineId, productGroupId, page, pageSize, sort, xApiKey, xCsrfToken)
+> GetAllPagedProductResponse tepsalesV1ProductsPagedGet(externalCode, name, description, productLineId, productGroupId, page, pageSize, sort, xApiKey, xCsrfToken)
 
 Get All Product by filter with pagination
 
@@ -290,7 +292,7 @@ import 'package:tepsalesservice_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = TepsalesserviceMobileApiClient().getProductApi();
-final String code = code_example; // String | 
+final String externalCode = externalCode_example; // String | 
 final String name = name_example; // String | 
 final String description = description_example; // String | 
 final String productLineId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -302,7 +304,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1ProductsPagedGet(code, name, description, productLineId, productGroupId, page, pageSize, sort, xApiKey, xCsrfToken);
+    final response = api.tepsalesV1ProductsPagedGet(externalCode, name, description, productLineId, productGroupId, page, pageSize, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ProductApi->tepsalesV1ProductsPagedGet: $e\n');
@@ -313,7 +315,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **code** | **String**|  | [optional] 
+ **externalCode** | **String**|  | [optional] 
  **name** | **String**|  | [optional] 
  **description** | **String**|  | [optional] 
  **productLineId** | **String**|  | [optional] 
@@ -322,7 +324,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'da5dcdcc-d5fb-4a1e-9c2f-b4855d6c010a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '331e2f33-326b-48c0-950e-1bcb140f740b']
 
 ### Return type
 
@@ -370,7 +372,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5be1326d-3807-4bf9-87b3-367f1dcd9f37']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '98a733de-ec63-46a2-8b0f-48fa82850119']
  **postProductRequest** | [**PostProductRequest**](PostProductRequest.md)| Product to create | [optional] 
 
 ### Return type

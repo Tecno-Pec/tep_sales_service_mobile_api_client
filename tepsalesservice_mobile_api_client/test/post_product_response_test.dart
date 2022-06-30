@@ -32,18 +32,23 @@ void main() {
       // TODO
     });
 
-    // BuiltList<ProductPackage> productPackages
-    test('to test the property `productPackages`', () async {
+    // String productGroupId
+    test('to test the property `productGroupId`', () async {
       // TODO
     });
 
-    // ProductFamilyEnum family
-    test('to test the property `family`', () async {
+    // String productLineId
+    test('to test the property `productLineId`', () async {
       // TODO
     });
 
-    // String code
-    test('to test the property `code`', () async {
+    // double weightkilograms
+    test('to test the property `weightkilograms`', () async {
+      // TODO
+    });
+
+    // String externalCode
+    test('to test the property `externalCode`', () async {
       // TODO
     });
 
@@ -54,21 +59,6 @@ void main() {
 
     // String description
     test('to test the property `description`', () async {
-      // TODO
-    });
-
-    // BuiltList<ProductPrice> prices
-    test('to test the property `prices`', () async {
-      // TODO
-    });
-
-    // BuiltList<ProductDiscountRule> discountRules
-    test('to test the property `discountRules`', () async {
-      // TODO
-    });
-
-    // double discountCommission
-    test('to test the property `discountCommission`', () async {
       // TODO
     });
 

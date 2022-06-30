@@ -16,14 +16,7 @@ void main() {
 
     // Get All Product by filter
     //
-    //Future<GetAllLastCatalogVersionResponse> tepsalesV1ProductsAllCatalogVersionCatalogVersionGet(int catalogVersion, { String xApiKey, String xCsrfToken }) async
-    test('test tepsalesV1ProductsAllCatalogVersionCatalogVersionGet', () async {
-      // TODO
-    });
-
-    // Get All Product by filter
-    //
-    //Future<BuiltList<GetAllProductResponse>> tepsalesV1ProductsAllGet({ ProductFamilyEnum family, String name, String description, String catalogId, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<GetAllProductResponse>> tepsalesV1ProductsAllGet({ String externalCode, String name, String description, String productLineId, String productGroupId, int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1ProductsAllGet', () async {
       // TODO
     });
@@ -53,7 +46,7 @@ void main() {
 
     // Get All Product by filter with pagination
     //
-    //Future<GetAllPagedProductResponse> tepsalesV1ProductsPagedGet({ ProductFamilyEnum family, String code, String name, String description, String catalogId, int page, int pageSize, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<GetAllPagedProductResponse> tepsalesV1ProductsPagedGet({ String externalCode, String name, String description, String productLineId, String productGroupId, int page, int pageSize, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1ProductsPagedGet', () async {
       // TODO
     });
