@@ -1,0 +1,250 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'put_discount_rule_request.dart';
+
+// **************************************************************************
+// BuiltValueGenerator
+// **************************************************************************
+
+class _$PutDiscountRuleRequest extends PutDiscountRuleRequest {
+  @override
+  final DateTime? createdAt;
+  @override
+  final DateTime? updatedAt;
+  @override
+  final String? userCreated;
+  @override
+  final String? userUpdated;
+  @override
+  final String? id;
+  @override
+  final DiscountWeightTypeEnum? discountWeightType;
+  @override
+  final double? minQuantity;
+  @override
+  final DiscountTypeEnum? discountType;
+  @override
+  final ReferenceTypeEnum? referenceType;
+  @override
+  final String? referenceId;
+  @override
+  final double? discount;
+  @override
+  final String? externalCode;
+  @override
+  final DiscountRuleStatus? status;
+
+  factory _$PutDiscountRuleRequest(
+          [void Function(PutDiscountRuleRequestBuilder)? updates]) =>
+      (new PutDiscountRuleRequestBuilder()..update(updates)).build();
+
+  _$PutDiscountRuleRequest._(
+      {this.createdAt,
+      this.updatedAt,
+      this.userCreated,
+      this.userUpdated,
+      this.id,
+      this.discountWeightType,
+      this.minQuantity,
+      this.discountType,
+      this.referenceType,
+      this.referenceId,
+      this.discount,
+      this.externalCode,
+      this.status})
+      : super._();
+
+  @override
+  PutDiscountRuleRequest rebuild(
+          void Function(PutDiscountRuleRequestBuilder) updates) =>
+      (toBuilder()..update(updates)).build();
+
+  @override
+  PutDiscountRuleRequestBuilder toBuilder() =>
+      new PutDiscountRuleRequestBuilder()..replace(this);
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(other, this)) return true;
+    return other is PutDiscountRuleRequest &&
+        createdAt == other.createdAt &&
+        updatedAt == other.updatedAt &&
+        userCreated == other.userCreated &&
+        userUpdated == other.userUpdated &&
+        id == other.id &&
+        discountWeightType == other.discountWeightType &&
+        minQuantity == other.minQuantity &&
+        discountType == other.discountType &&
+        referenceType == other.referenceType &&
+        referenceId == other.referenceId &&
+        discount == other.discount &&
+        externalCode == other.externalCode &&
+        status == other.status;
+  }
+
+  @override
+  int get hashCode {
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc($jc(0, createdAt.hashCode),
+                                                    updatedAt.hashCode),
+                                                userCreated.hashCode),
+                                            userUpdated.hashCode),
+                                        id.hashCode),
+                                    discountWeightType.hashCode),
+                                minQuantity.hashCode),
+                            discountType.hashCode),
+                        referenceType.hashCode),
+                    referenceId.hashCode),
+                discount.hashCode),
+            externalCode.hashCode),
+        status.hashCode));
+  }
+
+  @override
+  String toString() {
+    return (newBuiltValueToStringHelper('PutDiscountRuleRequest')
+          ..add('createdAt', createdAt)
+          ..add('updatedAt', updatedAt)
+          ..add('userCreated', userCreated)
+          ..add('userUpdated', userUpdated)
+          ..add('id', id)
+          ..add('discountWeightType', discountWeightType)
+          ..add('minQuantity', minQuantity)
+          ..add('discountType', discountType)
+          ..add('referenceType', referenceType)
+          ..add('referenceId', referenceId)
+          ..add('discount', discount)
+          ..add('externalCode', externalCode)
+          ..add('status', status))
+        .toString();
+  }
+}
+
+class PutDiscountRuleRequestBuilder
+    implements Builder<PutDiscountRuleRequest, PutDiscountRuleRequestBuilder> {
+  _$PutDiscountRuleRequest? _$v;
+
+  DateTime? _createdAt;
+  DateTime? get createdAt => _$this._createdAt;
+  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
+
+  DateTime? _updatedAt;
+  DateTime? get updatedAt => _$this._updatedAt;
+  set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
+
+  String? _userCreated;
+  String? get userCreated => _$this._userCreated;
+  set userCreated(String? userCreated) => _$this._userCreated = userCreated;
+
+  String? _userUpdated;
+  String? get userUpdated => _$this._userUpdated;
+  set userUpdated(String? userUpdated) => _$this._userUpdated = userUpdated;
+
+  String? _id;
+  String? get id => _$this._id;
+  set id(String? id) => _$this._id = id;
+
+  DiscountWeightTypeEnum? _discountWeightType;
+  DiscountWeightTypeEnum? get discountWeightType => _$this._discountWeightType;
+  set discountWeightType(DiscountWeightTypeEnum? discountWeightType) =>
+      _$this._discountWeightType = discountWeightType;
+
+  double? _minQuantity;
+  double? get minQuantity => _$this._minQuantity;
+  set minQuantity(double? minQuantity) => _$this._minQuantity = minQuantity;
+
+  DiscountTypeEnum? _discountType;
+  DiscountTypeEnum? get discountType => _$this._discountType;
+  set discountType(DiscountTypeEnum? discountType) =>
+      _$this._discountType = discountType;
+
+  ReferenceTypeEnum? _referenceType;
+  ReferenceTypeEnum? get referenceType => _$this._referenceType;
+  set referenceType(ReferenceTypeEnum? referenceType) =>
+      _$this._referenceType = referenceType;
+
+  String? _referenceId;
+  String? get referenceId => _$this._referenceId;
+  set referenceId(String? referenceId) => _$this._referenceId = referenceId;
+
+  double? _discount;
+  double? get discount => _$this._discount;
+  set discount(double? discount) => _$this._discount = discount;
+
+  String? _externalCode;
+  String? get externalCode => _$this._externalCode;
+  set externalCode(String? externalCode) => _$this._externalCode = externalCode;
+
+  DiscountRuleStatus? _status;
+  DiscountRuleStatus? get status => _$this._status;
+  set status(DiscountRuleStatus? status) => _$this._status = status;
+
+  PutDiscountRuleRequestBuilder() {
+    PutDiscountRuleRequest._defaults(this);
+  }
+
+  PutDiscountRuleRequestBuilder get _$this {
+    final $v = _$v;
+    if ($v != null) {
+      _createdAt = $v.createdAt;
+      _updatedAt = $v.updatedAt;
+      _userCreated = $v.userCreated;
+      _userUpdated = $v.userUpdated;
+      _id = $v.id;
+      _discountWeightType = $v.discountWeightType;
+      _minQuantity = $v.minQuantity;
+      _discountType = $v.discountType;
+      _referenceType = $v.referenceType;
+      _referenceId = $v.referenceId;
+      _discount = $v.discount;
+      _externalCode = $v.externalCode;
+      _status = $v.status;
+      _$v = null;
+    }
+    return this;
+  }
+
+  @override
+  void replace(PutDiscountRuleRequest other) {
+    ArgumentError.checkNotNull(other, 'other');
+    _$v = other as _$PutDiscountRuleRequest;
+  }
+
+  @override
+  void update(void Function(PutDiscountRuleRequestBuilder)? updates) {
+    if (updates != null) updates(this);
+  }
+
+  @override
+  _$PutDiscountRuleRequest build() {
+    final _$result = _$v ??
+        new _$PutDiscountRuleRequest._(
+            createdAt: createdAt,
+            updatedAt: updatedAt,
+            userCreated: userCreated,
+            userUpdated: userUpdated,
+            id: id,
+            discountWeightType: discountWeightType,
+            minQuantity: minQuantity,
+            discountType: discountType,
+            referenceType: referenceType,
+            referenceId: referenceId,
+            discount: discount,
+            externalCode: externalCode,
+            status: status);
+    replace(_$result);
+    return _$result;
+  }
+}
+
+// ignore_for_file: always_put_control_body_on_new_line,always_specify_types,annotate_overrides,avoid_annotating_with_dynamic,avoid_as,avoid_catches_without_on_clauses,avoid_returning_this,deprecated_member_use_from_same_package,lines_longer_than_80_chars,omit_local_variable_types,prefer_expression_function_bodies,sort_constructors_first,test_types_in_equals,unnecessary_const,unnecessary_new
