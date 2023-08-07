@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **rowCount** | **int** |  | [optional] 
 **firstRowOnPage** | **int** |  | [optional] 
 **lastRowOnPage** | **int** |  | [optional] 
-**results** | [**BuiltList&lt;GetAllVehicleTypeResponse&gt;**](GetAllVehicleTypeResponse.md) |  | [optional] 
+**results** | [**List<GetAllVehicleTypeResponse>**](GetAllVehicleTypeResponse.md) |  | [optional] [default to const []]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

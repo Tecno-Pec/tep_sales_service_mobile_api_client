@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getIntegrationConfigApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationConfig id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = IntegrationConfigApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationConfig id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.getByIdIntegrationConfig(id, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.getByIdIntegrationConfig(id, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling IntegrationConfigApi->getByIdIntegrationConfig: $e\n');
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1IntegrationConfigAllGet**
-> BuiltList<GetAllIntegrationConfigResponse> tepsalesV1IntegrationConfigAllGet(model, limit, sort, xApiKey, xCsrfToken)
+> List<GetAllIntegrationConfigResponse> tepsalesV1IntegrationConfigAllGet(model, limit, sort, xApiKey, xCsrfToken)
 
 Get All IntegrationConfig by filter
 
@@ -80,17 +80,17 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getIntegrationConfigApi();
-final JsonObject model = Object; // JsonObject | filter
-final int limit = 56; // int | limit
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = IntegrationConfigApi();
+final model = Object; // Object | filter
+final limit = 56; // int | limit
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1IntegrationConfigAllGet(model, limit, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1IntegrationConfigAllGet(model, limit, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling IntegrationConfigApi->tepsalesV1IntegrationConfigAllGet: $e\n');
 }
 ```
@@ -99,7 +99,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**JsonObject**](.md)| filter | [optional] 
+ **model** | [**Object**](.md)| filter | [optional] 
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;GetAllIntegrationConfigResponse&gt;**](GetAllIntegrationConfigResponse.md)
+[**List<GetAllIntegrationConfigResponse>**](GetAllIntegrationConfigResponse.md)
 
 ### Authorization
 
@@ -133,14 +133,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getIntegrationConfigApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationConfig id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = IntegrationConfigApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationConfig id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1IntegrationConfigIdDelete(id, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1IntegrationConfigIdDelete(id, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling IntegrationConfigApi->tepsalesV1IntegrationConfigIdDelete: $e\n');
 }
 ```
@@ -183,15 +183,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getIntegrationConfigApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationConfig id
-final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = IntegrationConfigApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationConfig id
+final operation = [List<Operation>()]; // List<Operation> | Atributes values
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1IntegrationConfigIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1IntegrationConfigIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling IntegrationConfigApi->tepsalesV1IntegrationConfigIdPatch: $e\n');
 }
 ```
@@ -201,7 +201,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| IntegrationConfig id | 
- **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
+ **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
  **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f0b22db9-d7d8-4354-a9f1-7f464eae0aec']
 
@@ -233,15 +233,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getIntegrationConfigApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationConfig Id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PutIntegrationConfigRequest putIntegrationConfigRequest = ; // PutIntegrationConfigRequest | IntegrationConfig to update
+final api_instance = IntegrationConfigApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationConfig Id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final putIntegrationConfigRequest = PutIntegrationConfigRequest(); // PutIntegrationConfigRequest | IntegrationConfig to update
 
 try {
-    api.tepsalesV1IntegrationConfigIdPut(id, xApiKey, xCsrfToken, putIntegrationConfigRequest);
-} catch on DioError (e) {
+    api_instance.tepsalesV1IntegrationConfigIdPut(id, xApiKey, xCsrfToken, putIntegrationConfigRequest);
+} catch (e) {
     print('Exception when calling IntegrationConfigApi->tepsalesV1IntegrationConfigIdPut: $e\n');
 }
 ```
@@ -283,17 +283,17 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getIntegrationConfigApi();
-final int page = 56; // int | 
-final int pageSize = 56; // int | 
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = IntegrationConfigApi();
+final page = 56; // int | 
+final pageSize = 56; // int | 
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1IntegrationConfigPagedGet(page, pageSize, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1IntegrationConfigPagedGet(page, pageSize, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling IntegrationConfigApi->tepsalesV1IntegrationConfigPagedGet: $e\n');
 }
 ```
@@ -336,15 +336,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getIntegrationConfigApi();
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PostIntegrationConfigRequest postIntegrationConfigRequest = ; // PostIntegrationConfigRequest | IntegrationConfig to create
+final api_instance = IntegrationConfigApi();
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final postIntegrationConfigRequest = PostIntegrationConfigRequest(); // PostIntegrationConfigRequest | IntegrationConfig to create
 
 try {
-    final response = api.tepsalesV1IntegrationConfigPost(xApiKey, xCsrfToken, postIntegrationConfigRequest);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1IntegrationConfigPost(xApiKey, xCsrfToken, postIntegrationConfigRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling IntegrationConfigApi->tepsalesV1IntegrationConfigPost: $e\n');
 }
 ```

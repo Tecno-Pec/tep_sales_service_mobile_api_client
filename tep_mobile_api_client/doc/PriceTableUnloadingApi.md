@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getPriceTableUnloadingApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableUnloading id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = PriceTableUnloadingApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableUnloading id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.getByIdPriceTableUnloading(id, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.getByIdPriceTableUnloading(id, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling PriceTableUnloadingApi->getByIdPriceTableUnloading: $e\n');
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1PricetableunloadingAllGet**
-> BuiltList<GetAllPriceTableUnloadingResponse> tepsalesV1PricetableunloadingAllGet(productGroupId, paymentConditionId, status, externalCode, limit, sort, xApiKey, xCsrfToken)
+> List<GetAllPriceTableUnloadingResponse> tepsalesV1PricetableunloadingAllGet(productGroupId, paymentConditionId, status, externalCode, limit, sort, xApiKey, xCsrfToken)
 
 Get All PriceTableUnloading by filter
 
@@ -80,20 +80,20 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getPriceTableUnloadingApi();
-final String productGroupId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String paymentConditionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final PriceTableUnloadingStatus status = ; // PriceTableUnloadingStatus | 
-final String externalCode = externalCode_example; // String | 
-final int limit = 56; // int | limit
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = PriceTableUnloadingApi();
+final productGroupId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final paymentConditionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final status = ; // PriceTableUnloadingStatus | 
+final externalCode = externalCode_example; // String | 
+final limit = 56; // int | limit
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1PricetableunloadingAllGet(productGroupId, paymentConditionId, status, externalCode, limit, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1PricetableunloadingAllGet(productGroupId, paymentConditionId, status, externalCode, limit, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling PriceTableUnloadingApi->tepsalesV1PricetableunloadingAllGet: $e\n');
 }
 ```
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;GetAllPriceTableUnloadingResponse&gt;**](GetAllPriceTableUnloadingResponse.md)
+[**List<GetAllPriceTableUnloadingResponse>**](GetAllPriceTableUnloadingResponse.md)
 
 ### Authorization
 
@@ -139,14 +139,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getPriceTableUnloadingApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableUnloading id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = PriceTableUnloadingApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableUnloading id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1PricetableunloadingIdDelete(id, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1PricetableunloadingIdDelete(id, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling PriceTableUnloadingApi->tepsalesV1PricetableunloadingIdDelete: $e\n');
 }
 ```
@@ -189,15 +189,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getPriceTableUnloadingApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableUnloading id
-final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = PriceTableUnloadingApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableUnloading id
+final operation = [List<Operation>()]; // List<Operation> | Atributes values
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1PricetableunloadingIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1PricetableunloadingIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling PriceTableUnloadingApi->tepsalesV1PricetableunloadingIdPatch: $e\n');
 }
 ```
@@ -207,7 +207,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PriceTableUnloading id | 
- **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
+ **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
  **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '48cdd04f-30dc-4f85-9821-7d39858d0a6b']
 
@@ -239,15 +239,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getPriceTableUnloadingApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableUnloading Id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PutPriceTableUnloadingRequest putPriceTableUnloadingRequest = ; // PutPriceTableUnloadingRequest | PriceTableUnloading to update
+final api_instance = PriceTableUnloadingApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableUnloading Id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final putPriceTableUnloadingRequest = PutPriceTableUnloadingRequest(); // PutPriceTableUnloadingRequest | PriceTableUnloading to update
 
 try {
-    api.tepsalesV1PricetableunloadingIdPut(id, xApiKey, xCsrfToken, putPriceTableUnloadingRequest);
-} catch on DioError (e) {
+    api_instance.tepsalesV1PricetableunloadingIdPut(id, xApiKey, xCsrfToken, putPriceTableUnloadingRequest);
+} catch (e) {
     print('Exception when calling PriceTableUnloadingApi->tepsalesV1PricetableunloadingIdPut: $e\n');
 }
 ```
@@ -289,21 +289,21 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getPriceTableUnloadingApi();
-final String productGroupId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String paymentConditionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final PriceTableUnloadingStatus status = ; // PriceTableUnloadingStatus | 
-final String externalCode = externalCode_example; // String | 
-final int page = 56; // int | 
-final int pageSize = 56; // int | 
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = PriceTableUnloadingApi();
+final productGroupId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final paymentConditionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final status = ; // PriceTableUnloadingStatus | 
+final externalCode = externalCode_example; // String | 
+final page = 56; // int | 
+final pageSize = 56; // int | 
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1PricetableunloadingPagedGet(productGroupId, paymentConditionId, status, externalCode, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1PricetableunloadingPagedGet(productGroupId, paymentConditionId, status, externalCode, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling PriceTableUnloadingApi->tepsalesV1PricetableunloadingPagedGet: $e\n');
 }
 ```
@@ -350,15 +350,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getPriceTableUnloadingApi();
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PostPriceTableUnloadingRequest postPriceTableUnloadingRequest = ; // PostPriceTableUnloadingRequest | PriceTableUnloading to create
+final api_instance = PriceTableUnloadingApi();
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final postPriceTableUnloadingRequest = PostPriceTableUnloadingRequest(); // PostPriceTableUnloadingRequest | PriceTableUnloading to create
 
 try {
-    final response = api.tepsalesV1PricetableunloadingPost(xApiKey, xCsrfToken, postPriceTableUnloadingRequest);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1PricetableunloadingPost(xApiKey, xCsrfToken, postPriceTableUnloadingRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling PriceTableUnloadingApi->tepsalesV1PricetableunloadingPost: $e\n');
 }
 ```

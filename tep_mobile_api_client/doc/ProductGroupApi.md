@@ -32,15 +32,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductGroupApi();
-final String externalCode = externalCode_example; // String | ProductGroup external code
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = ProductGroupApi();
+final externalCode = externalCode_example; // String | ProductGroup external code
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.getByExternalCodeProductGroupController(externalCode, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.getByExternalCodeProductGroupController(externalCode, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling ProductGroupApi->getByExternalCodeProductGroupController: $e\n');
 }
 ```
@@ -81,15 +81,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductGroupApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductGroup id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = ProductGroupApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductGroup id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.getByIdProductGroup(id, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.getByIdProductGroup(id, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling ProductGroupApi->getByIdProductGroup: $e\n');
 }
 ```
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1ProductGroupsAllGet**
-> BuiltList<GetAllProductGroupResponse> tepsalesV1ProductGroupsAllGet(name, externalCode, status, limit, sort, xApiKey, xCsrfToken)
+> List<GetAllProductGroupResponse> tepsalesV1ProductGroupsAllGet(name, externalCode, status, limit, sort, xApiKey, xCsrfToken)
 
 Get All ProductGroup by filter
 
@@ -130,19 +130,19 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductGroupApi();
-final String name = name_example; // String | 
-final String externalCode = externalCode_example; // String | 
-final ProductGroupStatus status = ; // ProductGroupStatus | 
-final int limit = 56; // int | limit
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = ProductGroupApi();
+final name = name_example; // String | 
+final externalCode = externalCode_example; // String | 
+final status = ; // ProductGroupStatus | 
+final limit = 56; // int | limit
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1ProductGroupsAllGet(name, externalCode, status, limit, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1ProductGroupsAllGet(name, externalCode, status, limit, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling ProductGroupApi->tepsalesV1ProductGroupsAllGet: $e\n');
 }
 ```
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;GetAllProductGroupResponse&gt;**](GetAllProductGroupResponse.md)
+[**List<GetAllProductGroupResponse>**](GetAllProductGroupResponse.md)
 
 ### Authorization
 
@@ -187,14 +187,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductGroupApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductGroup id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = ProductGroupApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductGroup id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1ProductGroupsIdDelete(id, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1ProductGroupsIdDelete(id, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling ProductGroupApi->tepsalesV1ProductGroupsIdDelete: $e\n');
 }
 ```
@@ -237,15 +237,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductGroupApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductGroup id
-final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = ProductGroupApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductGroup id
+final operation = [List<Operation>()]; // List<Operation> | Atributes values
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1ProductGroupsIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1ProductGroupsIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling ProductGroupApi->tepsalesV1ProductGroupsIdPatch: $e\n');
 }
 ```
@@ -255,7 +255,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ProductGroup id | 
- **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
+ **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
  **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cd586030-594f-4d77-b434-4855863fd083']
 
@@ -287,15 +287,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductGroupApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductGroup Id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PutProductGroupRequest putProductGroupRequest = ; // PutProductGroupRequest | ProductGroup to update
+final api_instance = ProductGroupApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductGroup Id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final putProductGroupRequest = PutProductGroupRequest(); // PutProductGroupRequest | ProductGroup to update
 
 try {
-    api.tepsalesV1ProductGroupsIdPut(id, xApiKey, xCsrfToken, putProductGroupRequest);
-} catch on DioError (e) {
+    api_instance.tepsalesV1ProductGroupsIdPut(id, xApiKey, xCsrfToken, putProductGroupRequest);
+} catch (e) {
     print('Exception when calling ProductGroupApi->tepsalesV1ProductGroupsIdPut: $e\n');
 }
 ```
@@ -337,20 +337,20 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductGroupApi();
-final String name = name_example; // String | 
-final String externalCode = externalCode_example; // String | 
-final ProductGroupStatus status = ; // ProductGroupStatus | 
-final int page = 56; // int | 
-final int pageSize = 56; // int | 
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = ProductGroupApi();
+final name = name_example; // String | 
+final externalCode = externalCode_example; // String | 
+final status = ; // ProductGroupStatus | 
+final page = 56; // int | 
+final pageSize = 56; // int | 
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1ProductGroupsPagedGet(name, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1ProductGroupsPagedGet(name, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling ProductGroupApi->tepsalesV1ProductGroupsPagedGet: $e\n');
 }
 ```
@@ -396,15 +396,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductGroupApi();
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PostProductGroupRequest postProductGroupRequest = ; // PostProductGroupRequest | ProductGroup to create
+final api_instance = ProductGroupApi();
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final postProductGroupRequest = PostProductGroupRequest(); // PostProductGroupRequest | ProductGroup to create
 
 try {
-    final response = api.tepsalesV1ProductGroupsPost(xApiKey, xCsrfToken, postProductGroupRequest);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1ProductGroupsPost(xApiKey, xCsrfToken, postProductGroupRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling ProductGroupApi->tepsalesV1ProductGroupsPost: $e\n');
 }
 ```

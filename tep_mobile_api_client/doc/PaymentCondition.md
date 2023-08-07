@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **updatedAt** | [**DateTime**](DateTime.md) |  | [optional] 
 **userCreated** | **String** |  | [optional] 
 **userUpdated** | **String** |  | [optional] 
-**version** | [**JsonObject**](.md) |  | [optional] 
+**version** | [**Object**](.md) |  | [optional] 
 **companyId** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **externalCode** | **String** |  | [optional] 

@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getTemplateApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Template id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = TemplateApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Template id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.getByIdTemplate(id, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.getByIdTemplate(id, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling TemplateApi->getByIdTemplate: $e\n');
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1TemplatesAllGet**
-> BuiltList<GetAllTemplateResponse> tepsalesV1TemplatesAllGet(name, limit, sort, xApiKey, xCsrfToken)
+> List<GetAllTemplateResponse> tepsalesV1TemplatesAllGet(name, limit, sort, xApiKey, xCsrfToken)
 
 Get All Template by filter
 
@@ -80,17 +80,17 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getTemplateApi();
-final String name = name_example; // String | 
-final int limit = 56; // int | limit
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = TemplateApi();
+final name = name_example; // String | 
+final limit = 56; // int | limit
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1TemplatesAllGet(name, limit, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1TemplatesAllGet(name, limit, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling TemplateApi->tepsalesV1TemplatesAllGet: $e\n');
 }
 ```
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;GetAllTemplateResponse&gt;**](GetAllTemplateResponse.md)
+[**List<GetAllTemplateResponse>**](GetAllTemplateResponse.md)
 
 ### Authorization
 
@@ -133,14 +133,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getTemplateApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Template id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = TemplateApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Template id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1TemplatesIdDelete(id, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1TemplatesIdDelete(id, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling TemplateApi->tepsalesV1TemplatesIdDelete: $e\n');
 }
 ```
@@ -183,15 +183,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getTemplateApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Template id
-final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = TemplateApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Template id
+final operation = [List<Operation>()]; // List<Operation> | Atributes values
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1TemplatesIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1TemplatesIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling TemplateApi->tepsalesV1TemplatesIdPatch: $e\n');
 }
 ```
@@ -201,7 +201,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Template id | 
- **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
+ **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
  **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cf94a485-4a4b-4210-8530-77f15fb17935']
 
@@ -233,15 +233,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getTemplateApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Template Id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PutTemplateRequest putTemplateRequest = ; // PutTemplateRequest | Template to update
+final api_instance = TemplateApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Template Id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final putTemplateRequest = PutTemplateRequest(); // PutTemplateRequest | Template to update
 
 try {
-    api.tepsalesV1TemplatesIdPut(id, xApiKey, xCsrfToken, putTemplateRequest);
-} catch on DioError (e) {
+    api_instance.tepsalesV1TemplatesIdPut(id, xApiKey, xCsrfToken, putTemplateRequest);
+} catch (e) {
     print('Exception when calling TemplateApi->tepsalesV1TemplatesIdPut: $e\n');
 }
 ```
@@ -283,18 +283,18 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getTemplateApi();
-final String name = name_example; // String | 
-final int page = 56; // int | 
-final int pageSize = 56; // int | 
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = TemplateApi();
+final name = name_example; // String | 
+final page = 56; // int | 
+final pageSize = 56; // int | 
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1TemplatesPagedGet(name, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1TemplatesPagedGet(name, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling TemplateApi->tepsalesV1TemplatesPagedGet: $e\n');
 }
 ```
@@ -338,15 +338,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getTemplateApi();
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PostTemplateRequest postTemplateRequest = ; // PostTemplateRequest | Template to create
+final api_instance = TemplateApi();
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final postTemplateRequest = PostTemplateRequest(); // PostTemplateRequest | Template to create
 
 try {
-    final response = api.tepsalesV1TemplatesPost(xApiKey, xCsrfToken, postTemplateRequest);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1TemplatesPost(xApiKey, xCsrfToken, postTemplateRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling TemplateApi->tepsalesV1TemplatesPost: $e\n');
 }
 ```

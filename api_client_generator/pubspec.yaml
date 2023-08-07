@@ -9,12 +9,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  openapi_generator_annotations: ^3.3.0
+  openapi_generator_annotations: ^4.11.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  openapi_generator: ^3.3.0+1
+  openapi_generator: ^4.11.1
   build_runner: ^2.1.7
 # flutter:
 #   uses-material-design: true

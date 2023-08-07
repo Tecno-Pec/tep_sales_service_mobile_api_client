@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getDiscountRuleApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DiscountRule id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = DiscountRuleApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DiscountRule id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.getByIdDiscountRule(id, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.getByIdDiscountRule(id, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling DiscountRuleApi->getByIdDiscountRule: $e\n');
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1DiscountRulesAllGet**
-> BuiltList<GetAllDiscountRuleResponse> tepsalesV1DiscountRulesAllGet(discountWeightType, discountType, referenceType, referenceId, externalCode, status, limit, sort, xApiKey, xCsrfToken)
+> List<GetAllDiscountRuleResponse> tepsalesV1DiscountRulesAllGet(discountWeightType, discountType, referenceType, referenceId, externalCode, status, limit, sort, xApiKey, xCsrfToken)
 
 Get All DiscountRule by filter
 
@@ -80,22 +80,22 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getDiscountRuleApi();
-final DiscountWeightTypeEnum discountWeightType = ; // DiscountWeightTypeEnum | 
-final DiscountTypeEnum discountType = ; // DiscountTypeEnum | 
-final ReferenceTypeEnum referenceType = ; // ReferenceTypeEnum | 
-final String referenceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String externalCode = externalCode_example; // String | 
-final DiscountRuleStatus status = ; // DiscountRuleStatus | 
-final int limit = 56; // int | limit
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = DiscountRuleApi();
+final discountWeightType = ; // DiscountWeightTypeEnum | 
+final discountType = ; // DiscountTypeEnum | 
+final referenceType = ; // ReferenceTypeEnum | 
+final referenceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final externalCode = externalCode_example; // String | 
+final status = ; // DiscountRuleStatus | 
+final limit = 56; // int | limit
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1DiscountRulesAllGet(discountWeightType, discountType, referenceType, referenceId, externalCode, status, limit, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1DiscountRulesAllGet(discountWeightType, discountType, referenceType, referenceId, externalCode, status, limit, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling DiscountRuleApi->tepsalesV1DiscountRulesAllGet: $e\n');
 }
 ```
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;GetAllDiscountRuleResponse&gt;**](GetAllDiscountRuleResponse.md)
+[**List<GetAllDiscountRuleResponse>**](GetAllDiscountRuleResponse.md)
 
 ### Authorization
 
@@ -143,14 +143,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getDiscountRuleApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DiscountRule id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = DiscountRuleApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DiscountRule id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1DiscountRulesIdDelete(id, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1DiscountRulesIdDelete(id, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling DiscountRuleApi->tepsalesV1DiscountRulesIdDelete: $e\n');
 }
 ```
@@ -193,15 +193,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getDiscountRuleApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DiscountRule id
-final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = DiscountRuleApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DiscountRule id
+final operation = [List<Operation>()]; // List<Operation> | Atributes values
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1DiscountRulesIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1DiscountRulesIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling DiscountRuleApi->tepsalesV1DiscountRulesIdPatch: $e\n');
 }
 ```
@@ -211,7 +211,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DiscountRule id | 
- **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
+ **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
  **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd0e3eefb-7e25-41a3-b439-1674aee6cb4b']
 
@@ -243,15 +243,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getDiscountRuleApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DiscountRule Id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PutDiscountRuleRequest putDiscountRuleRequest = ; // PutDiscountRuleRequest | DiscountRule to update
+final api_instance = DiscountRuleApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DiscountRule Id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final putDiscountRuleRequest = PutDiscountRuleRequest(); // PutDiscountRuleRequest | DiscountRule to update
 
 try {
-    api.tepsalesV1DiscountRulesIdPut(id, xApiKey, xCsrfToken, putDiscountRuleRequest);
-} catch on DioError (e) {
+    api_instance.tepsalesV1DiscountRulesIdPut(id, xApiKey, xCsrfToken, putDiscountRuleRequest);
+} catch (e) {
     print('Exception when calling DiscountRuleApi->tepsalesV1DiscountRulesIdPut: $e\n');
 }
 ```
@@ -293,23 +293,23 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getDiscountRuleApi();
-final DiscountWeightTypeEnum discountWeightType = ; // DiscountWeightTypeEnum | 
-final DiscountTypeEnum discountType = ; // DiscountTypeEnum | 
-final ReferenceTypeEnum referenceType = ; // ReferenceTypeEnum | 
-final String referenceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String externalCode = externalCode_example; // String | 
-final DiscountRuleStatus status = ; // DiscountRuleStatus | 
-final int page = 56; // int | 
-final int pageSize = 56; // int | 
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = DiscountRuleApi();
+final discountWeightType = ; // DiscountWeightTypeEnum | 
+final discountType = ; // DiscountTypeEnum | 
+final referenceType = ; // ReferenceTypeEnum | 
+final referenceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final externalCode = externalCode_example; // String | 
+final status = ; // DiscountRuleStatus | 
+final page = 56; // int | 
+final pageSize = 56; // int | 
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1DiscountRulesPagedGet(discountWeightType, discountType, referenceType, referenceId, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1DiscountRulesPagedGet(discountWeightType, discountType, referenceType, referenceId, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling DiscountRuleApi->tepsalesV1DiscountRulesPagedGet: $e\n');
 }
 ```
@@ -358,15 +358,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getDiscountRuleApi();
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PostDiscountRuleRequest postDiscountRuleRequest = ; // PostDiscountRuleRequest | DiscountRule to create
+final api_instance = DiscountRuleApi();
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final postDiscountRuleRequest = PostDiscountRuleRequest(); // PostDiscountRuleRequest | DiscountRule to create
 
 try {
-    final response = api.tepsalesV1DiscountRulesPost(xApiKey, xCsrfToken, postDiscountRuleRequest);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1DiscountRulesPost(xApiKey, xCsrfToken, postDiscountRuleRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling DiscountRuleApi->tepsalesV1DiscountRulesPost: $e\n');
 }
 ```

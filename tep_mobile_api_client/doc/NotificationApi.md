@@ -30,15 +30,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getNotificationApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = NotificationApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.getByIdNotification(id, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.getByIdNotification(id, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling NotificationApi->getByIdNotification: $e\n');
 }
 ```
@@ -79,23 +79,23 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getNotificationApi();
-final String message = message_example; // String | 
-final NotificationType type = ; // NotificationType | 
-final String userPhone = userPhone_example; // String | 
-final String userName = userName_example; // String | 
-final String userEmail = userEmail_example; // String | 
-final String userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final int page = 56; // int | 
-final int pageSize = 56; // int | 
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = NotificationApi();
+final message = message_example; // String | 
+final type = ; // NotificationType | 
+final userPhone = userPhone_example; // String | 
+final userName = userName_example; // String | 
+final userEmail = userEmail_example; // String | 
+final userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final page = 56; // int | 
+final pageSize = 56; // int | 
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.yes4trackV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.yes4trackV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsGet: $e\n');
 }
 ```
@@ -144,14 +144,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getNotificationApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = NotificationApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.yes4trackV1NotificationsIdDelete(id, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.yes4trackV1NotificationsIdDelete(id, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsIdDelete: $e\n');
 }
 ```
@@ -194,15 +194,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getNotificationApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
-final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = NotificationApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
+final operation = [List<Operation>()]; // List<Operation> | Atributes values
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.yes4trackV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.yes4trackV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsIdPatch: $e\n');
 }
 ```
@@ -212,7 +212,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Notification id | 
- **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
+ **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
  **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5fe42129-e035-46cc-9f19-a53bfde2a2ad']
 
@@ -244,15 +244,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getNotificationApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification Id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PutNotificationRequest putNotificationRequest = ; // PutNotificationRequest | Notification to update
+final api_instance = NotificationApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification Id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final putNotificationRequest = PutNotificationRequest(); // PutNotificationRequest | Notification to update
 
 try {
-    api.yes4trackV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest);
-} catch on DioError (e) {
+    api_instance.yes4trackV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest);
+} catch (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsIdPut: $e\n');
 }
 ```
@@ -294,15 +294,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getNotificationApi();
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PostNotificationRequest postNotificationRequest = ; // PostNotificationRequest | Notification to create
+final api_instance = NotificationApi();
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final postNotificationRequest = PostNotificationRequest(); // PostNotificationRequest | Notification to create
 
 try {
-    final response = api.yes4trackV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.yes4trackV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling NotificationApi->yes4trackV1NotificationsPost: $e\n');
 }
 ```

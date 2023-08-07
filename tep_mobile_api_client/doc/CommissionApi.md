@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getCommissionApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Commission id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = CommissionApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Commission id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.getByIdCommission(id, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.getByIdCommission(id, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling CommissionApi->getByIdCommission: $e\n');
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1CommissionsAllGet**
-> BuiltList<GetAllCommissionResponse> tepsalesV1CommissionsAllGet(userId, productId, externalCode, status, limit, sort, xApiKey, xCsrfToken)
+> List<GetAllCommissionResponse> tepsalesV1CommissionsAllGet(userId, productId, externalCode, status, limit, sort, xApiKey, xCsrfToken)
 
 Get All Commission by filter
 
@@ -80,20 +80,20 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getCommissionApi();
-final String userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String productId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String externalCode = externalCode_example; // String | 
-final CommissionStatus status = ; // CommissionStatus | 
-final int limit = 56; // int | limit
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = CommissionApi();
+final userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final productId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final externalCode = externalCode_example; // String | 
+final status = ; // CommissionStatus | 
+final limit = 56; // int | limit
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1CommissionsAllGet(userId, productId, externalCode, status, limit, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1CommissionsAllGet(userId, productId, externalCode, status, limit, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling CommissionApi->tepsalesV1CommissionsAllGet: $e\n');
 }
 ```
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;GetAllCommissionResponse&gt;**](GetAllCommissionResponse.md)
+[**List<GetAllCommissionResponse>**](GetAllCommissionResponse.md)
 
 ### Authorization
 
@@ -139,14 +139,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getCommissionApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Commission id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = CommissionApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Commission id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1CommissionsIdDelete(id, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1CommissionsIdDelete(id, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling CommissionApi->tepsalesV1CommissionsIdDelete: $e\n');
 }
 ```
@@ -189,15 +189,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getCommissionApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Commission id
-final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = CommissionApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Commission id
+final operation = [List<Operation>()]; // List<Operation> | Atributes values
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1CommissionsIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1CommissionsIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling CommissionApi->tepsalesV1CommissionsIdPatch: $e\n');
 }
 ```
@@ -207,7 +207,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Commission id | 
- **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
+ **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
  **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e77ff5d2-c8d8-4303-a3d9-03c48b95bba5']
 
@@ -239,15 +239,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getCommissionApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Commission Id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PutCommissionRequest putCommissionRequest = ; // PutCommissionRequest | Commission to update
+final api_instance = CommissionApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Commission Id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final putCommissionRequest = PutCommissionRequest(); // PutCommissionRequest | Commission to update
 
 try {
-    api.tepsalesV1CommissionsIdPut(id, xApiKey, xCsrfToken, putCommissionRequest);
-} catch on DioError (e) {
+    api_instance.tepsalesV1CommissionsIdPut(id, xApiKey, xCsrfToken, putCommissionRequest);
+} catch (e) {
     print('Exception when calling CommissionApi->tepsalesV1CommissionsIdPut: $e\n');
 }
 ```
@@ -289,21 +289,21 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getCommissionApi();
-final String userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String productId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String externalCode = externalCode_example; // String | 
-final CommissionStatus status = ; // CommissionStatus | 
-final int page = 56; // int | 
-final int pageSize = 56; // int | 
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = CommissionApi();
+final userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final productId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final externalCode = externalCode_example; // String | 
+final status = ; // CommissionStatus | 
+final page = 56; // int | 
+final pageSize = 56; // int | 
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1CommissionsPagedGet(userId, productId, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1CommissionsPagedGet(userId, productId, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling CommissionApi->tepsalesV1CommissionsPagedGet: $e\n');
 }
 ```
@@ -350,15 +350,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getCommissionApi();
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PostCommissionRequest postCommissionRequest = ; // PostCommissionRequest | Commission to create
+final api_instance = CommissionApi();
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final postCommissionRequest = PostCommissionRequest(); // PostCommissionRequest | Commission to create
 
 try {
-    final response = api.tepsalesV1CommissionsPost(xApiKey, xCsrfToken, postCommissionRequest);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1CommissionsPost(xApiKey, xCsrfToken, postCommissionRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling CommissionApi->tepsalesV1CommissionsPost: $e\n');
 }
 ```

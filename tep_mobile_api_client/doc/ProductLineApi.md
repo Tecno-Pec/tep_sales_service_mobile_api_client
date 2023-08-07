@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductLineApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductLine id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = ProductLineApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductLine id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.getByIdProductLine(id, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.getByIdProductLine(id, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling ProductLineApi->getByIdProductLine: $e\n');
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1ProductLinesAllGet**
-> BuiltList<GetAllProductLineResponse> tepsalesV1ProductLinesAllGet(name, externalCode, status, limit, sort, xApiKey, xCsrfToken)
+> List<GetAllProductLineResponse> tepsalesV1ProductLinesAllGet(name, externalCode, status, limit, sort, xApiKey, xCsrfToken)
 
 Get All ProductLine by filter
 
@@ -80,19 +80,19 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductLineApi();
-final String name = name_example; // String | 
-final String externalCode = externalCode_example; // String | 
-final ProductLineStatus status = ; // ProductLineStatus | 
-final int limit = 56; // int | limit
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = ProductLineApi();
+final name = name_example; // String | 
+final externalCode = externalCode_example; // String | 
+final status = ; // ProductLineStatus | 
+final limit = 56; // int | limit
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1ProductLinesAllGet(name, externalCode, status, limit, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1ProductLinesAllGet(name, externalCode, status, limit, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling ProductLineApi->tepsalesV1ProductLinesAllGet: $e\n');
 }
 ```
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BuiltList&lt;GetAllProductLineResponse&gt;**](GetAllProductLineResponse.md)
+[**List<GetAllProductLineResponse>**](GetAllProductLineResponse.md)
 
 ### Authorization
 
@@ -137,14 +137,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductLineApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductLine id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = ProductLineApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductLine id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1ProductLinesIdDelete(id, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1ProductLinesIdDelete(id, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling ProductLineApi->tepsalesV1ProductLinesIdDelete: $e\n');
 }
 ```
@@ -187,15 +187,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductLineApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductLine id
-final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = ProductLineApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductLine id
+final operation = [List<Operation>()]; // List<Operation> | Atributes values
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api.tepsalesV1ProductLinesIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch on DioError (e) {
+    api_instance.tepsalesV1ProductLinesIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch (e) {
     print('Exception when calling ProductLineApi->tepsalesV1ProductLinesIdPatch: $e\n');
 }
 ```
@@ -205,7 +205,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ProductLine id | 
- **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
+ **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
  **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '056437e5-fadc-46cb-bf9a-ee66202dc75e']
 
@@ -237,15 +237,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductLineApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductLine Id
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PutProductLineRequest putProductLineRequest = ; // PutProductLineRequest | ProductLine to update
+final api_instance = ProductLineApi();
+final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ProductLine Id
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final putProductLineRequest = PutProductLineRequest(); // PutProductLineRequest | ProductLine to update
 
 try {
-    api.tepsalesV1ProductLinesIdPut(id, xApiKey, xCsrfToken, putProductLineRequest);
-} catch on DioError (e) {
+    api_instance.tepsalesV1ProductLinesIdPut(id, xApiKey, xCsrfToken, putProductLineRequest);
+} catch (e) {
     print('Exception when calling ProductLineApi->tepsalesV1ProductLinesIdPut: $e\n');
 }
 ```
@@ -287,20 +287,20 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductLineApi();
-final String name = name_example; // String | 
-final String externalCode = externalCode_example; // String | 
-final ProductLineStatus status = ; // ProductLineStatus | 
-final int page = 56; // int | 
-final int pageSize = 56; // int | 
-final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api_instance = ProductLineApi();
+final name = name_example; // String | 
+final externalCode = externalCode_example; // String | 
+final status = ; // ProductLineStatus | 
+final page = 56; // int | 
+final pageSize = 56; // int | 
+final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1ProductLinesPagedGet(name, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1ProductLinesPagedGet(name, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(result);
+} catch (e) {
     print('Exception when calling ProductLineApi->tepsalesV1ProductLinesPagedGet: $e\n');
 }
 ```
@@ -346,15 +346,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api = TepMobileApiClient().getProductLineApi();
-final String xApiKey = xApiKey_example; // String | Your Api Key
-final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final PostProductLineRequest postProductLineRequest = ; // PostProductLineRequest | ProductLine to create
+final api_instance = ProductLineApi();
+final xApiKey = xApiKey_example; // String | Your Api Key
+final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final postProductLineRequest = PostProductLineRequest(); // PostProductLineRequest | ProductLine to create
 
 try {
-    final response = api.tepsalesV1ProductLinesPost(xApiKey, xCsrfToken, postProductLineRequest);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.tepsalesV1ProductLinesPost(xApiKey, xCsrfToken, postProductLineRequest);
+    print(result);
+} catch (e) {
     print('Exception when calling ProductLineApi->tepsalesV1ProductLinesPost: $e\n');
 }
 ```
