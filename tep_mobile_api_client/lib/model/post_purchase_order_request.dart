@@ -30,6 +30,7 @@ class PostPurchaseOrderRequest {
     this.dueDate,
     this.mobileCreatedAt,
     this.isFreightFractional,
+    this.integrationCode,
     this.paymentConditionId,
     this.clientId,
     this.deliveryAddressId,
@@ -105,6 +106,8 @@ class PostPurchaseOrderRequest {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   bool? isFreightFractional;
+
+  String? integrationCode;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -193,6 +196,7 @@ class PostPurchaseOrderRequest {
      other.dueDate == dueDate &&
      other.mobileCreatedAt == mobileCreatedAt &&
      other.isFreightFractional == isFreightFractional &&
+     other.integrationCode == integrationCode &&
      other.paymentConditionId == paymentConditionId &&
      other.clientId == clientId &&
      other.deliveryAddressId == deliveryAddressId &&
@@ -224,6 +228,7 @@ class PostPurchaseOrderRequest {
     (dueDate == null ? 0 : dueDate!.hashCode) +
     (mobileCreatedAt == null ? 0 : mobileCreatedAt!.hashCode) +
     (isFreightFractional == null ? 0 : isFreightFractional!.hashCode) +
+    (integrationCode == null ? 0 : integrationCode!.hashCode) +
     (paymentConditionId == null ? 0 : paymentConditionId!.hashCode) +
     (clientId == null ? 0 : clientId!.hashCode) +
     (deliveryAddressId == null ? 0 : deliveryAddressId!.hashCode) +
@@ -236,7 +241,7 @@ class PostPurchaseOrderRequest {
     (distribuitionCenterClientAddressId == null ? 0 : distribuitionCenterClientAddressId!.hashCode);
 
   @override
-  String toString() => 'PostPurchaseOrderRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, freightValue=$freightValue, unloadingValue=$unloadingValue, freightType=$freightType, valueWithoutFreight=$valueWithoutFreight, totalValue=$totalValue, discount=$discount, distance=$distance, earthDistance=$earthDistance, totalWeightkilograms=$totalWeightkilograms, dueDate=$dueDate, mobileCreatedAt=$mobileCreatedAt, isFreightFractional=$isFreightFractional, paymentConditionId=$paymentConditionId, clientId=$clientId, deliveryAddressId=$deliveryAddressId, invoiceAddressId=$invoiceAddressId, items=$items, freightCompositions=$freightCompositions, mobileCreatedUserId=$mobileCreatedUserId, paymentPriceTableId=$paymentPriceTableId, distribuitionCenterId=$distribuitionCenterId, distribuitionCenterClientAddressId=$distribuitionCenterClientAddressId]';
+  String toString() => 'PostPurchaseOrderRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, freightValue=$freightValue, unloadingValue=$unloadingValue, freightType=$freightType, valueWithoutFreight=$valueWithoutFreight, totalValue=$totalValue, discount=$discount, distance=$distance, earthDistance=$earthDistance, totalWeightkilograms=$totalWeightkilograms, dueDate=$dueDate, mobileCreatedAt=$mobileCreatedAt, isFreightFractional=$isFreightFractional, integrationCode=$integrationCode, paymentConditionId=$paymentConditionId, clientId=$clientId, deliveryAddressId=$deliveryAddressId, invoiceAddressId=$invoiceAddressId, items=$items, freightCompositions=$freightCompositions, mobileCreatedUserId=$mobileCreatedUserId, paymentPriceTableId=$paymentPriceTableId, distribuitionCenterId=$distribuitionCenterId, distribuitionCenterClientAddressId=$distribuitionCenterClientAddressId]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -324,6 +329,11 @@ class PostPurchaseOrderRequest {
       json[r'isFreightFractional'] = this.isFreightFractional;
     } else {
       json[r'isFreightFractional'] = null;
+    }
+    if (this.integrationCode != null) {
+      json[r'integrationCode'] = this.integrationCode;
+    } else {
+      json[r'integrationCode'] = null;
     }
     if (this.paymentConditionId != null) {
       json[r'paymentConditionId'] = this.paymentConditionId;
@@ -414,6 +424,7 @@ class PostPurchaseOrderRequest {
         dueDate: mapDateTime(json, r'dueDate', ''),
         mobileCreatedAt: mapDateTime(json, r'mobileCreatedAt', ''),
         isFreightFractional: mapValueOfType<bool>(json, r'isFreightFractional'),
+        integrationCode: mapValueOfType<String>(json, r'integrationCode'),
         paymentConditionId: mapValueOfType<String>(json, r'paymentConditionId'),
         clientId: mapValueOfType<String>(json, r'clientId'),
         deliveryAddressId: mapValueOfType<String>(json, r'deliveryAddressId'),

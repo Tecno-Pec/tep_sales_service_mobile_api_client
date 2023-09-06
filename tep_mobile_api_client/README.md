@@ -73,6 +73,7 @@ Class | Method | HTTP request | Description
 *AddressApi* | [**tepsalesV1AddressesPagedGet**](doc\/AddressApi.md#tepsalesv1addressespagedget) | **GET** /tepsales/v1/addresses/paged | Get All Address by filter with pagination
 *AddressApi* | [**tepsalesV1AddressesPost**](doc\/AddressApi.md#tepsalesv1addressespost) | **POST** /tepsales/v1/addresses | Create Address
 *AuditApi* | [**tepsalesV1AuditsGet**](doc\/AuditApi.md#tepsalesv1auditsget) | **GET** /tepsales/v1/audits | Get All Audit by filter with pagination
+*AuditApi* | [**tepsalesV1AuditsLatestGet**](doc\/AuditApi.md#tepsalesv1auditslatestget) | **GET** /tepsales/v1/audits/latest | Get All Audit by filter with pagination
 *ClientApi* | [**getByIdClient**](doc\/ClientApi.md#getbyidclient) | **GET** /tepsales/v1/clients/{id} | Get Client by id
 *ClientApi* | [**tepsalesV1ClientsAllGet**](doc\/ClientApi.md#tepsalesv1clientsallget) | **GET** /tepsales/v1/clients/all | Get All Client by filter
 *ClientApi* | [**tepsalesV1ClientsIdDelete**](doc\/ClientApi.md#tepsalesv1clientsiddelete) | **DELETE** /tepsales/v1/clients/{id} | Delete Client by Id
@@ -101,6 +102,10 @@ Class | Method | HTTP request | Description
 *CompanyGlobalParameterApi* | [**tepsalesV1CompanyglobalparametersIdPut**](doc\/CompanyGlobalParameterApi.md#tepsalesv1companyglobalparametersidput) | **PUT** /tepsales/v1/companyglobalparameters/{id} | Update CompanyGlobalParameter
 *CompanyGlobalParameterApi* | [**tepsalesV1CompanyglobalparametersPagedGet**](doc\/CompanyGlobalParameterApi.md#tepsalesv1companyglobalparameterspagedget) | **GET** /tepsales/v1/companyglobalparameters/paged | Get All CompanyGlobalParameter by filter with pagination
 *CompanyGlobalParameterApi* | [**tepsalesV1CompanyglobalparametersPost**](doc\/CompanyGlobalParameterApi.md#tepsalesv1companyglobalparameterspost) | **POST** /tepsales/v1/companyglobalparameters | Create CompanyGlobalParameter
+*DashboardApi* | [**tepsalesV1DashboardPurchaseorderbysalesmanGet**](doc\/DashboardApi.md#tepsalesv1dashboardpurchaseorderbysalesmanget) | **GET** /tepsales/v1/dashboard/purchaseorderbysalesman | Get GetPurchaseOrderBySalesman
+*DashboardApi* | [**tepsalesV1DashboardPurchaseorderfavoriteproductsGet**](doc\/DashboardApi.md#tepsalesv1dashboardpurchaseorderfavoriteproductsget) | **GET** /tepsales/v1/dashboard/purchaseorderfavoriteproducts | Get GroupPurchaseOrderByStatus
+*DashboardApi* | [**tepsalesV1DashboardPurchaseorderlastsixmonthsGet**](doc\/DashboardApi.md#tepsalesv1dashboardpurchaseorderlastsixmonthsget) | **GET** /tepsales/v1/dashboard/purchaseorderlastsixmonths | Get GroupPurchaseOrderByStatus
+*DashboardApi* | [**tepsalesV1DashboardPurchaseorderstatusGet**](doc\/DashboardApi.md#tepsalesv1dashboardpurchaseorderstatusget) | **GET** /tepsales/v1/dashboard/purchaseorderstatus | Get GroupPurchaseOrderByStatus
 *DashboardApi* | [**tepsalesV1DashboardWidgetsGet**](doc\/DashboardApi.md#tepsalesv1dashboardwidgetsget) | **GET** /tepsales/v1/dashboard/widgets | Get Widgets
 *DiscountRuleApi* | [**getByIdDiscountRule**](doc\/DiscountRuleApi.md#getbyiddiscountrule) | **GET** /tepsales/v1/discountRules/{id} | Get DiscountRule by id
 *DiscountRuleApi* | [**tepsalesV1DiscountRulesAllGet**](doc\/DiscountRuleApi.md#tepsalesv1discountrulesallget) | **GET** /tepsales/v1/discountRules/all | Get All DiscountRule by filter
@@ -158,12 +163,12 @@ Class | Method | HTTP request | Description
 *IntegrationStatusApi* | [**tepsalesV1IntegrationStatusIdPut**](doc\/IntegrationStatusApi.md#tepsalesv1integrationstatusidput) | **PUT** /tepsales/v1/integration/status/{id} | Update IntegrationStatus
 *IntegrationStatusApi* | [**tepsalesV1IntegrationStatusPagedGet**](doc\/IntegrationStatusApi.md#tepsalesv1integrationstatuspagedget) | **GET** /tepsales/v1/integration/status/paged | Get All IntegrationStatus by filter with pagination
 *IntegrationStatusApi* | [**tepsalesV1IntegrationStatusPost**](doc\/IntegrationStatusApi.md#tepsalesv1integrationstatuspost) | **POST** /tepsales/v1/integration/status | Create IntegrationStatus
-*NotificationApi* | [**getByIdNotification**](doc\/NotificationApi.md#getbyidnotification) | **GET** /yes4track/v1/notifications/{id} | Get Notification by id
-*NotificationApi* | [**yes4trackV1NotificationsGet**](doc\/NotificationApi.md#yes4trackv1notificationsget) | **GET** /yes4track/v1/notifications | Get All Notification by filter with pagination
-*NotificationApi* | [**yes4trackV1NotificationsIdDelete**](doc\/NotificationApi.md#yes4trackv1notificationsiddelete) | **DELETE** /yes4track/v1/notifications/{id} | Delete Notification by Id
-*NotificationApi* | [**yes4trackV1NotificationsIdPatch**](doc\/NotificationApi.md#yes4trackv1notificationsidpatch) | **PATCH** /yes4track/v1/notifications/{id} | Update part of Notification
-*NotificationApi* | [**yes4trackV1NotificationsIdPut**](doc\/NotificationApi.md#yes4trackv1notificationsidput) | **PUT** /yes4track/v1/notifications/{id} | Update Notification
-*NotificationApi* | [**yes4trackV1NotificationsPost**](doc\/NotificationApi.md#yes4trackv1notificationspost) | **POST** /yes4track/v1/notifications | Create Notification
+*NotificationApi* | [**getByIdNotification**](doc\/NotificationApi.md#getbyidnotification) | **GET** /tepsales/v1/notifications/{id} | Get Notification by id
+*NotificationApi* | [**tepsalesV1NotificationsGet**](doc\/NotificationApi.md#tepsalesv1notificationsget) | **GET** /tepsales/v1/notifications | Get All Notification by filter with pagination
+*NotificationApi* | [**tepsalesV1NotificationsIdDelete**](doc\/NotificationApi.md#tepsalesv1notificationsiddelete) | **DELETE** /tepsales/v1/notifications/{id} | Delete Notification by Id
+*NotificationApi* | [**tepsalesV1NotificationsIdPatch**](doc\/NotificationApi.md#tepsalesv1notificationsidpatch) | **PATCH** /tepsales/v1/notifications/{id} | Update part of Notification
+*NotificationApi* | [**tepsalesV1NotificationsIdPut**](doc\/NotificationApi.md#tepsalesv1notificationsidput) | **PUT** /tepsales/v1/notifications/{id} | Update Notification
+*NotificationApi* | [**tepsalesV1NotificationsPost**](doc\/NotificationApi.md#tepsalesv1notificationspost) | **POST** /tepsales/v1/notifications | Create Notification
 *PaymentConditionApi* | [**getByIdPaymentCondition**](doc\/PaymentConditionApi.md#getbyidpaymentcondition) | **GET** /tepsales/v1/paymentConditions/{id} | Get PaymentCondition by id
 *PaymentConditionApi* | [**tepsalesV1PaymentConditionsAllGet**](doc\/PaymentConditionApi.md#tepsalesv1paymentconditionsallget) | **GET** /tepsales/v1/paymentConditions/all | Get All PaymentCondition by filter
 *PaymentConditionApi* | [**tepsalesV1PaymentConditionsIdDelete**](doc\/PaymentConditionApi.md#tepsalesv1paymentconditionsiddelete) | **DELETE** /tepsales/v1/paymentConditions/{id} | Delete PaymentCondition by Id
@@ -249,6 +254,7 @@ Class | Method | HTTP request | Description
 *UserApi* | [**getByIdUser**](doc\/UserApi.md#getbyiduser) | **GET** /tepsales/v1/users/{id} | Get User by id
 *UserApi* | [**getUserInfo**](doc\/UserApi.md#getuserinfo) | **GET** /tepsales/v1/users/userinfo | Get User Info
 *UserApi* | [**tepsalesV1UsersAllGet**](doc\/UserApi.md#tepsalesv1usersallget) | **GET** /tepsales/v1/users/all | Get All User by filter
+*UserApi* | [**tepsalesV1UsersForcerchangepasswordPost**](doc\/UserApi.md#tepsalesv1usersforcerchangepasswordpost) | **POST** /tepsales/v1/users/forcerchangepassword | Create User
 *UserApi* | [**tepsalesV1UsersIdDelete**](doc\/UserApi.md#tepsalesv1usersiddelete) | **DELETE** /tepsales/v1/users/{id} | Delete User by Id
 *UserApi* | [**tepsalesV1UsersIdPatch**](doc\/UserApi.md#tepsalesv1usersidpatch) | **PATCH** /tepsales/v1/users/{id} | Update part of User
 *UserApi* | [**tepsalesV1UsersIdPut**](doc\/UserApi.md#tepsalesv1usersidput) | **PUT** /tepsales/v1/users/{id} | Update User
@@ -347,6 +353,7 @@ Class | Method | HTTP request | Description
  - [GetAllUserResponse](doc\/GetAllUserResponse.md)
  - [GetAllVehicleTypeResponse](doc\/GetAllVehicleTypeResponse.md)
  - [GetWidgetsDto](doc\/GetWidgetsDto.md)
+ - [GroupPurchaseOrderDto](doc\/GroupPurchaseOrderDto.md)
  - [IntegrationStatusActions](doc\/IntegrationStatusActions.md)
  - [NotificationChannel](doc\/NotificationChannel.md)
  - [NotificationType](doc\/NotificationType.md)
@@ -407,6 +414,7 @@ Class | Method | HTTP request | Description
  - [PostRefusedPurchaseOrderRequest](doc\/PostRefusedPurchaseOrderRequest.md)
  - [PostTemplateRequest](doc\/PostTemplateRequest.md)
  - [PostTemplateResponse](doc\/PostTemplateResponse.md)
+ - [PostUserForceChangePasswordRequest](doc\/PostUserForceChangePasswordRequest.md)
  - [PostUserPushTokenRequest](doc\/PostUserPushTokenRequest.md)
  - [PostUserRequest](doc\/PostUserRequest.md)
  - [PostUserResetPassword](doc\/PostUserResetPassword.md)

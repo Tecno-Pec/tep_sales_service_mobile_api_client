@@ -9,12 +9,12 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getByIdNotification**](NotificationApi.md#getbyidnotification) | **GET** /yes4track/v1/notifications/{id} | Get Notification by id
-[**yes4trackV1NotificationsGet**](NotificationApi.md#yes4trackv1notificationsget) | **GET** /yes4track/v1/notifications | Get All Notification by filter with pagination
-[**yes4trackV1NotificationsIdDelete**](NotificationApi.md#yes4trackv1notificationsiddelete) | **DELETE** /yes4track/v1/notifications/{id} | Delete Notification by Id
-[**yes4trackV1NotificationsIdPatch**](NotificationApi.md#yes4trackv1notificationsidpatch) | **PATCH** /yes4track/v1/notifications/{id} | Update part of Notification
-[**yes4trackV1NotificationsIdPut**](NotificationApi.md#yes4trackv1notificationsidput) | **PUT** /yes4track/v1/notifications/{id} | Update Notification
-[**yes4trackV1NotificationsPost**](NotificationApi.md#yes4trackv1notificationspost) | **POST** /yes4track/v1/notifications | Create Notification
+[**getByIdNotification**](NotificationApi.md#getbyidnotification) | **GET** /tepsales/v1/notifications/{id} | Get Notification by id
+[**tepsalesV1NotificationsGet**](NotificationApi.md#tepsalesv1notificationsget) | **GET** /tepsales/v1/notifications | Get All Notification by filter with pagination
+[**tepsalesV1NotificationsIdDelete**](NotificationApi.md#tepsalesv1notificationsiddelete) | **DELETE** /tepsales/v1/notifications/{id} | Delete Notification by Id
+[**tepsalesV1NotificationsIdPatch**](NotificationApi.md#tepsalesv1notificationsidpatch) | **PATCH** /tepsales/v1/notifications/{id} | Update part of Notification
+[**tepsalesV1NotificationsIdPut**](NotificationApi.md#tepsalesv1notificationsidput) | **PUT** /tepsales/v1/notifications/{id} | Update Notification
+[**tepsalesV1NotificationsPost**](NotificationApi.md#tepsalesv1notificationspost) | **POST** /tepsales/v1/notifications | Create Notification
 
 
 # **getByIdNotification**
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Notification id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ed0bdaac-3c96-49b1-a499-be713208d3e5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a1463ae3-2cda-4688-975a-a84051fe1850']
 
 ### Return type
 
@@ -66,8 +66,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **yes4trackV1NotificationsGet**
-> GetAllPagedNotificationResponse yes4trackV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken)
+# **tepsalesV1NotificationsGet**
+> GetAllPagedNotificationResponse tepsalesV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken)
 
 Get All Notification by filter with pagination
 
@@ -93,10 +93,10 @@ final xApiKey = xApiKey_example; // String | Your Api Key
 final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.yes4trackV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken);
+    final result = api_instance.tepsalesV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken);
     print(result);
 } catch (e) {
-    print('Exception when calling NotificationApi->yes4trackV1NotificationsGet: $e\n');
+    print('Exception when calling NotificationApi->tepsalesV1NotificationsGet: $e\n');
 }
 ```
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6057f5f6-b2c8-4600-a265-76893bfacec9']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '62819141-ff16-49b7-9e93-41fc7a2e933d']
 
 ### Return type
 
@@ -131,8 +131,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **yes4trackV1NotificationsIdDelete**
-> yes4trackV1NotificationsIdDelete(id, xApiKey, xCsrfToken)
+# **tepsalesV1NotificationsIdDelete**
+> tepsalesV1NotificationsIdDelete(id, xApiKey, xCsrfToken)
 
 Delete Notification by Id
 
@@ -150,9 +150,9 @@ final xApiKey = xApiKey_example; // String | Your Api Key
 final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.yes4trackV1NotificationsIdDelete(id, xApiKey, xCsrfToken);
+    api_instance.tepsalesV1NotificationsIdDelete(id, xApiKey, xCsrfToken);
 } catch (e) {
-    print('Exception when calling NotificationApi->yes4trackV1NotificationsIdDelete: $e\n');
+    print('Exception when calling NotificationApi->tepsalesV1NotificationsIdDelete: $e\n');
 }
 ```
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Notification id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2193fbdb-568e-41c5-924b-0425f300ff53']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '62adc497-c762-402a-9f62-f43892868f84']
 
 ### Return type
 
@@ -179,12 +179,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **yes4trackV1NotificationsIdPatch**
-> yes4trackV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken)
+# **tepsalesV1NotificationsIdPatch**
+> tepsalesV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken)
 
 Update part of Notification
 
-Sample request:                    PATCH /yes4track/v1/Notification/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
+Sample request:                    PATCH /tepsales/v1/Notification/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
 
 ### Example
 ```dart
@@ -201,9 +201,9 @@ final xApiKey = xApiKey_example; // String | Your Api Key
 final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.yes4trackV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken);
+    api_instance.tepsalesV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken);
 } catch (e) {
-    print('Exception when calling NotificationApi->yes4trackV1NotificationsIdPatch: $e\n');
+    print('Exception when calling NotificationApi->tepsalesV1NotificationsIdPatch: $e\n');
 }
 ```
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
  **id** | **String**| Notification id | 
  **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5fe42129-e035-46cc-9f19-a53bfde2a2ad']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd8708dde-c015-4d1c-b555-49eb30842fc2']
 
 ### Return type
 
@@ -231,8 +231,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **yes4trackV1NotificationsIdPut**
-> yes4trackV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest)
+# **tepsalesV1NotificationsIdPut**
+> tepsalesV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest)
 
 Update Notification
 
@@ -251,9 +251,9 @@ final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final putNotificationRequest = PutNotificationRequest(); // PutNotificationRequest | Notification to update
 
 try {
-    api_instance.yes4trackV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest);
+    api_instance.tepsalesV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest);
 } catch (e) {
-    print('Exception when calling NotificationApi->yes4trackV1NotificationsIdPut: $e\n');
+    print('Exception when calling NotificationApi->tepsalesV1NotificationsIdPut: $e\n');
 }
 ```
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Notification Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '84081f13-67ec-4645-abaf-9abffdf9e762']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0014e2d6-0dcd-4a1c-81b0-e2e56bb59445']
  **putNotificationRequest** | [**PutNotificationRequest**](PutNotificationRequest.md)| Notification to update | [optional] 
 
 ### Return type
@@ -281,8 +281,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **yes4trackV1NotificationsPost**
-> PostNotificationResponse yes4trackV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest)
+# **tepsalesV1NotificationsPost**
+> PostNotificationResponse tepsalesV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest)
 
 Create Notification
 
@@ -300,10 +300,10 @@ final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 final postNotificationRequest = PostNotificationRequest(); // PostNotificationRequest | Notification to create
 
 try {
-    final result = api_instance.yes4trackV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest);
+    final result = api_instance.tepsalesV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling NotificationApi->yes4trackV1NotificationsPost: $e\n');
+    print('Exception when calling NotificationApi->tepsalesV1NotificationsPost: $e\n');
 }
 ```
 
@@ -312,7 +312,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4b411484-a807-4e4b-b394-db92983d50e0']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bd191d3f-3132-4f05-a78b-87fab68b5029']
  **postNotificationRequest** | [**PostNotificationRequest**](PostNotificationRequest.md)| Notification to create | [optional] 
 
 ### Return type

@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **dueDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **mobileCreatedAt** | [**DateTime**](DateTime.md) |  | [optional] 
 **isFreightFractional** | **bool** |  | [optional] 
+**integrationCode** | **String** |  | [optional] 
 **paymentConditionId** | **String** |  | [optional] 
 **clientId** | **String** |  | [optional] 
 **deliveryAddressId** | **String** |  | [optional] 

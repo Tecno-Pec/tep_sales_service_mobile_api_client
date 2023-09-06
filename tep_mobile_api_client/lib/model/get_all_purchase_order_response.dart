@@ -30,6 +30,7 @@ class GetAllPurchaseOrderResponse {
     this.dueDate,
     this.mobileCreatedAt,
     this.isFreightFractional,
+    this.integrationCode,
     this.paymentCondition,
     this.client,
     this.deliveryAddress,
@@ -105,6 +106,8 @@ class GetAllPurchaseOrderResponse {
   /// Consider adding a "default:" property in the specification file to hide this note.
   ///
   bool? isFreightFractional;
+
+  String? integrationCode;
 
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
@@ -187,6 +190,7 @@ class GetAllPurchaseOrderResponse {
      other.dueDate == dueDate &&
      other.mobileCreatedAt == mobileCreatedAt &&
      other.isFreightFractional == isFreightFractional &&
+     other.integrationCode == integrationCode &&
      other.paymentCondition == paymentCondition &&
      other.client == client &&
      other.deliveryAddress == deliveryAddress &&
@@ -218,6 +222,7 @@ class GetAllPurchaseOrderResponse {
     (dueDate == null ? 0 : dueDate!.hashCode) +
     (mobileCreatedAt == null ? 0 : mobileCreatedAt!.hashCode) +
     (isFreightFractional == null ? 0 : isFreightFractional!.hashCode) +
+    (integrationCode == null ? 0 : integrationCode!.hashCode) +
     (paymentCondition == null ? 0 : paymentCondition!.hashCode) +
     (client == null ? 0 : client!.hashCode) +
     (deliveryAddress == null ? 0 : deliveryAddress!.hashCode) +
@@ -230,7 +235,7 @@ class GetAllPurchaseOrderResponse {
     (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() => 'GetAllPurchaseOrderResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, freightValue=$freightValue, unloadingValue=$unloadingValue, freightType=$freightType, valueWithoutFreight=$valueWithoutFreight, totalValue=$totalValue, discount=$discount, distance=$distance, earthDistance=$earthDistance, totalWeightkilograms=$totalWeightkilograms, dueDate=$dueDate, mobileCreatedAt=$mobileCreatedAt, isFreightFractional=$isFreightFractional, paymentCondition=$paymentCondition, client=$client, deliveryAddress=$deliveryAddress, invoiceAddress=$invoiceAddress, freightCompositions=$freightCompositions, items=$items, history=$history, mobileCreatedUser=$mobileCreatedUser, reasonCancel=$reasonCancel, status=$status]';
+  String toString() => 'GetAllPurchaseOrderResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, freightValue=$freightValue, unloadingValue=$unloadingValue, freightType=$freightType, valueWithoutFreight=$valueWithoutFreight, totalValue=$totalValue, discount=$discount, distance=$distance, earthDistance=$earthDistance, totalWeightkilograms=$totalWeightkilograms, dueDate=$dueDate, mobileCreatedAt=$mobileCreatedAt, isFreightFractional=$isFreightFractional, integrationCode=$integrationCode, paymentCondition=$paymentCondition, client=$client, deliveryAddress=$deliveryAddress, invoiceAddress=$invoiceAddress, freightCompositions=$freightCompositions, items=$items, history=$history, mobileCreatedUser=$mobileCreatedUser, reasonCancel=$reasonCancel, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -318,6 +323,11 @@ class GetAllPurchaseOrderResponse {
       json[r'isFreightFractional'] = this.isFreightFractional;
     } else {
       json[r'isFreightFractional'] = null;
+    }
+    if (this.integrationCode != null) {
+      json[r'integrationCode'] = this.integrationCode;
+    } else {
+      json[r'integrationCode'] = null;
     }
     if (this.paymentCondition != null) {
       json[r'paymentCondition'] = this.paymentCondition;
@@ -408,6 +418,7 @@ class GetAllPurchaseOrderResponse {
         dueDate: mapDateTime(json, r'dueDate', ''),
         mobileCreatedAt: mapDateTime(json, r'mobileCreatedAt', ''),
         isFreightFractional: mapValueOfType<bool>(json, r'isFreightFractional'),
+        integrationCode: mapValueOfType<String>(json, r'integrationCode'),
         paymentCondition: PaymentCondition.fromJson(json[r'paymentCondition']),
         client: Client.fromJson(json[r'client']),
         deliveryAddress: Address.fromJson(json[r'deliveryAddress']),

@@ -30,6 +30,7 @@ class PostPurchaseOrderResponse {
     this.dueDate,
     this.mobileCreatedAt,
     this.isFreightFractional,
+    this.integrationCode,
     this.paymentCondition,
     this.client,
     this.deliveryAddress,
@@ -104,6 +105,8 @@ class PostPurchaseOrderResponse {
   ///
   bool? isFreightFractional;
 
+  String? integrationCode;
+
   ///
   /// Please note: This property should have been non-nullable! Since the specification file
   /// does not include a default value (using the "default:" property), however, the generated
@@ -175,6 +178,7 @@ class PostPurchaseOrderResponse {
      other.dueDate == dueDate &&
      other.mobileCreatedAt == mobileCreatedAt &&
      other.isFreightFractional == isFreightFractional &&
+     other.integrationCode == integrationCode &&
      other.paymentCondition == paymentCondition &&
      other.client == client &&
      other.deliveryAddress == deliveryAddress &&
@@ -204,6 +208,7 @@ class PostPurchaseOrderResponse {
     (dueDate == null ? 0 : dueDate!.hashCode) +
     (mobileCreatedAt == null ? 0 : mobileCreatedAt!.hashCode) +
     (isFreightFractional == null ? 0 : isFreightFractional!.hashCode) +
+    (integrationCode == null ? 0 : integrationCode!.hashCode) +
     (paymentCondition == null ? 0 : paymentCondition!.hashCode) +
     (client == null ? 0 : client!.hashCode) +
     (deliveryAddress == null ? 0 : deliveryAddress!.hashCode) +
@@ -214,7 +219,7 @@ class PostPurchaseOrderResponse {
     (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() => 'PostPurchaseOrderResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, freightValue=$freightValue, unloadingValue=$unloadingValue, freightType=$freightType, valueWithoutFreight=$valueWithoutFreight, totalValue=$totalValue, discount=$discount, distance=$distance, earthDistance=$earthDistance, totalWeightkilograms=$totalWeightkilograms, dueDate=$dueDate, mobileCreatedAt=$mobileCreatedAt, isFreightFractional=$isFreightFractional, paymentCondition=$paymentCondition, client=$client, deliveryAddress=$deliveryAddress, invoiceAddress=$invoiceAddress, items=$items, history=$history, mobileCreatedUser=$mobileCreatedUser, status=$status]';
+  String toString() => 'PostPurchaseOrderResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, freightValue=$freightValue, unloadingValue=$unloadingValue, freightType=$freightType, valueWithoutFreight=$valueWithoutFreight, totalValue=$totalValue, discount=$discount, distance=$distance, earthDistance=$earthDistance, totalWeightkilograms=$totalWeightkilograms, dueDate=$dueDate, mobileCreatedAt=$mobileCreatedAt, isFreightFractional=$isFreightFractional, integrationCode=$integrationCode, paymentCondition=$paymentCondition, client=$client, deliveryAddress=$deliveryAddress, invoiceAddress=$invoiceAddress, items=$items, history=$history, mobileCreatedUser=$mobileCreatedUser, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -303,6 +308,11 @@ class PostPurchaseOrderResponse {
     } else {
       json[r'isFreightFractional'] = null;
     }
+    if (this.integrationCode != null) {
+      json[r'integrationCode'] = this.integrationCode;
+    } else {
+      json[r'integrationCode'] = null;
+    }
     if (this.paymentCondition != null) {
       json[r'paymentCondition'] = this.paymentCondition;
     } else {
@@ -382,6 +392,7 @@ class PostPurchaseOrderResponse {
         dueDate: mapDateTime(json, r'dueDate', ''),
         mobileCreatedAt: mapDateTime(json, r'mobileCreatedAt', ''),
         isFreightFractional: mapValueOfType<bool>(json, r'isFreightFractional'),
+        integrationCode: mapValueOfType<String>(json, r'integrationCode'),
         paymentCondition: PaymentCondition.fromJson(json[r'paymentCondition']),
         client: Client.fromJson(json[r'client']),
         deliveryAddress: Address.fromJson(json[r'deliveryAddress']),

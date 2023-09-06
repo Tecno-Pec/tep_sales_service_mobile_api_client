@@ -92,6 +92,7 @@ doc/GetAllTemplateResponse.md
 doc/GetAllUserResponse.md
 doc/GetAllVehicleTypeResponse.md
 doc/GetWidgetsDto.md
+doc/GroupPurchaseOrderDto.md
 doc/IntegrationConfigApi.md
 doc/IntegrationStatusActions.md
 doc/IntegrationStatusApi.md
@@ -157,6 +158,7 @@ doc/PostReasonCancelResponse.md
 doc/PostRefusedPurchaseOrderRequest.md
 doc/PostTemplateRequest.md
 doc/PostTemplateResponse.md
+doc/PostUserForceChangePasswordRequest.md
 doc/PostUserPushTokenRequest.md
 doc/PostUserRequest.md
 doc/PostUserResetPassword.md
@@ -345,6 +347,7 @@ lib/model/get_all_template_response.dart
 lib/model/get_all_user_response.dart
 lib/model/get_all_vehicle_type_response.dart
 lib/model/get_widgets_dto.dart
+lib/model/group_purchase_order_dto.dart
 lib/model/integration_status_actions.dart
 lib/model/notification_channel.dart
 lib/model/notification_type.dart
@@ -405,6 +408,7 @@ lib/model/post_reason_cancel_response.dart
 lib/model/post_refused_purchase_order_request.dart
 lib/model/post_template_request.dart
 lib/model/post_template_response.dart
+lib/model/post_user_force_change_password_request.dart
 lib/model/post_user_push_token_request.dart
 lib/model/post_user_request.dart
 lib/model/post_user_reset_password.dart

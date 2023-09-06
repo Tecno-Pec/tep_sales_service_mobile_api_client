@@ -335,6 +335,8 @@ class ApiClient {
           return GetAllVehicleTypeResponse.fromJson(value);
         case 'GetWidgetsDto':
           return GetWidgetsDto.fromJson(value);
+        case 'GroupPurchaseOrderDto':
+          return GroupPurchaseOrderDto.fromJson(value);
         case 'IntegrationStatusActions':
           return IntegrationStatusActionsTypeTransformer().decode(value);
         case 'NotificationChannel':
@@ -455,6 +457,8 @@ class ApiClient {
           return PostTemplateRequest.fromJson(value);
         case 'PostTemplateResponse':
           return PostTemplateResponse.fromJson(value);
+        case 'PostUserForceChangePasswordRequest':
+          return PostUserForceChangePasswordRequest.fromJson(value);
         case 'PostUserPushTokenRequest':
           return PostUserPushTokenRequest.fromJson(value);
         case 'PostUserRequest':

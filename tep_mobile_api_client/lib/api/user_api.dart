@@ -288,6 +288,79 @@ class UserApi {
     return null;
   }
 
+  /// Create User
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [String] xApiKey:
+  ///   Your Api Key
+  ///
+  /// * [String] xCsrfToken:
+  ///   CSRF Protection
+  ///
+  /// * [PostUserForceChangePasswordRequest] postUserForceChangePasswordRequest:
+  ///   Force Change Password
+  Future<Response> tepsalesV1UsersForcerchangepasswordPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostUserForceChangePasswordRequest? postUserForceChangePasswordRequest, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/tepsales/v1/users/forcerchangepassword';
+
+    // ignore: prefer_final_locals
+    Object? postBody = postUserForceChangePasswordRequest;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (xApiKey != null) {
+      headerParams[r'x-api-key'] = parameterToString(xApiKey);
+    }
+    if (xCsrfToken != null) {
+      headerParams[r'x-csrf-token'] = parameterToString(xCsrfToken);
+    }
+
+    const contentTypes = <String>['application/json'];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'POST',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// Create User
+  ///
+  /// Parameters:
+  ///
+  /// * [String] xApiKey:
+  ///   Your Api Key
+  ///
+  /// * [String] xCsrfToken:
+  ///   CSRF Protection
+  ///
+  /// * [PostUserForceChangePasswordRequest] postUserForceChangePasswordRequest:
+  ///   Force Change Password
+  Future<PostUserResetPasswordResponse?> tepsalesV1UsersForcerchangepasswordPost({ String? xApiKey, String? xCsrfToken, PostUserForceChangePasswordRequest? postUserForceChangePasswordRequest, }) async {
+    final response = await tepsalesV1UsersForcerchangepasswordPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postUserForceChangePasswordRequest: postUserForceChangePasswordRequest, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostUserResetPasswordResponse',) as PostUserResetPasswordResponse;
+    
+    }
+    return null;
+  }
+
   /// Delete User by Id
   ///
   /// Note: This method returns the HTTP [Response].

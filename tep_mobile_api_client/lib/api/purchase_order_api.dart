@@ -654,12 +654,15 @@ class PurchaseOrderApi {
   /// * [String] id (required):
   ///   PurchaseOrder Id
   ///
+  /// * [String] areaManagerCode:
+  ///   Area Manager Code
+  ///
   /// * [String] xApiKey:
   ///   Your Api Key
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1PurchaseordersIdSendtoapprovePostWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<Response> tepsalesV1PurchaseordersIdSendtoapprovePostWithHttpInfo(String id, { String? areaManagerCode, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/purchaseorders/{id}/sendtoapprove'
       .replaceAll('{id}', id);
@@ -670,6 +673,10 @@ class PurchaseOrderApi {
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
+
+    if (areaManagerCode != null) {
+      queryParams.addAll(_queryParams('', 'areaManagerCode', areaManagerCode));
+    }
 
     if (xApiKey != null) {
       headerParams[r'x-api-key'] = parameterToString(xApiKey);
@@ -699,13 +706,16 @@ class PurchaseOrderApi {
   /// * [String] id (required):
   ///   PurchaseOrder Id
   ///
+  /// * [String] areaManagerCode:
+  ///   Area Manager Code
+  ///
   /// * [String] xApiKey:
   ///   Your Api Key
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1PurchaseordersIdSendtoapprovePost(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1PurchaseordersIdSendtoapprovePostWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1PurchaseordersIdSendtoapprovePost(String id, { String? areaManagerCode, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1PurchaseordersIdSendtoapprovePostWithHttpInfo(id,  areaManagerCode: areaManagerCode, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

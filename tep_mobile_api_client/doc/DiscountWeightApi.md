@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DiscountWeight id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'eae5bedf-f759-454a-815e-8165a3c1ace5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6f2ac26f-25c6-438e-be08-d20ffbb28733']
 
 ### Return type
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0136acf4-42e6-446f-a33c-edefba8576cb']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8123d004-fc99-4e5e-acbc-e859d5ff9758']
 
 ### Return type
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DiscountWeight id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8ffb7929-d929-4159-97d9-ba0e0468aec6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6e6f71ea-05b4-4fdf-b387-d8539a2fccb3']
 
 ### Return type
 
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
  **id** | **String**| DiscountWeight id | 
  **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '87df11ec-7d37-4597-9234-a758061bf204']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '66f30a88-ea0d-476c-ae8f-0be6f9169486']
 
 ### Return type
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DiscountWeight Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ce6b3b2d-cdd9-40ec-ae7b-93b83d607b48']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bb1e0a6f-577b-4975-a9da-8543a09bc1a9']
  **putDiscountWeightRequest** | [**PutDiscountWeightRequest**](PutDiscountWeightRequest.md)| DiscountWeight to update | [optional] 
 
 ### Return type
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6178d943-801a-46ca-9fb0-8b41e73e4514']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bb588e0f-7dc5-4948-9437-ce532c488d15']
 
 ### Return type
 
@@ -360,7 +360,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '03275bde-5220-4a8f-9bdc-53ee0ca1f28e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '25abd94f-bfc8-4f9f-94c5-8ec213728ff9']
  **postDiscountWeightRequest** | [**PostDiscountWeightRequest**](PostDiscountWeightRequest.md)| DiscountWeight to create | [optional] 
 
 ### Return type
