@@ -5,7 +5,7 @@ import 'package:openapi_generator_annotations/openapi_generator_annotations.dart
     pubName: 'tep_mobile_api_client',
     pubAuthor: 'Tep',
     pubAuthorEmail: 'admin@tep.com',
-    pubVersion: '1.0.2',
+    pubVersion: '1.0.3',
     pubDescription: 'Tep.Service API',
     pubHomepage: 'https://github.com/tep/',
   ),
