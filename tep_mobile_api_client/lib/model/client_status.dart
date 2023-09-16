@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class ClientStatus {
   /// Instantiate a new enum with the provided [value].
   const ClientStatus._(this.value);
@@ -33,13 +34,9 @@ class ClientStatus {
     number2,
   ];
 
-  static ClientStatus? fromJson(dynamic value) =>
-      ClientStatusTypeTransformer().decode(value);
+  static ClientStatus? fromJson(dynamic value) => ClientStatusTypeTransformer().decode(value);
 
-  static List<ClientStatus> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<ClientStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ClientStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -56,8 +53,7 @@ class ClientStatus {
 /// Transformation class that can [encode] an instance of [ClientStatus] to int,
 /// and [decode] dynamic data back to [ClientStatus].
 class ClientStatusTypeTransformer {
-  factory ClientStatusTypeTransformer() =>
-      _instance ??= const ClientStatusTypeTransformer._();
+  factory ClientStatusTypeTransformer() => _instance ??= const ClientStatusTypeTransformer._();
 
   const ClientStatusTypeTransformer._();
 
@@ -74,12 +70,9 @@ class ClientStatusTypeTransformer {
   ClientStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0:
-          return ClientStatus.number0;
-        case 1:
-          return ClientStatus.number1;
-        case 2:
-          return ClientStatus.number2;
+        case 0: return ClientStatus.number0;
+        case 1: return ClientStatus.number1;
+        case 2: return ClientStatus.number2;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -92,3 +85,4 @@ class ClientStatusTypeTransformer {
   /// Singleton [ClientStatusTypeTransformer] instance.
   static ClientStatusTypeTransformer? _instance;
 }
+

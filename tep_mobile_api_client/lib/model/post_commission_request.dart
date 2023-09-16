@@ -76,37 +76,34 @@ class PostCommissionRequest {
   CommissionStatus? status;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PostCommissionRequest &&
-          other.createdAt == createdAt &&
-          other.updatedAt == updatedAt &&
-          other.userCreated == userCreated &&
-          other.userUpdated == userUpdated &&
-          other.id == id &&
-          other.userId == userId &&
-          other.productId == productId &&
-          other.value == value &&
-          other.externalCode == externalCode &&
-          other.status == status;
+  bool operator ==(Object other) => identical(this, other) || other is PostCommissionRequest &&
+     other.createdAt == createdAt &&
+     other.updatedAt == updatedAt &&
+     other.userCreated == userCreated &&
+     other.userUpdated == userUpdated &&
+     other.id == id &&
+     other.userId == userId &&
+     other.productId == productId &&
+     other.value == value &&
+     other.externalCode == externalCode &&
+     other.status == status;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (createdAt == null ? 0 : createdAt!.hashCode) +
-      (updatedAt == null ? 0 : updatedAt!.hashCode) +
-      (userCreated == null ? 0 : userCreated!.hashCode) +
-      (userUpdated == null ? 0 : userUpdated!.hashCode) +
-      (id == null ? 0 : id!.hashCode) +
-      (userId == null ? 0 : userId!.hashCode) +
-      (productId == null ? 0 : productId!.hashCode) +
-      (value == null ? 0 : value!.hashCode) +
-      (externalCode == null ? 0 : externalCode!.hashCode) +
-      (status == null ? 0 : status!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (createdAt == null ? 0 : createdAt!.hashCode) +
+    (updatedAt == null ? 0 : updatedAt!.hashCode) +
+    (userCreated == null ? 0 : userCreated!.hashCode) +
+    (userUpdated == null ? 0 : userUpdated!.hashCode) +
+    (id == null ? 0 : id!.hashCode) +
+    (userId == null ? 0 : userId!.hashCode) +
+    (productId == null ? 0 : productId!.hashCode) +
+    (value == null ? 0 : value!.hashCode) +
+    (externalCode == null ? 0 : externalCode!.hashCode) +
+    (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() =>
-      'PostCommissionRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, userId=$userId, productId=$productId, value=$value, externalCode=$externalCode, status=$status]';
+  String toString() => 'PostCommissionRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, userId=$userId, productId=$productId, value=$value, externalCode=$externalCode, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -175,10 +172,8 @@ class PostCommissionRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "PostCommissionRequest[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "PostCommissionRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "PostCommissionRequest[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "PostCommissionRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -199,10 +194,7 @@ class PostCommissionRequest {
     return null;
   }
 
-  static List<PostCommissionRequest> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PostCommissionRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PostCommissionRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -230,24 +222,20 @@ class PostCommissionRequest {
   }
 
   // maps a json object with a list of PostCommissionRequest-objects as value to a dart map
-  static Map<String, List<PostCommissionRequest>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<PostCommissionRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PostCommissionRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostCommissionRequest.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = PostCommissionRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

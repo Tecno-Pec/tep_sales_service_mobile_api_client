@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class AddressTypeEnum {
   /// Instantiate a new enum with the provided [value].
   const AddressTypeEnum._(this.value);
@@ -31,13 +32,9 @@ class AddressTypeEnum {
     number2,
   ];
 
-  static AddressTypeEnum? fromJson(dynamic value) =>
-      AddressTypeEnumTypeTransformer().decode(value);
+  static AddressTypeEnum? fromJson(dynamic value) => AddressTypeEnumTypeTransformer().decode(value);
 
-  static List<AddressTypeEnum> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<AddressTypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <AddressTypeEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class AddressTypeEnum {
 /// Transformation class that can [encode] an instance of [AddressTypeEnum] to int,
 /// and [decode] dynamic data back to [AddressTypeEnum].
 class AddressTypeEnumTypeTransformer {
-  factory AddressTypeEnumTypeTransformer() =>
-      _instance ??= const AddressTypeEnumTypeTransformer._();
+  factory AddressTypeEnumTypeTransformer() => _instance ??= const AddressTypeEnumTypeTransformer._();
 
   const AddressTypeEnumTypeTransformer._();
 
@@ -72,10 +68,8 @@ class AddressTypeEnumTypeTransformer {
   AddressTypeEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 1:
-          return AddressTypeEnum.number1;
-        case 2:
-          return AddressTypeEnum.number2;
+        case 1: return AddressTypeEnum.number1;
+        case 2: return AddressTypeEnum.number2;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class AddressTypeEnumTypeTransformer {
   /// Singleton [AddressTypeEnumTypeTransformer] instance.
   static AddressTypeEnumTypeTransformer? _instance;
 }
+

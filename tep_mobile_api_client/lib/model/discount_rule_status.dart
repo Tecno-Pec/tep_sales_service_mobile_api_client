@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class DiscountRuleStatus {
   /// Instantiate a new enum with the provided [value].
   const DiscountRuleStatus._(this.value);
@@ -31,13 +32,9 @@ class DiscountRuleStatus {
     number1,
   ];
 
-  static DiscountRuleStatus? fromJson(dynamic value) =>
-      DiscountRuleStatusTypeTransformer().decode(value);
+  static DiscountRuleStatus? fromJson(dynamic value) => DiscountRuleStatusTypeTransformer().decode(value);
 
-  static List<DiscountRuleStatus> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<DiscountRuleStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <DiscountRuleStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class DiscountRuleStatus {
 /// Transformation class that can [encode] an instance of [DiscountRuleStatus] to int,
 /// and [decode] dynamic data back to [DiscountRuleStatus].
 class DiscountRuleStatusTypeTransformer {
-  factory DiscountRuleStatusTypeTransformer() =>
-      _instance ??= const DiscountRuleStatusTypeTransformer._();
+  factory DiscountRuleStatusTypeTransformer() => _instance ??= const DiscountRuleStatusTypeTransformer._();
 
   const DiscountRuleStatusTypeTransformer._();
 
@@ -72,10 +68,8 @@ class DiscountRuleStatusTypeTransformer {
   DiscountRuleStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0:
-          return DiscountRuleStatus.number0;
-        case 1:
-          return DiscountRuleStatus.number1;
+        case 0: return DiscountRuleStatus.number0;
+        case 1: return DiscountRuleStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class DiscountRuleStatusTypeTransformer {
   /// Singleton [DiscountRuleStatusTypeTransformer] instance.
   static DiscountRuleStatusTypeTransformer? _instance;
 }
+

@@ -64,41 +64,38 @@ class PostDistribuitionCenterResponse {
   GetAllAddressResponse? address;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PostDistribuitionCenterResponse &&
-          other.createdAt == createdAt &&
-          other.updatedAt == updatedAt &&
-          other.userCreated == userCreated &&
-          other.userUpdated == userUpdated &&
-          other.id == id &&
-          other.name == name &&
-          other.document == document &&
-          other.phone == phone &&
-          other.email == email &&
-          other.ie == ie &&
-          other.externalCode == externalCode &&
-          other.address == address;
+  bool operator ==(Object other) => identical(this, other) || other is PostDistribuitionCenterResponse &&
+     other.createdAt == createdAt &&
+     other.updatedAt == updatedAt &&
+     other.userCreated == userCreated &&
+     other.userUpdated == userUpdated &&
+     other.id == id &&
+     other.name == name &&
+     other.document == document &&
+     other.phone == phone &&
+     other.email == email &&
+     other.ie == ie &&
+     other.externalCode == externalCode &&
+     other.address == address;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (createdAt == null ? 0 : createdAt!.hashCode) +
-      (updatedAt == null ? 0 : updatedAt!.hashCode) +
-      (userCreated == null ? 0 : userCreated!.hashCode) +
-      (userUpdated == null ? 0 : userUpdated!.hashCode) +
-      (id == null ? 0 : id!.hashCode) +
-      (name == null ? 0 : name!.hashCode) +
-      (document == null ? 0 : document!.hashCode) +
-      (phone == null ? 0 : phone!.hashCode) +
-      (email == null ? 0 : email!.hashCode) +
-      (ie == null ? 0 : ie!.hashCode) +
-      (externalCode == null ? 0 : externalCode!.hashCode) +
-      (address == null ? 0 : address!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (createdAt == null ? 0 : createdAt!.hashCode) +
+    (updatedAt == null ? 0 : updatedAt!.hashCode) +
+    (userCreated == null ? 0 : userCreated!.hashCode) +
+    (userUpdated == null ? 0 : userUpdated!.hashCode) +
+    (id == null ? 0 : id!.hashCode) +
+    (name == null ? 0 : name!.hashCode) +
+    (document == null ? 0 : document!.hashCode) +
+    (phone == null ? 0 : phone!.hashCode) +
+    (email == null ? 0 : email!.hashCode) +
+    (ie == null ? 0 : ie!.hashCode) +
+    (externalCode == null ? 0 : externalCode!.hashCode) +
+    (address == null ? 0 : address!.hashCode);
 
   @override
-  String toString() =>
-      'PostDistribuitionCenterResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, document=$document, phone=$phone, email=$email, ie=$ie, externalCode=$externalCode, address=$address]';
+  String toString() => 'PostDistribuitionCenterResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, document=$document, phone=$phone, email=$email, ie=$ie, externalCode=$externalCode, address=$address]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -177,10 +174,8 @@ class PostDistribuitionCenterResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "PostDistribuitionCenterResponse[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "PostDistribuitionCenterResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "PostDistribuitionCenterResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "PostDistribuitionCenterResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -203,10 +198,7 @@ class PostDistribuitionCenterResponse {
     return null;
   }
 
-  static List<PostDistribuitionCenterResponse> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PostDistribuitionCenterResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PostDistribuitionCenterResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -219,8 +211,7 @@ class PostDistribuitionCenterResponse {
     return result.toList(growable: growable);
   }
 
-  static Map<String, PostDistribuitionCenterResponse> mapFromJson(
-      dynamic json) {
+  static Map<String, PostDistribuitionCenterResponse> mapFromJson(dynamic json) {
     final map = <String, PostDistribuitionCenterResponse>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
@@ -235,24 +226,20 @@ class PostDistribuitionCenterResponse {
   }
 
   // maps a json object with a list of PostDistribuitionCenterResponse-objects as value to a dart map
-  static Map<String, List<PostDistribuitionCenterResponse>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<PostDistribuitionCenterResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PostDistribuitionCenterResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostDistribuitionCenterResponse.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = PostDistribuitionCenterResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

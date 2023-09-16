@@ -97,47 +97,44 @@ class PostProductResponse {
   List<ProductEspecification>? especification;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PostProductResponse &&
-          other.createdAt == createdAt &&
-          other.updatedAt == updatedAt &&
-          other.userCreated == userCreated &&
-          other.userUpdated == userUpdated &&
-          other.id == id &&
-          other.productGroupId == productGroupId &&
-          other.productLineId == productLineId &&
-          other.weightkilograms == weightkilograms &&
-          other.externalCode == externalCode &&
-          other.name == name &&
-          other.description == description &&
-          other.unitMeasurementType == unitMeasurementType &&
-          other.status == status &&
-          other.photo == photo &&
-          other.especification == especification;
+  bool operator ==(Object other) => identical(this, other) || other is PostProductResponse &&
+     other.createdAt == createdAt &&
+     other.updatedAt == updatedAt &&
+     other.userCreated == userCreated &&
+     other.userUpdated == userUpdated &&
+     other.id == id &&
+     other.productGroupId == productGroupId &&
+     other.productLineId == productLineId &&
+     other.weightkilograms == weightkilograms &&
+     other.externalCode == externalCode &&
+     other.name == name &&
+     other.description == description &&
+     other.unitMeasurementType == unitMeasurementType &&
+     other.status == status &&
+     other.photo == photo &&
+     other.especification == especification;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (createdAt == null ? 0 : createdAt!.hashCode) +
-      (updatedAt == null ? 0 : updatedAt!.hashCode) +
-      (userCreated == null ? 0 : userCreated!.hashCode) +
-      (userUpdated == null ? 0 : userUpdated!.hashCode) +
-      (id == null ? 0 : id!.hashCode) +
-      (productGroupId == null ? 0 : productGroupId!.hashCode) +
-      (productLineId == null ? 0 : productLineId!.hashCode) +
-      (weightkilograms == null ? 0 : weightkilograms!.hashCode) +
-      (externalCode == null ? 0 : externalCode!.hashCode) +
-      (name == null ? 0 : name!.hashCode) +
-      (description == null ? 0 : description!.hashCode) +
-      (unitMeasurementType == null ? 0 : unitMeasurementType!.hashCode) +
-      (status == null ? 0 : status!.hashCode) +
-      (photo == null ? 0 : photo!.hashCode) +
-      (especification == null ? 0 : especification!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (createdAt == null ? 0 : createdAt!.hashCode) +
+    (updatedAt == null ? 0 : updatedAt!.hashCode) +
+    (userCreated == null ? 0 : userCreated!.hashCode) +
+    (userUpdated == null ? 0 : userUpdated!.hashCode) +
+    (id == null ? 0 : id!.hashCode) +
+    (productGroupId == null ? 0 : productGroupId!.hashCode) +
+    (productLineId == null ? 0 : productLineId!.hashCode) +
+    (weightkilograms == null ? 0 : weightkilograms!.hashCode) +
+    (externalCode == null ? 0 : externalCode!.hashCode) +
+    (name == null ? 0 : name!.hashCode) +
+    (description == null ? 0 : description!.hashCode) +
+    (unitMeasurementType == null ? 0 : unitMeasurementType!.hashCode) +
+    (status == null ? 0 : status!.hashCode) +
+    (photo == null ? 0 : photo!.hashCode) +
+    (especification == null ? 0 : especification!.hashCode);
 
   @override
-  String toString() =>
-      'PostProductResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, productGroupId=$productGroupId, productLineId=$productLineId, weightkilograms=$weightkilograms, externalCode=$externalCode, name=$name, description=$description, unitMeasurementType=$unitMeasurementType, status=$status, photo=$photo, especification=$especification]';
+  String toString() => 'PostProductResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, productGroupId=$productGroupId, productLineId=$productLineId, weightkilograms=$weightkilograms, externalCode=$externalCode, name=$name, description=$description, unitMeasurementType=$unitMeasurementType, status=$status, photo=$photo, especification=$especification]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -231,10 +228,8 @@ class PostProductResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "PostProductResponse[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "PostProductResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "PostProductResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "PostProductResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -251,21 +246,16 @@ class PostProductResponse {
         externalCode: mapValueOfType<String>(json, r'externalCode'),
         name: mapValueOfType<String>(json, r'name'),
         description: mapValueOfType<String>(json, r'description'),
-        unitMeasurementType:
-            UnitMeasurementTypeEnum.fromJson(json[r'unitMeasurementType']),
+        unitMeasurementType: UnitMeasurementTypeEnum.fromJson(json[r'unitMeasurementType']),
         status: ProductStatus.fromJson(json[r'status']),
         photo: mapValueOfType<String>(json, r'photo'),
-        especification:
-            ProductEspecification.listFromJson(json[r'especification']),
+        especification: ProductEspecification.listFromJson(json[r'especification']),
       );
     }
     return null;
   }
 
-  static List<PostProductResponse> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PostProductResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PostProductResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -293,24 +283,20 @@ class PostProductResponse {
   }
 
   // maps a json object with a list of PostProductResponse-objects as value to a dart map
-  static Map<String, List<PostProductResponse>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<PostProductResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PostProductResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostProductResponse.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = PostProductResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

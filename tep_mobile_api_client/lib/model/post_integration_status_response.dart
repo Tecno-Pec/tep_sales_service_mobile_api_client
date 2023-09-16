@@ -73,39 +73,36 @@ class PostIntegrationStatusResponse {
   int? quantityEntities;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PostIntegrationStatusResponse &&
-          other.createdAt == createdAt &&
-          other.updatedAt == updatedAt &&
-          other.userCreated == userCreated &&
-          other.userUpdated == userUpdated &&
-          other.id == id &&
-          other.context == context &&
-          other.action == action &&
-          other.status == status &&
-          other.summary == summary &&
-          other.date == date &&
-          other.quantityEntities == quantityEntities;
+  bool operator ==(Object other) => identical(this, other) || other is PostIntegrationStatusResponse &&
+     other.createdAt == createdAt &&
+     other.updatedAt == updatedAt &&
+     other.userCreated == userCreated &&
+     other.userUpdated == userUpdated &&
+     other.id == id &&
+     other.context == context &&
+     other.action == action &&
+     other.status == status &&
+     other.summary == summary &&
+     other.date == date &&
+     other.quantityEntities == quantityEntities;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (createdAt == null ? 0 : createdAt!.hashCode) +
-      (updatedAt == null ? 0 : updatedAt!.hashCode) +
-      (userCreated == null ? 0 : userCreated!.hashCode) +
-      (userUpdated == null ? 0 : userUpdated!.hashCode) +
-      (id == null ? 0 : id!.hashCode) +
-      (context == null ? 0 : context!.hashCode) +
-      (action == null ? 0 : action!.hashCode) +
-      (status == null ? 0 : status!.hashCode) +
-      (summary == null ? 0 : summary!.hashCode) +
-      (date == null ? 0 : date!.hashCode) +
-      (quantityEntities == null ? 0 : quantityEntities!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (createdAt == null ? 0 : createdAt!.hashCode) +
+    (updatedAt == null ? 0 : updatedAt!.hashCode) +
+    (userCreated == null ? 0 : userCreated!.hashCode) +
+    (userUpdated == null ? 0 : userUpdated!.hashCode) +
+    (id == null ? 0 : id!.hashCode) +
+    (context == null ? 0 : context!.hashCode) +
+    (action == null ? 0 : action!.hashCode) +
+    (status == null ? 0 : status!.hashCode) +
+    (summary == null ? 0 : summary!.hashCode) +
+    (date == null ? 0 : date!.hashCode) +
+    (quantityEntities == null ? 0 : quantityEntities!.hashCode);
 
   @override
-  String toString() =>
-      'PostIntegrationStatusResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, context=$context, action=$action, status=$status, summary=$summary, date=$date, quantityEntities=$quantityEntities]';
+  String toString() => 'PostIntegrationStatusResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, context=$context, action=$action, status=$status, summary=$summary, date=$date, quantityEntities=$quantityEntities]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -179,10 +176,8 @@ class PostIntegrationStatusResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "PostIntegrationStatusResponse[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "PostIntegrationStatusResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "PostIntegrationStatusResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "PostIntegrationStatusResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -204,10 +199,7 @@ class PostIntegrationStatusResponse {
     return null;
   }
 
-  static List<PostIntegrationStatusResponse> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PostIntegrationStatusResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PostIntegrationStatusResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -235,24 +227,20 @@ class PostIntegrationStatusResponse {
   }
 
   // maps a json object with a list of PostIntegrationStatusResponse-objects as value to a dart map
-  static Map<String, List<PostIntegrationStatusResponse>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<PostIntegrationStatusResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PostIntegrationStatusResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostIntegrationStatusResponse.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = PostIntegrationStatusResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

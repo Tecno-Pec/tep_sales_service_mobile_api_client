@@ -58,33 +58,30 @@ class DatabaseConnection {
   int? maxPoolSize;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is DatabaseConnection &&
-          other.name == name &&
-          other.server == server &&
-          other.port == port &&
-          other.user == user &&
-          other.password == password &&
-          other.commandTimeout == commandTimeout &&
-          other.minPoolSize == minPoolSize &&
-          other.maxPoolSize == maxPoolSize;
+  bool operator ==(Object other) => identical(this, other) || other is DatabaseConnection &&
+     other.name == name &&
+     other.server == server &&
+     other.port == port &&
+     other.user == user &&
+     other.password == password &&
+     other.commandTimeout == commandTimeout &&
+     other.minPoolSize == minPoolSize &&
+     other.maxPoolSize == maxPoolSize;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (name == null ? 0 : name!.hashCode) +
-      (server == null ? 0 : server!.hashCode) +
-      (port == null ? 0 : port!.hashCode) +
-      (user == null ? 0 : user!.hashCode) +
-      (password == null ? 0 : password!.hashCode) +
-      (commandTimeout == null ? 0 : commandTimeout!.hashCode) +
-      (minPoolSize == null ? 0 : minPoolSize!.hashCode) +
-      (maxPoolSize == null ? 0 : maxPoolSize!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (name == null ? 0 : name!.hashCode) +
+    (server == null ? 0 : server!.hashCode) +
+    (port == null ? 0 : port!.hashCode) +
+    (user == null ? 0 : user!.hashCode) +
+    (password == null ? 0 : password!.hashCode) +
+    (commandTimeout == null ? 0 : commandTimeout!.hashCode) +
+    (minPoolSize == null ? 0 : minPoolSize!.hashCode) +
+    (maxPoolSize == null ? 0 : maxPoolSize!.hashCode);
 
   @override
-  String toString() =>
-      'DatabaseConnection[name=$name, server=$server, port=$port, user=$user, password=$password, commandTimeout=$commandTimeout, minPoolSize=$minPoolSize, maxPoolSize=$maxPoolSize]';
+  String toString() => 'DatabaseConnection[name=$name, server=$server, port=$port, user=$user, password=$password, commandTimeout=$commandTimeout, minPoolSize=$minPoolSize, maxPoolSize=$maxPoolSize]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -143,10 +140,8 @@ class DatabaseConnection {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "DatabaseConnection[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "DatabaseConnection[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "DatabaseConnection[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "DatabaseConnection[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -165,10 +160,7 @@ class DatabaseConnection {
     return null;
   }
 
-  static List<DatabaseConnection> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<DatabaseConnection> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <DatabaseConnection>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -196,24 +188,20 @@ class DatabaseConnection {
   }
 
   // maps a json object with a list of DatabaseConnection-objects as value to a dart map
-  static Map<String, List<DatabaseConnection>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<DatabaseConnection>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<DatabaseConnection>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = DatabaseConnection.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = DatabaseConnection.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

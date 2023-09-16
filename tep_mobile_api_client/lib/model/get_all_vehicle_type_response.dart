@@ -70,37 +70,34 @@ class GetAllVehicleTypeResponse {
   VehicleTypeStatus? status;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is GetAllVehicleTypeResponse &&
-          other.createdAt == createdAt &&
-          other.updatedAt == updatedAt &&
-          other.userCreated == userCreated &&
-          other.userUpdated == userUpdated &&
-          other.id == id &&
-          other.name == name &&
-          other.capacity == capacity &&
-          other.maxCapacity == maxCapacity &&
-          other.externalCode == externalCode &&
-          other.status == status;
+  bool operator ==(Object other) => identical(this, other) || other is GetAllVehicleTypeResponse &&
+     other.createdAt == createdAt &&
+     other.updatedAt == updatedAt &&
+     other.userCreated == userCreated &&
+     other.userUpdated == userUpdated &&
+     other.id == id &&
+     other.name == name &&
+     other.capacity == capacity &&
+     other.maxCapacity == maxCapacity &&
+     other.externalCode == externalCode &&
+     other.status == status;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (createdAt == null ? 0 : createdAt!.hashCode) +
-      (updatedAt == null ? 0 : updatedAt!.hashCode) +
-      (userCreated == null ? 0 : userCreated!.hashCode) +
-      (userUpdated == null ? 0 : userUpdated!.hashCode) +
-      (id == null ? 0 : id!.hashCode) +
-      (name == null ? 0 : name!.hashCode) +
-      (capacity == null ? 0 : capacity!.hashCode) +
-      (maxCapacity == null ? 0 : maxCapacity!.hashCode) +
-      (externalCode == null ? 0 : externalCode!.hashCode) +
-      (status == null ? 0 : status!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (createdAt == null ? 0 : createdAt!.hashCode) +
+    (updatedAt == null ? 0 : updatedAt!.hashCode) +
+    (userCreated == null ? 0 : userCreated!.hashCode) +
+    (userUpdated == null ? 0 : userUpdated!.hashCode) +
+    (id == null ? 0 : id!.hashCode) +
+    (name == null ? 0 : name!.hashCode) +
+    (capacity == null ? 0 : capacity!.hashCode) +
+    (maxCapacity == null ? 0 : maxCapacity!.hashCode) +
+    (externalCode == null ? 0 : externalCode!.hashCode) +
+    (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() =>
-      'GetAllVehicleTypeResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, capacity=$capacity, maxCapacity=$maxCapacity, externalCode=$externalCode, status=$status]';
+  String toString() => 'GetAllVehicleTypeResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, capacity=$capacity, maxCapacity=$maxCapacity, externalCode=$externalCode, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -169,10 +166,8 @@ class GetAllVehicleTypeResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "GetAllVehicleTypeResponse[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "GetAllVehicleTypeResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "GetAllVehicleTypeResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "GetAllVehicleTypeResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -193,10 +188,7 @@ class GetAllVehicleTypeResponse {
     return null;
   }
 
-  static List<GetAllVehicleTypeResponse> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<GetAllVehicleTypeResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <GetAllVehicleTypeResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -224,24 +216,20 @@ class GetAllVehicleTypeResponse {
   }
 
   // maps a json object with a list of GetAllVehicleTypeResponse-objects as value to a dart map
-  static Map<String, List<GetAllVehicleTypeResponse>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<GetAllVehicleTypeResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<GetAllVehicleTypeResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = GetAllVehicleTypeResponse.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = GetAllVehicleTypeResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

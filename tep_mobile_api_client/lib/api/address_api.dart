@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
+
 class AddressApi {
-  AddressApi([ApiClient? apiClient])
-      : apiClient = apiClient ?? defaultApiClient;
+  AddressApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,13 +30,10 @@ class AddressApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> getByIdAddressWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> getByIdAddressWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/addresses/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/addresses/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -53,6 +50,7 @@ class AddressApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -77,28 +75,17 @@ class AddressApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllAddressResponse?> getByIdAddress(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await getByIdAddressWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllAddressResponse?> getByIdAddress(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await getByIdAddressWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllAddressResponse',
-      ) as GetAllAddressResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllAddressResponse',) as GetAllAddressResponse;
+    
     }
     return null;
   }
@@ -132,18 +119,7 @@ class AddressApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1AddressesAllGetWithHttpInfo({
-    String? parentId,
-    String? name,
-    AddressTypeEnum? type,
-    String? externalCode,
-    AddressStatus? status,
-    List<String>? parentIds,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1AddressesAllGetWithHttpInfo({ String? parentId, String? name, AddressTypeEnum? type, String? externalCode, AddressStatus? status, List<String>? parentIds, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/addresses/all';
 
@@ -188,6 +164,7 @@ class AddressApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -226,43 +203,20 @@ class AddressApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllAddressResponse>?> tepsalesV1AddressesAllGet({
-    String? parentId,
-    String? name,
-    AddressTypeEnum? type,
-    String? externalCode,
-    AddressStatus? status,
-    List<String>? parentIds,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1AddressesAllGetWithHttpInfo(
-      parentId: parentId,
-      name: name,
-      type: type,
-      externalCode: externalCode,
-      status: status,
-      parentIds: parentIds,
-      limit: limit,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<List<GetAllAddressResponse>?> tepsalesV1AddressesAllGet({ String? parentId, String? name, AddressTypeEnum? type, String? externalCode, AddressStatus? status, List<String>? parentIds, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1AddressesAllGetWithHttpInfo( parentId: parentId, name: name, type: type, externalCode: externalCode, status: status, parentIds: parentIds, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(
-              responseBody, 'List<GetAllAddressResponse>') as List)
-          .cast<GetAllAddressResponse>()
-          .toList();
+      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllAddressResponse>') as List)
+        .cast<GetAllAddressResponse>()
+        .toList();
+
     }
     return null;
   }
@@ -281,13 +235,10 @@ class AddressApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1AddressesIdDeleteWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1AddressesIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/addresses/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/addresses/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -304,6 +255,7 @@ class AddressApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -328,16 +280,8 @@ class AddressApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1AddressesIdDelete(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1AddressesIdDeleteWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1AddressesIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1AddressesIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -362,14 +306,10 @@ class AddressApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1AddressesIdPatchWithHttpInfo(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1AddressesIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/addresses/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/addresses/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -386,6 +326,7 @@ class AddressApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -415,18 +356,8 @@ class AddressApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1AddressesIdPatch(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1AddressesIdPatchWithHttpInfo(
-      id,
-      operation,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1AddressesIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1AddressesIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -449,14 +380,10 @@ class AddressApi {
   ///
   /// * [PutAddressRequest] putAddressRequest:
   ///   Address to update
-  Future<http.Response> tepsalesV1AddressesIdPutWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutAddressRequest? putAddressRequest,
-  }) async {
+  Future<Response> tepsalesV1AddressesIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutAddressRequest? putAddressRequest, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/addresses/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/addresses/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putAddressRequest;
@@ -473,6 +400,7 @@ class AddressApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -500,18 +428,8 @@ class AddressApi {
   ///
   /// * [PutAddressRequest] putAddressRequest:
   ///   Address to update
-  Future<void> tepsalesV1AddressesIdPut(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutAddressRequest? putAddressRequest,
-  }) async {
-    final response = await tepsalesV1AddressesIdPutWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      putAddressRequest: putAddressRequest,
-    );
+  Future<void> tepsalesV1AddressesIdPut(String id, { String? xApiKey, String? xCsrfToken, PutAddressRequest? putAddressRequest, }) async {
+    final response = await tepsalesV1AddressesIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putAddressRequest: putAddressRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -547,19 +465,7 @@ class AddressApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1AddressesPagedGetWithHttpInfo({
-    String? parentId,
-    String? name,
-    AddressTypeEnum? type,
-    String? externalCode,
-    AddressStatus? status,
-    List<String>? parentIds,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1AddressesPagedGetWithHttpInfo({ String? parentId, String? name, AddressTypeEnum? type, String? externalCode, AddressStatus? status, List<String>? parentIds, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/addresses/paged';
 
@@ -607,6 +513,7 @@ class AddressApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -646,44 +553,17 @@ class AddressApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedAddressResponse?> tepsalesV1AddressesPagedGet({
-    String? parentId,
-    String? name,
-    AddressTypeEnum? type,
-    String? externalCode,
-    AddressStatus? status,
-    List<String>? parentIds,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1AddressesPagedGetWithHttpInfo(
-      parentId: parentId,
-      name: name,
-      type: type,
-      externalCode: externalCode,
-      status: status,
-      parentIds: parentIds,
-      page: page,
-      pageSize: pageSize,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPagedAddressResponse?> tepsalesV1AddressesPagedGet({ String? parentId, String? name, AddressTypeEnum? type, String? externalCode, AddressStatus? status, List<String>? parentIds, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1AddressesPagedGetWithHttpInfo( parentId: parentId, name: name, type: type, externalCode: externalCode, status: status, parentIds: parentIds, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPagedAddressResponse',
-      ) as GetAllPagedAddressResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedAddressResponse',) as GetAllPagedAddressResponse;
+    
     }
     return null;
   }
@@ -702,11 +582,7 @@ class AddressApi {
   ///
   /// * [PostAddressRequest] postAddressRequest:
   ///   Address to create
-  Future<http.Response> tepsalesV1AddressesPostWithHttpInfo({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostAddressRequest? postAddressRequest,
-  }) async {
+  Future<Response> tepsalesV1AddressesPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostAddressRequest? postAddressRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/addresses';
 
@@ -725,6 +601,7 @@ class AddressApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -749,28 +626,17 @@ class AddressApi {
   ///
   /// * [PostAddressRequest] postAddressRequest:
   ///   Address to create
-  Future<PostAddressResponse?> tepsalesV1AddressesPost({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostAddressRequest? postAddressRequest,
-  }) async {
-    final response = await tepsalesV1AddressesPostWithHttpInfo(
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      postAddressRequest: postAddressRequest,
-    );
+  Future<PostAddressResponse?> tepsalesV1AddressesPost({ String? xApiKey, String? xCsrfToken, PostAddressRequest? postAddressRequest, }) async {
+    final response = await tepsalesV1AddressesPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postAddressRequest: postAddressRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'PostAddressResponse',
-      ) as PostAddressResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostAddressResponse',) as PostAddressResponse;
+    
     }
     return null;
   }

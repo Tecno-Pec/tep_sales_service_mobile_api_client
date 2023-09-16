@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class AddressStatus {
   /// Instantiate a new enum with the provided [value].
   const AddressStatus._(this.value);
@@ -31,13 +32,9 @@ class AddressStatus {
     number1,
   ];
 
-  static AddressStatus? fromJson(dynamic value) =>
-      AddressStatusTypeTransformer().decode(value);
+  static AddressStatus? fromJson(dynamic value) => AddressStatusTypeTransformer().decode(value);
 
-  static List<AddressStatus> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<AddressStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <AddressStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class AddressStatus {
 /// Transformation class that can [encode] an instance of [AddressStatus] to int,
 /// and [decode] dynamic data back to [AddressStatus].
 class AddressStatusTypeTransformer {
-  factory AddressStatusTypeTransformer() =>
-      _instance ??= const AddressStatusTypeTransformer._();
+  factory AddressStatusTypeTransformer() => _instance ??= const AddressStatusTypeTransformer._();
 
   const AddressStatusTypeTransformer._();
 
@@ -72,10 +68,8 @@ class AddressStatusTypeTransformer {
   AddressStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0:
-          return AddressStatus.number0;
-        case 1:
-          return AddressStatus.number1;
+        case 0: return AddressStatus.number0;
+        case 1: return AddressStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class AddressStatusTypeTransformer {
   /// Singleton [AddressStatusTypeTransformer] instance.
   static AddressStatusTypeTransformer? _instance;
 }
+

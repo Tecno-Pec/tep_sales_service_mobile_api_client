@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class PaymentConditionStatus {
   /// Instantiate a new enum with the provided [value].
   const PaymentConditionStatus._(this.value);
@@ -31,13 +32,9 @@ class PaymentConditionStatus {
     number1,
   ];
 
-  static PaymentConditionStatus? fromJson(dynamic value) =>
-      PaymentConditionStatusTypeTransformer().decode(value);
+  static PaymentConditionStatus? fromJson(dynamic value) => PaymentConditionStatusTypeTransformer().decode(value);
 
-  static List<PaymentConditionStatus> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PaymentConditionStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PaymentConditionStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class PaymentConditionStatus {
 /// Transformation class that can [encode] an instance of [PaymentConditionStatus] to int,
 /// and [decode] dynamic data back to [PaymentConditionStatus].
 class PaymentConditionStatusTypeTransformer {
-  factory PaymentConditionStatusTypeTransformer() =>
-      _instance ??= const PaymentConditionStatusTypeTransformer._();
+  factory PaymentConditionStatusTypeTransformer() => _instance ??= const PaymentConditionStatusTypeTransformer._();
 
   const PaymentConditionStatusTypeTransformer._();
 
@@ -72,10 +68,8 @@ class PaymentConditionStatusTypeTransformer {
   PaymentConditionStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0:
-          return PaymentConditionStatus.number0;
-        case 1:
-          return PaymentConditionStatus.number1;
+        case 0: return PaymentConditionStatus.number0;
+        case 1: return PaymentConditionStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class PaymentConditionStatusTypeTransformer {
   /// Singleton [PaymentConditionStatusTypeTransformer] instance.
   static PaymentConditionStatusTypeTransformer? _instance;
 }
+

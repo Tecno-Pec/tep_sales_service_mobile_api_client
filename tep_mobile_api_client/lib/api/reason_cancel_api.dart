@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
+
 class ReasonCancelApi {
-  ReasonCancelApi([ApiClient? apiClient])
-      : apiClient = apiClient ?? defaultApiClient;
+  ReasonCancelApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,13 +30,10 @@ class ReasonCancelApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> getByIdReasonCancelWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> getByIdReasonCancelWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/reasonscancels/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/reasonscancels/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -53,6 +50,7 @@ class ReasonCancelApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -77,28 +75,17 @@ class ReasonCancelApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllReasonCancelResponse?> getByIdReasonCancel(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await getByIdReasonCancelWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllReasonCancelResponse?> getByIdReasonCancel(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await getByIdReasonCancelWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllReasonCancelResponse',
-      ) as GetAllReasonCancelResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllReasonCancelResponse',) as GetAllReasonCancelResponse;
+    
     }
     return null;
   }
@@ -128,16 +115,7 @@ class ReasonCancelApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1ReasonscancelsAllGetWithHttpInfo({
-    String? name,
-    String? description,
-    String? externalCode,
-    ReasonCancelStatus? status,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1ReasonscancelsAllGetWithHttpInfo({ String? name, String? description, String? externalCode, ReasonCancelStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/reasonscancels/all';
 
@@ -176,6 +154,7 @@ class ReasonCancelApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -210,39 +189,20 @@ class ReasonCancelApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllReasonCancelResponse>?> tepsalesV1ReasonscancelsAllGet({
-    String? name,
-    String? description,
-    String? externalCode,
-    ReasonCancelStatus? status,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1ReasonscancelsAllGetWithHttpInfo(
-      name: name,
-      description: description,
-      externalCode: externalCode,
-      status: status,
-      limit: limit,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<List<GetAllReasonCancelResponse>?> tepsalesV1ReasonscancelsAllGet({ String? name, String? description, String? externalCode, ReasonCancelStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1ReasonscancelsAllGetWithHttpInfo( name: name, description: description, externalCode: externalCode, status: status, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(
-              responseBody, 'List<GetAllReasonCancelResponse>') as List)
-          .cast<GetAllReasonCancelResponse>()
-          .toList();
+      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllReasonCancelResponse>') as List)
+        .cast<GetAllReasonCancelResponse>()
+        .toList();
+
     }
     return null;
   }
@@ -261,13 +221,10 @@ class ReasonCancelApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1ReasonscancelsIdDeleteWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1ReasonscancelsIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/reasonscancels/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/reasonscancels/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -284,6 +241,7 @@ class ReasonCancelApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -308,16 +266,8 @@ class ReasonCancelApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1ReasonscancelsIdDelete(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1ReasonscancelsIdDeleteWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1ReasonscancelsIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1ReasonscancelsIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -342,14 +292,10 @@ class ReasonCancelApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1ReasonscancelsIdPatchWithHttpInfo(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1ReasonscancelsIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/reasonscancels/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/reasonscancels/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -366,6 +312,7 @@ class ReasonCancelApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -395,18 +342,8 @@ class ReasonCancelApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1ReasonscancelsIdPatch(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1ReasonscancelsIdPatchWithHttpInfo(
-      id,
-      operation,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1ReasonscancelsIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1ReasonscancelsIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -429,14 +366,10 @@ class ReasonCancelApi {
   ///
   /// * [PutReasonCancelRequest] putReasonCancelRequest:
   ///   ReasonCancel to update
-  Future<http.Response> tepsalesV1ReasonscancelsIdPutWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutReasonCancelRequest? putReasonCancelRequest,
-  }) async {
+  Future<Response> tepsalesV1ReasonscancelsIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutReasonCancelRequest? putReasonCancelRequest, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/reasonscancels/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/reasonscancels/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putReasonCancelRequest;
@@ -453,6 +386,7 @@ class ReasonCancelApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -480,18 +414,8 @@ class ReasonCancelApi {
   ///
   /// * [PutReasonCancelRequest] putReasonCancelRequest:
   ///   ReasonCancel to update
-  Future<void> tepsalesV1ReasonscancelsIdPut(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutReasonCancelRequest? putReasonCancelRequest,
-  }) async {
-    final response = await tepsalesV1ReasonscancelsIdPutWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      putReasonCancelRequest: putReasonCancelRequest,
-    );
+  Future<void> tepsalesV1ReasonscancelsIdPut(String id, { String? xApiKey, String? xCsrfToken, PutReasonCancelRequest? putReasonCancelRequest, }) async {
+    final response = await tepsalesV1ReasonscancelsIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putReasonCancelRequest: putReasonCancelRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -523,17 +447,7 @@ class ReasonCancelApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1ReasonscancelsPagedGetWithHttpInfo({
-    String? name,
-    String? description,
-    String? externalCode,
-    ReasonCancelStatus? status,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1ReasonscancelsPagedGetWithHttpInfo({ String? name, String? description, String? externalCode, ReasonCancelStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/reasonscancels/paged';
 
@@ -575,6 +489,7 @@ class ReasonCancelApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -610,40 +525,17 @@ class ReasonCancelApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedReasonCancelResponse?> tepsalesV1ReasonscancelsPagedGet({
-    String? name,
-    String? description,
-    String? externalCode,
-    ReasonCancelStatus? status,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1ReasonscancelsPagedGetWithHttpInfo(
-      name: name,
-      description: description,
-      externalCode: externalCode,
-      status: status,
-      page: page,
-      pageSize: pageSize,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPagedReasonCancelResponse?> tepsalesV1ReasonscancelsPagedGet({ String? name, String? description, String? externalCode, ReasonCancelStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1ReasonscancelsPagedGetWithHttpInfo( name: name, description: description, externalCode: externalCode, status: status, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPagedReasonCancelResponse',
-      ) as GetAllPagedReasonCancelResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedReasonCancelResponse',) as GetAllPagedReasonCancelResponse;
+    
     }
     return null;
   }
@@ -662,11 +554,7 @@ class ReasonCancelApi {
   ///
   /// * [PostReasonCancelRequest] postReasonCancelRequest:
   ///   ReasonCancel to create
-  Future<http.Response> tepsalesV1ReasonscancelsPostWithHttpInfo({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostReasonCancelRequest? postReasonCancelRequest,
-  }) async {
+  Future<Response> tepsalesV1ReasonscancelsPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostReasonCancelRequest? postReasonCancelRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/reasonscancels';
 
@@ -685,6 +573,7 @@ class ReasonCancelApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -709,28 +598,17 @@ class ReasonCancelApi {
   ///
   /// * [PostReasonCancelRequest] postReasonCancelRequest:
   ///   ReasonCancel to create
-  Future<PostReasonCancelResponse?> tepsalesV1ReasonscancelsPost({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostReasonCancelRequest? postReasonCancelRequest,
-  }) async {
-    final response = await tepsalesV1ReasonscancelsPostWithHttpInfo(
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      postReasonCancelRequest: postReasonCancelRequest,
-    );
+  Future<PostReasonCancelResponse?> tepsalesV1ReasonscancelsPost({ String? xApiKey, String? xCsrfToken, PostReasonCancelRequest? postReasonCancelRequest, }) async {
+    final response = await tepsalesV1ReasonscancelsPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postReasonCancelRequest: postReasonCancelRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'PostReasonCancelResponse',
-      ) as PostReasonCancelResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostReasonCancelResponse',) as PostReasonCancelResponse;
+    
     }
     return null;
   }

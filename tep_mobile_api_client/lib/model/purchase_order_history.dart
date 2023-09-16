@@ -40,25 +40,22 @@ class PurchaseOrderHistory {
   String? userId;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PurchaseOrderHistory &&
-          other.status == status &&
-          other.date == date &&
-          other.summary == summary &&
-          other.userId == userId;
+  bool operator ==(Object other) => identical(this, other) || other is PurchaseOrderHistory &&
+     other.status == status &&
+     other.date == date &&
+     other.summary == summary &&
+     other.userId == userId;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (status == null ? 0 : status!.hashCode) +
-      (date == null ? 0 : date!.hashCode) +
-      (summary == null ? 0 : summary!.hashCode) +
-      (userId == null ? 0 : userId!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (status == null ? 0 : status!.hashCode) +
+    (date == null ? 0 : date!.hashCode) +
+    (summary == null ? 0 : summary!.hashCode) +
+    (userId == null ? 0 : userId!.hashCode);
 
   @override
-  String toString() =>
-      'PurchaseOrderHistory[status=$status, date=$date, summary=$summary, userId=$userId]';
+  String toString() => 'PurchaseOrderHistory[status=$status, date=$date, summary=$summary, userId=$userId]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -97,10 +94,8 @@ class PurchaseOrderHistory {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "PurchaseOrderHistory[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "PurchaseOrderHistory[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "PurchaseOrderHistory[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "PurchaseOrderHistory[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -115,10 +110,7 @@ class PurchaseOrderHistory {
     return null;
   }
 
-  static List<PurchaseOrderHistory> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PurchaseOrderHistory> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PurchaseOrderHistory>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -146,24 +138,20 @@ class PurchaseOrderHistory {
   }
 
   // maps a json object with a list of PurchaseOrderHistory-objects as value to a dart map
-  static Map<String, List<PurchaseOrderHistory>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<PurchaseOrderHistory>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PurchaseOrderHistory>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PurchaseOrderHistory.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = PurchaseOrderHistory.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

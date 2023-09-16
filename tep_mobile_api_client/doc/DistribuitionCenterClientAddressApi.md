@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DistribuitionCenterClientAddress id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5f31051d-baa5-49e7-8509-ef00d494aa57']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2955b3e4-2b6c-4a2a-a10f-dc5167875201']
 
 ### Return type
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '00a4ce41-acb7-4ff2-89d2-253221a3165c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2bbf9dfa-4ad0-4bb9-9f74-1b4b27a114ff']
 
 ### Return type
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DistribuitionCenterClientAddress id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd455752b-58ad-4d57-9459-1e79e4b71cb3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '90ac6a54-295f-4241-a4f2-faa43746a4ef']
 
 ### Return type
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
  **id** | **String**| DistribuitionCenterClientAddress id | 
  **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '72cea4d6-fe7f-4bb1-abd4-df52f4437958']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7b6f8af0-1e53-433b-ba0e-f06e16f4332f']
 
 ### Return type
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DistribuitionCenterClientAddress Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '57d366fd-bbe5-4584-89f3-a70edb051785']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '14adc77d-26e2-4d84-aa67-4ee8a778c77b']
  **putDistribuitionCenterClientAddressRequest** | [**PutDistribuitionCenterClientAddressRequest**](PutDistribuitionCenterClientAddressRequest.md)| DistribuitionCenterClientAddress to update | [optional] 
 
 ### Return type
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2a9de5a4-a23f-45c3-b1b5-3f6e6b638520']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bb4d148c-1937-4892-8bd4-092d7b2964fa']
 
 ### Return type
 
@@ -368,7 +368,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b5d2f220-74c0-4fdb-870c-6dcd8844034c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8c164f7c-6eed-4f2b-9bd7-dc5c3aa5569e']
  **postDistribuitionCenterClientAddressRequest** | [**PostDistribuitionCenterClientAddressRequest**](PostDistribuitionCenterClientAddressRequest.md)| DistribuitionCenterClientAddress to create | [optional] 
 
 ### Return type

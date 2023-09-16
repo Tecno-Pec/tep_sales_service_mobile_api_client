@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class ReasonCancelStatus {
   /// Instantiate a new enum with the provided [value].
   const ReasonCancelStatus._(this.value);
@@ -31,13 +32,9 @@ class ReasonCancelStatus {
     number1,
   ];
 
-  static ReasonCancelStatus? fromJson(dynamic value) =>
-      ReasonCancelStatusTypeTransformer().decode(value);
+  static ReasonCancelStatus? fromJson(dynamic value) => ReasonCancelStatusTypeTransformer().decode(value);
 
-  static List<ReasonCancelStatus> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<ReasonCancelStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ReasonCancelStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class ReasonCancelStatus {
 /// Transformation class that can [encode] an instance of [ReasonCancelStatus] to int,
 /// and [decode] dynamic data back to [ReasonCancelStatus].
 class ReasonCancelStatusTypeTransformer {
-  factory ReasonCancelStatusTypeTransformer() =>
-      _instance ??= const ReasonCancelStatusTypeTransformer._();
+  factory ReasonCancelStatusTypeTransformer() => _instance ??= const ReasonCancelStatusTypeTransformer._();
 
   const ReasonCancelStatusTypeTransformer._();
 
@@ -72,10 +68,8 @@ class ReasonCancelStatusTypeTransformer {
   ReasonCancelStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0:
-          return ReasonCancelStatus.number0;
-        case 1:
-          return ReasonCancelStatus.number1;
+        case 0: return ReasonCancelStatus.number0;
+        case 1: return ReasonCancelStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class ReasonCancelStatusTypeTransformer {
   /// Singleton [ReasonCancelStatusTypeTransformer] instance.
   static ReasonCancelStatusTypeTransformer? _instance;
 }
+

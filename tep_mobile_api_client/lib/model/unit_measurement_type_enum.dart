@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class UnitMeasurementTypeEnum {
   /// Instantiate a new enum with the provided [value].
   const UnitMeasurementTypeEnum._(this.value);
@@ -31,13 +32,9 @@ class UnitMeasurementTypeEnum {
     number2,
   ];
 
-  static UnitMeasurementTypeEnum? fromJson(dynamic value) =>
-      UnitMeasurementTypeEnumTypeTransformer().decode(value);
+  static UnitMeasurementTypeEnum? fromJson(dynamic value) => UnitMeasurementTypeEnumTypeTransformer().decode(value);
 
-  static List<UnitMeasurementTypeEnum> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<UnitMeasurementTypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <UnitMeasurementTypeEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class UnitMeasurementTypeEnum {
 /// Transformation class that can [encode] an instance of [UnitMeasurementTypeEnum] to int,
 /// and [decode] dynamic data back to [UnitMeasurementTypeEnum].
 class UnitMeasurementTypeEnumTypeTransformer {
-  factory UnitMeasurementTypeEnumTypeTransformer() =>
-      _instance ??= const UnitMeasurementTypeEnumTypeTransformer._();
+  factory UnitMeasurementTypeEnumTypeTransformer() => _instance ??= const UnitMeasurementTypeEnumTypeTransformer._();
 
   const UnitMeasurementTypeEnumTypeTransformer._();
 
@@ -72,10 +68,8 @@ class UnitMeasurementTypeEnumTypeTransformer {
   UnitMeasurementTypeEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 1:
-          return UnitMeasurementTypeEnum.number1;
-        case 2:
-          return UnitMeasurementTypeEnum.number2;
+        case 1: return UnitMeasurementTypeEnum.number1;
+        case 2: return UnitMeasurementTypeEnum.number2;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class UnitMeasurementTypeEnumTypeTransformer {
   /// Singleton [UnitMeasurementTypeEnumTypeTransformer] instance.
   static UnitMeasurementTypeEnumTypeTransformer? _instance;
 }
+

@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
+
 class PaymentConditionApi {
-  PaymentConditionApi([ApiClient? apiClient])
-      : apiClient = apiClient ?? defaultApiClient;
+  PaymentConditionApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,13 +30,10 @@ class PaymentConditionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> getByIdPaymentConditionWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> getByIdPaymentConditionWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/paymentConditions/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/paymentConditions/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -53,6 +50,7 @@ class PaymentConditionApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -77,28 +75,17 @@ class PaymentConditionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPaymentConditionResponse?> getByIdPaymentCondition(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await getByIdPaymentConditionWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPaymentConditionResponse?> getByIdPaymentCondition(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await getByIdPaymentConditionWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPaymentConditionResponse',
-      ) as GetAllPaymentConditionResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPaymentConditionResponse',) as GetAllPaymentConditionResponse;
+    
     }
     return null;
   }
@@ -128,16 +115,7 @@ class PaymentConditionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1PaymentConditionsAllGetWithHttpInfo({
-    String? name,
-    String? externalCode,
-    int? sequence,
-    PaymentConditionStatus? status,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1PaymentConditionsAllGetWithHttpInfo({ String? name, String? externalCode, int? sequence, PaymentConditionStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/paymentConditions/all';
 
@@ -176,6 +154,7 @@ class PaymentConditionApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -210,40 +189,20 @@ class PaymentConditionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllPaymentConditionResponse>?>
-      tepsalesV1PaymentConditionsAllGet({
-    String? name,
-    String? externalCode,
-    int? sequence,
-    PaymentConditionStatus? status,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1PaymentConditionsAllGetWithHttpInfo(
-      name: name,
-      externalCode: externalCode,
-      sequence: sequence,
-      status: status,
-      limit: limit,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<List<GetAllPaymentConditionResponse>?> tepsalesV1PaymentConditionsAllGet({ String? name, String? externalCode, int? sequence, PaymentConditionStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1PaymentConditionsAllGetWithHttpInfo( name: name, externalCode: externalCode, sequence: sequence, status: status, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(
-              responseBody, 'List<GetAllPaymentConditionResponse>') as List)
-          .cast<GetAllPaymentConditionResponse>()
-          .toList();
+      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllPaymentConditionResponse>') as List)
+        .cast<GetAllPaymentConditionResponse>()
+        .toList();
+
     }
     return null;
   }
@@ -262,13 +221,10 @@ class PaymentConditionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1PaymentConditionsIdDeleteWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1PaymentConditionsIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/paymentConditions/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/paymentConditions/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -285,6 +241,7 @@ class PaymentConditionApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -309,16 +266,8 @@ class PaymentConditionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1PaymentConditionsIdDelete(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1PaymentConditionsIdDeleteWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1PaymentConditionsIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1PaymentConditionsIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -343,14 +292,10 @@ class PaymentConditionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1PaymentConditionsIdPatchWithHttpInfo(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1PaymentConditionsIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/paymentConditions/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/paymentConditions/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -367,6 +312,7 @@ class PaymentConditionApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -396,18 +342,8 @@ class PaymentConditionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1PaymentConditionsIdPatch(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1PaymentConditionsIdPatchWithHttpInfo(
-      id,
-      operation,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1PaymentConditionsIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1PaymentConditionsIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -430,14 +366,10 @@ class PaymentConditionApi {
   ///
   /// * [PutPaymentConditionRequest] putPaymentConditionRequest:
   ///   PaymentCondition to update
-  Future<http.Response> tepsalesV1PaymentConditionsIdPutWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutPaymentConditionRequest? putPaymentConditionRequest,
-  }) async {
+  Future<Response> tepsalesV1PaymentConditionsIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutPaymentConditionRequest? putPaymentConditionRequest, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/paymentConditions/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/paymentConditions/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putPaymentConditionRequest;
@@ -454,6 +386,7 @@ class PaymentConditionApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -481,18 +414,8 @@ class PaymentConditionApi {
   ///
   /// * [PutPaymentConditionRequest] putPaymentConditionRequest:
   ///   PaymentCondition to update
-  Future<void> tepsalesV1PaymentConditionsIdPut(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutPaymentConditionRequest? putPaymentConditionRequest,
-  }) async {
-    final response = await tepsalesV1PaymentConditionsIdPutWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      putPaymentConditionRequest: putPaymentConditionRequest,
-    );
+  Future<void> tepsalesV1PaymentConditionsIdPut(String id, { String? xApiKey, String? xCsrfToken, PutPaymentConditionRequest? putPaymentConditionRequest, }) async {
+    final response = await tepsalesV1PaymentConditionsIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putPaymentConditionRequest: putPaymentConditionRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -524,17 +447,7 @@ class PaymentConditionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1PaymentConditionsPagedGetWithHttpInfo({
-    String? name,
-    String? externalCode,
-    int? sequence,
-    PaymentConditionStatus? status,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1PaymentConditionsPagedGetWithHttpInfo({ String? name, String? externalCode, int? sequence, PaymentConditionStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/paymentConditions/paged';
 
@@ -576,6 +489,7 @@ class PaymentConditionApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -611,41 +525,17 @@ class PaymentConditionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedPaymentConditionResponse?>
-      tepsalesV1PaymentConditionsPagedGet({
-    String? name,
-    String? externalCode,
-    int? sequence,
-    PaymentConditionStatus? status,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1PaymentConditionsPagedGetWithHttpInfo(
-      name: name,
-      externalCode: externalCode,
-      sequence: sequence,
-      status: status,
-      page: page,
-      pageSize: pageSize,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPagedPaymentConditionResponse?> tepsalesV1PaymentConditionsPagedGet({ String? name, String? externalCode, int? sequence, PaymentConditionStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1PaymentConditionsPagedGetWithHttpInfo( name: name, externalCode: externalCode, sequence: sequence, status: status, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPagedPaymentConditionResponse',
-      ) as GetAllPagedPaymentConditionResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedPaymentConditionResponse',) as GetAllPagedPaymentConditionResponse;
+    
     }
     return null;
   }
@@ -664,11 +554,7 @@ class PaymentConditionApi {
   ///
   /// * [PostPaymentConditionRequest] postPaymentConditionRequest:
   ///   PaymentCondition to create
-  Future<http.Response> tepsalesV1PaymentConditionsPostWithHttpInfo({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostPaymentConditionRequest? postPaymentConditionRequest,
-  }) async {
+  Future<Response> tepsalesV1PaymentConditionsPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostPaymentConditionRequest? postPaymentConditionRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/paymentConditions';
 
@@ -687,6 +573,7 @@ class PaymentConditionApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -711,28 +598,17 @@ class PaymentConditionApi {
   ///
   /// * [PostPaymentConditionRequest] postPaymentConditionRequest:
   ///   PaymentCondition to create
-  Future<PostPaymentConditionResponse?> tepsalesV1PaymentConditionsPost({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostPaymentConditionRequest? postPaymentConditionRequest,
-  }) async {
-    final response = await tepsalesV1PaymentConditionsPostWithHttpInfo(
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      postPaymentConditionRequest: postPaymentConditionRequest,
-    );
+  Future<PostPaymentConditionResponse?> tepsalesV1PaymentConditionsPost({ String? xApiKey, String? xCsrfToken, PostPaymentConditionRequest? postPaymentConditionRequest, }) async {
+    final response = await tepsalesV1PaymentConditionsPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postPaymentConditionRequest: postPaymentConditionRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'PostPaymentConditionResponse',
-      ) as PostPaymentConditionResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostPaymentConditionResponse',) as PostPaymentConditionResponse;
+    
     }
     return null;
   }

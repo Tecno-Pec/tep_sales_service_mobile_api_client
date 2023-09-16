@@ -73,31 +73,28 @@ class GetAllPagedNotificationResponse {
   List<GetAllNotificationResponse>? results;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is GetAllPagedNotificationResponse &&
-          other.currentPage == currentPage &&
-          other.pageCount == pageCount &&
-          other.pageSize == pageSize &&
-          other.rowCount == rowCount &&
-          other.firstRowOnPage == firstRowOnPage &&
-          other.lastRowOnPage == lastRowOnPage &&
-          other.results == results;
+  bool operator ==(Object other) => identical(this, other) || other is GetAllPagedNotificationResponse &&
+     other.currentPage == currentPage &&
+     other.pageCount == pageCount &&
+     other.pageSize == pageSize &&
+     other.rowCount == rowCount &&
+     other.firstRowOnPage == firstRowOnPage &&
+     other.lastRowOnPage == lastRowOnPage &&
+     other.results == results;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (currentPage == null ? 0 : currentPage!.hashCode) +
-      (pageCount == null ? 0 : pageCount!.hashCode) +
-      (pageSize == null ? 0 : pageSize!.hashCode) +
-      (rowCount == null ? 0 : rowCount!.hashCode) +
-      (firstRowOnPage == null ? 0 : firstRowOnPage!.hashCode) +
-      (lastRowOnPage == null ? 0 : lastRowOnPage!.hashCode) +
-      (results == null ? 0 : results!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (currentPage == null ? 0 : currentPage!.hashCode) +
+    (pageCount == null ? 0 : pageCount!.hashCode) +
+    (pageSize == null ? 0 : pageSize!.hashCode) +
+    (rowCount == null ? 0 : rowCount!.hashCode) +
+    (firstRowOnPage == null ? 0 : firstRowOnPage!.hashCode) +
+    (lastRowOnPage == null ? 0 : lastRowOnPage!.hashCode) +
+    (results == null ? 0 : results!.hashCode);
 
   @override
-  String toString() =>
-      'GetAllPagedNotificationResponse[currentPage=$currentPage, pageCount=$pageCount, pageSize=$pageSize, rowCount=$rowCount, firstRowOnPage=$firstRowOnPage, lastRowOnPage=$lastRowOnPage, results=$results]';
+  String toString() => 'GetAllPagedNotificationResponse[currentPage=$currentPage, pageCount=$pageCount, pageSize=$pageSize, rowCount=$rowCount, firstRowOnPage=$firstRowOnPage, lastRowOnPage=$lastRowOnPage, results=$results]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -151,10 +148,8 @@ class GetAllPagedNotificationResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "GetAllPagedNotificationResponse[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "GetAllPagedNotificationResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "GetAllPagedNotificationResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "GetAllPagedNotificationResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -172,10 +167,7 @@ class GetAllPagedNotificationResponse {
     return null;
   }
 
-  static List<GetAllPagedNotificationResponse> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<GetAllPagedNotificationResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <GetAllPagedNotificationResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -188,8 +180,7 @@ class GetAllPagedNotificationResponse {
     return result.toList(growable: growable);
   }
 
-  static Map<String, GetAllPagedNotificationResponse> mapFromJson(
-      dynamic json) {
+  static Map<String, GetAllPagedNotificationResponse> mapFromJson(dynamic json) {
     final map = <String, GetAllPagedNotificationResponse>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
@@ -204,24 +195,20 @@ class GetAllPagedNotificationResponse {
   }
 
   // maps a json object with a list of GetAllPagedNotificationResponse-objects as value to a dart map
-  static Map<String, List<GetAllPagedNotificationResponse>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<GetAllPagedNotificationResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<GetAllPagedNotificationResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = GetAllPagedNotificationResponse.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = GetAllPagedNotificationResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

@@ -88,45 +88,42 @@ class GetAllClientContactCalendarResponse {
   String? id;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is GetAllClientContactCalendarResponse &&
-          other.createdAt == createdAt &&
-          other.updatedAt == updatedAt &&
-          other.userCreated == userCreated &&
-          other.userUpdated == userUpdated &&
-          other.startDate == startDate &&
-          other.endDate == endDate &&
-          other.clientId == clientId &&
-          other.reasonVisitId == reasonVisitId &&
-          other.clientName == clientName &&
-          other.salesmanId == salesmanId &&
-          other.salesmanName == salesmanName &&
-          other.summary == summary &&
-          other.address == address &&
-          other.id == id;
+  bool operator ==(Object other) => identical(this, other) || other is GetAllClientContactCalendarResponse &&
+     other.createdAt == createdAt &&
+     other.updatedAt == updatedAt &&
+     other.userCreated == userCreated &&
+     other.userUpdated == userUpdated &&
+     other.startDate == startDate &&
+     other.endDate == endDate &&
+     other.clientId == clientId &&
+     other.reasonVisitId == reasonVisitId &&
+     other.clientName == clientName &&
+     other.salesmanId == salesmanId &&
+     other.salesmanName == salesmanName &&
+     other.summary == summary &&
+     other.address == address &&
+     other.id == id;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (createdAt == null ? 0 : createdAt!.hashCode) +
-      (updatedAt == null ? 0 : updatedAt!.hashCode) +
-      (userCreated == null ? 0 : userCreated!.hashCode) +
-      (userUpdated == null ? 0 : userUpdated!.hashCode) +
-      (startDate == null ? 0 : startDate!.hashCode) +
-      (endDate == null ? 0 : endDate!.hashCode) +
-      (clientId == null ? 0 : clientId!.hashCode) +
-      (reasonVisitId == null ? 0 : reasonVisitId!.hashCode) +
-      (clientName == null ? 0 : clientName!.hashCode) +
-      (salesmanId == null ? 0 : salesmanId!.hashCode) +
-      (salesmanName == null ? 0 : salesmanName!.hashCode) +
-      (summary == null ? 0 : summary!.hashCode) +
-      (address == null ? 0 : address!.hashCode) +
-      (id == null ? 0 : id!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (createdAt == null ? 0 : createdAt!.hashCode) +
+    (updatedAt == null ? 0 : updatedAt!.hashCode) +
+    (userCreated == null ? 0 : userCreated!.hashCode) +
+    (userUpdated == null ? 0 : userUpdated!.hashCode) +
+    (startDate == null ? 0 : startDate!.hashCode) +
+    (endDate == null ? 0 : endDate!.hashCode) +
+    (clientId == null ? 0 : clientId!.hashCode) +
+    (reasonVisitId == null ? 0 : reasonVisitId!.hashCode) +
+    (clientName == null ? 0 : clientName!.hashCode) +
+    (salesmanId == null ? 0 : salesmanId!.hashCode) +
+    (salesmanName == null ? 0 : salesmanName!.hashCode) +
+    (summary == null ? 0 : summary!.hashCode) +
+    (address == null ? 0 : address!.hashCode) +
+    (id == null ? 0 : id!.hashCode);
 
   @override
-  String toString() =>
-      'GetAllClientContactCalendarResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, startDate=$startDate, endDate=$endDate, clientId=$clientId, reasonVisitId=$reasonVisitId, clientName=$clientName, salesmanId=$salesmanId, salesmanName=$salesmanName, summary=$summary, address=$address, id=$id]';
+  String toString() => 'GetAllClientContactCalendarResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, startDate=$startDate, endDate=$endDate, clientId=$clientId, reasonVisitId=$reasonVisitId, clientName=$clientName, salesmanId=$salesmanId, salesmanName=$salesmanName, summary=$summary, address=$address, id=$id]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -215,10 +212,8 @@ class GetAllClientContactCalendarResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "GetAllClientContactCalendarResponse[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "GetAllClientContactCalendarResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "GetAllClientContactCalendarResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "GetAllClientContactCalendarResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -243,10 +238,7 @@ class GetAllClientContactCalendarResponse {
     return null;
   }
 
-  static List<GetAllClientContactCalendarResponse> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<GetAllClientContactCalendarResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <GetAllClientContactCalendarResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -259,8 +251,7 @@ class GetAllClientContactCalendarResponse {
     return result.toList(growable: growable);
   }
 
-  static Map<String, GetAllClientContactCalendarResponse> mapFromJson(
-      dynamic json) {
+  static Map<String, GetAllClientContactCalendarResponse> mapFromJson(dynamic json) {
     final map = <String, GetAllClientContactCalendarResponse>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
@@ -275,24 +266,20 @@ class GetAllClientContactCalendarResponse {
   }
 
   // maps a json object with a list of GetAllClientContactCalendarResponse-objects as value to a dart map
-  static Map<String, List<GetAllClientContactCalendarResponse>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<GetAllClientContactCalendarResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<GetAllClientContactCalendarResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = GetAllClientContactCalendarResponse.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = GetAllClientContactCalendarResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

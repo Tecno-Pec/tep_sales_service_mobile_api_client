@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
+
 class CommissionApi {
-  CommissionApi([ApiClient? apiClient])
-      : apiClient = apiClient ?? defaultApiClient;
+  CommissionApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,13 +30,10 @@ class CommissionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> getByIdCommissionWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> getByIdCommissionWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/commissions/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/commissions/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -53,6 +50,7 @@ class CommissionApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -77,28 +75,17 @@ class CommissionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllCommissionResponse?> getByIdCommission(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await getByIdCommissionWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllCommissionResponse?> getByIdCommission(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await getByIdCommissionWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllCommissionResponse',
-      ) as GetAllCommissionResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllCommissionResponse',) as GetAllCommissionResponse;
+    
     }
     return null;
   }
@@ -128,16 +115,7 @@ class CommissionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1CommissionsAllGetWithHttpInfo({
-    String? userId,
-    String? productId,
-    String? externalCode,
-    CommissionStatus? status,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1CommissionsAllGetWithHttpInfo({ String? userId, String? productId, String? externalCode, CommissionStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/commissions/all';
 
@@ -176,6 +154,7 @@ class CommissionApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -210,39 +189,20 @@ class CommissionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllCommissionResponse>?> tepsalesV1CommissionsAllGet({
-    String? userId,
-    String? productId,
-    String? externalCode,
-    CommissionStatus? status,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1CommissionsAllGetWithHttpInfo(
-      userId: userId,
-      productId: productId,
-      externalCode: externalCode,
-      status: status,
-      limit: limit,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<List<GetAllCommissionResponse>?> tepsalesV1CommissionsAllGet({ String? userId, String? productId, String? externalCode, CommissionStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1CommissionsAllGetWithHttpInfo( userId: userId, productId: productId, externalCode: externalCode, status: status, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(
-              responseBody, 'List<GetAllCommissionResponse>') as List)
-          .cast<GetAllCommissionResponse>()
-          .toList();
+      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllCommissionResponse>') as List)
+        .cast<GetAllCommissionResponse>()
+        .toList();
+
     }
     return null;
   }
@@ -261,13 +221,10 @@ class CommissionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1CommissionsIdDeleteWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1CommissionsIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/commissions/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/commissions/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -284,6 +241,7 @@ class CommissionApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -308,16 +266,8 @@ class CommissionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1CommissionsIdDelete(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1CommissionsIdDeleteWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1CommissionsIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1CommissionsIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -342,14 +292,10 @@ class CommissionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1CommissionsIdPatchWithHttpInfo(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1CommissionsIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/commissions/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/commissions/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -366,6 +312,7 @@ class CommissionApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -395,18 +342,8 @@ class CommissionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1CommissionsIdPatch(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1CommissionsIdPatchWithHttpInfo(
-      id,
-      operation,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1CommissionsIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1CommissionsIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -429,14 +366,10 @@ class CommissionApi {
   ///
   /// * [PutCommissionRequest] putCommissionRequest:
   ///   Commission to update
-  Future<http.Response> tepsalesV1CommissionsIdPutWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutCommissionRequest? putCommissionRequest,
-  }) async {
+  Future<Response> tepsalesV1CommissionsIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutCommissionRequest? putCommissionRequest, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/commissions/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/commissions/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putCommissionRequest;
@@ -453,6 +386,7 @@ class CommissionApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -480,18 +414,8 @@ class CommissionApi {
   ///
   /// * [PutCommissionRequest] putCommissionRequest:
   ///   Commission to update
-  Future<void> tepsalesV1CommissionsIdPut(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutCommissionRequest? putCommissionRequest,
-  }) async {
-    final response = await tepsalesV1CommissionsIdPutWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      putCommissionRequest: putCommissionRequest,
-    );
+  Future<void> tepsalesV1CommissionsIdPut(String id, { String? xApiKey, String? xCsrfToken, PutCommissionRequest? putCommissionRequest, }) async {
+    final response = await tepsalesV1CommissionsIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putCommissionRequest: putCommissionRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -523,17 +447,7 @@ class CommissionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1CommissionsPagedGetWithHttpInfo({
-    String? userId,
-    String? productId,
-    String? externalCode,
-    CommissionStatus? status,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1CommissionsPagedGetWithHttpInfo({ String? userId, String? productId, String? externalCode, CommissionStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/commissions/paged';
 
@@ -575,6 +489,7 @@ class CommissionApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -610,40 +525,17 @@ class CommissionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedCommissionResponse?> tepsalesV1CommissionsPagedGet({
-    String? userId,
-    String? productId,
-    String? externalCode,
-    CommissionStatus? status,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1CommissionsPagedGetWithHttpInfo(
-      userId: userId,
-      productId: productId,
-      externalCode: externalCode,
-      status: status,
-      page: page,
-      pageSize: pageSize,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPagedCommissionResponse?> tepsalesV1CommissionsPagedGet({ String? userId, String? productId, String? externalCode, CommissionStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1CommissionsPagedGetWithHttpInfo( userId: userId, productId: productId, externalCode: externalCode, status: status, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPagedCommissionResponse',
-      ) as GetAllPagedCommissionResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedCommissionResponse',) as GetAllPagedCommissionResponse;
+    
     }
     return null;
   }
@@ -662,11 +554,7 @@ class CommissionApi {
   ///
   /// * [PostCommissionRequest] postCommissionRequest:
   ///   Commission to create
-  Future<http.Response> tepsalesV1CommissionsPostWithHttpInfo({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostCommissionRequest? postCommissionRequest,
-  }) async {
+  Future<Response> tepsalesV1CommissionsPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostCommissionRequest? postCommissionRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/commissions';
 
@@ -685,6 +573,7 @@ class CommissionApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -709,28 +598,17 @@ class CommissionApi {
   ///
   /// * [PostCommissionRequest] postCommissionRequest:
   ///   Commission to create
-  Future<PostCommissionResponse?> tepsalesV1CommissionsPost({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostCommissionRequest? postCommissionRequest,
-  }) async {
-    final response = await tepsalesV1CommissionsPostWithHttpInfo(
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      postCommissionRequest: postCommissionRequest,
-    );
+  Future<PostCommissionResponse?> tepsalesV1CommissionsPost({ String? xApiKey, String? xCsrfToken, PostCommissionRequest? postCommissionRequest, }) async {
+    final response = await tepsalesV1CommissionsPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postCommissionRequest: postCommissionRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'PostCommissionResponse',
-      ) as PostCommissionResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostCommissionResponse',) as PostCommissionResponse;
+    
     }
     return null;
   }

@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
+
 class FreightTableApi {
-  FreightTableApi([ApiClient? apiClient])
-      : apiClient = apiClient ?? defaultApiClient;
+  FreightTableApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,13 +30,10 @@ class FreightTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> getByIdFreightTableWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> getByIdFreightTableWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/freightTables/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/freightTables/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -53,6 +50,7 @@ class FreightTableApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -77,28 +75,17 @@ class FreightTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllFreightTableResponse?> getByIdFreightTable(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await getByIdFreightTableWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllFreightTableResponse?> getByIdFreightTable(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await getByIdFreightTableWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllFreightTableResponse',
-      ) as GetAllFreightTableResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllFreightTableResponse',) as GetAllFreightTableResponse;
+    
     }
     return null;
   }
@@ -134,19 +121,7 @@ class FreightTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1FreightTablesAllGetWithHttpInfo({
-    String? externalCode,
-    String? paymentConditionId,
-    String? vehicleTypeId,
-    double? kilometers,
-    bool? isFractional,
-    TablePriceOperationTypeEnum? operationType,
-    FreightTableStatus? status,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1FreightTablesAllGetWithHttpInfo({ String? externalCode, String? paymentConditionId, String? vehicleTypeId, double? kilometers, bool? isFractional, TablePriceOperationTypeEnum? operationType, FreightTableStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/freightTables/all';
 
@@ -161,8 +136,7 @@ class FreightTableApi {
       queryParams.addAll(_queryParams('', 'externalCode', externalCode));
     }
     if (paymentConditionId != null) {
-      queryParams
-          .addAll(_queryParams('', 'paymentConditionId', paymentConditionId));
+      queryParams.addAll(_queryParams('', 'paymentConditionId', paymentConditionId));
     }
     if (vehicleTypeId != null) {
       queryParams.addAll(_queryParams('', 'vehicleTypeId', vehicleTypeId));
@@ -195,6 +169,7 @@ class FreightTableApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -235,45 +210,20 @@ class FreightTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllFreightTableResponse>?> tepsalesV1FreightTablesAllGet({
-    String? externalCode,
-    String? paymentConditionId,
-    String? vehicleTypeId,
-    double? kilometers,
-    bool? isFractional,
-    TablePriceOperationTypeEnum? operationType,
-    FreightTableStatus? status,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1FreightTablesAllGetWithHttpInfo(
-      externalCode: externalCode,
-      paymentConditionId: paymentConditionId,
-      vehicleTypeId: vehicleTypeId,
-      kilometers: kilometers,
-      isFractional: isFractional,
-      operationType: operationType,
-      status: status,
-      limit: limit,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<List<GetAllFreightTableResponse>?> tepsalesV1FreightTablesAllGet({ String? externalCode, String? paymentConditionId, String? vehicleTypeId, double? kilometers, bool? isFractional, TablePriceOperationTypeEnum? operationType, FreightTableStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1FreightTablesAllGetWithHttpInfo( externalCode: externalCode, paymentConditionId: paymentConditionId, vehicleTypeId: vehicleTypeId, kilometers: kilometers, isFractional: isFractional, operationType: operationType, status: status, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(
-              responseBody, 'List<GetAllFreightTableResponse>') as List)
-          .cast<GetAllFreightTableResponse>()
-          .toList();
+      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllFreightTableResponse>') as List)
+        .cast<GetAllFreightTableResponse>()
+        .toList();
+
     }
     return null;
   }
@@ -292,13 +242,10 @@ class FreightTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1FreightTablesIdDeleteWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1FreightTablesIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/freightTables/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/freightTables/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -315,6 +262,7 @@ class FreightTableApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -339,16 +287,8 @@ class FreightTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1FreightTablesIdDelete(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1FreightTablesIdDeleteWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1FreightTablesIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1FreightTablesIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -373,14 +313,10 @@ class FreightTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1FreightTablesIdPatchWithHttpInfo(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1FreightTablesIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/freightTables/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/freightTables/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -397,6 +333,7 @@ class FreightTableApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -426,18 +363,8 @@ class FreightTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1FreightTablesIdPatch(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1FreightTablesIdPatchWithHttpInfo(
-      id,
-      operation,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1FreightTablesIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1FreightTablesIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -460,14 +387,10 @@ class FreightTableApi {
   ///
   /// * [PutFreightTableRequest] putFreightTableRequest:
   ///   FreightTable to update
-  Future<http.Response> tepsalesV1FreightTablesIdPutWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutFreightTableRequest? putFreightTableRequest,
-  }) async {
+  Future<Response> tepsalesV1FreightTablesIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutFreightTableRequest? putFreightTableRequest, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/freightTables/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/freightTables/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putFreightTableRequest;
@@ -484,6 +407,7 @@ class FreightTableApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -511,18 +435,8 @@ class FreightTableApi {
   ///
   /// * [PutFreightTableRequest] putFreightTableRequest:
   ///   FreightTable to update
-  Future<void> tepsalesV1FreightTablesIdPut(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutFreightTableRequest? putFreightTableRequest,
-  }) async {
-    final response = await tepsalesV1FreightTablesIdPutWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      putFreightTableRequest: putFreightTableRequest,
-    );
+  Future<void> tepsalesV1FreightTablesIdPut(String id, { String? xApiKey, String? xCsrfToken, PutFreightTableRequest? putFreightTableRequest, }) async {
+    final response = await tepsalesV1FreightTablesIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putFreightTableRequest: putFreightTableRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -560,20 +474,7 @@ class FreightTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1FreightTablesPagedGetWithHttpInfo({
-    String? externalCode,
-    String? paymentConditionId,
-    String? vehicleTypeId,
-    double? kilometers,
-    bool? isFractional,
-    TablePriceOperationTypeEnum? operationType,
-    FreightTableStatus? status,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1FreightTablesPagedGetWithHttpInfo({ String? externalCode, String? paymentConditionId, String? vehicleTypeId, double? kilometers, bool? isFractional, TablePriceOperationTypeEnum? operationType, FreightTableStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/freightTables/paged';
 
@@ -588,8 +489,7 @@ class FreightTableApi {
       queryParams.addAll(_queryParams('', 'externalCode', externalCode));
     }
     if (paymentConditionId != null) {
-      queryParams
-          .addAll(_queryParams('', 'paymentConditionId', paymentConditionId));
+      queryParams.addAll(_queryParams('', 'paymentConditionId', paymentConditionId));
     }
     if (vehicleTypeId != null) {
       queryParams.addAll(_queryParams('', 'vehicleTypeId', vehicleTypeId));
@@ -625,6 +525,7 @@ class FreightTableApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -666,46 +567,17 @@ class FreightTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedFreightTableResponse?> tepsalesV1FreightTablesPagedGet({
-    String? externalCode,
-    String? paymentConditionId,
-    String? vehicleTypeId,
-    double? kilometers,
-    bool? isFractional,
-    TablePriceOperationTypeEnum? operationType,
-    FreightTableStatus? status,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1FreightTablesPagedGetWithHttpInfo(
-      externalCode: externalCode,
-      paymentConditionId: paymentConditionId,
-      vehicleTypeId: vehicleTypeId,
-      kilometers: kilometers,
-      isFractional: isFractional,
-      operationType: operationType,
-      status: status,
-      page: page,
-      pageSize: pageSize,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPagedFreightTableResponse?> tepsalesV1FreightTablesPagedGet({ String? externalCode, String? paymentConditionId, String? vehicleTypeId, double? kilometers, bool? isFractional, TablePriceOperationTypeEnum? operationType, FreightTableStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1FreightTablesPagedGetWithHttpInfo( externalCode: externalCode, paymentConditionId: paymentConditionId, vehicleTypeId: vehicleTypeId, kilometers: kilometers, isFractional: isFractional, operationType: operationType, status: status, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPagedFreightTableResponse',
-      ) as GetAllPagedFreightTableResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedFreightTableResponse',) as GetAllPagedFreightTableResponse;
+    
     }
     return null;
   }
@@ -724,11 +596,7 @@ class FreightTableApi {
   ///
   /// * [PostFreightTableRequest] postFreightTableRequest:
   ///   FreightTable to create
-  Future<http.Response> tepsalesV1FreightTablesPostWithHttpInfo({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostFreightTableRequest? postFreightTableRequest,
-  }) async {
+  Future<Response> tepsalesV1FreightTablesPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostFreightTableRequest? postFreightTableRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/freightTables';
 
@@ -747,6 +615,7 @@ class FreightTableApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -771,28 +640,17 @@ class FreightTableApi {
   ///
   /// * [PostFreightTableRequest] postFreightTableRequest:
   ///   FreightTable to create
-  Future<PostFreightTableResponse?> tepsalesV1FreightTablesPost({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostFreightTableRequest? postFreightTableRequest,
-  }) async {
-    final response = await tepsalesV1FreightTablesPostWithHttpInfo(
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      postFreightTableRequest: postFreightTableRequest,
-    );
+  Future<PostFreightTableResponse?> tepsalesV1FreightTablesPost({ String? xApiKey, String? xCsrfToken, PostFreightTableRequest? postFreightTableRequest, }) async {
+    final response = await tepsalesV1FreightTablesPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postFreightTableRequest: postFreightTableRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'PostFreightTableResponse',
-      ) as PostFreightTableResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostFreightTableResponse',) as PostFreightTableResponse;
+    
     }
     return null;
   }

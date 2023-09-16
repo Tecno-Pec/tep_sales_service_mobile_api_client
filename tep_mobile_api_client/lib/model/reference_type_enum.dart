@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class ReferenceTypeEnum {
   /// Instantiate a new enum with the provided [value].
   const ReferenceTypeEnum._(this.value);
@@ -33,13 +34,9 @@ class ReferenceTypeEnum {
     number3,
   ];
 
-  static ReferenceTypeEnum? fromJson(dynamic value) =>
-      ReferenceTypeEnumTypeTransformer().decode(value);
+  static ReferenceTypeEnum? fromJson(dynamic value) => ReferenceTypeEnumTypeTransformer().decode(value);
 
-  static List<ReferenceTypeEnum> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<ReferenceTypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ReferenceTypeEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -56,8 +53,7 @@ class ReferenceTypeEnum {
 /// Transformation class that can [encode] an instance of [ReferenceTypeEnum] to int,
 /// and [decode] dynamic data back to [ReferenceTypeEnum].
 class ReferenceTypeEnumTypeTransformer {
-  factory ReferenceTypeEnumTypeTransformer() =>
-      _instance ??= const ReferenceTypeEnumTypeTransformer._();
+  factory ReferenceTypeEnumTypeTransformer() => _instance ??= const ReferenceTypeEnumTypeTransformer._();
 
   const ReferenceTypeEnumTypeTransformer._();
 
@@ -74,12 +70,9 @@ class ReferenceTypeEnumTypeTransformer {
   ReferenceTypeEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 1:
-          return ReferenceTypeEnum.number1;
-        case 2:
-          return ReferenceTypeEnum.number2;
-        case 3:
-          return ReferenceTypeEnum.number3;
+        case 1: return ReferenceTypeEnum.number1;
+        case 2: return ReferenceTypeEnum.number2;
+        case 3: return ReferenceTypeEnum.number3;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -92,3 +85,4 @@ class ReferenceTypeEnumTypeTransformer {
   /// Singleton [ReferenceTypeEnumTypeTransformer] instance.
   static ReferenceTypeEnumTypeTransformer? _instance;
 }
+

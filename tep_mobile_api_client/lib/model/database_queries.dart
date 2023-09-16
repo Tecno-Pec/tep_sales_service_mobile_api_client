@@ -232,131 +232,86 @@ class DatabaseQueries {
   bool? queryPriceTableUnloadingIsEnable;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is DatabaseQueries &&
-          other.queryAddresses == queryAddresses &&
-          other.queryAddressesIsEnable == queryAddressesIsEnable &&
-          other.queryClients == queryClients &&
-          other.queryClientsIsEnable == queryClientsIsEnable &&
-          other.queryFreightTables == queryFreightTables &&
-          other.queryFreightTablesIsEnable == queryFreightTablesIsEnable &&
-          other.queryPaymentConditions == queryPaymentConditions &&
-          other.queryPaymentConditionsIsEnable ==
-              queryPaymentConditionsIsEnable &&
-          other.queryPaymentPriceTables == queryPaymentPriceTables &&
-          other.queryPaymentPriceTablesIsEnable ==
-              queryPaymentPriceTablesIsEnable &&
-          other.queryPriceTableItems == queryPriceTableItems &&
-          other.queryPriceTableItemsIsEnable == queryPriceTableItemsIsEnable &&
-          other.queryPriceTables == queryPriceTables &&
-          other.queryPriceTablesIsEnable == queryPriceTablesIsEnable &&
-          other.queryProductGroups == queryProductGroups &&
-          other.queryProductGroupsIsEnable == queryProductGroupsIsEnable &&
-          other.queryProductLines == queryProductLines &&
-          other.queryProductLinesIsEnable == queryProductLinesIsEnable &&
-          other.queryProducts == queryProducts &&
-          other.queryProductsIsEnable == queryProductsIsEnable &&
-          other.queryUsers == queryUsers &&
-          other.queryUsersIsEnable == queryUsersIsEnable &&
-          other.queryVehicleTypes == queryVehicleTypes &&
-          other.queryVehicleTypesIsEnable == queryVehicleTypesIsEnable &&
-          other.queryDistribuitionCenterClientAddress ==
-              queryDistribuitionCenterClientAddress &&
-          other.queryDistribuitionCenterClientAddressIsEnable ==
-              queryDistribuitionCenterClientAddressIsEnable &&
-          other.queryFreightConversionFactor == queryFreightConversionFactor &&
-          other.queryFreightConversionFactorIsEnable ==
-              queryFreightConversionFactorIsEnable &&
-          other.queryDiscountRule == queryDiscountRule &&
-          other.queryDiscountRuleIsEnable == queryDiscountRuleIsEnable &&
-          other.queryCommission == queryCommission &&
-          other.queryCommissionIsEnable == queryCommissionIsEnable &&
-          other.queryReasonCancel == queryReasonCancel &&
-          other.queryReasonCancelIsEnable == queryReasonCancelIsEnable &&
-          other.queryPriceTableUnloading == queryPriceTableUnloading &&
-          other.queryPriceTableUnloadingIsEnable ==
-              queryPriceTableUnloadingIsEnable;
+  bool operator ==(Object other) => identical(this, other) || other is DatabaseQueries &&
+     other.queryAddresses == queryAddresses &&
+     other.queryAddressesIsEnable == queryAddressesIsEnable &&
+     other.queryClients == queryClients &&
+     other.queryClientsIsEnable == queryClientsIsEnable &&
+     other.queryFreightTables == queryFreightTables &&
+     other.queryFreightTablesIsEnable == queryFreightTablesIsEnable &&
+     other.queryPaymentConditions == queryPaymentConditions &&
+     other.queryPaymentConditionsIsEnable == queryPaymentConditionsIsEnable &&
+     other.queryPaymentPriceTables == queryPaymentPriceTables &&
+     other.queryPaymentPriceTablesIsEnable == queryPaymentPriceTablesIsEnable &&
+     other.queryPriceTableItems == queryPriceTableItems &&
+     other.queryPriceTableItemsIsEnable == queryPriceTableItemsIsEnable &&
+     other.queryPriceTables == queryPriceTables &&
+     other.queryPriceTablesIsEnable == queryPriceTablesIsEnable &&
+     other.queryProductGroups == queryProductGroups &&
+     other.queryProductGroupsIsEnable == queryProductGroupsIsEnable &&
+     other.queryProductLines == queryProductLines &&
+     other.queryProductLinesIsEnable == queryProductLinesIsEnable &&
+     other.queryProducts == queryProducts &&
+     other.queryProductsIsEnable == queryProductsIsEnable &&
+     other.queryUsers == queryUsers &&
+     other.queryUsersIsEnable == queryUsersIsEnable &&
+     other.queryVehicleTypes == queryVehicleTypes &&
+     other.queryVehicleTypesIsEnable == queryVehicleTypesIsEnable &&
+     other.queryDistribuitionCenterClientAddress == queryDistribuitionCenterClientAddress &&
+     other.queryDistribuitionCenterClientAddressIsEnable == queryDistribuitionCenterClientAddressIsEnable &&
+     other.queryFreightConversionFactor == queryFreightConversionFactor &&
+     other.queryFreightConversionFactorIsEnable == queryFreightConversionFactorIsEnable &&
+     other.queryDiscountRule == queryDiscountRule &&
+     other.queryDiscountRuleIsEnable == queryDiscountRuleIsEnable &&
+     other.queryCommission == queryCommission &&
+     other.queryCommissionIsEnable == queryCommissionIsEnable &&
+     other.queryReasonCancel == queryReasonCancel &&
+     other.queryReasonCancelIsEnable == queryReasonCancelIsEnable &&
+     other.queryPriceTableUnloading == queryPriceTableUnloading &&
+     other.queryPriceTableUnloadingIsEnable == queryPriceTableUnloadingIsEnable;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (queryAddresses == null ? 0 : queryAddresses!.hashCode) +
-      (queryAddressesIsEnable == null ? 0 : queryAddressesIsEnable!.hashCode) +
-      (queryClients == null ? 0 : queryClients!.hashCode) +
-      (queryClientsIsEnable == null ? 0 : queryClientsIsEnable!.hashCode) +
-      (queryFreightTables == null ? 0 : queryFreightTables!.hashCode) +
-      (queryFreightTablesIsEnable == null
-          ? 0
-          : queryFreightTablesIsEnable!.hashCode) +
-      (queryPaymentConditions == null ? 0 : queryPaymentConditions!.hashCode) +
-      (queryPaymentConditionsIsEnable == null
-          ? 0
-          : queryPaymentConditionsIsEnable!.hashCode) +
-      (queryPaymentPriceTables == null
-          ? 0
-          : queryPaymentPriceTables!.hashCode) +
-      (queryPaymentPriceTablesIsEnable == null
-          ? 0
-          : queryPaymentPriceTablesIsEnable!.hashCode) +
-      (queryPriceTableItems == null ? 0 : queryPriceTableItems!.hashCode) +
-      (queryPriceTableItemsIsEnable == null
-          ? 0
-          : queryPriceTableItemsIsEnable!.hashCode) +
-      (queryPriceTables == null ? 0 : queryPriceTables!.hashCode) +
-      (queryPriceTablesIsEnable == null
-          ? 0
-          : queryPriceTablesIsEnable!.hashCode) +
-      (queryProductGroups == null ? 0 : queryProductGroups!.hashCode) +
-      (queryProductGroupsIsEnable == null
-          ? 0
-          : queryProductGroupsIsEnable!.hashCode) +
-      (queryProductLines == null ? 0 : queryProductLines!.hashCode) +
-      (queryProductLinesIsEnable == null
-          ? 0
-          : queryProductLinesIsEnable!.hashCode) +
-      (queryProducts == null ? 0 : queryProducts!.hashCode) +
-      (queryProductsIsEnable == null ? 0 : queryProductsIsEnable!.hashCode) +
-      (queryUsers == null ? 0 : queryUsers!.hashCode) +
-      (queryUsersIsEnable == null ? 0 : queryUsersIsEnable!.hashCode) +
-      (queryVehicleTypes == null ? 0 : queryVehicleTypes!.hashCode) +
-      (queryVehicleTypesIsEnable == null
-          ? 0
-          : queryVehicleTypesIsEnable!.hashCode) +
-      (queryDistribuitionCenterClientAddress == null
-          ? 0
-          : queryDistribuitionCenterClientAddress!.hashCode) +
-      (queryDistribuitionCenterClientAddressIsEnable == null
-          ? 0
-          : queryDistribuitionCenterClientAddressIsEnable!.hashCode) +
-      (queryFreightConversionFactor == null
-          ? 0
-          : queryFreightConversionFactor!.hashCode) +
-      (queryFreightConversionFactorIsEnable == null
-          ? 0
-          : queryFreightConversionFactorIsEnable!.hashCode) +
-      (queryDiscountRule == null ? 0 : queryDiscountRule!.hashCode) +
-      (queryDiscountRuleIsEnable == null
-          ? 0
-          : queryDiscountRuleIsEnable!.hashCode) +
-      (queryCommission == null ? 0 : queryCommission!.hashCode) +
-      (queryCommissionIsEnable == null
-          ? 0
-          : queryCommissionIsEnable!.hashCode) +
-      (queryReasonCancel == null ? 0 : queryReasonCancel!.hashCode) +
-      (queryReasonCancelIsEnable == null
-          ? 0
-          : queryReasonCancelIsEnable!.hashCode) +
-      (queryPriceTableUnloading == null
-          ? 0
-          : queryPriceTableUnloading!.hashCode) +
-      (queryPriceTableUnloadingIsEnable == null
-          ? 0
-          : queryPriceTableUnloadingIsEnable!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (queryAddresses == null ? 0 : queryAddresses!.hashCode) +
+    (queryAddressesIsEnable == null ? 0 : queryAddressesIsEnable!.hashCode) +
+    (queryClients == null ? 0 : queryClients!.hashCode) +
+    (queryClientsIsEnable == null ? 0 : queryClientsIsEnable!.hashCode) +
+    (queryFreightTables == null ? 0 : queryFreightTables!.hashCode) +
+    (queryFreightTablesIsEnable == null ? 0 : queryFreightTablesIsEnable!.hashCode) +
+    (queryPaymentConditions == null ? 0 : queryPaymentConditions!.hashCode) +
+    (queryPaymentConditionsIsEnable == null ? 0 : queryPaymentConditionsIsEnable!.hashCode) +
+    (queryPaymentPriceTables == null ? 0 : queryPaymentPriceTables!.hashCode) +
+    (queryPaymentPriceTablesIsEnable == null ? 0 : queryPaymentPriceTablesIsEnable!.hashCode) +
+    (queryPriceTableItems == null ? 0 : queryPriceTableItems!.hashCode) +
+    (queryPriceTableItemsIsEnable == null ? 0 : queryPriceTableItemsIsEnable!.hashCode) +
+    (queryPriceTables == null ? 0 : queryPriceTables!.hashCode) +
+    (queryPriceTablesIsEnable == null ? 0 : queryPriceTablesIsEnable!.hashCode) +
+    (queryProductGroups == null ? 0 : queryProductGroups!.hashCode) +
+    (queryProductGroupsIsEnable == null ? 0 : queryProductGroupsIsEnable!.hashCode) +
+    (queryProductLines == null ? 0 : queryProductLines!.hashCode) +
+    (queryProductLinesIsEnable == null ? 0 : queryProductLinesIsEnable!.hashCode) +
+    (queryProducts == null ? 0 : queryProducts!.hashCode) +
+    (queryProductsIsEnable == null ? 0 : queryProductsIsEnable!.hashCode) +
+    (queryUsers == null ? 0 : queryUsers!.hashCode) +
+    (queryUsersIsEnable == null ? 0 : queryUsersIsEnable!.hashCode) +
+    (queryVehicleTypes == null ? 0 : queryVehicleTypes!.hashCode) +
+    (queryVehicleTypesIsEnable == null ? 0 : queryVehicleTypesIsEnable!.hashCode) +
+    (queryDistribuitionCenterClientAddress == null ? 0 : queryDistribuitionCenterClientAddress!.hashCode) +
+    (queryDistribuitionCenterClientAddressIsEnable == null ? 0 : queryDistribuitionCenterClientAddressIsEnable!.hashCode) +
+    (queryFreightConversionFactor == null ? 0 : queryFreightConversionFactor!.hashCode) +
+    (queryFreightConversionFactorIsEnable == null ? 0 : queryFreightConversionFactorIsEnable!.hashCode) +
+    (queryDiscountRule == null ? 0 : queryDiscountRule!.hashCode) +
+    (queryDiscountRuleIsEnable == null ? 0 : queryDiscountRuleIsEnable!.hashCode) +
+    (queryCommission == null ? 0 : queryCommission!.hashCode) +
+    (queryCommissionIsEnable == null ? 0 : queryCommissionIsEnable!.hashCode) +
+    (queryReasonCancel == null ? 0 : queryReasonCancel!.hashCode) +
+    (queryReasonCancelIsEnable == null ? 0 : queryReasonCancelIsEnable!.hashCode) +
+    (queryPriceTableUnloading == null ? 0 : queryPriceTableUnloading!.hashCode) +
+    (queryPriceTableUnloadingIsEnable == null ? 0 : queryPriceTableUnloadingIsEnable!.hashCode);
 
   @override
-  String toString() =>
-      'DatabaseQueries[queryAddresses=$queryAddresses, queryAddressesIsEnable=$queryAddressesIsEnable, queryClients=$queryClients, queryClientsIsEnable=$queryClientsIsEnable, queryFreightTables=$queryFreightTables, queryFreightTablesIsEnable=$queryFreightTablesIsEnable, queryPaymentConditions=$queryPaymentConditions, queryPaymentConditionsIsEnable=$queryPaymentConditionsIsEnable, queryPaymentPriceTables=$queryPaymentPriceTables, queryPaymentPriceTablesIsEnable=$queryPaymentPriceTablesIsEnable, queryPriceTableItems=$queryPriceTableItems, queryPriceTableItemsIsEnable=$queryPriceTableItemsIsEnable, queryPriceTables=$queryPriceTables, queryPriceTablesIsEnable=$queryPriceTablesIsEnable, queryProductGroups=$queryProductGroups, queryProductGroupsIsEnable=$queryProductGroupsIsEnable, queryProductLines=$queryProductLines, queryProductLinesIsEnable=$queryProductLinesIsEnable, queryProducts=$queryProducts, queryProductsIsEnable=$queryProductsIsEnable, queryUsers=$queryUsers, queryUsersIsEnable=$queryUsersIsEnable, queryVehicleTypes=$queryVehicleTypes, queryVehicleTypesIsEnable=$queryVehicleTypesIsEnable, queryDistribuitionCenterClientAddress=$queryDistribuitionCenterClientAddress, queryDistribuitionCenterClientAddressIsEnable=$queryDistribuitionCenterClientAddressIsEnable, queryFreightConversionFactor=$queryFreightConversionFactor, queryFreightConversionFactorIsEnable=$queryFreightConversionFactorIsEnable, queryDiscountRule=$queryDiscountRule, queryDiscountRuleIsEnable=$queryDiscountRuleIsEnable, queryCommission=$queryCommission, queryCommissionIsEnable=$queryCommissionIsEnable, queryReasonCancel=$queryReasonCancel, queryReasonCancelIsEnable=$queryReasonCancelIsEnable, queryPriceTableUnloading=$queryPriceTableUnloading, queryPriceTableUnloadingIsEnable=$queryPriceTableUnloadingIsEnable]';
+  String toString() => 'DatabaseQueries[queryAddresses=$queryAddresses, queryAddressesIsEnable=$queryAddressesIsEnable, queryClients=$queryClients, queryClientsIsEnable=$queryClientsIsEnable, queryFreightTables=$queryFreightTables, queryFreightTablesIsEnable=$queryFreightTablesIsEnable, queryPaymentConditions=$queryPaymentConditions, queryPaymentConditionsIsEnable=$queryPaymentConditionsIsEnable, queryPaymentPriceTables=$queryPaymentPriceTables, queryPaymentPriceTablesIsEnable=$queryPaymentPriceTablesIsEnable, queryPriceTableItems=$queryPriceTableItems, queryPriceTableItemsIsEnable=$queryPriceTableItemsIsEnable, queryPriceTables=$queryPriceTables, queryPriceTablesIsEnable=$queryPriceTablesIsEnable, queryProductGroups=$queryProductGroups, queryProductGroupsIsEnable=$queryProductGroupsIsEnable, queryProductLines=$queryProductLines, queryProductLinesIsEnable=$queryProductLinesIsEnable, queryProducts=$queryProducts, queryProductsIsEnable=$queryProductsIsEnable, queryUsers=$queryUsers, queryUsersIsEnable=$queryUsersIsEnable, queryVehicleTypes=$queryVehicleTypes, queryVehicleTypesIsEnable=$queryVehicleTypesIsEnable, queryDistribuitionCenterClientAddress=$queryDistribuitionCenterClientAddress, queryDistribuitionCenterClientAddressIsEnable=$queryDistribuitionCenterClientAddressIsEnable, queryFreightConversionFactor=$queryFreightConversionFactor, queryFreightConversionFactorIsEnable=$queryFreightConversionFactorIsEnable, queryDiscountRule=$queryDiscountRule, queryDiscountRuleIsEnable=$queryDiscountRuleIsEnable, queryCommission=$queryCommission, queryCommissionIsEnable=$queryCommissionIsEnable, queryReasonCancel=$queryReasonCancel, queryReasonCancelIsEnable=$queryReasonCancelIsEnable, queryPriceTableUnloading=$queryPriceTableUnloading, queryPriceTableUnloadingIsEnable=$queryPriceTableUnloadingIsEnable]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -396,8 +351,7 @@ class DatabaseQueries {
       json[r'queryPaymentConditions'] = null;
     }
     if (this.queryPaymentConditionsIsEnable != null) {
-      json[r'queryPaymentConditionsIsEnable'] =
-          this.queryPaymentConditionsIsEnable;
+      json[r'queryPaymentConditionsIsEnable'] = this.queryPaymentConditionsIsEnable;
     } else {
       json[r'queryPaymentConditionsIsEnable'] = null;
     }
@@ -407,8 +361,7 @@ class DatabaseQueries {
       json[r'queryPaymentPriceTables'] = null;
     }
     if (this.queryPaymentPriceTablesIsEnable != null) {
-      json[r'queryPaymentPriceTablesIsEnable'] =
-          this.queryPaymentPriceTablesIsEnable;
+      json[r'queryPaymentPriceTablesIsEnable'] = this.queryPaymentPriceTablesIsEnable;
     } else {
       json[r'queryPaymentPriceTablesIsEnable'] = null;
     }
@@ -483,14 +436,12 @@ class DatabaseQueries {
       json[r'queryVehicleTypesIsEnable'] = null;
     }
     if (this.queryDistribuitionCenterClientAddress != null) {
-      json[r'queryDistribuitionCenterClientAddress'] =
-          this.queryDistribuitionCenterClientAddress;
+      json[r'queryDistribuitionCenterClientAddress'] = this.queryDistribuitionCenterClientAddress;
     } else {
       json[r'queryDistribuitionCenterClientAddress'] = null;
     }
     if (this.queryDistribuitionCenterClientAddressIsEnable != null) {
-      json[r'queryDistribuitionCenterClientAddressIsEnable'] =
-          this.queryDistribuitionCenterClientAddressIsEnable;
+      json[r'queryDistribuitionCenterClientAddressIsEnable'] = this.queryDistribuitionCenterClientAddressIsEnable;
     } else {
       json[r'queryDistribuitionCenterClientAddressIsEnable'] = null;
     }
@@ -500,8 +451,7 @@ class DatabaseQueries {
       json[r'queryFreightConversionFactor'] = null;
     }
     if (this.queryFreightConversionFactorIsEnable != null) {
-      json[r'queryFreightConversionFactorIsEnable'] =
-          this.queryFreightConversionFactorIsEnable;
+      json[r'queryFreightConversionFactorIsEnable'] = this.queryFreightConversionFactorIsEnable;
     } else {
       json[r'queryFreightConversionFactorIsEnable'] = null;
     }
@@ -541,8 +491,7 @@ class DatabaseQueries {
       json[r'queryPriceTableUnloading'] = null;
     }
     if (this.queryPriceTableUnloadingIsEnable != null) {
-      json[r'queryPriceTableUnloadingIsEnable'] =
-          this.queryPriceTableUnloadingIsEnable;
+      json[r'queryPriceTableUnloadingIsEnable'] = this.queryPriceTableUnloadingIsEnable;
     } else {
       json[r'queryPriceTableUnloadingIsEnable'] = null;
     }
@@ -561,83 +510,55 @@ class DatabaseQueries {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "DatabaseQueries[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "DatabaseQueries[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "DatabaseQueries[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "DatabaseQueries[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
       return DatabaseQueries(
         queryAddresses: mapValueOfType<String>(json, r'queryAddresses'),
-        queryAddressesIsEnable:
-            mapValueOfType<bool>(json, r'queryAddressesIsEnable'),
+        queryAddressesIsEnable: mapValueOfType<bool>(json, r'queryAddressesIsEnable'),
         queryClients: mapValueOfType<String>(json, r'queryClients'),
-        queryClientsIsEnable:
-            mapValueOfType<bool>(json, r'queryClientsIsEnable'),
+        queryClientsIsEnable: mapValueOfType<bool>(json, r'queryClientsIsEnable'),
         queryFreightTables: mapValueOfType<String>(json, r'queryFreightTables'),
-        queryFreightTablesIsEnable:
-            mapValueOfType<bool>(json, r'queryFreightTablesIsEnable'),
-        queryPaymentConditions:
-            mapValueOfType<String>(json, r'queryPaymentConditions'),
-        queryPaymentConditionsIsEnable:
-            mapValueOfType<bool>(json, r'queryPaymentConditionsIsEnable'),
-        queryPaymentPriceTables:
-            mapValueOfType<String>(json, r'queryPaymentPriceTables'),
-        queryPaymentPriceTablesIsEnable:
-            mapValueOfType<bool>(json, r'queryPaymentPriceTablesIsEnable'),
-        queryPriceTableItems:
-            mapValueOfType<String>(json, r'queryPriceTableItems'),
-        queryPriceTableItemsIsEnable:
-            mapValueOfType<bool>(json, r'queryPriceTableItemsIsEnable'),
+        queryFreightTablesIsEnable: mapValueOfType<bool>(json, r'queryFreightTablesIsEnable'),
+        queryPaymentConditions: mapValueOfType<String>(json, r'queryPaymentConditions'),
+        queryPaymentConditionsIsEnable: mapValueOfType<bool>(json, r'queryPaymentConditionsIsEnable'),
+        queryPaymentPriceTables: mapValueOfType<String>(json, r'queryPaymentPriceTables'),
+        queryPaymentPriceTablesIsEnable: mapValueOfType<bool>(json, r'queryPaymentPriceTablesIsEnable'),
+        queryPriceTableItems: mapValueOfType<String>(json, r'queryPriceTableItems'),
+        queryPriceTableItemsIsEnable: mapValueOfType<bool>(json, r'queryPriceTableItemsIsEnable'),
         queryPriceTables: mapValueOfType<String>(json, r'queryPriceTables'),
-        queryPriceTablesIsEnable:
-            mapValueOfType<bool>(json, r'queryPriceTablesIsEnable'),
+        queryPriceTablesIsEnable: mapValueOfType<bool>(json, r'queryPriceTablesIsEnable'),
         queryProductGroups: mapValueOfType<String>(json, r'queryProductGroups'),
-        queryProductGroupsIsEnable:
-            mapValueOfType<bool>(json, r'queryProductGroupsIsEnable'),
+        queryProductGroupsIsEnable: mapValueOfType<bool>(json, r'queryProductGroupsIsEnable'),
         queryProductLines: mapValueOfType<String>(json, r'queryProductLines'),
-        queryProductLinesIsEnable:
-            mapValueOfType<bool>(json, r'queryProductLinesIsEnable'),
+        queryProductLinesIsEnable: mapValueOfType<bool>(json, r'queryProductLinesIsEnable'),
         queryProducts: mapValueOfType<String>(json, r'queryProducts'),
-        queryProductsIsEnable:
-            mapValueOfType<bool>(json, r'queryProductsIsEnable'),
+        queryProductsIsEnable: mapValueOfType<bool>(json, r'queryProductsIsEnable'),
         queryUsers: mapValueOfType<String>(json, r'queryUsers'),
         queryUsersIsEnable: mapValueOfType<bool>(json, r'queryUsersIsEnable'),
         queryVehicleTypes: mapValueOfType<String>(json, r'queryVehicleTypes'),
-        queryVehicleTypesIsEnable:
-            mapValueOfType<bool>(json, r'queryVehicleTypesIsEnable'),
-        queryDistribuitionCenterClientAddress: mapValueOfType<String>(
-            json, r'queryDistribuitionCenterClientAddress'),
-        queryDistribuitionCenterClientAddressIsEnable: mapValueOfType<bool>(
-            json, r'queryDistribuitionCenterClientAddressIsEnable'),
-        queryFreightConversionFactor:
-            mapValueOfType<String>(json, r'queryFreightConversionFactor'),
-        queryFreightConversionFactorIsEnable:
-            mapValueOfType<bool>(json, r'queryFreightConversionFactorIsEnable'),
+        queryVehicleTypesIsEnable: mapValueOfType<bool>(json, r'queryVehicleTypesIsEnable'),
+        queryDistribuitionCenterClientAddress: mapValueOfType<String>(json, r'queryDistribuitionCenterClientAddress'),
+        queryDistribuitionCenterClientAddressIsEnable: mapValueOfType<bool>(json, r'queryDistribuitionCenterClientAddressIsEnable'),
+        queryFreightConversionFactor: mapValueOfType<String>(json, r'queryFreightConversionFactor'),
+        queryFreightConversionFactorIsEnable: mapValueOfType<bool>(json, r'queryFreightConversionFactorIsEnable'),
         queryDiscountRule: mapValueOfType<String>(json, r'queryDiscountRule'),
-        queryDiscountRuleIsEnable:
-            mapValueOfType<bool>(json, r'queryDiscountRuleIsEnable'),
+        queryDiscountRuleIsEnable: mapValueOfType<bool>(json, r'queryDiscountRuleIsEnable'),
         queryCommission: mapValueOfType<String>(json, r'queryCommission'),
-        queryCommissionIsEnable:
-            mapValueOfType<bool>(json, r'queryCommissionIsEnable'),
+        queryCommissionIsEnable: mapValueOfType<bool>(json, r'queryCommissionIsEnable'),
         queryReasonCancel: mapValueOfType<String>(json, r'queryReasonCancel'),
-        queryReasonCancelIsEnable:
-            mapValueOfType<bool>(json, r'queryReasonCancelIsEnable'),
-        queryPriceTableUnloading:
-            mapValueOfType<String>(json, r'queryPriceTableUnloading'),
-        queryPriceTableUnloadingIsEnable:
-            mapValueOfType<bool>(json, r'queryPriceTableUnloadingIsEnable'),
+        queryReasonCancelIsEnable: mapValueOfType<bool>(json, r'queryReasonCancelIsEnable'),
+        queryPriceTableUnloading: mapValueOfType<String>(json, r'queryPriceTableUnloading'),
+        queryPriceTableUnloadingIsEnable: mapValueOfType<bool>(json, r'queryPriceTableUnloadingIsEnable'),
       );
     }
     return null;
   }
 
-  static List<DatabaseQueries> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<DatabaseQueries> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <DatabaseQueries>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -665,24 +586,20 @@ class DatabaseQueries {
   }
 
   // maps a json object with a list of DatabaseQueries-objects as value to a dart map
-  static Map<String, List<DatabaseQueries>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<DatabaseQueries>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<DatabaseQueries>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = DatabaseQueries.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = DatabaseQueries.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class TablePriceOperationTypeEnum {
   /// Instantiate a new enum with the provided [value].
   const TablePriceOperationTypeEnum._(this.value);
@@ -31,13 +32,9 @@ class TablePriceOperationTypeEnum {
     number2,
   ];
 
-  static TablePriceOperationTypeEnum? fromJson(dynamic value) =>
-      TablePriceOperationTypeEnumTypeTransformer().decode(value);
+  static TablePriceOperationTypeEnum? fromJson(dynamic value) => TablePriceOperationTypeEnumTypeTransformer().decode(value);
 
-  static List<TablePriceOperationTypeEnum> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<TablePriceOperationTypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <TablePriceOperationTypeEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class TablePriceOperationTypeEnum {
 /// Transformation class that can [encode] an instance of [TablePriceOperationTypeEnum] to int,
 /// and [decode] dynamic data back to [TablePriceOperationTypeEnum].
 class TablePriceOperationTypeEnumTypeTransformer {
-  factory TablePriceOperationTypeEnumTypeTransformer() =>
-      _instance ??= const TablePriceOperationTypeEnumTypeTransformer._();
+  factory TablePriceOperationTypeEnumTypeTransformer() => _instance ??= const TablePriceOperationTypeEnumTypeTransformer._();
 
   const TablePriceOperationTypeEnumTypeTransformer._();
 
@@ -72,10 +68,8 @@ class TablePriceOperationTypeEnumTypeTransformer {
   TablePriceOperationTypeEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 1:
-          return TablePriceOperationTypeEnum.number1;
-        case 2:
-          return TablePriceOperationTypeEnum.number2;
+        case 1: return TablePriceOperationTypeEnum.number1;
+        case 2: return TablePriceOperationTypeEnum.number2;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class TablePriceOperationTypeEnumTypeTransformer {
   /// Singleton [TablePriceOperationTypeEnumTypeTransformer] instance.
   static TablePriceOperationTypeEnumTypeTransformer? _instance;
 }
+

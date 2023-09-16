@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
+
 class ReasonVisitApi {
-  ReasonVisitApi([ApiClient? apiClient])
-      : apiClient = apiClient ?? defaultApiClient;
+  ReasonVisitApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,13 +30,10 @@ class ReasonVisitApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> getByIdReasonVisitWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> getByIdReasonVisitWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/reasonsvisits/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/reasonsvisits/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -53,6 +50,7 @@ class ReasonVisitApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -77,28 +75,17 @@ class ReasonVisitApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllReasonVisitResponse?> getByIdReasonVisit(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await getByIdReasonVisitWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllReasonVisitResponse?> getByIdReasonVisit(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await getByIdReasonVisitWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllReasonVisitResponse',
-      ) as GetAllReasonVisitResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllReasonVisitResponse',) as GetAllReasonVisitResponse;
+    
     }
     return null;
   }
@@ -122,13 +109,7 @@ class ReasonVisitApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1ReasonsvisitsAllGetWithHttpInfo({
-    String? description,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1ReasonsvisitsAllGetWithHttpInfo({ String? description, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/reasonsvisits/all';
 
@@ -158,6 +139,7 @@ class ReasonVisitApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -186,33 +168,20 @@ class ReasonVisitApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllReasonVisitResponse>?> tepsalesV1ReasonsvisitsAllGet({
-    String? description,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1ReasonsvisitsAllGetWithHttpInfo(
-      description: description,
-      limit: limit,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<List<GetAllReasonVisitResponse>?> tepsalesV1ReasonsvisitsAllGet({ String? description, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1ReasonsvisitsAllGetWithHttpInfo( description: description, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(
-              responseBody, 'List<GetAllReasonVisitResponse>') as List)
-          .cast<GetAllReasonVisitResponse>()
-          .toList();
+      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllReasonVisitResponse>') as List)
+        .cast<GetAllReasonVisitResponse>()
+        .toList();
+
     }
     return null;
   }
@@ -231,13 +200,10 @@ class ReasonVisitApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1ReasonsvisitsIdDeleteWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1ReasonsvisitsIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/reasonsvisits/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/reasonsvisits/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -254,6 +220,7 @@ class ReasonVisitApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -278,16 +245,8 @@ class ReasonVisitApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1ReasonsvisitsIdDelete(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1ReasonsvisitsIdDeleteWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1ReasonsvisitsIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1ReasonsvisitsIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -312,14 +271,10 @@ class ReasonVisitApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1ReasonsvisitsIdPatchWithHttpInfo(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1ReasonsvisitsIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/reasonsvisits/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/reasonsvisits/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -336,6 +291,7 @@ class ReasonVisitApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -365,18 +321,8 @@ class ReasonVisitApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1ReasonsvisitsIdPatch(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1ReasonsvisitsIdPatchWithHttpInfo(
-      id,
-      operation,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1ReasonsvisitsIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1ReasonsvisitsIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -399,14 +345,10 @@ class ReasonVisitApi {
   ///
   /// * [PutReasonVisitRequest] putReasonVisitRequest:
   ///   ReasonVisit to update
-  Future<http.Response> tepsalesV1ReasonsvisitsIdPutWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutReasonVisitRequest? putReasonVisitRequest,
-  }) async {
+  Future<Response> tepsalesV1ReasonsvisitsIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutReasonVisitRequest? putReasonVisitRequest, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/reasonsvisits/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/reasonsvisits/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putReasonVisitRequest;
@@ -423,6 +365,7 @@ class ReasonVisitApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -450,18 +393,8 @@ class ReasonVisitApi {
   ///
   /// * [PutReasonVisitRequest] putReasonVisitRequest:
   ///   ReasonVisit to update
-  Future<void> tepsalesV1ReasonsvisitsIdPut(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutReasonVisitRequest? putReasonVisitRequest,
-  }) async {
-    final response = await tepsalesV1ReasonsvisitsIdPutWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      putReasonVisitRequest: putReasonVisitRequest,
-    );
+  Future<void> tepsalesV1ReasonsvisitsIdPut(String id, { String? xApiKey, String? xCsrfToken, PutReasonVisitRequest? putReasonVisitRequest, }) async {
+    final response = await tepsalesV1ReasonsvisitsIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putReasonVisitRequest: putReasonVisitRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -487,14 +420,7 @@ class ReasonVisitApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1ReasonsvisitsPagedGetWithHttpInfo({
-    String? description,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1ReasonsvisitsPagedGetWithHttpInfo({ String? description, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/reasonsvisits/paged';
 
@@ -527,6 +453,7 @@ class ReasonVisitApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -556,34 +483,17 @@ class ReasonVisitApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedReasonVisitResponse?> tepsalesV1ReasonsvisitsPagedGet({
-    String? description,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1ReasonsvisitsPagedGetWithHttpInfo(
-      description: description,
-      page: page,
-      pageSize: pageSize,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPagedReasonVisitResponse?> tepsalesV1ReasonsvisitsPagedGet({ String? description, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1ReasonsvisitsPagedGetWithHttpInfo( description: description, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPagedReasonVisitResponse',
-      ) as GetAllPagedReasonVisitResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedReasonVisitResponse',) as GetAllPagedReasonVisitResponse;
+    
     }
     return null;
   }
@@ -602,11 +512,7 @@ class ReasonVisitApi {
   ///
   /// * [PostReasonVisitRequest] postReasonVisitRequest:
   ///   ReasonVisit to create
-  Future<http.Response> tepsalesV1ReasonsvisitsPostWithHttpInfo({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostReasonVisitRequest? postReasonVisitRequest,
-  }) async {
+  Future<Response> tepsalesV1ReasonsvisitsPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostReasonVisitRequest? postReasonVisitRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/reasonsvisits';
 
@@ -625,6 +531,7 @@ class ReasonVisitApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -649,28 +556,17 @@ class ReasonVisitApi {
   ///
   /// * [PostReasonVisitRequest] postReasonVisitRequest:
   ///   ReasonVisit to create
-  Future<PostReasonVisitResponse?> tepsalesV1ReasonsvisitsPost({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostReasonVisitRequest? postReasonVisitRequest,
-  }) async {
-    final response = await tepsalesV1ReasonsvisitsPostWithHttpInfo(
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      postReasonVisitRequest: postReasonVisitRequest,
-    );
+  Future<PostReasonVisitResponse?> tepsalesV1ReasonsvisitsPost({ String? xApiKey, String? xCsrfToken, PostReasonVisitRequest? postReasonVisitRequest, }) async {
+    final response = await tepsalesV1ReasonsvisitsPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postReasonVisitRequest: postReasonVisitRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'PostReasonVisitResponse',
-      ) as PostReasonVisitResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostReasonVisitResponse',) as PostReasonVisitResponse;
+    
     }
     return null;
   }

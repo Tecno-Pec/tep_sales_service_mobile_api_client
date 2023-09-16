@@ -52,25 +52,22 @@ class GetWidgetsDto {
   int? totalClients;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is GetWidgetsDto &&
-          other.totalOrders == totalOrders &&
-          other.totalUsers == totalUsers &&
-          other.totalProducts == totalProducts &&
-          other.totalClients == totalClients;
+  bool operator ==(Object other) => identical(this, other) || other is GetWidgetsDto &&
+     other.totalOrders == totalOrders &&
+     other.totalUsers == totalUsers &&
+     other.totalProducts == totalProducts &&
+     other.totalClients == totalClients;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (totalOrders == null ? 0 : totalOrders!.hashCode) +
-      (totalUsers == null ? 0 : totalUsers!.hashCode) +
-      (totalProducts == null ? 0 : totalProducts!.hashCode) +
-      (totalClients == null ? 0 : totalClients!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (totalOrders == null ? 0 : totalOrders!.hashCode) +
+    (totalUsers == null ? 0 : totalUsers!.hashCode) +
+    (totalProducts == null ? 0 : totalProducts!.hashCode) +
+    (totalClients == null ? 0 : totalClients!.hashCode);
 
   @override
-  String toString() =>
-      'GetWidgetsDto[totalOrders=$totalOrders, totalUsers=$totalUsers, totalProducts=$totalProducts, totalClients=$totalClients]';
+  String toString() => 'GetWidgetsDto[totalOrders=$totalOrders, totalUsers=$totalUsers, totalProducts=$totalProducts, totalClients=$totalClients]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -109,10 +106,8 @@ class GetWidgetsDto {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "GetWidgetsDto[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "GetWidgetsDto[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "GetWidgetsDto[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "GetWidgetsDto[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -127,10 +122,7 @@ class GetWidgetsDto {
     return null;
   }
 
-  static List<GetWidgetsDto> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<GetWidgetsDto> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <GetWidgetsDto>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -158,24 +150,20 @@ class GetWidgetsDto {
   }
 
   // maps a json object with a list of GetWidgetsDto-objects as value to a dart map
-  static Map<String, List<GetWidgetsDto>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<GetWidgetsDto>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<GetWidgetsDto>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = GetWidgetsDto.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = GetWidgetsDto.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

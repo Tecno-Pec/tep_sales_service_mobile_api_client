@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PriceTableItem id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c08d807d-02d8-4360-96b4-f506e3bcf28f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '92b9a996-e20f-4887-916e-62f6701fed7e']
 
 ### Return type
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0799c509-d1d9-488f-86e5-6edede0d0717']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '48059365-8fa2-4e65-8b67-652338e13fdb']
 
 ### Return type
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PriceTableItem id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1e42a133-c8c0-4486-96c9-f260b7e622b2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '54085f50-e0c8-460c-b378-7e4851525882']
 
 ### Return type
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
  **id** | **String**| PriceTableItem id | 
  **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '04f65a64-a3d5-4c30-a1c4-d950e3b460a3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '237163dd-53d8-44a1-8937-5656f12e6c4a']
 
 ### Return type
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PriceTableItem Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8e510c75-3881-4ee4-8be2-22e0b4b2636c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '53daca5a-1d5c-4e74-8086-6ea367ce688a']
  **putPriceTableItemRequest** | [**PutPriceTableItemRequest**](PutPriceTableItemRequest.md)| PriceTableItem to update | [optional] 
 
 ### Return type
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5e755510-f33a-4efb-9b69-a7fe7b6c445f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cbae5a6c-fe0c-4e7c-8896-fc4666f60627']
 
 ### Return type
 
@@ -368,7 +368,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '400ac844-63d2-4b51-a67d-8cb54e70380a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e74759d3-4d05-4405-90d1-050b43ecf05d']
  **postPriceTableItemRequest** | [**PostPriceTableItemRequest**](PostPriceTableItemRequest.md)| PriceTableItem to create | [optional] 
 
 ### Return type

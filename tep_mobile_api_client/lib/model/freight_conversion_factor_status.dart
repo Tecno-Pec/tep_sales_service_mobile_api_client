@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class FreightConversionFactorStatus {
   /// Instantiate a new enum with the provided [value].
   const FreightConversionFactorStatus._(this.value);
@@ -31,13 +32,9 @@ class FreightConversionFactorStatus {
     number1,
   ];
 
-  static FreightConversionFactorStatus? fromJson(dynamic value) =>
-      FreightConversionFactorStatusTypeTransformer().decode(value);
+  static FreightConversionFactorStatus? fromJson(dynamic value) => FreightConversionFactorStatusTypeTransformer().decode(value);
 
-  static List<FreightConversionFactorStatus> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<FreightConversionFactorStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FreightConversionFactorStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class FreightConversionFactorStatus {
 /// Transformation class that can [encode] an instance of [FreightConversionFactorStatus] to int,
 /// and [decode] dynamic data back to [FreightConversionFactorStatus].
 class FreightConversionFactorStatusTypeTransformer {
-  factory FreightConversionFactorStatusTypeTransformer() =>
-      _instance ??= const FreightConversionFactorStatusTypeTransformer._();
+  factory FreightConversionFactorStatusTypeTransformer() => _instance ??= const FreightConversionFactorStatusTypeTransformer._();
 
   const FreightConversionFactorStatusTypeTransformer._();
 
@@ -72,10 +68,8 @@ class FreightConversionFactorStatusTypeTransformer {
   FreightConversionFactorStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0:
-          return FreightConversionFactorStatus.number0;
-        case 1:
-          return FreightConversionFactorStatus.number1;
+        case 0: return FreightConversionFactorStatus.number0;
+        case 1: return FreightConversionFactorStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class FreightConversionFactorStatusTypeTransformer {
   /// Singleton [FreightConversionFactorStatusTypeTransformer] instance.
   static FreightConversionFactorStatusTypeTransformer? _instance;
 }
+

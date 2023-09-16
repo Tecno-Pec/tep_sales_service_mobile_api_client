@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class DiscountWeightTypeEnum {
   /// Instantiate a new enum with the provided [value].
   const DiscountWeightTypeEnum._(this.value);
@@ -31,13 +32,9 @@ class DiscountWeightTypeEnum {
     number2,
   ];
 
-  static DiscountWeightTypeEnum? fromJson(dynamic value) =>
-      DiscountWeightTypeEnumTypeTransformer().decode(value);
+  static DiscountWeightTypeEnum? fromJson(dynamic value) => DiscountWeightTypeEnumTypeTransformer().decode(value);
 
-  static List<DiscountWeightTypeEnum> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<DiscountWeightTypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <DiscountWeightTypeEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class DiscountWeightTypeEnum {
 /// Transformation class that can [encode] an instance of [DiscountWeightTypeEnum] to int,
 /// and [decode] dynamic data back to [DiscountWeightTypeEnum].
 class DiscountWeightTypeEnumTypeTransformer {
-  factory DiscountWeightTypeEnumTypeTransformer() =>
-      _instance ??= const DiscountWeightTypeEnumTypeTransformer._();
+  factory DiscountWeightTypeEnumTypeTransformer() => _instance ??= const DiscountWeightTypeEnumTypeTransformer._();
 
   const DiscountWeightTypeEnumTypeTransformer._();
 
@@ -72,10 +68,8 @@ class DiscountWeightTypeEnumTypeTransformer {
   DiscountWeightTypeEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 1:
-          return DiscountWeightTypeEnum.number1;
-        case 2:
-          return DiscountWeightTypeEnum.number2;
+        case 1: return DiscountWeightTypeEnum.number1;
+        case 2: return DiscountWeightTypeEnum.number2;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class DiscountWeightTypeEnumTypeTransformer {
   /// Singleton [DiscountWeightTypeEnumTypeTransformer] instance.
   static DiscountWeightTypeEnumTypeTransformer? _instance;
 }
+

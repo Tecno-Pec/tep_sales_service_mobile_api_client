@@ -70,31 +70,26 @@ class GroupPurchaseOrderDto {
   int? totalExpired;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is GroupPurchaseOrderDto &&
-          other.totalInProgress == totalInProgress &&
-          other.totalWaitingForApproved == totalWaitingForApproved &&
-          other.totalApproved == totalApproved &&
-          other.totalRefused == totalRefused &&
-          other.totalCanceled == totalCanceled &&
-          other.totalExpired == totalExpired;
+  bool operator ==(Object other) => identical(this, other) || other is GroupPurchaseOrderDto &&
+     other.totalInProgress == totalInProgress &&
+     other.totalWaitingForApproved == totalWaitingForApproved &&
+     other.totalApproved == totalApproved &&
+     other.totalRefused == totalRefused &&
+     other.totalCanceled == totalCanceled &&
+     other.totalExpired == totalExpired;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (totalInProgress == null ? 0 : totalInProgress!.hashCode) +
-      (totalWaitingForApproved == null
-          ? 0
-          : totalWaitingForApproved!.hashCode) +
-      (totalApproved == null ? 0 : totalApproved!.hashCode) +
-      (totalRefused == null ? 0 : totalRefused!.hashCode) +
-      (totalCanceled == null ? 0 : totalCanceled!.hashCode) +
-      (totalExpired == null ? 0 : totalExpired!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (totalInProgress == null ? 0 : totalInProgress!.hashCode) +
+    (totalWaitingForApproved == null ? 0 : totalWaitingForApproved!.hashCode) +
+    (totalApproved == null ? 0 : totalApproved!.hashCode) +
+    (totalRefused == null ? 0 : totalRefused!.hashCode) +
+    (totalCanceled == null ? 0 : totalCanceled!.hashCode) +
+    (totalExpired == null ? 0 : totalExpired!.hashCode);
 
   @override
-  String toString() =>
-      'GroupPurchaseOrderDto[totalInProgress=$totalInProgress, totalWaitingForApproved=$totalWaitingForApproved, totalApproved=$totalApproved, totalRefused=$totalRefused, totalCanceled=$totalCanceled, totalExpired=$totalExpired]';
+  String toString() => 'GroupPurchaseOrderDto[totalInProgress=$totalInProgress, totalWaitingForApproved=$totalWaitingForApproved, totalApproved=$totalApproved, totalRefused=$totalRefused, totalCanceled=$totalCanceled, totalExpired=$totalExpired]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -143,18 +138,15 @@ class GroupPurchaseOrderDto {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "GroupPurchaseOrderDto[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "GroupPurchaseOrderDto[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "GroupPurchaseOrderDto[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "GroupPurchaseOrderDto[$key]" has a null value in JSON.');
         });
         return true;
       }());
 
       return GroupPurchaseOrderDto(
         totalInProgress: mapValueOfType<int>(json, r'totalInProgress'),
-        totalWaitingForApproved:
-            mapValueOfType<int>(json, r'totalWaitingForApproved'),
+        totalWaitingForApproved: mapValueOfType<int>(json, r'totalWaitingForApproved'),
         totalApproved: mapValueOfType<int>(json, r'totalApproved'),
         totalRefused: mapValueOfType<int>(json, r'totalRefused'),
         totalCanceled: mapValueOfType<int>(json, r'totalCanceled'),
@@ -164,10 +156,7 @@ class GroupPurchaseOrderDto {
     return null;
   }
 
-  static List<GroupPurchaseOrderDto> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<GroupPurchaseOrderDto> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <GroupPurchaseOrderDto>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -195,24 +184,20 @@ class GroupPurchaseOrderDto {
   }
 
   // maps a json object with a list of GroupPurchaseOrderDto-objects as value to a dart map
-  static Map<String, List<GroupPurchaseOrderDto>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<GroupPurchaseOrderDto>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<GroupPurchaseOrderDto>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = GroupPurchaseOrderDto.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = GroupPurchaseOrderDto.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

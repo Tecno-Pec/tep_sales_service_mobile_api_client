@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
+
 class CompanyGlobalParameterApi {
-  CompanyGlobalParameterApi([ApiClient? apiClient])
-      : apiClient = apiClient ?? defaultApiClient;
+  CompanyGlobalParameterApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,14 +30,10 @@ class CompanyGlobalParameterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> getByIdCompanyGlobalParameterWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> getByIdCompanyGlobalParameterWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path =
-        r'/tepsales/v1/companyglobalparameters/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/companyglobalparameters/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -54,6 +50,7 @@ class CompanyGlobalParameterApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -78,28 +75,17 @@ class CompanyGlobalParameterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllCompanyGlobalParameterResponse?> getByIdCompanyGlobalParameter(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await getByIdCompanyGlobalParameterWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllCompanyGlobalParameterResponse?> getByIdCompanyGlobalParameter(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await getByIdCompanyGlobalParameterWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllCompanyGlobalParameterResponse',
-      ) as GetAllCompanyGlobalParameterResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllCompanyGlobalParameterResponse',) as GetAllCompanyGlobalParameterResponse;
+    
     }
     return null;
   }
@@ -123,13 +109,7 @@ class CompanyGlobalParameterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1CompanyglobalparametersAllGetWithHttpInfo({
-    String? name,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1CompanyglobalparametersAllGetWithHttpInfo({ String? name, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/companyglobalparameters/all';
 
@@ -159,6 +139,7 @@ class CompanyGlobalParameterApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -187,35 +168,20 @@ class CompanyGlobalParameterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllCompanyGlobalParameterResponse>?>
-      tepsalesV1CompanyglobalparametersAllGet({
-    String? name,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1CompanyglobalparametersAllGetWithHttpInfo(
-      name: name,
-      limit: limit,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<List<GetAllCompanyGlobalParameterResponse>?> tepsalesV1CompanyglobalparametersAllGet({ String? name, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1CompanyglobalparametersAllGetWithHttpInfo( name: name, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(
-                  responseBody, 'List<GetAllCompanyGlobalParameterResponse>')
-              as List)
-          .cast<GetAllCompanyGlobalParameterResponse>()
-          .toList();
+      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllCompanyGlobalParameterResponse>') as List)
+        .cast<GetAllCompanyGlobalParameterResponse>()
+        .toList();
+
     }
     return null;
   }
@@ -234,14 +200,10 @@ class CompanyGlobalParameterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1CompanyglobalparametersIdDeleteWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1CompanyglobalparametersIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path =
-        r'/tepsales/v1/companyglobalparameters/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/companyglobalparameters/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -258,6 +220,7 @@ class CompanyGlobalParameterApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -282,17 +245,8 @@ class CompanyGlobalParameterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1CompanyglobalparametersIdDelete(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response =
-        await tepsalesV1CompanyglobalparametersIdDeleteWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1CompanyglobalparametersIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1CompanyglobalparametersIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -317,15 +271,10 @@ class CompanyGlobalParameterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1CompanyglobalparametersIdPatchWithHttpInfo(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1CompanyglobalparametersIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path =
-        r'/tepsales/v1/companyglobalparameters/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/companyglobalparameters/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -342,6 +291,7 @@ class CompanyGlobalParameterApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -371,18 +321,8 @@ class CompanyGlobalParameterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1CompanyglobalparametersIdPatch(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1CompanyglobalparametersIdPatchWithHttpInfo(
-      id,
-      operation,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1CompanyglobalparametersIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1CompanyglobalparametersIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -405,15 +345,10 @@ class CompanyGlobalParameterApi {
   ///
   /// * [PutCompanyGlobalParameterRequest] putCompanyGlobalParameterRequest:
   ///   CompanyGlobalParameter to update
-  Future<http.Response> tepsalesV1CompanyglobalparametersIdPutWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutCompanyGlobalParameterRequest? putCompanyGlobalParameterRequest,
-  }) async {
+  Future<Response> tepsalesV1CompanyglobalparametersIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutCompanyGlobalParameterRequest? putCompanyGlobalParameterRequest, }) async {
     // ignore: prefer_const_declarations
-    final path =
-        r'/tepsales/v1/companyglobalparameters/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/companyglobalparameters/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putCompanyGlobalParameterRequest;
@@ -430,6 +365,7 @@ class CompanyGlobalParameterApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -457,18 +393,8 @@ class CompanyGlobalParameterApi {
   ///
   /// * [PutCompanyGlobalParameterRequest] putCompanyGlobalParameterRequest:
   ///   CompanyGlobalParameter to update
-  Future<void> tepsalesV1CompanyglobalparametersIdPut(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutCompanyGlobalParameterRequest? putCompanyGlobalParameterRequest,
-  }) async {
-    final response = await tepsalesV1CompanyglobalparametersIdPutWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      putCompanyGlobalParameterRequest: putCompanyGlobalParameterRequest,
-    );
+  Future<void> tepsalesV1CompanyglobalparametersIdPut(String id, { String? xApiKey, String? xCsrfToken, PutCompanyGlobalParameterRequest? putCompanyGlobalParameterRequest, }) async {
+    final response = await tepsalesV1CompanyglobalparametersIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putCompanyGlobalParameterRequest: putCompanyGlobalParameterRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -494,14 +420,7 @@ class CompanyGlobalParameterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1CompanyglobalparametersPagedGetWithHttpInfo({
-    String? name,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1CompanyglobalparametersPagedGetWithHttpInfo({ String? name, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/companyglobalparameters/paged';
 
@@ -534,6 +453,7 @@ class CompanyGlobalParameterApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -563,36 +483,17 @@ class CompanyGlobalParameterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedCompanyGlobalParameterResponse?>
-      tepsalesV1CompanyglobalparametersPagedGet({
-    String? name,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response =
-        await tepsalesV1CompanyglobalparametersPagedGetWithHttpInfo(
-      name: name,
-      page: page,
-      pageSize: pageSize,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPagedCompanyGlobalParameterResponse?> tepsalesV1CompanyglobalparametersPagedGet({ String? name, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1CompanyglobalparametersPagedGetWithHttpInfo( name: name, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPagedCompanyGlobalParameterResponse',
-      ) as GetAllPagedCompanyGlobalParameterResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedCompanyGlobalParameterResponse',) as GetAllPagedCompanyGlobalParameterResponse;
+    
     }
     return null;
   }
@@ -611,11 +512,7 @@ class CompanyGlobalParameterApi {
   ///
   /// * [PostCompanyGlobalParameterRequest] postCompanyGlobalParameterRequest:
   ///   CompanyGlobalParameter to create
-  Future<http.Response> tepsalesV1CompanyglobalparametersPostWithHttpInfo({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostCompanyGlobalParameterRequest? postCompanyGlobalParameterRequest,
-  }) async {
+  Future<Response> tepsalesV1CompanyglobalparametersPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostCompanyGlobalParameterRequest? postCompanyGlobalParameterRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/companyglobalparameters';
 
@@ -634,6 +531,7 @@ class CompanyGlobalParameterApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -658,29 +556,17 @@ class CompanyGlobalParameterApi {
   ///
   /// * [PostCompanyGlobalParameterRequest] postCompanyGlobalParameterRequest:
   ///   CompanyGlobalParameter to create
-  Future<PostCompanyGlobalParameterResponse?>
-      tepsalesV1CompanyglobalparametersPost({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostCompanyGlobalParameterRequest? postCompanyGlobalParameterRequest,
-  }) async {
-    final response = await tepsalesV1CompanyglobalparametersPostWithHttpInfo(
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      postCompanyGlobalParameterRequest: postCompanyGlobalParameterRequest,
-    );
+  Future<PostCompanyGlobalParameterResponse?> tepsalesV1CompanyglobalparametersPost({ String? xApiKey, String? xCsrfToken, PostCompanyGlobalParameterRequest? postCompanyGlobalParameterRequest, }) async {
+    final response = await tepsalesV1CompanyglobalparametersPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postCompanyGlobalParameterRequest: postCompanyGlobalParameterRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'PostCompanyGlobalParameterResponse',
-      ) as PostCompanyGlobalParameterResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostCompanyGlobalParameterResponse',) as PostCompanyGlobalParameterResponse;
+    
     }
     return null;
   }

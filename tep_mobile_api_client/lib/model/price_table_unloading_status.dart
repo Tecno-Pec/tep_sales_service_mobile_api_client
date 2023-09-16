@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class PriceTableUnloadingStatus {
   /// Instantiate a new enum with the provided [value].
   const PriceTableUnloadingStatus._(this.value);
@@ -31,13 +32,9 @@ class PriceTableUnloadingStatus {
     number1,
   ];
 
-  static PriceTableUnloadingStatus? fromJson(dynamic value) =>
-      PriceTableUnloadingStatusTypeTransformer().decode(value);
+  static PriceTableUnloadingStatus? fromJson(dynamic value) => PriceTableUnloadingStatusTypeTransformer().decode(value);
 
-  static List<PriceTableUnloadingStatus> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PriceTableUnloadingStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PriceTableUnloadingStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class PriceTableUnloadingStatus {
 /// Transformation class that can [encode] an instance of [PriceTableUnloadingStatus] to int,
 /// and [decode] dynamic data back to [PriceTableUnloadingStatus].
 class PriceTableUnloadingStatusTypeTransformer {
-  factory PriceTableUnloadingStatusTypeTransformer() =>
-      _instance ??= const PriceTableUnloadingStatusTypeTransformer._();
+  factory PriceTableUnloadingStatusTypeTransformer() => _instance ??= const PriceTableUnloadingStatusTypeTransformer._();
 
   const PriceTableUnloadingStatusTypeTransformer._();
 
@@ -72,10 +68,8 @@ class PriceTableUnloadingStatusTypeTransformer {
   PriceTableUnloadingStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0:
-          return PriceTableUnloadingStatus.number0;
-        case 1:
-          return PriceTableUnloadingStatus.number1;
+        case 0: return PriceTableUnloadingStatus.number0;
+        case 1: return PriceTableUnloadingStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class PriceTableUnloadingStatusTypeTransformer {
   /// Singleton [PriceTableUnloadingStatusTypeTransformer] instance.
   static PriceTableUnloadingStatusTypeTransformer? _instance;
 }
+

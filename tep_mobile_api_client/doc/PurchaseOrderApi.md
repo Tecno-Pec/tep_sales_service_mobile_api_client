@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8ed45aab-7a2b-45de-8de2-70615ae8948b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dd962f82-262a-4723-aaa8-ebefd4f692bd']
 
 ### Return type
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e242c5a9-7cdc-4a9b-89c3-476ad0cde465']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a16c6bc4-f118-4737-b213-b8cd806fba57']
 
 ### Return type
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '379ee7f8-3d12-4910-b1ca-edb19f464bee']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '09bb879c-6f06-416b-a62d-aab7523aede8']
 
 ### Return type
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a811c104-2c96-411f-9064-3d5c770635ef']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ad0e347a-4853-4038-a6cf-24fe6c9af741']
  **postCancelPurchaseOrderRequest** | [**PostCancelPurchaseOrderRequest**](PostCancelPurchaseOrderRequest.md)| PostCancelPurchaseOrderRequest | [optional] 
 
 ### Return type
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e21db85b-8b2d-4f1d-9c87-81e1a19576f0']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd342dd85-32f9-48a8-8852-7b98335e6a04']
 
 ### Return type
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
  **id** | **String**| PurchaseOrder id | 
  **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '474a80cc-b96b-440f-9044-fad2839ff212']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5815388e-fde8-45d6-ab81-8a4089ce33ca']
 
 ### Return type
 
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '643ed719-38bc-4229-b3dd-a9efdf1d041e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e4352ff3-bc18-433f-a2cb-90691e3930c1']
  **putPurchaseOrderRequest** | [**PutPurchaseOrderRequest**](PutPurchaseOrderRequest.md)| PurchaseOrder to update | [optional] 
 
 ### Return type
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '145ec8e2-42a5-4c6e-97d1-8286e6740117']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ce963c91-8ed0-4097-b7d5-af2d9c068b0f']
  **postRefusedPurchaseOrderRequest** | [**PostRefusedPurchaseOrderRequest**](PostRefusedPurchaseOrderRequest.md)| Post Refused PurchaseOrderRequest | [optional] 
 
 ### Return type
@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
  **id** | **String**| PurchaseOrder Id | 
  **areaManagerCode** | **String**| Area Manager Code | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bb41ec44-6995-4646-92c1-481f3c9f20ae']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0bb7d871-37a0-4e93-a1d3-4515ee5f25fe']
 
 ### Return type
 
@@ -530,7 +530,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0dc8565a-4483-47a9-889d-4fe02c50e167']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '82725f68-0e6b-47ad-9518-a77089d1707f']
 
 ### Return type
 
@@ -578,7 +578,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '52421681-2424-47ab-9196-c1480c8ac9ea']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '446c4cf7-7f99-47cd-bd6e-b95de345bff7']
  **postPurchaseOrderRequest** | [**PostPurchaseOrderRequest**](PostPurchaseOrderRequest.md)| PurchaseOrder to create | [optional] 
 
 ### Return type

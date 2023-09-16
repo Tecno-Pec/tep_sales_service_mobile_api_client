@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class ActionType {
   /// Instantiate a new enum with the provided [value].
   const ActionType._(this.value);
@@ -33,13 +34,9 @@ class ActionType {
     number3,
   ];
 
-  static ActionType? fromJson(dynamic value) =>
-      ActionTypeTypeTransformer().decode(value);
+  static ActionType? fromJson(dynamic value) => ActionTypeTypeTransformer().decode(value);
 
-  static List<ActionType> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<ActionType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ActionType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -56,8 +53,7 @@ class ActionType {
 /// Transformation class that can [encode] an instance of [ActionType] to int,
 /// and [decode] dynamic data back to [ActionType].
 class ActionTypeTypeTransformer {
-  factory ActionTypeTypeTransformer() =>
-      _instance ??= const ActionTypeTypeTransformer._();
+  factory ActionTypeTypeTransformer() => _instance ??= const ActionTypeTypeTransformer._();
 
   const ActionTypeTypeTransformer._();
 
@@ -74,12 +70,9 @@ class ActionTypeTypeTransformer {
   ActionType? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 1:
-          return ActionType.number1;
-        case 2:
-          return ActionType.number2;
-        case 3:
-          return ActionType.number3;
+        case 1: return ActionType.number1;
+        case 2: return ActionType.number2;
+        case 3: return ActionType.number3;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -92,3 +85,4 @@ class ActionTypeTypeTransformer {
   /// Singleton [ActionTypeTypeTransformer] instance.
   static ActionTypeTypeTransformer? _instance;
 }
+

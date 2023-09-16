@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
+
 class DiscountWeightApi {
-  DiscountWeightApi([ApiClient? apiClient])
-      : apiClient = apiClient ?? defaultApiClient;
+  DiscountWeightApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,13 +30,10 @@ class DiscountWeightApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> getByIdDiscountWeightWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> getByIdDiscountWeightWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/discountWeights/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/discountWeights/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -53,6 +50,7 @@ class DiscountWeightApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -77,28 +75,17 @@ class DiscountWeightApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllDiscountWeightResponse?> getByIdDiscountWeight(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await getByIdDiscountWeightWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllDiscountWeightResponse?> getByIdDiscountWeight(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await getByIdDiscountWeightWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllDiscountWeightResponse',
-      ) as GetAllDiscountWeightResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllDiscountWeightResponse',) as GetAllDiscountWeightResponse;
+    
     }
     return null;
   }
@@ -124,14 +111,7 @@ class DiscountWeightApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1DiscountWeightsAllGetWithHttpInfo({
-    double? quantity,
-    double? percent,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1DiscountWeightsAllGetWithHttpInfo({ double? quantity, double? percent, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/discountWeights/all';
 
@@ -164,6 +144,7 @@ class DiscountWeightApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -194,35 +175,20 @@ class DiscountWeightApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllDiscountWeightResponse>?> tepsalesV1DiscountWeightsAllGet({
-    double? quantity,
-    double? percent,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1DiscountWeightsAllGetWithHttpInfo(
-      quantity: quantity,
-      percent: percent,
-      limit: limit,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<List<GetAllDiscountWeightResponse>?> tepsalesV1DiscountWeightsAllGet({ double? quantity, double? percent, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1DiscountWeightsAllGetWithHttpInfo( quantity: quantity, percent: percent, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(
-              responseBody, 'List<GetAllDiscountWeightResponse>') as List)
-          .cast<GetAllDiscountWeightResponse>()
-          .toList();
+      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllDiscountWeightResponse>') as List)
+        .cast<GetAllDiscountWeightResponse>()
+        .toList();
+
     }
     return null;
   }
@@ -241,13 +207,10 @@ class DiscountWeightApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1DiscountWeightsIdDeleteWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1DiscountWeightsIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/discountWeights/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/discountWeights/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -264,6 +227,7 @@ class DiscountWeightApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -288,16 +252,8 @@ class DiscountWeightApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1DiscountWeightsIdDelete(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1DiscountWeightsIdDeleteWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1DiscountWeightsIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1DiscountWeightsIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -322,14 +278,10 @@ class DiscountWeightApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1DiscountWeightsIdPatchWithHttpInfo(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1DiscountWeightsIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/discountWeights/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/discountWeights/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -346,6 +298,7 @@ class DiscountWeightApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -375,18 +328,8 @@ class DiscountWeightApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1DiscountWeightsIdPatch(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1DiscountWeightsIdPatchWithHttpInfo(
-      id,
-      operation,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1DiscountWeightsIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1DiscountWeightsIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -409,14 +352,10 @@ class DiscountWeightApi {
   ///
   /// * [PutDiscountWeightRequest] putDiscountWeightRequest:
   ///   DiscountWeight to update
-  Future<http.Response> tepsalesV1DiscountWeightsIdPutWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutDiscountWeightRequest? putDiscountWeightRequest,
-  }) async {
+  Future<Response> tepsalesV1DiscountWeightsIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutDiscountWeightRequest? putDiscountWeightRequest, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/discountWeights/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/discountWeights/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putDiscountWeightRequest;
@@ -433,6 +372,7 @@ class DiscountWeightApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -460,18 +400,8 @@ class DiscountWeightApi {
   ///
   /// * [PutDiscountWeightRequest] putDiscountWeightRequest:
   ///   DiscountWeight to update
-  Future<void> tepsalesV1DiscountWeightsIdPut(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutDiscountWeightRequest? putDiscountWeightRequest,
-  }) async {
-    final response = await tepsalesV1DiscountWeightsIdPutWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      putDiscountWeightRequest: putDiscountWeightRequest,
-    );
+  Future<void> tepsalesV1DiscountWeightsIdPut(String id, { String? xApiKey, String? xCsrfToken, PutDiscountWeightRequest? putDiscountWeightRequest, }) async {
+    final response = await tepsalesV1DiscountWeightsIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putDiscountWeightRequest: putDiscountWeightRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -499,15 +429,7 @@ class DiscountWeightApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1DiscountWeightsPagedGetWithHttpInfo({
-    double? quantity,
-    double? percent,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1DiscountWeightsPagedGetWithHttpInfo({ double? quantity, double? percent, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/discountWeights/paged';
 
@@ -543,6 +465,7 @@ class DiscountWeightApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -574,36 +497,17 @@ class DiscountWeightApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedDiscountWeightResponse?> tepsalesV1DiscountWeightsPagedGet({
-    double? quantity,
-    double? percent,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1DiscountWeightsPagedGetWithHttpInfo(
-      quantity: quantity,
-      percent: percent,
-      page: page,
-      pageSize: pageSize,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPagedDiscountWeightResponse?> tepsalesV1DiscountWeightsPagedGet({ double? quantity, double? percent, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1DiscountWeightsPagedGetWithHttpInfo( quantity: quantity, percent: percent, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPagedDiscountWeightResponse',
-      ) as GetAllPagedDiscountWeightResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedDiscountWeightResponse',) as GetAllPagedDiscountWeightResponse;
+    
     }
     return null;
   }
@@ -622,11 +526,7 @@ class DiscountWeightApi {
   ///
   /// * [PostDiscountWeightRequest] postDiscountWeightRequest:
   ///   DiscountWeight to create
-  Future<http.Response> tepsalesV1DiscountWeightsPostWithHttpInfo({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostDiscountWeightRequest? postDiscountWeightRequest,
-  }) async {
+  Future<Response> tepsalesV1DiscountWeightsPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostDiscountWeightRequest? postDiscountWeightRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/discountWeights';
 
@@ -645,6 +545,7 @@ class DiscountWeightApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -669,28 +570,17 @@ class DiscountWeightApi {
   ///
   /// * [PostDiscountWeightRequest] postDiscountWeightRequest:
   ///   DiscountWeight to create
-  Future<PostDiscountWeightResponse?> tepsalesV1DiscountWeightsPost({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostDiscountWeightRequest? postDiscountWeightRequest,
-  }) async {
-    final response = await tepsalesV1DiscountWeightsPostWithHttpInfo(
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      postDiscountWeightRequest: postDiscountWeightRequest,
-    );
+  Future<PostDiscountWeightResponse?> tepsalesV1DiscountWeightsPost({ String? xApiKey, String? xCsrfToken, PostDiscountWeightRequest? postDiscountWeightRequest, }) async {
+    final response = await tepsalesV1DiscountWeightsPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postDiscountWeightRequest: postDiscountWeightRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'PostDiscountWeightResponse',
-      ) as PostDiscountWeightResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostDiscountWeightResponse',) as PostDiscountWeightResponse;
+    
     }
     return null;
   }

@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
+
 class PaymentPriceTableApi {
-  PaymentPriceTableApi([ApiClient? apiClient])
-      : apiClient = apiClient ?? defaultApiClient;
+  PaymentPriceTableApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,13 +30,10 @@ class PaymentPriceTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> getByIdPaymentPriceTableWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> getByIdPaymentPriceTableWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/paymentPriceTables/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/paymentPriceTables/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -53,6 +50,7 @@ class PaymentPriceTableApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -77,28 +75,17 @@ class PaymentPriceTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPaymentPriceTableResponse?> getByIdPaymentPriceTable(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await getByIdPaymentPriceTableWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPaymentPriceTableResponse?> getByIdPaymentPriceTable(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await getByIdPaymentPriceTableWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPaymentPriceTableResponse',
-      ) as GetAllPaymentPriceTableResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPaymentPriceTableResponse',) as GetAllPaymentPriceTableResponse;
+    
     }
     return null;
   }
@@ -128,16 +115,7 @@ class PaymentPriceTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1PaymentPriceTablesAllGetWithHttpInfo({
-    String? paymentConditionId,
-    String? priceTableId,
-    String? externalCode,
-    PaymentPriceTableStatus? status,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1PaymentPriceTablesAllGetWithHttpInfo({ String? paymentConditionId, String? priceTableId, String? externalCode, PaymentPriceTableStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/paymentPriceTables/all';
 
@@ -149,8 +127,7 @@ class PaymentPriceTableApi {
     final formParams = <String, String>{};
 
     if (paymentConditionId != null) {
-      queryParams
-          .addAll(_queryParams('', 'paymentConditionId', paymentConditionId));
+      queryParams.addAll(_queryParams('', 'paymentConditionId', paymentConditionId));
     }
     if (priceTableId != null) {
       queryParams.addAll(_queryParams('', 'priceTableId', priceTableId));
@@ -177,6 +154,7 @@ class PaymentPriceTableApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -211,40 +189,20 @@ class PaymentPriceTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllPaymentPriceTableResponse>?>
-      tepsalesV1PaymentPriceTablesAllGet({
-    String? paymentConditionId,
-    String? priceTableId,
-    String? externalCode,
-    PaymentPriceTableStatus? status,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1PaymentPriceTablesAllGetWithHttpInfo(
-      paymentConditionId: paymentConditionId,
-      priceTableId: priceTableId,
-      externalCode: externalCode,
-      status: status,
-      limit: limit,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<List<GetAllPaymentPriceTableResponse>?> tepsalesV1PaymentPriceTablesAllGet({ String? paymentConditionId, String? priceTableId, String? externalCode, PaymentPriceTableStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1PaymentPriceTablesAllGetWithHttpInfo( paymentConditionId: paymentConditionId, priceTableId: priceTableId, externalCode: externalCode, status: status, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(
-              responseBody, 'List<GetAllPaymentPriceTableResponse>') as List)
-          .cast<GetAllPaymentPriceTableResponse>()
-          .toList();
+      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllPaymentPriceTableResponse>') as List)
+        .cast<GetAllPaymentPriceTableResponse>()
+        .toList();
+
     }
     return null;
   }
@@ -263,13 +221,10 @@ class PaymentPriceTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1PaymentPriceTablesIdDeleteWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1PaymentPriceTablesIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/paymentPriceTables/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/paymentPriceTables/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -286,6 +241,7 @@ class PaymentPriceTableApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -310,16 +266,8 @@ class PaymentPriceTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1PaymentPriceTablesIdDelete(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1PaymentPriceTablesIdDeleteWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1PaymentPriceTablesIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1PaymentPriceTablesIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -344,14 +292,10 @@ class PaymentPriceTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1PaymentPriceTablesIdPatchWithHttpInfo(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1PaymentPriceTablesIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/paymentPriceTables/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/paymentPriceTables/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -368,6 +312,7 @@ class PaymentPriceTableApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -397,18 +342,8 @@ class PaymentPriceTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1PaymentPriceTablesIdPatch(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1PaymentPriceTablesIdPatchWithHttpInfo(
-      id,
-      operation,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1PaymentPriceTablesIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1PaymentPriceTablesIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -431,14 +366,10 @@ class PaymentPriceTableApi {
   ///
   /// * [PutPaymentPriceTableRequest] putPaymentPriceTableRequest:
   ///   PaymentPriceTable to update
-  Future<http.Response> tepsalesV1PaymentPriceTablesIdPutWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutPaymentPriceTableRequest? putPaymentPriceTableRequest,
-  }) async {
+  Future<Response> tepsalesV1PaymentPriceTablesIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutPaymentPriceTableRequest? putPaymentPriceTableRequest, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/paymentPriceTables/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/paymentPriceTables/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putPaymentPriceTableRequest;
@@ -455,6 +386,7 @@ class PaymentPriceTableApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -482,18 +414,8 @@ class PaymentPriceTableApi {
   ///
   /// * [PutPaymentPriceTableRequest] putPaymentPriceTableRequest:
   ///   PaymentPriceTable to update
-  Future<void> tepsalesV1PaymentPriceTablesIdPut(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutPaymentPriceTableRequest? putPaymentPriceTableRequest,
-  }) async {
-    final response = await tepsalesV1PaymentPriceTablesIdPutWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      putPaymentPriceTableRequest: putPaymentPriceTableRequest,
-    );
+  Future<void> tepsalesV1PaymentPriceTablesIdPut(String id, { String? xApiKey, String? xCsrfToken, PutPaymentPriceTableRequest? putPaymentPriceTableRequest, }) async {
+    final response = await tepsalesV1PaymentPriceTablesIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putPaymentPriceTableRequest: putPaymentPriceTableRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -525,17 +447,7 @@ class PaymentPriceTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1PaymentPriceTablesPagedGetWithHttpInfo({
-    String? paymentConditionId,
-    String? priceTableId,
-    String? externalCode,
-    PaymentPriceTableStatus? status,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1PaymentPriceTablesPagedGetWithHttpInfo({ String? paymentConditionId, String? priceTableId, String? externalCode, PaymentPriceTableStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/paymentPriceTables/paged';
 
@@ -547,8 +459,7 @@ class PaymentPriceTableApi {
     final formParams = <String, String>{};
 
     if (paymentConditionId != null) {
-      queryParams
-          .addAll(_queryParams('', 'paymentConditionId', paymentConditionId));
+      queryParams.addAll(_queryParams('', 'paymentConditionId', paymentConditionId));
     }
     if (priceTableId != null) {
       queryParams.addAll(_queryParams('', 'priceTableId', priceTableId));
@@ -577,6 +488,7 @@ class PaymentPriceTableApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -613,41 +525,17 @@ class PaymentPriceTableApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedPaymentPriceTableResponse?>
-      tepsalesV1PaymentPriceTablesPagedGet({
-    String? paymentConditionId,
-    String? priceTableId,
-    String? externalCode,
-    PaymentPriceTableStatus? status,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1PaymentPriceTablesPagedGetWithHttpInfo(
-      paymentConditionId: paymentConditionId,
-      priceTableId: priceTableId,
-      externalCode: externalCode,
-      status: status,
-      page: page,
-      pageSize: pageSize,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPagedPaymentPriceTableResponse?> tepsalesV1PaymentPriceTablesPagedGet({ String? paymentConditionId, String? priceTableId, String? externalCode, PaymentPriceTableStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1PaymentPriceTablesPagedGetWithHttpInfo( paymentConditionId: paymentConditionId, priceTableId: priceTableId, externalCode: externalCode, status: status, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPagedPaymentPriceTableResponse',
-      ) as GetAllPagedPaymentPriceTableResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedPaymentPriceTableResponse',) as GetAllPagedPaymentPriceTableResponse;
+    
     }
     return null;
   }
@@ -666,11 +554,7 @@ class PaymentPriceTableApi {
   ///
   /// * [PostPaymentPriceTableRequest] postPaymentPriceTableRequest:
   ///   PaymentPriceTable to create
-  Future<http.Response> tepsalesV1PaymentPriceTablesPostWithHttpInfo({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostPaymentPriceTableRequest? postPaymentPriceTableRequest,
-  }) async {
+  Future<Response> tepsalesV1PaymentPriceTablesPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostPaymentPriceTableRequest? postPaymentPriceTableRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/paymentPriceTables';
 
@@ -689,6 +573,7 @@ class PaymentPriceTableApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -713,28 +598,17 @@ class PaymentPriceTableApi {
   ///
   /// * [PostPaymentPriceTableRequest] postPaymentPriceTableRequest:
   ///   PaymentPriceTable to create
-  Future<PostPaymentPriceTableResponse?> tepsalesV1PaymentPriceTablesPost({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostPaymentPriceTableRequest? postPaymentPriceTableRequest,
-  }) async {
-    final response = await tepsalesV1PaymentPriceTablesPostWithHttpInfo(
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      postPaymentPriceTableRequest: postPaymentPriceTableRequest,
-    );
+  Future<PostPaymentPriceTableResponse?> tepsalesV1PaymentPriceTablesPost({ String? xApiKey, String? xCsrfToken, PostPaymentPriceTableRequest? postPaymentPriceTableRequest, }) async {
+    final response = await tepsalesV1PaymentPriceTablesPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postPaymentPriceTableRequest: postPaymentPriceTableRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'PostPaymentPriceTableResponse',
-      ) as PostPaymentPriceTableResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostPaymentPriceTableResponse',) as PostPaymentPriceTableResponse;
+    
     }
     return null;
   }

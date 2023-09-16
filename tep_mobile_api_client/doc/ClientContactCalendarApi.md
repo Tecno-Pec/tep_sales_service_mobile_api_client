@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ClientContactCalendar id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '94faafc9-17cf-4f93-85f3-8bf5c5e15ef8']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3da620de-33d9-4a71-bd69-d507450aaa1a']
 
 ### Return type
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2019325a-5cd6-44bc-8343-2d812b7e99e3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6a88054e-304a-4a6a-8bcd-58d4ed1db6ff']
 
 ### Return type
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ClientContactCalendar id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '613b7e3a-ae16-4959-b56b-405d68c339fd']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '106fbdf4-b640-4860-9a62-ab7276b1c13f']
 
 ### Return type
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
  **id** | **String**| ClientContactCalendar id | 
  **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fe586eb6-431c-4038-ac4a-f3743d505e71']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'da57f820-05c0-40d2-9a50-6133fbbcf240']
 
 ### Return type
 
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ClientContactCalendar Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a1686c1b-fd8a-4331-924d-a5c037968741']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c484c268-3f25-49c9-bdd6-5f97c3000006']
  **putClientContactCalendarRequest** | [**PutClientContactCalendarRequest**](PutClientContactCalendarRequest.md)| ClientContactCalendar to update | [optional] 
 
 ### Return type
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1b9f76d9-25c8-4c4e-a29b-b04272af31e1']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2a52509f-6163-4f98-a14f-d4e464176616']
 
 ### Return type
 
@@ -380,7 +380,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7decacfd-c189-4509-8089-919a6736aa4d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c599ac6e-0829-456b-bda2-3ea4d02a35f7']
  **postClientContactCalendarRequest** | [**PostClientContactCalendarRequest**](PostClientContactCalendarRequest.md)| ClientContactCalendar to create | [optional] 
 
 ### Return type

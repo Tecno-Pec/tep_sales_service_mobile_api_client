@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class VehicleTypeStatus {
   /// Instantiate a new enum with the provided [value].
   const VehicleTypeStatus._(this.value);
@@ -31,13 +32,9 @@ class VehicleTypeStatus {
     number1,
   ];
 
-  static VehicleTypeStatus? fromJson(dynamic value) =>
-      VehicleTypeStatusTypeTransformer().decode(value);
+  static VehicleTypeStatus? fromJson(dynamic value) => VehicleTypeStatusTypeTransformer().decode(value);
 
-  static List<VehicleTypeStatus> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<VehicleTypeStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <VehicleTypeStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class VehicleTypeStatus {
 /// Transformation class that can [encode] an instance of [VehicleTypeStatus] to int,
 /// and [decode] dynamic data back to [VehicleTypeStatus].
 class VehicleTypeStatusTypeTransformer {
-  factory VehicleTypeStatusTypeTransformer() =>
-      _instance ??= const VehicleTypeStatusTypeTransformer._();
+  factory VehicleTypeStatusTypeTransformer() => _instance ??= const VehicleTypeStatusTypeTransformer._();
 
   const VehicleTypeStatusTypeTransformer._();
 
@@ -72,10 +68,8 @@ class VehicleTypeStatusTypeTransformer {
   VehicleTypeStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0:
-          return VehicleTypeStatus.number0;
-        case 1:
-          return VehicleTypeStatus.number1;
+        case 0: return VehicleTypeStatus.number0;
+        case 1: return VehicleTypeStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class VehicleTypeStatusTypeTransformer {
   /// Singleton [VehicleTypeStatusTypeTransformer] instance.
   static VehicleTypeStatusTypeTransformer? _instance;
 }
+

@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
+
 class FreightConversionFactorApi {
-  FreightConversionFactorApi([ApiClient? apiClient])
-      : apiClient = apiClient ?? defaultApiClient;
+  FreightConversionFactorApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,14 +30,10 @@ class FreightConversionFactorApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> getByIdFreightConversionFactorWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> getByIdFreightConversionFactorWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path =
-        r'/tepsales/v1/freightConversionFactors/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/freightConversionFactors/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -54,6 +50,7 @@ class FreightConversionFactorApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -78,28 +75,17 @@ class FreightConversionFactorApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllFreightConversionFactorResponse?> getByIdFreightConversionFactor(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await getByIdFreightConversionFactorWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllFreightConversionFactorResponse?> getByIdFreightConversionFactor(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await getByIdFreightConversionFactorWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllFreightConversionFactorResponse',
-      ) as GetAllFreightConversionFactorResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllFreightConversionFactorResponse',) as GetAllFreightConversionFactorResponse;
+    
     }
     return null;
   }
@@ -129,16 +115,7 @@ class FreightConversionFactorApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1FreightConversionFactorsAllGetWithHttpInfo({
-    String? productId,
-    String? vehicleTypeId,
-    String? externalCode,
-    FreightConversionFactorStatus? status,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1FreightConversionFactorsAllGetWithHttpInfo({ String? productId, String? vehicleTypeId, String? externalCode, FreightConversionFactorStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/freightConversionFactors/all';
 
@@ -177,6 +154,7 @@ class FreightConversionFactorApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -211,41 +189,20 @@ class FreightConversionFactorApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllFreightConversionFactorResponse>?>
-      tepsalesV1FreightConversionFactorsAllGet({
-    String? productId,
-    String? vehicleTypeId,
-    String? externalCode,
-    FreightConversionFactorStatus? status,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1FreightConversionFactorsAllGetWithHttpInfo(
-      productId: productId,
-      vehicleTypeId: vehicleTypeId,
-      externalCode: externalCode,
-      status: status,
-      limit: limit,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<List<GetAllFreightConversionFactorResponse>?> tepsalesV1FreightConversionFactorsAllGet({ String? productId, String? vehicleTypeId, String? externalCode, FreightConversionFactorStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1FreightConversionFactorsAllGetWithHttpInfo( productId: productId, vehicleTypeId: vehicleTypeId, externalCode: externalCode, status: status, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(
-                  responseBody, 'List<GetAllFreightConversionFactorResponse>')
-              as List)
-          .cast<GetAllFreightConversionFactorResponse>()
-          .toList();
+      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllFreightConversionFactorResponse>') as List)
+        .cast<GetAllFreightConversionFactorResponse>()
+        .toList();
+
     }
     return null;
   }
@@ -264,14 +221,10 @@ class FreightConversionFactorApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1FreightConversionFactorsIdDeleteWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1FreightConversionFactorsIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path =
-        r'/tepsales/v1/freightConversionFactors/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/freightConversionFactors/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -288,6 +241,7 @@ class FreightConversionFactorApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -312,17 +266,8 @@ class FreightConversionFactorApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1FreightConversionFactorsIdDelete(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response =
-        await tepsalesV1FreightConversionFactorsIdDeleteWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1FreightConversionFactorsIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1FreightConversionFactorsIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -347,15 +292,10 @@ class FreightConversionFactorApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1FreightConversionFactorsIdPatchWithHttpInfo(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1FreightConversionFactorsIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path =
-        r'/tepsales/v1/freightConversionFactors/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/freightConversionFactors/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -372,6 +312,7 @@ class FreightConversionFactorApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -401,19 +342,8 @@ class FreightConversionFactorApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1FreightConversionFactorsIdPatch(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response =
-        await tepsalesV1FreightConversionFactorsIdPatchWithHttpInfo(
-      id,
-      operation,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1FreightConversionFactorsIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1FreightConversionFactorsIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -436,15 +366,10 @@ class FreightConversionFactorApi {
   ///
   /// * [PutFreightConversionFactorRequest] putFreightConversionFactorRequest:
   ///   FreightConversionFactor to update
-  Future<http.Response> tepsalesV1FreightConversionFactorsIdPutWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutFreightConversionFactorRequest? putFreightConversionFactorRequest,
-  }) async {
+  Future<Response> tepsalesV1FreightConversionFactorsIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutFreightConversionFactorRequest? putFreightConversionFactorRequest, }) async {
     // ignore: prefer_const_declarations
-    final path =
-        r'/tepsales/v1/freightConversionFactors/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/freightConversionFactors/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putFreightConversionFactorRequest;
@@ -461,6 +386,7 @@ class FreightConversionFactorApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -488,18 +414,8 @@ class FreightConversionFactorApi {
   ///
   /// * [PutFreightConversionFactorRequest] putFreightConversionFactorRequest:
   ///   FreightConversionFactor to update
-  Future<void> tepsalesV1FreightConversionFactorsIdPut(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutFreightConversionFactorRequest? putFreightConversionFactorRequest,
-  }) async {
-    final response = await tepsalesV1FreightConversionFactorsIdPutWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      putFreightConversionFactorRequest: putFreightConversionFactorRequest,
-    );
+  Future<void> tepsalesV1FreightConversionFactorsIdPut(String id, { String? xApiKey, String? xCsrfToken, PutFreightConversionFactorRequest? putFreightConversionFactorRequest, }) async {
+    final response = await tepsalesV1FreightConversionFactorsIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putFreightConversionFactorRequest: putFreightConversionFactorRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -531,17 +447,7 @@ class FreightConversionFactorApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1FreightConversionFactorsPagedGetWithHttpInfo({
-    String? productId,
-    String? vehicleTypeId,
-    String? externalCode,
-    FreightConversionFactorStatus? status,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1FreightConversionFactorsPagedGetWithHttpInfo({ String? productId, String? vehicleTypeId, String? externalCode, FreightConversionFactorStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/freightConversionFactors/paged';
 
@@ -583,6 +489,7 @@ class FreightConversionFactorApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -618,42 +525,17 @@ class FreightConversionFactorApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedFreightConversionFactorResponse?>
-      tepsalesV1FreightConversionFactorsPagedGet({
-    String? productId,
-    String? vehicleTypeId,
-    String? externalCode,
-    FreightConversionFactorStatus? status,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response =
-        await tepsalesV1FreightConversionFactorsPagedGetWithHttpInfo(
-      productId: productId,
-      vehicleTypeId: vehicleTypeId,
-      externalCode: externalCode,
-      status: status,
-      page: page,
-      pageSize: pageSize,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPagedFreightConversionFactorResponse?> tepsalesV1FreightConversionFactorsPagedGet({ String? productId, String? vehicleTypeId, String? externalCode, FreightConversionFactorStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1FreightConversionFactorsPagedGetWithHttpInfo( productId: productId, vehicleTypeId: vehicleTypeId, externalCode: externalCode, status: status, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPagedFreightConversionFactorResponse',
-      ) as GetAllPagedFreightConversionFactorResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedFreightConversionFactorResponse',) as GetAllPagedFreightConversionFactorResponse;
+    
     }
     return null;
   }
@@ -672,11 +554,7 @@ class FreightConversionFactorApi {
   ///
   /// * [PostFreightConversionFactorRequest] postFreightConversionFactorRequest:
   ///   FreightConversionFactor to create
-  Future<http.Response> tepsalesV1FreightConversionFactorsPostWithHttpInfo({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostFreightConversionFactorRequest? postFreightConversionFactorRequest,
-  }) async {
+  Future<Response> tepsalesV1FreightConversionFactorsPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostFreightConversionFactorRequest? postFreightConversionFactorRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/freightConversionFactors';
 
@@ -695,6 +573,7 @@ class FreightConversionFactorApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -719,29 +598,17 @@ class FreightConversionFactorApi {
   ///
   /// * [PostFreightConversionFactorRequest] postFreightConversionFactorRequest:
   ///   FreightConversionFactor to create
-  Future<PostFreightConversionFactorResponse?>
-      tepsalesV1FreightConversionFactorsPost({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostFreightConversionFactorRequest? postFreightConversionFactorRequest,
-  }) async {
-    final response = await tepsalesV1FreightConversionFactorsPostWithHttpInfo(
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      postFreightConversionFactorRequest: postFreightConversionFactorRequest,
-    );
+  Future<PostFreightConversionFactorResponse?> tepsalesV1FreightConversionFactorsPost({ String? xApiKey, String? xCsrfToken, PostFreightConversionFactorRequest? postFreightConversionFactorRequest, }) async {
+    final response = await tepsalesV1FreightConversionFactorsPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postFreightConversionFactorRequest: postFreightConversionFactorRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'PostFreightConversionFactorResponse',
-      ) as PostFreightConversionFactorResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostFreightConversionFactorResponse',) as PostFreightConversionFactorResponse;
+    
     }
     return null;
   }

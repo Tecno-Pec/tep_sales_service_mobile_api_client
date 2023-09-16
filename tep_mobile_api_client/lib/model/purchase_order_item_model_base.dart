@@ -67,43 +67,40 @@ class PurchaseOrderItemModelBase {
   double? discountTotal;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PurchaseOrderItemModelBase &&
-          other.productId == productId &&
-          other.quantity == quantity &&
-          other.weightTotal == weightTotal &&
-          other.unitPrice == unitPrice &&
-          other.unitPriceQtd == unitPriceQtd &&
-          other.unitTotalPrice == unitTotalPrice &&
-          other.percDiscountCommission == percDiscountCommission &&
-          other.valueDiscount == valueDiscount &&
-          other.percDiscount == percDiscount &&
-          other.useValueDiscount == useValueDiscount &&
-          other.discountType == discountType &&
-          other.discountByWeight == discountByWeight &&
-          other.discountTotal == discountTotal;
+  bool operator ==(Object other) => identical(this, other) || other is PurchaseOrderItemModelBase &&
+     other.productId == productId &&
+     other.quantity == quantity &&
+     other.weightTotal == weightTotal &&
+     other.unitPrice == unitPrice &&
+     other.unitPriceQtd == unitPriceQtd &&
+     other.unitTotalPrice == unitTotalPrice &&
+     other.percDiscountCommission == percDiscountCommission &&
+     other.valueDiscount == valueDiscount &&
+     other.percDiscount == percDiscount &&
+     other.useValueDiscount == useValueDiscount &&
+     other.discountType == discountType &&
+     other.discountByWeight == discountByWeight &&
+     other.discountTotal == discountTotal;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (productId == null ? 0 : productId!.hashCode) +
-      (quantity == null ? 0 : quantity!.hashCode) +
-      (weightTotal == null ? 0 : weightTotal!.hashCode) +
-      (unitPrice == null ? 0 : unitPrice!.hashCode) +
-      (unitPriceQtd == null ? 0 : unitPriceQtd!.hashCode) +
-      (unitTotalPrice == null ? 0 : unitTotalPrice!.hashCode) +
-      (percDiscountCommission == null ? 0 : percDiscountCommission!.hashCode) +
-      (valueDiscount == null ? 0 : valueDiscount!.hashCode) +
-      (percDiscount == null ? 0 : percDiscount!.hashCode) +
-      (useValueDiscount == null ? 0 : useValueDiscount!.hashCode) +
-      (discountType == null ? 0 : discountType!.hashCode) +
-      (discountByWeight == null ? 0 : discountByWeight!.hashCode) +
-      (discountTotal == null ? 0 : discountTotal!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (productId == null ? 0 : productId!.hashCode) +
+    (quantity == null ? 0 : quantity!.hashCode) +
+    (weightTotal == null ? 0 : weightTotal!.hashCode) +
+    (unitPrice == null ? 0 : unitPrice!.hashCode) +
+    (unitPriceQtd == null ? 0 : unitPriceQtd!.hashCode) +
+    (unitTotalPrice == null ? 0 : unitTotalPrice!.hashCode) +
+    (percDiscountCommission == null ? 0 : percDiscountCommission!.hashCode) +
+    (valueDiscount == null ? 0 : valueDiscount!.hashCode) +
+    (percDiscount == null ? 0 : percDiscount!.hashCode) +
+    (useValueDiscount == null ? 0 : useValueDiscount!.hashCode) +
+    (discountType == null ? 0 : discountType!.hashCode) +
+    (discountByWeight == null ? 0 : discountByWeight!.hashCode) +
+    (discountTotal == null ? 0 : discountTotal!.hashCode);
 
   @override
-  String toString() =>
-      'PurchaseOrderItemModelBase[productId=$productId, quantity=$quantity, weightTotal=$weightTotal, unitPrice=$unitPrice, unitPriceQtd=$unitPriceQtd, unitTotalPrice=$unitTotalPrice, percDiscountCommission=$percDiscountCommission, valueDiscount=$valueDiscount, percDiscount=$percDiscount, useValueDiscount=$useValueDiscount, discountType=$discountType, discountByWeight=$discountByWeight, discountTotal=$discountTotal]';
+  String toString() => 'PurchaseOrderItemModelBase[productId=$productId, quantity=$quantity, weightTotal=$weightTotal, unitPrice=$unitPrice, unitPriceQtd=$unitPriceQtd, unitTotalPrice=$unitTotalPrice, percDiscountCommission=$percDiscountCommission, valueDiscount=$valueDiscount, percDiscount=$percDiscount, useValueDiscount=$useValueDiscount, discountType=$discountType, discountByWeight=$discountByWeight, discountTotal=$discountTotal]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -187,10 +184,8 @@ class PurchaseOrderItemModelBase {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "PurchaseOrderItemModelBase[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "PurchaseOrderItemModelBase[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "PurchaseOrderItemModelBase[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "PurchaseOrderItemModelBase[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -202,8 +197,7 @@ class PurchaseOrderItemModelBase {
         unitPrice: mapValueOfType<double>(json, r'unitPrice'),
         unitPriceQtd: mapValueOfType<double>(json, r'unitPriceQtd'),
         unitTotalPrice: mapValueOfType<double>(json, r'unitTotalPrice'),
-        percDiscountCommission:
-            mapValueOfType<double>(json, r'percDiscountCommission'),
+        percDiscountCommission: mapValueOfType<double>(json, r'percDiscountCommission'),
         valueDiscount: mapValueOfType<double>(json, r'valueDiscount'),
         percDiscount: mapValueOfType<double>(json, r'percDiscount'),
         useValueDiscount: mapValueOfType<double>(json, r'useValueDiscount'),
@@ -215,10 +209,7 @@ class PurchaseOrderItemModelBase {
     return null;
   }
 
-  static List<PurchaseOrderItemModelBase> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PurchaseOrderItemModelBase> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PurchaseOrderItemModelBase>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -246,24 +237,20 @@ class PurchaseOrderItemModelBase {
   }
 
   // maps a json object with a list of PurchaseOrderItemModelBase-objects as value to a dart map
-  static Map<String, List<PurchaseOrderItemModelBase>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<PurchaseOrderItemModelBase>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PurchaseOrderItemModelBase>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PurchaseOrderItemModelBase.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = PurchaseOrderItemModelBase.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

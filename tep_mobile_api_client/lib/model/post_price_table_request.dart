@@ -64,37 +64,34 @@ class PostPriceTableRequest {
   PriceTableStatus? status;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PostPriceTableRequest &&
-          other.createdAt == createdAt &&
-          other.updatedAt == updatedAt &&
-          other.userCreated == userCreated &&
-          other.userUpdated == userUpdated &&
-          other.id == id &&
-          other.name == name &&
-          other.operationType == operationType &&
-          other.description == description &&
-          other.externalCode == externalCode &&
-          other.status == status;
+  bool operator ==(Object other) => identical(this, other) || other is PostPriceTableRequest &&
+     other.createdAt == createdAt &&
+     other.updatedAt == updatedAt &&
+     other.userCreated == userCreated &&
+     other.userUpdated == userUpdated &&
+     other.id == id &&
+     other.name == name &&
+     other.operationType == operationType &&
+     other.description == description &&
+     other.externalCode == externalCode &&
+     other.status == status;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (createdAt == null ? 0 : createdAt!.hashCode) +
-      (updatedAt == null ? 0 : updatedAt!.hashCode) +
-      (userCreated == null ? 0 : userCreated!.hashCode) +
-      (userUpdated == null ? 0 : userUpdated!.hashCode) +
-      (id == null ? 0 : id!.hashCode) +
-      (name == null ? 0 : name!.hashCode) +
-      (operationType == null ? 0 : operationType!.hashCode) +
-      (description == null ? 0 : description!.hashCode) +
-      (externalCode == null ? 0 : externalCode!.hashCode) +
-      (status == null ? 0 : status!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (createdAt == null ? 0 : createdAt!.hashCode) +
+    (updatedAt == null ? 0 : updatedAt!.hashCode) +
+    (userCreated == null ? 0 : userCreated!.hashCode) +
+    (userUpdated == null ? 0 : userUpdated!.hashCode) +
+    (id == null ? 0 : id!.hashCode) +
+    (name == null ? 0 : name!.hashCode) +
+    (operationType == null ? 0 : operationType!.hashCode) +
+    (description == null ? 0 : description!.hashCode) +
+    (externalCode == null ? 0 : externalCode!.hashCode) +
+    (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() =>
-      'PostPriceTableRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, operationType=$operationType, description=$description, externalCode=$externalCode, status=$status]';
+  String toString() => 'PostPriceTableRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, operationType=$operationType, description=$description, externalCode=$externalCode, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -163,10 +160,8 @@ class PostPriceTableRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "PostPriceTableRequest[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "PostPriceTableRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "PostPriceTableRequest[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "PostPriceTableRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -178,8 +173,7 @@ class PostPriceTableRequest {
         userUpdated: mapValueOfType<String>(json, r'userUpdated'),
         id: mapValueOfType<String>(json, r'id'),
         name: mapValueOfType<String>(json, r'name'),
-        operationType:
-            TablePriceOperationTypeEnum.fromJson(json[r'operationType']),
+        operationType: TablePriceOperationTypeEnum.fromJson(json[r'operationType']),
         description: mapValueOfType<String>(json, r'description'),
         externalCode: mapValueOfType<String>(json, r'externalCode'),
         status: PriceTableStatus.fromJson(json[r'status']),
@@ -188,10 +182,7 @@ class PostPriceTableRequest {
     return null;
   }
 
-  static List<PostPriceTableRequest> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PostPriceTableRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PostPriceTableRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -219,24 +210,20 @@ class PostPriceTableRequest {
   }
 
   // maps a json object with a list of PostPriceTableRequest-objects as value to a dart map
-  static Map<String, List<PostPriceTableRequest>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<PostPriceTableRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PostPriceTableRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostPriceTableRequest.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = PostPriceTableRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

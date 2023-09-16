@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class DistribuitionCenterClientAddressStatus {
   /// Instantiate a new enum with the provided [value].
   const DistribuitionCenterClientAddressStatus._(this.value);
@@ -31,13 +32,9 @@ class DistribuitionCenterClientAddressStatus {
     number1,
   ];
 
-  static DistribuitionCenterClientAddressStatus? fromJson(dynamic value) =>
-      DistribuitionCenterClientAddressStatusTypeTransformer().decode(value);
+  static DistribuitionCenterClientAddressStatus? fromJson(dynamic value) => DistribuitionCenterClientAddressStatusTypeTransformer().decode(value);
 
-  static List<DistribuitionCenterClientAddressStatus> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<DistribuitionCenterClientAddressStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <DistribuitionCenterClientAddressStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,9 +51,7 @@ class DistribuitionCenterClientAddressStatus {
 /// Transformation class that can [encode] an instance of [DistribuitionCenterClientAddressStatus] to int,
 /// and [decode] dynamic data back to [DistribuitionCenterClientAddressStatus].
 class DistribuitionCenterClientAddressStatusTypeTransformer {
-  factory DistribuitionCenterClientAddressStatusTypeTransformer() =>
-      _instance ??=
-          const DistribuitionCenterClientAddressStatusTypeTransformer._();
+  factory DistribuitionCenterClientAddressStatusTypeTransformer() => _instance ??= const DistribuitionCenterClientAddressStatusTypeTransformer._();
 
   const DistribuitionCenterClientAddressStatusTypeTransformer._();
 
@@ -70,14 +65,11 @@ class DistribuitionCenterClientAddressStatusTypeTransformer {
   ///
   /// The [allowNull] is very handy when an API changes and a new enum value is added or removed,
   /// and users are still using an old app with the old code.
-  DistribuitionCenterClientAddressStatus? decode(dynamic data,
-      {bool allowNull = true}) {
+  DistribuitionCenterClientAddressStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0:
-          return DistribuitionCenterClientAddressStatus.number0;
-        case 1:
-          return DistribuitionCenterClientAddressStatus.number1;
+        case 0: return DistribuitionCenterClientAddressStatus.number0;
+        case 1: return DistribuitionCenterClientAddressStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -90,3 +82,4 @@ class DistribuitionCenterClientAddressStatusTypeTransformer {
   /// Singleton [DistribuitionCenterClientAddressStatusTypeTransformer] instance.
   static DistribuitionCenterClientAddressStatusTypeTransformer? _instance;
 }
+

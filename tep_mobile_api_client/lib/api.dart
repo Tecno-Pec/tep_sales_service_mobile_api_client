@@ -14,7 +14,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart';
 import 'package:intl/intl.dart';
 import 'package:meta/meta.dart';
 
@@ -268,6 +268,7 @@ part 'model/user.dart';
 part 'model/user_status.dart';
 part 'model/vehicle_type.dart';
 part 'model/vehicle_type_status.dart';
+
 
 const _delimiters = {'csv': ',', 'ssv': ' ', 'tsv': '\t', 'pipes': '|'};
 const _dateEpochMarker = 'epoch';

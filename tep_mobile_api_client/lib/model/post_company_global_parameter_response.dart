@@ -58,33 +58,30 @@ class PostCompanyGlobalParameterResponse {
   bool? discountRuleByBudget;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PostCompanyGlobalParameterResponse &&
-          other.createdAt == createdAt &&
-          other.updatedAt == updatedAt &&
-          other.userCreated == userCreated &&
-          other.userUpdated == userUpdated &&
-          other.id == id &&
-          other.name == name &&
-          other.companyId == companyId &&
-          other.discountRuleByBudget == discountRuleByBudget;
+  bool operator ==(Object other) => identical(this, other) || other is PostCompanyGlobalParameterResponse &&
+     other.createdAt == createdAt &&
+     other.updatedAt == updatedAt &&
+     other.userCreated == userCreated &&
+     other.userUpdated == userUpdated &&
+     other.id == id &&
+     other.name == name &&
+     other.companyId == companyId &&
+     other.discountRuleByBudget == discountRuleByBudget;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (createdAt == null ? 0 : createdAt!.hashCode) +
-      (updatedAt == null ? 0 : updatedAt!.hashCode) +
-      (userCreated == null ? 0 : userCreated!.hashCode) +
-      (userUpdated == null ? 0 : userUpdated!.hashCode) +
-      (id == null ? 0 : id!.hashCode) +
-      (name == null ? 0 : name!.hashCode) +
-      (companyId == null ? 0 : companyId!.hashCode) +
-      (discountRuleByBudget == null ? 0 : discountRuleByBudget!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (createdAt == null ? 0 : createdAt!.hashCode) +
+    (updatedAt == null ? 0 : updatedAt!.hashCode) +
+    (userCreated == null ? 0 : userCreated!.hashCode) +
+    (userUpdated == null ? 0 : userUpdated!.hashCode) +
+    (id == null ? 0 : id!.hashCode) +
+    (name == null ? 0 : name!.hashCode) +
+    (companyId == null ? 0 : companyId!.hashCode) +
+    (discountRuleByBudget == null ? 0 : discountRuleByBudget!.hashCode);
 
   @override
-  String toString() =>
-      'PostCompanyGlobalParameterResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, companyId=$companyId, discountRuleByBudget=$discountRuleByBudget]';
+  String toString() => 'PostCompanyGlobalParameterResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, companyId=$companyId, discountRuleByBudget=$discountRuleByBudget]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -143,10 +140,8 @@ class PostCompanyGlobalParameterResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "PostCompanyGlobalParameterResponse[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "PostCompanyGlobalParameterResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "PostCompanyGlobalParameterResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "PostCompanyGlobalParameterResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -159,17 +154,13 @@ class PostCompanyGlobalParameterResponse {
         id: mapValueOfType<String>(json, r'id'),
         name: mapValueOfType<String>(json, r'name'),
         companyId: mapValueOfType<String>(json, r'companyId'),
-        discountRuleByBudget:
-            mapValueOfType<bool>(json, r'discountRuleByBudget'),
+        discountRuleByBudget: mapValueOfType<bool>(json, r'discountRuleByBudget'),
       );
     }
     return null;
   }
 
-  static List<PostCompanyGlobalParameterResponse> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PostCompanyGlobalParameterResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PostCompanyGlobalParameterResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -182,8 +173,7 @@ class PostCompanyGlobalParameterResponse {
     return result.toList(growable: growable);
   }
 
-  static Map<String, PostCompanyGlobalParameterResponse> mapFromJson(
-      dynamic json) {
+  static Map<String, PostCompanyGlobalParameterResponse> mapFromJson(dynamic json) {
     final map = <String, PostCompanyGlobalParameterResponse>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
@@ -198,24 +188,20 @@ class PostCompanyGlobalParameterResponse {
   }
 
   // maps a json object with a list of PostCompanyGlobalParameterResponse-objects as value to a dart map
-  static Map<String, List<PostCompanyGlobalParameterResponse>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<PostCompanyGlobalParameterResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PostCompanyGlobalParameterResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostCompanyGlobalParameterResponse.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = PostCompanyGlobalParameterResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

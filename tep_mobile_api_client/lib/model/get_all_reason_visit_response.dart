@@ -40,29 +40,26 @@ class GetAllReasonVisitResponse {
   String? description;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is GetAllReasonVisitResponse &&
-          other.createdAt == createdAt &&
-          other.updatedAt == updatedAt &&
-          other.userCreated == userCreated &&
-          other.userUpdated == userUpdated &&
-          other.id == id &&
-          other.description == description;
+  bool operator ==(Object other) => identical(this, other) || other is GetAllReasonVisitResponse &&
+     other.createdAt == createdAt &&
+     other.updatedAt == updatedAt &&
+     other.userCreated == userCreated &&
+     other.userUpdated == userUpdated &&
+     other.id == id &&
+     other.description == description;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (createdAt == null ? 0 : createdAt!.hashCode) +
-      (updatedAt == null ? 0 : updatedAt!.hashCode) +
-      (userCreated == null ? 0 : userCreated!.hashCode) +
-      (userUpdated == null ? 0 : userUpdated!.hashCode) +
-      (id == null ? 0 : id!.hashCode) +
-      (description == null ? 0 : description!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (createdAt == null ? 0 : createdAt!.hashCode) +
+    (updatedAt == null ? 0 : updatedAt!.hashCode) +
+    (userCreated == null ? 0 : userCreated!.hashCode) +
+    (userUpdated == null ? 0 : userUpdated!.hashCode) +
+    (id == null ? 0 : id!.hashCode) +
+    (description == null ? 0 : description!.hashCode);
 
   @override
-  String toString() =>
-      'GetAllReasonVisitResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, description=$description]';
+  String toString() => 'GetAllReasonVisitResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, description=$description]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -111,10 +108,8 @@ class GetAllReasonVisitResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "GetAllReasonVisitResponse[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "GetAllReasonVisitResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "GetAllReasonVisitResponse[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "GetAllReasonVisitResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -131,10 +126,7 @@ class GetAllReasonVisitResponse {
     return null;
   }
 
-  static List<GetAllReasonVisitResponse> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<GetAllReasonVisitResponse> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <GetAllReasonVisitResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -162,24 +154,20 @@ class GetAllReasonVisitResponse {
   }
 
   // maps a json object with a list of GetAllReasonVisitResponse-objects as value to a dart map
-  static Map<String, List<GetAllReasonVisitResponse>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<GetAllReasonVisitResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<GetAllReasonVisitResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = GetAllReasonVisitResponse.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = GetAllReasonVisitResponse.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

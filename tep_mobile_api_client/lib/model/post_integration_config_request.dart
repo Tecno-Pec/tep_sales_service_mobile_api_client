@@ -55,31 +55,28 @@ class PostIntegrationConfigRequest {
   DatabaseCollector? databaseCollector;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PostIntegrationConfigRequest &&
-          other.createdAt == createdAt &&
-          other.updatedAt == updatedAt &&
-          other.userCreated == userCreated &&
-          other.userUpdated == userUpdated &&
-          other.id == id &&
-          other.timerQueriesCollector == timerQueriesCollector &&
-          other.databaseCollector == databaseCollector;
+  bool operator ==(Object other) => identical(this, other) || other is PostIntegrationConfigRequest &&
+     other.createdAt == createdAt &&
+     other.updatedAt == updatedAt &&
+     other.userCreated == userCreated &&
+     other.userUpdated == userUpdated &&
+     other.id == id &&
+     other.timerQueriesCollector == timerQueriesCollector &&
+     other.databaseCollector == databaseCollector;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (createdAt == null ? 0 : createdAt!.hashCode) +
-      (updatedAt == null ? 0 : updatedAt!.hashCode) +
-      (userCreated == null ? 0 : userCreated!.hashCode) +
-      (userUpdated == null ? 0 : userUpdated!.hashCode) +
-      (id == null ? 0 : id!.hashCode) +
-      (timerQueriesCollector == null ? 0 : timerQueriesCollector!.hashCode) +
-      (databaseCollector == null ? 0 : databaseCollector!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (createdAt == null ? 0 : createdAt!.hashCode) +
+    (updatedAt == null ? 0 : updatedAt!.hashCode) +
+    (userCreated == null ? 0 : userCreated!.hashCode) +
+    (userUpdated == null ? 0 : userUpdated!.hashCode) +
+    (id == null ? 0 : id!.hashCode) +
+    (timerQueriesCollector == null ? 0 : timerQueriesCollector!.hashCode) +
+    (databaseCollector == null ? 0 : databaseCollector!.hashCode);
 
   @override
-  String toString() =>
-      'PostIntegrationConfigRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, timerQueriesCollector=$timerQueriesCollector, databaseCollector=$databaseCollector]';
+  String toString() => 'PostIntegrationConfigRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, timerQueriesCollector=$timerQueriesCollector, databaseCollector=$databaseCollector]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -133,10 +130,8 @@ class PostIntegrationConfigRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "PostIntegrationConfigRequest[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "PostIntegrationConfigRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "PostIntegrationConfigRequest[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "PostIntegrationConfigRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -147,19 +142,14 @@ class PostIntegrationConfigRequest {
         userCreated: mapValueOfType<String>(json, r'userCreated'),
         userUpdated: mapValueOfType<String>(json, r'userUpdated'),
         id: mapValueOfType<String>(json, r'id'),
-        timerQueriesCollector:
-            mapValueOfType<double>(json, r'timerQueriesCollector'),
-        databaseCollector:
-            DatabaseCollector.fromJson(json[r'databaseCollector']),
+        timerQueriesCollector: mapValueOfType<double>(json, r'timerQueriesCollector'),
+        databaseCollector: DatabaseCollector.fromJson(json[r'databaseCollector']),
       );
     }
     return null;
   }
 
-  static List<PostIntegrationConfigRequest> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PostIntegrationConfigRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PostIntegrationConfigRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -187,24 +177,20 @@ class PostIntegrationConfigRequest {
   }
 
   // maps a json object with a list of PostIntegrationConfigRequest-objects as value to a dart map
-  static Map<String, List<PostIntegrationConfigRequest>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<PostIntegrationConfigRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PostIntegrationConfigRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostIntegrationConfigRequest.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = PostIntegrationConfigRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

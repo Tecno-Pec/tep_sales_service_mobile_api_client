@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class PaymentPriceTableStatus {
   /// Instantiate a new enum with the provided [value].
   const PaymentPriceTableStatus._(this.value);
@@ -31,13 +32,9 @@ class PaymentPriceTableStatus {
     number1,
   ];
 
-  static PaymentPriceTableStatus? fromJson(dynamic value) =>
-      PaymentPriceTableStatusTypeTransformer().decode(value);
+  static PaymentPriceTableStatus? fromJson(dynamic value) => PaymentPriceTableStatusTypeTransformer().decode(value);
 
-  static List<PaymentPriceTableStatus> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PaymentPriceTableStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PaymentPriceTableStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class PaymentPriceTableStatus {
 /// Transformation class that can [encode] an instance of [PaymentPriceTableStatus] to int,
 /// and [decode] dynamic data back to [PaymentPriceTableStatus].
 class PaymentPriceTableStatusTypeTransformer {
-  factory PaymentPriceTableStatusTypeTransformer() =>
-      _instance ??= const PaymentPriceTableStatusTypeTransformer._();
+  factory PaymentPriceTableStatusTypeTransformer() => _instance ??= const PaymentPriceTableStatusTypeTransformer._();
 
   const PaymentPriceTableStatusTypeTransformer._();
 
@@ -72,10 +68,8 @@ class PaymentPriceTableStatusTypeTransformer {
   PaymentPriceTableStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0:
-          return PaymentPriceTableStatus.number0;
-        case 1:
-          return PaymentPriceTableStatus.number1;
+        case 0: return PaymentPriceTableStatus.number0;
+        case 1: return PaymentPriceTableStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class PaymentPriceTableStatusTypeTransformer {
   /// Singleton [PaymentPriceTableStatusTypeTransformer] instance.
   static PaymentPriceTableStatusTypeTransformer? _instance;
 }
+

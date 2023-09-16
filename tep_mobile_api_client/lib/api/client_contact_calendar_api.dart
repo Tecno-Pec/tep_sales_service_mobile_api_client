@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
+
 class ClientContactCalendarApi {
-  ClientContactCalendarApi([ApiClient? apiClient])
-      : apiClient = apiClient ?? defaultApiClient;
+  ClientContactCalendarApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,14 +30,10 @@ class ClientContactCalendarApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> getByIdClientContactCalendarWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> getByIdClientContactCalendarWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path =
-        r'/tepsales/v1/clientcontactcalendar/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/clientcontactcalendar/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -54,6 +50,7 @@ class ClientContactCalendarApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -78,28 +75,17 @@ class ClientContactCalendarApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllClientContactCalendarResponse?> getByIdClientContactCalendar(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await getByIdClientContactCalendarWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllClientContactCalendarResponse?> getByIdClientContactCalendar(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await getByIdClientContactCalendarWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllClientContactCalendarResponse',
-      ) as GetAllClientContactCalendarResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllClientContactCalendarResponse',) as GetAllClientContactCalendarResponse;
+    
     }
     return null;
   }
@@ -135,19 +121,7 @@ class ClientContactCalendarApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1ClientcontactcalendarAllGetWithHttpInfo({
-    DateTime? startDate,
-    DateTime? endDate,
-    String? clientId,
-    String? clientName,
-    String? salesmanId,
-    String? salesmanName,
-    String? summary,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1ClientcontactcalendarAllGetWithHttpInfo({ DateTime? startDate, DateTime? endDate, String? clientId, String? clientName, String? salesmanId, String? salesmanName, String? summary, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/clientcontactcalendar/all';
 
@@ -195,6 +169,7 @@ class ClientContactCalendarApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -235,47 +210,20 @@ class ClientContactCalendarApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllClientContactCalendarResponse>?>
-      tepsalesV1ClientcontactcalendarAllGet({
-    DateTime? startDate,
-    DateTime? endDate,
-    String? clientId,
-    String? clientName,
-    String? salesmanId,
-    String? salesmanName,
-    String? summary,
-    int? limit,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1ClientcontactcalendarAllGetWithHttpInfo(
-      startDate: startDate,
-      endDate: endDate,
-      clientId: clientId,
-      clientName: clientName,
-      salesmanId: salesmanId,
-      salesmanName: salesmanName,
-      summary: summary,
-      limit: limit,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<List<GetAllClientContactCalendarResponse>?> tepsalesV1ClientcontactcalendarAllGet({ DateTime? startDate, DateTime? endDate, String? clientId, String? clientName, String? salesmanId, String? salesmanName, String? summary, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1ClientcontactcalendarAllGetWithHttpInfo( startDate: startDate, endDate: endDate, clientId: clientId, clientName: clientName, salesmanId: salesmanId, salesmanName: salesmanName, summary: summary, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(
-                  responseBody, 'List<GetAllClientContactCalendarResponse>')
-              as List)
-          .cast<GetAllClientContactCalendarResponse>()
-          .toList();
+      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllClientContactCalendarResponse>') as List)
+        .cast<GetAllClientContactCalendarResponse>()
+        .toList();
+
     }
     return null;
   }
@@ -294,14 +242,10 @@ class ClientContactCalendarApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1ClientcontactcalendarIdDeleteWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1ClientcontactcalendarIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path =
-        r'/tepsales/v1/clientcontactcalendar/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/clientcontactcalendar/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -318,6 +262,7 @@ class ClientContactCalendarApi {
     }
 
     const contentTypes = <String>[];
+
 
     return apiClient.invokeAPI(
       path,
@@ -342,16 +287,8 @@ class ClientContactCalendarApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1ClientcontactcalendarIdDelete(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1ClientcontactcalendarIdDeleteWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1ClientcontactcalendarIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1ClientcontactcalendarIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -376,15 +313,10 @@ class ClientContactCalendarApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1ClientcontactcalendarIdPatchWithHttpInfo(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1ClientcontactcalendarIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
-    final path =
-        r'/tepsales/v1/clientcontactcalendar/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/clientcontactcalendar/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -401,6 +333,7 @@ class ClientContactCalendarApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -430,18 +363,8 @@ class ClientContactCalendarApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1ClientcontactcalendarIdPatch(
-    String id,
-    List<Operation> operation, {
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1ClientcontactcalendarIdPatchWithHttpInfo(
-      id,
-      operation,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<void> tepsalesV1ClientcontactcalendarIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1ClientcontactcalendarIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -464,15 +387,10 @@ class ClientContactCalendarApi {
   ///
   /// * [PutClientContactCalendarRequest] putClientContactCalendarRequest:
   ///   ClientContactCalendar to update
-  Future<http.Response> tepsalesV1ClientcontactcalendarIdPutWithHttpInfo(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutClientContactCalendarRequest? putClientContactCalendarRequest,
-  }) async {
+  Future<Response> tepsalesV1ClientcontactcalendarIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutClientContactCalendarRequest? putClientContactCalendarRequest, }) async {
     // ignore: prefer_const_declarations
-    final path =
-        r'/tepsales/v1/clientcontactcalendar/{id}'.replaceAll('{id}', id);
+    final path = r'/tepsales/v1/clientcontactcalendar/{id}'
+      .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putClientContactCalendarRequest;
@@ -489,6 +407,7 @@ class ClientContactCalendarApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -516,18 +435,8 @@ class ClientContactCalendarApi {
   ///
   /// * [PutClientContactCalendarRequest] putClientContactCalendarRequest:
   ///   ClientContactCalendar to update
-  Future<void> tepsalesV1ClientcontactcalendarIdPut(
-    String id, {
-    String? xApiKey,
-    String? xCsrfToken,
-    PutClientContactCalendarRequest? putClientContactCalendarRequest,
-  }) async {
-    final response = await tepsalesV1ClientcontactcalendarIdPutWithHttpInfo(
-      id,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      putClientContactCalendarRequest: putClientContactCalendarRequest,
-    );
+  Future<void> tepsalesV1ClientcontactcalendarIdPut(String id, { String? xApiKey, String? xCsrfToken, PutClientContactCalendarRequest? putClientContactCalendarRequest, }) async {
+    final response = await tepsalesV1ClientcontactcalendarIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putClientContactCalendarRequest: putClientContactCalendarRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -565,20 +474,7 @@ class ClientContactCalendarApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<http.Response> tepsalesV1ClientcontactcalendarPagedGetWithHttpInfo({
-    DateTime? startDate,
-    DateTime? endDate,
-    String? clientId,
-    String? clientName,
-    String? salesmanId,
-    String? salesmanName,
-    String? summary,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
+  Future<Response> tepsalesV1ClientcontactcalendarPagedGetWithHttpInfo({ DateTime? startDate, DateTime? endDate, String? clientId, String? clientName, String? salesmanId, String? salesmanName, String? summary, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/clientcontactcalendar/paged';
 
@@ -629,6 +525,7 @@ class ClientContactCalendarApi {
 
     const contentTypes = <String>[];
 
+
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -670,47 +567,17 @@ class ClientContactCalendarApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedClientContactCalendarResponse?>
-      tepsalesV1ClientcontactcalendarPagedGet({
-    DateTime? startDate,
-    DateTime? endDate,
-    String? clientId,
-    String? clientName,
-    String? salesmanId,
-    String? salesmanName,
-    String? summary,
-    int? page,
-    int? pageSize,
-    String? sort,
-    String? xApiKey,
-    String? xCsrfToken,
-  }) async {
-    final response = await tepsalesV1ClientcontactcalendarPagedGetWithHttpInfo(
-      startDate: startDate,
-      endDate: endDate,
-      clientId: clientId,
-      clientName: clientName,
-      salesmanId: salesmanId,
-      salesmanName: salesmanName,
-      summary: summary,
-      page: page,
-      pageSize: pageSize,
-      sort: sort,
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-    );
+  Future<GetAllPagedClientContactCalendarResponse?> tepsalesV1ClientcontactcalendarPagedGet({ DateTime? startDate, DateTime? endDate, String? clientId, String? clientName, String? salesmanId, String? salesmanName, String? summary, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+    final response = await tepsalesV1ClientcontactcalendarPagedGetWithHttpInfo( startDate: startDate, endDate: endDate, clientId: clientId, clientName: clientName, salesmanId: salesmanId, salesmanName: salesmanName, summary: summary, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'GetAllPagedClientContactCalendarResponse',
-      ) as GetAllPagedClientContactCalendarResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedClientContactCalendarResponse',) as GetAllPagedClientContactCalendarResponse;
+    
     }
     return null;
   }
@@ -729,11 +596,7 @@ class ClientContactCalendarApi {
   ///
   /// * [PostClientContactCalendarRequest] postClientContactCalendarRequest:
   ///   ClientContactCalendar to create
-  Future<http.Response> tepsalesV1ClientcontactcalendarPostWithHttpInfo({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostClientContactCalendarRequest? postClientContactCalendarRequest,
-  }) async {
+  Future<Response> tepsalesV1ClientcontactcalendarPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostClientContactCalendarRequest? postClientContactCalendarRequest, }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/clientcontactcalendar';
 
@@ -752,6 +615,7 @@ class ClientContactCalendarApi {
     }
 
     const contentTypes = <String>['application/json'];
+
 
     return apiClient.invokeAPI(
       path,
@@ -776,29 +640,17 @@ class ClientContactCalendarApi {
   ///
   /// * [PostClientContactCalendarRequest] postClientContactCalendarRequest:
   ///   ClientContactCalendar to create
-  Future<PostClientContactCalendarResponse?>
-      tepsalesV1ClientcontactcalendarPost({
-    String? xApiKey,
-    String? xCsrfToken,
-    PostClientContactCalendarRequest? postClientContactCalendarRequest,
-  }) async {
-    final response = await tepsalesV1ClientcontactcalendarPostWithHttpInfo(
-      xApiKey: xApiKey,
-      xCsrfToken: xCsrfToken,
-      postClientContactCalendarRequest: postClientContactCalendarRequest,
-    );
+  Future<PostClientContactCalendarResponse?> tepsalesV1ClientcontactcalendarPost({ String? xApiKey, String? xCsrfToken, PostClientContactCalendarRequest? postClientContactCalendarRequest, }) async {
+    final response = await tepsalesV1ClientcontactcalendarPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postClientContactCalendarRequest: postClientContactCalendarRequest, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty &&
-        response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(
-        await _decodeBodyBytes(response),
-        'PostClientContactCalendarResponse',
-      ) as PostClientContactCalendarResponse;
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostClientContactCalendarResponse',) as PostClientContactCalendarResponse;
+    
     }
     return null;
   }

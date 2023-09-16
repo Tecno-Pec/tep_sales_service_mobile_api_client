@@ -112,57 +112,54 @@ class PutAddressRequest {
   AddressStatus? status;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is PutAddressRequest &&
-          other.createdAt == createdAt &&
-          other.updatedAt == updatedAt &&
-          other.userCreated == userCreated &&
-          other.userUpdated == userUpdated &&
-          other.id == id &&
-          other.parentId == parentId &&
-          other.name == name &&
-          other.zipCode == zipCode &&
-          other.street == street &&
-          other.neighborhood == neighborhood &&
-          other.number == number &&
-          other.state == state &&
-          other.city == city &&
-          other.complement == complement &&
-          other.latitude == latitude &&
-          other.longitude == longitude &&
-          other.ie == ie &&
-          other.type == type &&
-          other.externalCode == externalCode &&
-          other.status == status;
+  bool operator ==(Object other) => identical(this, other) || other is PutAddressRequest &&
+     other.createdAt == createdAt &&
+     other.updatedAt == updatedAt &&
+     other.userCreated == userCreated &&
+     other.userUpdated == userUpdated &&
+     other.id == id &&
+     other.parentId == parentId &&
+     other.name == name &&
+     other.zipCode == zipCode &&
+     other.street == street &&
+     other.neighborhood == neighborhood &&
+     other.number == number &&
+     other.state == state &&
+     other.city == city &&
+     other.complement == complement &&
+     other.latitude == latitude &&
+     other.longitude == longitude &&
+     other.ie == ie &&
+     other.type == type &&
+     other.externalCode == externalCode &&
+     other.status == status;
 
   @override
   int get hashCode =>
-      // ignore: unnecessary_parenthesis
-      (createdAt == null ? 0 : createdAt!.hashCode) +
-      (updatedAt == null ? 0 : updatedAt!.hashCode) +
-      (userCreated == null ? 0 : userCreated!.hashCode) +
-      (userUpdated == null ? 0 : userUpdated!.hashCode) +
-      (id == null ? 0 : id!.hashCode) +
-      (parentId == null ? 0 : parentId!.hashCode) +
-      (name == null ? 0 : name!.hashCode) +
-      (zipCode == null ? 0 : zipCode!.hashCode) +
-      (street == null ? 0 : street!.hashCode) +
-      (neighborhood == null ? 0 : neighborhood!.hashCode) +
-      (number == null ? 0 : number!.hashCode) +
-      (state == null ? 0 : state!.hashCode) +
-      (city == null ? 0 : city!.hashCode) +
-      (complement == null ? 0 : complement!.hashCode) +
-      (latitude == null ? 0 : latitude!.hashCode) +
-      (longitude == null ? 0 : longitude!.hashCode) +
-      (ie == null ? 0 : ie!.hashCode) +
-      (type == null ? 0 : type!.hashCode) +
-      (externalCode == null ? 0 : externalCode!.hashCode) +
-      (status == null ? 0 : status!.hashCode);
+    // ignore: unnecessary_parenthesis
+    (createdAt == null ? 0 : createdAt!.hashCode) +
+    (updatedAt == null ? 0 : updatedAt!.hashCode) +
+    (userCreated == null ? 0 : userCreated!.hashCode) +
+    (userUpdated == null ? 0 : userUpdated!.hashCode) +
+    (id == null ? 0 : id!.hashCode) +
+    (parentId == null ? 0 : parentId!.hashCode) +
+    (name == null ? 0 : name!.hashCode) +
+    (zipCode == null ? 0 : zipCode!.hashCode) +
+    (street == null ? 0 : street!.hashCode) +
+    (neighborhood == null ? 0 : neighborhood!.hashCode) +
+    (number == null ? 0 : number!.hashCode) +
+    (state == null ? 0 : state!.hashCode) +
+    (city == null ? 0 : city!.hashCode) +
+    (complement == null ? 0 : complement!.hashCode) +
+    (latitude == null ? 0 : latitude!.hashCode) +
+    (longitude == null ? 0 : longitude!.hashCode) +
+    (ie == null ? 0 : ie!.hashCode) +
+    (type == null ? 0 : type!.hashCode) +
+    (externalCode == null ? 0 : externalCode!.hashCode) +
+    (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() =>
-      'PutAddressRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, parentId=$parentId, name=$name, zipCode=$zipCode, street=$street, neighborhood=$neighborhood, number=$number, state=$state, city=$city, complement=$complement, latitude=$latitude, longitude=$longitude, ie=$ie, type=$type, externalCode=$externalCode, status=$status]';
+  String toString() => 'PutAddressRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, parentId=$parentId, name=$name, zipCode=$zipCode, street=$street, neighborhood=$neighborhood, number=$number, state=$state, city=$city, complement=$complement, latitude=$latitude, longitude=$longitude, ie=$ie, type=$type, externalCode=$externalCode, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -281,10 +278,8 @@ class PutAddressRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key),
-              'Required key "PutAddressRequest[$key]" is missing from JSON.');
-          assert(json[key] != null,
-              'Required key "PutAddressRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key), 'Required key "PutAddressRequest[$key]" is missing from JSON.');
+          assert(json[key] != null, 'Required key "PutAddressRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -315,10 +310,7 @@ class PutAddressRequest {
     return null;
   }
 
-  static List<PutAddressRequest> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<PutAddressRequest> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <PutAddressRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -346,24 +338,20 @@ class PutAddressRequest {
   }
 
   // maps a json object with a list of PutAddressRequest-objects as value to a dart map
-  static Map<String, List<PutAddressRequest>> mapListFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static Map<String, List<PutAddressRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
     final map = <String, List<PutAddressRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PutAddressRequest.listFromJson(
-          entry.value,
-          growable: growable,
-        );
+        map[entry.key] = PutAddressRequest.listFromJson(entry.value, growable: growable,);
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{};
+  static const requiredKeys = <String>{
+  };
 }
+

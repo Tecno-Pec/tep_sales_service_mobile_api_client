@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class FreightType {
   /// Instantiate a new enum with the provided [value].
   const FreightType._(this.value);
@@ -31,13 +32,9 @@ class FreightType {
     number2,
   ];
 
-  static FreightType? fromJson(dynamic value) =>
-      FreightTypeTypeTransformer().decode(value);
+  static FreightType? fromJson(dynamic value) => FreightTypeTypeTransformer().decode(value);
 
-  static List<FreightType> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<FreightType> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <FreightType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class FreightType {
 /// Transformation class that can [encode] an instance of [FreightType] to int,
 /// and [decode] dynamic data back to [FreightType].
 class FreightTypeTypeTransformer {
-  factory FreightTypeTypeTransformer() =>
-      _instance ??= const FreightTypeTypeTransformer._();
+  factory FreightTypeTypeTransformer() => _instance ??= const FreightTypeTypeTransformer._();
 
   const FreightTypeTypeTransformer._();
 
@@ -72,10 +68,8 @@ class FreightTypeTypeTransformer {
   FreightType? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 1:
-          return FreightType.number1;
-        case 2:
-          return FreightType.number2;
+        case 1: return FreightType.number1;
+        case 2: return FreightType.number2;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class FreightTypeTypeTransformer {
   /// Singleton [FreightTypeTypeTransformer] instance.
   static FreightTypeTypeTransformer? _instance;
 }
+

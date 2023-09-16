@@ -10,6 +10,7 @@
 
 part of openapi.api;
 
+
 class ProductLineStatus {
   /// Instantiate a new enum with the provided [value].
   const ProductLineStatus._(this.value);
@@ -31,13 +32,9 @@ class ProductLineStatus {
     number1,
   ];
 
-  static ProductLineStatus? fromJson(dynamic value) =>
-      ProductLineStatusTypeTransformer().decode(value);
+  static ProductLineStatus? fromJson(dynamic value) => ProductLineStatusTypeTransformer().decode(value);
 
-  static List<ProductLineStatus> listFromJson(
-    dynamic json, {
-    bool growable = false,
-  }) {
+  static List<ProductLineStatus> listFromJson(dynamic json, {bool growable = false,}) {
     final result = <ProductLineStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -54,8 +51,7 @@ class ProductLineStatus {
 /// Transformation class that can [encode] an instance of [ProductLineStatus] to int,
 /// and [decode] dynamic data back to [ProductLineStatus].
 class ProductLineStatusTypeTransformer {
-  factory ProductLineStatusTypeTransformer() =>
-      _instance ??= const ProductLineStatusTypeTransformer._();
+  factory ProductLineStatusTypeTransformer() => _instance ??= const ProductLineStatusTypeTransformer._();
 
   const ProductLineStatusTypeTransformer._();
 
@@ -72,10 +68,8 @@ class ProductLineStatusTypeTransformer {
   ProductLineStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0:
-          return ProductLineStatus.number0;
-        case 1:
-          return ProductLineStatus.number1;
+        case 0: return ProductLineStatus.number0;
+        case 1: return ProductLineStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -88,3 +82,4 @@ class ProductLineStatusTypeTransformer {
   /// Singleton [ProductLineStatusTypeTransformer] instance.
   static ProductLineStatusTypeTransformer? _instance;
 }
+
