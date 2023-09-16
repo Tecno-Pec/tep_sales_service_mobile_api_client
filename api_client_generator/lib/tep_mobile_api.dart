@@ -6,10 +6,9 @@ import 'package:openapi_generator_annotations/openapi_generator_annotations.dart
     pubName: 'tep_mobile_api_client',
     pubAuthor: 'Tep',
     pubAuthorEmail: 'admin@tep.com',
-      pubVersion: '2.0.0',
+    pubVersion: '3.0.0',
     pubDescription: 'Tep Service API',
     pubHomepage: 'https://github.com/tep/',
-
   ),
   inputSpecFile: 'openapi.yaml',
   generatorName: Generator.dio,
@@ -17,5 +16,6 @@ import 'package:openapi_generator_annotations/openapi_generator_annotations.dart
   alwaysRun: true,
   overwriteExistingFiles: true,
   useNextGen: false,
+
 )
 class Main extends OpenapiGeneratorConfig {}

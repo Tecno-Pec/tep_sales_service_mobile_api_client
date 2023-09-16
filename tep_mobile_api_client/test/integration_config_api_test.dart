@@ -16,7 +16,7 @@ void main() {
 
     // Get All IntegrationConfig by filter
     //
-    //Future<BuiltList<GetAllIntegrationConfigResponse>> tepsalesV1IntegrationConfigAllGet({ JsonObject model, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<GetAllIntegrationConfigResponse>> tepsalesV1IntegrationConfigAllGet({ int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1IntegrationConfigAllGet', () async {
       // TODO
     });
