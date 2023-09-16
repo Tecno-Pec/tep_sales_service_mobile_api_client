@@ -112,42 +112,45 @@ class PostFreightTableRequest {
   FreightTableStatus? status;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is PostFreightTableRequest &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.externalCode == externalCode &&
-     other.id == id &&
-     other.paymentConditionId == paymentConditionId &&
-     other.vehicleTypeId == vehicleTypeId &&
-     other.initialKilometer == initialKilometer &&
-     other.finalKilometer == finalKilometer &&
-     other.value == value &&
-     other.isFractional == isFractional &&
-     other.operationType == operationType &&
-     other.status == status;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PostFreightTableRequest &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.externalCode == externalCode &&
+          other.id == id &&
+          other.paymentConditionId == paymentConditionId &&
+          other.vehicleTypeId == vehicleTypeId &&
+          other.initialKilometer == initialKilometer &&
+          other.finalKilometer == finalKilometer &&
+          other.value == value &&
+          other.isFractional == isFractional &&
+          other.operationType == operationType &&
+          other.status == status;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (externalCode == null ? 0 : externalCode!.hashCode) +
-    (id == null ? 0 : id!.hashCode) +
-    (paymentConditionId == null ? 0 : paymentConditionId!.hashCode) +
-    (vehicleTypeId == null ? 0 : vehicleTypeId!.hashCode) +
-    (initialKilometer == null ? 0 : initialKilometer!.hashCode) +
-    (finalKilometer == null ? 0 : finalKilometer!.hashCode) +
-    (value == null ? 0 : value!.hashCode) +
-    (isFractional == null ? 0 : isFractional!.hashCode) +
-    (operationType == null ? 0 : operationType!.hashCode) +
-    (status == null ? 0 : status!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (externalCode == null ? 0 : externalCode!.hashCode) +
+      (id == null ? 0 : id!.hashCode) +
+      (paymentConditionId == null ? 0 : paymentConditionId!.hashCode) +
+      (vehicleTypeId == null ? 0 : vehicleTypeId!.hashCode) +
+      (initialKilometer == null ? 0 : initialKilometer!.hashCode) +
+      (finalKilometer == null ? 0 : finalKilometer!.hashCode) +
+      (value == null ? 0 : value!.hashCode) +
+      (isFractional == null ? 0 : isFractional!.hashCode) +
+      (operationType == null ? 0 : operationType!.hashCode) +
+      (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() => 'PostFreightTableRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, externalCode=$externalCode, id=$id, paymentConditionId=$paymentConditionId, vehicleTypeId=$vehicleTypeId, initialKilometer=$initialKilometer, finalKilometer=$finalKilometer, value=$value, isFractional=$isFractional, operationType=$operationType, status=$status]';
+  String toString() =>
+      'PostFreightTableRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, externalCode=$externalCode, id=$id, paymentConditionId=$paymentConditionId, vehicleTypeId=$vehicleTypeId, initialKilometer=$initialKilometer, finalKilometer=$finalKilometer, value=$value, isFractional=$isFractional, operationType=$operationType, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -236,8 +239,10 @@ class PostFreightTableRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PostFreightTableRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PostFreightTableRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "PostFreightTableRequest[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "PostFreightTableRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -255,14 +260,18 @@ class PostFreightTableRequest {
         finalKilometer: mapValueOfType<double>(json, r'finalKilometer'),
         value: mapValueOfType<double>(json, r'value'),
         isFractional: mapValueOfType<bool>(json, r'isFractional'),
-        operationType: TablePriceOperationTypeEnum.fromJson(json[r'operationType']),
+        operationType:
+            TablePriceOperationTypeEnum.fromJson(json[r'operationType']),
         status: FreightTableStatus.fromJson(json[r'status']),
       );
     }
     return null;
   }
 
-  static List<PostFreightTableRequest> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PostFreightTableRequest> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PostFreightTableRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -290,20 +299,24 @@ class PostFreightTableRequest {
   }
 
   // maps a json object with a list of PostFreightTableRequest-objects as value to a dart map
-  static Map<String, List<PostFreightTableRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<PostFreightTableRequest>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<PostFreightTableRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostFreightTableRequest.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = PostFreightTableRequest.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

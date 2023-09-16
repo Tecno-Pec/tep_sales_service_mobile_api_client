@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-
 class VehicleTypeApi {
-  VehicleTypeApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  VehicleTypeApi([ApiClient? apiClient])
+      : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,10 +30,13 @@ class VehicleTypeApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> getByIdVehicleTypeWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> getByIdVehicleTypeWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/vehicleTypes/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/vehicleTypes/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -50,7 +53,6 @@ class VehicleTypeApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -75,17 +77,28 @@ class VehicleTypeApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllVehicleTypeResponse?> getByIdVehicleType(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await getByIdVehicleTypeWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllVehicleTypeResponse?> getByIdVehicleType(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await getByIdVehicleTypeWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllVehicleTypeResponse',) as GetAllVehicleTypeResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllVehicleTypeResponse',
+      ) as GetAllVehicleTypeResponse;
     }
     return null;
   }
@@ -113,7 +126,15 @@ class VehicleTypeApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1VehicleTypesAllGetWithHttpInfo({ String? name, String? externalCode, VehicleTypeStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1VehicleTypesAllGetWithHttpInfo({
+    String? name,
+    String? externalCode,
+    VehicleTypeStatus? status,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/vehicleTypes/all';
 
@@ -149,7 +170,6 @@ class VehicleTypeApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -182,20 +202,37 @@ class VehicleTypeApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllVehicleTypeResponse>?> tepsalesV1VehicleTypesAllGet({ String? name, String? externalCode, VehicleTypeStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1VehicleTypesAllGetWithHttpInfo( name: name, externalCode: externalCode, status: status, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<List<GetAllVehicleTypeResponse>?> tepsalesV1VehicleTypesAllGet({
+    String? name,
+    String? externalCode,
+    VehicleTypeStatus? status,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1VehicleTypesAllGetWithHttpInfo(
+      name: name,
+      externalCode: externalCode,
+      status: status,
+      limit: limit,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllVehicleTypeResponse>') as List)
-        .cast<GetAllVehicleTypeResponse>()
-        .toList();
-
+      return (await apiClient.deserializeAsync(
+              responseBody, 'List<GetAllVehicleTypeResponse>') as List)
+          .cast<GetAllVehicleTypeResponse>()
+          .toList();
     }
     return null;
   }
@@ -214,10 +251,13 @@ class VehicleTypeApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1VehicleTypesIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1VehicleTypesIdDeleteWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/vehicleTypes/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/vehicleTypes/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -234,7 +274,6 @@ class VehicleTypeApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -259,8 +298,16 @@ class VehicleTypeApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1VehicleTypesIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1VehicleTypesIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1VehicleTypesIdDelete(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1VehicleTypesIdDeleteWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -285,10 +332,14 @@ class VehicleTypeApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1VehicleTypesIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1VehicleTypesIdPatchWithHttpInfo(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/vehicleTypes/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/vehicleTypes/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -305,7 +356,6 @@ class VehicleTypeApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -335,8 +385,18 @@ class VehicleTypeApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1VehicleTypesIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1VehicleTypesIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1VehicleTypesIdPatch(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1VehicleTypesIdPatchWithHttpInfo(
+      id,
+      operation,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -359,10 +419,14 @@ class VehicleTypeApi {
   ///
   /// * [PutVehicleTypeRequest] putVehicleTypeRequest:
   ///   VehicleType to update
-  Future<Response> tepsalesV1VehicleTypesIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutVehicleTypeRequest? putVehicleTypeRequest, }) async {
+  Future<http.Response> tepsalesV1VehicleTypesIdPutWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutVehicleTypeRequest? putVehicleTypeRequest,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/vehicleTypes/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/vehicleTypes/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putVehicleTypeRequest;
@@ -379,7 +443,6 @@ class VehicleTypeApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -407,8 +470,18 @@ class VehicleTypeApi {
   ///
   /// * [PutVehicleTypeRequest] putVehicleTypeRequest:
   ///   VehicleType to update
-  Future<void> tepsalesV1VehicleTypesIdPut(String id, { String? xApiKey, String? xCsrfToken, PutVehicleTypeRequest? putVehicleTypeRequest, }) async {
-    final response = await tepsalesV1VehicleTypesIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putVehicleTypeRequest: putVehicleTypeRequest, );
+  Future<void> tepsalesV1VehicleTypesIdPut(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutVehicleTypeRequest? putVehicleTypeRequest,
+  }) async {
+    final response = await tepsalesV1VehicleTypesIdPutWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      putVehicleTypeRequest: putVehicleTypeRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -438,7 +511,16 @@ class VehicleTypeApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1VehicleTypesPagedGetWithHttpInfo({ String? name, String? externalCode, VehicleTypeStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1VehicleTypesPagedGetWithHttpInfo({
+    String? name,
+    String? externalCode,
+    VehicleTypeStatus? status,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/vehicleTypes/paged';
 
@@ -477,7 +559,6 @@ class VehicleTypeApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -511,17 +592,38 @@ class VehicleTypeApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedVehicleTypeResponse?> tepsalesV1VehicleTypesPagedGet({ String? name, String? externalCode, VehicleTypeStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1VehicleTypesPagedGetWithHttpInfo( name: name, externalCode: externalCode, status: status, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllPagedVehicleTypeResponse?> tepsalesV1VehicleTypesPagedGet({
+    String? name,
+    String? externalCode,
+    VehicleTypeStatus? status,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1VehicleTypesPagedGetWithHttpInfo(
+      name: name,
+      externalCode: externalCode,
+      status: status,
+      page: page,
+      pageSize: pageSize,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedVehicleTypeResponse',) as GetAllPagedVehicleTypeResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllPagedVehicleTypeResponse',
+      ) as GetAllPagedVehicleTypeResponse;
     }
     return null;
   }
@@ -540,7 +642,11 @@ class VehicleTypeApi {
   ///
   /// * [PostVehicleTypeRequest] postVehicleTypeRequest:
   ///   VehicleType to create
-  Future<Response> tepsalesV1VehicleTypesPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostVehicleTypeRequest? postVehicleTypeRequest, }) async {
+  Future<http.Response> tepsalesV1VehicleTypesPostWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostVehicleTypeRequest? postVehicleTypeRequest,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/vehicleTypes';
 
@@ -559,7 +665,6 @@ class VehicleTypeApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -584,17 +689,28 @@ class VehicleTypeApi {
   ///
   /// * [PostVehicleTypeRequest] postVehicleTypeRequest:
   ///   VehicleType to create
-  Future<PostVehicleTypeResponse?> tepsalesV1VehicleTypesPost({ String? xApiKey, String? xCsrfToken, PostVehicleTypeRequest? postVehicleTypeRequest, }) async {
-    final response = await tepsalesV1VehicleTypesPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postVehicleTypeRequest: postVehicleTypeRequest, );
+  Future<PostVehicleTypeResponse?> tepsalesV1VehicleTypesPost({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostVehicleTypeRequest? postVehicleTypeRequest,
+  }) async {
+    final response = await tepsalesV1VehicleTypesPostWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      postVehicleTypeRequest: postVehicleTypeRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostVehicleTypeResponse',) as PostVehicleTypeResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'PostVehicleTypeResponse',
+      ) as PostVehicleTypeResponse;
     }
     return null;
   }

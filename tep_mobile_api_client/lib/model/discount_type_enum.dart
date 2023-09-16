@@ -10,7 +10,6 @@
 
 part of openapi.api;
 
-
 class DiscountTypeEnum {
   /// Instantiate a new enum with the provided [value].
   const DiscountTypeEnum._(this.value);
@@ -32,9 +31,13 @@ class DiscountTypeEnum {
     number2,
   ];
 
-  static DiscountTypeEnum? fromJson(dynamic value) => DiscountTypeEnumTypeTransformer().decode(value);
+  static DiscountTypeEnum? fromJson(dynamic value) =>
+      DiscountTypeEnumTypeTransformer().decode(value);
 
-  static List<DiscountTypeEnum> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<DiscountTypeEnum> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <DiscountTypeEnum>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -51,7 +54,8 @@ class DiscountTypeEnum {
 /// Transformation class that can [encode] an instance of [DiscountTypeEnum] to int,
 /// and [decode] dynamic data back to [DiscountTypeEnum].
 class DiscountTypeEnumTypeTransformer {
-  factory DiscountTypeEnumTypeTransformer() => _instance ??= const DiscountTypeEnumTypeTransformer._();
+  factory DiscountTypeEnumTypeTransformer() =>
+      _instance ??= const DiscountTypeEnumTypeTransformer._();
 
   const DiscountTypeEnumTypeTransformer._();
 
@@ -68,8 +72,10 @@ class DiscountTypeEnumTypeTransformer {
   DiscountTypeEnum? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 1: return DiscountTypeEnum.number1;
-        case 2: return DiscountTypeEnum.number2;
+        case 1:
+          return DiscountTypeEnum.number1;
+        case 2:
+          return DiscountTypeEnum.number2;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -82,4 +88,3 @@ class DiscountTypeEnumTypeTransformer {
   /// Singleton [DiscountTypeEnumTypeTransformer] instance.
   static DiscountTypeEnumTypeTransformer? _instance;
 }
-

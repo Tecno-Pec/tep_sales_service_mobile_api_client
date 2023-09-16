@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-
 class NotificationApi {
-  NotificationApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  NotificationApi([ApiClient? apiClient])
+      : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,10 +30,13 @@ class NotificationApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> getByIdNotificationWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> getByIdNotificationWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/notifications/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/notifications/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -50,7 +53,6 @@ class NotificationApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -75,17 +77,28 @@ class NotificationApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllNotificationResponse?> getByIdNotification(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await getByIdNotificationWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllNotificationResponse?> getByIdNotification(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await getByIdNotificationWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllNotificationResponse',) as GetAllNotificationResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllNotificationResponse',
+      ) as GetAllNotificationResponse;
     }
     return null;
   }
@@ -120,7 +133,19 @@ class NotificationApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1NotificationsGetWithHttpInfo({ String? message, NotificationType? type, String? userPhone, String? userName, String? userEmail, String? userId, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1NotificationsGetWithHttpInfo({
+    String? message,
+    NotificationType? type,
+    String? userPhone,
+    String? userName,
+    String? userEmail,
+    String? userId,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/notifications';
 
@@ -168,7 +193,6 @@ class NotificationApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -208,17 +232,44 @@ class NotificationApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedNotificationResponse?> tepsalesV1NotificationsGet({ String? message, NotificationType? type, String? userPhone, String? userName, String? userEmail, String? userId, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1NotificationsGetWithHttpInfo( message: message, type: type, userPhone: userPhone, userName: userName, userEmail: userEmail, userId: userId, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllPagedNotificationResponse?> tepsalesV1NotificationsGet({
+    String? message,
+    NotificationType? type,
+    String? userPhone,
+    String? userName,
+    String? userEmail,
+    String? userId,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1NotificationsGetWithHttpInfo(
+      message: message,
+      type: type,
+      userPhone: userPhone,
+      userName: userName,
+      userEmail: userEmail,
+      userId: userId,
+      page: page,
+      pageSize: pageSize,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedNotificationResponse',) as GetAllPagedNotificationResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllPagedNotificationResponse',
+      ) as GetAllPagedNotificationResponse;
     }
     return null;
   }
@@ -237,10 +288,13 @@ class NotificationApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1NotificationsIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1NotificationsIdDeleteWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/notifications/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/notifications/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -257,7 +311,6 @@ class NotificationApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -282,8 +335,16 @@ class NotificationApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1NotificationsIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1NotificationsIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1NotificationsIdDelete(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1NotificationsIdDeleteWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -308,10 +369,14 @@ class NotificationApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1NotificationsIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1NotificationsIdPatchWithHttpInfo(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/notifications/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/notifications/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -328,7 +393,6 @@ class NotificationApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -358,8 +422,18 @@ class NotificationApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1NotificationsIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1NotificationsIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1NotificationsIdPatch(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1NotificationsIdPatchWithHttpInfo(
+      id,
+      operation,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -382,10 +456,14 @@ class NotificationApi {
   ///
   /// * [PutNotificationRequest] putNotificationRequest:
   ///   Notification to update
-  Future<Response> tepsalesV1NotificationsIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutNotificationRequest? putNotificationRequest, }) async {
+  Future<http.Response> tepsalesV1NotificationsIdPutWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutNotificationRequest? putNotificationRequest,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/notifications/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/notifications/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putNotificationRequest;
@@ -402,7 +480,6 @@ class NotificationApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -430,8 +507,18 @@ class NotificationApi {
   ///
   /// * [PutNotificationRequest] putNotificationRequest:
   ///   Notification to update
-  Future<void> tepsalesV1NotificationsIdPut(String id, { String? xApiKey, String? xCsrfToken, PutNotificationRequest? putNotificationRequest, }) async {
-    final response = await tepsalesV1NotificationsIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putNotificationRequest: putNotificationRequest, );
+  Future<void> tepsalesV1NotificationsIdPut(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutNotificationRequest? putNotificationRequest,
+  }) async {
+    final response = await tepsalesV1NotificationsIdPutWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      putNotificationRequest: putNotificationRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -451,7 +538,11 @@ class NotificationApi {
   ///
   /// * [PostNotificationRequest] postNotificationRequest:
   ///   Notification to create
-  Future<Response> tepsalesV1NotificationsPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostNotificationRequest? postNotificationRequest, }) async {
+  Future<http.Response> tepsalesV1NotificationsPostWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostNotificationRequest? postNotificationRequest,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/notifications';
 
@@ -470,7 +561,6 @@ class NotificationApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -495,17 +585,28 @@ class NotificationApi {
   ///
   /// * [PostNotificationRequest] postNotificationRequest:
   ///   Notification to create
-  Future<PostNotificationResponse?> tepsalesV1NotificationsPost({ String? xApiKey, String? xCsrfToken, PostNotificationRequest? postNotificationRequest, }) async {
-    final response = await tepsalesV1NotificationsPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postNotificationRequest: postNotificationRequest, );
+  Future<PostNotificationResponse?> tepsalesV1NotificationsPost({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostNotificationRequest? postNotificationRequest,
+  }) async {
+    final response = await tepsalesV1NotificationsPostWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      postNotificationRequest: postNotificationRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostNotificationResponse',) as PostNotificationResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'PostNotificationResponse',
+      ) as PostNotificationResponse;
     }
     return null;
   }

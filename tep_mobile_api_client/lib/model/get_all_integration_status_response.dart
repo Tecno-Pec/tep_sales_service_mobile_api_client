@@ -73,36 +73,39 @@ class GetAllIntegrationStatusResponse {
   int? quantityEntities;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is GetAllIntegrationStatusResponse &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.id == id &&
-     other.context == context &&
-     other.action == action &&
-     other.status == status &&
-     other.summary == summary &&
-     other.date == date &&
-     other.quantityEntities == quantityEntities;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is GetAllIntegrationStatusResponse &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.id == id &&
+          other.context == context &&
+          other.action == action &&
+          other.status == status &&
+          other.summary == summary &&
+          other.date == date &&
+          other.quantityEntities == quantityEntities;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (id == null ? 0 : id!.hashCode) +
-    (context == null ? 0 : context!.hashCode) +
-    (action == null ? 0 : action!.hashCode) +
-    (status == null ? 0 : status!.hashCode) +
-    (summary == null ? 0 : summary!.hashCode) +
-    (date == null ? 0 : date!.hashCode) +
-    (quantityEntities == null ? 0 : quantityEntities!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (id == null ? 0 : id!.hashCode) +
+      (context == null ? 0 : context!.hashCode) +
+      (action == null ? 0 : action!.hashCode) +
+      (status == null ? 0 : status!.hashCode) +
+      (summary == null ? 0 : summary!.hashCode) +
+      (date == null ? 0 : date!.hashCode) +
+      (quantityEntities == null ? 0 : quantityEntities!.hashCode);
 
   @override
-  String toString() => 'GetAllIntegrationStatusResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, context=$context, action=$action, status=$status, summary=$summary, date=$date, quantityEntities=$quantityEntities]';
+  String toString() =>
+      'GetAllIntegrationStatusResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, context=$context, action=$action, status=$status, summary=$summary, date=$date, quantityEntities=$quantityEntities]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -176,8 +179,10 @@ class GetAllIntegrationStatusResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "GetAllIntegrationStatusResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "GetAllIntegrationStatusResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "GetAllIntegrationStatusResponse[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "GetAllIntegrationStatusResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -199,7 +204,10 @@ class GetAllIntegrationStatusResponse {
     return null;
   }
 
-  static List<GetAllIntegrationStatusResponse> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<GetAllIntegrationStatusResponse> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <GetAllIntegrationStatusResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -212,7 +220,8 @@ class GetAllIntegrationStatusResponse {
     return result.toList(growable: growable);
   }
 
-  static Map<String, GetAllIntegrationStatusResponse> mapFromJson(dynamic json) {
+  static Map<String, GetAllIntegrationStatusResponse> mapFromJson(
+      dynamic json) {
     final map = <String, GetAllIntegrationStatusResponse>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
@@ -227,20 +236,24 @@ class GetAllIntegrationStatusResponse {
   }
 
   // maps a json object with a list of GetAllIntegrationStatusResponse-objects as value to a dart map
-  static Map<String, List<GetAllIntegrationStatusResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<GetAllIntegrationStatusResponse>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<GetAllIntegrationStatusResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = GetAllIntegrationStatusResponse.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = GetAllIntegrationStatusResponse.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

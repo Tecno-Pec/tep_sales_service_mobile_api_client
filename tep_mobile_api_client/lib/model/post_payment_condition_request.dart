@@ -61,32 +61,35 @@ class PostPaymentConditionRequest {
   PaymentConditionStatus? status;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is PostPaymentConditionRequest &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.id == id &&
-     other.name == name &&
-     other.externalCode == externalCode &&
-     other.sequence == sequence &&
-     other.status == status;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PostPaymentConditionRequest &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.id == id &&
+          other.name == name &&
+          other.externalCode == externalCode &&
+          other.sequence == sequence &&
+          other.status == status;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (id == null ? 0 : id!.hashCode) +
-    (name == null ? 0 : name!.hashCode) +
-    (externalCode == null ? 0 : externalCode!.hashCode) +
-    (sequence == null ? 0 : sequence!.hashCode) +
-    (status == null ? 0 : status!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (id == null ? 0 : id!.hashCode) +
+      (name == null ? 0 : name!.hashCode) +
+      (externalCode == null ? 0 : externalCode!.hashCode) +
+      (sequence == null ? 0 : sequence!.hashCode) +
+      (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() => 'PostPaymentConditionRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, externalCode=$externalCode, sequence=$sequence, status=$status]';
+  String toString() =>
+      'PostPaymentConditionRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, externalCode=$externalCode, sequence=$sequence, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -150,8 +153,10 @@ class PostPaymentConditionRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PostPaymentConditionRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PostPaymentConditionRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "PostPaymentConditionRequest[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "PostPaymentConditionRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -171,7 +176,10 @@ class PostPaymentConditionRequest {
     return null;
   }
 
-  static List<PostPaymentConditionRequest> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PostPaymentConditionRequest> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PostPaymentConditionRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -199,20 +207,24 @@ class PostPaymentConditionRequest {
   }
 
   // maps a json object with a list of PostPaymentConditionRequest-objects as value to a dart map
-  static Map<String, List<PostPaymentConditionRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<PostPaymentConditionRequest>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<PostPaymentConditionRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostPaymentConditionRequest.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = PostPaymentConditionRequest.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

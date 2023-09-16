@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-
 class DashboardApi {
-  DashboardApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  DashboardApi([ApiClient? apiClient])
+      : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -27,7 +27,10 @@ class DashboardApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DashboardPurchaseorderbysalesmanGetWithHttpInfo({ String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1DashboardPurchaseorderbysalesmanGetWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/dashboard/purchaseorderbysalesman';
 
@@ -47,7 +50,6 @@ class DashboardApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -68,17 +70,27 @@ class DashboardApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GroupPurchaseOrderDto?> tepsalesV1DashboardPurchaseorderbysalesmanGet({ String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DashboardPurchaseorderbysalesmanGetWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GroupPurchaseOrderDto?> tepsalesV1DashboardPurchaseorderbysalesmanGet({
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response =
+        await tepsalesV1DashboardPurchaseorderbysalesmanGetWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GroupPurchaseOrderDto',) as GroupPurchaseOrderDto;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GroupPurchaseOrderDto',
+      ) as GroupPurchaseOrderDto;
     }
     return null;
   }
@@ -94,7 +106,11 @@ class DashboardApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DashboardPurchaseorderfavoriteproductsGetWithHttpInfo({ String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response>
+      tepsalesV1DashboardPurchaseorderfavoriteproductsGetWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/dashboard/purchaseorderfavoriteproducts';
 
@@ -114,7 +130,6 @@ class DashboardApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -135,17 +150,28 @@ class DashboardApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GroupPurchaseOrderDto?> tepsalesV1DashboardPurchaseorderfavoriteproductsGet({ String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DashboardPurchaseorderfavoriteproductsGetWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GroupPurchaseOrderDto?>
+      tepsalesV1DashboardPurchaseorderfavoriteproductsGet({
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response =
+        await tepsalesV1DashboardPurchaseorderfavoriteproductsGetWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GroupPurchaseOrderDto',) as GroupPurchaseOrderDto;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GroupPurchaseOrderDto',
+      ) as GroupPurchaseOrderDto;
     }
     return null;
   }
@@ -161,7 +187,11 @@ class DashboardApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DashboardPurchaseorderlastsixmonthsGetWithHttpInfo({ String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response>
+      tepsalesV1DashboardPurchaseorderlastsixmonthsGetWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/dashboard/purchaseorderlastsixmonths';
 
@@ -181,7 +211,6 @@ class DashboardApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -202,17 +231,28 @@ class DashboardApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GroupPurchaseOrderDto?> tepsalesV1DashboardPurchaseorderlastsixmonthsGet({ String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DashboardPurchaseorderlastsixmonthsGetWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GroupPurchaseOrderDto?>
+      tepsalesV1DashboardPurchaseorderlastsixmonthsGet({
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response =
+        await tepsalesV1DashboardPurchaseorderlastsixmonthsGetWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GroupPurchaseOrderDto',) as GroupPurchaseOrderDto;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GroupPurchaseOrderDto',
+      ) as GroupPurchaseOrderDto;
     }
     return null;
   }
@@ -228,7 +268,10 @@ class DashboardApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DashboardPurchaseorderstatusGetWithHttpInfo({ String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1DashboardPurchaseorderstatusGetWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/dashboard/purchaseorderstatus';
 
@@ -248,7 +291,6 @@ class DashboardApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -269,17 +311,27 @@ class DashboardApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GroupPurchaseOrderDto?> tepsalesV1DashboardPurchaseorderstatusGet({ String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DashboardPurchaseorderstatusGetWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GroupPurchaseOrderDto?> tepsalesV1DashboardPurchaseorderstatusGet({
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response =
+        await tepsalesV1DashboardPurchaseorderstatusGetWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GroupPurchaseOrderDto',) as GroupPurchaseOrderDto;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GroupPurchaseOrderDto',
+      ) as GroupPurchaseOrderDto;
     }
     return null;
   }
@@ -295,7 +347,10 @@ class DashboardApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DashboardWidgetsGetWithHttpInfo({ String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1DashboardWidgetsGetWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/dashboard/widgets';
 
@@ -314,7 +369,6 @@ class DashboardApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -336,17 +390,26 @@ class DashboardApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetWidgetsDto?> tepsalesV1DashboardWidgetsGet({ String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DashboardWidgetsGetWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetWidgetsDto?> tepsalesV1DashboardWidgetsGet({
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1DashboardWidgetsGetWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetWidgetsDto',) as GetWidgetsDto;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetWidgetsDto',
+      ) as GetWidgetsDto;
     }
     return null;
   }

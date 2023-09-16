@@ -160,66 +160,69 @@ class PostPurchaseOrderResponse {
   PurchaseOrderStatus? status;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is PostPurchaseOrderResponse &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.id == id &&
-     other.freightValue == freightValue &&
-     other.unloadingValue == unloadingValue &&
-     other.freightType == freightType &&
-     other.valueWithoutFreight == valueWithoutFreight &&
-     other.totalValue == totalValue &&
-     other.discount == discount &&
-     other.distance == distance &&
-     other.earthDistance == earthDistance &&
-     other.totalWeightkilograms == totalWeightkilograms &&
-     other.dueDate == dueDate &&
-     other.mobileCreatedAt == mobileCreatedAt &&
-     other.isFreightFractional == isFreightFractional &&
-     other.integrationCode == integrationCode &&
-     other.paymentCondition == paymentCondition &&
-     other.client == client &&
-     other.deliveryAddress == deliveryAddress &&
-     other.invoiceAddress == invoiceAddress &&
-     other.items == items &&
-     other.history == history &&
-     other.mobileCreatedUser == mobileCreatedUser &&
-     other.status == status;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PostPurchaseOrderResponse &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.id == id &&
+          other.freightValue == freightValue &&
+          other.unloadingValue == unloadingValue &&
+          other.freightType == freightType &&
+          other.valueWithoutFreight == valueWithoutFreight &&
+          other.totalValue == totalValue &&
+          other.discount == discount &&
+          other.distance == distance &&
+          other.earthDistance == earthDistance &&
+          other.totalWeightkilograms == totalWeightkilograms &&
+          other.dueDate == dueDate &&
+          other.mobileCreatedAt == mobileCreatedAt &&
+          other.isFreightFractional == isFreightFractional &&
+          other.integrationCode == integrationCode &&
+          other.paymentCondition == paymentCondition &&
+          other.client == client &&
+          other.deliveryAddress == deliveryAddress &&
+          other.invoiceAddress == invoiceAddress &&
+          other.items == items &&
+          other.history == history &&
+          other.mobileCreatedUser == mobileCreatedUser &&
+          other.status == status;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (id == null ? 0 : id!.hashCode) +
-    (freightValue == null ? 0 : freightValue!.hashCode) +
-    (unloadingValue == null ? 0 : unloadingValue!.hashCode) +
-    (freightType == null ? 0 : freightType!.hashCode) +
-    (valueWithoutFreight == null ? 0 : valueWithoutFreight!.hashCode) +
-    (totalValue == null ? 0 : totalValue!.hashCode) +
-    (discount == null ? 0 : discount!.hashCode) +
-    (distance == null ? 0 : distance!.hashCode) +
-    (earthDistance == null ? 0 : earthDistance!.hashCode) +
-    (totalWeightkilograms == null ? 0 : totalWeightkilograms!.hashCode) +
-    (dueDate == null ? 0 : dueDate!.hashCode) +
-    (mobileCreatedAt == null ? 0 : mobileCreatedAt!.hashCode) +
-    (isFreightFractional == null ? 0 : isFreightFractional!.hashCode) +
-    (integrationCode == null ? 0 : integrationCode!.hashCode) +
-    (paymentCondition == null ? 0 : paymentCondition!.hashCode) +
-    (client == null ? 0 : client!.hashCode) +
-    (deliveryAddress == null ? 0 : deliveryAddress!.hashCode) +
-    (invoiceAddress == null ? 0 : invoiceAddress!.hashCode) +
-    (items == null ? 0 : items!.hashCode) +
-    (history == null ? 0 : history!.hashCode) +
-    (mobileCreatedUser == null ? 0 : mobileCreatedUser!.hashCode) +
-    (status == null ? 0 : status!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (id == null ? 0 : id!.hashCode) +
+      (freightValue == null ? 0 : freightValue!.hashCode) +
+      (unloadingValue == null ? 0 : unloadingValue!.hashCode) +
+      (freightType == null ? 0 : freightType!.hashCode) +
+      (valueWithoutFreight == null ? 0 : valueWithoutFreight!.hashCode) +
+      (totalValue == null ? 0 : totalValue!.hashCode) +
+      (discount == null ? 0 : discount!.hashCode) +
+      (distance == null ? 0 : distance!.hashCode) +
+      (earthDistance == null ? 0 : earthDistance!.hashCode) +
+      (totalWeightkilograms == null ? 0 : totalWeightkilograms!.hashCode) +
+      (dueDate == null ? 0 : dueDate!.hashCode) +
+      (mobileCreatedAt == null ? 0 : mobileCreatedAt!.hashCode) +
+      (isFreightFractional == null ? 0 : isFreightFractional!.hashCode) +
+      (integrationCode == null ? 0 : integrationCode!.hashCode) +
+      (paymentCondition == null ? 0 : paymentCondition!.hashCode) +
+      (client == null ? 0 : client!.hashCode) +
+      (deliveryAddress == null ? 0 : deliveryAddress!.hashCode) +
+      (invoiceAddress == null ? 0 : invoiceAddress!.hashCode) +
+      (items == null ? 0 : items!.hashCode) +
+      (history == null ? 0 : history!.hashCode) +
+      (mobileCreatedUser == null ? 0 : mobileCreatedUser!.hashCode) +
+      (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() => 'PostPurchaseOrderResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, freightValue=$freightValue, unloadingValue=$unloadingValue, freightType=$freightType, valueWithoutFreight=$valueWithoutFreight, totalValue=$totalValue, discount=$discount, distance=$distance, earthDistance=$earthDistance, totalWeightkilograms=$totalWeightkilograms, dueDate=$dueDate, mobileCreatedAt=$mobileCreatedAt, isFreightFractional=$isFreightFractional, integrationCode=$integrationCode, paymentCondition=$paymentCondition, client=$client, deliveryAddress=$deliveryAddress, invoiceAddress=$invoiceAddress, items=$items, history=$history, mobileCreatedUser=$mobileCreatedUser, status=$status]';
+  String toString() =>
+      'PostPurchaseOrderResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, freightValue=$freightValue, unloadingValue=$unloadingValue, freightType=$freightType, valueWithoutFreight=$valueWithoutFreight, totalValue=$totalValue, discount=$discount, distance=$distance, earthDistance=$earthDistance, totalWeightkilograms=$totalWeightkilograms, dueDate=$dueDate, mobileCreatedAt=$mobileCreatedAt, isFreightFractional=$isFreightFractional, integrationCode=$integrationCode, paymentCondition=$paymentCondition, client=$client, deliveryAddress=$deliveryAddress, invoiceAddress=$invoiceAddress, items=$items, history=$history, mobileCreatedUser=$mobileCreatedUser, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -299,7 +302,8 @@ class PostPurchaseOrderResponse {
       json[r'dueDate'] = null;
     }
     if (this.mobileCreatedAt != null) {
-      json[r'mobileCreatedAt'] = this.mobileCreatedAt!.toUtc().toIso8601String();
+      json[r'mobileCreatedAt'] =
+          this.mobileCreatedAt!.toUtc().toIso8601String();
     } else {
       json[r'mobileCreatedAt'] = null;
     }
@@ -368,8 +372,10 @@ class PostPurchaseOrderResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PostPurchaseOrderResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PostPurchaseOrderResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "PostPurchaseOrderResponse[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "PostPurchaseOrderResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -383,12 +389,14 @@ class PostPurchaseOrderResponse {
         freightValue: mapValueOfType<double>(json, r'freightValue'),
         unloadingValue: mapValueOfType<double>(json, r'unloadingValue'),
         freightType: FreightType.fromJson(json[r'freightType']),
-        valueWithoutFreight: mapValueOfType<double>(json, r'valueWithoutFreight'),
+        valueWithoutFreight:
+            mapValueOfType<double>(json, r'valueWithoutFreight'),
         totalValue: mapValueOfType<double>(json, r'totalValue'),
         discount: mapValueOfType<double>(json, r'discount'),
         distance: mapValueOfType<double>(json, r'distance'),
         earthDistance: mapValueOfType<double>(json, r'earthDistance'),
-        totalWeightkilograms: mapValueOfType<int>(json, r'totalWeightkilograms'),
+        totalWeightkilograms:
+            mapValueOfType<int>(json, r'totalWeightkilograms'),
         dueDate: mapDateTime(json, r'dueDate', ''),
         mobileCreatedAt: mapDateTime(json, r'mobileCreatedAt', ''),
         isFreightFractional: mapValueOfType<bool>(json, r'isFreightFractional'),
@@ -406,7 +414,10 @@ class PostPurchaseOrderResponse {
     return null;
   }
 
-  static List<PostPurchaseOrderResponse> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PostPurchaseOrderResponse> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PostPurchaseOrderResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -434,20 +445,24 @@ class PostPurchaseOrderResponse {
   }
 
   // maps a json object with a list of PostPurchaseOrderResponse-objects as value to a dart map
-  static Map<String, List<PostPurchaseOrderResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<PostPurchaseOrderResponse>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<PostPurchaseOrderResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostPurchaseOrderResponse.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = PostPurchaseOrderResponse.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

@@ -10,7 +10,6 @@
 
 part of openapi.api;
 
-
 class IntegrationStatusActions {
   /// Instantiate a new enum with the provided [value].
   const IntegrationStatusActions._(this.value);
@@ -38,9 +37,13 @@ class IntegrationStatusActions {
     number4,
   ];
 
-  static IntegrationStatusActions? fromJson(dynamic value) => IntegrationStatusActionsTypeTransformer().decode(value);
+  static IntegrationStatusActions? fromJson(dynamic value) =>
+      IntegrationStatusActionsTypeTransformer().decode(value);
 
-  static List<IntegrationStatusActions> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<IntegrationStatusActions> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <IntegrationStatusActions>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -57,7 +60,8 @@ class IntegrationStatusActions {
 /// Transformation class that can [encode] an instance of [IntegrationStatusActions] to int,
 /// and [decode] dynamic data back to [IntegrationStatusActions].
 class IntegrationStatusActionsTypeTransformer {
-  factory IntegrationStatusActionsTypeTransformer() => _instance ??= const IntegrationStatusActionsTypeTransformer._();
+  factory IntegrationStatusActionsTypeTransformer() =>
+      _instance ??= const IntegrationStatusActionsTypeTransformer._();
 
   const IntegrationStatusActionsTypeTransformer._();
 
@@ -74,11 +78,16 @@ class IntegrationStatusActionsTypeTransformer {
   IntegrationStatusActions? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0: return IntegrationStatusActions.number0;
-        case 1: return IntegrationStatusActions.number1;
-        case 2: return IntegrationStatusActions.number2;
-        case 3: return IntegrationStatusActions.number3;
-        case 4: return IntegrationStatusActions.number4;
+        case 0:
+          return IntegrationStatusActions.number0;
+        case 1:
+          return IntegrationStatusActions.number1;
+        case 2:
+          return IntegrationStatusActions.number2;
+        case 3:
+          return IntegrationStatusActions.number3;
+        case 4:
+          return IntegrationStatusActions.number4;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -91,4 +100,3 @@ class IntegrationStatusActionsTypeTransformer {
   /// Singleton [IntegrationStatusActionsTypeTransformer] instance.
   static IntegrationStatusActionsTypeTransformer? _instance;
 }
-

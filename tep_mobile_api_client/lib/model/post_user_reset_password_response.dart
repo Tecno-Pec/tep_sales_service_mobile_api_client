@@ -28,18 +28,21 @@ class PostUserResetPasswordResponse {
   String? message;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is PostUserResetPasswordResponse &&
-     other.success == success &&
-     other.message == message;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PostUserResetPasswordResponse &&
+          other.success == success &&
+          other.message == message;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (success == null ? 0 : success!.hashCode) +
-    (message == null ? 0 : message!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (success == null ? 0 : success!.hashCode) +
+      (message == null ? 0 : message!.hashCode);
 
   @override
-  String toString() => 'PostUserResetPasswordResponse[success=$success, message=$message]';
+  String toString() =>
+      'PostUserResetPasswordResponse[success=$success, message=$message]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -68,8 +71,10 @@ class PostUserResetPasswordResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PostUserResetPasswordResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PostUserResetPasswordResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "PostUserResetPasswordResponse[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "PostUserResetPasswordResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -82,7 +87,10 @@ class PostUserResetPasswordResponse {
     return null;
   }
 
-  static List<PostUserResetPasswordResponse> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PostUserResetPasswordResponse> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PostUserResetPasswordResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -110,20 +118,24 @@ class PostUserResetPasswordResponse {
   }
 
   // maps a json object with a list of PostUserResetPasswordResponse-objects as value to a dart map
-  static Map<String, List<PostUserResetPasswordResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<PostUserResetPasswordResponse>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<PostUserResetPasswordResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostUserResetPasswordResponse.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = PostUserResetPasswordResponse.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

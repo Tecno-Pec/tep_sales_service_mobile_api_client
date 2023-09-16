@@ -76,34 +76,37 @@ class PutFreightConversionFactorRequest {
   FreightConversionFactorStatus? status;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is PutFreightConversionFactorRequest &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.id == id &&
-     other.productId == productId &&
-     other.vehicleTypeId == vehicleTypeId &&
-     other.weightkilograms == weightkilograms &&
-     other.externalCode == externalCode &&
-     other.status == status;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PutFreightConversionFactorRequest &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.id == id &&
+          other.productId == productId &&
+          other.vehicleTypeId == vehicleTypeId &&
+          other.weightkilograms == weightkilograms &&
+          other.externalCode == externalCode &&
+          other.status == status;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (id == null ? 0 : id!.hashCode) +
-    (productId == null ? 0 : productId!.hashCode) +
-    (vehicleTypeId == null ? 0 : vehicleTypeId!.hashCode) +
-    (weightkilograms == null ? 0 : weightkilograms!.hashCode) +
-    (externalCode == null ? 0 : externalCode!.hashCode) +
-    (status == null ? 0 : status!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (id == null ? 0 : id!.hashCode) +
+      (productId == null ? 0 : productId!.hashCode) +
+      (vehicleTypeId == null ? 0 : vehicleTypeId!.hashCode) +
+      (weightkilograms == null ? 0 : weightkilograms!.hashCode) +
+      (externalCode == null ? 0 : externalCode!.hashCode) +
+      (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() => 'PutFreightConversionFactorRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, productId=$productId, vehicleTypeId=$vehicleTypeId, weightkilograms=$weightkilograms, externalCode=$externalCode, status=$status]';
+  String toString() =>
+      'PutFreightConversionFactorRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, productId=$productId, vehicleTypeId=$vehicleTypeId, weightkilograms=$weightkilograms, externalCode=$externalCode, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -172,8 +175,10 @@ class PutFreightConversionFactorRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PutFreightConversionFactorRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PutFreightConversionFactorRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "PutFreightConversionFactorRequest[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "PutFreightConversionFactorRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -194,7 +199,10 @@ class PutFreightConversionFactorRequest {
     return null;
   }
 
-  static List<PutFreightConversionFactorRequest> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PutFreightConversionFactorRequest> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PutFreightConversionFactorRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -207,7 +215,8 @@ class PutFreightConversionFactorRequest {
     return result.toList(growable: growable);
   }
 
-  static Map<String, PutFreightConversionFactorRequest> mapFromJson(dynamic json) {
+  static Map<String, PutFreightConversionFactorRequest> mapFromJson(
+      dynamic json) {
     final map = <String, PutFreightConversionFactorRequest>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
@@ -222,20 +231,24 @@ class PutFreightConversionFactorRequest {
   }
 
   // maps a json object with a list of PutFreightConversionFactorRequest-objects as value to a dart map
-  static Map<String, List<PutFreightConversionFactorRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<PutFreightConversionFactorRequest>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<PutFreightConversionFactorRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PutFreightConversionFactorRequest.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = PutFreightConversionFactorRequest.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

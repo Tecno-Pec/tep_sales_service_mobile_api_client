@@ -76,34 +76,37 @@ class PostPriceTableUnloadingResponse {
   String? externalCode;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is PostPriceTableUnloadingResponse &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.id == id &&
-     other.productGroupId == productGroupId &&
-     other.paymentConditionId == paymentConditionId &&
-     other.status == status &&
-     other.valueOfKG == valueOfKG &&
-     other.externalCode == externalCode;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PostPriceTableUnloadingResponse &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.id == id &&
+          other.productGroupId == productGroupId &&
+          other.paymentConditionId == paymentConditionId &&
+          other.status == status &&
+          other.valueOfKG == valueOfKG &&
+          other.externalCode == externalCode;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (id == null ? 0 : id!.hashCode) +
-    (productGroupId == null ? 0 : productGroupId!.hashCode) +
-    (paymentConditionId == null ? 0 : paymentConditionId!.hashCode) +
-    (status == null ? 0 : status!.hashCode) +
-    (valueOfKG == null ? 0 : valueOfKG!.hashCode) +
-    (externalCode == null ? 0 : externalCode!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (id == null ? 0 : id!.hashCode) +
+      (productGroupId == null ? 0 : productGroupId!.hashCode) +
+      (paymentConditionId == null ? 0 : paymentConditionId!.hashCode) +
+      (status == null ? 0 : status!.hashCode) +
+      (valueOfKG == null ? 0 : valueOfKG!.hashCode) +
+      (externalCode == null ? 0 : externalCode!.hashCode);
 
   @override
-  String toString() => 'PostPriceTableUnloadingResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, productGroupId=$productGroupId, paymentConditionId=$paymentConditionId, status=$status, valueOfKG=$valueOfKG, externalCode=$externalCode]';
+  String toString() =>
+      'PostPriceTableUnloadingResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, productGroupId=$productGroupId, paymentConditionId=$paymentConditionId, status=$status, valueOfKG=$valueOfKG, externalCode=$externalCode]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -172,8 +175,10 @@ class PostPriceTableUnloadingResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PostPriceTableUnloadingResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PostPriceTableUnloadingResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "PostPriceTableUnloadingResponse[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "PostPriceTableUnloadingResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -194,7 +199,10 @@ class PostPriceTableUnloadingResponse {
     return null;
   }
 
-  static List<PostPriceTableUnloadingResponse> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PostPriceTableUnloadingResponse> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PostPriceTableUnloadingResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -207,7 +215,8 @@ class PostPriceTableUnloadingResponse {
     return result.toList(growable: growable);
   }
 
-  static Map<String, PostPriceTableUnloadingResponse> mapFromJson(dynamic json) {
+  static Map<String, PostPriceTableUnloadingResponse> mapFromJson(
+      dynamic json) {
     final map = <String, PostPriceTableUnloadingResponse>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
@@ -222,20 +231,24 @@ class PostPriceTableUnloadingResponse {
   }
 
   // maps a json object with a list of PostPriceTableUnloadingResponse-objects as value to a dart map
-  static Map<String, List<PostPriceTableUnloadingResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<PostPriceTableUnloadingResponse>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<PostPriceTableUnloadingResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostPriceTableUnloadingResponse.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = PostPriceTableUnloadingResponse.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

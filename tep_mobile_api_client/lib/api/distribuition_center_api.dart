@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-
 class DistribuitionCenterApi {
-  DistribuitionCenterApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  DistribuitionCenterApi([ApiClient? apiClient])
+      : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,10 +30,14 @@ class DistribuitionCenterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> getByIdDistribuitionCenterWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> getByIdDistribuitionCenterWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/distribuitionsCenters/{id}'
-      .replaceAll('{id}', id);
+    final path =
+        r'/tepsales/v1/distribuitionsCenters/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -50,7 +54,6 @@ class DistribuitionCenterApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -75,17 +78,28 @@ class DistribuitionCenterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllDistribuitionCenterResponse?> getByIdDistribuitionCenter(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await getByIdDistribuitionCenterWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllDistribuitionCenterResponse?> getByIdDistribuitionCenter(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await getByIdDistribuitionCenterWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllDistribuitionCenterResponse',) as GetAllDistribuitionCenterResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllDistribuitionCenterResponse',
+      ) as GetAllDistribuitionCenterResponse;
     }
     return null;
   }
@@ -113,7 +127,15 @@ class DistribuitionCenterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DistribuitionsCentersAllGetWithHttpInfo({ String? name, String? document, String? externalCode, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1DistribuitionsCentersAllGetWithHttpInfo({
+    String? name,
+    String? document,
+    String? externalCode,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/distribuitionsCenters/all';
 
@@ -149,7 +171,6 @@ class DistribuitionCenterApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -182,20 +203,38 @@ class DistribuitionCenterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllDistribuitionCenterResponse>?> tepsalesV1DistribuitionsCentersAllGet({ String? name, String? document, String? externalCode, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DistribuitionsCentersAllGetWithHttpInfo( name: name, document: document, externalCode: externalCode, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<List<GetAllDistribuitionCenterResponse>?>
+      tepsalesV1DistribuitionsCentersAllGet({
+    String? name,
+    String? document,
+    String? externalCode,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1DistribuitionsCentersAllGetWithHttpInfo(
+      name: name,
+      document: document,
+      externalCode: externalCode,
+      limit: limit,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllDistribuitionCenterResponse>') as List)
-        .cast<GetAllDistribuitionCenterResponse>()
-        .toList();
-
+      return (await apiClient.deserializeAsync(
+              responseBody, 'List<GetAllDistribuitionCenterResponse>') as List)
+          .cast<GetAllDistribuitionCenterResponse>()
+          .toList();
     }
     return null;
   }
@@ -214,10 +253,14 @@ class DistribuitionCenterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DistribuitionsCentersIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1DistribuitionsCentersIdDeleteWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/distribuitionsCenters/{id}'
-      .replaceAll('{id}', id);
+    final path =
+        r'/tepsales/v1/distribuitionsCenters/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -234,7 +277,6 @@ class DistribuitionCenterApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -259,8 +301,16 @@ class DistribuitionCenterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1DistribuitionsCentersIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DistribuitionsCentersIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1DistribuitionsCentersIdDelete(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1DistribuitionsCentersIdDeleteWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -285,10 +335,15 @@ class DistribuitionCenterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DistribuitionsCentersIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1DistribuitionsCentersIdPatchWithHttpInfo(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/distribuitionsCenters/{id}'
-      .replaceAll('{id}', id);
+    final path =
+        r'/tepsales/v1/distribuitionsCenters/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -305,7 +360,6 @@ class DistribuitionCenterApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -335,8 +389,18 @@ class DistribuitionCenterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1DistribuitionsCentersIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DistribuitionsCentersIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1DistribuitionsCentersIdPatch(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1DistribuitionsCentersIdPatchWithHttpInfo(
+      id,
+      operation,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -359,10 +423,15 @@ class DistribuitionCenterApi {
   ///
   /// * [PutDistribuitionCenterRequest] putDistribuitionCenterRequest:
   ///   DistribuitionCenter to update
-  Future<Response> tepsalesV1DistribuitionsCentersIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutDistribuitionCenterRequest? putDistribuitionCenterRequest, }) async {
+  Future<http.Response> tepsalesV1DistribuitionsCentersIdPutWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutDistribuitionCenterRequest? putDistribuitionCenterRequest,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/distribuitionsCenters/{id}'
-      .replaceAll('{id}', id);
+    final path =
+        r'/tepsales/v1/distribuitionsCenters/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putDistribuitionCenterRequest;
@@ -379,7 +448,6 @@ class DistribuitionCenterApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -407,8 +475,18 @@ class DistribuitionCenterApi {
   ///
   /// * [PutDistribuitionCenterRequest] putDistribuitionCenterRequest:
   ///   DistribuitionCenter to update
-  Future<void> tepsalesV1DistribuitionsCentersIdPut(String id, { String? xApiKey, String? xCsrfToken, PutDistribuitionCenterRequest? putDistribuitionCenterRequest, }) async {
-    final response = await tepsalesV1DistribuitionsCentersIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putDistribuitionCenterRequest: putDistribuitionCenterRequest, );
+  Future<void> tepsalesV1DistribuitionsCentersIdPut(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutDistribuitionCenterRequest? putDistribuitionCenterRequest,
+  }) async {
+    final response = await tepsalesV1DistribuitionsCentersIdPutWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      putDistribuitionCenterRequest: putDistribuitionCenterRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -438,7 +516,16 @@ class DistribuitionCenterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DistribuitionsCentersPagedGetWithHttpInfo({ String? name, String? document, String? externalCode, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1DistribuitionsCentersPagedGetWithHttpInfo({
+    String? name,
+    String? document,
+    String? externalCode,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/distribuitionsCenters/paged';
 
@@ -477,7 +564,6 @@ class DistribuitionCenterApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -511,17 +597,39 @@ class DistribuitionCenterApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedDistribuitionCenterResponse?> tepsalesV1DistribuitionsCentersPagedGet({ String? name, String? document, String? externalCode, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DistribuitionsCentersPagedGetWithHttpInfo( name: name, document: document, externalCode: externalCode, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllPagedDistribuitionCenterResponse?>
+      tepsalesV1DistribuitionsCentersPagedGet({
+    String? name,
+    String? document,
+    String? externalCode,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1DistribuitionsCentersPagedGetWithHttpInfo(
+      name: name,
+      document: document,
+      externalCode: externalCode,
+      page: page,
+      pageSize: pageSize,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedDistribuitionCenterResponse',) as GetAllPagedDistribuitionCenterResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllPagedDistribuitionCenterResponse',
+      ) as GetAllPagedDistribuitionCenterResponse;
     }
     return null;
   }
@@ -540,7 +648,11 @@ class DistribuitionCenterApi {
   ///
   /// * [PostDistribuitionCenterRequest] postDistribuitionCenterRequest:
   ///   DistribuitionCenter to create
-  Future<Response> tepsalesV1DistribuitionsCentersPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostDistribuitionCenterRequest? postDistribuitionCenterRequest, }) async {
+  Future<http.Response> tepsalesV1DistribuitionsCentersPostWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostDistribuitionCenterRequest? postDistribuitionCenterRequest,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/distribuitionsCenters';
 
@@ -559,7 +671,6 @@ class DistribuitionCenterApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -584,17 +695,28 @@ class DistribuitionCenterApi {
   ///
   /// * [PostDistribuitionCenterRequest] postDistribuitionCenterRequest:
   ///   DistribuitionCenter to create
-  Future<PostDistribuitionCenterResponse?> tepsalesV1DistribuitionsCentersPost({ String? xApiKey, String? xCsrfToken, PostDistribuitionCenterRequest? postDistribuitionCenterRequest, }) async {
-    final response = await tepsalesV1DistribuitionsCentersPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postDistribuitionCenterRequest: postDistribuitionCenterRequest, );
+  Future<PostDistribuitionCenterResponse?> tepsalesV1DistribuitionsCentersPost({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostDistribuitionCenterRequest? postDistribuitionCenterRequest,
+  }) async {
+    final response = await tepsalesV1DistribuitionsCentersPostWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      postDistribuitionCenterRequest: postDistribuitionCenterRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostDistribuitionCenterResponse',) as PostDistribuitionCenterResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'PostDistribuitionCenterResponse',
+      ) as PostDistribuitionCenterResponse;
     }
     return null;
   }

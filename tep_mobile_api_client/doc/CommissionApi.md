@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Commission id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c23880d2-d533-4f0a-9c9e-803439231bfa']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a0c3110b-bd59-43b5-8682-fb302a2d1d9f']
 
 ### Return type
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '58f214d6-f040-4d3e-a138-584b986e2f94']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5111b431-5f56-4673-8d75-76176c414a4a']
 
 ### Return type
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Commission id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5256c2e1-6267-47cc-8c27-050f881039a2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c09aab6f-9f45-4004-a902-7d18b8165515']
 
 ### Return type
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
  **id** | **String**| Commission id | 
  **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bad26a56-20af-43a0-bfdb-e1bb09d5419f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fa23af98-527d-4f82-bbba-7860fa8acdba']
 
 ### Return type
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Commission Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ce51b2f8-1836-4a9a-b66e-4d2c9dcdd0a7']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8b315a40-07a5-4d9a-8ecf-69986d96378b']
  **putCommissionRequest** | [**PutCommissionRequest**](PutCommissionRequest.md)| Commission to update | [optional] 
 
 ### Return type
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9f37f235-6e61-4e44-b88d-bdae6ebff4c7']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd60ad7b4-eb50-4aed-9306-0e696ebc5fae']
 
 ### Return type
 
@@ -368,7 +368,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c5aa9feb-66e7-4dc0-b3d0-124a71620cfc']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '48532707-53d0-48d1-90d3-2327fa68a4fd']
  **postCommissionRequest** | [**PostCommissionRequest**](PostCommissionRequest.md)| Commission to create | [optional] 
 
 ### Return type

@@ -1,12 +1,21 @@
-import 'package:test/test.dart';
-import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.12
 
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:tep_mobile_api_client/api.dart';
+import 'package:test/test.dart';
 
 /// tests for NotificationApi
 void main() {
-  final instance = TepMobileApiClient().getNotificationApi();
+  final instance = NotificationApi();
 
-  group(NotificationApi, () {
+  group('tests for NotificationApi', () {
     // Get Notification by id
     //
     //Future<GetAllNotificationResponse> getByIdNotification(String id, { String xApiKey, String xCsrfToken }) async
@@ -16,40 +25,39 @@ void main() {
 
     // Get All Notification by filter with pagination
     //
-    //Future<GetAllPagedNotificationResponse> yes4trackV1NotificationsGet({ String message, NotificationType type, String userPhone, String userName, String userEmail, String userId, int page, int pageSize, String sort, String xApiKey, String xCsrfToken }) async
-    test('test yes4trackV1NotificationsGet', () async {
+    //Future<GetAllPagedNotificationResponse> tepsalesV1NotificationsGet({ String message, NotificationType type, String userPhone, String userName, String userEmail, String userId, int page, int pageSize, String sort, String xApiKey, String xCsrfToken }) async
+    test('test tepsalesV1NotificationsGet', () async {
       // TODO
     });
 
     // Delete Notification by Id
     //
-    //Future yes4trackV1NotificationsIdDelete(String id, { String xApiKey, String xCsrfToken }) async
-    test('test yes4trackV1NotificationsIdDelete', () async {
+    //Future tepsalesV1NotificationsIdDelete(String id, { String xApiKey, String xCsrfToken }) async
+    test('test tepsalesV1NotificationsIdDelete', () async {
       // TODO
     });
 
     // Update part of Notification
     //
-    // Sample request:                    PATCH /yes4track/v1/Notification/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
+    // Sample request:                    PATCH /tepsales/v1/Notification/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
     //
-    //Future yes4trackV1NotificationsIdPatch(String id, BuiltList<Operation> operation, { String xApiKey, String xCsrfToken }) async
-    test('test yes4trackV1NotificationsIdPatch', () async {
+    //Future tepsalesV1NotificationsIdPatch(String id, List<Operation> operation, { String xApiKey, String xCsrfToken }) async
+    test('test tepsalesV1NotificationsIdPatch', () async {
       // TODO
     });
 
     // Update Notification
     //
-    //Future yes4trackV1NotificationsIdPut(String id, { String xApiKey, String xCsrfToken, PutNotificationRequest putNotificationRequest }) async
-    test('test yes4trackV1NotificationsIdPut', () async {
+    //Future tepsalesV1NotificationsIdPut(String id, { String xApiKey, String xCsrfToken, PutNotificationRequest putNotificationRequest }) async
+    test('test tepsalesV1NotificationsIdPut', () async {
       // TODO
     });
 
     // Create Notification
     //
-    //Future<PostNotificationResponse> yes4trackV1NotificationsPost({ String xApiKey, String xCsrfToken, PostNotificationRequest postNotificationRequest }) async
-    test('test yes4trackV1NotificationsPost', () async {
+    //Future<PostNotificationResponse> tepsalesV1NotificationsPost({ String xApiKey, String xCsrfToken, PostNotificationRequest postNotificationRequest }) async
+    test('test tepsalesV1NotificationsPost', () async {
       // TODO
     });
-
   });
 }

@@ -10,7 +10,6 @@
 
 part of openapi.api;
 
-
 class AuditApi {
   AuditApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
@@ -50,7 +49,21 @@ class AuditApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1AuditsGetWithHttpInfo({ String? parentId, String? companyId, String? entity, ActionType? action, DateTime? startDate, DateTime? endDate, String? userCreated, String? userUpdated, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1AuditsGetWithHttpInfo({
+    String? parentId,
+    String? companyId,
+    String? entity,
+    ActionType? action,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? userCreated,
+    String? userUpdated,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/audits';
 
@@ -104,7 +117,6 @@ class AuditApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -148,17 +160,48 @@ class AuditApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedAuditResponse?> tepsalesV1AuditsGet({ String? parentId, String? companyId, String? entity, ActionType? action, DateTime? startDate, DateTime? endDate, String? userCreated, String? userUpdated, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1AuditsGetWithHttpInfo( parentId: parentId, companyId: companyId, entity: entity, action: action, startDate: startDate, endDate: endDate, userCreated: userCreated, userUpdated: userUpdated, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllPagedAuditResponse?> tepsalesV1AuditsGet({
+    String? parentId,
+    String? companyId,
+    String? entity,
+    ActionType? action,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? userCreated,
+    String? userUpdated,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1AuditsGetWithHttpInfo(
+      parentId: parentId,
+      companyId: companyId,
+      entity: entity,
+      action: action,
+      startDate: startDate,
+      endDate: endDate,
+      userCreated: userCreated,
+      userUpdated: userUpdated,
+      page: page,
+      pageSize: pageSize,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedAuditResponse',) as GetAllPagedAuditResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllPagedAuditResponse',
+      ) as GetAllPagedAuditResponse;
     }
     return null;
   }
@@ -197,7 +240,21 @@ class AuditApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1AuditsLatestGetWithHttpInfo({ String? parentId, String? companyId, String? entity, ActionType? action, DateTime? startDate, DateTime? endDate, String? userCreated, String? userUpdated, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1AuditsLatestGetWithHttpInfo({
+    String? parentId,
+    String? companyId,
+    String? entity,
+    ActionType? action,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? userCreated,
+    String? userUpdated,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/audits/latest';
 
@@ -251,7 +308,6 @@ class AuditApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -295,17 +351,48 @@ class AuditApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedAuditResponse?> tepsalesV1AuditsLatestGet({ String? parentId, String? companyId, String? entity, ActionType? action, DateTime? startDate, DateTime? endDate, String? userCreated, String? userUpdated, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1AuditsLatestGetWithHttpInfo( parentId: parentId, companyId: companyId, entity: entity, action: action, startDate: startDate, endDate: endDate, userCreated: userCreated, userUpdated: userUpdated, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllPagedAuditResponse?> tepsalesV1AuditsLatestGet({
+    String? parentId,
+    String? companyId,
+    String? entity,
+    ActionType? action,
+    DateTime? startDate,
+    DateTime? endDate,
+    String? userCreated,
+    String? userUpdated,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1AuditsLatestGetWithHttpInfo(
+      parentId: parentId,
+      companyId: companyId,
+      entity: entity,
+      action: action,
+      startDate: startDate,
+      endDate: endDate,
+      userCreated: userCreated,
+      userUpdated: userUpdated,
+      page: page,
+      pageSize: pageSize,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedAuditResponse',) as GetAllPagedAuditResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllPagedAuditResponse',
+      ) as GetAllPagedAuditResponse;
     }
     return null;
   }

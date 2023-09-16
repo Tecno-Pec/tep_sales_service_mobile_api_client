@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-
 class VersionApi {
-  VersionApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  VersionApi([ApiClient? apiClient])
+      : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -27,7 +27,10 @@ class VersionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1VersionGetWithHttpInfo({ String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1VersionGetWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/version';
 
@@ -46,7 +49,6 @@ class VersionApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -68,8 +70,14 @@ class VersionApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1VersionGet({ String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1VersionGetWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1VersionGet({
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1VersionGetWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

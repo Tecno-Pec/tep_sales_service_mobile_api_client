@@ -10,7 +10,6 @@
 
 part of openapi.api;
 
-
 class PurchaseOrderStatus {
   /// Instantiate a new enum with the provided [value].
   const PurchaseOrderStatus._(this.value);
@@ -40,9 +39,13 @@ class PurchaseOrderStatus {
     number6,
   ];
 
-  static PurchaseOrderStatus? fromJson(dynamic value) => PurchaseOrderStatusTypeTransformer().decode(value);
+  static PurchaseOrderStatus? fromJson(dynamic value) =>
+      PurchaseOrderStatusTypeTransformer().decode(value);
 
-  static List<PurchaseOrderStatus> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PurchaseOrderStatus> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PurchaseOrderStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -59,7 +62,8 @@ class PurchaseOrderStatus {
 /// Transformation class that can [encode] an instance of [PurchaseOrderStatus] to int,
 /// and [decode] dynamic data back to [PurchaseOrderStatus].
 class PurchaseOrderStatusTypeTransformer {
-  factory PurchaseOrderStatusTypeTransformer() => _instance ??= const PurchaseOrderStatusTypeTransformer._();
+  factory PurchaseOrderStatusTypeTransformer() =>
+      _instance ??= const PurchaseOrderStatusTypeTransformer._();
 
   const PurchaseOrderStatusTypeTransformer._();
 
@@ -76,12 +80,18 @@ class PurchaseOrderStatusTypeTransformer {
   PurchaseOrderStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 1: return PurchaseOrderStatus.number1;
-        case 2: return PurchaseOrderStatus.number2;
-        case 3: return PurchaseOrderStatus.number3;
-        case 4: return PurchaseOrderStatus.number4;
-        case 5: return PurchaseOrderStatus.number5;
-        case 6: return PurchaseOrderStatus.number6;
+        case 1:
+          return PurchaseOrderStatus.number1;
+        case 2:
+          return PurchaseOrderStatus.number2;
+        case 3:
+          return PurchaseOrderStatus.number3;
+        case 4:
+          return PurchaseOrderStatus.number4;
+        case 5:
+          return PurchaseOrderStatus.number5;
+        case 6:
+          return PurchaseOrderStatus.number6;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -94,4 +104,3 @@ class PurchaseOrderStatusTypeTransformer {
   /// Singleton [PurchaseOrderStatusTypeTransformer] instance.
   static PurchaseOrderStatusTypeTransformer? _instance;
 }
-

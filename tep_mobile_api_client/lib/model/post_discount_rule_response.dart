@@ -103,40 +103,43 @@ class PostDiscountRuleResponse {
   DiscountRuleStatus? status;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is PostDiscountRuleResponse &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.id == id &&
-     other.discountWeightType == discountWeightType &&
-     other.minQuantity == minQuantity &&
-     other.discountType == discountType &&
-     other.referenceType == referenceType &&
-     other.referenceId == referenceId &&
-     other.discount == discount &&
-     other.externalCode == externalCode &&
-     other.status == status;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PostDiscountRuleResponse &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.id == id &&
+          other.discountWeightType == discountWeightType &&
+          other.minQuantity == minQuantity &&
+          other.discountType == discountType &&
+          other.referenceType == referenceType &&
+          other.referenceId == referenceId &&
+          other.discount == discount &&
+          other.externalCode == externalCode &&
+          other.status == status;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (id == null ? 0 : id!.hashCode) +
-    (discountWeightType == null ? 0 : discountWeightType!.hashCode) +
-    (minQuantity == null ? 0 : minQuantity!.hashCode) +
-    (discountType == null ? 0 : discountType!.hashCode) +
-    (referenceType == null ? 0 : referenceType!.hashCode) +
-    (referenceId == null ? 0 : referenceId!.hashCode) +
-    (discount == null ? 0 : discount!.hashCode) +
-    (externalCode == null ? 0 : externalCode!.hashCode) +
-    (status == null ? 0 : status!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (id == null ? 0 : id!.hashCode) +
+      (discountWeightType == null ? 0 : discountWeightType!.hashCode) +
+      (minQuantity == null ? 0 : minQuantity!.hashCode) +
+      (discountType == null ? 0 : discountType!.hashCode) +
+      (referenceType == null ? 0 : referenceType!.hashCode) +
+      (referenceId == null ? 0 : referenceId!.hashCode) +
+      (discount == null ? 0 : discount!.hashCode) +
+      (externalCode == null ? 0 : externalCode!.hashCode) +
+      (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() => 'PostDiscountRuleResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, discountWeightType=$discountWeightType, minQuantity=$minQuantity, discountType=$discountType, referenceType=$referenceType, referenceId=$referenceId, discount=$discount, externalCode=$externalCode, status=$status]';
+  String toString() =>
+      'PostDiscountRuleResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, discountWeightType=$discountWeightType, minQuantity=$minQuantity, discountType=$discountType, referenceType=$referenceType, referenceId=$referenceId, discount=$discount, externalCode=$externalCode, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -220,8 +223,10 @@ class PostDiscountRuleResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PostDiscountRuleResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PostDiscountRuleResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "PostDiscountRuleResponse[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "PostDiscountRuleResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -232,7 +237,8 @@ class PostDiscountRuleResponse {
         userCreated: mapValueOfType<String>(json, r'userCreated'),
         userUpdated: mapValueOfType<String>(json, r'userUpdated'),
         id: mapValueOfType<String>(json, r'id'),
-        discountWeightType: DiscountWeightTypeEnum.fromJson(json[r'discountWeightType']),
+        discountWeightType:
+            DiscountWeightTypeEnum.fromJson(json[r'discountWeightType']),
         minQuantity: mapValueOfType<double>(json, r'minQuantity'),
         discountType: DiscountTypeEnum.fromJson(json[r'discountType']),
         referenceType: ReferenceTypeEnum.fromJson(json[r'referenceType']),
@@ -245,7 +251,10 @@ class PostDiscountRuleResponse {
     return null;
   }
 
-  static List<PostDiscountRuleResponse> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PostDiscountRuleResponse> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PostDiscountRuleResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -273,20 +282,24 @@ class PostDiscountRuleResponse {
   }
 
   // maps a json object with a list of PostDiscountRuleResponse-objects as value to a dart map
-  static Map<String, List<PostDiscountRuleResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<PostDiscountRuleResponse>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<PostDiscountRuleResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostDiscountRuleResponse.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = PostDiscountRuleResponse.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

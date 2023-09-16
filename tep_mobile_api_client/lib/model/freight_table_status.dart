@@ -10,7 +10,6 @@
 
 part of openapi.api;
 
-
 class FreightTableStatus {
   /// Instantiate a new enum with the provided [value].
   const FreightTableStatus._(this.value);
@@ -32,9 +31,13 @@ class FreightTableStatus {
     number1,
   ];
 
-  static FreightTableStatus? fromJson(dynamic value) => FreightTableStatusTypeTransformer().decode(value);
+  static FreightTableStatus? fromJson(dynamic value) =>
+      FreightTableStatusTypeTransformer().decode(value);
 
-  static List<FreightTableStatus> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<FreightTableStatus> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <FreightTableStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -51,7 +54,8 @@ class FreightTableStatus {
 /// Transformation class that can [encode] an instance of [FreightTableStatus] to int,
 /// and [decode] dynamic data back to [FreightTableStatus].
 class FreightTableStatusTypeTransformer {
-  factory FreightTableStatusTypeTransformer() => _instance ??= const FreightTableStatusTypeTransformer._();
+  factory FreightTableStatusTypeTransformer() =>
+      _instance ??= const FreightTableStatusTypeTransformer._();
 
   const FreightTableStatusTypeTransformer._();
 
@@ -68,8 +72,10 @@ class FreightTableStatusTypeTransformer {
   FreightTableStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0: return FreightTableStatus.number0;
-        case 1: return FreightTableStatus.number1;
+        case 0:
+          return FreightTableStatus.number0;
+        case 1:
+          return FreightTableStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -82,4 +88,3 @@ class FreightTableStatusTypeTransformer {
   /// Singleton [FreightTableStatusTypeTransformer] instance.
   static FreightTableStatusTypeTransformer? _instance;
 }
-

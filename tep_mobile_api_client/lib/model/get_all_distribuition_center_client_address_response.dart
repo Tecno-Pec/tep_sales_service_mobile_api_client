@@ -85,36 +85,39 @@ class GetAllDistribuitionCenterClientAddressResponse {
   DistribuitionCenterClientAddressStatus? status;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is GetAllDistribuitionCenterClientAddressResponse &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.id == id &&
-     other.distribuitionCenterId == distribuitionCenterId &&
-     other.addressId == addressId &&
-     other.earthDistance == earthDistance &&
-     other.distance == distance &&
-     other.externalCode == externalCode &&
-     other.status == status;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is GetAllDistribuitionCenterClientAddressResponse &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.id == id &&
+          other.distribuitionCenterId == distribuitionCenterId &&
+          other.addressId == addressId &&
+          other.earthDistance == earthDistance &&
+          other.distance == distance &&
+          other.externalCode == externalCode &&
+          other.status == status;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (id == null ? 0 : id!.hashCode) +
-    (distribuitionCenterId == null ? 0 : distribuitionCenterId!.hashCode) +
-    (addressId == null ? 0 : addressId!.hashCode) +
-    (earthDistance == null ? 0 : earthDistance!.hashCode) +
-    (distance == null ? 0 : distance!.hashCode) +
-    (externalCode == null ? 0 : externalCode!.hashCode) +
-    (status == null ? 0 : status!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (id == null ? 0 : id!.hashCode) +
+      (distribuitionCenterId == null ? 0 : distribuitionCenterId!.hashCode) +
+      (addressId == null ? 0 : addressId!.hashCode) +
+      (earthDistance == null ? 0 : earthDistance!.hashCode) +
+      (distance == null ? 0 : distance!.hashCode) +
+      (externalCode == null ? 0 : externalCode!.hashCode) +
+      (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() => 'GetAllDistribuitionCenterClientAddressResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, distribuitionCenterId=$distribuitionCenterId, addressId=$addressId, earthDistance=$earthDistance, distance=$distance, externalCode=$externalCode, status=$status]';
+  String toString() =>
+      'GetAllDistribuitionCenterClientAddressResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, distribuitionCenterId=$distribuitionCenterId, addressId=$addressId, earthDistance=$earthDistance, distance=$distance, externalCode=$externalCode, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -179,7 +182,8 @@ class GetAllDistribuitionCenterClientAddressResponse {
   /// Returns a new [GetAllDistribuitionCenterClientAddressResponse] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static GetAllDistribuitionCenterClientAddressResponse? fromJson(dynamic value) {
+  static GetAllDistribuitionCenterClientAddressResponse? fromJson(
+      dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
 
@@ -188,8 +192,10 @@ class GetAllDistribuitionCenterClientAddressResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "GetAllDistribuitionCenterClientAddressResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "GetAllDistribuitionCenterClientAddressResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "GetAllDistribuitionCenterClientAddressResponse[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "GetAllDistribuitionCenterClientAddressResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -200,22 +206,28 @@ class GetAllDistribuitionCenterClientAddressResponse {
         userCreated: mapValueOfType<String>(json, r'userCreated'),
         userUpdated: mapValueOfType<String>(json, r'userUpdated'),
         id: mapValueOfType<String>(json, r'id'),
-        distribuitionCenterId: mapValueOfType<String>(json, r'distribuitionCenterId'),
+        distribuitionCenterId:
+            mapValueOfType<String>(json, r'distribuitionCenterId'),
         addressId: mapValueOfType<String>(json, r'addressId'),
         earthDistance: mapValueOfType<double>(json, r'earthDistance'),
         distance: mapValueOfType<double>(json, r'distance'),
         externalCode: mapValueOfType<String>(json, r'externalCode'),
-        status: DistribuitionCenterClientAddressStatus.fromJson(json[r'status']),
+        status:
+            DistribuitionCenterClientAddressStatus.fromJson(json[r'status']),
       );
     }
     return null;
   }
 
-  static List<GetAllDistribuitionCenterClientAddressResponse> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<GetAllDistribuitionCenterClientAddressResponse> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <GetAllDistribuitionCenterClientAddressResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
-        final value = GetAllDistribuitionCenterClientAddressResponse.fromJson(row);
+        final value =
+            GetAllDistribuitionCenterClientAddressResponse.fromJson(row);
         if (value != null) {
           result.add(value);
         }
@@ -224,12 +236,14 @@ class GetAllDistribuitionCenterClientAddressResponse {
     return result.toList(growable: growable);
   }
 
-  static Map<String, GetAllDistribuitionCenterClientAddressResponse> mapFromJson(dynamic json) {
+  static Map<String, GetAllDistribuitionCenterClientAddressResponse>
+      mapFromJson(dynamic json) {
     final map = <String, GetAllDistribuitionCenterClientAddressResponse>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
       for (final entry in json.entries) {
-        final value = GetAllDistribuitionCenterClientAddressResponse.fromJson(entry.value);
+        final value = GetAllDistribuitionCenterClientAddressResponse.fromJson(
+            entry.value);
         if (value != null) {
           map[entry.key] = value;
         }
@@ -239,20 +253,27 @@ class GetAllDistribuitionCenterClientAddressResponse {
   }
 
   // maps a json object with a list of GetAllDistribuitionCenterClientAddressResponse-objects as value to a dart map
-  static Map<String, List<GetAllDistribuitionCenterClientAddressResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
-    final map = <String, List<GetAllDistribuitionCenterClientAddressResponse>>{};
+  static Map<String, List<GetAllDistribuitionCenterClientAddressResponse>>
+      mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
+    final map =
+        <String, List<GetAllDistribuitionCenterClientAddressResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = GetAllDistribuitionCenterClientAddressResponse.listFromJson(entry.value, growable: growable,);
+        map[entry.key] =
+            GetAllDistribuitionCenterClientAddressResponse.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

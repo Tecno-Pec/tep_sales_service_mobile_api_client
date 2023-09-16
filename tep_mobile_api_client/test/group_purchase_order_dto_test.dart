@@ -13,7 +13,7 @@ import 'package:test/test.dart';
 
 // tests for GroupPurchaseOrderDto
 void main() {
-  // final instance = GroupPurchaseOrderDto();
+  final instance = GroupPurchaseOrderDto();
 
   group('test GroupPurchaseOrderDto', () {
     // int totalInProgress
@@ -45,8 +45,5 @@ void main() {
     test('to test the property `totalExpired`', () async {
       // TODO
     });
-
-
   });
-
 }

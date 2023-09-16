@@ -10,7 +10,6 @@
 
 part of openapi.api;
 
-
 class CommissionStatus {
   /// Instantiate a new enum with the provided [value].
   const CommissionStatus._(this.value);
@@ -32,9 +31,13 @@ class CommissionStatus {
     number1,
   ];
 
-  static CommissionStatus? fromJson(dynamic value) => CommissionStatusTypeTransformer().decode(value);
+  static CommissionStatus? fromJson(dynamic value) =>
+      CommissionStatusTypeTransformer().decode(value);
 
-  static List<CommissionStatus> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<CommissionStatus> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <CommissionStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -51,7 +54,8 @@ class CommissionStatus {
 /// Transformation class that can [encode] an instance of [CommissionStatus] to int,
 /// and [decode] dynamic data back to [CommissionStatus].
 class CommissionStatusTypeTransformer {
-  factory CommissionStatusTypeTransformer() => _instance ??= const CommissionStatusTypeTransformer._();
+  factory CommissionStatusTypeTransformer() =>
+      _instance ??= const CommissionStatusTypeTransformer._();
 
   const CommissionStatusTypeTransformer._();
 
@@ -68,8 +72,10 @@ class CommissionStatusTypeTransformer {
   CommissionStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0: return CommissionStatus.number0;
-        case 1: return CommissionStatus.number1;
+        case 0:
+          return CommissionStatus.number0;
+        case 1:
+          return CommissionStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -82,4 +88,3 @@ class CommissionStatusTypeTransformer {
   /// Singleton [CommissionStatusTypeTransformer] instance.
   static CommissionStatusTypeTransformer? _instance;
 }
-

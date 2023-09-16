@@ -64,34 +64,37 @@ class PostNotificationResponse {
   String? id;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is PostNotificationResponse &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.message == message &&
-     other.type == type &&
-     other.channels == channels &&
-     other.attributes == attributes &&
-     other.user == user &&
-     other.id == id;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PostNotificationResponse &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.message == message &&
+          other.type == type &&
+          other.channels == channels &&
+          other.attributes == attributes &&
+          other.user == user &&
+          other.id == id;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (message == null ? 0 : message!.hashCode) +
-    (type == null ? 0 : type!.hashCode) +
-    (channels == null ? 0 : channels!.hashCode) +
-    (attributes == null ? 0 : attributes!.hashCode) +
-    (user == null ? 0 : user!.hashCode) +
-    (id == null ? 0 : id!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (message == null ? 0 : message!.hashCode) +
+      (type == null ? 0 : type!.hashCode) +
+      (channels == null ? 0 : channels!.hashCode) +
+      (attributes == null ? 0 : attributes!.hashCode) +
+      (user == null ? 0 : user!.hashCode) +
+      (id == null ? 0 : id!.hashCode);
 
   @override
-  String toString() => 'PostNotificationResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, message=$message, type=$type, channels=$channels, attributes=$attributes, user=$user, id=$id]';
+  String toString() =>
+      'PostNotificationResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, message=$message, type=$type, channels=$channels, attributes=$attributes, user=$user, id=$id]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -160,8 +163,10 @@ class PostNotificationResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PostNotificationResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PostNotificationResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "PostNotificationResponse[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "PostNotificationResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -174,7 +179,8 @@ class PostNotificationResponse {
         message: mapValueOfType<String>(json, r'message'),
         type: NotificationType.fromJson(json[r'type']),
         channels: NotificationChannel.listFromJson(json[r'channels']),
-        attributes: mapCastOfType<String, String>(json, r'attributes') ?? const {},
+        attributes:
+            mapCastOfType<String, String>(json, r'attributes') ?? const {},
         user: User.fromJson(json[r'user']),
         id: mapValueOfType<String>(json, r'id'),
       );
@@ -182,7 +188,10 @@ class PostNotificationResponse {
     return null;
   }
 
-  static List<PostNotificationResponse> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PostNotificationResponse> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PostNotificationResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -210,20 +219,24 @@ class PostNotificationResponse {
   }
 
   // maps a json object with a list of PostNotificationResponse-objects as value to a dart map
-  static Map<String, List<PostNotificationResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<PostNotificationResponse>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<PostNotificationResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostNotificationResponse.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = PostNotificationResponse.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

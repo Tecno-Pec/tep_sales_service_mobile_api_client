@@ -81,6 +81,13 @@ Class | Method | HTTP request | Description
 *ClientApi* | [**tepsalesV1ClientsIdPut**](doc\/ClientApi.md#tepsalesv1clientsidput) | **PUT** /tepsales/v1/clients/{id} | Update Client
 *ClientApi* | [**tepsalesV1ClientsPagedGet**](doc\/ClientApi.md#tepsalesv1clientspagedget) | **GET** /tepsales/v1/clients/paged | Get All Client by filter with pagination
 *ClientApi* | [**tepsalesV1ClientsPost**](doc\/ClientApi.md#tepsalesv1clientspost) | **POST** /tepsales/v1/clients | Create Client
+*ClientContactCalendarApi* | [**getByIdClientContactCalendar**](doc\/ClientContactCalendarApi.md#getbyidclientcontactcalendar) | **GET** /tepsales/v1/clientcontactcalendar/{id} | Get ClientContactCalendar by id
+*ClientContactCalendarApi* | [**tepsalesV1ClientcontactcalendarAllGet**](doc\/ClientContactCalendarApi.md#tepsalesv1clientcontactcalendarallget) | **GET** /tepsales/v1/clientcontactcalendar/all | Get All ClientContactCalendar by filter
+*ClientContactCalendarApi* | [**tepsalesV1ClientcontactcalendarIdDelete**](doc\/ClientContactCalendarApi.md#tepsalesv1clientcontactcalendariddelete) | **DELETE** /tepsales/v1/clientcontactcalendar/{id} | Delete ClientContactCalendar by Id
+*ClientContactCalendarApi* | [**tepsalesV1ClientcontactcalendarIdPatch**](doc\/ClientContactCalendarApi.md#tepsalesv1clientcontactcalendaridpatch) | **PATCH** /tepsales/v1/clientcontactcalendar/{id} | Update part of ClientContactCalendar
+*ClientContactCalendarApi* | [**tepsalesV1ClientcontactcalendarIdPut**](doc\/ClientContactCalendarApi.md#tepsalesv1clientcontactcalendaridput) | **PUT** /tepsales/v1/clientcontactcalendar/{id} | Update ClientContactCalendar
+*ClientContactCalendarApi* | [**tepsalesV1ClientcontactcalendarPagedGet**](doc\/ClientContactCalendarApi.md#tepsalesv1clientcontactcalendarpagedget) | **GET** /tepsales/v1/clientcontactcalendar/paged | Get All ClientContactCalendar by filter with pagination
+*ClientContactCalendarApi* | [**tepsalesV1ClientcontactcalendarPost**](doc\/ClientContactCalendarApi.md#tepsalesv1clientcontactcalendarpost) | **POST** /tepsales/v1/clientcontactcalendar | Create ClientContactCalendar
 *CommissionApi* | [**getByIdCommission**](doc\/CommissionApi.md#getbyidcommission) | **GET** /tepsales/v1/commissions/{id} | Get Commission by id
 *CommissionApi* | [**tepsalesV1CommissionsAllGet**](doc\/CommissionApi.md#tepsalesv1commissionsallget) | **GET** /tepsales/v1/commissions/all | Get All Commission by filter
 *CommissionApi* | [**tepsalesV1CommissionsIdDelete**](doc\/CommissionApi.md#tepsalesv1commissionsiddelete) | **DELETE** /tepsales/v1/commissions/{id} | Delete Commission by Id
@@ -244,6 +251,13 @@ Class | Method | HTTP request | Description
 *ReasonCancelApi* | [**tepsalesV1ReasonscancelsIdPut**](doc\/ReasonCancelApi.md#tepsalesv1reasonscancelsidput) | **PUT** /tepsales/v1/reasonscancels/{id} | Update ReasonCancel
 *ReasonCancelApi* | [**tepsalesV1ReasonscancelsPagedGet**](doc\/ReasonCancelApi.md#tepsalesv1reasonscancelspagedget) | **GET** /tepsales/v1/reasonscancels/paged | Get All ReasonCancel by filter with pagination
 *ReasonCancelApi* | [**tepsalesV1ReasonscancelsPost**](doc\/ReasonCancelApi.md#tepsalesv1reasonscancelspost) | **POST** /tepsales/v1/reasonscancels | Create ReasonCancel
+*ReasonVisitApi* | [**getByIdReasonVisit**](doc\/ReasonVisitApi.md#getbyidreasonvisit) | **GET** /tepsales/v1/reasonsvisits/{id} | Get ReasonVisit by id
+*ReasonVisitApi* | [**tepsalesV1ReasonsvisitsAllGet**](doc\/ReasonVisitApi.md#tepsalesv1reasonsvisitsallget) | **GET** /tepsales/v1/reasonsvisits/all | Get All ReasonVisit by filter
+*ReasonVisitApi* | [**tepsalesV1ReasonsvisitsIdDelete**](doc\/ReasonVisitApi.md#tepsalesv1reasonsvisitsiddelete) | **DELETE** /tepsales/v1/reasonsvisits/{id} | Delete ReasonVisit by Id
+*ReasonVisitApi* | [**tepsalesV1ReasonsvisitsIdPatch**](doc\/ReasonVisitApi.md#tepsalesv1reasonsvisitsidpatch) | **PATCH** /tepsales/v1/reasonsvisits/{id} | Update part of ReasonVisit
+*ReasonVisitApi* | [**tepsalesV1ReasonsvisitsIdPut**](doc\/ReasonVisitApi.md#tepsalesv1reasonsvisitsidput) | **PUT** /tepsales/v1/reasonsvisits/{id} | Update ReasonVisit
+*ReasonVisitApi* | [**tepsalesV1ReasonsvisitsPagedGet**](doc\/ReasonVisitApi.md#tepsalesv1reasonsvisitspagedget) | **GET** /tepsales/v1/reasonsvisits/paged | Get All ReasonVisit by filter with pagination
+*ReasonVisitApi* | [**tepsalesV1ReasonsvisitsPost**](doc\/ReasonVisitApi.md#tepsalesv1reasonsvisitspost) | **POST** /tepsales/v1/reasonsvisits | Create ReasonVisit
 *TemplateApi* | [**getByIdTemplate**](doc\/TemplateApi.md#getbyidtemplate) | **GET** /tepsales/v1/templates/{id} | Get Template by id
 *TemplateApi* | [**tepsalesV1TemplatesAllGet**](doc\/TemplateApi.md#tepsalesv1templatesallget) | **GET** /tepsales/v1/templates/all | Get All Template by filter
 *TemplateApi* | [**tepsalesV1TemplatesIdDelete**](doc\/TemplateApi.md#tepsalesv1templatesiddelete) | **DELETE** /tepsales/v1/templates/{id} | Delete Template by Id
@@ -298,6 +312,7 @@ Class | Method | HTTP request | Description
  - [FreightType](doc\/FreightType.md)
  - [GetAllAddressResponse](doc\/GetAllAddressResponse.md)
  - [GetAllAuditResponse](doc\/GetAllAuditResponse.md)
+ - [GetAllClientContactCalendarResponse](doc\/GetAllClientContactCalendarResponse.md)
  - [GetAllClientResponse](doc\/GetAllClientResponse.md)
  - [GetAllCommissionResponse](doc\/GetAllCommissionResponse.md)
  - [GetAllCompanyGlobalParameterResponse](doc\/GetAllCompanyGlobalParameterResponse.md)
@@ -313,6 +328,7 @@ Class | Method | HTTP request | Description
  - [GetAllNotificationResponse](doc\/GetAllNotificationResponse.md)
  - [GetAllPagedAddressResponse](doc\/GetAllPagedAddressResponse.md)
  - [GetAllPagedAuditResponse](doc\/GetAllPagedAuditResponse.md)
+ - [GetAllPagedClientContactCalendarResponse](doc\/GetAllPagedClientContactCalendarResponse.md)
  - [GetAllPagedClientResponse](doc\/GetAllPagedClientResponse.md)
  - [GetAllPagedCommissionResponse](doc\/GetAllPagedCommissionResponse.md)
  - [GetAllPagedCompanyGlobalParameterResponse](doc\/GetAllPagedCompanyGlobalParameterResponse.md)
@@ -336,6 +352,7 @@ Class | Method | HTTP request | Description
  - [GetAllPagedProductResponse](doc\/GetAllPagedProductResponse.md)
  - [GetAllPagedPurchaseOrderResponse](doc\/GetAllPagedPurchaseOrderResponse.md)
  - [GetAllPagedReasonCancelResponse](doc\/GetAllPagedReasonCancelResponse.md)
+ - [GetAllPagedReasonVisitResponse](doc\/GetAllPagedReasonVisitResponse.md)
  - [GetAllPagedTemplateResponse](doc\/GetAllPagedTemplateResponse.md)
  - [GetAllPagedUserResponse](doc\/GetAllPagedUserResponse.md)
  - [GetAllPagedVehicleTypeResponse](doc\/GetAllPagedVehicleTypeResponse.md)
@@ -349,6 +366,7 @@ Class | Method | HTTP request | Description
  - [GetAllProductResponse](doc\/GetAllProductResponse.md)
  - [GetAllPurchaseOrderResponse](doc\/GetAllPurchaseOrderResponse.md)
  - [GetAllReasonCancelResponse](doc\/GetAllReasonCancelResponse.md)
+ - [GetAllReasonVisitResponse](doc\/GetAllReasonVisitResponse.md)
  - [GetAllTemplateResponse](doc\/GetAllTemplateResponse.md)
  - [GetAllUserResponse](doc\/GetAllUserResponse.md)
  - [GetAllVehicleTypeResponse](doc\/GetAllVehicleTypeResponse.md)
@@ -365,6 +383,8 @@ Class | Method | HTTP request | Description
  - [PostAddressRequest](doc\/PostAddressRequest.md)
  - [PostAddressResponse](doc\/PostAddressResponse.md)
  - [PostCancelPurchaseOrderRequest](doc\/PostCancelPurchaseOrderRequest.md)
+ - [PostClientContactCalendarRequest](doc\/PostClientContactCalendarRequest.md)
+ - [PostClientContactCalendarResponse](doc\/PostClientContactCalendarResponse.md)
  - [PostClientRequest](doc\/PostClientRequest.md)
  - [PostClientResponse](doc\/PostClientResponse.md)
  - [PostCommissionRequest](doc\/PostCommissionRequest.md)
@@ -411,6 +431,8 @@ Class | Method | HTTP request | Description
  - [PostPurchaseOrderResponse](doc\/PostPurchaseOrderResponse.md)
  - [PostReasonCancelRequest](doc\/PostReasonCancelRequest.md)
  - [PostReasonCancelResponse](doc\/PostReasonCancelResponse.md)
+ - [PostReasonVisitRequest](doc\/PostReasonVisitRequest.md)
+ - [PostReasonVisitResponse](doc\/PostReasonVisitResponse.md)
  - [PostRefusedPurchaseOrderRequest](doc\/PostRefusedPurchaseOrderRequest.md)
  - [PostTemplateRequest](doc\/PostTemplateRequest.md)
  - [PostTemplateResponse](doc\/PostTemplateResponse.md)
@@ -439,6 +461,7 @@ Class | Method | HTTP request | Description
  - [PushToken](doc\/PushToken.md)
  - [PushTokenStatus](doc\/PushTokenStatus.md)
  - [PutAddressRequest](doc\/PutAddressRequest.md)
+ - [PutClientContactCalendarRequest](doc\/PutClientContactCalendarRequest.md)
  - [PutClientRequest](doc\/PutClientRequest.md)
  - [PutCommissionRequest](doc\/PutCommissionRequest.md)
  - [PutCompanyGlobalParameterRequest](doc\/PutCompanyGlobalParameterRequest.md)
@@ -462,6 +485,7 @@ Class | Method | HTTP request | Description
  - [PutProductRequest](doc\/PutProductRequest.md)
  - [PutPurchaseOrderRequest](doc\/PutPurchaseOrderRequest.md)
  - [PutReasonCancelRequest](doc\/PutReasonCancelRequest.md)
+ - [PutReasonVisitRequest](doc\/PutReasonVisitRequest.md)
  - [PutTemplateRequest](doc\/PutTemplateRequest.md)
  - [PutUserRequest](doc\/PutUserRequest.md)
  - [PutVehicleTypeRequest](doc\/PutVehicleTypeRequest.md)

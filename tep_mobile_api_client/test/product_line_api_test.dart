@@ -1,12 +1,21 @@
-import 'package:test/test.dart';
-import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.12
 
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:tep_mobile_api_client/api.dart';
+import 'package:test/test.dart';
 
 /// tests for ProductLineApi
 void main() {
-  final instance = TepMobileApiClient().getProductLineApi();
+  final instance = ProductLineApi();
 
-  group(ProductLineApi, () {
+  group('tests for ProductLineApi', () {
     // Get ProductLine by id
     //
     //Future<GetAllProductLineResponse> getByIdProductLine(String id, { String xApiKey, String xCsrfToken }) async
@@ -16,7 +25,7 @@ void main() {
 
     // Get All ProductLine by filter
     //
-    //Future<BuiltList<GetAllProductLineResponse>> tepsalesV1ProductLinesAllGet({ String name, String externalCode, ProductLineStatus status, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<List<GetAllProductLineResponse>> tepsalesV1ProductLinesAllGet({ String name, String externalCode, ProductLineStatus status, int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1ProductLinesAllGet', () async {
       // TODO
     });
@@ -32,7 +41,7 @@ void main() {
     //
     // Sample request:                    PATCH /tepsales/v1/ProductLine/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
     //
-    //Future tepsalesV1ProductLinesIdPatch(String id, BuiltList<Operation> operation, { String xApiKey, String xCsrfToken }) async
+    //Future tepsalesV1ProductLinesIdPatch(String id, List<Operation> operation, { String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1ProductLinesIdPatch', () async {
       // TODO
     });
@@ -57,6 +66,5 @@ void main() {
     test('test tepsalesV1ProductLinesPost', () async {
       // TODO
     });
-
   });
 }

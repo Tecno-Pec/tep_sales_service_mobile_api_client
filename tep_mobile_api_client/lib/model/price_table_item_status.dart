@@ -10,7 +10,6 @@
 
 part of openapi.api;
 
-
 class PriceTableItemStatus {
   /// Instantiate a new enum with the provided [value].
   const PriceTableItemStatus._(this.value);
@@ -32,9 +31,13 @@ class PriceTableItemStatus {
     number1,
   ];
 
-  static PriceTableItemStatus? fromJson(dynamic value) => PriceTableItemStatusTypeTransformer().decode(value);
+  static PriceTableItemStatus? fromJson(dynamic value) =>
+      PriceTableItemStatusTypeTransformer().decode(value);
 
-  static List<PriceTableItemStatus> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PriceTableItemStatus> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PriceTableItemStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -51,7 +54,8 @@ class PriceTableItemStatus {
 /// Transformation class that can [encode] an instance of [PriceTableItemStatus] to int,
 /// and [decode] dynamic data back to [PriceTableItemStatus].
 class PriceTableItemStatusTypeTransformer {
-  factory PriceTableItemStatusTypeTransformer() => _instance ??= const PriceTableItemStatusTypeTransformer._();
+  factory PriceTableItemStatusTypeTransformer() =>
+      _instance ??= const PriceTableItemStatusTypeTransformer._();
 
   const PriceTableItemStatusTypeTransformer._();
 
@@ -68,8 +72,10 @@ class PriceTableItemStatusTypeTransformer {
   PriceTableItemStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0: return PriceTableItemStatus.number0;
-        case 1: return PriceTableItemStatus.number1;
+        case 0:
+          return PriceTableItemStatus.number0;
+        case 1:
+          return PriceTableItemStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -82,4 +88,3 @@ class PriceTableItemStatusTypeTransformer {
   /// Singleton [PriceTableItemStatusTypeTransformer] instance.
   static PriceTableItemStatusTypeTransformer? _instance;
 }
-

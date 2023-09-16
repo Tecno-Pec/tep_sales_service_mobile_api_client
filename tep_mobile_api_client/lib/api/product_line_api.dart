@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-
 class ProductLineApi {
-  ProductLineApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  ProductLineApi([ApiClient? apiClient])
+      : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,10 +30,13 @@ class ProductLineApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> getByIdProductLineWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> getByIdProductLineWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/productLines/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/productLines/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -50,7 +53,6 @@ class ProductLineApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -75,17 +77,28 @@ class ProductLineApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllProductLineResponse?> getByIdProductLine(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await getByIdProductLineWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllProductLineResponse?> getByIdProductLine(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await getByIdProductLineWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllProductLineResponse',) as GetAllProductLineResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllProductLineResponse',
+      ) as GetAllProductLineResponse;
     }
     return null;
   }
@@ -113,7 +126,15 @@ class ProductLineApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1ProductLinesAllGetWithHttpInfo({ String? name, String? externalCode, ProductLineStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1ProductLinesAllGetWithHttpInfo({
+    String? name,
+    String? externalCode,
+    ProductLineStatus? status,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/productLines/all';
 
@@ -149,7 +170,6 @@ class ProductLineApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -182,20 +202,37 @@ class ProductLineApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllProductLineResponse>?> tepsalesV1ProductLinesAllGet({ String? name, String? externalCode, ProductLineStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1ProductLinesAllGetWithHttpInfo( name: name, externalCode: externalCode, status: status, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<List<GetAllProductLineResponse>?> tepsalesV1ProductLinesAllGet({
+    String? name,
+    String? externalCode,
+    ProductLineStatus? status,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1ProductLinesAllGetWithHttpInfo(
+      name: name,
+      externalCode: externalCode,
+      status: status,
+      limit: limit,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllProductLineResponse>') as List)
-        .cast<GetAllProductLineResponse>()
-        .toList();
-
+      return (await apiClient.deserializeAsync(
+              responseBody, 'List<GetAllProductLineResponse>') as List)
+          .cast<GetAllProductLineResponse>()
+          .toList();
     }
     return null;
   }
@@ -214,10 +251,13 @@ class ProductLineApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1ProductLinesIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1ProductLinesIdDeleteWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/productLines/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/productLines/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -234,7 +274,6 @@ class ProductLineApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -259,8 +298,16 @@ class ProductLineApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1ProductLinesIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1ProductLinesIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1ProductLinesIdDelete(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1ProductLinesIdDeleteWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -285,10 +332,14 @@ class ProductLineApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1ProductLinesIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1ProductLinesIdPatchWithHttpInfo(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/productLines/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/productLines/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -305,7 +356,6 @@ class ProductLineApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -335,8 +385,18 @@ class ProductLineApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1ProductLinesIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1ProductLinesIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1ProductLinesIdPatch(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1ProductLinesIdPatchWithHttpInfo(
+      id,
+      operation,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -359,10 +419,14 @@ class ProductLineApi {
   ///
   /// * [PutProductLineRequest] putProductLineRequest:
   ///   ProductLine to update
-  Future<Response> tepsalesV1ProductLinesIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutProductLineRequest? putProductLineRequest, }) async {
+  Future<http.Response> tepsalesV1ProductLinesIdPutWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutProductLineRequest? putProductLineRequest,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/productLines/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/productLines/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putProductLineRequest;
@@ -379,7 +443,6 @@ class ProductLineApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -407,8 +470,18 @@ class ProductLineApi {
   ///
   /// * [PutProductLineRequest] putProductLineRequest:
   ///   ProductLine to update
-  Future<void> tepsalesV1ProductLinesIdPut(String id, { String? xApiKey, String? xCsrfToken, PutProductLineRequest? putProductLineRequest, }) async {
-    final response = await tepsalesV1ProductLinesIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putProductLineRequest: putProductLineRequest, );
+  Future<void> tepsalesV1ProductLinesIdPut(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutProductLineRequest? putProductLineRequest,
+  }) async {
+    final response = await tepsalesV1ProductLinesIdPutWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      putProductLineRequest: putProductLineRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -438,7 +511,16 @@ class ProductLineApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1ProductLinesPagedGetWithHttpInfo({ String? name, String? externalCode, ProductLineStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1ProductLinesPagedGetWithHttpInfo({
+    String? name,
+    String? externalCode,
+    ProductLineStatus? status,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/productLines/paged';
 
@@ -477,7 +559,6 @@ class ProductLineApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -511,17 +592,38 @@ class ProductLineApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedProductLineResponse?> tepsalesV1ProductLinesPagedGet({ String? name, String? externalCode, ProductLineStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1ProductLinesPagedGetWithHttpInfo( name: name, externalCode: externalCode, status: status, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllPagedProductLineResponse?> tepsalesV1ProductLinesPagedGet({
+    String? name,
+    String? externalCode,
+    ProductLineStatus? status,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1ProductLinesPagedGetWithHttpInfo(
+      name: name,
+      externalCode: externalCode,
+      status: status,
+      page: page,
+      pageSize: pageSize,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedProductLineResponse',) as GetAllPagedProductLineResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllPagedProductLineResponse',
+      ) as GetAllPagedProductLineResponse;
     }
     return null;
   }
@@ -540,7 +642,11 @@ class ProductLineApi {
   ///
   /// * [PostProductLineRequest] postProductLineRequest:
   ///   ProductLine to create
-  Future<Response> tepsalesV1ProductLinesPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostProductLineRequest? postProductLineRequest, }) async {
+  Future<http.Response> tepsalesV1ProductLinesPostWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostProductLineRequest? postProductLineRequest,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/productLines';
 
@@ -559,7 +665,6 @@ class ProductLineApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -584,17 +689,28 @@ class ProductLineApi {
   ///
   /// * [PostProductLineRequest] postProductLineRequest:
   ///   ProductLine to create
-  Future<PostProductLineResponse?> tepsalesV1ProductLinesPost({ String? xApiKey, String? xCsrfToken, PostProductLineRequest? postProductLineRequest, }) async {
-    final response = await tepsalesV1ProductLinesPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postProductLineRequest: postProductLineRequest, );
+  Future<PostProductLineResponse?> tepsalesV1ProductLinesPost({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostProductLineRequest? postProductLineRequest,
+  }) async {
+    final response = await tepsalesV1ProductLinesPostWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      postProductLineRequest: postProductLineRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostProductLineResponse',) as PostProductLineResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'PostProductLineResponse',
+      ) as PostProductLineResponse;
     }
     return null;
   }

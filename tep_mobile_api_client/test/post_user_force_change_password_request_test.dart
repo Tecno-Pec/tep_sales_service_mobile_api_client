@@ -13,7 +13,7 @@ import 'package:test/test.dart';
 
 // tests for PostUserForceChangePasswordRequest
 void main() {
-  // final instance = PostUserForceChangePasswordRequest();
+  final instance = PostUserForceChangePasswordRequest(email: "", defaultPassword: "");
 
   group('test PostUserForceChangePasswordRequest', () {
     // String email
@@ -25,8 +25,5 @@ void main() {
     test('to test the property `defaultPassword`', () async {
       // TODO
     });
-
-
   });
-
 }

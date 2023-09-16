@@ -10,7 +10,6 @@
 
 part of openapi.api;
 
-
 class PriceTableStatus {
   /// Instantiate a new enum with the provided [value].
   const PriceTableStatus._(this.value);
@@ -32,9 +31,13 @@ class PriceTableStatus {
     number1,
   ];
 
-  static PriceTableStatus? fromJson(dynamic value) => PriceTableStatusTypeTransformer().decode(value);
+  static PriceTableStatus? fromJson(dynamic value) =>
+      PriceTableStatusTypeTransformer().decode(value);
 
-  static List<PriceTableStatus> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PriceTableStatus> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PriceTableStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -51,7 +54,8 @@ class PriceTableStatus {
 /// Transformation class that can [encode] an instance of [PriceTableStatus] to int,
 /// and [decode] dynamic data back to [PriceTableStatus].
 class PriceTableStatusTypeTransformer {
-  factory PriceTableStatusTypeTransformer() => _instance ??= const PriceTableStatusTypeTransformer._();
+  factory PriceTableStatusTypeTransformer() =>
+      _instance ??= const PriceTableStatusTypeTransformer._();
 
   const PriceTableStatusTypeTransformer._();
 
@@ -68,8 +72,10 @@ class PriceTableStatusTypeTransformer {
   PriceTableStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0: return PriceTableStatus.number0;
-        case 1: return PriceTableStatus.number1;
+        case 0:
+          return PriceTableStatus.number0;
+        case 1:
+          return PriceTableStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -82,4 +88,3 @@ class PriceTableStatusTypeTransformer {
   /// Singleton [PriceTableStatusTypeTransformer] instance.
   static PriceTableStatusTypeTransformer? _instance;
 }
-

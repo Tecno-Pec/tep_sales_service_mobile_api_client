@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-
 class CompanyApi {
-  CompanyApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  CompanyApi([ApiClient? apiClient])
+      : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,10 +30,13 @@ class CompanyApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> getByIdCompanyWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> getByIdCompanyWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/companies/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/companies/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -50,7 +53,6 @@ class CompanyApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -75,17 +77,28 @@ class CompanyApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllCompanyResponse?> getByIdCompany(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await getByIdCompanyWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllCompanyResponse?> getByIdCompany(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await getByIdCompanyWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllCompanyResponse',) as GetAllCompanyResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllCompanyResponse',
+      ) as GetAllCompanyResponse;
     }
     return null;
   }
@@ -111,7 +124,14 @@ class CompanyApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1CompaniesAllGetWithHttpInfo({ String? name, String? document, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1CompaniesAllGetWithHttpInfo({
+    String? name,
+    String? document,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/companies/all';
 
@@ -144,7 +164,6 @@ class CompanyApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -175,20 +194,35 @@ class CompanyApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllCompanyResponse>?> tepsalesV1CompaniesAllGet({ String? name, String? document, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1CompaniesAllGetWithHttpInfo( name: name, document: document, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<List<GetAllCompanyResponse>?> tepsalesV1CompaniesAllGet({
+    String? name,
+    String? document,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1CompaniesAllGetWithHttpInfo(
+      name: name,
+      document: document,
+      limit: limit,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllCompanyResponse>') as List)
-        .cast<GetAllCompanyResponse>()
-        .toList();
-
+      return (await apiClient.deserializeAsync(
+              responseBody, 'List<GetAllCompanyResponse>') as List)
+          .cast<GetAllCompanyResponse>()
+          .toList();
     }
     return null;
   }
@@ -207,10 +241,13 @@ class CompanyApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1CompaniesIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1CompaniesIdDeleteWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/companies/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/companies/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -227,7 +264,6 @@ class CompanyApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -252,8 +288,16 @@ class CompanyApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1CompaniesIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1CompaniesIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1CompaniesIdDelete(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1CompaniesIdDeleteWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -278,10 +322,14 @@ class CompanyApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1CompaniesIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1CompaniesIdPatchWithHttpInfo(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/companies/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/companies/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -298,7 +346,6 @@ class CompanyApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -328,8 +375,18 @@ class CompanyApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1CompaniesIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1CompaniesIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1CompaniesIdPatch(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1CompaniesIdPatchWithHttpInfo(
+      id,
+      operation,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -352,10 +409,14 @@ class CompanyApi {
   ///
   /// * [PutCompanyRequest] putCompanyRequest:
   ///   Company to update
-  Future<Response> tepsalesV1CompaniesIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutCompanyRequest? putCompanyRequest, }) async {
+  Future<http.Response> tepsalesV1CompaniesIdPutWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutCompanyRequest? putCompanyRequest,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/companies/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/companies/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putCompanyRequest;
@@ -372,7 +433,6 @@ class CompanyApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -400,8 +460,18 @@ class CompanyApi {
   ///
   /// * [PutCompanyRequest] putCompanyRequest:
   ///   Company to update
-  Future<void> tepsalesV1CompaniesIdPut(String id, { String? xApiKey, String? xCsrfToken, PutCompanyRequest? putCompanyRequest, }) async {
-    final response = await tepsalesV1CompaniesIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putCompanyRequest: putCompanyRequest, );
+  Future<void> tepsalesV1CompaniesIdPut(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutCompanyRequest? putCompanyRequest,
+  }) async {
+    final response = await tepsalesV1CompaniesIdPutWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      putCompanyRequest: putCompanyRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -429,7 +499,15 @@ class CompanyApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1CompaniesPagedGetWithHttpInfo({ String? name, String? document, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1CompaniesPagedGetWithHttpInfo({
+    String? name,
+    String? document,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/companies/paged';
 
@@ -465,7 +543,6 @@ class CompanyApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -497,17 +574,36 @@ class CompanyApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedCompanyResponse?> tepsalesV1CompaniesPagedGet({ String? name, String? document, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1CompaniesPagedGetWithHttpInfo( name: name, document: document, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllPagedCompanyResponse?> tepsalesV1CompaniesPagedGet({
+    String? name,
+    String? document,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1CompaniesPagedGetWithHttpInfo(
+      name: name,
+      document: document,
+      page: page,
+      pageSize: pageSize,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedCompanyResponse',) as GetAllPagedCompanyResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllPagedCompanyResponse',
+      ) as GetAllPagedCompanyResponse;
     }
     return null;
   }
@@ -526,7 +622,11 @@ class CompanyApi {
   ///
   /// * [PostCompanyRequest] postCompanyRequest:
   ///   Company to create
-  Future<Response> tepsalesV1CompaniesPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostCompanyRequest? postCompanyRequest, }) async {
+  Future<http.Response> tepsalesV1CompaniesPostWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostCompanyRequest? postCompanyRequest,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/companies';
 
@@ -545,7 +645,6 @@ class CompanyApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -570,17 +669,28 @@ class CompanyApi {
   ///
   /// * [PostCompanyRequest] postCompanyRequest:
   ///   Company to create
-  Future<PostCompanyResponse?> tepsalesV1CompaniesPost({ String? xApiKey, String? xCsrfToken, PostCompanyRequest? postCompanyRequest, }) async {
-    final response = await tepsalesV1CompaniesPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postCompanyRequest: postCompanyRequest, );
+  Future<PostCompanyResponse?> tepsalesV1CompaniesPost({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostCompanyRequest? postCompanyRequest,
+  }) async {
+    final response = await tepsalesV1CompaniesPostWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      postCompanyRequest: postCompanyRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostCompanyResponse',) as PostCompanyResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'PostCompanyResponse',
+      ) as PostCompanyResponse;
     }
     return null;
   }

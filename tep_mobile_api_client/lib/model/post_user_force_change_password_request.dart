@@ -22,23 +22,25 @@ class PostUserForceChangePasswordRequest {
   String defaultPassword;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is PostUserForceChangePasswordRequest &&
-     other.email == email &&
-     other.defaultPassword == defaultPassword;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PostUserForceChangePasswordRequest &&
+          other.email == email &&
+          other.defaultPassword == defaultPassword;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (email.hashCode) +
-    (defaultPassword.hashCode);
+      // ignore: unnecessary_parenthesis
+      (email.hashCode) + (defaultPassword.hashCode);
 
   @override
-  String toString() => 'PostUserForceChangePasswordRequest[email=$email, defaultPassword=$defaultPassword]';
+  String toString() =>
+      'PostUserForceChangePasswordRequest[email=$email, defaultPassword=$defaultPassword]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
-      json[r'email'] = this.email;
-      json[r'defaultPassword'] = this.defaultPassword;
+    json[r'email'] = this.email;
+    json[r'defaultPassword'] = this.defaultPassword;
     return json;
   }
 
@@ -54,8 +56,10 @@ class PostUserForceChangePasswordRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PostUserForceChangePasswordRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PostUserForceChangePasswordRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "PostUserForceChangePasswordRequest[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "PostUserForceChangePasswordRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -68,7 +72,10 @@ class PostUserForceChangePasswordRequest {
     return null;
   }
 
-  static List<PostUserForceChangePasswordRequest> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PostUserForceChangePasswordRequest> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PostUserForceChangePasswordRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -81,7 +88,8 @@ class PostUserForceChangePasswordRequest {
     return result.toList(growable: growable);
   }
 
-  static Map<String, PostUserForceChangePasswordRequest> mapFromJson(dynamic json) {
+  static Map<String, PostUserForceChangePasswordRequest> mapFromJson(
+      dynamic json) {
     final map = <String, PostUserForceChangePasswordRequest>{};
     if (json is Map && json.isNotEmpty) {
       json = json.cast<String, dynamic>(); // ignore: parameter_assignments
@@ -96,13 +104,19 @@ class PostUserForceChangePasswordRequest {
   }
 
   // maps a json object with a list of PostUserForceChangePasswordRequest-objects as value to a dart map
-  static Map<String, List<PostUserForceChangePasswordRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<PostUserForceChangePasswordRequest>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<PostUserForceChangePasswordRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PostUserForceChangePasswordRequest.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = PostUserForceChangePasswordRequest.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
@@ -114,4 +128,3 @@ class PostUserForceChangePasswordRequest {
     'defaultPassword',
   };
 }
-

@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-
 class DiscountRuleApi {
-  DiscountRuleApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  DiscountRuleApi([ApiClient? apiClient])
+      : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,10 +30,13 @@ class DiscountRuleApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> getByIdDiscountRuleWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> getByIdDiscountRuleWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/discountRules/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/discountRules/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -50,7 +53,6 @@ class DiscountRuleApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -75,17 +77,28 @@ class DiscountRuleApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllDiscountRuleResponse?> getByIdDiscountRule(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await getByIdDiscountRuleWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllDiscountRuleResponse?> getByIdDiscountRule(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await getByIdDiscountRuleWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllDiscountRuleResponse',) as GetAllDiscountRuleResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllDiscountRuleResponse',
+      ) as GetAllDiscountRuleResponse;
     }
     return null;
   }
@@ -119,7 +132,18 @@ class DiscountRuleApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DiscountRulesAllGetWithHttpInfo({ DiscountWeightTypeEnum? discountWeightType, DiscountTypeEnum? discountType, ReferenceTypeEnum? referenceType, String? referenceId, String? externalCode, DiscountRuleStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1DiscountRulesAllGetWithHttpInfo({
+    DiscountWeightTypeEnum? discountWeightType,
+    DiscountTypeEnum? discountType,
+    ReferenceTypeEnum? referenceType,
+    String? referenceId,
+    String? externalCode,
+    DiscountRuleStatus? status,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/discountRules/all';
 
@@ -131,7 +155,8 @@ class DiscountRuleApi {
     final formParams = <String, String>{};
 
     if (discountWeightType != null) {
-      queryParams.addAll(_queryParams('', 'discountWeightType', discountWeightType));
+      queryParams
+          .addAll(_queryParams('', 'discountWeightType', discountWeightType));
     }
     if (discountType != null) {
       queryParams.addAll(_queryParams('', 'discountType', discountType));
@@ -164,7 +189,6 @@ class DiscountRuleApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -203,20 +227,43 @@ class DiscountRuleApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllDiscountRuleResponse>?> tepsalesV1DiscountRulesAllGet({ DiscountWeightTypeEnum? discountWeightType, DiscountTypeEnum? discountType, ReferenceTypeEnum? referenceType, String? referenceId, String? externalCode, DiscountRuleStatus? status, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DiscountRulesAllGetWithHttpInfo( discountWeightType: discountWeightType, discountType: discountType, referenceType: referenceType, referenceId: referenceId, externalCode: externalCode, status: status, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<List<GetAllDiscountRuleResponse>?> tepsalesV1DiscountRulesAllGet({
+    DiscountWeightTypeEnum? discountWeightType,
+    DiscountTypeEnum? discountType,
+    ReferenceTypeEnum? referenceType,
+    String? referenceId,
+    String? externalCode,
+    DiscountRuleStatus? status,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1DiscountRulesAllGetWithHttpInfo(
+      discountWeightType: discountWeightType,
+      discountType: discountType,
+      referenceType: referenceType,
+      referenceId: referenceId,
+      externalCode: externalCode,
+      status: status,
+      limit: limit,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllDiscountRuleResponse>') as List)
-        .cast<GetAllDiscountRuleResponse>()
-        .toList();
-
+      return (await apiClient.deserializeAsync(
+              responseBody, 'List<GetAllDiscountRuleResponse>') as List)
+          .cast<GetAllDiscountRuleResponse>()
+          .toList();
     }
     return null;
   }
@@ -235,10 +282,13 @@ class DiscountRuleApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DiscountRulesIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1DiscountRulesIdDeleteWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/discountRules/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/discountRules/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -255,7 +305,6 @@ class DiscountRuleApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -280,8 +329,16 @@ class DiscountRuleApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1DiscountRulesIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DiscountRulesIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1DiscountRulesIdDelete(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1DiscountRulesIdDeleteWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -306,10 +363,14 @@ class DiscountRuleApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DiscountRulesIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1DiscountRulesIdPatchWithHttpInfo(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/discountRules/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/discountRules/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -326,7 +387,6 @@ class DiscountRuleApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -356,8 +416,18 @@ class DiscountRuleApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1DiscountRulesIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DiscountRulesIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1DiscountRulesIdPatch(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1DiscountRulesIdPatchWithHttpInfo(
+      id,
+      operation,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -380,10 +450,14 @@ class DiscountRuleApi {
   ///
   /// * [PutDiscountRuleRequest] putDiscountRuleRequest:
   ///   DiscountRule to update
-  Future<Response> tepsalesV1DiscountRulesIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutDiscountRuleRequest? putDiscountRuleRequest, }) async {
+  Future<http.Response> tepsalesV1DiscountRulesIdPutWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutDiscountRuleRequest? putDiscountRuleRequest,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/discountRules/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/discountRules/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putDiscountRuleRequest;
@@ -400,7 +474,6 @@ class DiscountRuleApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -428,8 +501,18 @@ class DiscountRuleApi {
   ///
   /// * [PutDiscountRuleRequest] putDiscountRuleRequest:
   ///   DiscountRule to update
-  Future<void> tepsalesV1DiscountRulesIdPut(String id, { String? xApiKey, String? xCsrfToken, PutDiscountRuleRequest? putDiscountRuleRequest, }) async {
-    final response = await tepsalesV1DiscountRulesIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putDiscountRuleRequest: putDiscountRuleRequest, );
+  Future<void> tepsalesV1DiscountRulesIdPut(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutDiscountRuleRequest? putDiscountRuleRequest,
+  }) async {
+    final response = await tepsalesV1DiscountRulesIdPutWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      putDiscountRuleRequest: putDiscountRuleRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -465,7 +548,19 @@ class DiscountRuleApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1DiscountRulesPagedGetWithHttpInfo({ DiscountWeightTypeEnum? discountWeightType, DiscountTypeEnum? discountType, ReferenceTypeEnum? referenceType, String? referenceId, String? externalCode, DiscountRuleStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1DiscountRulesPagedGetWithHttpInfo({
+    DiscountWeightTypeEnum? discountWeightType,
+    DiscountTypeEnum? discountType,
+    ReferenceTypeEnum? referenceType,
+    String? referenceId,
+    String? externalCode,
+    DiscountRuleStatus? status,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/discountRules/paged';
 
@@ -477,7 +572,8 @@ class DiscountRuleApi {
     final formParams = <String, String>{};
 
     if (discountWeightType != null) {
-      queryParams.addAll(_queryParams('', 'discountWeightType', discountWeightType));
+      queryParams
+          .addAll(_queryParams('', 'discountWeightType', discountWeightType));
     }
     if (discountType != null) {
       queryParams.addAll(_queryParams('', 'discountType', discountType));
@@ -513,7 +609,6 @@ class DiscountRuleApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -553,17 +648,44 @@ class DiscountRuleApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedDiscountRuleResponse?> tepsalesV1DiscountRulesPagedGet({ DiscountWeightTypeEnum? discountWeightType, DiscountTypeEnum? discountType, ReferenceTypeEnum? referenceType, String? referenceId, String? externalCode, DiscountRuleStatus? status, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1DiscountRulesPagedGetWithHttpInfo( discountWeightType: discountWeightType, discountType: discountType, referenceType: referenceType, referenceId: referenceId, externalCode: externalCode, status: status, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllPagedDiscountRuleResponse?> tepsalesV1DiscountRulesPagedGet({
+    DiscountWeightTypeEnum? discountWeightType,
+    DiscountTypeEnum? discountType,
+    ReferenceTypeEnum? referenceType,
+    String? referenceId,
+    String? externalCode,
+    DiscountRuleStatus? status,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1DiscountRulesPagedGetWithHttpInfo(
+      discountWeightType: discountWeightType,
+      discountType: discountType,
+      referenceType: referenceType,
+      referenceId: referenceId,
+      externalCode: externalCode,
+      status: status,
+      page: page,
+      pageSize: pageSize,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedDiscountRuleResponse',) as GetAllPagedDiscountRuleResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllPagedDiscountRuleResponse',
+      ) as GetAllPagedDiscountRuleResponse;
     }
     return null;
   }
@@ -582,7 +704,11 @@ class DiscountRuleApi {
   ///
   /// * [PostDiscountRuleRequest] postDiscountRuleRequest:
   ///   DiscountRule to create
-  Future<Response> tepsalesV1DiscountRulesPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostDiscountRuleRequest? postDiscountRuleRequest, }) async {
+  Future<http.Response> tepsalesV1DiscountRulesPostWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostDiscountRuleRequest? postDiscountRuleRequest,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/discountRules';
 
@@ -601,7 +727,6 @@ class DiscountRuleApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -626,17 +751,28 @@ class DiscountRuleApi {
   ///
   /// * [PostDiscountRuleRequest] postDiscountRuleRequest:
   ///   DiscountRule to create
-  Future<PostDiscountRuleResponse?> tepsalesV1DiscountRulesPost({ String? xApiKey, String? xCsrfToken, PostDiscountRuleRequest? postDiscountRuleRequest, }) async {
-    final response = await tepsalesV1DiscountRulesPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postDiscountRuleRequest: postDiscountRuleRequest, );
+  Future<PostDiscountRuleResponse?> tepsalesV1DiscountRulesPost({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostDiscountRuleRequest? postDiscountRuleRequest,
+  }) async {
+    final response = await tepsalesV1DiscountRulesPostWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      postDiscountRuleRequest: postDiscountRuleRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostDiscountRuleResponse',) as PostDiscountRuleResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'PostDiscountRuleResponse',
+      ) as PostDiscountRuleResponse;
     }
     return null;
   }

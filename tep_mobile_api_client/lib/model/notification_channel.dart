@@ -10,7 +10,6 @@
 
 part of openapi.api;
 
-
 class NotificationChannel {
   /// Instantiate a new enum with the provided [value].
   const NotificationChannel._(this.value);
@@ -34,9 +33,13 @@ class NotificationChannel {
     number3,
   ];
 
-  static NotificationChannel? fromJson(dynamic value) => NotificationChannelTypeTransformer().decode(value);
+  static NotificationChannel? fromJson(dynamic value) =>
+      NotificationChannelTypeTransformer().decode(value);
 
-  static List<NotificationChannel> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<NotificationChannel> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <NotificationChannel>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -53,7 +56,8 @@ class NotificationChannel {
 /// Transformation class that can [encode] an instance of [NotificationChannel] to int,
 /// and [decode] dynamic data back to [NotificationChannel].
 class NotificationChannelTypeTransformer {
-  factory NotificationChannelTypeTransformer() => _instance ??= const NotificationChannelTypeTransformer._();
+  factory NotificationChannelTypeTransformer() =>
+      _instance ??= const NotificationChannelTypeTransformer._();
 
   const NotificationChannelTypeTransformer._();
 
@@ -70,9 +74,12 @@ class NotificationChannelTypeTransformer {
   NotificationChannel? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 1: return NotificationChannel.number1;
-        case 2: return NotificationChannel.number2;
-        case 3: return NotificationChannel.number3;
+        case 1:
+          return NotificationChannel.number1;
+        case 2:
+          return NotificationChannel.number2;
+        case 3:
+          return NotificationChannel.number3;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -85,4 +92,3 @@ class NotificationChannelTypeTransformer {
   /// Singleton [NotificationChannelTypeTransformer] instance.
   static NotificationChannelTypeTransformer? _instance;
 }
-

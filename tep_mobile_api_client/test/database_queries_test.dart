@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.12
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
-import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
 
 // tests for DatabaseQueries
 void main() {
-  final instance = DatabaseQueriesBuilder();
-  // TODO add properties to the builder and call build()
+  final instance = DatabaseQueries();
 
-  group(DatabaseQueries, () {
+  group('test DatabaseQueries', () {
     // String queryAddresses
     test('to test the property `queryAddresses`', () async {
       // TODO
@@ -128,12 +137,14 @@ void main() {
     });
 
     // String queryDistribuitionCenterClientAddress
-    test('to test the property `queryDistribuitionCenterClientAddress`', () async {
+    test('to test the property `queryDistribuitionCenterClientAddress`',
+        () async {
       // TODO
     });
 
     // bool queryDistribuitionCenterClientAddressIsEnable
-    test('to test the property `queryDistribuitionCenterClientAddressIsEnable`', () async {
+    test('to test the property `queryDistribuitionCenterClientAddressIsEnable`',
+        () async {
       // TODO
     });
 
@@ -143,7 +154,8 @@ void main() {
     });
 
     // bool queryFreightConversionFactorIsEnable
-    test('to test the property `queryFreightConversionFactorIsEnable`', () async {
+    test('to test the property `queryFreightConversionFactorIsEnable`',
+        () async {
       // TODO
     });
 
@@ -186,6 +198,5 @@ void main() {
     test('to test the property `queryPriceTableUnloadingIsEnable`', () async {
       // TODO
     });
-
   });
 }

@@ -142,58 +142,61 @@ class User {
   List<PushToken>? pushTokens;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is User &&
-     other.id == id &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.version == version &&
-     other.companyId == companyId &&
-     other.name == name &&
-     other.documentId == documentId &&
-     other.phone == phone &&
-     other.password == password &&
-     other.email == email &&
-     other.isActive == isActive &&
-     other.isSuperAdmin == isSuperAdmin &&
-     other.isAdmin == isAdmin &&
-     other.isRegionManager == isRegionManager &&
-     other.isSalesman == isSalesman &&
-     other.isIntegration == isIntegration &&
-     other.externalCode == externalCode &&
-     other.status == status &&
-     other.forceChangePassword == forceChangePassword &&
-     other.pushTokens == pushTokens;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is User &&
+          other.id == id &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.version == version &&
+          other.companyId == companyId &&
+          other.name == name &&
+          other.documentId == documentId &&
+          other.phone == phone &&
+          other.password == password &&
+          other.email == email &&
+          other.isActive == isActive &&
+          other.isSuperAdmin == isSuperAdmin &&
+          other.isAdmin == isAdmin &&
+          other.isRegionManager == isRegionManager &&
+          other.isSalesman == isSalesman &&
+          other.isIntegration == isIntegration &&
+          other.externalCode == externalCode &&
+          other.status == status &&
+          other.forceChangePassword == forceChangePassword &&
+          other.pushTokens == pushTokens;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (id == null ? 0 : id!.hashCode) +
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (version == null ? 0 : version!.hashCode) +
-    (companyId == null ? 0 : companyId!.hashCode) +
-    (name == null ? 0 : name!.hashCode) +
-    (documentId == null ? 0 : documentId!.hashCode) +
-    (phone == null ? 0 : phone!.hashCode) +
-    (password == null ? 0 : password!.hashCode) +
-    (email == null ? 0 : email!.hashCode) +
-    (isActive == null ? 0 : isActive!.hashCode) +
-    (isSuperAdmin == null ? 0 : isSuperAdmin!.hashCode) +
-    (isAdmin == null ? 0 : isAdmin!.hashCode) +
-    (isRegionManager == null ? 0 : isRegionManager!.hashCode) +
-    (isSalesman == null ? 0 : isSalesman!.hashCode) +
-    (isIntegration == null ? 0 : isIntegration!.hashCode) +
-    (externalCode == null ? 0 : externalCode!.hashCode) +
-    (status == null ? 0 : status!.hashCode) +
-    (forceChangePassword == null ? 0 : forceChangePassword!.hashCode) +
-    (pushTokens == null ? 0 : pushTokens!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (id == null ? 0 : id!.hashCode) +
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (version == null ? 0 : version!.hashCode) +
+      (companyId == null ? 0 : companyId!.hashCode) +
+      (name == null ? 0 : name!.hashCode) +
+      (documentId == null ? 0 : documentId!.hashCode) +
+      (phone == null ? 0 : phone!.hashCode) +
+      (password == null ? 0 : password!.hashCode) +
+      (email == null ? 0 : email!.hashCode) +
+      (isActive == null ? 0 : isActive!.hashCode) +
+      (isSuperAdmin == null ? 0 : isSuperAdmin!.hashCode) +
+      (isAdmin == null ? 0 : isAdmin!.hashCode) +
+      (isRegionManager == null ? 0 : isRegionManager!.hashCode) +
+      (isSalesman == null ? 0 : isSalesman!.hashCode) +
+      (isIntegration == null ? 0 : isIntegration!.hashCode) +
+      (externalCode == null ? 0 : externalCode!.hashCode) +
+      (status == null ? 0 : status!.hashCode) +
+      (forceChangePassword == null ? 0 : forceChangePassword!.hashCode) +
+      (pushTokens == null ? 0 : pushTokens!.hashCode);
 
   @override
-  String toString() => 'User[id=$id, createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, version=$version, companyId=$companyId, name=$name, documentId=$documentId, phone=$phone, password=$password, email=$email, isActive=$isActive, isSuperAdmin=$isSuperAdmin, isAdmin=$isAdmin, isRegionManager=$isRegionManager, isSalesman=$isSalesman, isIntegration=$isIntegration, externalCode=$externalCode, status=$status, forceChangePassword=$forceChangePassword, pushTokens=$pushTokens]';
+  String toString() =>
+      'User[id=$id, createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, version=$version, companyId=$companyId, name=$name, documentId=$documentId, phone=$phone, password=$password, email=$email, isActive=$isActive, isSuperAdmin=$isSuperAdmin, isAdmin=$isAdmin, isRegionManager=$isRegionManager, isSalesman=$isSalesman, isIntegration=$isIntegration, externalCode=$externalCode, status=$status, forceChangePassword=$forceChangePassword, pushTokens=$pushTokens]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -322,8 +325,10 @@ class User {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "User[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "User[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "User[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "User[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -356,7 +361,10 @@ class User {
     return null;
   }
 
-  static List<User> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<User> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <User>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -384,20 +392,24 @@ class User {
   }
 
   // maps a json object with a list of User-objects as value to a dart map
-  static Map<String, List<User>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<User>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<User>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = User.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = User.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

@@ -1,12 +1,21 @@
-import 'package:test/test.dart';
-import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.12
 
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:tep_mobile_api_client/api.dart';
+import 'package:test/test.dart';
 
 /// tests for IntegrationConfigApi
 void main() {
-  final instance = TepMobileApiClient().getIntegrationConfigApi();
+  final instance = IntegrationConfigApi();
 
-  group(IntegrationConfigApi, () {
+  group('tests for IntegrationConfigApi', () {
     // Get IntegrationConfig by id
     //
     //Future<GetAllIntegrationConfigResponse> getByIdIntegrationConfig(String id, { String xApiKey, String xCsrfToken }) async
@@ -16,7 +25,7 @@ void main() {
 
     // Get All IntegrationConfig by filter
     //
-    //Future<BuiltList<GetAllIntegrationConfigResponse>> tepsalesV1IntegrationConfigAllGet({ JsonObject model, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<List<GetAllIntegrationConfigResponse>> tepsalesV1IntegrationConfigAllGet({ Object model, int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1IntegrationConfigAllGet', () async {
       // TODO
     });
@@ -32,7 +41,7 @@ void main() {
     //
     // Sample request:                    PATCH /tepsales/v1/IntegrationConfig/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
     //
-    //Future tepsalesV1IntegrationConfigIdPatch(String id, BuiltList<Operation> operation, { String xApiKey, String xCsrfToken }) async
+    //Future tepsalesV1IntegrationConfigIdPatch(String id, List<Operation> operation, { String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1IntegrationConfigIdPatch', () async {
       // TODO
     });
@@ -57,6 +66,5 @@ void main() {
     test('test tepsalesV1IntegrationConfigPost', () async {
       // TODO
     });
-
   });
 }

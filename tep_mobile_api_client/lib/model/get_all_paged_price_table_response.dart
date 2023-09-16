@@ -73,28 +73,31 @@ class GetAllPagedPriceTableResponse {
   List<GetAllPriceTableResponse>? results;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is GetAllPagedPriceTableResponse &&
-     other.currentPage == currentPage &&
-     other.pageCount == pageCount &&
-     other.pageSize == pageSize &&
-     other.rowCount == rowCount &&
-     other.firstRowOnPage == firstRowOnPage &&
-     other.lastRowOnPage == lastRowOnPage &&
-     other.results == results;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is GetAllPagedPriceTableResponse &&
+          other.currentPage == currentPage &&
+          other.pageCount == pageCount &&
+          other.pageSize == pageSize &&
+          other.rowCount == rowCount &&
+          other.firstRowOnPage == firstRowOnPage &&
+          other.lastRowOnPage == lastRowOnPage &&
+          other.results == results;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (currentPage == null ? 0 : currentPage!.hashCode) +
-    (pageCount == null ? 0 : pageCount!.hashCode) +
-    (pageSize == null ? 0 : pageSize!.hashCode) +
-    (rowCount == null ? 0 : rowCount!.hashCode) +
-    (firstRowOnPage == null ? 0 : firstRowOnPage!.hashCode) +
-    (lastRowOnPage == null ? 0 : lastRowOnPage!.hashCode) +
-    (results == null ? 0 : results!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (currentPage == null ? 0 : currentPage!.hashCode) +
+      (pageCount == null ? 0 : pageCount!.hashCode) +
+      (pageSize == null ? 0 : pageSize!.hashCode) +
+      (rowCount == null ? 0 : rowCount!.hashCode) +
+      (firstRowOnPage == null ? 0 : firstRowOnPage!.hashCode) +
+      (lastRowOnPage == null ? 0 : lastRowOnPage!.hashCode) +
+      (results == null ? 0 : results!.hashCode);
 
   @override
-  String toString() => 'GetAllPagedPriceTableResponse[currentPage=$currentPage, pageCount=$pageCount, pageSize=$pageSize, rowCount=$rowCount, firstRowOnPage=$firstRowOnPage, lastRowOnPage=$lastRowOnPage, results=$results]';
+  String toString() =>
+      'GetAllPagedPriceTableResponse[currentPage=$currentPage, pageCount=$pageCount, pageSize=$pageSize, rowCount=$rowCount, firstRowOnPage=$firstRowOnPage, lastRowOnPage=$lastRowOnPage, results=$results]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -148,8 +151,10 @@ class GetAllPagedPriceTableResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "GetAllPagedPriceTableResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "GetAllPagedPriceTableResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "GetAllPagedPriceTableResponse[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "GetAllPagedPriceTableResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -167,7 +172,10 @@ class GetAllPagedPriceTableResponse {
     return null;
   }
 
-  static List<GetAllPagedPriceTableResponse> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<GetAllPagedPriceTableResponse> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <GetAllPagedPriceTableResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -195,20 +203,24 @@ class GetAllPagedPriceTableResponse {
   }
 
   // maps a json object with a list of GetAllPagedPriceTableResponse-objects as value to a dart map
-  static Map<String, List<GetAllPagedPriceTableResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<GetAllPagedPriceTableResponse>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<GetAllPagedPriceTableResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = GetAllPagedPriceTableResponse.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = GetAllPagedPriceTableResponse.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8520721f-6475-4ce1-b139-a16d8557655c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a81a816a-41bd-4f15-9053-eba0842b5d52']
 
 ### Return type
 
@@ -103,7 +103,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f14daacd-dbb5-412d-bc5c-ed3206231f4d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5076b59b-3111-4445-9cc1-6ea4bb359d47']
 
 ### Return type
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1UsersAllGet**
-> List<GetAllUserResponse> tepsalesV1UsersAllGet(name, documentId, phone, email, externalCode, status, limit, sort, xApiKey, xCsrfToken)
+> List<GetAllUserResponse> tepsalesV1UsersAllGet(name, documentId, phone, email, externalCode, status, isSalesman, limit, sort, xApiKey, xCsrfToken)
 
 Get All User by filter
 
@@ -140,13 +140,14 @@ final phone = phone_example; // String |
 final email = email_example; // String | 
 final externalCode = externalCode_example; // String | 
 final status = ; // UserStatus | 
+final isSalesman = true; // bool | 
 final limit = 56; // int | limit
 final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
 final xApiKey = xApiKey_example; // String | Your Api Key
 final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1UsersAllGet(name, documentId, phone, email, externalCode, status, limit, sort, xApiKey, xCsrfToken);
+    final result = api_instance.tepsalesV1UsersAllGet(name, documentId, phone, email, externalCode, status, isSalesman, limit, sort, xApiKey, xCsrfToken);
     print(result);
 } catch (e) {
     print('Exception when calling UserApi->tepsalesV1UsersAllGet: $e\n');
@@ -163,10 +164,11 @@ Name | Type | Description  | Notes
  **email** | **String**|  | [optional] 
  **externalCode** | **String**|  | [optional] 
  **status** | [**UserStatus**](.md)|  | [optional] 
+ **isSalesman** | **bool**|  | [optional] 
  **limit** | **int**| limit | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2f702753-96f1-4c51-a0ae-ca4032587e7d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd06104ff-3451-41f0-808c-cdb8b34e9594']
 
 ### Return type
 
@@ -214,7 +216,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '45d49eb1-5f47-43d7-b794-9d5609b1cedc']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e7840d0d-255e-451e-aa08-62db28a1514a']
  **postUserForceChangePasswordRequest** | [**PostUserForceChangePasswordRequest**](PostUserForceChangePasswordRequest.md)| Force Change Password | [optional] 
 
 ### Return type
@@ -263,7 +265,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ea59e9df-44f5-491d-8d4e-7afb9232e2ca']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '74004d73-4d78-4ecf-a215-dfa3212159d5']
 
 ### Return type
 
@@ -315,7 +317,7 @@ Name | Type | Description  | Notes
  **id** | **String**| User id | 
  **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cf6b8ee6-8e03-4641-9c02-f2a3c84292f8']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8a41aa81-47d9-4e44-80e6-91e3b8311242']
 
 ### Return type
 
@@ -364,7 +366,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '449c38f8-6db1-49f9-bc1a-b71724972b4b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8a15b4ce-464c-4d5e-9767-377affc53828']
  **putUserRequest** | [**PutUserRequest**](PutUserRequest.md)| User to update | [optional] 
 
 ### Return type
@@ -383,7 +385,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1UsersPagedGet**
-> GetAllPagedUserResponse tepsalesV1UsersPagedGet(name, documentId, phone, email, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken)
+> GetAllPagedUserResponse tepsalesV1UsersPagedGet(name, documentId, phone, email, externalCode, status, isSalesman, page, pageSize, sort, xApiKey, xCsrfToken)
 
 Get All User by filter with pagination
 
@@ -402,6 +404,7 @@ final phone = phone_example; // String |
 final email = email_example; // String | 
 final externalCode = externalCode_example; // String | 
 final status = ; // UserStatus | 
+final isSalesman = true; // bool | 
 final page = 56; // int | 
 final pageSize = 56; // int | 
 final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
@@ -409,7 +412,7 @@ final xApiKey = xApiKey_example; // String | Your Api Key
 final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1UsersPagedGet(name, documentId, phone, email, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
+    final result = api_instance.tepsalesV1UsersPagedGet(name, documentId, phone, email, externalCode, status, isSalesman, page, pageSize, sort, xApiKey, xCsrfToken);
     print(result);
 } catch (e) {
     print('Exception when calling UserApi->tepsalesV1UsersPagedGet: $e\n');
@@ -426,11 +429,12 @@ Name | Type | Description  | Notes
  **email** | **String**|  | [optional] 
  **externalCode** | **String**|  | [optional] 
  **status** | [**UserStatus**](.md)|  | [optional] 
+ **isSalesman** | **bool**|  | [optional] 
  **page** | **int**|  | [optional] 
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b47c2fde-c079-4f19-91d8-d73c9b2ff899']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2f571f88-1630-4692-8eab-c01a9f423aab']
 
 ### Return type
 
@@ -478,7 +482,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'aab3e730-3229-4c03-9848-7f13a0d98f88']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd4003337-197c-435b-b70b-d32c98b0688c']
  **postUserRequest** | [**PostUserRequest**](PostUserRequest.md)| User to create | [optional] 
 
 ### Return type
@@ -526,7 +530,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd109c0a8-03a7-4ae0-affb-91b5de3b7755']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f1a61cbc-eea9-4752-9839-53634caaaf50']
  **postUserPushTokenRequest** | [**PostUserPushTokenRequest**](PostUserPushTokenRequest.md)| FCM Token | [optional] 
 
 ### Return type
@@ -575,7 +579,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '73b1ef99-8846-4e00-b7c1-93dadb694758']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '09d952c6-f2b4-4b87-bfce-f256fcabeaf2']
  **postUserResetPassword** | [**PostUserResetPassword**](PostUserResetPassword.md)| Reset Password | [optional] 
 
 ### Return type
@@ -624,7 +628,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1b450313-8992-4f43-a0d8-26196760bbeb']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9ef52487-e421-43f1-8f78-982a2b940474']
  **postUserSignInRequest** | [**PostUserSignInRequest**](PostUserSignInRequest.md)| User to create | [optional] 
 
 ### Return type
@@ -673,7 +677,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b21aaf93-cef7-419f-8374-6ad2ded2841a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e51fca00-0dbf-4f04-a607-2c36d9c715a9']
  **postUserRequest** | [**PostUserRequest**](PostUserRequest.md)| User to create | [optional] 
 
 ### Return type

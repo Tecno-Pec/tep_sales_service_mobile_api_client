@@ -178,70 +178,76 @@ class PutPurchaseOrderRequest {
   String? distribuitionCenterClientAddressId;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is PutPurchaseOrderRequest &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.id == id &&
-     other.freightValue == freightValue &&
-     other.unloadingValue == unloadingValue &&
-     other.freightType == freightType &&
-     other.valueWithoutFreight == valueWithoutFreight &&
-     other.totalValue == totalValue &&
-     other.discount == discount &&
-     other.distance == distance &&
-     other.earthDistance == earthDistance &&
-     other.totalWeightkilograms == totalWeightkilograms &&
-     other.dueDate == dueDate &&
-     other.mobileCreatedAt == mobileCreatedAt &&
-     other.isFreightFractional == isFreightFractional &&
-     other.integrationCode == integrationCode &&
-     other.paymentConditionId == paymentConditionId &&
-     other.clientId == clientId &&
-     other.deliveryAddressId == deliveryAddressId &&
-     other.invoiceAddressId == invoiceAddressId &&
-     other.items == items &&
-     other.freightCompositions == freightCompositions &&
-     other.mobileCreatedUserId == mobileCreatedUserId &&
-     other.paymentPriceTableId == paymentPriceTableId &&
-     other.distribuitionCenterId == distribuitionCenterId &&
-     other.distribuitionCenterClientAddressId == distribuitionCenterClientAddressId;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PutPurchaseOrderRequest &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.id == id &&
+          other.freightValue == freightValue &&
+          other.unloadingValue == unloadingValue &&
+          other.freightType == freightType &&
+          other.valueWithoutFreight == valueWithoutFreight &&
+          other.totalValue == totalValue &&
+          other.discount == discount &&
+          other.distance == distance &&
+          other.earthDistance == earthDistance &&
+          other.totalWeightkilograms == totalWeightkilograms &&
+          other.dueDate == dueDate &&
+          other.mobileCreatedAt == mobileCreatedAt &&
+          other.isFreightFractional == isFreightFractional &&
+          other.integrationCode == integrationCode &&
+          other.paymentConditionId == paymentConditionId &&
+          other.clientId == clientId &&
+          other.deliveryAddressId == deliveryAddressId &&
+          other.invoiceAddressId == invoiceAddressId &&
+          other.items == items &&
+          other.freightCompositions == freightCompositions &&
+          other.mobileCreatedUserId == mobileCreatedUserId &&
+          other.paymentPriceTableId == paymentPriceTableId &&
+          other.distribuitionCenterId == distribuitionCenterId &&
+          other.distribuitionCenterClientAddressId ==
+              distribuitionCenterClientAddressId;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (id == null ? 0 : id!.hashCode) +
-    (freightValue == null ? 0 : freightValue!.hashCode) +
-    (unloadingValue == null ? 0 : unloadingValue!.hashCode) +
-    (freightType == null ? 0 : freightType!.hashCode) +
-    (valueWithoutFreight == null ? 0 : valueWithoutFreight!.hashCode) +
-    (totalValue == null ? 0 : totalValue!.hashCode) +
-    (discount == null ? 0 : discount!.hashCode) +
-    (distance == null ? 0 : distance!.hashCode) +
-    (earthDistance == null ? 0 : earthDistance!.hashCode) +
-    (totalWeightkilograms == null ? 0 : totalWeightkilograms!.hashCode) +
-    (dueDate == null ? 0 : dueDate!.hashCode) +
-    (mobileCreatedAt == null ? 0 : mobileCreatedAt!.hashCode) +
-    (isFreightFractional == null ? 0 : isFreightFractional!.hashCode) +
-    (integrationCode == null ? 0 : integrationCode!.hashCode) +
-    (paymentConditionId == null ? 0 : paymentConditionId!.hashCode) +
-    (clientId == null ? 0 : clientId!.hashCode) +
-    (deliveryAddressId == null ? 0 : deliveryAddressId!.hashCode) +
-    (invoiceAddressId == null ? 0 : invoiceAddressId!.hashCode) +
-    (items == null ? 0 : items!.hashCode) +
-    (freightCompositions == null ? 0 : freightCompositions!.hashCode) +
-    (mobileCreatedUserId == null ? 0 : mobileCreatedUserId!.hashCode) +
-    (paymentPriceTableId == null ? 0 : paymentPriceTableId!.hashCode) +
-    (distribuitionCenterId == null ? 0 : distribuitionCenterId!.hashCode) +
-    (distribuitionCenterClientAddressId == null ? 0 : distribuitionCenterClientAddressId!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (id == null ? 0 : id!.hashCode) +
+      (freightValue == null ? 0 : freightValue!.hashCode) +
+      (unloadingValue == null ? 0 : unloadingValue!.hashCode) +
+      (freightType == null ? 0 : freightType!.hashCode) +
+      (valueWithoutFreight == null ? 0 : valueWithoutFreight!.hashCode) +
+      (totalValue == null ? 0 : totalValue!.hashCode) +
+      (discount == null ? 0 : discount!.hashCode) +
+      (distance == null ? 0 : distance!.hashCode) +
+      (earthDistance == null ? 0 : earthDistance!.hashCode) +
+      (totalWeightkilograms == null ? 0 : totalWeightkilograms!.hashCode) +
+      (dueDate == null ? 0 : dueDate!.hashCode) +
+      (mobileCreatedAt == null ? 0 : mobileCreatedAt!.hashCode) +
+      (isFreightFractional == null ? 0 : isFreightFractional!.hashCode) +
+      (integrationCode == null ? 0 : integrationCode!.hashCode) +
+      (paymentConditionId == null ? 0 : paymentConditionId!.hashCode) +
+      (clientId == null ? 0 : clientId!.hashCode) +
+      (deliveryAddressId == null ? 0 : deliveryAddressId!.hashCode) +
+      (invoiceAddressId == null ? 0 : invoiceAddressId!.hashCode) +
+      (items == null ? 0 : items!.hashCode) +
+      (freightCompositions == null ? 0 : freightCompositions!.hashCode) +
+      (mobileCreatedUserId == null ? 0 : mobileCreatedUserId!.hashCode) +
+      (paymentPriceTableId == null ? 0 : paymentPriceTableId!.hashCode) +
+      (distribuitionCenterId == null ? 0 : distribuitionCenterId!.hashCode) +
+      (distribuitionCenterClientAddressId == null
+          ? 0
+          : distribuitionCenterClientAddressId!.hashCode);
 
   @override
-  String toString() => 'PutPurchaseOrderRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, freightValue=$freightValue, unloadingValue=$unloadingValue, freightType=$freightType, valueWithoutFreight=$valueWithoutFreight, totalValue=$totalValue, discount=$discount, distance=$distance, earthDistance=$earthDistance, totalWeightkilograms=$totalWeightkilograms, dueDate=$dueDate, mobileCreatedAt=$mobileCreatedAt, isFreightFractional=$isFreightFractional, integrationCode=$integrationCode, paymentConditionId=$paymentConditionId, clientId=$clientId, deliveryAddressId=$deliveryAddressId, invoiceAddressId=$invoiceAddressId, items=$items, freightCompositions=$freightCompositions, mobileCreatedUserId=$mobileCreatedUserId, paymentPriceTableId=$paymentPriceTableId, distribuitionCenterId=$distribuitionCenterId, distribuitionCenterClientAddressId=$distribuitionCenterClientAddressId]';
+  String toString() =>
+      'PutPurchaseOrderRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, freightValue=$freightValue, unloadingValue=$unloadingValue, freightType=$freightType, valueWithoutFreight=$valueWithoutFreight, totalValue=$totalValue, discount=$discount, distance=$distance, earthDistance=$earthDistance, totalWeightkilograms=$totalWeightkilograms, dueDate=$dueDate, mobileCreatedAt=$mobileCreatedAt, isFreightFractional=$isFreightFractional, integrationCode=$integrationCode, paymentConditionId=$paymentConditionId, clientId=$clientId, deliveryAddressId=$deliveryAddressId, invoiceAddressId=$invoiceAddressId, items=$items, freightCompositions=$freightCompositions, mobileCreatedUserId=$mobileCreatedUserId, paymentPriceTableId=$paymentPriceTableId, distribuitionCenterId=$distribuitionCenterId, distribuitionCenterClientAddressId=$distribuitionCenterClientAddressId]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -321,7 +327,8 @@ class PutPurchaseOrderRequest {
       json[r'dueDate'] = null;
     }
     if (this.mobileCreatedAt != null) {
-      json[r'mobileCreatedAt'] = this.mobileCreatedAt!.toUtc().toIso8601String();
+      json[r'mobileCreatedAt'] =
+          this.mobileCreatedAt!.toUtc().toIso8601String();
     } else {
       json[r'mobileCreatedAt'] = null;
     }
@@ -381,7 +388,8 @@ class PutPurchaseOrderRequest {
       json[r'distribuitionCenterId'] = null;
     }
     if (this.distribuitionCenterClientAddressId != null) {
-      json[r'distribuitionCenterClientAddressId'] = this.distribuitionCenterClientAddressId;
+      json[r'distribuitionCenterClientAddressId'] =
+          this.distribuitionCenterClientAddressId;
     } else {
       json[r'distribuitionCenterClientAddressId'] = null;
     }
@@ -400,8 +408,10 @@ class PutPurchaseOrderRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PutPurchaseOrderRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PutPurchaseOrderRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "PutPurchaseOrderRequest[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "PutPurchaseOrderRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -415,12 +425,14 @@ class PutPurchaseOrderRequest {
         freightValue: mapValueOfType<double>(json, r'freightValue'),
         unloadingValue: mapValueOfType<double>(json, r'unloadingValue'),
         freightType: FreightType.fromJson(json[r'freightType']),
-        valueWithoutFreight: mapValueOfType<double>(json, r'valueWithoutFreight'),
+        valueWithoutFreight:
+            mapValueOfType<double>(json, r'valueWithoutFreight'),
         totalValue: mapValueOfType<double>(json, r'totalValue'),
         discount: mapValueOfType<double>(json, r'discount'),
         distance: mapValueOfType<double>(json, r'distance'),
         earthDistance: mapValueOfType<double>(json, r'earthDistance'),
-        totalWeightkilograms: mapValueOfType<int>(json, r'totalWeightkilograms'),
+        totalWeightkilograms:
+            mapValueOfType<int>(json, r'totalWeightkilograms'),
         dueDate: mapDateTime(json, r'dueDate', ''),
         mobileCreatedAt: mapDateTime(json, r'mobileCreatedAt', ''),
         isFreightFractional: mapValueOfType<bool>(json, r'isFreightFractional'),
@@ -430,17 +442,25 @@ class PutPurchaseOrderRequest {
         deliveryAddressId: mapValueOfType<String>(json, r'deliveryAddressId'),
         invoiceAddressId: mapValueOfType<String>(json, r'invoiceAddressId'),
         items: PurchaseOrderItemModelBase.listFromJson(json[r'items']),
-        freightCompositions: FreightCompositionModel.listFromJson(json[r'freightCompositions']),
-        mobileCreatedUserId: mapValueOfType<String>(json, r'mobileCreatedUserId'),
-        paymentPriceTableId: mapValueOfType<String>(json, r'paymentPriceTableId'),
-        distribuitionCenterId: mapValueOfType<String>(json, r'distribuitionCenterId'),
-        distribuitionCenterClientAddressId: mapValueOfType<String>(json, r'distribuitionCenterClientAddressId'),
+        freightCompositions:
+            FreightCompositionModel.listFromJson(json[r'freightCompositions']),
+        mobileCreatedUserId:
+            mapValueOfType<String>(json, r'mobileCreatedUserId'),
+        paymentPriceTableId:
+            mapValueOfType<String>(json, r'paymentPriceTableId'),
+        distribuitionCenterId:
+            mapValueOfType<String>(json, r'distribuitionCenterId'),
+        distribuitionCenterClientAddressId:
+            mapValueOfType<String>(json, r'distribuitionCenterClientAddressId'),
       );
     }
     return null;
   }
 
-  static List<PutPurchaseOrderRequest> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PutPurchaseOrderRequest> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PutPurchaseOrderRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -468,20 +488,24 @@ class PutPurchaseOrderRequest {
   }
 
   // maps a json object with a list of PutPurchaseOrderRequest-objects as value to a dart map
-  static Map<String, List<PutPurchaseOrderRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<PutPurchaseOrderRequest>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<PutPurchaseOrderRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PutPurchaseOrderRequest.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = PutPurchaseOrderRequest.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

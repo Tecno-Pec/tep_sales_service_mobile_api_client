@@ -10,7 +10,6 @@
 
 part of openapi.api;
 
-
 class PushTokenStatus {
   /// Instantiate a new enum with the provided [value].
   const PushTokenStatus._(this.value);
@@ -32,9 +31,13 @@ class PushTokenStatus {
     number1,
   ];
 
-  static PushTokenStatus? fromJson(dynamic value) => PushTokenStatusTypeTransformer().decode(value);
+  static PushTokenStatus? fromJson(dynamic value) =>
+      PushTokenStatusTypeTransformer().decode(value);
 
-  static List<PushTokenStatus> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PushTokenStatus> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PushTokenStatus>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -51,7 +54,8 @@ class PushTokenStatus {
 /// Transformation class that can [encode] an instance of [PushTokenStatus] to int,
 /// and [decode] dynamic data back to [PushTokenStatus].
 class PushTokenStatusTypeTransformer {
-  factory PushTokenStatusTypeTransformer() => _instance ??= const PushTokenStatusTypeTransformer._();
+  factory PushTokenStatusTypeTransformer() =>
+      _instance ??= const PushTokenStatusTypeTransformer._();
 
   const PushTokenStatusTypeTransformer._();
 
@@ -68,8 +72,10 @@ class PushTokenStatusTypeTransformer {
   PushTokenStatus? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0: return PushTokenStatus.number0;
-        case 1: return PushTokenStatus.number1;
+        case 0:
+          return PushTokenStatus.number0;
+        case 1:
+          return PushTokenStatus.number1;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -82,4 +88,3 @@ class PushTokenStatusTypeTransformer {
   /// Singleton [PushTokenStatusTypeTransformer] instance.
   static PushTokenStatusTypeTransformer? _instance;
 }
-

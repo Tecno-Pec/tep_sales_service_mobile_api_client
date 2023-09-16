@@ -1,12 +1,21 @@
-import 'package:test/test.dart';
-import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.12
 
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:tep_mobile_api_client/api.dart';
+import 'package:test/test.dart';
 
 /// tests for UserApi
 void main() {
-  final instance = TepMobileApiClient().getUserApi();
+  final instance = UserApi();
 
-  group(UserApi, () {
+  group('tests for UserApi', () {
     // Get User by id
     //
     //Future<GetAllUserResponse> getByIdUser(String id, { String xApiKey, String xCsrfToken }) async
@@ -23,8 +32,15 @@ void main() {
 
     // Get All User by filter
     //
-    //Future<BuiltList<GetAllUserResponse>> tepsalesV1UsersAllGet({ String name, String documentId, String phone, String email, String externalCode, UserStatus status, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<List<GetAllUserResponse>> tepsalesV1UsersAllGet({ String name, String documentId, String phone, String email, String externalCode, UserStatus status, bool isSalesman, int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1UsersAllGet', () async {
+      // TODO
+    });
+
+    // Create User
+    //
+    //Future<PostUserResetPasswordResponse> tepsalesV1UsersForcerchangepasswordPost({ String xApiKey, String xCsrfToken, PostUserForceChangePasswordRequest postUserForceChangePasswordRequest }) async
+    test('test tepsalesV1UsersForcerchangepasswordPost', () async {
       // TODO
     });
 
@@ -39,7 +55,7 @@ void main() {
     //
     // Sample request:                    PATCH /tepsales/v1/User/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
     //
-    //Future tepsalesV1UsersIdPatch(String id, BuiltList<Operation> operation, { String xApiKey, String xCsrfToken }) async
+    //Future tepsalesV1UsersIdPatch(String id, List<Operation> operation, { String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1UsersIdPatch', () async {
       // TODO
     });
@@ -53,7 +69,7 @@ void main() {
 
     // Get All User by filter with pagination
     //
-    //Future<GetAllPagedUserResponse> tepsalesV1UsersPagedGet({ String name, String documentId, String phone, String email, String externalCode, UserStatus status, int page, int pageSize, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<GetAllPagedUserResponse> tepsalesV1UsersPagedGet({ String name, String documentId, String phone, String email, String externalCode, UserStatus status, bool isSalesman, int page, int pageSize, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1UsersPagedGet', () async {
       // TODO
     });
@@ -92,6 +108,5 @@ void main() {
     test('test tepsalesV1UsersSignupPost', () async {
       // TODO
     });
-
   });
 }

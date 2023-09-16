@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-
 class IntegrationStatusApi {
-  IntegrationStatusApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  IntegrationStatusApi([ApiClient? apiClient])
+      : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,10 +30,13 @@ class IntegrationStatusApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> getByIdIntegrationStatusWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> getByIdIntegrationStatusWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/integration/status/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/integration/status/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -50,7 +53,6 @@ class IntegrationStatusApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -75,17 +77,28 @@ class IntegrationStatusApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllIntegrationStatusResponse?> getByIdIntegrationStatus(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await getByIdIntegrationStatusWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllIntegrationStatusResponse?> getByIdIntegrationStatus(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await getByIdIntegrationStatusWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllIntegrationStatusResponse',) as GetAllIntegrationStatusResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllIntegrationStatusResponse',
+      ) as GetAllIntegrationStatusResponse;
     }
     return null;
   }
@@ -117,7 +130,17 @@ class IntegrationStatusApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1IntegrationStatusAllGetWithHttpInfo({ String? context, IntegrationStatusActions? action, String? status, String? summary, int? dateRange, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1IntegrationStatusAllGetWithHttpInfo({
+    String? context,
+    IntegrationStatusActions? action,
+    String? status,
+    String? summary,
+    int? dateRange,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/integration/status/all';
 
@@ -159,7 +182,6 @@ class IntegrationStatusApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -196,20 +218,42 @@ class IntegrationStatusApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllIntegrationStatusResponse>?> tepsalesV1IntegrationStatusAllGet({ String? context, IntegrationStatusActions? action, String? status, String? summary, int? dateRange, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1IntegrationStatusAllGetWithHttpInfo( context: context, action: action, status: status, summary: summary, dateRange: dateRange, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<List<GetAllIntegrationStatusResponse>?>
+      tepsalesV1IntegrationStatusAllGet({
+    String? context,
+    IntegrationStatusActions? action,
+    String? status,
+    String? summary,
+    int? dateRange,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1IntegrationStatusAllGetWithHttpInfo(
+      context: context,
+      action: action,
+      status: status,
+      summary: summary,
+      dateRange: dateRange,
+      limit: limit,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllIntegrationStatusResponse>') as List)
-        .cast<GetAllIntegrationStatusResponse>()
-        .toList();
-
+      return (await apiClient.deserializeAsync(
+              responseBody, 'List<GetAllIntegrationStatusResponse>') as List)
+          .cast<GetAllIntegrationStatusResponse>()
+          .toList();
     }
     return null;
   }
@@ -228,10 +272,13 @@ class IntegrationStatusApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1IntegrationStatusIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1IntegrationStatusIdDeleteWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/integration/status/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/integration/status/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -248,7 +295,6 @@ class IntegrationStatusApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -273,8 +319,16 @@ class IntegrationStatusApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1IntegrationStatusIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1IntegrationStatusIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1IntegrationStatusIdDelete(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1IntegrationStatusIdDeleteWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -299,10 +353,14 @@ class IntegrationStatusApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1IntegrationStatusIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1IntegrationStatusIdPatchWithHttpInfo(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/integration/status/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/integration/status/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -319,7 +377,6 @@ class IntegrationStatusApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -349,8 +406,18 @@ class IntegrationStatusApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1IntegrationStatusIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1IntegrationStatusIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1IntegrationStatusIdPatch(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1IntegrationStatusIdPatchWithHttpInfo(
+      id,
+      operation,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -373,10 +440,14 @@ class IntegrationStatusApi {
   ///
   /// * [PutIntegrationStatusRequest] putIntegrationStatusRequest:
   ///   IntegrationStatus to update
-  Future<Response> tepsalesV1IntegrationStatusIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutIntegrationStatusRequest? putIntegrationStatusRequest, }) async {
+  Future<http.Response> tepsalesV1IntegrationStatusIdPutWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutIntegrationStatusRequest? putIntegrationStatusRequest,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/integration/status/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/integration/status/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putIntegrationStatusRequest;
@@ -393,7 +464,6 @@ class IntegrationStatusApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -421,8 +491,18 @@ class IntegrationStatusApi {
   ///
   /// * [PutIntegrationStatusRequest] putIntegrationStatusRequest:
   ///   IntegrationStatus to update
-  Future<void> tepsalesV1IntegrationStatusIdPut(String id, { String? xApiKey, String? xCsrfToken, PutIntegrationStatusRequest? putIntegrationStatusRequest, }) async {
-    final response = await tepsalesV1IntegrationStatusIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putIntegrationStatusRequest: putIntegrationStatusRequest, );
+  Future<void> tepsalesV1IntegrationStatusIdPut(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutIntegrationStatusRequest? putIntegrationStatusRequest,
+  }) async {
+    final response = await tepsalesV1IntegrationStatusIdPutWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      putIntegrationStatusRequest: putIntegrationStatusRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -456,7 +536,18 @@ class IntegrationStatusApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1IntegrationStatusPagedGetWithHttpInfo({ String? context, IntegrationStatusActions? action, String? status, String? summary, int? dateRange, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1IntegrationStatusPagedGetWithHttpInfo({
+    String? context,
+    IntegrationStatusActions? action,
+    String? status,
+    String? summary,
+    int? dateRange,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/integration/status/paged';
 
@@ -501,7 +592,6 @@ class IntegrationStatusApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -539,17 +629,43 @@ class IntegrationStatusApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedIntegrationStatusResponse?> tepsalesV1IntegrationStatusPagedGet({ String? context, IntegrationStatusActions? action, String? status, String? summary, int? dateRange, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1IntegrationStatusPagedGetWithHttpInfo( context: context, action: action, status: status, summary: summary, dateRange: dateRange, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllPagedIntegrationStatusResponse?>
+      tepsalesV1IntegrationStatusPagedGet({
+    String? context,
+    IntegrationStatusActions? action,
+    String? status,
+    String? summary,
+    int? dateRange,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1IntegrationStatusPagedGetWithHttpInfo(
+      context: context,
+      action: action,
+      status: status,
+      summary: summary,
+      dateRange: dateRange,
+      page: page,
+      pageSize: pageSize,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedIntegrationStatusResponse',) as GetAllPagedIntegrationStatusResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllPagedIntegrationStatusResponse',
+      ) as GetAllPagedIntegrationStatusResponse;
     }
     return null;
   }
@@ -568,7 +684,11 @@ class IntegrationStatusApi {
   ///
   /// * [PostIntegrationStatusRequest] postIntegrationStatusRequest:
   ///   IntegrationStatus to create
-  Future<Response> tepsalesV1IntegrationStatusPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostIntegrationStatusRequest? postIntegrationStatusRequest, }) async {
+  Future<http.Response> tepsalesV1IntegrationStatusPostWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostIntegrationStatusRequest? postIntegrationStatusRequest,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/integration/status';
 
@@ -587,7 +707,6 @@ class IntegrationStatusApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -612,17 +731,28 @@ class IntegrationStatusApi {
   ///
   /// * [PostIntegrationStatusRequest] postIntegrationStatusRequest:
   ///   IntegrationStatus to create
-  Future<PostIntegrationStatusResponse?> tepsalesV1IntegrationStatusPost({ String? xApiKey, String? xCsrfToken, PostIntegrationStatusRequest? postIntegrationStatusRequest, }) async {
-    final response = await tepsalesV1IntegrationStatusPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postIntegrationStatusRequest: postIntegrationStatusRequest, );
+  Future<PostIntegrationStatusResponse?> tepsalesV1IntegrationStatusPost({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostIntegrationStatusRequest? postIntegrationStatusRequest,
+  }) async {
+    final response = await tepsalesV1IntegrationStatusPostWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      postIntegrationStatusRequest: postIntegrationStatusRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostIntegrationStatusResponse',) as PostIntegrationStatusResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'PostIntegrationStatusResponse',
+      ) as PostIntegrationStatusResponse;
     }
     return null;
   }

@@ -37,24 +37,27 @@ class Operation {
   Object? value;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is Operation &&
-     other.operationType == operationType &&
-     other.path == path &&
-     other.op == op &&
-     other.from == from &&
-     other.value == value;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Operation &&
+          other.operationType == operationType &&
+          other.path == path &&
+          other.op == op &&
+          other.from == from &&
+          other.value == value;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (operationType == null ? 0 : operationType!.hashCode) +
-    (path == null ? 0 : path!.hashCode) +
-    (op == null ? 0 : op!.hashCode) +
-    (from == null ? 0 : from!.hashCode) +
-    (value == null ? 0 : value!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (operationType == null ? 0 : operationType!.hashCode) +
+      (path == null ? 0 : path!.hashCode) +
+      (op == null ? 0 : op!.hashCode) +
+      (from == null ? 0 : from!.hashCode) +
+      (value == null ? 0 : value!.hashCode);
 
   @override
-  String toString() => 'Operation[operationType=$operationType, path=$path, op=$op, from=$from, value=$value]';
+  String toString() =>
+      'Operation[operationType=$operationType, path=$path, op=$op, from=$from, value=$value]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -98,8 +101,10 @@ class Operation {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "Operation[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "Operation[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "Operation[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "Operation[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -115,7 +120,10 @@ class Operation {
     return null;
   }
 
-  static List<Operation> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<Operation> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <Operation>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -143,20 +151,24 @@ class Operation {
   }
 
   // maps a json object with a list of Operation-objects as value to a dart map
-  static Map<String, List<Operation>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<Operation>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<Operation>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = Operation.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = Operation.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

@@ -115,48 +115,51 @@ class GetAllUserResponse {
   UserStatus? status;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is GetAllUserResponse &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.id == id &&
-     other.name == name &&
-     other.documentId == documentId &&
-     other.phone == phone &&
-     other.email == email &&
-     other.isActive == isActive &&
-     other.isAdmin == isAdmin &&
-     other.isSuperAdmin == isSuperAdmin &&
-     other.isSalesman == isSalesman &&
-     other.isIntegration == isIntegration &&
-     other.isRegionManager == isRegionManager &&
-     other.externalCode == externalCode &&
-     other.status == status;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is GetAllUserResponse &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.id == id &&
+          other.name == name &&
+          other.documentId == documentId &&
+          other.phone == phone &&
+          other.email == email &&
+          other.isActive == isActive &&
+          other.isAdmin == isAdmin &&
+          other.isSuperAdmin == isSuperAdmin &&
+          other.isSalesman == isSalesman &&
+          other.isIntegration == isIntegration &&
+          other.isRegionManager == isRegionManager &&
+          other.externalCode == externalCode &&
+          other.status == status;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (id == null ? 0 : id!.hashCode) +
-    (name == null ? 0 : name!.hashCode) +
-    (documentId == null ? 0 : documentId!.hashCode) +
-    (phone == null ? 0 : phone!.hashCode) +
-    (email == null ? 0 : email!.hashCode) +
-    (isActive == null ? 0 : isActive!.hashCode) +
-    (isAdmin == null ? 0 : isAdmin!.hashCode) +
-    (isSuperAdmin == null ? 0 : isSuperAdmin!.hashCode) +
-    (isSalesman == null ? 0 : isSalesman!.hashCode) +
-    (isIntegration == null ? 0 : isIntegration!.hashCode) +
-    (isRegionManager == null ? 0 : isRegionManager!.hashCode) +
-    (externalCode == null ? 0 : externalCode!.hashCode) +
-    (status == null ? 0 : status!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (id == null ? 0 : id!.hashCode) +
+      (name == null ? 0 : name!.hashCode) +
+      (documentId == null ? 0 : documentId!.hashCode) +
+      (phone == null ? 0 : phone!.hashCode) +
+      (email == null ? 0 : email!.hashCode) +
+      (isActive == null ? 0 : isActive!.hashCode) +
+      (isAdmin == null ? 0 : isAdmin!.hashCode) +
+      (isSuperAdmin == null ? 0 : isSuperAdmin!.hashCode) +
+      (isSalesman == null ? 0 : isSalesman!.hashCode) +
+      (isIntegration == null ? 0 : isIntegration!.hashCode) +
+      (isRegionManager == null ? 0 : isRegionManager!.hashCode) +
+      (externalCode == null ? 0 : externalCode!.hashCode) +
+      (status == null ? 0 : status!.hashCode);
 
   @override
-  String toString() => 'GetAllUserResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, documentId=$documentId, phone=$phone, email=$email, isActive=$isActive, isAdmin=$isAdmin, isSuperAdmin=$isSuperAdmin, isSalesman=$isSalesman, isIntegration=$isIntegration, isRegionManager=$isRegionManager, externalCode=$externalCode, status=$status]';
+  String toString() =>
+      'GetAllUserResponse[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, documentId=$documentId, phone=$phone, email=$email, isActive=$isActive, isAdmin=$isAdmin, isSuperAdmin=$isSuperAdmin, isSalesman=$isSalesman, isIntegration=$isIntegration, isRegionManager=$isRegionManager, externalCode=$externalCode, status=$status]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -260,8 +263,10 @@ class GetAllUserResponse {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "GetAllUserResponse[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "GetAllUserResponse[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "GetAllUserResponse[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "GetAllUserResponse[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -289,7 +294,10 @@ class GetAllUserResponse {
     return null;
   }
 
-  static List<GetAllUserResponse> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<GetAllUserResponse> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <GetAllUserResponse>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -317,20 +325,24 @@ class GetAllUserResponse {
   }
 
   // maps a json object with a list of GetAllUserResponse-objects as value to a dart map
-  static Map<String, List<GetAllUserResponse>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<GetAllUserResponse>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<GetAllUserResponse>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = GetAllUserResponse.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = GetAllUserResponse.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

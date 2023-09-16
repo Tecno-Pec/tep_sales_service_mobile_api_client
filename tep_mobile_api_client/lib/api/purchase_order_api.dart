@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-
 class PurchaseOrderApi {
-  PurchaseOrderApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  PurchaseOrderApi([ApiClient? apiClient])
+      : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,10 +30,13 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> getByIdPurchaseOrderWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> getByIdPurchaseOrderWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/purchaseorders/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/purchaseorders/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -50,7 +53,6 @@ class PurchaseOrderApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -75,17 +77,28 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPurchaseOrderResponse?> getByIdPurchaseOrder(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await getByIdPurchaseOrderWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllPurchaseOrderResponse?> getByIdPurchaseOrder(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await getByIdPurchaseOrderWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPurchaseOrderResponse',) as GetAllPurchaseOrderResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllPurchaseOrderResponse',
+      ) as GetAllPurchaseOrderResponse;
     }
     return null;
   }
@@ -119,7 +132,18 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1PurchaseordersAllGetWithHttpInfo({ PurchaseOrderStatus? status, String? clientName, String? clientDocument, String? clientId, int? dateRange, String? userCreatedId, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1PurchaseordersAllGetWithHttpInfo({
+    PurchaseOrderStatus? status,
+    String? clientName,
+    String? clientDocument,
+    String? clientId,
+    int? dateRange,
+    String? userCreatedId,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/purchaseorders/all';
 
@@ -164,7 +188,6 @@ class PurchaseOrderApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -203,20 +226,43 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllPurchaseOrderResponse>?> tepsalesV1PurchaseordersAllGet({ PurchaseOrderStatus? status, String? clientName, String? clientDocument, String? clientId, int? dateRange, String? userCreatedId, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1PurchaseordersAllGetWithHttpInfo( status: status, clientName: clientName, clientDocument: clientDocument, clientId: clientId, dateRange: dateRange, userCreatedId: userCreatedId, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<List<GetAllPurchaseOrderResponse>?> tepsalesV1PurchaseordersAllGet({
+    PurchaseOrderStatus? status,
+    String? clientName,
+    String? clientDocument,
+    String? clientId,
+    int? dateRange,
+    String? userCreatedId,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1PurchaseordersAllGetWithHttpInfo(
+      status: status,
+      clientName: clientName,
+      clientDocument: clientDocument,
+      clientId: clientId,
+      dateRange: dateRange,
+      userCreatedId: userCreatedId,
+      limit: limit,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllPurchaseOrderResponse>') as List)
-        .cast<GetAllPurchaseOrderResponse>()
-        .toList();
-
+      return (await apiClient.deserializeAsync(
+              responseBody, 'List<GetAllPurchaseOrderResponse>') as List)
+          .cast<GetAllPurchaseOrderResponse>()
+          .toList();
     }
     return null;
   }
@@ -235,10 +281,14 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1PurchaseordersIdApprovePostWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1PurchaseordersIdApprovePostWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/purchaseorders/{id}/approve'
-      .replaceAll('{id}', id);
+    final path =
+        r'/tepsales/v1/purchaseorders/{id}/approve'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -255,7 +305,6 @@ class PurchaseOrderApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -280,8 +329,16 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1PurchaseordersIdApprovePost(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1PurchaseordersIdApprovePostWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1PurchaseordersIdApprovePost(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1PurchaseordersIdApprovePostWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -304,10 +361,15 @@ class PurchaseOrderApi {
   ///
   /// * [PostCancelPurchaseOrderRequest] postCancelPurchaseOrderRequest:
   ///   PostCancelPurchaseOrderRequest
-  Future<Response> tepsalesV1PurchaseordersIdCancelPostWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PostCancelPurchaseOrderRequest? postCancelPurchaseOrderRequest, }) async {
+  Future<http.Response> tepsalesV1PurchaseordersIdCancelPostWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PostCancelPurchaseOrderRequest? postCancelPurchaseOrderRequest,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/purchaseorders/{id}/cancel'
-      .replaceAll('{id}', id);
+    final path =
+        r'/tepsales/v1/purchaseorders/{id}/cancel'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = postCancelPurchaseOrderRequest;
@@ -324,7 +386,6 @@ class PurchaseOrderApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -352,8 +413,18 @@ class PurchaseOrderApi {
   ///
   /// * [PostCancelPurchaseOrderRequest] postCancelPurchaseOrderRequest:
   ///   PostCancelPurchaseOrderRequest
-  Future<void> tepsalesV1PurchaseordersIdCancelPost(String id, { String? xApiKey, String? xCsrfToken, PostCancelPurchaseOrderRequest? postCancelPurchaseOrderRequest, }) async {
-    final response = await tepsalesV1PurchaseordersIdCancelPostWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, postCancelPurchaseOrderRequest: postCancelPurchaseOrderRequest, );
+  Future<void> tepsalesV1PurchaseordersIdCancelPost(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PostCancelPurchaseOrderRequest? postCancelPurchaseOrderRequest,
+  }) async {
+    final response = await tepsalesV1PurchaseordersIdCancelPostWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      postCancelPurchaseOrderRequest: postCancelPurchaseOrderRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -373,10 +444,13 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1PurchaseordersIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1PurchaseordersIdDeleteWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/purchaseorders/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/purchaseorders/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -393,7 +467,6 @@ class PurchaseOrderApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -418,8 +491,16 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1PurchaseordersIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1PurchaseordersIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1PurchaseordersIdDelete(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1PurchaseordersIdDeleteWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -444,10 +525,14 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1PurchaseordersIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1PurchaseordersIdPatchWithHttpInfo(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/purchaseorders/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/purchaseorders/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -464,7 +549,6 @@ class PurchaseOrderApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -494,8 +578,18 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1PurchaseordersIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1PurchaseordersIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1PurchaseordersIdPatch(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1PurchaseordersIdPatchWithHttpInfo(
+      id,
+      operation,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -518,10 +612,14 @@ class PurchaseOrderApi {
   ///
   /// * [PutPurchaseOrderRequest] putPurchaseOrderRequest:
   ///   PurchaseOrder to update
-  Future<Response> tepsalesV1PurchaseordersIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutPurchaseOrderRequest? putPurchaseOrderRequest, }) async {
+  Future<http.Response> tepsalesV1PurchaseordersIdPutWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutPurchaseOrderRequest? putPurchaseOrderRequest,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/purchaseorders/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/purchaseorders/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putPurchaseOrderRequest;
@@ -538,7 +636,6 @@ class PurchaseOrderApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -566,8 +663,18 @@ class PurchaseOrderApi {
   ///
   /// * [PutPurchaseOrderRequest] putPurchaseOrderRequest:
   ///   PurchaseOrder to update
-  Future<void> tepsalesV1PurchaseordersIdPut(String id, { String? xApiKey, String? xCsrfToken, PutPurchaseOrderRequest? putPurchaseOrderRequest, }) async {
-    final response = await tepsalesV1PurchaseordersIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putPurchaseOrderRequest: putPurchaseOrderRequest, );
+  Future<void> tepsalesV1PurchaseordersIdPut(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutPurchaseOrderRequest? putPurchaseOrderRequest,
+  }) async {
+    final response = await tepsalesV1PurchaseordersIdPutWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      putPurchaseOrderRequest: putPurchaseOrderRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -590,10 +697,15 @@ class PurchaseOrderApi {
   ///
   /// * [PostRefusedPurchaseOrderRequest] postRefusedPurchaseOrderRequest:
   ///   Post Refused PurchaseOrderRequest
-  Future<Response> tepsalesV1PurchaseordersIdRefusedPostWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PostRefusedPurchaseOrderRequest? postRefusedPurchaseOrderRequest, }) async {
+  Future<http.Response> tepsalesV1PurchaseordersIdRefusedPostWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PostRefusedPurchaseOrderRequest? postRefusedPurchaseOrderRequest,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/purchaseorders/{id}/refused'
-      .replaceAll('{id}', id);
+    final path =
+        r'/tepsales/v1/purchaseorders/{id}/refused'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = postRefusedPurchaseOrderRequest;
@@ -610,7 +722,6 @@ class PurchaseOrderApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -638,8 +749,18 @@ class PurchaseOrderApi {
   ///
   /// * [PostRefusedPurchaseOrderRequest] postRefusedPurchaseOrderRequest:
   ///   Post Refused PurchaseOrderRequest
-  Future<void> tepsalesV1PurchaseordersIdRefusedPost(String id, { String? xApiKey, String? xCsrfToken, PostRefusedPurchaseOrderRequest? postRefusedPurchaseOrderRequest, }) async {
-    final response = await tepsalesV1PurchaseordersIdRefusedPostWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, postRefusedPurchaseOrderRequest: postRefusedPurchaseOrderRequest, );
+  Future<void> tepsalesV1PurchaseordersIdRefusedPost(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PostRefusedPurchaseOrderRequest? postRefusedPurchaseOrderRequest,
+  }) async {
+    final response = await tepsalesV1PurchaseordersIdRefusedPostWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      postRefusedPurchaseOrderRequest: postRefusedPurchaseOrderRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -662,10 +783,15 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1PurchaseordersIdSendtoapprovePostWithHttpInfo(String id, { String? areaManagerCode, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1PurchaseordersIdSendtoapprovePostWithHttpInfo(
+    String id, {
+    String? areaManagerCode,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/purchaseorders/{id}/sendtoapprove'
-      .replaceAll('{id}', id);
+        .replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -687,7 +813,6 @@ class PurchaseOrderApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'POST',
@@ -714,8 +839,19 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1PurchaseordersIdSendtoapprovePost(String id, { String? areaManagerCode, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1PurchaseordersIdSendtoapprovePostWithHttpInfo(id,  areaManagerCode: areaManagerCode, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1PurchaseordersIdSendtoapprovePost(
+    String id, {
+    String? areaManagerCode,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response =
+        await tepsalesV1PurchaseordersIdSendtoapprovePostWithHttpInfo(
+      id,
+      areaManagerCode: areaManagerCode,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -751,7 +887,19 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1PurchaseordersPagedGetWithHttpInfo({ PurchaseOrderStatus? status, String? clientName, String? clientDocument, String? clientId, int? dateRange, String? userCreatedId, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1PurchaseordersPagedGetWithHttpInfo({
+    PurchaseOrderStatus? status,
+    String? clientName,
+    String? clientDocument,
+    String? clientId,
+    int? dateRange,
+    String? userCreatedId,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/purchaseorders/paged';
 
@@ -799,7 +947,6 @@ class PurchaseOrderApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -839,17 +986,44 @@ class PurchaseOrderApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedPurchaseOrderResponse?> tepsalesV1PurchaseordersPagedGet({ PurchaseOrderStatus? status, String? clientName, String? clientDocument, String? clientId, int? dateRange, String? userCreatedId, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1PurchaseordersPagedGetWithHttpInfo( status: status, clientName: clientName, clientDocument: clientDocument, clientId: clientId, dateRange: dateRange, userCreatedId: userCreatedId, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllPagedPurchaseOrderResponse?> tepsalesV1PurchaseordersPagedGet({
+    PurchaseOrderStatus? status,
+    String? clientName,
+    String? clientDocument,
+    String? clientId,
+    int? dateRange,
+    String? userCreatedId,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1PurchaseordersPagedGetWithHttpInfo(
+      status: status,
+      clientName: clientName,
+      clientDocument: clientDocument,
+      clientId: clientId,
+      dateRange: dateRange,
+      userCreatedId: userCreatedId,
+      page: page,
+      pageSize: pageSize,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedPurchaseOrderResponse',) as GetAllPagedPurchaseOrderResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllPagedPurchaseOrderResponse',
+      ) as GetAllPagedPurchaseOrderResponse;
     }
     return null;
   }
@@ -868,7 +1042,11 @@ class PurchaseOrderApi {
   ///
   /// * [PostPurchaseOrderRequest] postPurchaseOrderRequest:
   ///   PurchaseOrder to create
-  Future<Response> tepsalesV1PurchaseordersPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostPurchaseOrderRequest? postPurchaseOrderRequest, }) async {
+  Future<http.Response> tepsalesV1PurchaseordersPostWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostPurchaseOrderRequest? postPurchaseOrderRequest,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/purchaseorders';
 
@@ -887,7 +1065,6 @@ class PurchaseOrderApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -912,17 +1089,28 @@ class PurchaseOrderApi {
   ///
   /// * [PostPurchaseOrderRequest] postPurchaseOrderRequest:
   ///   PurchaseOrder to create
-  Future<PostPurchaseOrderResponse?> tepsalesV1PurchaseordersPost({ String? xApiKey, String? xCsrfToken, PostPurchaseOrderRequest? postPurchaseOrderRequest, }) async {
-    final response = await tepsalesV1PurchaseordersPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postPurchaseOrderRequest: postPurchaseOrderRequest, );
+  Future<PostPurchaseOrderResponse?> tepsalesV1PurchaseordersPost({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostPurchaseOrderRequest? postPurchaseOrderRequest,
+  }) async {
+    final response = await tepsalesV1PurchaseordersPostWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      postPurchaseOrderRequest: postPurchaseOrderRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostPurchaseOrderResponse',) as PostPurchaseOrderResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'PostPurchaseOrderResponse',
+      ) as PostPurchaseOrderResponse;
     }
     return null;
   }

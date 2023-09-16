@@ -1,12 +1,21 @@
+//
+// AUTO-GENERATED FILE, DO NOT MODIFY!
+//
+// @dart=2.12
+
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
+
+import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
-import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
 
 // tests for DatabaseCollector
 void main() {
-  final instance = DatabaseCollectorBuilder();
-  // TODO add properties to the builder and call build()
+  final instance = DatabaseCollector();
 
-  group(DatabaseCollector, () {
+  group('test DatabaseCollector', () {
     // String outPutFolder
     test('to test the property `outPutFolder`', () async {
       // TODO
@@ -21,6 +30,5 @@ void main() {
     test('to test the property `queries`', () async {
       // TODO
     });
-
   });
 }

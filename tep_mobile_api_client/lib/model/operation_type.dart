@@ -10,7 +10,6 @@
 
 part of openapi.api;
 
-
 class OperationType {
   /// Instantiate a new enum with the provided [value].
   const OperationType._(this.value);
@@ -42,9 +41,13 @@ class OperationType {
     number6,
   ];
 
-  static OperationType? fromJson(dynamic value) => OperationTypeTypeTransformer().decode(value);
+  static OperationType? fromJson(dynamic value) =>
+      OperationTypeTypeTransformer().decode(value);
 
-  static List<OperationType> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<OperationType> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <OperationType>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -61,7 +64,8 @@ class OperationType {
 /// Transformation class that can [encode] an instance of [OperationType] to int,
 /// and [decode] dynamic data back to [OperationType].
 class OperationTypeTypeTransformer {
-  factory OperationTypeTypeTransformer() => _instance ??= const OperationTypeTypeTransformer._();
+  factory OperationTypeTypeTransformer() =>
+      _instance ??= const OperationTypeTypeTransformer._();
 
   const OperationTypeTypeTransformer._();
 
@@ -78,13 +82,20 @@ class OperationTypeTypeTransformer {
   OperationType? decode(dynamic data, {bool allowNull = true}) {
     if (data != null) {
       switch (data) {
-        case 0: return OperationType.number0;
-        case 1: return OperationType.number1;
-        case 2: return OperationType.number2;
-        case 3: return OperationType.number3;
-        case 4: return OperationType.number4;
-        case 5: return OperationType.number5;
-        case 6: return OperationType.number6;
+        case 0:
+          return OperationType.number0;
+        case 1:
+          return OperationType.number1;
+        case 2:
+          return OperationType.number2;
+        case 3:
+          return OperationType.number3;
+        case 4:
+          return OperationType.number4;
+        case 5:
+          return OperationType.number5;
+        case 6:
+          return OperationType.number6;
         default:
           if (!allowNull) {
             throw ArgumentError('Unknown enum value to decode: $data');
@@ -97,4 +108,3 @@ class OperationTypeTypeTransformer {
   /// Singleton [OperationTypeTypeTransformer] instance.
   static OperationTypeTypeTransformer? _instance;
 }
-

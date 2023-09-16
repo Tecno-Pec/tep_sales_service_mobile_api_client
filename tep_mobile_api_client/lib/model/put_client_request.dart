@@ -76,42 +76,45 @@ class PutClientRequest {
   String? paymentConditionId;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is PutClientRequest &&
-     other.createdAt == createdAt &&
-     other.updatedAt == updatedAt &&
-     other.userCreated == userCreated &&
-     other.userUpdated == userUpdated &&
-     other.id == id &&
-     other.name == name &&
-     other.document == document &&
-     other.phone == phone &&
-     other.ie == ie &&
-     other.email == email &&
-     other.externalCode == externalCode &&
-     other.status == status &&
-     other.userSellerId == userSellerId &&
-     other.paymentConditionId == paymentConditionId;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PutClientRequest &&
+          other.createdAt == createdAt &&
+          other.updatedAt == updatedAt &&
+          other.userCreated == userCreated &&
+          other.userUpdated == userUpdated &&
+          other.id == id &&
+          other.name == name &&
+          other.document == document &&
+          other.phone == phone &&
+          other.ie == ie &&
+          other.email == email &&
+          other.externalCode == externalCode &&
+          other.status == status &&
+          other.userSellerId == userSellerId &&
+          other.paymentConditionId == paymentConditionId;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (createdAt == null ? 0 : createdAt!.hashCode) +
-    (updatedAt == null ? 0 : updatedAt!.hashCode) +
-    (userCreated == null ? 0 : userCreated!.hashCode) +
-    (userUpdated == null ? 0 : userUpdated!.hashCode) +
-    (id == null ? 0 : id!.hashCode) +
-    (name == null ? 0 : name!.hashCode) +
-    (document == null ? 0 : document!.hashCode) +
-    (phone == null ? 0 : phone!.hashCode) +
-    (ie == null ? 0 : ie!.hashCode) +
-    (email == null ? 0 : email!.hashCode) +
-    (externalCode == null ? 0 : externalCode!.hashCode) +
-    (status == null ? 0 : status!.hashCode) +
-    (userSellerId == null ? 0 : userSellerId!.hashCode) +
-    (paymentConditionId == null ? 0 : paymentConditionId!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (createdAt == null ? 0 : createdAt!.hashCode) +
+      (updatedAt == null ? 0 : updatedAt!.hashCode) +
+      (userCreated == null ? 0 : userCreated!.hashCode) +
+      (userUpdated == null ? 0 : userUpdated!.hashCode) +
+      (id == null ? 0 : id!.hashCode) +
+      (name == null ? 0 : name!.hashCode) +
+      (document == null ? 0 : document!.hashCode) +
+      (phone == null ? 0 : phone!.hashCode) +
+      (ie == null ? 0 : ie!.hashCode) +
+      (email == null ? 0 : email!.hashCode) +
+      (externalCode == null ? 0 : externalCode!.hashCode) +
+      (status == null ? 0 : status!.hashCode) +
+      (userSellerId == null ? 0 : userSellerId!.hashCode) +
+      (paymentConditionId == null ? 0 : paymentConditionId!.hashCode);
 
   @override
-  String toString() => 'PutClientRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, document=$document, phone=$phone, ie=$ie, email=$email, externalCode=$externalCode, status=$status, userSellerId=$userSellerId, paymentConditionId=$paymentConditionId]';
+  String toString() =>
+      'PutClientRequest[createdAt=$createdAt, updatedAt=$updatedAt, userCreated=$userCreated, userUpdated=$userUpdated, id=$id, name=$name, document=$document, phone=$phone, ie=$ie, email=$email, externalCode=$externalCode, status=$status, userSellerId=$userSellerId, paymentConditionId=$paymentConditionId]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -200,8 +203,10 @@ class PutClientRequest {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "PutClientRequest[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "PutClientRequest[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "PutClientRequest[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "PutClientRequest[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -226,7 +231,10 @@ class PutClientRequest {
     return null;
   }
 
-  static List<PutClientRequest> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<PutClientRequest> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <PutClientRequest>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -254,20 +262,24 @@ class PutClientRequest {
   }
 
   // maps a json object with a list of PutClientRequest-objects as value to a dart map
-  static Map<String, List<PutClientRequest>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<PutClientRequest>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<PutClientRequest>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = PutClientRequest.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = PutClientRequest.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-

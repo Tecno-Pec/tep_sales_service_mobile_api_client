@@ -10,6 +10,7 @@ doc/AddressTypeEnum.md
 doc/AuditApi.md
 doc/Client.md
 doc/ClientApi.md
+doc/ClientContactCalendarApi.md
 doc/ClientStatus.md
 doc/CommissionApi.md
 doc/CommissionStatus.md
@@ -37,6 +38,7 @@ doc/FreightTableStatus.md
 doc/FreightType.md
 doc/GetAllAddressResponse.md
 doc/GetAllAuditResponse.md
+doc/GetAllClientContactCalendarResponse.md
 doc/GetAllClientResponse.md
 doc/GetAllCommissionResponse.md
 doc/GetAllCompanyGlobalParameterResponse.md
@@ -52,6 +54,7 @@ doc/GetAllIntegrationStatusResponse.md
 doc/GetAllNotificationResponse.md
 doc/GetAllPagedAddressResponse.md
 doc/GetAllPagedAuditResponse.md
+doc/GetAllPagedClientContactCalendarResponse.md
 doc/GetAllPagedClientResponse.md
 doc/GetAllPagedCommissionResponse.md
 doc/GetAllPagedCompanyGlobalParameterResponse.md
@@ -75,6 +78,7 @@ doc/GetAllPagedProductLineResponse.md
 doc/GetAllPagedProductResponse.md
 doc/GetAllPagedPurchaseOrderResponse.md
 doc/GetAllPagedReasonCancelResponse.md
+doc/GetAllPagedReasonVisitResponse.md
 doc/GetAllPagedTemplateResponse.md
 doc/GetAllPagedUserResponse.md
 doc/GetAllPagedVehicleTypeResponse.md
@@ -88,6 +92,7 @@ doc/GetAllProductLineResponse.md
 doc/GetAllProductResponse.md
 doc/GetAllPurchaseOrderResponse.md
 doc/GetAllReasonCancelResponse.md
+doc/GetAllReasonVisitResponse.md
 doc/GetAllTemplateResponse.md
 doc/GetAllUserResponse.md
 doc/GetAllVehicleTypeResponse.md
@@ -109,6 +114,8 @@ doc/PaymentPriceTableStatus.md
 doc/PostAddressRequest.md
 doc/PostAddressResponse.md
 doc/PostCancelPurchaseOrderRequest.md
+doc/PostClientContactCalendarRequest.md
+doc/PostClientContactCalendarResponse.md
 doc/PostClientRequest.md
 doc/PostClientResponse.md
 doc/PostCommissionRequest.md
@@ -155,6 +162,8 @@ doc/PostPurchaseOrderRequest.md
 doc/PostPurchaseOrderResponse.md
 doc/PostReasonCancelRequest.md
 doc/PostReasonCancelResponse.md
+doc/PostReasonVisitRequest.md
+doc/PostReasonVisitResponse.md
 doc/PostRefusedPurchaseOrderRequest.md
 doc/PostTemplateRequest.md
 doc/PostTemplateResponse.md
@@ -190,6 +199,7 @@ doc/PurchaseOrderStatus.md
 doc/PushToken.md
 doc/PushTokenStatus.md
 doc/PutAddressRequest.md
+doc/PutClientContactCalendarRequest.md
 doc/PutClientRequest.md
 doc/PutCommissionRequest.md
 doc/PutCompanyGlobalParameterRequest.md
@@ -213,12 +223,14 @@ doc/PutProductLineRequest.md
 doc/PutProductRequest.md
 doc/PutPurchaseOrderRequest.md
 doc/PutReasonCancelRequest.md
+doc/PutReasonVisitRequest.md
 doc/PutTemplateRequest.md
 doc/PutUserRequest.md
 doc/PutVehicleTypeRequest.md
 doc/ReasonCancel.md
 doc/ReasonCancelApi.md
 doc/ReasonCancelStatus.md
+doc/ReasonVisitApi.md
 doc/ReferenceTypeEnum.md
 doc/TablePriceOperationTypeEnum.md
 doc/TemplateApi.md
@@ -235,6 +247,7 @@ lib/api.dart
 lib/api/address_api.dart
 lib/api/audit_api.dart
 lib/api/client_api.dart
+lib/api/client_contact_calendar_api.dart
 lib/api/commission_api.dart
 lib/api/company_api.dart
 lib/api/company_global_parameter_api.dart
@@ -258,6 +271,7 @@ lib/api/product_group_api.dart
 lib/api/product_line_api.dart
 lib/api/purchase_order_api.dart
 lib/api/reason_cancel_api.dart
+lib/api/reason_visit_api.dart
 lib/api/template_api.dart
 lib/api/user_api.dart
 lib/api/vehicle_type_api.dart
@@ -292,6 +306,7 @@ lib/model/freight_table_status.dart
 lib/model/freight_type.dart
 lib/model/get_all_address_response.dart
 lib/model/get_all_audit_response.dart
+lib/model/get_all_client_contact_calendar_response.dart
 lib/model/get_all_client_response.dart
 lib/model/get_all_commission_response.dart
 lib/model/get_all_company_global_parameter_response.dart
@@ -307,6 +322,7 @@ lib/model/get_all_integration_status_response.dart
 lib/model/get_all_notification_response.dart
 lib/model/get_all_paged_address_response.dart
 lib/model/get_all_paged_audit_response.dart
+lib/model/get_all_paged_client_contact_calendar_response.dart
 lib/model/get_all_paged_client_response.dart
 lib/model/get_all_paged_commission_response.dart
 lib/model/get_all_paged_company_global_parameter_response.dart
@@ -330,6 +346,7 @@ lib/model/get_all_paged_product_line_response.dart
 lib/model/get_all_paged_product_response.dart
 lib/model/get_all_paged_purchase_order_response.dart
 lib/model/get_all_paged_reason_cancel_response.dart
+lib/model/get_all_paged_reason_visit_response.dart
 lib/model/get_all_paged_template_response.dart
 lib/model/get_all_paged_user_response.dart
 lib/model/get_all_paged_vehicle_type_response.dart
@@ -343,6 +360,7 @@ lib/model/get_all_product_line_response.dart
 lib/model/get_all_product_response.dart
 lib/model/get_all_purchase_order_response.dart
 lib/model/get_all_reason_cancel_response.dart
+lib/model/get_all_reason_visit_response.dart
 lib/model/get_all_template_response.dart
 lib/model/get_all_user_response.dart
 lib/model/get_all_vehicle_type_response.dart
@@ -359,6 +377,8 @@ lib/model/payment_price_table_status.dart
 lib/model/post_address_request.dart
 lib/model/post_address_response.dart
 lib/model/post_cancel_purchase_order_request.dart
+lib/model/post_client_contact_calendar_request.dart
+lib/model/post_client_contact_calendar_response.dart
 lib/model/post_client_request.dart
 lib/model/post_client_response.dart
 lib/model/post_commission_request.dart
@@ -405,6 +425,8 @@ lib/model/post_purchase_order_request.dart
 lib/model/post_purchase_order_response.dart
 lib/model/post_reason_cancel_request.dart
 lib/model/post_reason_cancel_response.dart
+lib/model/post_reason_visit_request.dart
+lib/model/post_reason_visit_response.dart
 lib/model/post_refused_purchase_order_request.dart
 lib/model/post_template_request.dart
 lib/model/post_template_response.dart
@@ -433,6 +455,7 @@ lib/model/purchase_order_status.dart
 lib/model/push_token.dart
 lib/model/push_token_status.dart
 lib/model/put_address_request.dart
+lib/model/put_client_contact_calendar_request.dart
 lib/model/put_client_request.dart
 lib/model/put_commission_request.dart
 lib/model/put_company_global_parameter_request.dart
@@ -456,6 +479,7 @@ lib/model/put_product_line_request.dart
 lib/model/put_product_request.dart
 lib/model/put_purchase_order_request.dart
 lib/model/put_reason_cancel_request.dart
+lib/model/put_reason_visit_request.dart
 lib/model/put_template_request.dart
 lib/model/put_user_request.dart
 lib/model/put_vehicle_type_request.dart

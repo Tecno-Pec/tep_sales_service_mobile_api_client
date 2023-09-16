@@ -10,9 +10,9 @@
 
 part of openapi.api;
 
-
 class TemplateApi {
-  TemplateApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  TemplateApi([ApiClient? apiClient])
+      : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -30,10 +30,13 @@ class TemplateApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> getByIdTemplateWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> getByIdTemplateWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/templates/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/templates/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -50,7 +53,6 @@ class TemplateApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -75,17 +77,28 @@ class TemplateApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllTemplateResponse?> getByIdTemplate(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await getByIdTemplateWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllTemplateResponse?> getByIdTemplate(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await getByIdTemplateWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllTemplateResponse',) as GetAllTemplateResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllTemplateResponse',
+      ) as GetAllTemplateResponse;
     }
     return null;
   }
@@ -109,7 +122,13 @@ class TemplateApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1TemplatesAllGetWithHttpInfo({ String? name, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1TemplatesAllGetWithHttpInfo({
+    String? name,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/templates/all';
 
@@ -139,7 +158,6 @@ class TemplateApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -168,20 +186,33 @@ class TemplateApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<List<GetAllTemplateResponse>?> tepsalesV1TemplatesAllGet({ String? name, int? limit, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1TemplatesAllGetWithHttpInfo( name: name, limit: limit, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<List<GetAllTemplateResponse>?> tepsalesV1TemplatesAllGet({
+    String? name,
+    int? limit,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1TemplatesAllGetWithHttpInfo(
+      name: name,
+      limit: limit,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
       final responseBody = await _decodeBodyBytes(response);
-      return (await apiClient.deserializeAsync(responseBody, 'List<GetAllTemplateResponse>') as List)
-        .cast<GetAllTemplateResponse>()
-        .toList();
-
+      return (await apiClient.deserializeAsync(
+              responseBody, 'List<GetAllTemplateResponse>') as List)
+          .cast<GetAllTemplateResponse>()
+          .toList();
     }
     return null;
   }
@@ -200,10 +231,13 @@ class TemplateApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1TemplatesIdDeleteWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1TemplatesIdDeleteWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/templates/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/templates/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -220,7 +254,6 @@ class TemplateApi {
     }
 
     const contentTypes = <String>[];
-
 
     return apiClient.invokeAPI(
       path,
@@ -245,8 +278,16 @@ class TemplateApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1TemplatesIdDelete(String id, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1TemplatesIdDeleteWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1TemplatesIdDelete(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1TemplatesIdDeleteWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -271,10 +312,14 @@ class TemplateApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1TemplatesIdPatchWithHttpInfo(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1TemplatesIdPatchWithHttpInfo(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/templates/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/templates/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = operation;
@@ -291,7 +336,6 @@ class TemplateApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -321,8 +365,18 @@ class TemplateApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<void> tepsalesV1TemplatesIdPatch(String id, List<Operation> operation, { String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1TemplatesIdPatchWithHttpInfo(id, operation,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<void> tepsalesV1TemplatesIdPatch(
+    String id,
+    List<Operation> operation, {
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1TemplatesIdPatchWithHttpInfo(
+      id,
+      operation,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -345,10 +399,14 @@ class TemplateApi {
   ///
   /// * [PutTemplateRequest] putTemplateRequest:
   ///   Template to update
-  Future<Response> tepsalesV1TemplatesIdPutWithHttpInfo(String id, { String? xApiKey, String? xCsrfToken, PutTemplateRequest? putTemplateRequest, }) async {
+  Future<http.Response> tepsalesV1TemplatesIdPutWithHttpInfo(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutTemplateRequest? putTemplateRequest,
+  }) async {
     // ignore: prefer_const_declarations
-    final path = r'/tepsales/v1/templates/{id}'
-      .replaceAll('{id}', id);
+    final path = r'/tepsales/v1/templates/{id}'.replaceAll('{id}', id);
 
     // ignore: prefer_final_locals
     Object? postBody = putTemplateRequest;
@@ -365,7 +423,6 @@ class TemplateApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -393,8 +450,18 @@ class TemplateApi {
   ///
   /// * [PutTemplateRequest] putTemplateRequest:
   ///   Template to update
-  Future<void> tepsalesV1TemplatesIdPut(String id, { String? xApiKey, String? xCsrfToken, PutTemplateRequest? putTemplateRequest, }) async {
-    final response = await tepsalesV1TemplatesIdPutWithHttpInfo(id,  xApiKey: xApiKey, xCsrfToken: xCsrfToken, putTemplateRequest: putTemplateRequest, );
+  Future<void> tepsalesV1TemplatesIdPut(
+    String id, {
+    String? xApiKey,
+    String? xCsrfToken,
+    PutTemplateRequest? putTemplateRequest,
+  }) async {
+    final response = await tepsalesV1TemplatesIdPutWithHttpInfo(
+      id,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      putTemplateRequest: putTemplateRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -420,7 +487,14 @@ class TemplateApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<Response> tepsalesV1TemplatesPagedGetWithHttpInfo({ String? name, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
+  Future<http.Response> tepsalesV1TemplatesPagedGetWithHttpInfo({
+    String? name,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/templates/paged';
 
@@ -453,7 +527,6 @@ class TemplateApi {
 
     const contentTypes = <String>[];
 
-
     return apiClient.invokeAPI(
       path,
       'GET',
@@ -483,17 +556,34 @@ class TemplateApi {
   ///
   /// * [String] xCsrfToken:
   ///   CSRF Protection
-  Future<GetAllPagedTemplateResponse?> tepsalesV1TemplatesPagedGet({ String? name, int? page, int? pageSize, String? sort, String? xApiKey, String? xCsrfToken, }) async {
-    final response = await tepsalesV1TemplatesPagedGetWithHttpInfo( name: name, page: page, pageSize: pageSize, sort: sort, xApiKey: xApiKey, xCsrfToken: xCsrfToken, );
+  Future<GetAllPagedTemplateResponse?> tepsalesV1TemplatesPagedGet({
+    String? name,
+    int? page,
+    int? pageSize,
+    String? sort,
+    String? xApiKey,
+    String? xCsrfToken,
+  }) async {
+    final response = await tepsalesV1TemplatesPagedGetWithHttpInfo(
+      name: name,
+      page: page,
+      pageSize: pageSize,
+      sort: sort,
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'GetAllPagedTemplateResponse',) as GetAllPagedTemplateResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'GetAllPagedTemplateResponse',
+      ) as GetAllPagedTemplateResponse;
     }
     return null;
   }
@@ -512,7 +602,11 @@ class TemplateApi {
   ///
   /// * [PostTemplateRequest] postTemplateRequest:
   ///   Template to create
-  Future<Response> tepsalesV1TemplatesPostWithHttpInfo({ String? xApiKey, String? xCsrfToken, PostTemplateRequest? postTemplateRequest, }) async {
+  Future<http.Response> tepsalesV1TemplatesPostWithHttpInfo({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostTemplateRequest? postTemplateRequest,
+  }) async {
     // ignore: prefer_const_declarations
     final path = r'/tepsales/v1/templates';
 
@@ -531,7 +625,6 @@ class TemplateApi {
     }
 
     const contentTypes = <String>['application/json'];
-
 
     return apiClient.invokeAPI(
       path,
@@ -556,17 +649,28 @@ class TemplateApi {
   ///
   /// * [PostTemplateRequest] postTemplateRequest:
   ///   Template to create
-  Future<PostTemplateResponse?> tepsalesV1TemplatesPost({ String? xApiKey, String? xCsrfToken, PostTemplateRequest? postTemplateRequest, }) async {
-    final response = await tepsalesV1TemplatesPostWithHttpInfo( xApiKey: xApiKey, xCsrfToken: xCsrfToken, postTemplateRequest: postTemplateRequest, );
+  Future<PostTemplateResponse?> tepsalesV1TemplatesPost({
+    String? xApiKey,
+    String? xCsrfToken,
+    PostTemplateRequest? postTemplateRequest,
+  }) async {
+    final response = await tepsalesV1TemplatesPostWithHttpInfo(
+      xApiKey: xApiKey,
+      xCsrfToken: xCsrfToken,
+      postTemplateRequest: postTemplateRequest,
+    );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
     // When a remote server returns no body with a status of 204, we shall not decode it.
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
-    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'PostTemplateResponse',) as PostTemplateResponse;
-    
+    if (response.body.isNotEmpty &&
+        response.statusCode != HttpStatus.noContent) {
+      return await apiClient.deserializeAsync(
+        await _decodeBodyBytes(response),
+        'PostTemplateResponse',
+      ) as PostTemplateResponse;
     }
     return null;
   }

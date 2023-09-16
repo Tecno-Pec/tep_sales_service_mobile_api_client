@@ -31,20 +31,23 @@ class ErrorDetails {
   List<String>? messages;
 
   @override
-  bool operator ==(Object other) => identical(this, other) || other is ErrorDetails &&
-     other.statusCode == statusCode &&
-     other.errorCode == errorCode &&
-     other.messages == messages;
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ErrorDetails &&
+          other.statusCode == statusCode &&
+          other.errorCode == errorCode &&
+          other.messages == messages;
 
   @override
   int get hashCode =>
-    // ignore: unnecessary_parenthesis
-    (statusCode == null ? 0 : statusCode!.hashCode) +
-    (errorCode == null ? 0 : errorCode!.hashCode) +
-    (messages == null ? 0 : messages!.hashCode);
+      // ignore: unnecessary_parenthesis
+      (statusCode == null ? 0 : statusCode!.hashCode) +
+      (errorCode == null ? 0 : errorCode!.hashCode) +
+      (messages == null ? 0 : messages!.hashCode);
 
   @override
-  String toString() => 'ErrorDetails[statusCode=$statusCode, errorCode=$errorCode, messages=$messages]';
+  String toString() =>
+      'ErrorDetails[statusCode=$statusCode, errorCode=$errorCode, messages=$messages]';
 
   Map<String, dynamic> toJson() {
     final json = <String, dynamic>{};
@@ -78,8 +81,10 @@ class ErrorDetails {
       // Note 2: this code is stripped in release mode!
       assert(() {
         requiredKeys.forEach((key) {
-          assert(json.containsKey(key), 'Required key "ErrorDetails[$key]" is missing from JSON.');
-          assert(json[key] != null, 'Required key "ErrorDetails[$key]" has a null value in JSON.');
+          assert(json.containsKey(key),
+              'Required key "ErrorDetails[$key]" is missing from JSON.');
+          assert(json[key] != null,
+              'Required key "ErrorDetails[$key]" has a null value in JSON.');
         });
         return true;
       }());
@@ -95,7 +100,10 @@ class ErrorDetails {
     return null;
   }
 
-  static List<ErrorDetails> listFromJson(dynamic json, {bool growable = false,}) {
+  static List<ErrorDetails> listFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final result = <ErrorDetails>[];
     if (json is List && json.isNotEmpty) {
       for (final row in json) {
@@ -123,20 +131,24 @@ class ErrorDetails {
   }
 
   // maps a json object with a list of ErrorDetails-objects as value to a dart map
-  static Map<String, List<ErrorDetails>> mapListFromJson(dynamic json, {bool growable = false,}) {
+  static Map<String, List<ErrorDetails>> mapListFromJson(
+    dynamic json, {
+    bool growable = false,
+  }) {
     final map = <String, List<ErrorDetails>>{};
     if (json is Map && json.isNotEmpty) {
       // ignore: parameter_assignments
       json = json.cast<String, dynamic>();
       for (final entry in json.entries) {
-        map[entry.key] = ErrorDetails.listFromJson(entry.value, growable: growable,);
+        map[entry.key] = ErrorDetails.listFromJson(
+          entry.value,
+          growable: growable,
+        );
       }
     }
     return map;
   }
 
   /// The list of required keys that must be present in a JSON.
-  static const requiredKeys = <String>{
-  };
+  static const requiredKeys = <String>{};
 }
-
