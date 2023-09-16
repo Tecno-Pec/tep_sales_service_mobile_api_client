@@ -45,7 +45,7 @@ class PaymentPriceTableApi {
   Future<Response<GetAllPaymentPriceTableResponse>> getByIdPaymentPriceTable({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'ae050a94-cdf3-432e-bf6b-9b960ada6b20',
+    String? xCsrfToken = '1390e2b7-88da-4ca2-aab5-76c84f010636',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -143,7 +143,7 @@ class PaymentPriceTableApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'da44bc45-88e5-4db5-befa-460c4b33f1bc',
+    String? xCsrfToken = 'a72335bb-941a-40b3-875a-6a0b7d8d1f62',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -241,7 +241,7 @@ class PaymentPriceTableApi {
   Future<Response<void>> tepsalesV1PaymentPriceTablesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'd4d42531-6708-4186-bad2-ee93035ec7f0',
+    String? xCsrfToken = 'dfb0d71a-d9d7-4203-a5cc-fa3298604fa2',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -303,7 +303,7 @@ class PaymentPriceTableApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'e9b3b637-00a8-453e-815f-0f6fc5f2e419',
+    String? xCsrfToken = '29c0b056-344b-40a0-9c18-d90d80cd826a',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -384,7 +384,7 @@ class PaymentPriceTableApi {
   Future<Response<void>> tepsalesV1PaymentPriceTablesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '32bf311e-838e-49fc-9c8a-39665d4a1c7b',
+    String? xCsrfToken = '02037b8c-a338-4808-979f-0b2d46ef3243',
     PutPaymentPriceTableRequest? putPaymentPriceTableRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -477,7 +477,7 @@ class PaymentPriceTableApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '36c65f92-60ac-41ac-904a-df1526f0126d',
+    String? xCsrfToken = '86e90006-8968-4ead-b9c1-b504779854a2',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -575,7 +575,7 @@ class PaymentPriceTableApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostPaymentPriceTableResponse>> tepsalesV1PaymentPriceTablesPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'f180dace-601e-4aea-a9c3-e011a47e7119',
+    String? xCsrfToken = 'a09647c1-2635-4993-949f-f46ebe760649',
     PostPaymentPriceTableRequest? postPaymentPriceTableRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

@@ -46,7 +46,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a43170cc-9015-4c8b-98bb-34602247720f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '07e16979-c7f7-41eb-b991-0e6ffa9b8665']
 
 ### Return type
 
@@ -93,7 +93,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f2027935-67e5-4e51-afd2-1ccdc98981f0']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '217135cb-8acd-4d58-ba7c-f71d8b676939']
 
 ### Return type
 
@@ -140,7 +140,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f6fdfd14-22d0-45eb-8362-b8e7bd9e6666']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bb28c529-f4af-4624-a565-e29576faf28b']
 
 ### Return type
 
@@ -187,7 +187,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd4c05587-29e9-41dd-bcb7-619ec1baab01']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '805831d8-d000-4254-adc2-d8d3a284af6f']
 
 ### Return type
 
@@ -234,7 +234,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5ad23abe-96f7-491a-861f-557b818c2856']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2fdb89d6-fc03-4978-ab93-fbd091038718']
 
 ### Return type
 

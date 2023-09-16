@@ -44,7 +44,7 @@ class IntegrationConfigApi {
   Future<Response<GetAllIntegrationConfigResponse>> getByIdIntegrationConfig({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'f7e00ea3-9205-4848-a5b8-8567c4826787',
+    String? xCsrfToken = '846a68b8-ac8d-46dc-b96f-628323ce20c7',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -117,7 +117,6 @@ class IntegrationConfigApi {
   /// 
   ///
   /// Parameters:
-  /// * [model] - filter
   /// * [limit] - limit
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
   /// * [xApiKey] - Your Api Key
@@ -132,11 +131,10 @@ class IntegrationConfigApi {
   /// Returns a [Future] containing a [Response] with a [BuiltList<GetAllIntegrationConfigResponse>] as data
   /// Throws [DioError] if API call or serialization fails
   Future<Response<BuiltList<GetAllIntegrationConfigResponse>>> tepsalesV1IntegrationConfigAllGet({ 
-    JsonObject? model,
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '76373dbe-d764-4869-99ca-7e6f617b7ddf',
+    String? xCsrfToken = '3a83d2af-4096-4208-b4a4-e1b673166258',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -167,7 +165,6 @@ class IntegrationConfigApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (model != null) r'model': encodeQueryParameter(_serializers, model, const FullType(JsonObject)),
       if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
     };
@@ -231,7 +228,7 @@ class IntegrationConfigApi {
   Future<Response<void>> tepsalesV1IntegrationConfigIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'e64949b6-db54-41f5-8f78-cba839315162',
+    String? xCsrfToken = '552160be-9aaf-4977-ace5-3e0c012952c3',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -293,7 +290,7 @@ class IntegrationConfigApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'ed1d5dca-d306-4fa9-833e-6234564a8307',
+    String? xCsrfToken = '3f52c9a1-95c6-487b-94ae-c7ad270b6b2f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -374,7 +371,7 @@ class IntegrationConfigApi {
   Future<Response<void>> tepsalesV1IntegrationConfigIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'ebea5cea-fc88-488b-b68a-20e0ceea898d',
+    String? xCsrfToken = 'bd244508-3a8c-4419-bd27-9b7f6605ea1d',
     PutIntegrationConfigRequest? putIntegrationConfigRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -459,7 +456,7 @@ class IntegrationConfigApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '3fd3b4d8-31fe-4af9-b37e-d2aea2e33e58',
+    String? xCsrfToken = '104f4b4d-631e-46f3-9152-ff883e8605c4',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -553,7 +550,7 @@ class IntegrationConfigApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostIntegrationConfigResponse>> tepsalesV1IntegrationConfigPost({ 
     String? xApiKey,
-    String? xCsrfToken = '6296b34d-1ef3-49c7-9bdb-97a82669e4a2',
+    String? xCsrfToken = '9d2c3180-d36f-4a3c-a0ff-1e839cd3bdc0',
     PostIntegrationConfigRequest? postIntegrationConfigRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

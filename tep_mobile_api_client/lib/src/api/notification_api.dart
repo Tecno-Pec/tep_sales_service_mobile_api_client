@@ -45,7 +45,7 @@ class NotificationApi {
   Future<Response<GetAllNotificationResponse>> getByIdNotification({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'beda3238-c74c-43f0-b316-0e4193cccf42',
+    String? xCsrfToken = '17e78cd6-ba9d-4223-9724-9720d7e08e54',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -149,7 +149,7 @@ class NotificationApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken = '44f088c3-aa3a-4afe-98e0-d5bf1f2ac2b9',
+    String? xCsrfToken = '8a395af9-5fe7-4c95-befb-8f4d9a47bfc3',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -250,7 +250,7 @@ class NotificationApi {
   Future<Response<void>> tepsalesV1NotificationsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '68d6cf6f-e9fc-4ece-b7d1-caabea1d76ed',
+    String? xCsrfToken = '5225e57e-f7be-405a-b0bf-74d04d7f68fd',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -312,7 +312,7 @@ class NotificationApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '3fdc4f57-f003-4c38-bd03-0a133ca848ae',
+    String? xCsrfToken = '9de678ca-433d-4bdd-8be0-94bf479c336f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -393,7 +393,7 @@ class NotificationApi {
   Future<Response<void>> tepsalesV1NotificationsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '92aa8d87-db95-4ea5-90e3-d1782546f991',
+    String? xCsrfToken = 'd49fda33-b4f8-4d88-a8ed-368cc87ae229',
     PutNotificationRequest? putNotificationRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -473,7 +473,7 @@ class NotificationApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostNotificationResponse>> tepsalesV1NotificationsPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'fb582791-1b58-40c5-9936-e73155edf92c',
+    String? xCsrfToken = '1f47a60b-9efd-4765-adc8-dc6931e2dc35',
     PostNotificationRequest? postNotificationRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

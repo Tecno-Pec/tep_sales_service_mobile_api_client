@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PaymentCondition id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c890486d-da14-488b-9826-6f20e17ea8b7']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '69957136-3096-4d1e-9dd8-e73dc93159fd']
 
 ### Return type
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '75ab1a5b-2a2c-4b07-a79e-e10dfe29e0be']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4ba31add-c9a0-4b07-a59c-361773532b6e']
 
 ### Return type
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PaymentCondition id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '18857d73-5e46-47ec-8310-7465c36c066d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '998177ac-76ac-44e2-8d78-d08455fe3f2b']
 
 ### Return type
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
  **id** | **String**| PaymentCondition id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b6f20235-4698-47ba-b689-48881ff10b5f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4d897f95-77cf-4c46-8c89-a3bfa4836fb7']
 
 ### Return type
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PaymentCondition Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c952af19-929d-47e4-b3cd-17e41029354e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a6312cea-cb77-45a6-840f-bfccb09e5807']
  **putPaymentConditionRequest** | [**PutPaymentConditionRequest**](PutPaymentConditionRequest.md)| PaymentCondition to update | [optional] 
 
 ### Return type
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '00bad059-996b-4bd7-8fa0-c626a0ba22f6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '717992fc-0732-49f5-8d5b-558f8f8388bb']
 
 ### Return type
 
@@ -368,7 +368,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '69ec7ca1-570a-41fa-80ad-b51800128d59']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4f5a2a57-6015-4778-8e6e-80d0d009602b']
  **postPaymentConditionRequest** | [**PostPaymentConditionRequest**](PostPaymentConditionRequest.md)| PaymentCondition to create | [optional] 
 
 ### Return type

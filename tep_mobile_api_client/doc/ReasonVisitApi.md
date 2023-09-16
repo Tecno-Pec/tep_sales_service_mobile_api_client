@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ReasonVisit id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a6d4faa7-27ba-4e6f-af7b-3b257b4a005b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c40430c9-86f9-453c-b1f9-08866ab3c4a5']
 
 ### Return type
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a5a7d95f-8e62-4748-be75-26d60714cba3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '917900be-98e5-4487-9a29-acfced13ef33']
 
 ### Return type
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ReasonVisit id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6d7ca9bb-1c0f-4b50-8d20-a33284c0c1e5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4a2bbb35-a69a-4d8f-887f-4b785eb02f95']
 
 ### Return type
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
  **id** | **String**| ReasonVisit id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fd17408e-6d11-4f29-b86f-f61e3907cb02']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '202edfe4-b1fb-42f3-a168-75c9743d4b72']
 
 ### Return type
 
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ReasonVisit Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bf2f8be7-94d0-4c71-b792-43df7810268e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd3eafb0a-30a6-4082-ac09-f87a817a326c']
  **putReasonVisitRequest** | [**PutReasonVisitRequest**](PutReasonVisitRequest.md)| ReasonVisit to update | [optional] 
 
 ### Return type
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e2fb1d0e-7508-479a-96eb-4e525ef07956']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '59a6b747-acd9-4022-acb0-8f0f32431e64']
 
 ### Return type
 
@@ -356,7 +356,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3f9512dc-b551-486a-8aef-7959f284fb27']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f47afcd6-d383-48df-9086-8d33cf7712b9']
  **postReasonVisitRequest** | [**PostReasonVisitRequest**](PostReasonVisitRequest.md)| ReasonVisit to create | [optional] 
 
 ### Return type

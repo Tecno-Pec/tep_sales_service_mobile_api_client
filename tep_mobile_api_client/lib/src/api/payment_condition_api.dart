@@ -45,7 +45,7 @@ class PaymentConditionApi {
   Future<Response<GetAllPaymentConditionResponse>> getByIdPaymentCondition({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'c890486d-da14-488b-9826-6f20e17ea8b7',
+    String? xCsrfToken = '69957136-3096-4d1e-9dd8-e73dc93159fd',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -143,7 +143,7 @@ class PaymentConditionApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '75ab1a5b-2a2c-4b07-a79e-e10dfe29e0be',
+    String? xCsrfToken = '4ba31add-c9a0-4b07-a59c-361773532b6e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -241,7 +241,7 @@ class PaymentConditionApi {
   Future<Response<void>> tepsalesV1PaymentConditionsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '18857d73-5e46-47ec-8310-7465c36c066d',
+    String? xCsrfToken = '998177ac-76ac-44e2-8d78-d08455fe3f2b',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -303,7 +303,7 @@ class PaymentConditionApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'b6f20235-4698-47ba-b689-48881ff10b5f',
+    String? xCsrfToken = '4d897f95-77cf-4c46-8c89-a3bfa4836fb7',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -384,7 +384,7 @@ class PaymentConditionApi {
   Future<Response<void>> tepsalesV1PaymentConditionsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'c952af19-929d-47e4-b3cd-17e41029354e',
+    String? xCsrfToken = 'a6312cea-cb77-45a6-840f-bfccb09e5807',
     PutPaymentConditionRequest? putPaymentConditionRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -477,7 +477,7 @@ class PaymentConditionApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '00bad059-996b-4bd7-8fa0-c626a0ba22f6',
+    String? xCsrfToken = '717992fc-0732-49f5-8d5b-558f8f8388bb',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -575,7 +575,7 @@ class PaymentConditionApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostPaymentConditionResponse>> tepsalesV1PaymentConditionsPost({ 
     String? xApiKey,
-    String? xCsrfToken = '69ec7ca1-570a-41fa-80ad-b51800128d59',
+    String? xCsrfToken = '4f5a2a57-6015-4778-8e6e-80d0d009602b',
     PostPaymentConditionRequest? postPaymentConditionRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

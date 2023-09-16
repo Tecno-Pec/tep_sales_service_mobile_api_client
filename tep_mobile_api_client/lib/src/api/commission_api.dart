@@ -45,7 +45,7 @@ class CommissionApi {
   Future<Response<GetAllCommissionResponse>> getByIdCommission({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '92132200-aefb-4cbc-9d83-f25154eb3b5b',
+    String? xCsrfToken = 'eb417f5e-7a96-4e37-9c03-b23abd2b6452',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -143,7 +143,7 @@ class CommissionApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '36447262-6927-4fa3-9940-8f55cbb7791a',
+    String? xCsrfToken = 'cdddc92f-13c4-4d90-a53e-06ee27c37517',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -241,7 +241,7 @@ class CommissionApi {
   Future<Response<void>> tepsalesV1CommissionsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'b3fd9685-9719-4491-b0d4-e50a91104298',
+    String? xCsrfToken = '53f6fb5a-9002-481f-b630-5059032249bf',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -303,7 +303,7 @@ class CommissionApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'd32be85c-24e5-45cd-922b-8a5ee2d3c41b',
+    String? xCsrfToken = 'c99ff09f-c5d2-4fce-9bfa-f75e8a7a5790',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -384,7 +384,7 @@ class CommissionApi {
   Future<Response<void>> tepsalesV1CommissionsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'eedd9359-1cd6-4f0e-909d-f3a6f9fcb28b',
+    String? xCsrfToken = 'aff43237-180e-40e1-b190-25845b10cfb8',
     PutCommissionRequest? putCommissionRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -477,7 +477,7 @@ class CommissionApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'ad16fede-82fc-4b10-90ed-13ea9b9ba6a0',
+    String? xCsrfToken = '8a64f926-9cb7-44aa-80bd-df1c1c106c4a',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -575,7 +575,7 @@ class CommissionApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostCommissionResponse>> tepsalesV1CommissionsPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'fb193640-5af8-4f1f-8db0-a582b1eb5eff',
+    String? xCsrfToken = '5df2d6ac-0d30-47bc-8cef-dc7958d9e815',
     PostCommissionRequest? postCommissionRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| IntegrationConfig id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f7e00ea3-9205-4848-a5b8-8567c4826787']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '846a68b8-ac8d-46dc-b96f-628323ce20c7']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1IntegrationConfigAllGet**
-> BuiltList<GetAllIntegrationConfigResponse> tepsalesV1IntegrationConfigAllGet(model, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllIntegrationConfigResponse> tepsalesV1IntegrationConfigAllGet(limit, sort, xApiKey, xCsrfToken)
 
 Get All IntegrationConfig by filter
 
@@ -81,14 +81,13 @@ import 'package:tep_mobile_api_client/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
 final api = TepMobileApiClient().getIntegrationConfigApi();
-final JsonObject model = Object; // JsonObject | filter
 final int limit = 56; // int | limit
 final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1IntegrationConfigAllGet(model, limit, sort, xApiKey, xCsrfToken);
+    final response = api.tepsalesV1IntegrationConfigAllGet(limit, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling IntegrationConfigApi->tepsalesV1IntegrationConfigAllGet: $e\n');
@@ -99,11 +98,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **model** | [**JsonObject**](.md)| filter | [optional] 
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '76373dbe-d764-4869-99ca-7e6f617b7ddf']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3a83d2af-4096-4208-b4a4-e1b673166258']
 
 ### Return type
 
@@ -151,7 +149,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| IntegrationConfig id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e64949b6-db54-41f5-8f78-cba839315162']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '552160be-9aaf-4977-ace5-3e0c012952c3']
 
 ### Return type
 
@@ -203,7 +201,7 @@ Name | Type | Description  | Notes
  **id** | **String**| IntegrationConfig id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ed1d5dca-d306-4fa9-833e-6234564a8307']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3f52c9a1-95c6-487b-94ae-c7ad270b6b2f']
 
 ### Return type
 
@@ -252,7 +250,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| IntegrationConfig Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ebea5cea-fc88-488b-b68a-20e0ceea898d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bd244508-3a8c-4419-bd27-9b7f6605ea1d']
  **putIntegrationConfigRequest** | [**PutIntegrationConfigRequest**](PutIntegrationConfigRequest.md)| IntegrationConfig to update | [optional] 
 
 ### Return type
@@ -306,7 +304,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3fd3b4d8-31fe-4af9-b37e-d2aea2e33e58']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '104f4b4d-631e-46f3-9152-ff883e8605c4']
 
 ### Return type
 
@@ -354,7 +352,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6296b34d-1ef3-49c7-9bdb-97a82669e4a2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9d2c3180-d36f-4a3c-a0ff-1e839cd3bdc0']
  **postIntegrationConfigRequest** | [**PostIntegrationConfigRequest**](PostIntegrationConfigRequest.md)| IntegrationConfig to create | [optional] 
 
 ### Return type
