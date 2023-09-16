@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.12
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
+import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
+
 
 /// tests for DistribuitionCenterClientAddressApi
 void main() {
-  final instance = DistribuitionCenterClientAddressApi();
+  final instance = TepMobileApiClient().getDistribuitionCenterClientAddressApi();
 
-  group('tests for DistribuitionCenterClientAddressApi', () {
+  group(DistribuitionCenterClientAddressApi, () {
     // Get DistribuitionCenterClientAddress by id
     //
     //Future<GetAllDistribuitionCenterClientAddressResponse> getByIdDistribuitionCenterClientAddress(String id, { String xApiKey, String xCsrfToken }) async
@@ -25,7 +16,7 @@ void main() {
 
     // Get All DistribuitionCenterClientAddress by filter
     //
-    //Future<List<GetAllDistribuitionCenterClientAddressResponse>> tepsalesV1DistribuitionCenterClientAddressAllGet({ String distribuitionCenterId, String addressId, String externalCode, DistribuitionCenterClientAddressStatus status, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<GetAllDistribuitionCenterClientAddressResponse>> tepsalesV1DistribuitionCenterClientAddressAllGet({ String distribuitionCenterId, String addressId, String externalCode, DistribuitionCenterClientAddressStatus status, int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1DistribuitionCenterClientAddressAllGet', () async {
       // TODO
     });
@@ -41,7 +32,7 @@ void main() {
     //
     // Sample request:                    PATCH /tepsales/v1/DistribuitionCenterClientAddress/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
     //
-    //Future tepsalesV1DistribuitionCenterClientAddressIdPatch(String id, List<Operation> operation, { String xApiKey, String xCsrfToken }) async
+    //Future tepsalesV1DistribuitionCenterClientAddressIdPatch(String id, BuiltList<Operation> operation, { String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1DistribuitionCenterClientAddressIdPatch', () async {
       // TODO
     });
@@ -66,5 +57,6 @@ void main() {
     test('test tepsalesV1DistribuitionCenterClientAddressPost', () async {
       // TODO
     });
+
   });
 }

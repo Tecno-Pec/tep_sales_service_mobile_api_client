@@ -30,15 +30,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = NotificationApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getNotificationApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdNotification(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdNotification(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling NotificationApi->getByIdNotification: $e\n');
 }
 ```
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Notification id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '82f182a9-74bc-4773-8d74-0ff4450de327']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'beda3238-c74c-43f0-b316-0e4193cccf42']
 
 ### Return type
 
@@ -79,23 +79,23 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = NotificationApi();
-final message = message_example; // String | 
-final type = ; // NotificationType | 
-final userPhone = userPhone_example; // String | 
-final userName = userName_example; // String | 
-final userEmail = userEmail_example; // String | 
-final userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getNotificationApi();
+final String message = message_example; // String | 
+final NotificationType type = ; // NotificationType | 
+final String userPhone = userPhone_example; // String | 
+final String userName = userName_example; // String | 
+final String userEmail = userEmail_example; // String | 
+final String userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1NotificationsGet(message, type, userPhone, userName, userEmail, userId, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling NotificationApi->tepsalesV1NotificationsGet: $e\n');
 }
 ```
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1028b6b9-6772-438d-b651-3c943846bcc1']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '44f088c3-aa3a-4afe-98e0-d5bf1f2ac2b9']
 
 ### Return type
 
@@ -144,14 +144,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = NotificationApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getNotificationApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1NotificationsIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1NotificationsIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling NotificationApi->tepsalesV1NotificationsIdDelete: $e\n');
 }
 ```
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Notification id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a3db0db6-59db-4e8f-8381-073e9a284ce6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '68d6cf6f-e9fc-4ece-b7d1-caabea1d76ed']
 
 ### Return type
 
@@ -194,15 +194,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = NotificationApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getNotificationApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1NotificationsIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling NotificationApi->tepsalesV1NotificationsIdPatch: $e\n');
 }
 ```
@@ -212,9 +212,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Notification id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3b610e8a-d570-4654-89a0-b88c82599f63']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3fdc4f57-f003-4c38-bd03-0a133ca848ae']
 
 ### Return type
 
@@ -244,15 +244,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = NotificationApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putNotificationRequest = PutNotificationRequest(); // PutNotificationRequest | Notification to update
+final api = TepMobileApiClient().getNotificationApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Notification Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutNotificationRequest putNotificationRequest = ; // PutNotificationRequest | Notification to update
 
 try {
-    api_instance.tepsalesV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest);
-} catch (e) {
+    api.tepsalesV1NotificationsIdPut(id, xApiKey, xCsrfToken, putNotificationRequest);
+} catch on DioError (e) {
     print('Exception when calling NotificationApi->tepsalesV1NotificationsIdPut: $e\n');
 }
 ```
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Notification Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '249a83e4-d9bb-4a4d-97a7-b0329b120c3f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '92aa8d87-db95-4ea5-90e3-d1782546f991']
  **putNotificationRequest** | [**PutNotificationRequest**](PutNotificationRequest.md)| Notification to update | [optional] 
 
 ### Return type
@@ -294,15 +294,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = NotificationApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postNotificationRequest = PostNotificationRequest(); // PostNotificationRequest | Notification to create
+final api = TepMobileApiClient().getNotificationApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostNotificationRequest postNotificationRequest = ; // PostNotificationRequest | Notification to create
 
 try {
-    final result = api_instance.tepsalesV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1NotificationsPost(xApiKey, xCsrfToken, postNotificationRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling NotificationApi->tepsalesV1NotificationsPost: $e\n');
 }
 ```
@@ -312,7 +312,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ccd5fe71-3e7e-42a4-8c0c-1f779452974b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fb582791-1b58-40c5-9936-e73155edf92c']
  **postNotificationRequest** | [**PostNotificationRequest**](PostNotificationRequest.md)| Notification to create | [optional] 
 
 ### Return type

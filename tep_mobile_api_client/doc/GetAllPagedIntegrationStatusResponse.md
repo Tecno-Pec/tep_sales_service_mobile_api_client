@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **rowCount** | **int** |  | [optional] 
 **firstRowOnPage** | **int** |  | [optional] 
 **lastRowOnPage** | **int** |  | [optional] 
-**results** | [**List<GetAllIntegrationStatusResponse>**](GetAllIntegrationStatusResponse.md) |  | [optional] [default to const []]
+**results** | [**BuiltList&lt;GetAllIntegrationStatusResponse&gt;**](GetAllIntegrationStatusResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.12
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
+import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
+
 
 /// tests for FreightTableApi
 void main() {
-  final instance = FreightTableApi();
+  final instance = TepMobileApiClient().getFreightTableApi();
 
-  group('tests for FreightTableApi', () {
+  group(FreightTableApi, () {
     // Get FreightTable by id
     //
     //Future<GetAllFreightTableResponse> getByIdFreightTable(String id, { String xApiKey, String xCsrfToken }) async
@@ -25,7 +16,7 @@ void main() {
 
     // Get All FreightTable by filter
     //
-    //Future<List<GetAllFreightTableResponse>> tepsalesV1FreightTablesAllGet({ String externalCode, String paymentConditionId, String vehicleTypeId, double kilometers, bool isFractional, TablePriceOperationTypeEnum operationType, FreightTableStatus status, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<GetAllFreightTableResponse>> tepsalesV1FreightTablesAllGet({ String externalCode, String paymentConditionId, String vehicleTypeId, double kilometers, bool isFractional, TablePriceOperationTypeEnum operationType, FreightTableStatus status, int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1FreightTablesAllGet', () async {
       // TODO
     });
@@ -41,7 +32,7 @@ void main() {
     //
     // Sample request:                    PATCH /tepsales/v1/FreightTable/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
     //
-    //Future tepsalesV1FreightTablesIdPatch(String id, List<Operation> operation, { String xApiKey, String xCsrfToken }) async
+    //Future tepsalesV1FreightTablesIdPatch(String id, BuiltList<Operation> operation, { String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1FreightTablesIdPatch', () async {
       // TODO
     });
@@ -66,5 +57,6 @@ void main() {
     test('test tepsalesV1FreightTablesPost', () async {
       // TODO
     });
+
   });
 }

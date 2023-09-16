@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.12
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
+import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
+
 
 /// tests for NotificationApi
 void main() {
-  final instance = NotificationApi();
+  final instance = TepMobileApiClient().getNotificationApi();
 
-  group('tests for NotificationApi', () {
+  group(NotificationApi, () {
     // Get Notification by id
     //
     //Future<GetAllNotificationResponse> getByIdNotification(String id, { String xApiKey, String xCsrfToken }) async
@@ -41,7 +32,7 @@ void main() {
     //
     // Sample request:                    PATCH /tepsales/v1/Notification/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
     //
-    //Future tepsalesV1NotificationsIdPatch(String id, List<Operation> operation, { String xApiKey, String xCsrfToken }) async
+    //Future tepsalesV1NotificationsIdPatch(String id, BuiltList<Operation> operation, { String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1NotificationsIdPatch', () async {
       // TODO
     });
@@ -59,5 +50,6 @@ void main() {
     test('test tepsalesV1NotificationsPost', () async {
       // TODO
     });
+
   });
 }

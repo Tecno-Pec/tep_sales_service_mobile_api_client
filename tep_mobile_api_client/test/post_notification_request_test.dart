@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.12
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
+import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
 
 // tests for PostNotificationRequest
 void main() {
-  final instance = PostNotificationRequest();
+  final instance = PostNotificationRequestBuilder();
+  // TODO add properties to the builder and call build()
 
-  group('test PostNotificationRequest', () {
+  group(PostNotificationRequest, () {
     // DateTime createdAt
     test('to test the property `createdAt`', () async {
       // TODO
@@ -46,12 +37,12 @@ void main() {
       // TODO
     });
 
-    // List<NotificationChannel> channels (default value: const [])
+    // BuiltList<NotificationChannel> channels
     test('to test the property `channels`', () async {
       // TODO
     });
 
-    // Map<String, String> attributes (default value: const {})
+    // BuiltMap<String, String> attributes
     test('to test the property `attributes`', () async {
       // TODO
     });
@@ -60,5 +51,6 @@ void main() {
     test('to test the property `user`', () async {
       // TODO
     });
+
   });
 }

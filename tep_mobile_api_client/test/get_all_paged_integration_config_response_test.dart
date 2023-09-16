@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.12
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
+import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
 
 // tests for GetAllPagedIntegrationConfigResponse
 void main() {
-  final instance = GetAllPagedIntegrationConfigResponse();
+  final instance = GetAllPagedIntegrationConfigResponseBuilder();
+  // TODO add properties to the builder and call build()
 
-  group('test GetAllPagedIntegrationConfigResponse', () {
+  group(GetAllPagedIntegrationConfigResponse, () {
     // int currentPage
     test('to test the property `currentPage`', () async {
       // TODO
@@ -46,9 +37,10 @@ void main() {
       // TODO
     });
 
-    // List<GetAllIntegrationConfigResponse> results (default value: const [])
+    // BuiltList<GetAllIntegrationConfigResponse> results
     test('to test the property `results`', () async {
       // TODO
     });
+
   });
 }

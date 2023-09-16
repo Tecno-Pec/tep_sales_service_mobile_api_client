@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **unitMeasurementType** | [**UnitMeasurementTypeEnum**](UnitMeasurementTypeEnum.md) |  | [optional] 
 **status** | [**ProductStatus**](ProductStatus.md) |  | [optional] 
 **photo** | **String** |  | [optional] 
-**especification** | [**List<ProductEspecification>**](ProductEspecification.md) |  | [optional] [default to const []]
+**especification** | [**BuiltList&lt;ProductEspecification&gt;**](ProductEspecification.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

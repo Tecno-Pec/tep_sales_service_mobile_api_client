@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightConversionFactorApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightConversionFactor id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getFreightConversionFactorApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightConversionFactor id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdFreightConversionFactor(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdFreightConversionFactor(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling FreightConversionFactorApi->getByIdFreightConversionFactor: $e\n');
 }
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| FreightConversionFactor id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fbbe9732-0601-4833-b8ba-3cff2858a149']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e04e8106-e53b-433e-b125-e2fc7d245c90']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1FreightConversionFactorsAllGet**
-> List<GetAllFreightConversionFactorResponse> tepsalesV1FreightConversionFactorsAllGet(productId, vehicleTypeId, externalCode, status, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllFreightConversionFactorResponse> tepsalesV1FreightConversionFactorsAllGet(productId, vehicleTypeId, externalCode, status, limit, sort, xApiKey, xCsrfToken)
 
 Get All FreightConversionFactor by filter
 
@@ -80,20 +80,20 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightConversionFactorApi();
-final productId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final vehicleTypeId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final externalCode = externalCode_example; // String | 
-final status = ; // FreightConversionFactorStatus | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getFreightConversionFactorApi();
+final String productId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String vehicleTypeId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String externalCode = externalCode_example; // String | 
+final FreightConversionFactorStatus status = ; // FreightConversionFactorStatus | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1FreightConversionFactorsAllGet(productId, vehicleTypeId, externalCode, status, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1FreightConversionFactorsAllGet(productId, vehicleTypeId, externalCode, status, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling FreightConversionFactorApi->tepsalesV1FreightConversionFactorsAllGet: $e\n');
 }
 ```
@@ -109,11 +109,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5f326df7-ec3c-4a2e-a79f-348189b1d74b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4783bfe3-a740-440b-a7b2-d5a889527b63']
 
 ### Return type
 
-[**List<GetAllFreightConversionFactorResponse>**](GetAllFreightConversionFactorResponse.md)
+[**BuiltList&lt;GetAllFreightConversionFactorResponse&gt;**](GetAllFreightConversionFactorResponse.md)
 
 ### Authorization
 
@@ -139,14 +139,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightConversionFactorApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightConversionFactor id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getFreightConversionFactorApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightConversionFactor id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1FreightConversionFactorsIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1FreightConversionFactorsIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling FreightConversionFactorApi->tepsalesV1FreightConversionFactorsIdDelete: $e\n');
 }
 ```
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| FreightConversionFactor id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9de19145-3183-4eb0-8635-aec3b3eb9600']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'af5794c1-c4cc-4214-b714-c79cebf091a8']
 
 ### Return type
 
@@ -189,15 +189,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightConversionFactorApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightConversionFactor id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getFreightConversionFactorApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightConversionFactor id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1FreightConversionFactorsIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1FreightConversionFactorsIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling FreightConversionFactorApi->tepsalesV1FreightConversionFactorsIdPatch: $e\n');
 }
 ```
@@ -207,9 +207,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| FreightConversionFactor id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1d8b61c6-53e7-402d-b9d0-6757498e7f1d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd39be227-36bb-4e53-9fcb-cf6cb1bf8daa']
 
 ### Return type
 
@@ -239,15 +239,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightConversionFactorApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightConversionFactor Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putFreightConversionFactorRequest = PutFreightConversionFactorRequest(); // PutFreightConversionFactorRequest | FreightConversionFactor to update
+final api = TepMobileApiClient().getFreightConversionFactorApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightConversionFactor Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutFreightConversionFactorRequest putFreightConversionFactorRequest = ; // PutFreightConversionFactorRequest | FreightConversionFactor to update
 
 try {
-    api_instance.tepsalesV1FreightConversionFactorsIdPut(id, xApiKey, xCsrfToken, putFreightConversionFactorRequest);
-} catch (e) {
+    api.tepsalesV1FreightConversionFactorsIdPut(id, xApiKey, xCsrfToken, putFreightConversionFactorRequest);
+} catch on DioError (e) {
     print('Exception when calling FreightConversionFactorApi->tepsalesV1FreightConversionFactorsIdPut: $e\n');
 }
 ```
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| FreightConversionFactor Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c965face-c3f7-4bf6-bce4-a8b8b29d4cc0']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd778dc00-0574-4ad2-8470-eefb31cb1a0b']
  **putFreightConversionFactorRequest** | [**PutFreightConversionFactorRequest**](PutFreightConversionFactorRequest.md)| FreightConversionFactor to update | [optional] 
 
 ### Return type
@@ -289,21 +289,21 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightConversionFactorApi();
-final productId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final vehicleTypeId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final externalCode = externalCode_example; // String | 
-final status = ; // FreightConversionFactorStatus | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getFreightConversionFactorApi();
+final String productId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String vehicleTypeId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String externalCode = externalCode_example; // String | 
+final FreightConversionFactorStatus status = ; // FreightConversionFactorStatus | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1FreightConversionFactorsPagedGet(productId, vehicleTypeId, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1FreightConversionFactorsPagedGet(productId, vehicleTypeId, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling FreightConversionFactorApi->tepsalesV1FreightConversionFactorsPagedGet: $e\n');
 }
 ```
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd2189062-3bba-4feb-85d4-37f167d09703']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a1a3dda2-9400-4360-b673-1b2cfa4db0a1']
 
 ### Return type
 
@@ -350,15 +350,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightConversionFactorApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postFreightConversionFactorRequest = PostFreightConversionFactorRequest(); // PostFreightConversionFactorRequest | FreightConversionFactor to create
+final api = TepMobileApiClient().getFreightConversionFactorApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostFreightConversionFactorRequest postFreightConversionFactorRequest = ; // PostFreightConversionFactorRequest | FreightConversionFactor to create
 
 try {
-    final result = api_instance.tepsalesV1FreightConversionFactorsPost(xApiKey, xCsrfToken, postFreightConversionFactorRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1FreightConversionFactorsPost(xApiKey, xCsrfToken, postFreightConversionFactorRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling FreightConversionFactorApi->tepsalesV1FreightConversionFactorsPost: $e\n');
 }
 ```
@@ -368,7 +368,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0982ea3c-41a7-48cd-a6bb-66b901104fb6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1a237424-db30-43f5-9c13-4ef56d67e341']
  **postFreightConversionFactorRequest** | [**PostFreightConversionFactorRequest**](PostFreightConversionFactorRequest.md)| FreightConversionFactor to create | [optional] 
 
 ### Return type

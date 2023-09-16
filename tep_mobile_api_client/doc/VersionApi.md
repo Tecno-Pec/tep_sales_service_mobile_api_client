@@ -25,13 +25,13 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = VersionApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getVersionApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1VersionGet(xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1VersionGet(xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling VersionApi->tepsalesV1VersionGet: $e\n');
 }
 ```
@@ -41,7 +41,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e13eaaf8-6b1c-4679-8723-a097e6b73283']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '91042cc0-59f2-4c34-b765-9992d5d9683f']
 
 ### Return type
 

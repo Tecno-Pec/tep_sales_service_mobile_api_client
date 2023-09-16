@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ClientContactCalendarApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ClientContactCalendar id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getClientContactCalendarApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ClientContactCalendar id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdClientContactCalendar(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdClientContactCalendar(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ClientContactCalendarApi->getByIdClientContactCalendar: $e\n');
 }
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ClientContactCalendar id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3da620de-33d9-4a71-bd69-d507450aaa1a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '414aeb69-e4e5-4d5b-b806-d2cf79fade6f']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1ClientcontactcalendarAllGet**
-> List<GetAllClientContactCalendarResponse> tepsalesV1ClientcontactcalendarAllGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllClientContactCalendarResponse> tepsalesV1ClientcontactcalendarAllGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, limit, sort, xApiKey, xCsrfToken)
 
 Get All ClientContactCalendar by filter
 
@@ -80,23 +80,23 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ClientContactCalendarApi();
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final clientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final clientName = clientName_example; // String | 
-final salesmanId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final salesmanName = salesmanName_example; // String | 
-final summary = summary_example; // String | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getClientContactCalendarApi();
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String clientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String clientName = clientName_example; // String | 
+final String salesmanId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String salesmanName = salesmanName_example; // String | 
+final String summary = summary_example; // String | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1ClientcontactcalendarAllGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1ClientcontactcalendarAllGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ClientContactCalendarApi->tepsalesV1ClientcontactcalendarAllGet: $e\n');
 }
 ```
@@ -115,11 +115,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6a88054e-304a-4a6a-8bcd-58d4ed1db6ff']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5dd8a80d-3361-4834-afbf-33e37ec6baa4']
 
 ### Return type
 
-[**List<GetAllClientContactCalendarResponse>**](GetAllClientContactCalendarResponse.md)
+[**BuiltList&lt;GetAllClientContactCalendarResponse&gt;**](GetAllClientContactCalendarResponse.md)
 
 ### Authorization
 
@@ -145,14 +145,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ClientContactCalendarApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ClientContactCalendar id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getClientContactCalendarApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ClientContactCalendar id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1ClientcontactcalendarIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1ClientcontactcalendarIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling ClientContactCalendarApi->tepsalesV1ClientcontactcalendarIdDelete: $e\n');
 }
 ```
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ClientContactCalendar id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '106fbdf4-b640-4860-9a62-ab7276b1c13f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd2d8cc21-07c4-4b14-abab-039067590bb3']
 
 ### Return type
 
@@ -195,15 +195,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ClientContactCalendarApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ClientContactCalendar id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getClientContactCalendarApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ClientContactCalendar id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1ClientcontactcalendarIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1ClientcontactcalendarIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling ClientContactCalendarApi->tepsalesV1ClientcontactcalendarIdPatch: $e\n');
 }
 ```
@@ -213,9 +213,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ClientContactCalendar id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'da57f820-05c0-40d2-9a50-6133fbbcf240']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '579eddc9-86d9-4283-bf0a-de8598c15c96']
 
 ### Return type
 
@@ -245,15 +245,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ClientContactCalendarApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ClientContactCalendar Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putClientContactCalendarRequest = PutClientContactCalendarRequest(); // PutClientContactCalendarRequest | ClientContactCalendar to update
+final api = TepMobileApiClient().getClientContactCalendarApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ClientContactCalendar Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutClientContactCalendarRequest putClientContactCalendarRequest = ; // PutClientContactCalendarRequest | ClientContactCalendar to update
 
 try {
-    api_instance.tepsalesV1ClientcontactcalendarIdPut(id, xApiKey, xCsrfToken, putClientContactCalendarRequest);
-} catch (e) {
+    api.tepsalesV1ClientcontactcalendarIdPut(id, xApiKey, xCsrfToken, putClientContactCalendarRequest);
+} catch on DioError (e) {
     print('Exception when calling ClientContactCalendarApi->tepsalesV1ClientcontactcalendarIdPut: $e\n');
 }
 ```
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ClientContactCalendar Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c484c268-3f25-49c9-bdd6-5f97c3000006']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fb3b4405-6507-4b64-b931-fcd6b0325dd1']
  **putClientContactCalendarRequest** | [**PutClientContactCalendarRequest**](PutClientContactCalendarRequest.md)| ClientContactCalendar to update | [optional] 
 
 ### Return type
@@ -295,24 +295,24 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ClientContactCalendarApi();
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final clientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final clientName = clientName_example; // String | 
-final salesmanId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final salesmanName = salesmanName_example; // String | 
-final summary = summary_example; // String | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getClientContactCalendarApi();
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String clientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String clientName = clientName_example; // String | 
+final String salesmanId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String salesmanName = salesmanName_example; // String | 
+final String summary = summary_example; // String | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1ClientcontactcalendarPagedGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1ClientcontactcalendarPagedGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ClientContactCalendarApi->tepsalesV1ClientcontactcalendarPagedGet: $e\n');
 }
 ```
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2a52509f-6163-4f98-a14f-d4e464176616']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9a7c00a7-49b1-49ee-b8f4-d0ea00faca51']
 
 ### Return type
 
@@ -362,15 +362,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ClientContactCalendarApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postClientContactCalendarRequest = PostClientContactCalendarRequest(); // PostClientContactCalendarRequest | ClientContactCalendar to create
+final api = TepMobileApiClient().getClientContactCalendarApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostClientContactCalendarRequest postClientContactCalendarRequest = ; // PostClientContactCalendarRequest | ClientContactCalendar to create
 
 try {
-    final result = api_instance.tepsalesV1ClientcontactcalendarPost(xApiKey, xCsrfToken, postClientContactCalendarRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1ClientcontactcalendarPost(xApiKey, xCsrfToken, postClientContactCalendarRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ClientContactCalendarApi->tepsalesV1ClientcontactcalendarPost: $e\n');
 }
 ```
@@ -380,7 +380,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c599ac6e-0829-456b-bda2-3ea4d02a35f7']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd7159c8d-670f-428d-bef3-7a603760875b']
  **postClientContactCalendarRequest** | [**PostClientContactCalendarRequest**](PostClientContactCalendarRequest.md)| ClientContactCalendar to create | [optional] 
 
 ### Return type

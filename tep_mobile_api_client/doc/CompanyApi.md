@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = CompanyApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getCompanyApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdCompany(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdCompany(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CompanyApi->getByIdCompany: $e\n');
 }
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Company id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '575ce5ed-eb87-40fe-b232-6dfb98845102']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8e6d1806-76f2-426b-a8f6-900c281f2e31']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1CompaniesAllGet**
-> List<GetAllCompanyResponse> tepsalesV1CompaniesAllGet(name, document, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllCompanyResponse> tepsalesV1CompaniesAllGet(name, document, limit, sort, xApiKey, xCsrfToken)
 
 Get All Company by filter
 
@@ -80,18 +80,18 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = CompanyApi();
-final name = name_example; // String | 
-final document = document_example; // String | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getCompanyApi();
+final String name = name_example; // String | 
+final String document = document_example; // String | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1CompaniesAllGet(name, document, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1CompaniesAllGet(name, document, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CompanyApi->tepsalesV1CompaniesAllGet: $e\n');
 }
 ```
@@ -105,11 +105,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd80146a6-c160-41c9-83e9-2632b8ca71f9']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '93f02afd-1935-4d58-a066-198698f8b723']
 
 ### Return type
 
-[**List<GetAllCompanyResponse>**](GetAllCompanyResponse.md)
+[**BuiltList&lt;GetAllCompanyResponse&gt;**](GetAllCompanyResponse.md)
 
 ### Authorization
 
@@ -135,14 +135,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = CompanyApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getCompanyApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1CompaniesIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1CompaniesIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling CompanyApi->tepsalesV1CompaniesIdDelete: $e\n');
 }
 ```
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Company id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '890ae61a-5eae-4adf-93a1-d918e2ff4f16']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b4131be3-8d0d-4e25-8118-8cb8403ca6ae']
 
 ### Return type
 
@@ -185,15 +185,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = CompanyApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getCompanyApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1CompaniesIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1CompaniesIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling CompanyApi->tepsalesV1CompaniesIdPatch: $e\n');
 }
 ```
@@ -203,9 +203,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Company id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cfe393ca-dbaf-4b72-a47e-78409d12b3ac']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '14254030-56f5-4163-b7fc-5c75b7f5a2c0']
 
 ### Return type
 
@@ -235,15 +235,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = CompanyApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putCompanyRequest = PutCompanyRequest(); // PutCompanyRequest | Company to update
+final api = TepMobileApiClient().getCompanyApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Company Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutCompanyRequest putCompanyRequest = ; // PutCompanyRequest | Company to update
 
 try {
-    api_instance.tepsalesV1CompaniesIdPut(id, xApiKey, xCsrfToken, putCompanyRequest);
-} catch (e) {
+    api.tepsalesV1CompaniesIdPut(id, xApiKey, xCsrfToken, putCompanyRequest);
+} catch on DioError (e) {
     print('Exception when calling CompanyApi->tepsalesV1CompaniesIdPut: $e\n');
 }
 ```
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Company Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ff902ae5-2064-4b83-8834-5d006f84ae88']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '65b9243a-58e0-4efa-8342-28a701afb406']
  **putCompanyRequest** | [**PutCompanyRequest**](PutCompanyRequest.md)| Company to update | [optional] 
 
 ### Return type
@@ -285,19 +285,19 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = CompanyApi();
-final name = name_example; // String | 
-final document = document_example; // String | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getCompanyApi();
+final String name = name_example; // String | 
+final String document = document_example; // String | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1CompaniesPagedGet(name, document, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1CompaniesPagedGet(name, document, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CompanyApi->tepsalesV1CompaniesPagedGet: $e\n');
 }
 ```
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f752a6f8-d87b-4f5c-a414-9c71df456611']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '36e4c4af-ac84-40f8-83d8-7698a2623431']
 
 ### Return type
 
@@ -342,15 +342,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = CompanyApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postCompanyRequest = PostCompanyRequest(); // PostCompanyRequest | Company to create
+final api = TepMobileApiClient().getCompanyApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostCompanyRequest postCompanyRequest = ; // PostCompanyRequest | Company to create
 
 try {
-    final result = api_instance.tepsalesV1CompaniesPost(xApiKey, xCsrfToken, postCompanyRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1CompaniesPost(xApiKey, xCsrfToken, postCompanyRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling CompanyApi->tepsalesV1CompaniesPost: $e\n');
 }
 ```
@@ -360,7 +360,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9dc9c16e-7b68-43fb-bf64-939dbce556d9']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '92b45364-f4aa-406a-808f-28e4de018812']
  **postCompanyRequest** | [**PostCompanyRequest**](PostCompanyRequest.md)| Company to create | [optional] 
 
 ### Return type

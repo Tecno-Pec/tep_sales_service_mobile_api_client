@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.12
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
+import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
+
 
 /// tests for ClientContactCalendarApi
 void main() {
-  final instance = ClientContactCalendarApi();
+  final instance = TepMobileApiClient().getClientContactCalendarApi();
 
-  group('tests for ClientContactCalendarApi', () {
+  group(ClientContactCalendarApi, () {
     // Get ClientContactCalendar by id
     //
     //Future<GetAllClientContactCalendarResponse> getByIdClientContactCalendar(String id, { String xApiKey, String xCsrfToken }) async
@@ -25,7 +16,7 @@ void main() {
 
     // Get All ClientContactCalendar by filter
     //
-    //Future<List<GetAllClientContactCalendarResponse>> tepsalesV1ClientcontactcalendarAllGet({ DateTime startDate, DateTime endDate, String clientId, String clientName, String salesmanId, String salesmanName, String summary, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<GetAllClientContactCalendarResponse>> tepsalesV1ClientcontactcalendarAllGet({ DateTime startDate, DateTime endDate, String clientId, String clientName, String salesmanId, String salesmanName, String summary, int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1ClientcontactcalendarAllGet', () async {
       // TODO
     });
@@ -41,7 +32,7 @@ void main() {
     //
     // Sample request:                    PATCH /tepsales/v1/ClientContactCalendar/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
     //
-    //Future tepsalesV1ClientcontactcalendarIdPatch(String id, List<Operation> operation, { String xApiKey, String xCsrfToken }) async
+    //Future tepsalesV1ClientcontactcalendarIdPatch(String id, BuiltList<Operation> operation, { String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1ClientcontactcalendarIdPatch', () async {
       // TODO
     });
@@ -66,5 +57,6 @@ void main() {
     test('test tepsalesV1ClientcontactcalendarPost', () async {
       // TODO
     });
+
   });
 }

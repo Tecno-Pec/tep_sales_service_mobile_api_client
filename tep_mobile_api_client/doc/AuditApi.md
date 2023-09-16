@@ -26,25 +26,25 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = AuditApi();
-final parentId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final entity = entity_example; // String | 
-final action = ; // ActionType | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final userCreated = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final userUpdated = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getAuditApi();
+final String parentId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String entity = entity_example; // String | 
+final ActionType action = ; // ActionType | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String userCreated = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String userUpdated = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1AuditsGet(parentId, companyId, entity, action, startDate, endDate, userCreated, userUpdated, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1AuditsGet(parentId, companyId, entity, action, startDate, endDate, userCreated, userUpdated, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AuditApi->tepsalesV1AuditsGet: $e\n');
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '19be2c12-975d-41c5-b6af-c22c3aad1d82']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '84166bdc-9ff3-4046-b070-e103a0aed608']
 
 ### Return type
 
@@ -95,25 +95,25 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = AuditApi();
-final parentId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final entity = entity_example; // String | 
-final action = ; // ActionType | 
-final startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
-final userCreated = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final userUpdated = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getAuditApi();
+final String parentId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String companyId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String entity = entity_example; // String | 
+final ActionType action = ; // ActionType | 
+final DateTime startDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final DateTime endDate = 2013-10-20T19:20:30+01:00; // DateTime | 
+final String userCreated = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String userUpdated = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1AuditsLatestGet(parentId, companyId, entity, action, startDate, endDate, userCreated, userUpdated, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1AuditsLatestGet(parentId, companyId, entity, action, startDate, endDate, userCreated, userUpdated, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AuditApi->tepsalesV1AuditsLatestGet: $e\n');
 }
 ```
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '54fc231b-d24f-417b-856a-69b7015d5191']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2412f83c-7aa6-49c3-81e7-dda3b0b39eaf']
 
 ### Return type
 

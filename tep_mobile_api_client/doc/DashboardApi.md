@@ -29,14 +29,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = DashboardApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getDashboardApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1DashboardPurchaseorderbysalesmanGet(xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1DashboardPurchaseorderbysalesmanGet(xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DashboardApi->tepsalesV1DashboardPurchaseorderbysalesmanGet: $e\n');
 }
 ```
@@ -46,7 +46,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6222b269-8a1b-46da-9246-8eb7dc4d2af6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a43170cc-9015-4c8b-98bb-34602247720f']
 
 ### Return type
 
@@ -76,14 +76,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = DashboardApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getDashboardApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1DashboardPurchaseorderfavoriteproductsGet(xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1DashboardPurchaseorderfavoriteproductsGet(xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DashboardApi->tepsalesV1DashboardPurchaseorderfavoriteproductsGet: $e\n');
 }
 ```
@@ -93,7 +93,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1c5b7415-7449-4314-9009-2042ca779a23']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f2027935-67e5-4e51-afd2-1ccdc98981f0']
 
 ### Return type
 
@@ -123,14 +123,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = DashboardApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getDashboardApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1DashboardPurchaseorderlastsixmonthsGet(xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1DashboardPurchaseorderlastsixmonthsGet(xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DashboardApi->tepsalesV1DashboardPurchaseorderlastsixmonthsGet: $e\n');
 }
 ```
@@ -140,7 +140,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3c1a922f-645d-4501-b09b-775cbcb21fcf']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f6fdfd14-22d0-45eb-8362-b8e7bd9e6666']
 
 ### Return type
 
@@ -170,14 +170,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = DashboardApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getDashboardApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1DashboardPurchaseorderstatusGet(xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1DashboardPurchaseorderstatusGet(xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DashboardApi->tepsalesV1DashboardPurchaseorderstatusGet: $e\n');
 }
 ```
@@ -187,7 +187,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2f77621a-d898-419e-8798-b4d4e9d52eba']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd4c05587-29e9-41dd-bcb7-619ec1baab01']
 
 ### Return type
 
@@ -217,14 +217,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = DashboardApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getDashboardApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1DashboardWidgetsGet(xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1DashboardWidgetsGet(xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DashboardApi->tepsalesV1DashboardWidgetsGet: $e\n');
 }
 ```
@@ -234,7 +234,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '68af0fd2-5720-44cf-99da-2df2b6826605']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5ad23abe-96f7-491a-861f-557b818c2856']
 
 ### Return type
 

@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = AddressApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Address id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getAddressApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Address id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdAddress(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdAddress(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AddressApi->getByIdAddress: $e\n');
 }
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Address id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5c469944-a573-4e48-9bfe-a2f5bad8f02f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c7975efe-f48e-4f87-a389-5e9ed2feaafb']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1AddressesAllGet**
-> List<GetAllAddressResponse> tepsalesV1AddressesAllGet(parentId, name, type, externalCode, status, parentIds, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllAddressResponse> tepsalesV1AddressesAllGet(parentId, name, type, externalCode, status, parentIds, limit, sort, xApiKey, xCsrfToken)
 
 Get All Address by filter
 
@@ -80,22 +80,22 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = AddressApi();
-final parentId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final name = name_example; // String | 
-final type = ; // AddressTypeEnum | 
-final externalCode = externalCode_example; // String | 
-final status = ; // AddressStatus | 
-final parentIds = []; // List<String> | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getAddressApi();
+final String parentId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String name = name_example; // String | 
+final AddressTypeEnum type = ; // AddressTypeEnum | 
+final String externalCode = externalCode_example; // String | 
+final AddressStatus status = ; // AddressStatus | 
+final BuiltList<String> parentIds = ; // BuiltList<String> | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1AddressesAllGet(parentId, name, type, externalCode, status, parentIds, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1AddressesAllGet(parentId, name, type, externalCode, status, parentIds, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AddressApi->tepsalesV1AddressesAllGet: $e\n');
 }
 ```
@@ -109,15 +109,15 @@ Name | Type | Description  | Notes
  **type** | [**AddressTypeEnum**](.md)|  | [optional] 
  **externalCode** | **String**|  | [optional] 
  **status** | [**AddressStatus**](.md)|  | [optional] 
- **parentIds** | [**List<String>**](String.md)|  | [optional] [default to const []]
+ **parentIds** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.asc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6dbcecf4-f8db-4225-adc0-3e5e6dcb7b2a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a974b046-e6b5-4206-9b2c-dff35afed9b5']
 
 ### Return type
 
-[**List<GetAllAddressResponse>**](GetAllAddressResponse.md)
+[**BuiltList&lt;GetAllAddressResponse&gt;**](GetAllAddressResponse.md)
 
 ### Authorization
 
@@ -143,14 +143,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = AddressApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Address id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getAddressApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Address id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1AddressesIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1AddressesIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling AddressApi->tepsalesV1AddressesIdDelete: $e\n');
 }
 ```
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Address id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0c0f9706-97bd-4937-a958-61c313646d86']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'be272c04-bcb8-4187-b17a-7ade75e1d4e6']
 
 ### Return type
 
@@ -193,15 +193,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = AddressApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Address id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getAddressApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Address id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1AddressesIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1AddressesIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling AddressApi->tepsalesV1AddressesIdPatch: $e\n');
 }
 ```
@@ -211,9 +211,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Address id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5cd33ff1-43ca-4b27-97b6-01fd0dcdcef9']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8bf03f0d-7c9e-482a-94a7-3b0f43282354']
 
 ### Return type
 
@@ -243,15 +243,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = AddressApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Address Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putAddressRequest = PutAddressRequest(); // PutAddressRequest | Address to update
+final api = TepMobileApiClient().getAddressApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | Address Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutAddressRequest putAddressRequest = ; // PutAddressRequest | Address to update
 
 try {
-    api_instance.tepsalesV1AddressesIdPut(id, xApiKey, xCsrfToken, putAddressRequest);
-} catch (e) {
+    api.tepsalesV1AddressesIdPut(id, xApiKey, xCsrfToken, putAddressRequest);
+} catch on DioError (e) {
     print('Exception when calling AddressApi->tepsalesV1AddressesIdPut: $e\n');
 }
 ```
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Address Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4b99b3f4-b79d-4eba-9f2c-1f71a7072f99']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0cecdd9b-7d74-414c-90ef-565bbe26a175']
  **putAddressRequest** | [**PutAddressRequest**](PutAddressRequest.md)| Address to update | [optional] 
 
 ### Return type
@@ -293,23 +293,23 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = AddressApi();
-final parentId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final name = name_example; // String | 
-final type = ; // AddressTypeEnum | 
-final externalCode = externalCode_example; // String | 
-final status = ; // AddressStatus | 
-final parentIds = []; // List<String> | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getAddressApi();
+final String parentId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String name = name_example; // String | 
+final AddressTypeEnum type = ; // AddressTypeEnum | 
+final String externalCode = externalCode_example; // String | 
+final AddressStatus status = ; // AddressStatus | 
+final BuiltList<String> parentIds = ; // BuiltList<String> | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1AddressesPagedGet(parentId, name, type, externalCode, status, parentIds, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1AddressesPagedGet(parentId, name, type, externalCode, status, parentIds, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AddressApi->tepsalesV1AddressesPagedGet: $e\n');
 }
 ```
@@ -323,12 +323,12 @@ Name | Type | Description  | Notes
  **type** | [**AddressTypeEnum**](.md)|  | [optional] 
  **externalCode** | **String**|  | [optional] 
  **status** | [**AddressStatus**](.md)|  | [optional] 
- **parentIds** | [**List<String>**](String.md)|  | [optional] [default to const []]
+ **parentIds** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **page** | **int**|  | [optional] 
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8539ac2d-d329-4ac1-ac0b-ce644eca3515']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c99aa986-0caf-4c3e-bfc3-4ca48281aae2']
 
 ### Return type
 
@@ -358,15 +358,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = AddressApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postAddressRequest = PostAddressRequest(); // PostAddressRequest | Address to create
+final api = TepMobileApiClient().getAddressApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostAddressRequest postAddressRequest = ; // PostAddressRequest | Address to create
 
 try {
-    final result = api_instance.tepsalesV1AddressesPost(xApiKey, xCsrfToken, postAddressRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1AddressesPost(xApiKey, xCsrfToken, postAddressRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling AddressApi->tepsalesV1AddressesPost: $e\n');
 }
 ```
@@ -376,7 +376,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '49093d8f-9df3-4a2e-8a6c-d98ab0d2b78b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c8ddb54b-0edc-4f6e-a6c1-f45665a60a1d']
  **postAddressRequest** | [**PostAddressRequest**](PostAddressRequest.md)| Address to create | [optional] 
 
 ### Return type

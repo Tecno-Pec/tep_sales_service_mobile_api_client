@@ -30,8 +30,8 @@ Name | Type | Description | Notes
 **client** | [**Client**](Client.md) |  | [optional] 
 **deliveryAddress** | [**Address**](Address.md) |  | [optional] 
 **invoiceAddress** | [**Address**](Address.md) |  | [optional] 
-**items** | [**List<PurchaseOrderItem>**](PurchaseOrderItem.md) |  | [optional] [default to const []]
-**history** | [**List<PurchaseOrderHistory>**](PurchaseOrderHistory.md) |  | [optional] [default to const []]
+**items** | [**BuiltList&lt;PurchaseOrderItem&gt;**](PurchaseOrderItem.md) |  | [optional] 
+**history** | [**BuiltList&lt;PurchaseOrderHistory&gt;**](PurchaseOrderHistory.md) |  | [optional] 
 **mobileCreatedUser** | [**User**](User.md) |  | [optional] 
 **status** | [**PurchaseOrderStatus**](PurchaseOrderStatus.md) |  | [optional] 
 

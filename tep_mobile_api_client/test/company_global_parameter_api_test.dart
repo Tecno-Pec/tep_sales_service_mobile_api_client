@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.12
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
+import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
+
 
 /// tests for CompanyGlobalParameterApi
 void main() {
-  final instance = CompanyGlobalParameterApi();
+  final instance = TepMobileApiClient().getCompanyGlobalParameterApi();
 
-  group('tests for CompanyGlobalParameterApi', () {
+  group(CompanyGlobalParameterApi, () {
     // Get CompanyGlobalParameter by id
     //
     //Future<GetAllCompanyGlobalParameterResponse> getByIdCompanyGlobalParameter(String id, { String xApiKey, String xCsrfToken }) async
@@ -25,7 +16,7 @@ void main() {
 
     // Get All CompanyGlobalParameter by filter
     //
-    //Future<List<GetAllCompanyGlobalParameterResponse>> tepsalesV1CompanyglobalparametersAllGet({ String name, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<GetAllCompanyGlobalParameterResponse>> tepsalesV1CompanyglobalparametersAllGet({ String name, int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1CompanyglobalparametersAllGet', () async {
       // TODO
     });
@@ -41,7 +32,7 @@ void main() {
     //
     // Sample request:                    PATCH /tepsales/v1/CompanyGlobalParameter/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
     //
-    //Future tepsalesV1CompanyglobalparametersIdPatch(String id, List<Operation> operation, { String xApiKey, String xCsrfToken }) async
+    //Future tepsalesV1CompanyglobalparametersIdPatch(String id, BuiltList<Operation> operation, { String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1CompanyglobalparametersIdPatch', () async {
       // TODO
     });
@@ -66,5 +57,6 @@ void main() {
     test('test tepsalesV1CompanyglobalparametersPost', () async {
       // TODO
     });
+
   });
 }

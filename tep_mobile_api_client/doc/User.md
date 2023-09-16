@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **updatedAt** | [**DateTime**](DateTime.md) |  | [optional] 
 **userCreated** | **String** |  | [optional] 
 **userUpdated** | **String** |  | [optional] 
-**version** | [**Object**](.md) |  | [optional] 
+**version** | [**JsonObject**](.md) |  | [optional] 
 **companyId** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **documentId** | **String** |  | [optional] 
@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 **externalCode** | **String** |  | [optional] 
 **status** | [**UserStatus**](UserStatus.md) |  | [optional] 
 **forceChangePassword** | **bool** |  | [optional] 
-**pushTokens** | [**List<PushToken>**](PushToken.md) |  | [optional] [default to const []]
+**pushTokens** | [**BuiltList&lt;PushToken&gt;**](PushToken.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **updatedAt** | [**DateTime**](DateTime.md) |  | [optional] 
 **userCreated** | **String** |  | [optional] 
 **userUpdated** | **String** |  | [optional] 
-**version** | [**Object**](.md) |  | [optional] 
+**version** | [**JsonObject**](.md) |  | [optional] 
 **companyId** | **String** |  | [optional] 
 **productGroupId** | **String** |  | [optional] 
 **productLineId** | **String** |  | [optional] 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **photo** | **String** |  | [optional] 
-**especification** | [**List<ProductEspecification>**](ProductEspecification.md) |  | [optional] [default to const []]
+**especification** | [**BuiltList&lt;ProductEspecification&gt;**](ProductEspecification.md) |  | [optional] 
 **unitMeasurementType** | [**UnitMeasurementTypeEnum**](UnitMeasurementTypeEnum.md) |  | [optional] 
 **status** | [**ProductStatus**](ProductStatus.md) |  | [optional] 
 

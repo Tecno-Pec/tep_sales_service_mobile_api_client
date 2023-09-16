@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = VehicleTypeApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | VehicleType id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getVehicleTypeApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | VehicleType id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdVehicleType(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdVehicleType(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling VehicleTypeApi->getByIdVehicleType: $e\n');
 }
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| VehicleType id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '51ade85a-bb8a-4456-a525-71ce1ccf9e13']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f4f39e54-d4d9-450a-a860-5bdd520d4732']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1VehicleTypesAllGet**
-> List<GetAllVehicleTypeResponse> tepsalesV1VehicleTypesAllGet(name, externalCode, status, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllVehicleTypeResponse> tepsalesV1VehicleTypesAllGet(name, externalCode, status, limit, sort, xApiKey, xCsrfToken)
 
 Get All VehicleType by filter
 
@@ -80,19 +80,19 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = VehicleTypeApi();
-final name = name_example; // String | 
-final externalCode = externalCode_example; // String | 
-final status = ; // VehicleTypeStatus | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getVehicleTypeApi();
+final String name = name_example; // String | 
+final String externalCode = externalCode_example; // String | 
+final VehicleTypeStatus status = ; // VehicleTypeStatus | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1VehicleTypesAllGet(name, externalCode, status, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1VehicleTypesAllGet(name, externalCode, status, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling VehicleTypeApi->tepsalesV1VehicleTypesAllGet: $e\n');
 }
 ```
@@ -107,11 +107,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1c97495f-a93b-4677-ac78-bcfc47583024']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '909a9340-f685-4cb0-ab6e-238d76f8ac72']
 
 ### Return type
 
-[**List<GetAllVehicleTypeResponse>**](GetAllVehicleTypeResponse.md)
+[**BuiltList&lt;GetAllVehicleTypeResponse&gt;**](GetAllVehicleTypeResponse.md)
 
 ### Authorization
 
@@ -137,14 +137,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = VehicleTypeApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | VehicleType id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getVehicleTypeApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | VehicleType id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1VehicleTypesIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1VehicleTypesIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling VehicleTypeApi->tepsalesV1VehicleTypesIdDelete: $e\n');
 }
 ```
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| VehicleType id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3d336b64-17f8-4f31-9a85-1f5503e9e1c2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4a9fa60c-becb-4f5f-8591-28b0c46434e3']
 
 ### Return type
 
@@ -187,15 +187,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = VehicleTypeApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | VehicleType id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getVehicleTypeApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | VehicleType id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1VehicleTypesIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1VehicleTypesIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling VehicleTypeApi->tepsalesV1VehicleTypesIdPatch: $e\n');
 }
 ```
@@ -205,9 +205,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| VehicleType id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8b2ca81c-bbb8-4f60-b689-03338356cd32']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5504a653-2b80-4ec4-bfa6-fb73cf0b13b9']
 
 ### Return type
 
@@ -237,15 +237,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = VehicleTypeApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | VehicleType Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putVehicleTypeRequest = PutVehicleTypeRequest(); // PutVehicleTypeRequest | VehicleType to update
+final api = TepMobileApiClient().getVehicleTypeApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | VehicleType Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutVehicleTypeRequest putVehicleTypeRequest = ; // PutVehicleTypeRequest | VehicleType to update
 
 try {
-    api_instance.tepsalesV1VehicleTypesIdPut(id, xApiKey, xCsrfToken, putVehicleTypeRequest);
-} catch (e) {
+    api.tepsalesV1VehicleTypesIdPut(id, xApiKey, xCsrfToken, putVehicleTypeRequest);
+} catch on DioError (e) {
     print('Exception when calling VehicleTypeApi->tepsalesV1VehicleTypesIdPut: $e\n');
 }
 ```
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| VehicleType Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1c69a64a-1f66-4174-8f19-d3324bc06307']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7e469b83-9985-482d-8123-068df020ac48']
  **putVehicleTypeRequest** | [**PutVehicleTypeRequest**](PutVehicleTypeRequest.md)| VehicleType to update | [optional] 
 
 ### Return type
@@ -287,20 +287,20 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = VehicleTypeApi();
-final name = name_example; // String | 
-final externalCode = externalCode_example; // String | 
-final status = ; // VehicleTypeStatus | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getVehicleTypeApi();
+final String name = name_example; // String | 
+final String externalCode = externalCode_example; // String | 
+final VehicleTypeStatus status = ; // VehicleTypeStatus | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1VehicleTypesPagedGet(name, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1VehicleTypesPagedGet(name, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling VehicleTypeApi->tepsalesV1VehicleTypesPagedGet: $e\n');
 }
 ```
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ae40688d-8901-47f0-83a2-f85046142eab']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a3a33977-9dcc-4d0b-a45c-affe8cd3d31b']
 
 ### Return type
 
@@ -346,15 +346,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = VehicleTypeApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postVehicleTypeRequest = PostVehicleTypeRequest(); // PostVehicleTypeRequest | VehicleType to create
+final api = TepMobileApiClient().getVehicleTypeApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostVehicleTypeRequest postVehicleTypeRequest = ; // PostVehicleTypeRequest | VehicleType to create
 
 try {
-    final result = api_instance.tepsalesV1VehicleTypesPost(xApiKey, xCsrfToken, postVehicleTypeRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1VehicleTypesPost(xApiKey, xCsrfToken, postVehicleTypeRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling VehicleTypeApi->tepsalesV1VehicleTypesPost: $e\n');
 }
 ```
@@ -364,7 +364,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '43bfb671-bdad-4ed1-9c2b-4e4984504ac2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '46da20f8-7ac8-4e67-b838-53529c4dfd94']
  **postVehicleTypeRequest** | [**PostVehicleTypeRequest**](PostVehicleTypeRequest.md)| VehicleType to create | [optional] 
 
 ### Return type

@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.12
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
+import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
 
 // tests for PostPurchaseOrderRequest
 void main() {
-  final instance = PostPurchaseOrderRequest();
+  final instance = PostPurchaseOrderRequestBuilder();
+  // TODO add properties to the builder and call build()
 
-  group('test PostPurchaseOrderRequest', () {
+  group(PostPurchaseOrderRequest, () {
     // DateTime createdAt
     test('to test the property `createdAt`', () async {
       // TODO
@@ -126,12 +117,12 @@ void main() {
       // TODO
     });
 
-    // List<PurchaseOrderItemModelBase> items (default value: const [])
+    // BuiltList<PurchaseOrderItemModelBase> items
     test('to test the property `items`', () async {
       // TODO
     });
 
-    // List<FreightCompositionModel> freightCompositions (default value: const [])
+    // BuiltList<FreightCompositionModel> freightCompositions
     test('to test the property `freightCompositions`', () async {
       // TODO
     });
@@ -155,5 +146,6 @@ void main() {
     test('to test the property `distribuitionCenterClientAddressId`', () async {
       // TODO
     });
+
   });
 }

@@ -35,15 +35,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PurchaseOrderApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPurchaseOrderApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdPurchaseOrder(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdPurchaseOrder(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PurchaseOrderApi->getByIdPurchaseOrder: $e\n');
 }
 ```
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dd962f82-262a-4723-aaa8-ebefd4f692bd']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0d4ceed7-d611-451e-a1a8-ce5627ed0385']
 
 ### Return type
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1PurchaseordersAllGet**
-> List<GetAllPurchaseOrderResponse> tepsalesV1PurchaseordersAllGet(status, clientName, clientDocument, clientId, dateRange, userCreatedId, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllPurchaseOrderResponse> tepsalesV1PurchaseordersAllGet(status, clientName, clientDocument, clientId, dateRange, userCreatedId, limit, sort, xApiKey, xCsrfToken)
 
 Get All PurchaseOrder by filter
 
@@ -84,22 +84,22 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PurchaseOrderApi();
-final status = ; // PurchaseOrderStatus | 
-final clientName = clientName_example; // String | 
-final clientDocument = clientDocument_example; // String | 
-final clientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final dateRange = 789; // int | 
-final userCreatedId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPurchaseOrderApi();
+final PurchaseOrderStatus status = ; // PurchaseOrderStatus | 
+final String clientName = clientName_example; // String | 
+final String clientDocument = clientDocument_example; // String | 
+final String clientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final int dateRange = 789; // int | 
+final String userCreatedId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1PurchaseordersAllGet(status, clientName, clientDocument, clientId, dateRange, userCreatedId, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1PurchaseordersAllGet(status, clientName, clientDocument, clientId, dateRange, userCreatedId, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PurchaseOrderApi->tepsalesV1PurchaseordersAllGet: $e\n');
 }
 ```
@@ -117,11 +117,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a16c6bc4-f118-4737-b213-b8cd806fba57']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1768bade-c12e-436f-ae41-f875dea49d04']
 
 ### Return type
 
-[**List<GetAllPurchaseOrderResponse>**](GetAllPurchaseOrderResponse.md)
+[**BuiltList&lt;GetAllPurchaseOrderResponse&gt;**](GetAllPurchaseOrderResponse.md)
 
 ### Authorization
 
@@ -147,14 +147,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PurchaseOrderApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPurchaseOrderApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1PurchaseordersIdApprovePost(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1PurchaseordersIdApprovePost(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling PurchaseOrderApi->tepsalesV1PurchaseordersIdApprovePost: $e\n');
 }
 ```
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '09bb879c-6f06-416b-a62d-aab7523aede8']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6fa7e61d-1208-4096-a13a-7e5caa9a4461']
 
 ### Return type
 
@@ -195,15 +195,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PurchaseOrderApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postCancelPurchaseOrderRequest = PostCancelPurchaseOrderRequest(); // PostCancelPurchaseOrderRequest | PostCancelPurchaseOrderRequest
+final api = TepMobileApiClient().getPurchaseOrderApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostCancelPurchaseOrderRequest postCancelPurchaseOrderRequest = ; // PostCancelPurchaseOrderRequest | PostCancelPurchaseOrderRequest
 
 try {
-    api_instance.tepsalesV1PurchaseordersIdCancelPost(id, xApiKey, xCsrfToken, postCancelPurchaseOrderRequest);
-} catch (e) {
+    api.tepsalesV1PurchaseordersIdCancelPost(id, xApiKey, xCsrfToken, postCancelPurchaseOrderRequest);
+} catch on DioError (e) {
     print('Exception when calling PurchaseOrderApi->tepsalesV1PurchaseordersIdCancelPost: $e\n');
 }
 ```
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ad0e347a-4853-4038-a6cf-24fe6c9af741']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bc554ad2-9340-4b9f-9a39-af7f5b5a69ab']
  **postCancelPurchaseOrderRequest** | [**PostCancelPurchaseOrderRequest**](PostCancelPurchaseOrderRequest.md)| PostCancelPurchaseOrderRequest | [optional] 
 
 ### Return type
@@ -245,14 +245,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PurchaseOrderApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPurchaseOrderApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1PurchaseordersIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1PurchaseordersIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling PurchaseOrderApi->tepsalesV1PurchaseordersIdDelete: $e\n');
 }
 ```
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd342dd85-32f9-48a8-8852-7b98335e6a04']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6ee201b6-54e1-4b76-9167-b0a297dc85d5']
 
 ### Return type
 
@@ -295,15 +295,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PurchaseOrderApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPurchaseOrderApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1PurchaseordersIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1PurchaseordersIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling PurchaseOrderApi->tepsalesV1PurchaseordersIdPatch: $e\n');
 }
 ```
@@ -313,9 +313,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5815388e-fde8-45d6-ab81-8a4089ce33ca']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '692c5e8a-a14b-40dc-8e67-ce8ae738e8fa']
 
 ### Return type
 
@@ -345,15 +345,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PurchaseOrderApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putPurchaseOrderRequest = PutPurchaseOrderRequest(); // PutPurchaseOrderRequest | PurchaseOrder to update
+final api = TepMobileApiClient().getPurchaseOrderApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutPurchaseOrderRequest putPurchaseOrderRequest = ; // PutPurchaseOrderRequest | PurchaseOrder to update
 
 try {
-    api_instance.tepsalesV1PurchaseordersIdPut(id, xApiKey, xCsrfToken, putPurchaseOrderRequest);
-} catch (e) {
+    api.tepsalesV1PurchaseordersIdPut(id, xApiKey, xCsrfToken, putPurchaseOrderRequest);
+} catch on DioError (e) {
     print('Exception when calling PurchaseOrderApi->tepsalesV1PurchaseordersIdPut: $e\n');
 }
 ```
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e4352ff3-bc18-433f-a2cb-90691e3930c1']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ff861cc4-0937-4f10-8f70-4a5c2fee61b7']
  **putPurchaseOrderRequest** | [**PutPurchaseOrderRequest**](PutPurchaseOrderRequest.md)| PurchaseOrder to update | [optional] 
 
 ### Return type
@@ -395,15 +395,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PurchaseOrderApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postRefusedPurchaseOrderRequest = PostRefusedPurchaseOrderRequest(); // PostRefusedPurchaseOrderRequest | Post Refused PurchaseOrderRequest
+final api = TepMobileApiClient().getPurchaseOrderApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostRefusedPurchaseOrderRequest postRefusedPurchaseOrderRequest = ; // PostRefusedPurchaseOrderRequest | Post Refused PurchaseOrderRequest
 
 try {
-    api_instance.tepsalesV1PurchaseordersIdRefusedPost(id, xApiKey, xCsrfToken, postRefusedPurchaseOrderRequest);
-} catch (e) {
+    api.tepsalesV1PurchaseordersIdRefusedPost(id, xApiKey, xCsrfToken, postRefusedPurchaseOrderRequest);
+} catch on DioError (e) {
     print('Exception when calling PurchaseOrderApi->tepsalesV1PurchaseordersIdRefusedPost: $e\n');
 }
 ```
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PurchaseOrder Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ce963c91-8ed0-4097-b7d5-af2d9c068b0f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3d4cdc10-bb20-4ebb-ad42-339d33b4872d']
  **postRefusedPurchaseOrderRequest** | [**PostRefusedPurchaseOrderRequest**](PostRefusedPurchaseOrderRequest.md)| Post Refused PurchaseOrderRequest | [optional] 
 
 ### Return type
@@ -445,15 +445,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PurchaseOrderApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder Id
-final areaManagerCode = areaManagerCode_example; // String | Area Manager Code
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPurchaseOrderApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PurchaseOrder Id
+final String areaManagerCode = areaManagerCode_example; // String | Area Manager Code
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1PurchaseordersIdSendtoapprovePost(id, areaManagerCode, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1PurchaseordersIdSendtoapprovePost(id, areaManagerCode, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling PurchaseOrderApi->tepsalesV1PurchaseordersIdSendtoapprovePost: $e\n');
 }
 ```
@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
  **id** | **String**| PurchaseOrder Id | 
  **areaManagerCode** | **String**| Area Manager Code | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0bb7d871-37a0-4e93-a1d3-4515ee5f25fe']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '1df41184-e2ee-45b9-b326-5917e324dcd8']
 
 ### Return type
 
@@ -495,23 +495,23 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PurchaseOrderApi();
-final status = ; // PurchaseOrderStatus | 
-final clientName = clientName_example; // String | 
-final clientDocument = clientDocument_example; // String | 
-final clientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final dateRange = 789; // int | 
-final userCreatedId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPurchaseOrderApi();
+final PurchaseOrderStatus status = ; // PurchaseOrderStatus | 
+final String clientName = clientName_example; // String | 
+final String clientDocument = clientDocument_example; // String | 
+final String clientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final int dateRange = 789; // int | 
+final String userCreatedId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1PurchaseordersPagedGet(status, clientName, clientDocument, clientId, dateRange, userCreatedId, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1PurchaseordersPagedGet(status, clientName, clientDocument, clientId, dateRange, userCreatedId, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PurchaseOrderApi->tepsalesV1PurchaseordersPagedGet: $e\n');
 }
 ```
@@ -530,7 +530,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '82725f68-0e6b-47ad-9518-a77089d1707f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3dc36060-4864-4f64-a266-b09df36aa8b0']
 
 ### Return type
 
@@ -560,15 +560,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PurchaseOrderApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postPurchaseOrderRequest = PostPurchaseOrderRequest(); // PostPurchaseOrderRequest | PurchaseOrder to create
+final api = TepMobileApiClient().getPurchaseOrderApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostPurchaseOrderRequest postPurchaseOrderRequest = ; // PostPurchaseOrderRequest | PurchaseOrder to create
 
 try {
-    final result = api_instance.tepsalesV1PurchaseordersPost(xApiKey, xCsrfToken, postPurchaseOrderRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1PurchaseordersPost(xApiKey, xCsrfToken, postPurchaseOrderRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PurchaseOrderApi->tepsalesV1PurchaseordersPost: $e\n');
 }
 ```
@@ -578,7 +578,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '446c4cf7-7f99-47cd-bd6e-b95de345bff7']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fad3331c-7cb7-4acb-9de6-b38f32a0c3ed']
  **postPurchaseOrderRequest** | [**PostPurchaseOrderRequest**](PostPurchaseOrderRequest.md)| PurchaseOrder to create | [optional] 
 
 ### Return type

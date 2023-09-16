@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = DistribuitionCenterApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DistribuitionCenter id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getDistribuitionCenterApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DistribuitionCenter id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdDistribuitionCenter(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdDistribuitionCenter(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistribuitionCenterApi->getByIdDistribuitionCenter: $e\n');
 }
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DistribuitionCenter id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4e206c51-8ce5-400c-b47e-20e73ad4d4aa']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dced24da-0d32-421c-9e12-f3c0d387a769']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1DistribuitionsCentersAllGet**
-> List<GetAllDistribuitionCenterResponse> tepsalesV1DistribuitionsCentersAllGet(name, document, externalCode, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllDistribuitionCenterResponse> tepsalesV1DistribuitionsCentersAllGet(name, document, externalCode, limit, sort, xApiKey, xCsrfToken)
 
 Get All DistribuitionCenter by filter
 
@@ -80,19 +80,19 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = DistribuitionCenterApi();
-final name = name_example; // String | 
-final document = document_example; // String | 
-final externalCode = externalCode_example; // String | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getDistribuitionCenterApi();
+final String name = name_example; // String | 
+final String document = document_example; // String | 
+final String externalCode = externalCode_example; // String | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1DistribuitionsCentersAllGet(name, document, externalCode, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1DistribuitionsCentersAllGet(name, document, externalCode, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistribuitionCenterApi->tepsalesV1DistribuitionsCentersAllGet: $e\n');
 }
 ```
@@ -107,11 +107,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '02781ebb-0446-48d4-b9a3-06aa1b355721']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c8f56e62-fe7f-4007-87c1-1d62aae57970']
 
 ### Return type
 
-[**List<GetAllDistribuitionCenterResponse>**](GetAllDistribuitionCenterResponse.md)
+[**BuiltList&lt;GetAllDistribuitionCenterResponse&gt;**](GetAllDistribuitionCenterResponse.md)
 
 ### Authorization
 
@@ -137,14 +137,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = DistribuitionCenterApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DistribuitionCenter id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getDistribuitionCenterApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DistribuitionCenter id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1DistribuitionsCentersIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1DistribuitionsCentersIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling DistribuitionCenterApi->tepsalesV1DistribuitionsCentersIdDelete: $e\n');
 }
 ```
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DistribuitionCenter id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6b218543-7230-4962-bf5c-fbb6f6209952']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c238a632-637c-4245-bb09-830ac7018eec']
 
 ### Return type
 
@@ -187,15 +187,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = DistribuitionCenterApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DistribuitionCenter id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getDistribuitionCenterApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DistribuitionCenter id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1DistribuitionsCentersIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1DistribuitionsCentersIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling DistribuitionCenterApi->tepsalesV1DistribuitionsCentersIdPatch: $e\n');
 }
 ```
@@ -205,9 +205,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DistribuitionCenter id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3d58678e-0bac-46cb-95ad-34ff6d5145e9']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2e91d0d0-6f5b-4ab4-ac10-1c54ac0d89be']
 
 ### Return type
 
@@ -237,15 +237,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = DistribuitionCenterApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DistribuitionCenter Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putDistribuitionCenterRequest = PutDistribuitionCenterRequest(); // PutDistribuitionCenterRequest | DistribuitionCenter to update
+final api = TepMobileApiClient().getDistribuitionCenterApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | DistribuitionCenter Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutDistribuitionCenterRequest putDistribuitionCenterRequest = ; // PutDistribuitionCenterRequest | DistribuitionCenter to update
 
 try {
-    api_instance.tepsalesV1DistribuitionsCentersIdPut(id, xApiKey, xCsrfToken, putDistribuitionCenterRequest);
-} catch (e) {
+    api.tepsalesV1DistribuitionsCentersIdPut(id, xApiKey, xCsrfToken, putDistribuitionCenterRequest);
+} catch on DioError (e) {
     print('Exception when calling DistribuitionCenterApi->tepsalesV1DistribuitionsCentersIdPut: $e\n');
 }
 ```
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DistribuitionCenter Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fdffd06c-ab3d-46ce-b2f9-cebc7e9f27fd']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3109ce90-bd88-4e9c-a15e-87824fac6c79']
  **putDistribuitionCenterRequest** | [**PutDistribuitionCenterRequest**](PutDistribuitionCenterRequest.md)| DistribuitionCenter to update | [optional] 
 
 ### Return type
@@ -287,20 +287,20 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = DistribuitionCenterApi();
-final name = name_example; // String | 
-final document = document_example; // String | 
-final externalCode = externalCode_example; // String | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getDistribuitionCenterApi();
+final String name = name_example; // String | 
+final String document = document_example; // String | 
+final String externalCode = externalCode_example; // String | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1DistribuitionsCentersPagedGet(name, document, externalCode, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1DistribuitionsCentersPagedGet(name, document, externalCode, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistribuitionCenterApi->tepsalesV1DistribuitionsCentersPagedGet: $e\n');
 }
 ```
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7ac878a3-f7f4-448d-800b-3e9e05b0afb2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '697bb4c6-7c7c-438a-8bb8-d5bb4a8191d5']
 
 ### Return type
 
@@ -346,15 +346,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = DistribuitionCenterApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postDistribuitionCenterRequest = PostDistribuitionCenterRequest(); // PostDistribuitionCenterRequest | DistribuitionCenter to create
+final api = TepMobileApiClient().getDistribuitionCenterApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostDistribuitionCenterRequest postDistribuitionCenterRequest = ; // PostDistribuitionCenterRequest | DistribuitionCenter to create
 
 try {
-    final result = api_instance.tepsalesV1DistribuitionsCentersPost(xApiKey, xCsrfToken, postDistribuitionCenterRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1DistribuitionsCentersPost(xApiKey, xCsrfToken, postDistribuitionCenterRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling DistribuitionCenterApi->tepsalesV1DistribuitionsCentersPost: $e\n');
 }
 ```
@@ -364,7 +364,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e7842d9b-8fd1-4f58-bca4-a7ee8b4875f4']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '00f7dfc0-5381-48eb-bbb2-030f5cee7d20']
  **postDistribuitionCenterRequest** | [**PostDistribuitionCenterRequest**](PostDistribuitionCenterRequest.md)| DistribuitionCenter to create | [optional] 
 
 ### Return type

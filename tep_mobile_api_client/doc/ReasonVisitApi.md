@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ReasonVisitApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ReasonVisit id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getReasonVisitApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ReasonVisit id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdReasonVisit(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdReasonVisit(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ReasonVisitApi->getByIdReasonVisit: $e\n');
 }
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ReasonVisit id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '77242f46-3fc8-4e82-ab43-0cd2c867458b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a6d4faa7-27ba-4e6f-af7b-3b257b4a005b']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1ReasonsvisitsAllGet**
-> List<GetAllReasonVisitResponse> tepsalesV1ReasonsvisitsAllGet(description, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllReasonVisitResponse> tepsalesV1ReasonsvisitsAllGet(description, limit, sort, xApiKey, xCsrfToken)
 
 Get All ReasonVisit by filter
 
@@ -80,17 +80,17 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ReasonVisitApi();
-final description = description_example; // String | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getReasonVisitApi();
+final String description = description_example; // String | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1ReasonsvisitsAllGet(description, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1ReasonsvisitsAllGet(description, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ReasonVisitApi->tepsalesV1ReasonsvisitsAllGet: $e\n');
 }
 ```
@@ -103,11 +103,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '98800031-453f-48f7-b377-46fbe548c697']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a5a7d95f-8e62-4748-be75-26d60714cba3']
 
 ### Return type
 
-[**List<GetAllReasonVisitResponse>**](GetAllReasonVisitResponse.md)
+[**BuiltList&lt;GetAllReasonVisitResponse&gt;**](GetAllReasonVisitResponse.md)
 
 ### Authorization
 
@@ -133,14 +133,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ReasonVisitApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ReasonVisit id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getReasonVisitApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ReasonVisit id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1ReasonsvisitsIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1ReasonsvisitsIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling ReasonVisitApi->tepsalesV1ReasonsvisitsIdDelete: $e\n');
 }
 ```
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ReasonVisit id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '47eebbcb-ff51-48e2-9474-d39b04081bd3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6d7ca9bb-1c0f-4b50-8d20-a33284c0c1e5']
 
 ### Return type
 
@@ -183,15 +183,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ReasonVisitApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ReasonVisit id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getReasonVisitApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ReasonVisit id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1ReasonsvisitsIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1ReasonsvisitsIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling ReasonVisitApi->tepsalesV1ReasonsvisitsIdPatch: $e\n');
 }
 ```
@@ -201,9 +201,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ReasonVisit id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3ce3fca2-5aea-482c-af64-6a093a6cccc2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fd17408e-6d11-4f29-b86f-f61e3907cb02']
 
 ### Return type
 
@@ -233,15 +233,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ReasonVisitApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ReasonVisit Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putReasonVisitRequest = PutReasonVisitRequest(); // PutReasonVisitRequest | ReasonVisit to update
+final api = TepMobileApiClient().getReasonVisitApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | ReasonVisit Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutReasonVisitRequest putReasonVisitRequest = ; // PutReasonVisitRequest | ReasonVisit to update
 
 try {
-    api_instance.tepsalesV1ReasonsvisitsIdPut(id, xApiKey, xCsrfToken, putReasonVisitRequest);
-} catch (e) {
+    api.tepsalesV1ReasonsvisitsIdPut(id, xApiKey, xCsrfToken, putReasonVisitRequest);
+} catch on DioError (e) {
     print('Exception when calling ReasonVisitApi->tepsalesV1ReasonsvisitsIdPut: $e\n');
 }
 ```
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ReasonVisit Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3c42a6ac-94e5-4a07-827a-e817682874d8']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bf2f8be7-94d0-4c71-b792-43df7810268e']
  **putReasonVisitRequest** | [**PutReasonVisitRequest**](PutReasonVisitRequest.md)| ReasonVisit to update | [optional] 
 
 ### Return type
@@ -283,18 +283,18 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ReasonVisitApi();
-final description = description_example; // String | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getReasonVisitApi();
+final String description = description_example; // String | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1ReasonsvisitsPagedGet(description, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1ReasonsvisitsPagedGet(description, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ReasonVisitApi->tepsalesV1ReasonsvisitsPagedGet: $e\n');
 }
 ```
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5a40a453-9c21-41ae-be15-c02e35c45fc3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e2fb1d0e-7508-479a-96eb-4e525ef07956']
 
 ### Return type
 
@@ -338,15 +338,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = ReasonVisitApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postReasonVisitRequest = PostReasonVisitRequest(); // PostReasonVisitRequest | ReasonVisit to create
+final api = TepMobileApiClient().getReasonVisitApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostReasonVisitRequest postReasonVisitRequest = ; // PostReasonVisitRequest | ReasonVisit to create
 
 try {
-    final result = api_instance.tepsalesV1ReasonsvisitsPost(xApiKey, xCsrfToken, postReasonVisitRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1ReasonsvisitsPost(xApiKey, xCsrfToken, postReasonVisitRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ReasonVisitApi->tepsalesV1ReasonsvisitsPost: $e\n');
 }
 ```
@@ -356,7 +356,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'abb861e7-211f-4a0b-8487-b0458123546c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3f9512dc-b551-486a-8aef-7959f284fb27']
  **postReasonVisitRequest** | [**PostReasonVisitRequest**](PostReasonVisitRequest.md)| ReasonVisit to create | [optional] 
 
 ### Return type

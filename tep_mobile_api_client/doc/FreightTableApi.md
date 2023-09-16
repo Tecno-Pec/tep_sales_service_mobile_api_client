@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightTableApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightTable id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getFreightTableApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightTable id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdFreightTable(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdFreightTable(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling FreightTableApi->getByIdFreightTable: $e\n');
 }
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| FreightTable id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3f66b0cd-20d2-45bb-b835-1c260155de8a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '62a9fc3d-f729-42cb-9cf1-923629239535']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1FreightTablesAllGet**
-> List<GetAllFreightTableResponse> tepsalesV1FreightTablesAllGet(externalCode, paymentConditionId, vehicleTypeId, kilometers, isFractional, operationType, status, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllFreightTableResponse> tepsalesV1FreightTablesAllGet(externalCode, paymentConditionId, vehicleTypeId, kilometers, isFractional, operationType, status, limit, sort, xApiKey, xCsrfToken)
 
 Get All FreightTable by filter
 
@@ -80,23 +80,23 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightTableApi();
-final externalCode = externalCode_example; // String | 
-final paymentConditionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final vehicleTypeId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final kilometers = 1.2; // double | 
-final isFractional = true; // bool | 
-final operationType = ; // TablePriceOperationTypeEnum | 
-final status = ; // FreightTableStatus | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getFreightTableApi();
+final String externalCode = externalCode_example; // String | 
+final String paymentConditionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String vehicleTypeId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final double kilometers = 1.2; // double | 
+final bool isFractional = true; // bool | 
+final TablePriceOperationTypeEnum operationType = ; // TablePriceOperationTypeEnum | 
+final FreightTableStatus status = ; // FreightTableStatus | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1FreightTablesAllGet(externalCode, paymentConditionId, vehicleTypeId, kilometers, isFractional, operationType, status, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1FreightTablesAllGet(externalCode, paymentConditionId, vehicleTypeId, kilometers, isFractional, operationType, status, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling FreightTableApi->tepsalesV1FreightTablesAllGet: $e\n');
 }
 ```
@@ -115,11 +115,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd8f8c0da-0565-40b1-b654-38e0cac7a0fd']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '33d51ac1-3503-4536-a111-ce2f9cd3e434']
 
 ### Return type
 
-[**List<GetAllFreightTableResponse>**](GetAllFreightTableResponse.md)
+[**BuiltList&lt;GetAllFreightTableResponse&gt;**](GetAllFreightTableResponse.md)
 
 ### Authorization
 
@@ -145,14 +145,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightTableApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightTable id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getFreightTableApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightTable id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1FreightTablesIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1FreightTablesIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling FreightTableApi->tepsalesV1FreightTablesIdDelete: $e\n');
 }
 ```
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| FreightTable id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3458fd14-8fd8-4b01-8c01-8e6a41b26a54']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4fbf0ba4-e75d-4025-9567-da383a3d5069']
 
 ### Return type
 
@@ -195,15 +195,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightTableApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightTable id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getFreightTableApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightTable id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1FreightTablesIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1FreightTablesIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling FreightTableApi->tepsalesV1FreightTablesIdPatch: $e\n');
 }
 ```
@@ -213,9 +213,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| FreightTable id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ae873d01-0841-4348-a42e-8f7e4e282eaf']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4578cb7d-123e-4db8-9a6c-7bd97e031ca0']
 
 ### Return type
 
@@ -245,15 +245,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightTableApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightTable Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putFreightTableRequest = PutFreightTableRequest(); // PutFreightTableRequest | FreightTable to update
+final api = TepMobileApiClient().getFreightTableApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | FreightTable Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutFreightTableRequest putFreightTableRequest = ; // PutFreightTableRequest | FreightTable to update
 
 try {
-    api_instance.tepsalesV1FreightTablesIdPut(id, xApiKey, xCsrfToken, putFreightTableRequest);
-} catch (e) {
+    api.tepsalesV1FreightTablesIdPut(id, xApiKey, xCsrfToken, putFreightTableRequest);
+} catch on DioError (e) {
     print('Exception when calling FreightTableApi->tepsalesV1FreightTablesIdPut: $e\n');
 }
 ```
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| FreightTable Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9f5c72af-db76-43c5-a492-02c37d61b406']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd86bb681-c6fa-40a8-86b0-dd7cf9cd7619']
  **putFreightTableRequest** | [**PutFreightTableRequest**](PutFreightTableRequest.md)| FreightTable to update | [optional] 
 
 ### Return type
@@ -295,24 +295,24 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightTableApi();
-final externalCode = externalCode_example; // String | 
-final paymentConditionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final vehicleTypeId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final kilometers = 1.2; // double | 
-final isFractional = true; // bool | 
-final operationType = ; // TablePriceOperationTypeEnum | 
-final status = ; // FreightTableStatus | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getFreightTableApi();
+final String externalCode = externalCode_example; // String | 
+final String paymentConditionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String vehicleTypeId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final double kilometers = 1.2; // double | 
+final bool isFractional = true; // bool | 
+final TablePriceOperationTypeEnum operationType = ; // TablePriceOperationTypeEnum | 
+final FreightTableStatus status = ; // FreightTableStatus | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1FreightTablesPagedGet(externalCode, paymentConditionId, vehicleTypeId, kilometers, isFractional, operationType, status, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1FreightTablesPagedGet(externalCode, paymentConditionId, vehicleTypeId, kilometers, isFractional, operationType, status, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling FreightTableApi->tepsalesV1FreightTablesPagedGet: $e\n');
 }
 ```
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9098d14b-c495-4273-9b78-c6b4ee1dadcf']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '973d7f81-796e-43f6-b6f6-59cbfd47a6ba']
 
 ### Return type
 
@@ -362,15 +362,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = FreightTableApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postFreightTableRequest = PostFreightTableRequest(); // PostFreightTableRequest | FreightTable to create
+final api = TepMobileApiClient().getFreightTableApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostFreightTableRequest postFreightTableRequest = ; // PostFreightTableRequest | FreightTable to create
 
 try {
-    final result = api_instance.tepsalesV1FreightTablesPost(xApiKey, xCsrfToken, postFreightTableRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1FreightTablesPost(xApiKey, xCsrfToken, postFreightTableRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling FreightTableApi->tepsalesV1FreightTablesPost: $e\n');
 }
 ```
@@ -380,7 +380,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd7b7a895-204a-407e-b241-39fb8014ba23']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '13ce1d69-fb26-448c-9139-c1713471cac9']
  **postFreightTableRequest** | [**PostFreightTableRequest**](PostFreightTableRequest.md)| FreightTable to create | [optional] 
 
 ### Return type

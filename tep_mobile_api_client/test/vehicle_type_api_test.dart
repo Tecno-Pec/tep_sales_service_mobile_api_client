@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.12
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
+import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
+
 
 /// tests for VehicleTypeApi
 void main() {
-  final instance = VehicleTypeApi();
+  final instance = TepMobileApiClient().getVehicleTypeApi();
 
-  group('tests for VehicleTypeApi', () {
+  group(VehicleTypeApi, () {
     // Get VehicleType by id
     //
     //Future<GetAllVehicleTypeResponse> getByIdVehicleType(String id, { String xApiKey, String xCsrfToken }) async
@@ -25,7 +16,7 @@ void main() {
 
     // Get All VehicleType by filter
     //
-    //Future<List<GetAllVehicleTypeResponse>> tepsalesV1VehicleTypesAllGet({ String name, String externalCode, VehicleTypeStatus status, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<GetAllVehicleTypeResponse>> tepsalesV1VehicleTypesAllGet({ String name, String externalCode, VehicleTypeStatus status, int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1VehicleTypesAllGet', () async {
       // TODO
     });
@@ -41,7 +32,7 @@ void main() {
     //
     // Sample request:                    PATCH /tepsales/v1/VehicleType/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
     //
-    //Future tepsalesV1VehicleTypesIdPatch(String id, List<Operation> operation, { String xApiKey, String xCsrfToken }) async
+    //Future tepsalesV1VehicleTypesIdPatch(String id, BuiltList<Operation> operation, { String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1VehicleTypesIdPatch', () async {
       // TODO
     });
@@ -66,5 +57,6 @@ void main() {
     test('test tepsalesV1VehicleTypesPost', () async {
       // TODO
     });
+
   });
 }

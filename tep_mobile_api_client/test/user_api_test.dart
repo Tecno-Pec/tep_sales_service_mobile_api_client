@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.12
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
+import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
+
 
 /// tests for UserApi
 void main() {
-  final instance = UserApi();
+  final instance = TepMobileApiClient().getUserApi();
 
-  group('tests for UserApi', () {
+  group(UserApi, () {
     // Get User by id
     //
     //Future<GetAllUserResponse> getByIdUser(String id, { String xApiKey, String xCsrfToken }) async
@@ -32,7 +23,7 @@ void main() {
 
     // Get All User by filter
     //
-    //Future<List<GetAllUserResponse>> tepsalesV1UsersAllGet({ String name, String documentId, String phone, String email, String externalCode, UserStatus status, bool isSalesman, int limit, String sort, String xApiKey, String xCsrfToken }) async
+    //Future<BuiltList<GetAllUserResponse>> tepsalesV1UsersAllGet({ String name, String documentId, String phone, String email, String externalCode, UserStatus status, bool isSalesman, int limit, String sort, String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1UsersAllGet', () async {
       // TODO
     });
@@ -55,7 +46,7 @@ void main() {
     //
     // Sample request:                    PATCH /tepsales/v1/User/{id}      [          {              \"op\": \"replace\",              \"path\": \"/atribute_name\",              \"value\": \"new value\"          }      ]
     //
-    //Future tepsalesV1UsersIdPatch(String id, List<Operation> operation, { String xApiKey, String xCsrfToken }) async
+    //Future tepsalesV1UsersIdPatch(String id, BuiltList<Operation> operation, { String xApiKey, String xCsrfToken }) async
     test('test tepsalesV1UsersIdPatch', () async {
       // TODO
     });
@@ -108,5 +99,6 @@ void main() {
     test('test tepsalesV1UsersSignupPost', () async {
       // TODO
     });
+
   });
 }

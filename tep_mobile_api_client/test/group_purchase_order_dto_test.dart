@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.12
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
+import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
 
 // tests for GroupPurchaseOrderDto
 void main() {
-  final instance = GroupPurchaseOrderDto();
+  final instance = GroupPurchaseOrderDtoBuilder();
+  // TODO add properties to the builder and call build()
 
-  group('test GroupPurchaseOrderDto', () {
+  group(GroupPurchaseOrderDto, () {
     // int totalInProgress
     test('to test the property `totalInProgress`', () async {
       // TODO
@@ -45,5 +36,6 @@ void main() {
     test('to test the property `totalExpired`', () async {
       // TODO
     });
+
   });
 }

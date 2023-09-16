@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-// @dart=2.12
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:tep_mobile_api_client/api.dart';
 import 'package:test/test.dart';
+import 'package:tep_mobile_api_client/tep_mobile_api_client.dart';
 
 // tests for User
 void main() {
-  final instance = User();
+  final instance = UserBuilder();
+  // TODO add properties to the builder and call build()
 
-  group('test User', () {
+  group(User, () {
     // String id
     test('to test the property `id`', () async {
       // TODO
@@ -41,7 +32,7 @@ void main() {
       // TODO
     });
 
-    // Object version
+    // JsonObject version
     test('to test the property `version`', () async {
       // TODO
     });
@@ -121,9 +112,10 @@ void main() {
       // TODO
     });
 
-    // List<PushToken> pushTokens (default value: const [])
+    // BuiltList<PushToken> pushTokens
     test('to test the property `pushTokens`', () async {
       // TODO
     });
+
   });
 }

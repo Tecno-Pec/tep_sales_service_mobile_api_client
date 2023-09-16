@@ -37,15 +37,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdUser(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdUser(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->getByIdUser: $e\n');
 }
 ```
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a41ad94a-b91d-4f3e-8eee-3256fd3af1c8']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0f621235-26fa-4884-967f-2fa4a77eba02']
 
 ### Return type
 
@@ -86,14 +86,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getUserInfo(xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getUserInfo(xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->getUserInfo: $e\n');
 }
 ```
@@ -103,7 +103,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0ea27325-5097-4fd2-964d-a191d906190d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8a5ec1f0-c877-4835-b325-97aed655928c']
 
 ### Return type
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1UsersAllGet**
-> List<GetAllUserResponse> tepsalesV1UsersAllGet(name, documentId, phone, email, externalCode, status, isSalesman, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllUserResponse> tepsalesV1UsersAllGet(name, documentId, phone, email, externalCode, status, isSalesman, limit, sort, xApiKey, xCsrfToken)
 
 Get All User by filter
 
@@ -133,23 +133,23 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final name = name_example; // String | 
-final documentId = documentId_example; // String | 
-final phone = phone_example; // String | 
-final email = email_example; // String | 
-final externalCode = externalCode_example; // String | 
-final status = ; // UserStatus | 
-final isSalesman = true; // bool | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getUserApi();
+final String name = name_example; // String | 
+final String documentId = documentId_example; // String | 
+final String phone = phone_example; // String | 
+final String email = email_example; // String | 
+final String externalCode = externalCode_example; // String | 
+final UserStatus status = ; // UserStatus | 
+final bool isSalesman = true; // bool | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1UsersAllGet(name, documentId, phone, email, externalCode, status, isSalesman, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1UsersAllGet(name, documentId, phone, email, externalCode, status, isSalesman, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->tepsalesV1UsersAllGet: $e\n');
 }
 ```
@@ -168,11 +168,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '92e265ec-e76e-4765-b604-cddb3eb72c21']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '48ad2c45-5f70-4794-9e7e-201eaa3cd7fe']
 
 ### Return type
 
-[**List<GetAllUserResponse>**](GetAllUserResponse.md)
+[**BuiltList&lt;GetAllUserResponse&gt;**](GetAllUserResponse.md)
 
 ### Authorization
 
@@ -198,15 +198,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postUserForceChangePasswordRequest = PostUserForceChangePasswordRequest(); // PostUserForceChangePasswordRequest | Force Change Password
+final api = TepMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserForceChangePasswordRequest postUserForceChangePasswordRequest = ; // PostUserForceChangePasswordRequest | Force Change Password
 
 try {
-    final result = api_instance.tepsalesV1UsersForcerchangepasswordPost(xApiKey, xCsrfToken, postUserForceChangePasswordRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1UsersForcerchangepasswordPost(xApiKey, xCsrfToken, postUserForceChangePasswordRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->tepsalesV1UsersForcerchangepasswordPost: $e\n');
 }
 ```
@@ -216,7 +216,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '254ee7f9-0464-4145-a108-66429362a1cc']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f91ad03c-89bd-410a-b4a3-886ca64b140b']
  **postUserForceChangePasswordRequest** | [**PostUserForceChangePasswordRequest**](PostUserForceChangePasswordRequest.md)| Force Change Password | [optional] 
 
 ### Return type
@@ -247,14 +247,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1UsersIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1UsersIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling UserApi->tepsalesV1UsersIdDelete: $e\n');
 }
 ```
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '852dafd8-fee5-41ae-8459-a4fef3e90fc5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c9ae71d1-7b2b-432d-8202-fdbcb21b3b46']
 
 ### Return type
 
@@ -297,15 +297,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1UsersIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1UsersIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling UserApi->tepsalesV1UsersIdPatch: $e\n');
 }
 ```
@@ -315,9 +315,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '05c109ce-fe33-4f3a-a0dd-bccde20d2a32']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b2125c56-55fe-4e3b-9407-c69ddcd05a15']
 
 ### Return type
 
@@ -347,15 +347,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putUserRequest = PutUserRequest(); // PutUserRequest | User to update
+final api = TepMobileApiClient().getUserApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | User Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutUserRequest putUserRequest = ; // PutUserRequest | User to update
 
 try {
-    api_instance.tepsalesV1UsersIdPut(id, xApiKey, xCsrfToken, putUserRequest);
-} catch (e) {
+    api.tepsalesV1UsersIdPut(id, xApiKey, xCsrfToken, putUserRequest);
+} catch on DioError (e) {
     print('Exception when calling UserApi->tepsalesV1UsersIdPut: $e\n');
 }
 ```
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cd424a0b-7184-4d81-ac20-c57e83ce76a5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e2f7bf02-1161-417e-bd8d-39700821953d']
  **putUserRequest** | [**PutUserRequest**](PutUserRequest.md)| User to update | [optional] 
 
 ### Return type
@@ -397,24 +397,24 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final name = name_example; // String | 
-final documentId = documentId_example; // String | 
-final phone = phone_example; // String | 
-final email = email_example; // String | 
-final externalCode = externalCode_example; // String | 
-final status = ; // UserStatus | 
-final isSalesman = true; // bool | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getUserApi();
+final String name = name_example; // String | 
+final String documentId = documentId_example; // String | 
+final String phone = phone_example; // String | 
+final String email = email_example; // String | 
+final String externalCode = externalCode_example; // String | 
+final UserStatus status = ; // UserStatus | 
+final bool isSalesman = true; // bool | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1UsersPagedGet(name, documentId, phone, email, externalCode, status, isSalesman, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1UsersPagedGet(name, documentId, phone, email, externalCode, status, isSalesman, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->tepsalesV1UsersPagedGet: $e\n');
 }
 ```
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '120a7b36-e042-4648-ab6f-79298c119ee1']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '93882ff8-e2f1-4f4f-a7c4-c9cce0832565']
 
 ### Return type
 
@@ -464,15 +464,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postUserRequest = PostUserRequest(); // PostUserRequest | User to create
+final api = TepMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserRequest postUserRequest = ; // PostUserRequest | User to create
 
 try {
-    final result = api_instance.tepsalesV1UsersPost(xApiKey, xCsrfToken, postUserRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1UsersPost(xApiKey, xCsrfToken, postUserRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->tepsalesV1UsersPost: $e\n');
 }
 ```
@@ -482,7 +482,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f156d0ed-5d5c-4f4b-9e0b-4e2f450feb17']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6517acd5-e530-40ce-91d6-18305bcc1dc1']
  **postUserRequest** | [**PostUserRequest**](PostUserRequest.md)| User to create | [optional] 
 
 ### Return type
@@ -513,14 +513,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postUserPushTokenRequest = PostUserPushTokenRequest(); // PostUserPushTokenRequest | FCM Token
+final api = TepMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserPushTokenRequest postUserPushTokenRequest = ; // PostUserPushTokenRequest | FCM Token
 
 try {
-    api_instance.tepsalesV1UsersPushtokenPost(xApiKey, xCsrfToken, postUserPushTokenRequest);
-} catch (e) {
+    api.tepsalesV1UsersPushtokenPost(xApiKey, xCsrfToken, postUserPushTokenRequest);
+} catch on DioError (e) {
     print('Exception when calling UserApi->tepsalesV1UsersPushtokenPost: $e\n');
 }
 ```
@@ -530,7 +530,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4a4aced6-1efc-4dad-a7c8-68276e2ac9f1']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd5c8d6fe-5ce7-4ef8-9404-43cee519658e']
  **postUserPushTokenRequest** | [**PostUserPushTokenRequest**](PostUserPushTokenRequest.md)| FCM Token | [optional] 
 
 ### Return type
@@ -561,15 +561,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postUserResetPassword = PostUserResetPassword(); // PostUserResetPassword | Reset Password
+final api = TepMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserResetPassword postUserResetPassword = ; // PostUserResetPassword | Reset Password
 
 try {
-    final result = api_instance.tepsalesV1UsersResetPasswordPost(xApiKey, xCsrfToken, postUserResetPassword);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1UsersResetPasswordPost(xApiKey, xCsrfToken, postUserResetPassword);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->tepsalesV1UsersResetPasswordPost: $e\n');
 }
 ```
@@ -579,7 +579,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '239acaaf-3e59-423d-a84f-e81e830a4ca3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '479aec1e-d0ac-4f3b-bd97-c292dc8d73f7']
  **postUserResetPassword** | [**PostUserResetPassword**](PostUserResetPassword.md)| Reset Password | [optional] 
 
 ### Return type
@@ -610,15 +610,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postUserSignInRequest = PostUserSignInRequest(); // PostUserSignInRequest | User to create
+final api = TepMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserSignInRequest postUserSignInRequest = ; // PostUserSignInRequest | User to create
 
 try {
-    final result = api_instance.tepsalesV1UsersSigninPost(xApiKey, xCsrfToken, postUserSignInRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1UsersSigninPost(xApiKey, xCsrfToken, postUserSignInRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->tepsalesV1UsersSigninPost: $e\n');
 }
 ```
@@ -628,7 +628,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '199b8ed4-0a65-45c2-9984-ab8ec96e2b89']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7ac6e4d9-5a8e-4476-bcdc-50b6493b9220']
  **postUserSignInRequest** | [**PostUserSignInRequest**](PostUserSignInRequest.md)| User to create | [optional] 
 
 ### Return type
@@ -659,15 +659,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = UserApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postUserRequest = PostUserRequest(); // PostUserRequest | User to create
+final api = TepMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostUserRequest postUserRequest = ; // PostUserRequest | User to create
 
 try {
-    final result = api_instance.tepsalesV1UsersSignupPost(xApiKey, xCsrfToken, postUserRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1UsersSignupPost(xApiKey, xCsrfToken, postUserRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UserApi->tepsalesV1UsersSignupPost: $e\n');
 }
 ```
@@ -677,7 +677,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ddd3f930-a015-44c7-9539-c9a20e35e1c4']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f515daf0-38a4-4bcd-97b2-6ad9f3360bee']
  **postUserRequest** | [**PostUserRequest**](PostUserRequest.md)| User to create | [optional] 
 
 ### Return type

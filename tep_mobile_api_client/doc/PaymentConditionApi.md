@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentConditionApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentCondition id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPaymentConditionApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentCondition id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdPaymentCondition(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdPaymentCondition(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PaymentConditionApi->getByIdPaymentCondition: $e\n');
 }
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PaymentCondition id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'aba44374-3ef1-4957-8023-ccdc68a5de1d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c890486d-da14-488b-9826-6f20e17ea8b7']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1PaymentConditionsAllGet**
-> List<GetAllPaymentConditionResponse> tepsalesV1PaymentConditionsAllGet(name, externalCode, sequence, status, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllPaymentConditionResponse> tepsalesV1PaymentConditionsAllGet(name, externalCode, sequence, status, limit, sort, xApiKey, xCsrfToken)
 
 Get All PaymentCondition by filter
 
@@ -80,20 +80,20 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentConditionApi();
-final name = name_example; // String | 
-final externalCode = externalCode_example; // String | 
-final sequence = 56; // int | 
-final status = ; // PaymentConditionStatus | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPaymentConditionApi();
+final String name = name_example; // String | 
+final String externalCode = externalCode_example; // String | 
+final int sequence = 56; // int | 
+final PaymentConditionStatus status = ; // PaymentConditionStatus | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1PaymentConditionsAllGet(name, externalCode, sequence, status, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1PaymentConditionsAllGet(name, externalCode, sequence, status, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PaymentConditionApi->tepsalesV1PaymentConditionsAllGet: $e\n');
 }
 ```
@@ -109,11 +109,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5cc1b2e0-0791-4ac2-93e6-e067fc953692']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '75ab1a5b-2a2c-4b07-a79e-e10dfe29e0be']
 
 ### Return type
 
-[**List<GetAllPaymentConditionResponse>**](GetAllPaymentConditionResponse.md)
+[**BuiltList&lt;GetAllPaymentConditionResponse&gt;**](GetAllPaymentConditionResponse.md)
 
 ### Authorization
 
@@ -139,14 +139,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentConditionApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentCondition id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPaymentConditionApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentCondition id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1PaymentConditionsIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1PaymentConditionsIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling PaymentConditionApi->tepsalesV1PaymentConditionsIdDelete: $e\n');
 }
 ```
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PaymentCondition id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '12d0cffd-a39f-4182-8aee-828e9d92d638']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '18857d73-5e46-47ec-8310-7465c36c066d']
 
 ### Return type
 
@@ -189,15 +189,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentConditionApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentCondition id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPaymentConditionApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentCondition id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1PaymentConditionsIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1PaymentConditionsIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling PaymentConditionApi->tepsalesV1PaymentConditionsIdPatch: $e\n');
 }
 ```
@@ -207,9 +207,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PaymentCondition id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cb890182-fde8-4106-a8a3-04ab40c0745e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b6f20235-4698-47ba-b689-48881ff10b5f']
 
 ### Return type
 
@@ -239,15 +239,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentConditionApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentCondition Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putPaymentConditionRequest = PutPaymentConditionRequest(); // PutPaymentConditionRequest | PaymentCondition to update
+final api = TepMobileApiClient().getPaymentConditionApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentCondition Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutPaymentConditionRequest putPaymentConditionRequest = ; // PutPaymentConditionRequest | PaymentCondition to update
 
 try {
-    api_instance.tepsalesV1PaymentConditionsIdPut(id, xApiKey, xCsrfToken, putPaymentConditionRequest);
-} catch (e) {
+    api.tepsalesV1PaymentConditionsIdPut(id, xApiKey, xCsrfToken, putPaymentConditionRequest);
+} catch on DioError (e) {
     print('Exception when calling PaymentConditionApi->tepsalesV1PaymentConditionsIdPut: $e\n');
 }
 ```
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PaymentCondition Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f292e5ef-1e51-4625-86df-25f9061dcc52']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c952af19-929d-47e4-b3cd-17e41029354e']
  **putPaymentConditionRequest** | [**PutPaymentConditionRequest**](PutPaymentConditionRequest.md)| PaymentCondition to update | [optional] 
 
 ### Return type
@@ -289,21 +289,21 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentConditionApi();
-final name = name_example; // String | 
-final externalCode = externalCode_example; // String | 
-final sequence = 56; // int | 
-final status = ; // PaymentConditionStatus | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPaymentConditionApi();
+final String name = name_example; // String | 
+final String externalCode = externalCode_example; // String | 
+final int sequence = 56; // int | 
+final PaymentConditionStatus status = ; // PaymentConditionStatus | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1PaymentConditionsPagedGet(name, externalCode, sequence, status, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1PaymentConditionsPagedGet(name, externalCode, sequence, status, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PaymentConditionApi->tepsalesV1PaymentConditionsPagedGet: $e\n');
 }
 ```
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c73638f6-974f-47e1-9d4c-942b503099b3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '00bad059-996b-4bd7-8fa0-c626a0ba22f6']
 
 ### Return type
 
@@ -350,15 +350,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentConditionApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postPaymentConditionRequest = PostPaymentConditionRequest(); // PostPaymentConditionRequest | PaymentCondition to create
+final api = TepMobileApiClient().getPaymentConditionApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostPaymentConditionRequest postPaymentConditionRequest = ; // PostPaymentConditionRequest | PaymentCondition to create
 
 try {
-    final result = api_instance.tepsalesV1PaymentConditionsPost(xApiKey, xCsrfToken, postPaymentConditionRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1PaymentConditionsPost(xApiKey, xCsrfToken, postPaymentConditionRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PaymentConditionApi->tepsalesV1PaymentConditionsPost: $e\n');
 }
 ```
@@ -368,7 +368,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6044f097-0f99-4042-a89a-263d3d7494d5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '69ec7ca1-570a-41fa-80ad-b51800128d59']
  **postPaymentConditionRequest** | [**PostPaymentConditionRequest**](PostPaymentConditionRequest.md)| PaymentCondition to create | [optional] 
 
 ### Return type

@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = IntegrationStatusApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationStatus id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getIntegrationStatusApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationStatus id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdIntegrationStatus(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdIntegrationStatus(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling IntegrationStatusApi->getByIdIntegrationStatus: $e\n');
 }
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| IntegrationStatus id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8c4b7a9e-7d2d-41d0-a9a7-7a37d29d12b7']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6367e180-c0f3-4fd9-9cd0-a45d5f4080b9']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1IntegrationStatusAllGet**
-> List<GetAllIntegrationStatusResponse> tepsalesV1IntegrationStatusAllGet(context, action, status, summary, dateRange, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllIntegrationStatusResponse> tepsalesV1IntegrationStatusAllGet(context, action, status, summary, dateRange, limit, sort, xApiKey, xCsrfToken)
 
 Get All IntegrationStatus by filter
 
@@ -80,21 +80,21 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = IntegrationStatusApi();
-final context = context_example; // String | 
-final action = ; // IntegrationStatusActions | 
-final status = status_example; // String | 
-final summary = summary_example; // String | 
-final dateRange = 789; // int | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getIntegrationStatusApi();
+final String context = context_example; // String | 
+final IntegrationStatusActions action = ; // IntegrationStatusActions | 
+final String status = status_example; // String | 
+final String summary = summary_example; // String | 
+final int dateRange = 789; // int | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1IntegrationStatusAllGet(context, action, status, summary, dateRange, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1IntegrationStatusAllGet(context, action, status, summary, dateRange, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling IntegrationStatusApi->tepsalesV1IntegrationStatusAllGet: $e\n');
 }
 ```
@@ -111,11 +111,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9f665ab1-8337-4a1d-ae2c-1d355b2f7710']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '82ca0007-c709-4b47-9c78-b734320e179e']
 
 ### Return type
 
-[**List<GetAllIntegrationStatusResponse>**](GetAllIntegrationStatusResponse.md)
+[**BuiltList&lt;GetAllIntegrationStatusResponse&gt;**](GetAllIntegrationStatusResponse.md)
 
 ### Authorization
 
@@ -141,14 +141,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = IntegrationStatusApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationStatus id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getIntegrationStatusApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationStatus id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1IntegrationStatusIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1IntegrationStatusIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling IntegrationStatusApi->tepsalesV1IntegrationStatusIdDelete: $e\n');
 }
 ```
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| IntegrationStatus id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'b091b5cf-4bf5-4657-a3c8-659037188372']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '80b1b27f-813d-4766-8faa-3b24fa0774a0']
 
 ### Return type
 
@@ -191,15 +191,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = IntegrationStatusApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationStatus id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getIntegrationStatusApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationStatus id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1IntegrationStatusIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1IntegrationStatusIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling IntegrationStatusApi->tepsalesV1IntegrationStatusIdPatch: $e\n');
 }
 ```
@@ -209,9 +209,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| IntegrationStatus id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dff5cf50-eb71-4256-afaf-9b717e0ba5e3']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd8935f30-b9e2-4417-9bbe-cb3115031053']
 
 ### Return type
 
@@ -241,15 +241,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = IntegrationStatusApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationStatus Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putIntegrationStatusRequest = PutIntegrationStatusRequest(); // PutIntegrationStatusRequest | IntegrationStatus to update
+final api = TepMobileApiClient().getIntegrationStatusApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | IntegrationStatus Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutIntegrationStatusRequest putIntegrationStatusRequest = ; // PutIntegrationStatusRequest | IntegrationStatus to update
 
 try {
-    api_instance.tepsalesV1IntegrationStatusIdPut(id, xApiKey, xCsrfToken, putIntegrationStatusRequest);
-} catch (e) {
+    api.tepsalesV1IntegrationStatusIdPut(id, xApiKey, xCsrfToken, putIntegrationStatusRequest);
+} catch on DioError (e) {
     print('Exception when calling IntegrationStatusApi->tepsalesV1IntegrationStatusIdPut: $e\n');
 }
 ```
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| IntegrationStatus Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '57ed1d09-0794-4dcb-b03e-606cd27b3007']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '151ff6a0-36c8-4657-9eb5-dc8de5fd6f39']
  **putIntegrationStatusRequest** | [**PutIntegrationStatusRequest**](PutIntegrationStatusRequest.md)| IntegrationStatus to update | [optional] 
 
 ### Return type
@@ -291,22 +291,22 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = IntegrationStatusApi();
-final context = context_example; // String | 
-final action = ; // IntegrationStatusActions | 
-final status = status_example; // String | 
-final summary = summary_example; // String | 
-final dateRange = 789; // int | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getIntegrationStatusApi();
+final String context = context_example; // String | 
+final IntegrationStatusActions action = ; // IntegrationStatusActions | 
+final String status = status_example; // String | 
+final String summary = summary_example; // String | 
+final int dateRange = 789; // int | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1IntegrationStatusPagedGet(context, action, status, summary, dateRange, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1IntegrationStatusPagedGet(context, action, status, summary, dateRange, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling IntegrationStatusApi->tepsalesV1IntegrationStatusPagedGet: $e\n');
 }
 ```
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0f914789-3042-4664-90f7-8c45a819addb']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6c227c62-69ea-4a88-b538-c1a03dab2d04']
 
 ### Return type
 
@@ -354,15 +354,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = IntegrationStatusApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postIntegrationStatusRequest = PostIntegrationStatusRequest(); // PostIntegrationStatusRequest | IntegrationStatus to create
+final api = TepMobileApiClient().getIntegrationStatusApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostIntegrationStatusRequest postIntegrationStatusRequest = ; // PostIntegrationStatusRequest | IntegrationStatus to create
 
 try {
-    final result = api_instance.tepsalesV1IntegrationStatusPost(xApiKey, xCsrfToken, postIntegrationStatusRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1IntegrationStatusPost(xApiKey, xCsrfToken, postIntegrationStatusRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling IntegrationStatusApi->tepsalesV1IntegrationStatusPost: $e\n');
 }
 ```
@@ -372,7 +372,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'efbf6c4f-b542-4487-8aad-a4f782d59ae2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '08bea0e7-3b52-4bbf-8960-7b64c2c7ffa2']
  **postIntegrationStatusRequest** | [**PostIntegrationStatusRequest**](PostIntegrationStatusRequest.md)| IntegrationStatus to create | [optional] 
 
 ### Return type

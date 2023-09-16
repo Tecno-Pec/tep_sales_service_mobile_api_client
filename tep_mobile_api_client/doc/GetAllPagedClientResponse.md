@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **rowCount** | **int** |  | [optional] 
 **firstRowOnPage** | **int** |  | [optional] 
 **lastRowOnPage** | **int** |  | [optional] 
-**results** | [**List<GetAllClientResponse>**](GetAllClientResponse.md) |  | [optional] [default to const []]
+**results** | [**BuiltList&lt;GetAllClientResponse&gt;**](GetAllClientResponse.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

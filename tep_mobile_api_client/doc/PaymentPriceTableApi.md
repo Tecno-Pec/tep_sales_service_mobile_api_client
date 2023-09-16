@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentPriceTableApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentPriceTable id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPaymentPriceTableApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentPriceTable id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdPaymentPriceTable(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdPaymentPriceTable(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PaymentPriceTableApi->getByIdPaymentPriceTable: $e\n');
 }
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PaymentPriceTable id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e5c81d40-d818-42ca-bb0b-046dfe90f61b']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ae050a94-cdf3-432e-bf6b-9b960ada6b20']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1PaymentPriceTablesAllGet**
-> List<GetAllPaymentPriceTableResponse> tepsalesV1PaymentPriceTablesAllGet(paymentConditionId, priceTableId, externalCode, status, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllPaymentPriceTableResponse> tepsalesV1PaymentPriceTablesAllGet(paymentConditionId, priceTableId, externalCode, status, limit, sort, xApiKey, xCsrfToken)
 
 Get All PaymentPriceTable by filter
 
@@ -80,20 +80,20 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentPriceTableApi();
-final paymentConditionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final priceTableId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final externalCode = externalCode_example; // String | 
-final status = ; // PaymentPriceTableStatus | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPaymentPriceTableApi();
+final String paymentConditionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String priceTableId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String externalCode = externalCode_example; // String | 
+final PaymentPriceTableStatus status = ; // PaymentPriceTableStatus | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1PaymentPriceTablesAllGet(paymentConditionId, priceTableId, externalCode, status, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1PaymentPriceTablesAllGet(paymentConditionId, priceTableId, externalCode, status, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PaymentPriceTableApi->tepsalesV1PaymentPriceTablesAllGet: $e\n');
 }
 ```
@@ -109,11 +109,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd401bb25-5835-404e-97c3-367947ae0000']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'da44bc45-88e5-4db5-befa-460c4b33f1bc']
 
 ### Return type
 
-[**List<GetAllPaymentPriceTableResponse>**](GetAllPaymentPriceTableResponse.md)
+[**BuiltList&lt;GetAllPaymentPriceTableResponse&gt;**](GetAllPaymentPriceTableResponse.md)
 
 ### Authorization
 
@@ -139,14 +139,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentPriceTableApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentPriceTable id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPaymentPriceTableApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentPriceTable id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1PaymentPriceTablesIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1PaymentPriceTablesIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling PaymentPriceTableApi->tepsalesV1PaymentPriceTablesIdDelete: $e\n');
 }
 ```
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PaymentPriceTable id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4194c3ad-fa76-454f-9b5f-2e8981e419f5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd4d42531-6708-4186-bad2-ee93035ec7f0']
 
 ### Return type
 
@@ -189,15 +189,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentPriceTableApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentPriceTable id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPaymentPriceTableApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentPriceTable id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1PaymentPriceTablesIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1PaymentPriceTablesIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling PaymentPriceTableApi->tepsalesV1PaymentPriceTablesIdPatch: $e\n');
 }
 ```
@@ -207,9 +207,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PaymentPriceTable id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '776e6f84-6e61-43b7-a17f-610e35ca1e07']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e9b3b637-00a8-453e-815f-0f6fc5f2e419']
 
 ### Return type
 
@@ -239,15 +239,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentPriceTableApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentPriceTable Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putPaymentPriceTableRequest = PutPaymentPriceTableRequest(); // PutPaymentPriceTableRequest | PaymentPriceTable to update
+final api = TepMobileApiClient().getPaymentPriceTableApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PaymentPriceTable Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutPaymentPriceTableRequest putPaymentPriceTableRequest = ; // PutPaymentPriceTableRequest | PaymentPriceTable to update
 
 try {
-    api_instance.tepsalesV1PaymentPriceTablesIdPut(id, xApiKey, xCsrfToken, putPaymentPriceTableRequest);
-} catch (e) {
+    api.tepsalesV1PaymentPriceTablesIdPut(id, xApiKey, xCsrfToken, putPaymentPriceTableRequest);
+} catch on DioError (e) {
     print('Exception when calling PaymentPriceTableApi->tepsalesV1PaymentPriceTablesIdPut: $e\n');
 }
 ```
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PaymentPriceTable Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3385ca9d-bd7d-4d00-8654-dd0a942942f6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '32bf311e-838e-49fc-9c8a-39665d4a1c7b']
  **putPaymentPriceTableRequest** | [**PutPaymentPriceTableRequest**](PutPaymentPriceTableRequest.md)| PaymentPriceTable to update | [optional] 
 
 ### Return type
@@ -289,21 +289,21 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentPriceTableApi();
-final paymentConditionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final priceTableId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final externalCode = externalCode_example; // String | 
-final status = ; // PaymentPriceTableStatus | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPaymentPriceTableApi();
+final String paymentConditionId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String priceTableId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String externalCode = externalCode_example; // String | 
+final PaymentPriceTableStatus status = ; // PaymentPriceTableStatus | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1PaymentPriceTablesPagedGet(paymentConditionId, priceTableId, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1PaymentPriceTablesPagedGet(paymentConditionId, priceTableId, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PaymentPriceTableApi->tepsalesV1PaymentPriceTablesPagedGet: $e\n');
 }
 ```
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd8aaf3a2-3016-4566-967c-432609d736ed']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '36c65f92-60ac-41ac-904a-df1526f0126d']
 
 ### Return type
 
@@ -350,15 +350,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PaymentPriceTableApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postPaymentPriceTableRequest = PostPaymentPriceTableRequest(); // PostPaymentPriceTableRequest | PaymentPriceTable to create
+final api = TepMobileApiClient().getPaymentPriceTableApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostPaymentPriceTableRequest postPaymentPriceTableRequest = ; // PostPaymentPriceTableRequest | PaymentPriceTable to create
 
 try {
-    final result = api_instance.tepsalesV1PaymentPriceTablesPost(xApiKey, xCsrfToken, postPaymentPriceTableRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1PaymentPriceTablesPost(xApiKey, xCsrfToken, postPaymentPriceTableRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PaymentPriceTableApi->tepsalesV1PaymentPriceTablesPost: $e\n');
 }
 ```
@@ -368,7 +368,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '08076fd1-5f97-42f3-bb2a-7b4da0e87d8c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f180dace-601e-4aea-a9c3-e011a47e7119']
  **postPaymentPriceTableRequest** | [**PostPaymentPriceTableRequest**](PostPaymentPriceTableRequest.md)| PaymentPriceTable to create | [optional] 
 
 ### Return type

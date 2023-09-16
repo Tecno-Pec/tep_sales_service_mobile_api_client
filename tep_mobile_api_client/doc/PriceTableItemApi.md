@@ -31,15 +31,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PriceTableItemApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableItem id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPriceTableItemApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableItem id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.getByIdPriceTableItem(id, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.getByIdPriceTableItem(id, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PriceTableItemApi->getByIdPriceTableItem: $e\n');
 }
 ```
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PriceTableItem id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '92b9a996-e20f-4887-916e-62f6701fed7e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '304927c9-da5e-42a1-ba73-e4d69d1c95d6']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1PricetableitemsAllGet**
-> List<GetAllPriceTableItemResponse> tepsalesV1PricetableitemsAllGet(paymentPriceTableId, productId, externalCode, status, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllPriceTableItemResponse> tepsalesV1PricetableitemsAllGet(paymentPriceTableId, productId, externalCode, status, limit, sort, xApiKey, xCsrfToken)
 
 Get All PriceTableItem by filter
 
@@ -80,20 +80,20 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PriceTableItemApi();
-final paymentPriceTableId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final productId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final externalCode = externalCode_example; // String | 
-final status = ; // PriceTableItemStatus | 
-final limit = 56; // int | limit
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPriceTableItemApi();
+final String paymentPriceTableId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String productId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String externalCode = externalCode_example; // String | 
+final PriceTableItemStatus status = ; // PriceTableItemStatus | 
+final int limit = 56; // int | limit
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1PricetableitemsAllGet(paymentPriceTableId, productId, externalCode, status, limit, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1PricetableitemsAllGet(paymentPriceTableId, productId, externalCode, status, limit, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PriceTableItemApi->tepsalesV1PricetableitemsAllGet: $e\n');
 }
 ```
@@ -109,11 +109,11 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '48059365-8fa2-4e65-8b67-652338e13fdb']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '297cdc52-5982-474b-ad94-f568f231076f']
 
 ### Return type
 
-[**List<GetAllPriceTableItemResponse>**](GetAllPriceTableItemResponse.md)
+[**BuiltList&lt;GetAllPriceTableItemResponse&gt;**](GetAllPriceTableItemResponse.md)
 
 ### Authorization
 
@@ -139,14 +139,14 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PriceTableItemApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableItem id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPriceTableItemApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableItem id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1PricetableitemsIdDelete(id, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1PricetableitemsIdDelete(id, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling PriceTableItemApi->tepsalesV1PricetableitemsIdDelete: $e\n');
 }
 ```
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PriceTableItem id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '54085f50-e0c8-460c-b378-7e4851525882']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7dafae8a-4df4-4905-a9e5-ec7c38b7a070']
 
 ### Return type
 
@@ -189,15 +189,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PriceTableItemApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableItem id
-final operation = [List<Operation>()]; // List<Operation> | Atributes values
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPriceTableItemApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableItem id
+final BuiltList<Operation> operation = ; // BuiltList<Operation> | Atributes values
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    api_instance.tepsalesV1PricetableitemsIdPatch(id, operation, xApiKey, xCsrfToken);
-} catch (e) {
+    api.tepsalesV1PricetableitemsIdPatch(id, operation, xApiKey, xCsrfToken);
+} catch on DioError (e) {
     print('Exception when calling PriceTableItemApi->tepsalesV1PricetableitemsIdPatch: $e\n');
 }
 ```
@@ -207,9 +207,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PriceTableItem id | 
- **operation** | [**List<Operation>**](Operation.md)| Atributes values | 
+ **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '237163dd-53d8-44a1-8937-5656f12e6c4a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '5aea65cc-64cc-4790-b90c-9794ceb8b501']
 
 ### Return type
 
@@ -239,15 +239,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PriceTableItemApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableItem Id
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final putPriceTableItemRequest = PutPriceTableItemRequest(); // PutPriceTableItemRequest | PriceTableItem to update
+final api = TepMobileApiClient().getPriceTableItemApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | PriceTableItem Id
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PutPriceTableItemRequest putPriceTableItemRequest = ; // PutPriceTableItemRequest | PriceTableItem to update
 
 try {
-    api_instance.tepsalesV1PricetableitemsIdPut(id, xApiKey, xCsrfToken, putPriceTableItemRequest);
-} catch (e) {
+    api.tepsalesV1PricetableitemsIdPut(id, xApiKey, xCsrfToken, putPriceTableItemRequest);
+} catch on DioError (e) {
     print('Exception when calling PriceTableItemApi->tepsalesV1PricetableitemsIdPut: $e\n');
 }
 ```
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| PriceTableItem Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '53daca5a-1d5c-4e74-8086-6ea367ce688a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '590e73e7-c81c-4ce4-b968-6b7a482bb7ee']
  **putPriceTableItemRequest** | [**PutPriceTableItemRequest**](PutPriceTableItemRequest.md)| PriceTableItem to update | [optional] 
 
 ### Return type
@@ -289,21 +289,21 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PriceTableItemApi();
-final paymentPriceTableId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final productId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final externalCode = externalCode_example; // String | 
-final status = ; // PriceTableItemStatus | 
-final page = 56; // int | 
-final pageSize = 56; // int | 
-final sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final api = TepMobileApiClient().getPriceTableItemApi();
+final String paymentPriceTableId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String productId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String externalCode = externalCode_example; // String | 
+final PriceTableItemStatus status = ; // PriceTableItemStatus | 
+final int page = 56; // int | 
+final int pageSize = 56; // int | 
+final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final result = api_instance.tepsalesV1PricetableitemsPagedGet(paymentPriceTableId, productId, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1PricetableitemsPagedGet(paymentPriceTableId, productId, externalCode, status, page, pageSize, sort, xApiKey, xCsrfToken);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PriceTableItemApi->tepsalesV1PricetableitemsPagedGet: $e\n');
 }
 ```
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cbae5a6c-fe0c-4e7c-8896-fc4666f60627']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '60dc0b57-cf89-4604-9937-cd32b734947f']
 
 ### Return type
 
@@ -350,15 +350,15 @@ import 'package:tep_mobile_api_client/api.dart';
 // uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
 
-final api_instance = PriceTableItemApi();
-final xApiKey = xApiKey_example; // String | Your Api Key
-final xCsrfToken = xCsrfToken_example; // String | CSRF Protection
-final postPriceTableItemRequest = PostPriceTableItemRequest(); // PostPriceTableItemRequest | PriceTableItem to create
+final api = TepMobileApiClient().getPriceTableItemApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final PostPriceTableItemRequest postPriceTableItemRequest = ; // PostPriceTableItemRequest | PriceTableItem to create
 
 try {
-    final result = api_instance.tepsalesV1PricetableitemsPost(xApiKey, xCsrfToken, postPriceTableItemRequest);
-    print(result);
-} catch (e) {
+    final response = api.tepsalesV1PricetableitemsPost(xApiKey, xCsrfToken, postPriceTableItemRequest);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling PriceTableItemApi->tepsalesV1PricetableitemsPost: $e\n');
 }
 ```
@@ -368,7 +368,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e74759d3-4d05-4405-90d1-050b43ecf05d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3eb5bbf6-9d3d-4899-bdff-ddd4daaaf282']
  **postPriceTableItemRequest** | [**PostPriceTableItemRequest**](PostPriceTableItemRequest.md)| PriceTableItem to create | [optional] 
 
 ### Return type
