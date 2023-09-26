@@ -22,6 +22,8 @@ class _$PostUserResponse extends PostUserResponse {
   @override
   final String? documentId;
   @override
+  final String? photo;
+  @override
   final String? phone;
   @override
   final String? email;
@@ -54,6 +56,7 @@ class _$PostUserResponse extends PostUserResponse {
       this.id,
       this.name,
       this.documentId,
+      this.photo,
       this.phone,
       this.email,
       this.isActive,
@@ -85,6 +88,7 @@ class _$PostUserResponse extends PostUserResponse {
         id == other.id &&
         name == other.name &&
         documentId == other.documentId &&
+        photo == other.photo &&
         phone == other.phone &&
         email == other.email &&
         isActive == other.isActive &&
@@ -107,6 +111,7 @@ class _$PostUserResponse extends PostUserResponse {
     _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, documentId.hashCode);
+    _$hash = $jc(_$hash, photo.hashCode);
     _$hash = $jc(_$hash, phone.hashCode);
     _$hash = $jc(_$hash, email.hashCode);
     _$hash = $jc(_$hash, isActive.hashCode);
@@ -131,6 +136,7 @@ class _$PostUserResponse extends PostUserResponse {
           ..add('id', id)
           ..add('name', name)
           ..add('documentId', documentId)
+          ..add('photo', photo)
           ..add('phone', phone)
           ..add('email', email)
           ..add('isActive', isActive)
@@ -176,6 +182,10 @@ class PostUserResponseBuilder
   String? _documentId;
   String? get documentId => _$this._documentId;
   set documentId(String? documentId) => _$this._documentId = documentId;
+
+  String? _photo;
+  String? get photo => _$this._photo;
+  set photo(String? photo) => _$this._photo = photo;
 
   String? _phone;
   String? get phone => _$this._phone;
@@ -233,6 +243,7 @@ class PostUserResponseBuilder
       _id = $v.id;
       _name = $v.name;
       _documentId = $v.documentId;
+      _photo = $v.photo;
       _phone = $v.phone;
       _email = $v.email;
       _isActive = $v.isActive;
@@ -272,6 +283,7 @@ class PostUserResponseBuilder
             id: id,
             name: name,
             documentId: documentId,
+            photo: photo,
             phone: phone,
             email: email,
             isActive: isActive,

@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'post_user_request.dart';
+part of 'get_user_info_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$PostUserRequest extends PostUserRequest {
+class _$GetUserInfoResponse extends GetUserInfoResponse {
   @override
   final DateTime? createdAt;
   @override
@@ -44,12 +44,13 @@ class _$PostUserRequest extends PostUserRequest {
   @override
   final UserStatus? status;
   @override
-  final String? password;
+  final CompanyModelBase? company;
 
-  factory _$PostUserRequest([void Function(PostUserRequestBuilder)? updates]) =>
-      (new PostUserRequestBuilder()..update(updates))._build();
+  factory _$GetUserInfoResponse(
+          [void Function(GetUserInfoResponseBuilder)? updates]) =>
+      (new GetUserInfoResponseBuilder()..update(updates))._build();
 
-  _$PostUserRequest._(
+  _$GetUserInfoResponse._(
       {this.createdAt,
       this.updatedAt,
       this.userCreated,
@@ -68,21 +69,22 @@ class _$PostUserRequest extends PostUserRequest {
       this.isRegionManager,
       this.externalCode,
       this.status,
-      this.password})
+      this.company})
       : super._();
 
   @override
-  PostUserRequest rebuild(void Function(PostUserRequestBuilder) updates) =>
+  GetUserInfoResponse rebuild(
+          void Function(GetUserInfoResponseBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  PostUserRequestBuilder toBuilder() =>
-      new PostUserRequestBuilder()..replace(this);
+  GetUserInfoResponseBuilder toBuilder() =>
+      new GetUserInfoResponseBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is PostUserRequest &&
+    return other is GetUserInfoResponse &&
         createdAt == other.createdAt &&
         updatedAt == other.updatedAt &&
         userCreated == other.userCreated &&
@@ -101,7 +103,7 @@ class _$PostUserRequest extends PostUserRequest {
         isRegionManager == other.isRegionManager &&
         externalCode == other.externalCode &&
         status == other.status &&
-        password == other.password;
+        company == other.company;
   }
 
   @override
@@ -125,14 +127,14 @@ class _$PostUserRequest extends PostUserRequest {
     _$hash = $jc(_$hash, isRegionManager.hashCode);
     _$hash = $jc(_$hash, externalCode.hashCode);
     _$hash = $jc(_$hash, status.hashCode);
-    _$hash = $jc(_$hash, password.hashCode);
+    _$hash = $jc(_$hash, company.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'PostUserRequest')
+    return (newBuiltValueToStringHelper(r'GetUserInfoResponse')
           ..add('createdAt', createdAt)
           ..add('updatedAt', updatedAt)
           ..add('userCreated', userCreated)
@@ -151,14 +153,14 @@ class _$PostUserRequest extends PostUserRequest {
           ..add('isRegionManager', isRegionManager)
           ..add('externalCode', externalCode)
           ..add('status', status)
-          ..add('password', password))
+          ..add('company', company))
         .toString();
   }
 }
 
-class PostUserRequestBuilder
-    implements Builder<PostUserRequest, PostUserRequestBuilder> {
-  _$PostUserRequest? _$v;
+class GetUserInfoResponseBuilder
+    implements Builder<GetUserInfoResponse, GetUserInfoResponseBuilder> {
+  _$GetUserInfoResponse? _$v;
 
   DateTime? _createdAt;
   DateTime? get createdAt => _$this._createdAt;
@@ -234,15 +236,16 @@ class PostUserRequestBuilder
   UserStatus? get status => _$this._status;
   set status(UserStatus? status) => _$this._status = status;
 
-  String? _password;
-  String? get password => _$this._password;
-  set password(String? password) => _$this._password = password;
+  CompanyModelBaseBuilder? _company;
+  CompanyModelBaseBuilder get company =>
+      _$this._company ??= new CompanyModelBaseBuilder();
+  set company(CompanyModelBaseBuilder? company) => _$this._company = company;
 
-  PostUserRequestBuilder() {
-    PostUserRequest._defaults(this);
+  GetUserInfoResponseBuilder() {
+    GetUserInfoResponse._defaults(this);
   }
 
-  PostUserRequestBuilder get _$this {
+  GetUserInfoResponseBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _createdAt = $v.createdAt;
@@ -263,48 +266,61 @@ class PostUserRequestBuilder
       _isRegionManager = $v.isRegionManager;
       _externalCode = $v.externalCode;
       _status = $v.status;
-      _password = $v.password;
+      _company = $v.company?.toBuilder();
       _$v = null;
     }
     return this;
   }
 
   @override
-  void replace(PostUserRequest other) {
+  void replace(GetUserInfoResponse other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$PostUserRequest;
+    _$v = other as _$GetUserInfoResponse;
   }
 
   @override
-  void update(void Function(PostUserRequestBuilder)? updates) {
+  void update(void Function(GetUserInfoResponseBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  PostUserRequest build() => _build();
+  GetUserInfoResponse build() => _build();
 
-  _$PostUserRequest _build() {
-    final _$result = _$v ??
-        new _$PostUserRequest._(
-            createdAt: createdAt,
-            updatedAt: updatedAt,
-            userCreated: userCreated,
-            userUpdated: userUpdated,
-            id: id,
-            name: name,
-            documentId: documentId,
-            photo: photo,
-            phone: phone,
-            email: email,
-            isActive: isActive,
-            isAdmin: isAdmin,
-            isSuperAdmin: isSuperAdmin,
-            isSalesman: isSalesman,
-            isIntegration: isIntegration,
-            isRegionManager: isRegionManager,
-            externalCode: externalCode,
-            status: status,
-            password: password);
+  _$GetUserInfoResponse _build() {
+    _$GetUserInfoResponse _$result;
+    try {
+      _$result = _$v ??
+          new _$GetUserInfoResponse._(
+              createdAt: createdAt,
+              updatedAt: updatedAt,
+              userCreated: userCreated,
+              userUpdated: userUpdated,
+              id: id,
+              name: name,
+              documentId: documentId,
+              photo: photo,
+              phone: phone,
+              email: email,
+              isActive: isActive,
+              isAdmin: isAdmin,
+              isSuperAdmin: isSuperAdmin,
+              isSalesman: isSalesman,
+              isIntegration: isIntegration,
+              isRegionManager: isRegionManager,
+              externalCode: externalCode,
+              status: status,
+              company: _company?.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'company';
+        _company?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'GetUserInfoResponse', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }
