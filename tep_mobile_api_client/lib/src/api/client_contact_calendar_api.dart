@@ -9,6 +9,7 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:tep_mobile_api_client/src/api_util.dart';
+import 'package:tep_mobile_api_client/src/model/client_contact_calendar_status.dart';
 import 'package:tep_mobile_api_client/src/model/error_details.dart';
 import 'package:tep_mobile_api_client/src/model/get_all_client_contact_calendar_response.dart';
 import 'package:tep_mobile_api_client/src/model/get_all_paged_client_contact_calendar_response.dart';
@@ -44,7 +45,7 @@ class ClientContactCalendarApi {
   Future<Response<GetAllClientContactCalendarResponse>> getByIdClientContactCalendar({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'd2e075a8-e28e-425b-9384-a4a1ff34d77a',
+    String? xCsrfToken = 'a01059e5-94cf-4176-a85d-3646e571ade3',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -124,6 +125,8 @@ class ClientContactCalendarApi {
   /// * [salesmanId] 
   /// * [salesmanName] 
   /// * [summary] 
+  /// * [status] 
+  /// * [allDay] 
   /// * [limit] - limit
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
   /// * [xApiKey] - Your Api Key
@@ -145,10 +148,12 @@ class ClientContactCalendarApi {
     String? salesmanId,
     String? salesmanName,
     String? summary,
+    ClientContactCalendarStatus? status,
+    bool? allDay,
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'f34ff627-e1f4-497b-9db8-979c786f2ddc',
+    String? xCsrfToken = '008f6da6-8c8a-414b-b221-2bca029bc078',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -186,6 +191,8 @@ class ClientContactCalendarApi {
       if (salesmanId != null) r'salesmanId': encodeQueryParameter(_serializers, salesmanId, const FullType(String)),
       if (salesmanName != null) r'salesmanName': encodeQueryParameter(_serializers, salesmanName, const FullType(String)),
       if (summary != null) r'summary': encodeQueryParameter(_serializers, summary, const FullType(String)),
+      if (status != null) r'status': encodeQueryParameter(_serializers, status, const FullType(ClientContactCalendarStatus)),
+      if (allDay != null) r'allDay': encodeQueryParameter(_serializers, allDay, const FullType(bool)),
       if (limit != null) r'limit': encodeQueryParameter(_serializers, limit, const FullType(int)),
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
     };
@@ -249,7 +256,7 @@ class ClientContactCalendarApi {
   Future<Response<void>> tepsalesV1ClientcontactcalendarIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '3fdc69c4-1da7-4bab-b94e-698a5b094869',
+    String? xCsrfToken = 'c639fbd6-b829-4044-89d1-e4cbc8d54c97',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -311,7 +318,7 @@ class ClientContactCalendarApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '06f217ca-3f6f-493d-b61d-abe7313334a2',
+    String? xCsrfToken = 'a2c3be43-e491-462e-abf1-60e28305e058',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -392,7 +399,7 @@ class ClientContactCalendarApi {
   Future<Response<void>> tepsalesV1ClientcontactcalendarIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '9dfb396e-5719-4800-b9ab-ea6548d3ccce',
+    String? xCsrfToken = 'dbc7612b-f03a-478e-9cc6-a144cf727ff0',
     PutClientContactCalendarRequest? putClientContactCalendarRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -465,6 +472,8 @@ class ClientContactCalendarApi {
   /// * [salesmanId] 
   /// * [salesmanName] 
   /// * [summary] 
+  /// * [status] 
+  /// * [allDay] 
   /// * [page] 
   /// * [pageSize] 
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
@@ -487,11 +496,13 @@ class ClientContactCalendarApi {
     String? salesmanId,
     String? salesmanName,
     String? summary,
+    ClientContactCalendarStatus? status,
+    bool? allDay,
     int? page,
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '2da7e0d0-6968-43ef-89ba-7df571216a06',
+    String? xCsrfToken = 'd45fcb77-c020-4fa6-a5fb-9912e14c01ed',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -529,6 +540,8 @@ class ClientContactCalendarApi {
       if (salesmanId != null) r'salesmanId': encodeQueryParameter(_serializers, salesmanId, const FullType(String)),
       if (salesmanName != null) r'salesmanName': encodeQueryParameter(_serializers, salesmanName, const FullType(String)),
       if (summary != null) r'summary': encodeQueryParameter(_serializers, summary, const FullType(String)),
+      if (status != null) r'status': encodeQueryParameter(_serializers, status, const FullType(ClientContactCalendarStatus)),
+      if (allDay != null) r'allDay': encodeQueryParameter(_serializers, allDay, const FullType(bool)),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
@@ -592,7 +605,7 @@ class ClientContactCalendarApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostClientContactCalendarResponse>> tepsalesV1ClientcontactcalendarPost({ 
     String? xApiKey,
-    String? xCsrfToken = '27a96468-8218-475b-9832-3af598c1bc64',
+    String? xCsrfToken = '7a9f712f-3938-43a2-9d86-fb5f493f9207',
     PostClientContactCalendarRequest? postClientContactCalendarRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

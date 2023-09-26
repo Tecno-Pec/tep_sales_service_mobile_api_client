@@ -19,6 +19,7 @@ import 'package:tep_mobile_api_client/src/model/address.dart';
 import 'package:tep_mobile_api_client/src/model/address_status.dart';
 import 'package:tep_mobile_api_client/src/model/address_type_enum.dart';
 import 'package:tep_mobile_api_client/src/model/client.dart';
+import 'package:tep_mobile_api_client/src/model/client_contact_calendar_status.dart';
 import 'package:tep_mobile_api_client/src/model/client_status.dart';
 import 'package:tep_mobile_api_client/src/model/commission_status.dart';
 import 'package:tep_mobile_api_client/src/model/database_collector.dart';
@@ -231,6 +232,7 @@ part 'serializers.g.dart';
   AddressStatus,
   AddressTypeEnum,
   Client,
+  ClientContactCalendarStatus,
   ClientStatus,
   CommissionStatus,
   DatabaseCollector,

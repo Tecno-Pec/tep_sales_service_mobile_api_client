@@ -22,6 +22,8 @@ class _$PushToken extends PushToken {
   @override
   final String? companyId;
   @override
+  final String? ownerId;
+  @override
   final String? deviceId;
   @override
   final String? token;
@@ -45,6 +47,7 @@ class _$PushToken extends PushToken {
       this.userUpdated,
       this.version,
       this.companyId,
+      this.ownerId,
       this.deviceId,
       this.token,
       this.osVersion,
@@ -71,6 +74,7 @@ class _$PushToken extends PushToken {
         userUpdated == other.userUpdated &&
         version == other.version &&
         companyId == other.companyId &&
+        ownerId == other.ownerId &&
         deviceId == other.deviceId &&
         token == other.token &&
         osVersion == other.osVersion &&
@@ -89,6 +93,7 @@ class _$PushToken extends PushToken {
     _$hash = $jc(_$hash, userUpdated.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jc(_$hash, companyId.hashCode);
+    _$hash = $jc(_$hash, ownerId.hashCode);
     _$hash = $jc(_$hash, deviceId.hashCode);
     _$hash = $jc(_$hash, token.hashCode);
     _$hash = $jc(_$hash, osVersion.hashCode);
@@ -109,6 +114,7 @@ class _$PushToken extends PushToken {
           ..add('userUpdated', userUpdated)
           ..add('version', version)
           ..add('companyId', companyId)
+          ..add('ownerId', ownerId)
           ..add('deviceId', deviceId)
           ..add('token', token)
           ..add('osVersion', osVersion)
@@ -150,6 +156,10 @@ class PushTokenBuilder implements Builder<PushToken, PushTokenBuilder> {
   String? get companyId => _$this._companyId;
   set companyId(String? companyId) => _$this._companyId = companyId;
 
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(String? ownerId) => _$this._ownerId = ownerId;
+
   String? _deviceId;
   String? get deviceId => _$this._deviceId;
   set deviceId(String? deviceId) => _$this._deviceId = deviceId;
@@ -188,6 +198,7 @@ class PushTokenBuilder implements Builder<PushToken, PushTokenBuilder> {
       _userUpdated = $v.userUpdated;
       _version = $v.version;
       _companyId = $v.companyId;
+      _ownerId = $v.ownerId;
       _deviceId = $v.deviceId;
       _token = $v.token;
       _osVersion = $v.osVersion;
@@ -223,6 +234,7 @@ class PushTokenBuilder implements Builder<PushToken, PushTokenBuilder> {
             userUpdated: userUpdated,
             version: version,
             companyId: companyId,
+            ownerId: ownerId,
             deviceId: deviceId,
             token: token,
             osVersion: osVersion,

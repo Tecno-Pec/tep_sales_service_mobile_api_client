@@ -22,6 +22,8 @@ class _$PaymentCondition extends PaymentCondition {
   @override
   final String? companyId;
   @override
+  final String? ownerId;
+  @override
   final String? name;
   @override
   final String? externalCode;
@@ -42,6 +44,7 @@ class _$PaymentCondition extends PaymentCondition {
       this.userUpdated,
       this.version,
       this.companyId,
+      this.ownerId,
       this.name,
       this.externalCode,
       this.sequence,
@@ -67,6 +70,7 @@ class _$PaymentCondition extends PaymentCondition {
         userUpdated == other.userUpdated &&
         version == other.version &&
         companyId == other.companyId &&
+        ownerId == other.ownerId &&
         name == other.name &&
         externalCode == other.externalCode &&
         sequence == other.sequence &&
@@ -83,6 +87,7 @@ class _$PaymentCondition extends PaymentCondition {
     _$hash = $jc(_$hash, userUpdated.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jc(_$hash, companyId.hashCode);
+    _$hash = $jc(_$hash, ownerId.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, externalCode.hashCode);
     _$hash = $jc(_$hash, sequence.hashCode);
@@ -101,6 +106,7 @@ class _$PaymentCondition extends PaymentCondition {
           ..add('userUpdated', userUpdated)
           ..add('version', version)
           ..add('companyId', companyId)
+          ..add('ownerId', ownerId)
           ..add('name', name)
           ..add('externalCode', externalCode)
           ..add('sequence', sequence)
@@ -141,6 +147,10 @@ class PaymentConditionBuilder
   String? get companyId => _$this._companyId;
   set companyId(String? companyId) => _$this._companyId = companyId;
 
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(String? ownerId) => _$this._ownerId = ownerId;
+
   String? _name;
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
@@ -171,6 +181,7 @@ class PaymentConditionBuilder
       _userUpdated = $v.userUpdated;
       _version = $v.version;
       _companyId = $v.companyId;
+      _ownerId = $v.ownerId;
       _name = $v.name;
       _externalCode = $v.externalCode;
       _sequence = $v.sequence;
@@ -204,6 +215,7 @@ class PaymentConditionBuilder
             userUpdated: userUpdated,
             version: version,
             companyId: companyId,
+            ownerId: ownerId,
             name: name,
             externalCode: externalCode,
             sequence: sequence,

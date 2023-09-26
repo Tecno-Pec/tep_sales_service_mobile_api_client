@@ -20,6 +20,7 @@ part 'push_token.g.dart';
 /// * [userUpdated] 
 /// * [version] 
 /// * [companyId] 
+/// * [ownerId] 
 /// * [deviceId] 
 /// * [token] 
 /// * [osVersion] 
@@ -48,6 +49,9 @@ abstract class PushToken implements Built<PushToken, PushTokenBuilder> {
 
   @BuiltValueField(wireName: r'companyId')
   String? get companyId;
+
+  @BuiltValueField(wireName: r'ownerId')
+  String? get ownerId;
 
   @BuiltValueField(wireName: r'deviceId')
   String? get deviceId;
@@ -137,6 +141,13 @@ class _$PushTokenSerializer implements PrimitiveSerializer<PushToken> {
       yield r'companyId';
       yield serializers.serialize(
         object.companyId,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.ownerId != null) {
+      yield r'ownerId';
+      yield serializers.serialize(
+        object.ownerId,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -258,6 +269,14 @@ class _$PushTokenSerializer implements PrimitiveSerializer<PushToken> {
           ) as String?;
           if (valueDes == null) continue;
           result.companyId = valueDes;
+          break;
+        case r'ownerId':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.ownerId = valueDes;
           break;
         case r'deviceId':
           final valueDes = serializers.deserialize(

@@ -48,7 +48,7 @@ class DiscountRuleApi {
   Future<Response<GetAllDiscountRuleResponse>> getByIdDiscountRule({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '0a08aa30-f600-450d-ac05-377d4610503e',
+    String? xCsrfToken = '8bd352d1-eead-4baa-b2a2-9fec25265d2a',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -150,7 +150,7 @@ class DiscountRuleApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'a207b113-ff9a-4f31-a69d-501eee44ff10',
+    String? xCsrfToken = '715a2d04-be0d-4946-923b-aa1aa3e51e58',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -250,7 +250,7 @@ class DiscountRuleApi {
   Future<Response<void>> tepsalesV1DiscountRulesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '78a02214-577f-47b5-b709-1e3a895e6a0c',
+    String? xCsrfToken = '936c9cec-c8ba-4fbc-993f-a8212f67e7d8',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -312,7 +312,7 @@ class DiscountRuleApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'a09a7160-edb6-442a-83a0-2411b7892068',
+    String? xCsrfToken = '3f625222-8cfd-4f05-82e5-383fe128c7b2',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -393,7 +393,7 @@ class DiscountRuleApi {
   Future<Response<void>> tepsalesV1DiscountRulesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '84a538f5-9ae0-45e3-858e-5eab660cb585',
+    String? xCsrfToken = '2df33c5f-8238-4f6f-92c0-b71136d70db8',
     PutDiscountRuleRequest? putDiscountRuleRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -490,7 +490,7 @@ class DiscountRuleApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '72da3c6e-1759-4a40-8039-b038b4bddfe2',
+    String? xCsrfToken = '9b6e1e43-b4e4-455a-acda-0fbf1a3b354f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -590,7 +590,7 @@ class DiscountRuleApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostDiscountRuleResponse>> tepsalesV1DiscountRulesPost({ 
     String? xApiKey,
-    String? xCsrfToken = '415be27e-d785-4b13-88cd-ce4c5caeefeb',
+    String? xCsrfToken = '8bef375e-8797-4c25-b725-af8e322295e6',
     PostDiscountRuleRequest? postDiscountRuleRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

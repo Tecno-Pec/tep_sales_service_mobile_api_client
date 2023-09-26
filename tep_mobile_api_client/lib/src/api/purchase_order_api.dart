@@ -47,7 +47,7 @@ class PurchaseOrderApi {
   Future<Response<GetAllPurchaseOrderResponse>> getByIdPurchaseOrder({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '82a4e381-46a2-479d-89b7-81d6613a5a63',
+    String? xCsrfToken = '634c1b4b-83a3-4c47-ae45-f84151cdfe2f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -149,7 +149,7 @@ class PurchaseOrderApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '3cf2e97f-f2ba-4bd2-aea2-f81292ababed',
+    String? xCsrfToken = '413fdac8-86cc-4443-9dbb-54881074fd10',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -249,7 +249,7 @@ class PurchaseOrderApi {
   Future<Response<void>> tepsalesV1PurchaseordersIdApprovePost({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'aae4d2cf-35d5-4012-b1d3-e16b36e5fedb',
+    String? xCsrfToken = 'f1d60186-ab00-457f-a118-8c8045c24f7f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -310,7 +310,7 @@ class PurchaseOrderApi {
   Future<Response<void>> tepsalesV1PurchaseordersIdCancelPost({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '269487c8-ac40-4fc0-bac8-69c79ad66e50',
+    String? xCsrfToken = '52ec9671-0b83-40d0-8bda-d2b5421fc439',
     PostCancelPurchaseOrderRequest? postCancelPurchaseOrderRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -391,7 +391,7 @@ class PurchaseOrderApi {
   Future<Response<void>> tepsalesV1PurchaseordersIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'c40c240c-b5da-4908-ad64-a72b7a747540',
+    String? xCsrfToken = '6fb23dd7-149c-4672-b173-ef0c20c4eb90',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -453,7 +453,7 @@ class PurchaseOrderApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '6500d44d-ace7-45c1-a0a9-49ba44ebf897',
+    String? xCsrfToken = '07f391ff-5a2b-4b0c-8fea-6815b808cf5f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -534,7 +534,7 @@ class PurchaseOrderApi {
   Future<Response<void>> tepsalesV1PurchaseordersIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '36d7ce5a-8e7e-4f28-bfde-f33bba4151d5',
+    String? xCsrfToken = '2a2c23bf-b521-4e4e-be8e-fd0906def720',
     PutPurchaseOrderRequest? putPurchaseOrderRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -616,7 +616,7 @@ class PurchaseOrderApi {
   Future<Response<void>> tepsalesV1PurchaseordersIdRefusedPost({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '81f5149a-47cb-4665-9fb1-9a5edec1075f',
+    String? xCsrfToken = '31fb9b71-be0e-4966-9b7e-31277d0c27ed',
     PostRefusedPurchaseOrderRequest? postRefusedPurchaseOrderRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -699,7 +699,7 @@ class PurchaseOrderApi {
     required String id,
     String? areaManagerCode,
     String? xApiKey,
-    String? xCsrfToken = 'f7321e43-018a-4d0d-acea-96cadee6d440',
+    String? xCsrfToken = '02a16d16-5d35-424e-b890-1867253e2793',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -780,7 +780,7 @@ class PurchaseOrderApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'e76a9f40-bfe5-4447-8190-0978630c4371',
+    String? xCsrfToken = '406b77fc-7ae8-42e5-92bc-119f3fd7c02a',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -880,7 +880,7 @@ class PurchaseOrderApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostPurchaseOrderResponse>> tepsalesV1PurchaseordersPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'af0a582a-80ec-4788-aa7d-2426b1904aed',
+    String? xCsrfToken = 'bd82e876-dae4-4d41-9f12-423c21222831',
     PostPurchaseOrderRequest? postPurchaseOrderRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

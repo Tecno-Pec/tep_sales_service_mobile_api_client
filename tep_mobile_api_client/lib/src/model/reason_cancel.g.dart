@@ -22,6 +22,8 @@ class _$ReasonCancel extends ReasonCancel {
   @override
   final String? companyId;
   @override
+  final String? ownerId;
+  @override
   final String? name;
   @override
   final String? description;
@@ -41,6 +43,7 @@ class _$ReasonCancel extends ReasonCancel {
       this.userUpdated,
       this.version,
       this.companyId,
+      this.ownerId,
       this.name,
       this.description,
       this.externalCode,
@@ -65,6 +68,7 @@ class _$ReasonCancel extends ReasonCancel {
         userUpdated == other.userUpdated &&
         version == other.version &&
         companyId == other.companyId &&
+        ownerId == other.ownerId &&
         name == other.name &&
         description == other.description &&
         externalCode == other.externalCode &&
@@ -81,6 +85,7 @@ class _$ReasonCancel extends ReasonCancel {
     _$hash = $jc(_$hash, userUpdated.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jc(_$hash, companyId.hashCode);
+    _$hash = $jc(_$hash, ownerId.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, description.hashCode);
     _$hash = $jc(_$hash, externalCode.hashCode);
@@ -99,6 +104,7 @@ class _$ReasonCancel extends ReasonCancel {
           ..add('userUpdated', userUpdated)
           ..add('version', version)
           ..add('companyId', companyId)
+          ..add('ownerId', ownerId)
           ..add('name', name)
           ..add('description', description)
           ..add('externalCode', externalCode)
@@ -139,6 +145,10 @@ class ReasonCancelBuilder
   String? get companyId => _$this._companyId;
   set companyId(String? companyId) => _$this._companyId = companyId;
 
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(String? ownerId) => _$this._ownerId = ownerId;
+
   String? _name;
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
@@ -169,6 +179,7 @@ class ReasonCancelBuilder
       _userUpdated = $v.userUpdated;
       _version = $v.version;
       _companyId = $v.companyId;
+      _ownerId = $v.ownerId;
       _name = $v.name;
       _description = $v.description;
       _externalCode = $v.externalCode;
@@ -202,6 +213,7 @@ class ReasonCancelBuilder
             userUpdated: userUpdated,
             version: version,
             companyId: companyId,
+            ownerId: ownerId,
             name: name,
             description: description,
             externalCode: externalCode,

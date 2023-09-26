@@ -16,11 +16,14 @@ Name | Type | Description | Notes
 **endDate** | [**DateTime**](DateTime.md) |  | [optional] 
 **clientId** | **String** |  | [optional] 
 **reasonVisitId** | **String** |  | [optional] 
+**reasonVisitDescription** | **String** |  | [optional] 
 **clientName** | **String** |  | [optional] 
 **salesmanId** | **String** |  | [optional] 
 **salesmanName** | **String** |  | [optional] 
 **summary** | **String** |  | [optional] 
 **address** | [**Address**](Address.md) |  | [optional] 
+**status** | [**ClientContactCalendarStatus**](ClientContactCalendarStatus.md) |  | [optional] 
+**allDay** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

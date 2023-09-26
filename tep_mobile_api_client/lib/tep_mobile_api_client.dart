@@ -47,6 +47,7 @@ export 'package:tep_mobile_api_client/src/model/address.dart';
 export 'package:tep_mobile_api_client/src/model/address_status.dart';
 export 'package:tep_mobile_api_client/src/model/address_type_enum.dart';
 export 'package:tep_mobile_api_client/src/model/client.dart';
+export 'package:tep_mobile_api_client/src/model/client_contact_calendar_status.dart';
 export 'package:tep_mobile_api_client/src/model/client_status.dart';
 export 'package:tep_mobile_api_client/src/model/commission_status.dart';
 export 'package:tep_mobile_api_client/src/model/database_collector.dart';

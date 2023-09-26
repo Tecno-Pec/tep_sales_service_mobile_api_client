@@ -45,7 +45,7 @@ class IntegrationStatusApi {
   Future<Response<GetAllIntegrationStatusResponse>> getByIdIntegrationStatus({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '5e8505f9-df03-4381-b2f4-fed056ffd563',
+    String? xCsrfToken = 'c1c022e8-07e4-4e68-b466-d683b0f6ca57',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -145,7 +145,7 @@ class IntegrationStatusApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '1a4a1c1a-9af8-4e90-a266-78bf7b43a93c',
+    String? xCsrfToken = '98e77692-7d04-42d8-80fe-b92af73adf55',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -244,7 +244,7 @@ class IntegrationStatusApi {
   Future<Response<void>> tepsalesV1IntegrationStatusIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'd3da7de8-2aa9-4f4f-a84c-4b925b0e5491',
+    String? xCsrfToken = 'caae7381-5b49-4e1c-8316-8f2aa10ede13',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -306,7 +306,7 @@ class IntegrationStatusApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'fe4737a8-0197-443c-8566-6e8b80cf1688',
+    String? xCsrfToken = '42292ca2-3a1c-48db-b9c4-e252d80ba8de',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -387,7 +387,7 @@ class IntegrationStatusApi {
   Future<Response<void>> tepsalesV1IntegrationStatusIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '83b85fa8-0112-4fa8-8d5b-65dfea08db7e',
+    String? xCsrfToken = 'b302aaa7-f878-4033-bfa5-7bfdd221dd1e',
     PutIntegrationStatusRequest? putIntegrationStatusRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -482,7 +482,7 @@ class IntegrationStatusApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '709c5231-63b9-415f-b58f-b596fbc08b0b',
+    String? xCsrfToken = 'cfe11f6a-aa0e-4c90-ba1e-117588c72b85',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -581,7 +581,7 @@ class IntegrationStatusApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostIntegrationStatusResponse>> tepsalesV1IntegrationStatusPost({ 
     String? xApiKey,
-    String? xCsrfToken = '62a6cda1-6205-4089-ab7d-627e3bacf010',
+    String? xCsrfToken = 'ca4e48ba-bcc0-42a8-bfca-0be6dbe3dfd0',
     PostIntegrationStatusRequest? postIntegrationStatusRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

@@ -32,6 +32,7 @@ class AuditApi {
   /// * [endDate] 
   /// * [userCreated] 
   /// * [userUpdated] 
+  /// * [ownerId] 
   /// * [page] 
   /// * [pageSize] 
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
@@ -55,11 +56,12 @@ class AuditApi {
     DateTime? endDate,
     String? userCreated,
     String? userUpdated,
+    String? ownerId,
     int? page,
     int? pageSize,
-    String? sort = 'Id.desc',
+    String? sort = 'CreatedAt.desc',
     String? xApiKey,
-    String? xCsrfToken = '8b50e9d8-41a9-4478-bf12-4c67d3779d66',
+    String? xCsrfToken = '03d36a98-07a4-4323-81f4-46d4f8de8e46',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -98,6 +100,7 @@ class AuditApi {
       if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
       if (userCreated != null) r'userCreated': encodeQueryParameter(_serializers, userCreated, const FullType(String)),
       if (userUpdated != null) r'userUpdated': encodeQueryParameter(_serializers, userUpdated, const FullType(String)),
+      if (ownerId != null) r'ownerId': encodeQueryParameter(_serializers, ownerId, const FullType(String)),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),
@@ -155,6 +158,7 @@ class AuditApi {
   /// * [endDate] 
   /// * [userCreated] 
   /// * [userUpdated] 
+  /// * [ownerId] 
   /// * [page] 
   /// * [pageSize] 
   /// * [sort] - Sorting atributes, sample: id.desc,name.asc
@@ -178,11 +182,12 @@ class AuditApi {
     DateTime? endDate,
     String? userCreated,
     String? userUpdated,
+    String? ownerId,
     int? page,
     int? pageSize,
-    String? sort = 'Id.desc',
+    String? sort = 'CreatedAt.desc',
     String? xApiKey,
-    String? xCsrfToken = 'b8dc5233-869f-4192-9eb2-37bbbb98e0d9',
+    String? xCsrfToken = '797fc0c3-d884-4d9e-bd21-6563030dbfc4',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -221,6 +226,7 @@ class AuditApi {
       if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
       if (userCreated != null) r'userCreated': encodeQueryParameter(_serializers, userCreated, const FullType(String)),
       if (userUpdated != null) r'userUpdated': encodeQueryParameter(_serializers, userUpdated, const FullType(String)),
+      if (ownerId != null) r'ownerId': encodeQueryParameter(_serializers, ownerId, const FullType(String)),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'pageSize': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
       if (sort != null) r'sort': encodeQueryParameter(_serializers, sort, const FullType(String)),

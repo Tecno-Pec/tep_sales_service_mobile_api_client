@@ -20,6 +20,7 @@ part 'reason_cancel.g.dart';
 /// * [userUpdated] 
 /// * [version] 
 /// * [companyId] 
+/// * [ownerId] 
 /// * [name] 
 /// * [description] 
 /// * [externalCode] 
@@ -46,6 +47,9 @@ abstract class ReasonCancel implements Built<ReasonCancel, ReasonCancelBuilder> 
 
   @BuiltValueField(wireName: r'companyId')
   String? get companyId;
+
+  @BuiltValueField(wireName: r'ownerId')
+  String? get ownerId;
 
   @BuiltValueField(wireName: r'name')
   String? get name;
@@ -129,6 +133,13 @@ class _$ReasonCancelSerializer implements PrimitiveSerializer<ReasonCancel> {
       yield r'companyId';
       yield serializers.serialize(
         object.companyId,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.ownerId != null) {
+      yield r'ownerId';
+      yield serializers.serialize(
+        object.ownerId,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -236,6 +247,14 @@ class _$ReasonCancelSerializer implements PrimitiveSerializer<ReasonCancel> {
           ) as String?;
           if (valueDes == null) continue;
           result.companyId = valueDes;
+          break;
+        case r'ownerId':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.ownerId = valueDes;
           break;
         case r'name':
           final valueDes = serializers.deserialize(

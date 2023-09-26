@@ -22,7 +22,11 @@ class _$User extends User {
   @override
   final String? companyId;
   @override
+  final String? ownerId;
+  @override
   final String? name;
+  @override
+  final String? photo;
   @override
   final String? documentId;
   @override
@@ -63,7 +67,9 @@ class _$User extends User {
       this.userUpdated,
       this.version,
       this.companyId,
+      this.ownerId,
       this.name,
+      this.photo,
       this.documentId,
       this.phone,
       this.password,
@@ -98,7 +104,9 @@ class _$User extends User {
         userUpdated == other.userUpdated &&
         version == other.version &&
         companyId == other.companyId &&
+        ownerId == other.ownerId &&
         name == other.name &&
+        photo == other.photo &&
         documentId == other.documentId &&
         phone == other.phone &&
         password == other.password &&
@@ -125,7 +133,9 @@ class _$User extends User {
     _$hash = $jc(_$hash, userUpdated.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jc(_$hash, companyId.hashCode);
+    _$hash = $jc(_$hash, ownerId.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, photo.hashCode);
     _$hash = $jc(_$hash, documentId.hashCode);
     _$hash = $jc(_$hash, phone.hashCode);
     _$hash = $jc(_$hash, password.hashCode);
@@ -154,7 +164,9 @@ class _$User extends User {
           ..add('userUpdated', userUpdated)
           ..add('version', version)
           ..add('companyId', companyId)
+          ..add('ownerId', ownerId)
           ..add('name', name)
+          ..add('photo', photo)
           ..add('documentId', documentId)
           ..add('phone', phone)
           ..add('password', password)
@@ -204,9 +216,17 @@ class UserBuilder implements Builder<User, UserBuilder> {
   String? get companyId => _$this._companyId;
   set companyId(String? companyId) => _$this._companyId = companyId;
 
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(String? ownerId) => _$this._ownerId = ownerId;
+
   String? _name;
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
+
+  String? _photo;
+  String? get photo => _$this._photo;
+  set photo(String? photo) => _$this._photo = photo;
 
   String? _documentId;
   String? get documentId => _$this._documentId;
@@ -283,7 +303,9 @@ class UserBuilder implements Builder<User, UserBuilder> {
       _userUpdated = $v.userUpdated;
       _version = $v.version;
       _companyId = $v.companyId;
+      _ownerId = $v.ownerId;
       _name = $v.name;
+      _photo = $v.photo;
       _documentId = $v.documentId;
       _phone = $v.phone;
       _password = $v.password;
@@ -329,7 +351,9 @@ class UserBuilder implements Builder<User, UserBuilder> {
               userUpdated: userUpdated,
               version: version,
               companyId: companyId,
+              ownerId: ownerId,
               name: name,
+              photo: photo,
               documentId: documentId,
               phone: phone,
               password: password,

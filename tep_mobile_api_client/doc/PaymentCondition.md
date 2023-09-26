@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **userUpdated** | **String** |  | [optional] 
 **version** | [**JsonObject**](.md) |  | [optional] 
 **companyId** | **String** |  | [optional] 
+**ownerId** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **externalCode** | **String** |  | [optional] 
 **sequence** | **int** |  | [optional] 

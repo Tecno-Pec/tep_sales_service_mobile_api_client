@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:tep_mobile_api_client/src/model/client_contact_calendar_status.dart';
 import 'package:tep_mobile_api_client/src/model/address.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -20,11 +21,14 @@ part 'put_client_contact_calendar_request.g.dart';
 /// * [endDate] 
 /// * [clientId] 
 /// * [reasonVisitId] 
+/// * [reasonVisitDescription] 
 /// * [clientName] 
 /// * [salesmanId] 
 /// * [salesmanName] 
 /// * [summary] 
 /// * [address] 
+/// * [status] 
+/// * [allDay] 
 @BuiltValue()
 abstract class PutClientContactCalendarRequest implements Built<PutClientContactCalendarRequest, PutClientContactCalendarRequestBuilder> {
   @BuiltValueField(wireName: r'createdAt')
@@ -51,6 +55,9 @@ abstract class PutClientContactCalendarRequest implements Built<PutClientContact
   @BuiltValueField(wireName: r'reasonVisitId')
   String? get reasonVisitId;
 
+  @BuiltValueField(wireName: r'reasonVisitDescription')
+  String? get reasonVisitDescription;
+
   @BuiltValueField(wireName: r'clientName')
   String? get clientName;
 
@@ -65,6 +72,13 @@ abstract class PutClientContactCalendarRequest implements Built<PutClientContact
 
   @BuiltValueField(wireName: r'address')
   Address? get address;
+
+  @BuiltValueField(wireName: r'status')
+  ClientContactCalendarStatus? get status;
+  // enum statusEnum {  0,  1,  2,  3,  };
+
+  @BuiltValueField(wireName: r'allDay')
+  bool? get allDay;
 
   PutClientContactCalendarRequest._();
 
@@ -145,6 +159,13 @@ class _$PutClientContactCalendarRequestSerializer implements PrimitiveSerializer
         specifiedType: const FullType.nullable(String),
       );
     }
+    if (object.reasonVisitDescription != null) {
+      yield r'reasonVisitDescription';
+      yield serializers.serialize(
+        object.reasonVisitDescription,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
     if (object.clientName != null) {
       yield r'clientName';
       yield serializers.serialize(
@@ -178,6 +199,20 @@ class _$PutClientContactCalendarRequestSerializer implements PrimitiveSerializer
       yield serializers.serialize(
         object.address,
         specifiedType: const FullType(Address),
+      );
+    }
+    if (object.status != null) {
+      yield r'status';
+      yield serializers.serialize(
+        object.status,
+        specifiedType: const FullType(ClientContactCalendarStatus),
+      );
+    }
+    if (object.allDay != null) {
+      yield r'allDay';
+      yield serializers.serialize(
+        object.allDay,
+        specifiedType: const FullType.nullable(bool),
       );
     }
   }
@@ -265,6 +300,14 @@ class _$PutClientContactCalendarRequestSerializer implements PrimitiveSerializer
           if (valueDes == null) continue;
           result.reasonVisitId = valueDes;
           break;
+        case r'reasonVisitDescription':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.reasonVisitDescription = valueDes;
+          break;
         case r'clientName':
           final valueDes = serializers.deserialize(
             value,
@@ -302,6 +345,21 @@ class _$PutClientContactCalendarRequestSerializer implements PrimitiveSerializer
             specifiedType: const FullType(Address),
           ) as Address;
           result.address.replace(valueDes);
+          break;
+        case r'status':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(ClientContactCalendarStatus),
+          ) as ClientContactCalendarStatus;
+          result.status = valueDes;
+          break;
+        case r'allDay':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(bool),
+          ) as bool?;
+          if (valueDes == null) continue;
+          result.allDay = valueDes;
           break;
         default:
           unhandled.add(key);

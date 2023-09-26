@@ -20,6 +20,7 @@ part 'vehicle_type.g.dart';
 /// * [userUpdated] 
 /// * [version] 
 /// * [companyId] 
+/// * [ownerId] 
 /// * [name] 
 /// * [capacity] 
 /// * [maxCapacity] 
@@ -47,6 +48,9 @@ abstract class VehicleType implements Built<VehicleType, VehicleTypeBuilder> {
 
   @BuiltValueField(wireName: r'companyId')
   String? get companyId;
+
+  @BuiltValueField(wireName: r'ownerId')
+  String? get ownerId;
 
   @BuiltValueField(wireName: r'name')
   String? get name;
@@ -133,6 +137,13 @@ class _$VehicleTypeSerializer implements PrimitiveSerializer<VehicleType> {
       yield r'companyId';
       yield serializers.serialize(
         object.companyId,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.ownerId != null) {
+      yield r'ownerId';
+      yield serializers.serialize(
+        object.ownerId,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -247,6 +258,14 @@ class _$VehicleTypeSerializer implements PrimitiveSerializer<VehicleType> {
           ) as String?;
           if (valueDes == null) continue;
           result.companyId = valueDes;
+          break;
+        case r'ownerId':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.ownerId = valueDes;
           break;
         case r'name':
           final valueDes = serializers.deserialize(

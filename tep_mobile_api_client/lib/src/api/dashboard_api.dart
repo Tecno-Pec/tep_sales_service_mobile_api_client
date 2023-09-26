@@ -36,7 +36,7 @@ class DashboardApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<GroupPurchaseOrderDto>> tepsalesV1DashboardPurchaseorderbysalesmanGet({ 
     String? xApiKey,
-    String? xCsrfToken = '07e16979-c7f7-41eb-b991-0e6ffa9b8665',
+    String? xCsrfToken = '5f820c84-b1d7-44ef-a163-0aeed2a8f545',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -122,7 +122,7 @@ class DashboardApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<GroupPurchaseOrderDto>> tepsalesV1DashboardPurchaseorderfavoriteproductsGet({ 
     String? xApiKey,
-    String? xCsrfToken = '217135cb-8acd-4d58-ba7c-f71d8b676939',
+    String? xCsrfToken = '0f9236a9-6b56-447a-a957-a077fd03fc16',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -208,7 +208,7 @@ class DashboardApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<GroupPurchaseOrderDto>> tepsalesV1DashboardPurchaseorderlastsixmonthsGet({ 
     String? xApiKey,
-    String? xCsrfToken = 'bb28c529-f4af-4624-a565-e29576faf28b',
+    String? xCsrfToken = '43133f8f-7e29-4efd-994f-6c0d2c9c5c8b',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -294,7 +294,7 @@ class DashboardApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<GroupPurchaseOrderDto>> tepsalesV1DashboardPurchaseorderstatusGet({ 
     String? xApiKey,
-    String? xCsrfToken = '805831d8-d000-4254-adc2-d8d3a284af6f',
+    String? xCsrfToken = 'b314a51d-e917-42f1-8bc4-74d98112b5de',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -380,7 +380,7 @@ class DashboardApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<GetWidgetsDto>> tepsalesV1DashboardWidgetsGet({ 
     String? xApiKey,
-    String? xCsrfToken = '2fdb89d6-fc03-4978-ab93-fbd091038718',
+    String? xCsrfToken = '8f132b4e-5b3c-4a1f-a0dd-a186ec24d5e3',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,

@@ -23,6 +23,7 @@ part 'product.g.dart';
 /// * [userUpdated] 
 /// * [version] 
 /// * [companyId] 
+/// * [ownerId] 
 /// * [productGroupId] 
 /// * [productLineId] 
 /// * [weightkilograms] 
@@ -55,6 +56,9 @@ abstract class Product implements Built<Product, ProductBuilder> {
 
   @BuiltValueField(wireName: r'companyId')
   String? get companyId;
+
+  @BuiltValueField(wireName: r'ownerId')
+  String? get ownerId;
 
   @BuiltValueField(wireName: r'productGroupId')
   String? get productGroupId;
@@ -157,6 +161,13 @@ class _$ProductSerializer implements PrimitiveSerializer<Product> {
       yield r'companyId';
       yield serializers.serialize(
         object.companyId,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.ownerId != null) {
+      yield r'ownerId';
+      yield serializers.serialize(
+        object.ownerId,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -306,6 +317,14 @@ class _$ProductSerializer implements PrimitiveSerializer<Product> {
           ) as String?;
           if (valueDes == null) continue;
           result.companyId = valueDes;
+          break;
+        case r'ownerId':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.ownerId = valueDes;
           break;
         case r'productGroupId':
           final valueDes = serializers.deserialize(

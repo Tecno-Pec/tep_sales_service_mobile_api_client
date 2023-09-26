@@ -22,6 +22,8 @@ class _$Address extends Address {
   @override
   final String? companyId;
   @override
+  final String? ownerId;
+  @override
   final String? parentId;
   @override
   final String? name;
@@ -63,6 +65,7 @@ class _$Address extends Address {
       this.userUpdated,
       this.version,
       this.companyId,
+      this.ownerId,
       this.parentId,
       this.name,
       this.zipCode,
@@ -98,6 +101,7 @@ class _$Address extends Address {
         userUpdated == other.userUpdated &&
         version == other.version &&
         companyId == other.companyId &&
+        ownerId == other.ownerId &&
         parentId == other.parentId &&
         name == other.name &&
         zipCode == other.zipCode &&
@@ -125,6 +129,7 @@ class _$Address extends Address {
     _$hash = $jc(_$hash, userUpdated.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jc(_$hash, companyId.hashCode);
+    _$hash = $jc(_$hash, ownerId.hashCode);
     _$hash = $jc(_$hash, parentId.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, zipCode.hashCode);
@@ -154,6 +159,7 @@ class _$Address extends Address {
           ..add('userUpdated', userUpdated)
           ..add('version', version)
           ..add('companyId', companyId)
+          ..add('ownerId', ownerId)
           ..add('parentId', parentId)
           ..add('name', name)
           ..add('zipCode', zipCode)
@@ -203,6 +209,10 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
   String? _companyId;
   String? get companyId => _$this._companyId;
   set companyId(String? companyId) => _$this._companyId = companyId;
+
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(String? ownerId) => _$this._ownerId = ownerId;
 
   String? _parentId;
   String? get parentId => _$this._parentId;
@@ -278,6 +288,7 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
       _userUpdated = $v.userUpdated;
       _version = $v.version;
       _companyId = $v.companyId;
+      _ownerId = $v.ownerId;
       _parentId = $v.parentId;
       _name = $v.name;
       _zipCode = $v.zipCode;
@@ -322,6 +333,7 @@ class AddressBuilder implements Builder<Address, AddressBuilder> {
             userUpdated: userUpdated,
             version: version,
             companyId: companyId,
+            ownerId: ownerId,
             parentId: parentId,
             name: name,
             zipCode: zipCode,

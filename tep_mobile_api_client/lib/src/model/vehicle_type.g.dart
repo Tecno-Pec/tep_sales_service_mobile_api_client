@@ -22,6 +22,8 @@ class _$VehicleType extends VehicleType {
   @override
   final String? companyId;
   @override
+  final String? ownerId;
+  @override
   final String? name;
   @override
   final double? capacity;
@@ -43,6 +45,7 @@ class _$VehicleType extends VehicleType {
       this.userUpdated,
       this.version,
       this.companyId,
+      this.ownerId,
       this.name,
       this.capacity,
       this.maxCapacity,
@@ -68,6 +71,7 @@ class _$VehicleType extends VehicleType {
         userUpdated == other.userUpdated &&
         version == other.version &&
         companyId == other.companyId &&
+        ownerId == other.ownerId &&
         name == other.name &&
         capacity == other.capacity &&
         maxCapacity == other.maxCapacity &&
@@ -85,6 +89,7 @@ class _$VehicleType extends VehicleType {
     _$hash = $jc(_$hash, userUpdated.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jc(_$hash, companyId.hashCode);
+    _$hash = $jc(_$hash, ownerId.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, capacity.hashCode);
     _$hash = $jc(_$hash, maxCapacity.hashCode);
@@ -104,6 +109,7 @@ class _$VehicleType extends VehicleType {
           ..add('userUpdated', userUpdated)
           ..add('version', version)
           ..add('companyId', companyId)
+          ..add('ownerId', ownerId)
           ..add('name', name)
           ..add('capacity', capacity)
           ..add('maxCapacity', maxCapacity)
@@ -144,6 +150,10 @@ class VehicleTypeBuilder implements Builder<VehicleType, VehicleTypeBuilder> {
   String? get companyId => _$this._companyId;
   set companyId(String? companyId) => _$this._companyId = companyId;
 
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(String? ownerId) => _$this._ownerId = ownerId;
+
   String? _name;
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
@@ -178,6 +188,7 @@ class VehicleTypeBuilder implements Builder<VehicleType, VehicleTypeBuilder> {
       _userUpdated = $v.userUpdated;
       _version = $v.version;
       _companyId = $v.companyId;
+      _ownerId = $v.ownerId;
       _name = $v.name;
       _capacity = $v.capacity;
       _maxCapacity = $v.maxCapacity;
@@ -212,6 +223,7 @@ class VehicleTypeBuilder implements Builder<VehicleType, VehicleTypeBuilder> {
             userUpdated: userUpdated,
             version: version,
             companyId: companyId,
+            ownerId: ownerId,
             name: name,
             capacity: capacity,
             maxCapacity: maxCapacity,

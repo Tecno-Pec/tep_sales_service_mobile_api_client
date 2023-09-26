@@ -51,7 +51,7 @@ class UserApi {
   Future<Response<GetAllUserResponse>> getByIdUser({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '25aa9bfe-8bc6-4d91-b3b5-5b8e1fbd2e08',
+    String? xCsrfToken = 'e772366b-d56a-411b-943c-4e030b95cbc4',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -137,7 +137,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<GetAllUserResponse>> getUserInfo({ 
     String? xApiKey,
-    String? xCsrfToken = '6b19377d-7d23-4e13-b606-c6c1d749ec90',
+    String? xCsrfToken = '4b3b2ea8-2b9b-48b1-873f-44fbabee52a5',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -241,7 +241,7 @@ class UserApi {
     int? limit,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken = 'aa77e268-c692-4b5b-b772-7d032c1ab6a5',
+    String? xCsrfToken = 'f6ff8341-42c3-4c1b-8814-735a671b70a5',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -341,7 +341,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostUserResetPasswordResponse>> tepsalesV1UsersForcerchangepasswordPost({ 
     String? xApiKey,
-    String? xCsrfToken = '0cbcef50-0c3b-40a8-814b-6a4371eb5b9e',
+    String? xCsrfToken = '603eb8ee-3e48-4ef1-bccb-e0ee8a47a996',
     PostUserForceChangePasswordRequest? postUserForceChangePasswordRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -450,7 +450,7 @@ class UserApi {
   Future<Response<void>> tepsalesV1UsersIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '633ccb77-c56f-4f41-9fe8-d06d17dc958d',
+    String? xCsrfToken = '62e15d5d-024a-477c-bb0c-4060a848404a',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -512,7 +512,7 @@ class UserApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'c6830b89-d79c-41e8-a568-cc482243d3d1',
+    String? xCsrfToken = '47520b14-494d-42d7-a4f5-add48e801577',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -593,7 +593,7 @@ class UserApi {
   Future<Response<void>> tepsalesV1UsersIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '08882333-e8d1-45f7-b860-b9cdb938e91d',
+    String? xCsrfToken = '49353da2-5a95-469e-835a-1e52cee3f129',
     PutUserRequest? putUserRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -692,7 +692,7 @@ class UserApi {
     int? pageSize,
     String? sort,
     String? xApiKey,
-    String? xCsrfToken = 'dc388da9-ca2c-4fd4-89d0-26d5f0ab6bdf',
+    String? xCsrfToken = 'cfff4d15-80c9-45c9-9a6e-5908a7c5b254',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -781,6 +781,127 @@ class UserApi {
   /// Parameters:
   /// * [xApiKey] - Your Api Key
   /// * [xCsrfToken] - CSRF Protection
+  /// * [contentType] 
+  /// * [contentDisposition] 
+  /// * [length] 
+  /// * [name] 
+  /// * [fileName] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<String>] as data
+  /// Throws [DioError] if API call or serialization fails
+  Future<Response<BuiltList<String>>> tepsalesV1UsersPhotoUploadPost({ 
+    String? xApiKey,
+    String? xCsrfToken = '7057319f-6db3-44d7-a223-3b9376f9a4cf',
+    String? contentType,
+    String? contentDisposition,
+    int? length,
+    String? name,
+    String? fileName,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/tepsales/v1/users/photo/upload';
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        if (xApiKey != null) r'x-api-key': xApiKey,
+        if (xCsrfToken != null) r'x-csrf-token': xCsrfToken,
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'Bearer',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: 'multipart/form-data',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      _bodyData = FormData.fromMap(<String, dynamic>{
+        if (contentType != null) r'contentType': encodeFormParameter(_serializers, contentType, const FullType(String)),
+        if (contentDisposition != null) r'contentDisposition': encodeFormParameter(_serializers, contentDisposition, const FullType(String)),
+        if (length != null) r'length': encodeFormParameter(_serializers, length, const FullType(int)),
+        if (name != null) r'name': encodeFormParameter(_serializers, name, const FullType(String)),
+        if (fileName != null) r'fileName': encodeFormParameter(_serializers, fileName, const FullType(String)),
+      });
+
+    } catch(error, stackTrace) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<String>? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(String)]),
+      ) as BuiltList<String>;
+
+    } catch (error, stackTrace) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<BuiltList<String>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// Create User
+  /// 
+  ///
+  /// Parameters:
+  /// * [xApiKey] - Your Api Key
+  /// * [xCsrfToken] - CSRF Protection
   /// * [postUserRequest] - User to create
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -793,7 +914,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostUserResponse>> tepsalesV1UsersPost({ 
     String? xApiKey,
-    String? xCsrfToken = '97858910-2420-4144-ba42-d8d010fa19d1',
+    String? xCsrfToken = 'ad9974ed-548e-4f93-9b44-5fd1d2ff924a',
     PostUserRequest? postUserRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -901,7 +1022,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<void>> tepsalesV1UsersPushtokenPost({ 
     String? xApiKey,
-    String? xCsrfToken = '890a4bef-1c62-48f1-99fe-10ffd50fcc6c',
+    String? xCsrfToken = '6be08f6a-7473-45e5-b10e-e8144308d64b',
     PostUserPushTokenRequest? postUserPushTokenRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -981,7 +1102,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostUserResetPasswordResponse>> tepsalesV1UsersResetPasswordPost({ 
     String? xApiKey,
-    String? xCsrfToken = '45f1a632-f248-4930-b9f5-3882e46249f5',
+    String? xCsrfToken = 'd35c4763-e22d-4a8a-90ba-48166a3e2f72',
     PostUserResetPassword? postUserResetPassword,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1089,7 +1210,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostUserSignInResponse>> tepsalesV1UsersSigninPost({ 
     String? xApiKey,
-    String? xCsrfToken = '2c65c71e-e6a0-4d4d-9a86-c9bf4da494cf',
+    String? xCsrfToken = 'f7a9bedc-96b8-4a7c-9408-aa11c53334fa',
     PostUserSignInRequest? postUserSignInRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1197,7 +1318,7 @@ class UserApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostUserResponse>> tepsalesV1UsersSignupPost({ 
     String? xApiKey,
-    String? xCsrfToken = '73bf33b8-2e5f-49ec-bc0d-28d8fc06dfbb',
+    String? xCsrfToken = '6cecda15-66a1-4c7e-a117-9cd82fcfd594',
     PostUserRequest? postUserRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

@@ -44,7 +44,7 @@ class CompanyGlobalParameterApi {
   Future<Response<GetAllCompanyGlobalParameterResponse>> getByIdCompanyGlobalParameter({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '3265f82b-e18b-4cf7-9561-95fce9f320bf',
+    String? xCsrfToken = 'cd6794a8-4ee1-419c-8983-d8fc2119efbf',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -136,7 +136,7 @@ class CompanyGlobalParameterApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '5b1933a3-e7ef-48df-875e-6b2c3a20c2a9',
+    String? xCsrfToken = '9b4a6555-fc36-483e-8412-cd84a271e0e2',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -231,7 +231,7 @@ class CompanyGlobalParameterApi {
   Future<Response<void>> tepsalesV1CompanyglobalparametersIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '0ed5061e-9286-4fab-92bf-7b4e6333be3e',
+    String? xCsrfToken = 'a208e845-59b5-40e6-8c69-fd14cca6ca32',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -293,7 +293,7 @@ class CompanyGlobalParameterApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '8403924f-a11d-4735-b6ff-838c86e9ea21',
+    String? xCsrfToken = 'f5de8405-66a9-4d53-af7e-a58508136d95',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -374,7 +374,7 @@ class CompanyGlobalParameterApi {
   Future<Response<void>> tepsalesV1CompanyglobalparametersIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'f23834b1-a4e4-4ed6-899b-b1e8d67d9cb6',
+    String? xCsrfToken = '1b7654b9-15f5-4d69-a31b-04d2501d2339',
     PutCompanyGlobalParameterRequest? putCompanyGlobalParameterRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -461,7 +461,7 @@ class CompanyGlobalParameterApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '08d12214-8b74-4655-a835-70306e6d0d7a',
+    String? xCsrfToken = '0b4689ce-c4ce-4681-823d-3aa78bd2b63f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -556,7 +556,7 @@ class CompanyGlobalParameterApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostCompanyGlobalParameterResponse>> tepsalesV1CompanyglobalparametersPost({ 
     String? xApiKey,
-    String? xCsrfToken = '838aa138-38c3-4ed6-8b08-cff7a8c4afa0',
+    String? xCsrfToken = '80209394-febd-4a4a-930c-b3e0ef2d12d4',
     PostCompanyGlobalParameterRequest? postCompanyGlobalParameterRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

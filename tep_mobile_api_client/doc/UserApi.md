@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**tepsalesV1UsersIdPatch**](UserApi.md#tepsalesv1usersidpatch) | **PATCH** /tepsales/v1/users/{id} | Update part of User
 [**tepsalesV1UsersIdPut**](UserApi.md#tepsalesv1usersidput) | **PUT** /tepsales/v1/users/{id} | Update User
 [**tepsalesV1UsersPagedGet**](UserApi.md#tepsalesv1userspagedget) | **GET** /tepsales/v1/users/paged | Get All User by filter with pagination
+[**tepsalesV1UsersPhotoUploadPost**](UserApi.md#tepsalesv1usersphotouploadpost) | **POST** /tepsales/v1/users/photo/upload | Create User
 [**tepsalesV1UsersPost**](UserApi.md#tepsalesv1userspost) | **POST** /tepsales/v1/users | Create User
 [**tepsalesV1UsersPushtokenPost**](UserApi.md#tepsalesv1userspushtokenpost) | **POST** /tepsales/v1/users/pushtoken | Add User Push Token
 [**tepsalesV1UsersResetPasswordPost**](UserApi.md#tepsalesv1usersresetpasswordpost) | **POST** /tepsales/v1/users/reset_password | Create User
@@ -56,7 +57,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '25aa9bfe-8bc6-4d91-b3b5-5b8e1fbd2e08']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'e772366b-d56a-411b-943c-4e030b95cbc4']
 
 ### Return type
 
@@ -103,7 +104,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6b19377d-7d23-4e13-b606-c6c1d749ec90']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '4b3b2ea8-2b9b-48b1-873f-44fbabee52a5']
 
 ### Return type
 
@@ -168,7 +169,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'aa77e268-c692-4b5b-b772-7d032c1ab6a5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f6ff8341-42c3-4c1b-8814-735a671b70a5']
 
 ### Return type
 
@@ -216,7 +217,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0cbcef50-0c3b-40a8-814b-6a4371eb5b9e']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '603eb8ee-3e48-4ef1-bccb-e0ee8a47a996']
  **postUserForceChangePasswordRequest** | [**PostUserForceChangePasswordRequest**](PostUserForceChangePasswordRequest.md)| Force Change Password | [optional] 
 
 ### Return type
@@ -265,7 +266,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '633ccb77-c56f-4f41-9fe8-d06d17dc958d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '62e15d5d-024a-477c-bb0c-4060a848404a']
 
 ### Return type
 
@@ -317,7 +318,7 @@ Name | Type | Description  | Notes
  **id** | **String**| User id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c6830b89-d79c-41e8-a568-cc482243d3d1']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '47520b14-494d-42d7-a4f5-add48e801577']
 
 ### Return type
 
@@ -366,7 +367,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '08882333-e8d1-45f7-b860-b9cdb938e91d']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '49353da2-5a95-469e-835a-1e52cee3f129']
  **putUserRequest** | [**PutUserRequest**](PutUserRequest.md)| User to update | [optional] 
 
 ### Return type
@@ -434,7 +435,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dc388da9-ca2c-4fd4-89d0-26d5f0ab6bdf']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'cfff4d15-80c9-45c9-9a6e-5908a7c5b254']
 
 ### Return type
 
@@ -448,6 +449,63 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **tepsalesV1UsersPhotoUploadPost**
+> BuiltList<String> tepsalesV1UsersPhotoUploadPost(xApiKey, xCsrfToken, contentType, contentDisposition, length, name, fileName)
+
+Create User
+
+### Example
+```dart
+import 'package:tep_mobile_api_client/api.dart';
+// TODO Configure API key authorization: Bearer
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('Bearer').apiKeyPrefix = 'Bearer';
+
+final api = TepMobileApiClient().getUserApi();
+final String xApiKey = xApiKey_example; // String | Your Api Key
+final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
+final String contentType = contentType_example; // String | 
+final String contentDisposition = contentDisposition_example; // String | 
+final int length = 789; // int | 
+final String name = name_example; // String | 
+final String fileName = fileName_example; // String | 
+
+try {
+    final response = api.tepsalesV1UsersPhotoUploadPost(xApiKey, xCsrfToken, contentType, contentDisposition, length, name, fileName);
+    print(response);
+} catch on DioError (e) {
+    print('Exception when calling UserApi->tepsalesV1UsersPhotoUploadPost: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xApiKey** | **String**| Your Api Key | [optional] 
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7057319f-6db3-44d7-a223-3b9376f9a4cf']
+ **contentType** | **String**|  | [optional] 
+ **contentDisposition** | **String**|  | [optional] 
+ **length** | **int**|  | [optional] 
+ **name** | **String**|  | [optional] 
+ **fileName** | **String**|  | [optional] 
+
+### Return type
+
+**BuiltList&lt;String&gt;**
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -482,7 +540,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '97858910-2420-4144-ba42-d8d010fa19d1']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ad9974ed-548e-4f93-9b44-5fd1d2ff924a']
  **postUserRequest** | [**PostUserRequest**](PostUserRequest.md)| User to create | [optional] 
 
 ### Return type
@@ -530,7 +588,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '890a4bef-1c62-48f1-99fe-10ffd50fcc6c']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6be08f6a-7473-45e5-b10e-e8144308d64b']
  **postUserPushTokenRequest** | [**PostUserPushTokenRequest**](PostUserPushTokenRequest.md)| FCM Token | [optional] 
 
 ### Return type
@@ -579,7 +637,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '45f1a632-f248-4930-b9f5-3882e46249f5']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd35c4763-e22d-4a8a-90ba-48166a3e2f72']
  **postUserResetPassword** | [**PostUserResetPassword**](PostUserResetPassword.md)| Reset Password | [optional] 
 
 ### Return type
@@ -628,7 +686,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2c65c71e-e6a0-4d4d-9a86-c9bf4da494cf']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f7a9bedc-96b8-4a7c-9408-aa11c53334fa']
  **postUserSignInRequest** | [**PostUserSignInRequest**](PostUserSignInRequest.md)| User to create | [optional] 
 
 ### Return type
@@ -677,7 +735,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '73bf33b8-2e5f-49ec-bc0d-28d8fc06dfbb']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '6cecda15-66a1-4c7e-a117-9cd82fcfd594']
  **postUserRequest** | [**PostUserRequest**](PostUserRequest.md)| User to create | [optional] 
 
 ### Return type

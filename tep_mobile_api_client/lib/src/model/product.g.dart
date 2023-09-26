@@ -22,6 +22,8 @@ class _$Product extends Product {
   @override
   final String? companyId;
   @override
+  final String? ownerId;
+  @override
   final String? productGroupId;
   @override
   final String? productLineId;
@@ -53,6 +55,7 @@ class _$Product extends Product {
       this.userUpdated,
       this.version,
       this.companyId,
+      this.ownerId,
       this.productGroupId,
       this.productLineId,
       this.weightkilograms,
@@ -83,6 +86,7 @@ class _$Product extends Product {
         userUpdated == other.userUpdated &&
         version == other.version &&
         companyId == other.companyId &&
+        ownerId == other.ownerId &&
         productGroupId == other.productGroupId &&
         productLineId == other.productLineId &&
         weightkilograms == other.weightkilograms &&
@@ -105,6 +109,7 @@ class _$Product extends Product {
     _$hash = $jc(_$hash, userUpdated.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jc(_$hash, companyId.hashCode);
+    _$hash = $jc(_$hash, ownerId.hashCode);
     _$hash = $jc(_$hash, productGroupId.hashCode);
     _$hash = $jc(_$hash, productLineId.hashCode);
     _$hash = $jc(_$hash, weightkilograms.hashCode);
@@ -129,6 +134,7 @@ class _$Product extends Product {
           ..add('userUpdated', userUpdated)
           ..add('version', version)
           ..add('companyId', companyId)
+          ..add('ownerId', ownerId)
           ..add('productGroupId', productGroupId)
           ..add('productLineId', productLineId)
           ..add('weightkilograms', weightkilograms)
@@ -173,6 +179,10 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
   String? _companyId;
   String? get companyId => _$this._companyId;
   set companyId(String? companyId) => _$this._companyId = companyId;
+
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(String? ownerId) => _$this._ownerId = ownerId;
 
   String? _productGroupId;
   String? get productGroupId => _$this._productGroupId;
@@ -235,6 +245,7 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
       _userUpdated = $v.userUpdated;
       _version = $v.version;
       _companyId = $v.companyId;
+      _ownerId = $v.ownerId;
       _productGroupId = $v.productGroupId;
       _productLineId = $v.productLineId;
       _weightkilograms = $v.weightkilograms;
@@ -276,6 +287,7 @@ class ProductBuilder implements Builder<Product, ProductBuilder> {
               userUpdated: userUpdated,
               version: version,
               companyId: companyId,
+              ownerId: ownerId,
               productGroupId: productGroupId,
               productLineId: productLineId,
               weightkilograms: weightkilograms,

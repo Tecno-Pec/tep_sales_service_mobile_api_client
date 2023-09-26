@@ -22,6 +22,8 @@ class _$Client extends Client {
   @override
   final String? companyId;
   @override
+  final String? ownerId;
+  @override
   final String? name;
   @override
   final String? document;
@@ -51,6 +53,7 @@ class _$Client extends Client {
       this.userUpdated,
       this.version,
       this.companyId,
+      this.ownerId,
       this.name,
       this.document,
       this.phone,
@@ -80,6 +83,7 @@ class _$Client extends Client {
         userUpdated == other.userUpdated &&
         version == other.version &&
         companyId == other.companyId &&
+        ownerId == other.ownerId &&
         name == other.name &&
         document == other.document &&
         phone == other.phone &&
@@ -101,6 +105,7 @@ class _$Client extends Client {
     _$hash = $jc(_$hash, userUpdated.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jc(_$hash, companyId.hashCode);
+    _$hash = $jc(_$hash, ownerId.hashCode);
     _$hash = $jc(_$hash, name.hashCode);
     _$hash = $jc(_$hash, document.hashCode);
     _$hash = $jc(_$hash, phone.hashCode);
@@ -124,6 +129,7 @@ class _$Client extends Client {
           ..add('userUpdated', userUpdated)
           ..add('version', version)
           ..add('companyId', companyId)
+          ..add('ownerId', ownerId)
           ..add('name', name)
           ..add('document', document)
           ..add('phone', phone)
@@ -167,6 +173,10 @@ class ClientBuilder implements Builder<Client, ClientBuilder> {
   String? _companyId;
   String? get companyId => _$this._companyId;
   set companyId(String? companyId) => _$this._companyId = companyId;
+
+  String? _ownerId;
+  String? get ownerId => _$this._ownerId;
+  set ownerId(String? ownerId) => _$this._ownerId = ownerId;
 
   String? _name;
   String? get name => _$this._name;
@@ -219,6 +229,7 @@ class ClientBuilder implements Builder<Client, ClientBuilder> {
       _userUpdated = $v.userUpdated;
       _version = $v.version;
       _companyId = $v.companyId;
+      _ownerId = $v.ownerId;
       _name = $v.name;
       _document = $v.document;
       _phone = $v.phone;
@@ -257,6 +268,7 @@ class ClientBuilder implements Builder<Client, ClientBuilder> {
             userUpdated: userUpdated,
             version: version,
             companyId: companyId,
+            ownerId: ownerId,
             name: name,
             document: document,
             phone: phone,

@@ -21,6 +21,7 @@ part 'address.g.dart';
 /// * [userUpdated] 
 /// * [version] 
 /// * [companyId] 
+/// * [ownerId] 
 /// * [parentId] 
 /// * [name] 
 /// * [zipCode] 
@@ -58,6 +59,9 @@ abstract class Address implements Built<Address, AddressBuilder> {
 
   @BuiltValueField(wireName: r'companyId')
   String? get companyId;
+
+  @BuiltValueField(wireName: r'ownerId')
+  String? get ownerId;
 
   @BuiltValueField(wireName: r'parentId')
   String? get parentId;
@@ -175,6 +179,13 @@ class _$AddressSerializer implements PrimitiveSerializer<Address> {
       yield r'companyId';
       yield serializers.serialize(
         object.companyId,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.ownerId != null) {
+      yield r'ownerId';
+      yield serializers.serialize(
+        object.ownerId,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -359,6 +370,14 @@ class _$AddressSerializer implements PrimitiveSerializer<Address> {
           ) as String?;
           if (valueDes == null) continue;
           result.companyId = valueDes;
+          break;
+        case r'ownerId':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.ownerId = valueDes;
           break;
         case r'parentId':
           final valueDes = serializers.deserialize(

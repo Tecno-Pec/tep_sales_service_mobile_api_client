@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| FreightConversionFactor id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7569145d-9d4e-4df1-a902-b98a3c47f1ad']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7dce08ea-fc95-4253-b9e5-8211ed637e9d']
 
 ### Return type
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '031c303e-bb2f-4737-afc0-4f7c4b494e00']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0aac4e73-5e42-4eb3-a03a-d64ae3449e4b']
 
 ### Return type
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| FreightConversionFactor id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'eff8c1b4-c061-4229-81c3-4856b9969cf4']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'bafa5673-3edd-48a7-9ac3-3eacbc315a91']
 
 ### Return type
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
  **id** | **String**| FreightConversionFactor id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'fe74e622-2d6b-47c7-8e4b-83363d1c7993']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ab942045-1f10-40bf-a399-e294154889f4']
 
 ### Return type
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| FreightConversionFactor Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2d16ceb0-801b-4db6-bf80-2582162cb2dd']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2ba80a0b-e170-418c-b991-82c431a2a224']
  **putFreightConversionFactorRequest** | [**PutFreightConversionFactorRequest**](PutFreightConversionFactorRequest.md)| FreightConversionFactor to update | [optional] 
 
 ### Return type
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '26770553-2d59-4d63-bb9f-17e621cfdbf2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ae9b77a1-52d8-427f-81d4-2f3ba1f82897']
 
 ### Return type
 
@@ -368,7 +368,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f9404ba0-c421-4165-beb1-78159d6bbc18']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '73031e43-31aa-4eec-8e1d-e6a685a06ece']
  **postFreightConversionFactorRequest** | [**PostFreightConversionFactorRequest**](PostFreightConversionFactorRequest.md)| FreightConversionFactor to create | [optional] 
 
 ### Return type

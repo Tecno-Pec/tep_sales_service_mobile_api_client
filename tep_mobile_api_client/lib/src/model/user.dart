@@ -22,7 +22,9 @@ part 'user.g.dart';
 /// * [userUpdated] 
 /// * [version] 
 /// * [companyId] 
+/// * [ownerId] 
 /// * [name] 
+/// * [photo] 
 /// * [documentId] 
 /// * [phone] 
 /// * [password] 
@@ -60,8 +62,14 @@ abstract class User implements Built<User, UserBuilder> {
   @BuiltValueField(wireName: r'companyId')
   String? get companyId;
 
+  @BuiltValueField(wireName: r'ownerId')
+  String? get ownerId;
+
   @BuiltValueField(wireName: r'name')
   String? get name;
+
+  @BuiltValueField(wireName: r'photo')
+  String? get photo;
 
   @BuiltValueField(wireName: r'documentId')
   String? get documentId;
@@ -178,10 +186,24 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
         specifiedType: const FullType.nullable(String),
       );
     }
+    if (object.ownerId != null) {
+      yield r'ownerId';
+      yield serializers.serialize(
+        object.ownerId,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
     if (object.name != null) {
       yield r'name';
       yield serializers.serialize(
         object.name,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.photo != null) {
+      yield r'photo';
+      yield serializers.serialize(
+        object.photo,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -360,6 +382,14 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
           if (valueDes == null) continue;
           result.companyId = valueDes;
           break;
+        case r'ownerId':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.ownerId = valueDes;
+          break;
         case r'name':
           final valueDes = serializers.deserialize(
             value,
@@ -367,6 +397,14 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
           ) as String?;
           if (valueDes == null) continue;
           result.name = valueDes;
+          break;
+        case r'photo':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.photo = valueDes;
           break;
         case r'documentId':
           final valueDes = serializers.deserialize(

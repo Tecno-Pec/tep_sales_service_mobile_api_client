@@ -25,6 +25,8 @@ class _$PostClientContactCalendarResponse
   @override
   final String? reasonVisitId;
   @override
+  final String? reasonVisitDescription;
+  @override
   final String? clientName;
   @override
   final String? salesmanId;
@@ -34,6 +36,10 @@ class _$PostClientContactCalendarResponse
   final String? summary;
   @override
   final Address? address;
+  @override
+  final ClientContactCalendarStatus? status;
+  @override
+  final bool? allDay;
 
   factory _$PostClientContactCalendarResponse(
           [void Function(PostClientContactCalendarResponseBuilder)? updates]) =>
@@ -49,11 +55,14 @@ class _$PostClientContactCalendarResponse
       this.endDate,
       this.clientId,
       this.reasonVisitId,
+      this.reasonVisitDescription,
       this.clientName,
       this.salesmanId,
       this.salesmanName,
       this.summary,
-      this.address})
+      this.address,
+      this.status,
+      this.allDay})
       : super._();
 
   @override
@@ -77,11 +86,14 @@ class _$PostClientContactCalendarResponse
         endDate == other.endDate &&
         clientId == other.clientId &&
         reasonVisitId == other.reasonVisitId &&
+        reasonVisitDescription == other.reasonVisitDescription &&
         clientName == other.clientName &&
         salesmanId == other.salesmanId &&
         salesmanName == other.salesmanName &&
         summary == other.summary &&
-        address == other.address;
+        address == other.address &&
+        status == other.status &&
+        allDay == other.allDay;
   }
 
   @override
@@ -95,11 +107,14 @@ class _$PostClientContactCalendarResponse
     _$hash = $jc(_$hash, endDate.hashCode);
     _$hash = $jc(_$hash, clientId.hashCode);
     _$hash = $jc(_$hash, reasonVisitId.hashCode);
+    _$hash = $jc(_$hash, reasonVisitDescription.hashCode);
     _$hash = $jc(_$hash, clientName.hashCode);
     _$hash = $jc(_$hash, salesmanId.hashCode);
     _$hash = $jc(_$hash, salesmanName.hashCode);
     _$hash = $jc(_$hash, summary.hashCode);
     _$hash = $jc(_$hash, address.hashCode);
+    _$hash = $jc(_$hash, status.hashCode);
+    _$hash = $jc(_$hash, allDay.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -115,11 +130,14 @@ class _$PostClientContactCalendarResponse
           ..add('endDate', endDate)
           ..add('clientId', clientId)
           ..add('reasonVisitId', reasonVisitId)
+          ..add('reasonVisitDescription', reasonVisitDescription)
           ..add('clientName', clientName)
           ..add('salesmanId', salesmanId)
           ..add('salesmanName', salesmanName)
           ..add('summary', summary)
-          ..add('address', address))
+          ..add('address', address)
+          ..add('status', status)
+          ..add('allDay', allDay))
         .toString();
   }
 }
@@ -163,6 +181,11 @@ class PostClientContactCalendarResponseBuilder
   set reasonVisitId(String? reasonVisitId) =>
       _$this._reasonVisitId = reasonVisitId;
 
+  String? _reasonVisitDescription;
+  String? get reasonVisitDescription => _$this._reasonVisitDescription;
+  set reasonVisitDescription(String? reasonVisitDescription) =>
+      _$this._reasonVisitDescription = reasonVisitDescription;
+
   String? _clientName;
   String? get clientName => _$this._clientName;
   set clientName(String? clientName) => _$this._clientName = clientName;
@@ -183,6 +206,14 @@ class PostClientContactCalendarResponseBuilder
   AddressBuilder get address => _$this._address ??= new AddressBuilder();
   set address(AddressBuilder? address) => _$this._address = address;
 
+  ClientContactCalendarStatus? _status;
+  ClientContactCalendarStatus? get status => _$this._status;
+  set status(ClientContactCalendarStatus? status) => _$this._status = status;
+
+  bool? _allDay;
+  bool? get allDay => _$this._allDay;
+  set allDay(bool? allDay) => _$this._allDay = allDay;
+
   PostClientContactCalendarResponseBuilder() {
     PostClientContactCalendarResponse._defaults(this);
   }
@@ -198,11 +229,14 @@ class PostClientContactCalendarResponseBuilder
       _endDate = $v.endDate;
       _clientId = $v.clientId;
       _reasonVisitId = $v.reasonVisitId;
+      _reasonVisitDescription = $v.reasonVisitDescription;
       _clientName = $v.clientName;
       _salesmanId = $v.salesmanId;
       _salesmanName = $v.salesmanName;
       _summary = $v.summary;
       _address = $v.address?.toBuilder();
+      _status = $v.status;
+      _allDay = $v.allDay;
       _$v = null;
     }
     return this;
@@ -236,11 +270,14 @@ class PostClientContactCalendarResponseBuilder
               endDate: endDate,
               clientId: clientId,
               reasonVisitId: reasonVisitId,
+              reasonVisitDescription: reasonVisitDescription,
               clientName: clientName,
               salesmanId: salesmanId,
               salesmanName: salesmanName,
               summary: summary,
-              address: _address?.build());
+              address: _address?.build(),
+              status: status,
+              allDay: allDay);
     } catch (_) {
       late String _$failedField;
       try {

@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ClientContactCalendar id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd2e075a8-e28e-425b-9384-a4a1ff34d77a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a01059e5-94cf-4176-a85d-3646e571ade3']
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1ClientcontactcalendarAllGet**
-> BuiltList<GetAllClientContactCalendarResponse> tepsalesV1ClientcontactcalendarAllGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, limit, sort, xApiKey, xCsrfToken)
+> BuiltList<GetAllClientContactCalendarResponse> tepsalesV1ClientcontactcalendarAllGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, status, allDay, limit, sort, xApiKey, xCsrfToken)
 
 Get All ClientContactCalendar by filter
 
@@ -88,13 +88,15 @@ final String clientName = clientName_example; // String |
 final String salesmanId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 final String salesmanName = salesmanName_example; // String | 
 final String summary = summary_example; // String | 
+final ClientContactCalendarStatus status = ; // ClientContactCalendarStatus | 
+final bool allDay = true; // bool | 
 final int limit = 56; // int | limit
 final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
 final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1ClientcontactcalendarAllGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, limit, sort, xApiKey, xCsrfToken);
+    final response = api.tepsalesV1ClientcontactcalendarAllGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, status, allDay, limit, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ClientContactCalendarApi->tepsalesV1ClientcontactcalendarAllGet: $e\n');
@@ -112,10 +114,12 @@ Name | Type | Description  | Notes
  **salesmanId** | **String**|  | [optional] 
  **salesmanName** | **String**|  | [optional] 
  **summary** | **String**|  | [optional] 
+ **status** | [**ClientContactCalendarStatus**](.md)|  | [optional] 
+ **allDay** | **bool**|  | [optional] 
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'f34ff627-e1f4-497b-9db8-979c786f2ddc']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '008f6da6-8c8a-414b-b221-2bca029bc078']
 
 ### Return type
 
@@ -163,7 +167,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ClientContactCalendar id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3fdc69c4-1da7-4bab-b94e-698a5b094869']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c639fbd6-b829-4044-89d1-e4cbc8d54c97']
 
 ### Return type
 
@@ -215,7 +219,7 @@ Name | Type | Description  | Notes
  **id** | **String**| ClientContactCalendar id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '06f217ca-3f6f-493d-b61d-abe7313334a2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'a2c3be43-e491-462e-abf1-60e28305e058']
 
 ### Return type
 
@@ -264,7 +268,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| ClientContactCalendar Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9dfb396e-5719-4800-b9ab-ea6548d3ccce']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'dbc7612b-f03a-478e-9cc6-a144cf727ff0']
  **putClientContactCalendarRequest** | [**PutClientContactCalendarRequest**](PutClientContactCalendarRequest.md)| ClientContactCalendar to update | [optional] 
 
 ### Return type
@@ -283,7 +287,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **tepsalesV1ClientcontactcalendarPagedGet**
-> GetAllPagedClientContactCalendarResponse tepsalesV1ClientcontactcalendarPagedGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, page, pageSize, sort, xApiKey, xCsrfToken)
+> GetAllPagedClientContactCalendarResponse tepsalesV1ClientcontactcalendarPagedGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, status, allDay, page, pageSize, sort, xApiKey, xCsrfToken)
 
 Get All ClientContactCalendar by filter with pagination
 
@@ -303,6 +307,8 @@ final String clientName = clientName_example; // String |
 final String salesmanId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 final String salesmanName = salesmanName_example; // String | 
 final String summary = summary_example; // String | 
+final ClientContactCalendarStatus status = ; // ClientContactCalendarStatus | 
+final bool allDay = true; // bool | 
 final int page = 56; // int | 
 final int pageSize = 56; // int | 
 final String sort = sort_example; // String | Sorting atributes, sample: id.desc,name.asc
@@ -310,7 +316,7 @@ final String xApiKey = xApiKey_example; // String | Your Api Key
 final String xCsrfToken = xCsrfToken_example; // String | CSRF Protection
 
 try {
-    final response = api.tepsalesV1ClientcontactcalendarPagedGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, page, pageSize, sort, xApiKey, xCsrfToken);
+    final response = api.tepsalesV1ClientcontactcalendarPagedGet(startDate, endDate, clientId, clientName, salesmanId, salesmanName, summary, status, allDay, page, pageSize, sort, xApiKey, xCsrfToken);
     print(response);
 } catch on DioError (e) {
     print('Exception when calling ClientContactCalendarApi->tepsalesV1ClientcontactcalendarPagedGet: $e\n');
@@ -328,11 +334,13 @@ Name | Type | Description  | Notes
  **salesmanId** | **String**|  | [optional] 
  **salesmanName** | **String**|  | [optional] 
  **summary** | **String**|  | [optional] 
+ **status** | [**ClientContactCalendarStatus**](.md)|  | [optional] 
+ **allDay** | **bool**|  | [optional] 
  **page** | **int**|  | [optional] 
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2da7e0d0-6968-43ef-89ba-7df571216a06']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd45fcb77-c020-4fa6-a5fb-9912e14c01ed']
 
 ### Return type
 
@@ -380,7 +388,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '27a96468-8218-475b-9832-3af598c1bc64']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '7a9f712f-3938-43a2-9d86-fb5f493f9207']
  **postClientContactCalendarRequest** | [**PostClientContactCalendarRequest**](PostClientContactCalendarRequest.md)| ClientContactCalendar to create | [optional] 
 
 ### Return type
