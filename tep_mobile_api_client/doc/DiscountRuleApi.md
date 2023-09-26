@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DiscountRule id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8bd352d1-eead-4baa-b2a2-9fec25265d2a']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '98bfc6da-d3c1-4d7a-9e56-86caf5f6fc76']
 
 ### Return type
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
  **limit** | **int**| limit | [optional] [default to 100]
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '715a2d04-be0d-4946-923b-aa1aa3e51e58']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'aa891cf6-a8fa-4df5-8e58-d943e3e1e8fe']
 
 ### Return type
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DiscountRule id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '936c9cec-c8ba-4fbc-993f-a8212f67e7d8']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '53f338e5-cb71-4a8a-9ca2-1bab34669192']
 
 ### Return type
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
  **id** | **String**| DiscountRule id | 
  **operation** | [**BuiltList&lt;Operation&gt;**](Operation.md)| Atributes values | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '3f625222-8cfd-4f05-82e5-383fe128c7b2']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'c4ca1751-3b88-4d47-b5c0-89a85010a326']
 
 ### Return type
 
@@ -262,7 +262,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| DiscountRule Id | 
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '2df33c5f-8238-4f6f-92c0-b71136d70db8']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '65f18153-568d-4d14-8917-dbdfcdb4529d']
  **putDiscountRuleRequest** | [**PutDiscountRuleRequest**](PutDiscountRuleRequest.md)| DiscountRule to update | [optional] 
 
 ### Return type
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'Id.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9b6e1e43-b4e4-455a-acda-0fbf1a3b354f']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'ece6c473-083f-4214-8e9e-92b1e7353aa8']
 
 ### Return type
 
@@ -376,7 +376,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '8bef375e-8797-4c25-b725-af8e322295e6']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '0e43182e-f7e6-4d1f-b30d-abaaaef7fc9b']
  **postDiscountRuleRequest** | [**PostDiscountRuleRequest**](PostDiscountRuleRequest.md)| DiscountRule to create | [optional] 
 
 ### Return type

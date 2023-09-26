@@ -19,6 +19,7 @@ part 'get_all_user_response.g.dart';
 /// * [id] 
 /// * [name] 
 /// * [documentId] 
+/// * [photo] 
 /// * [phone] 
 /// * [email] 
 /// * [isActive] 
@@ -51,6 +52,9 @@ abstract class GetAllUserResponse implements Built<GetAllUserResponse, GetAllUse
 
   @BuiltValueField(wireName: r'documentId')
   String? get documentId;
+
+  @BuiltValueField(wireName: r'photo')
+  String? get photo;
 
   @BuiltValueField(wireName: r'phone')
   String? get phone;
@@ -152,6 +156,13 @@ class _$GetAllUserResponseSerializer implements PrimitiveSerializer<GetAllUserRe
       yield r'documentId';
       yield serializers.serialize(
         object.documentId,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.photo != null) {
+      yield r'photo';
+      yield serializers.serialize(
+        object.photo,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -302,6 +313,14 @@ class _$GetAllUserResponseSerializer implements PrimitiveSerializer<GetAllUserRe
           ) as String?;
           if (valueDes == null) continue;
           result.documentId = valueDes;
+          break;
+        case r'photo':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.photo = valueDes;
           break;
         case r'phone':
           final valueDes = serializers.deserialize(

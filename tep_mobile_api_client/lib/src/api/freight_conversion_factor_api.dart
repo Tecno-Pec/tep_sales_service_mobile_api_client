@@ -45,7 +45,7 @@ class FreightConversionFactorApi {
   Future<Response<GetAllFreightConversionFactorResponse>> getByIdFreightConversionFactor({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '7dce08ea-fc95-4253-b9e5-8211ed637e9d',
+    String? xCsrfToken = '29860c28-781f-4c41-bfb6-aa03a9f8d0be',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -143,7 +143,7 @@ class FreightConversionFactorApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '0aac4e73-5e42-4eb3-a03a-d64ae3449e4b',
+    String? xCsrfToken = 'cff4aef9-3101-4acb-aea4-ed04bd4025a6',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -241,7 +241,7 @@ class FreightConversionFactorApi {
   Future<Response<void>> tepsalesV1FreightConversionFactorsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'bafa5673-3edd-48a7-9ac3-3eacbc315a91',
+    String? xCsrfToken = '161854ad-e755-4af7-be0c-f9d4b9c90949',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -303,7 +303,7 @@ class FreightConversionFactorApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'ab942045-1f10-40bf-a399-e294154889f4',
+    String? xCsrfToken = '566bd413-101a-4e57-ba2d-d8c3b517d018',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -384,7 +384,7 @@ class FreightConversionFactorApi {
   Future<Response<void>> tepsalesV1FreightConversionFactorsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '2ba80a0b-e170-418c-b991-82c431a2a224',
+    String? xCsrfToken = 'be4b6746-6f31-447b-9b24-6ece00b8f082',
     PutFreightConversionFactorRequest? putFreightConversionFactorRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -477,7 +477,7 @@ class FreightConversionFactorApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'ae9b77a1-52d8-427f-81d4-2f3ba1f82897',
+    String? xCsrfToken = 'b6fa7b55-fed6-43fb-9a46-5c221eaa9d2d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -575,7 +575,7 @@ class FreightConversionFactorApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostFreightConversionFactorResponse>> tepsalesV1FreightConversionFactorsPost({ 
     String? xApiKey,
-    String? xCsrfToken = '73031e43-31aa-4eec-8e1d-e6a685a06ece',
+    String? xCsrfToken = 'dd471963-4916-413c-90e8-61555b8da81b',
     PostFreightConversionFactorRequest? postFreightConversionFactorRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

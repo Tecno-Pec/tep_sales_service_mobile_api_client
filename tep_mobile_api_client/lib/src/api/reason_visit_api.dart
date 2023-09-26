@@ -44,7 +44,7 @@ class ReasonVisitApi {
   Future<Response<GetAllReasonVisitResponse>> getByIdReasonVisit({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'c61cf3b3-cf8e-4b0c-a3fd-1af7740a8745',
+    String? xCsrfToken = '956fb9a1-23c0-4df5-b5f7-683035238aa2',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -136,7 +136,7 @@ class ReasonVisitApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '3e438597-c25c-4f78-97fa-ab0bf3d9a848',
+    String? xCsrfToken = '5d676b07-cce3-4017-9d00-a2d819d6f134',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -231,7 +231,7 @@ class ReasonVisitApi {
   Future<Response<void>> tepsalesV1ReasonsvisitsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '2f38e2ce-2d16-4e71-b5c3-99c9832f164a',
+    String? xCsrfToken = '0e4a4390-333c-4ceb-85eb-7738074d6a59',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -293,7 +293,7 @@ class ReasonVisitApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'c40398f0-a0e8-4a62-a614-f9fb479fbe4e',
+    String? xCsrfToken = '678ab198-8443-438c-8d40-f771a9adee04',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -374,7 +374,7 @@ class ReasonVisitApi {
   Future<Response<void>> tepsalesV1ReasonsvisitsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'fd1d9060-815d-413c-bd6d-9a61a770a499',
+    String? xCsrfToken = '45e924a8-2a95-4a42-972f-6ca061facddf',
     PutReasonVisitRequest? putReasonVisitRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -461,7 +461,7 @@ class ReasonVisitApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'c4e45b68-f652-4001-94c8-947540fb62cc',
+    String? xCsrfToken = '6b5f64a8-b46a-4552-a417-4beab7b4ee1d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -556,7 +556,7 @@ class ReasonVisitApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostReasonVisitResponse>> tepsalesV1ReasonsvisitsPost({ 
     String? xApiKey,
-    String? xCsrfToken = '865d0c15-31e9-41f8-8721-cbfbc153c406',
+    String? xCsrfToken = '023ee6a1-c2f9-4153-9c4e-956698e12714',
     PostReasonVisitRequest? postReasonVisitRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

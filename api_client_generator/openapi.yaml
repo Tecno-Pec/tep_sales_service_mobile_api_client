@@ -35,7 +35,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 91d3fb8d-c692-4239-87e7-16278ab20ad7
+            default: d73d2230-f3e1-4521-b627-f72d8662dfd3
       responses:
         '204':
           description: >-
@@ -92,7 +92,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 8b3b191e-237b-46e2-82e4-2b347ec8f8a5
+            default: 3e8d0ae3-d6d9-4f91-ab26-9f056f1ca4bf
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -150,7 +150,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 688000e8-a7e4-435a-9bd0-27fef7709553
+            default: d0b39983-5db0-4597-a969-a61ef130be60
       requestBody:
         description: Atributes values
         content:
@@ -231,7 +231,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a605c308-bec7-4728-a0f4-1ff39e56187c
+            default: 22d24e7f-36fe-451f-9fee-0235893b7e5e
       requestBody:
         description: Address to update
         content:
@@ -344,7 +344,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 00b85f7d-1d91-405c-aa7c-3afbcdcc77f5
+            default: 741e542f-65d9-4c73-9723-4198914965ed
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -432,7 +432,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 709d49db-5b70-4766-a2bb-29255ab72646
+            default: d67deac1-ae89-46e8-a162-8c516d993857
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -474,7 +474,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 8b24f984-c9ff-4013-aba7-cd361fc31aa9
+            default: 2c2e76ca-6f7e-4fd0-ae5e-21f76d417b26
       requestBody:
         description: Address to create
         content:
@@ -600,7 +600,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 03d36a98-07a4-4323-81f4-46d4f8de8e46
+            default: 9e4939b4-177e-4296-9efa-44c1b2540f0f
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -701,7 +701,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 797fc0c3-d884-4d9e-bd21-6563030dbfc4
+            default: d3d921df-5644-40ab-93e2-03bd0789de06
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -750,7 +750,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 0a7d4986-1c08-4016-913f-eca0a6f2b9e6
+            default: d7394757-3206-4b57-820e-cd257c617608
       responses:
         '204':
           description: >-
@@ -807,7 +807,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 55c8f925-c3de-4f91-8ccc-618f0fe054b3
+            default: fa7b9214-bfe8-4deb-8266-a3394fc16777
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -865,7 +865,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 65cb4696-5deb-4f88-bcf1-cc51cd071ff5
+            default: f7ddbf86-aa3c-4626-a9a3-329815c2ed63
       requestBody:
         description: Atributes values
         content:
@@ -946,7 +946,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: b2c0bd23-372c-4d15-9d92-2520bf5dd50b
+            default: 3a7bb4d6-faff-4663-9ace-af3b09750492
       requestBody:
         description: Client to update
         content:
@@ -1064,7 +1064,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 12e46d1f-8bf9-4f5d-ae35-d8c8fc2ea505
+            default: 2a36c7db-c0f4-498c-adc2-891892178382
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -1157,7 +1157,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 429f43fa-7635-4031-aefd-ca9ffc01bd46
+            default: e5663b2d-5a63-417c-b6f0-7cbd9661d07f
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -1199,7 +1199,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: ee7d567e-1024-4a62-921b-dc498bdb7952
+            default: e9efb61f-34d5-4647-a12d-b6fc473c8a3b
       requestBody:
         description: Client to create
         content:
@@ -1273,7 +1273,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: c639fbd6-b829-4044-89d1-e4cbc8d54c97
+            default: 7fac9b29-1d53-45d4-8f23-62d77caebe9c
       responses:
         '204':
           description: >-
@@ -1330,7 +1330,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a01059e5-94cf-4176-a85d-3646e571ade3
+            default: 80a08227-5adf-4ad8-9242-25c0ab43ed90
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -1388,7 +1388,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a2c3be43-e491-462e-abf1-60e28305e058
+            default: 1e1fead1-17ee-499f-9afa-4153c4ffd6bd
       requestBody:
         description: Atributes values
         content:
@@ -1469,7 +1469,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: dbc7612b-f03a-478e-9cc6-a144cf727ff0
+            default: fd3f9472-203c-4a50-af84-6dd8f08bc92f
       requestBody:
         description: ClientContactCalendar to update
         content:
@@ -1594,7 +1594,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 008f6da6-8c8a-414b-b221-2bca029bc078
+            default: c2393c51-1a2b-4fa2-9ab8-71aaa8f94f2c
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -1694,7 +1694,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: d45fcb77-c020-4fa6-a5fb-9912e14c01ed
+            default: 86f9cc24-0577-4c4f-994b-8bfd4319e670
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -1736,7 +1736,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 7a9f712f-3938-43a2-9d86-fb5f493f9207
+            default: 36970d54-3b95-490d-9a15-416e743ae7f1
       requestBody:
         description: ClientContactCalendar to create
         content:
@@ -1810,7 +1810,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 3283da1c-9eaa-4b5e-8e81-ae7b889f4fc6
+            default: 9f3470ed-adfb-489e-b7c6-34aba36f61dc
       responses:
         '204':
           description: >-
@@ -1867,7 +1867,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 6d589bda-cdb2-4ba4-af63-b53e6467dd84
+            default: 6439db0d-51e4-4682-9abd-e763b5ee56f0
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -1925,7 +1925,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: d3a13d31-697d-45f2-8c8b-63598a7a47d1
+            default: 83f8a3c5-7350-42bf-9760-642f663853b6
       requestBody:
         description: Atributes values
         content:
@@ -2006,7 +2006,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 77d0def5-c9c8-4472-9597-0face20a0a99
+            default: ab185ab2-768c-40df-b4b3-47cb713003cb
       requestBody:
         description: Commission to update
         content:
@@ -2109,7 +2109,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 5fac73ee-2dde-4a75-9fb9-8f62b6fdcfc6
+            default: d75eafc2-1848-4500-9e96-c70d91574297
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -2187,7 +2187,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: e6b53329-1a47-4b2e-9862-1d18e6c3c8f8
+            default: fd1548c5-2047-4bc7-a543-fee02fea0052
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -2229,7 +2229,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 60ad7a07-ae1c-45bf-93de-d8fba2728d2d
+            default: d95b4a0e-594d-4b4d-9fe3-8ab93e7d827e
       requestBody:
         description: Commission to create
         content:
@@ -2303,7 +2303,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 15fd8882-4362-49c8-96b5-354c98d38e1c
+            default: e6785be8-2122-47ed-bb38-03f84c4eddda
       responses:
         '204':
           description: >-
@@ -2360,7 +2360,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: cb23c021-1843-4712-bb93-9258d9f79759
+            default: 24223fc5-008f-4f78-85d5-5aee93af3f6b
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -2418,7 +2418,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: fd83997a-ef51-4d83-833c-404b08929de6
+            default: 429dee03-daea-41f4-846f-fa02c7bf5305
       requestBody:
         description: Atributes values
         content:
@@ -2499,7 +2499,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 9dfbce47-a2b0-428c-8929-c1dcff486f16
+            default: 9895358e-6a9d-42df-95ab-951495e9af6f
       requestBody:
         description: Company to update
         content:
@@ -2592,7 +2592,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: e02083f8-5856-4e03-8e15-fd7ca2fadd54
+            default: edd04b8e-ab5f-4d3e-afd4-9822b60a9590
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -2660,7 +2660,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 8b4b2ad4-79bd-44e0-b3d1-22bfaa31f6ab
+            default: 0968fe2e-249b-47db-b1bb-268a64e503f5
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -2702,7 +2702,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: c23421df-a307-42e1-9e50-73dc8d5c709a
+            default: f854dd3e-58c4-4162-8b68-8259e133d292
       requestBody:
         description: Company to create
         content:
@@ -2776,7 +2776,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a208e845-59b5-40e6-8c69-fd14cca6ca32
+            default: 46e13ca9-d7ac-42d4-bb43-c4ebde03f75f
       responses:
         '204':
           description: >-
@@ -2833,7 +2833,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: cd6794a8-4ee1-419c-8983-d8fc2119efbf
+            default: 62f5d32b-94a1-47b9-ad67-21c6949d7e59
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -2891,7 +2891,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: f5de8405-66a9-4d53-af7e-a58508136d95
+            default: 2e0bd190-2323-43a2-802b-a184f4ecfeeb
       requestBody:
         description: Atributes values
         content:
@@ -2972,7 +2972,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 1b7654b9-15f5-4d69-a31b-04d2501d2339
+            default: 93981003-e819-4377-bbfe-015c061e2939
       requestBody:
         description: CompanyGlobalParameter to update
         content:
@@ -3061,7 +3061,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 9b4a6555-fc36-483e-8412-cd84a271e0e2
+            default: 690a0b68-9d3b-4d67-94f5-85f5b5175770
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -3125,7 +3125,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 0b4689ce-c4ce-4681-823d-3aa78bd2b63f
+            default: 813a3317-15a5-48f5-ad63-04650ee2d3cc
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -3167,7 +3167,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 80209394-febd-4a4a-930c-b3e0ef2d12d4
+            default: 7be3278e-7149-428b-b076-a90d42a4d929
       requestBody:
         description: CompanyGlobalParameter to create
         content:
@@ -3234,7 +3234,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: b314a51d-e917-42f1-8bc4-74d98112b5de
+            default: bda8d6d1-4d83-4c58-b73e-de412b829fe2
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -3276,7 +3276,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 5f820c84-b1d7-44ef-a163-0aeed2a8f545
+            default: 8835315d-513d-4da7-b6b6-a8af22f7acb9
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -3318,7 +3318,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 0f9236a9-6b56-447a-a957-a077fd03fc16
+            default: 337df472-abef-42f7-9f7c-783db0434d9b
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -3360,7 +3360,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 43133f8f-7e29-4efd-994f-6c0d2c9c5c8b
+            default: b894a2f7-acf4-47fa-9c9d-d04e9732b41f
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -3402,7 +3402,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 8f132b4e-5b3c-4a1f-a0dd-a186ec24d5e3
+            default: fd93fe41-de90-472f-a177-023831ef6a30
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -3451,7 +3451,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 936c9cec-c8ba-4fbc-993f-a8212f67e7d8
+            default: 53f338e5-cb71-4a8a-9ca2-1bab34669192
       responses:
         '204':
           description: >-
@@ -3508,7 +3508,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 8bd352d1-eead-4baa-b2a2-9fec25265d2a
+            default: 98bfc6da-d3c1-4d7a-9e56-86caf5f6fc76
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -3566,7 +3566,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 3f625222-8cfd-4f05-82e5-383fe128c7b2
+            default: c4ca1751-3b88-4d47-b5c0-89a85010a326
       requestBody:
         description: Atributes values
         content:
@@ -3647,7 +3647,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 2df33c5f-8238-4f6f-92c0-b71136d70db8
+            default: 65f18153-568d-4d14-8917-dbdfcdb4529d
       requestBody:
         description: DiscountRule to update
         content:
@@ -3757,7 +3757,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 715a2d04-be0d-4946-923b-aa1aa3e51e58
+            default: aa891cf6-a8fa-4df5-8e58-d943e3e1e8fe
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -3842,7 +3842,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 9b6e1e43-b4e4-455a-acda-0fbf1a3b354f
+            default: ece6c473-083f-4214-8e9e-92b1e7353aa8
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -3884,7 +3884,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 8bef375e-8797-4c25-b725-af8e322295e6
+            default: 0e43182e-f7e6-4d1f-b30d-abaaaef7fc9b
       requestBody:
         description: DiscountRule to create
         content:
@@ -3958,7 +3958,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 7304fa01-36df-4ec6-a7bb-5f8675e45ad5
+            default: de2d6093-1112-4499-bba1-aa1d318bd46e
       responses:
         '204':
           description: >-
@@ -4015,7 +4015,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: e299c23a-91b4-4271-86ee-0905ca66f618
+            default: 6b71b8cf-823e-4add-9e99-6d268b254d1d
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -4073,7 +4073,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 67d824b8-83a6-40f9-9bf8-d55fce2f76a4
+            default: fb14f28a-6a2d-402c-8f51-764f18b5a721
       requestBody:
         description: Atributes values
         content:
@@ -4154,7 +4154,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: b9d8f3e0-eb3e-4ecd-9af1-b41e6c80e450
+            default: 2575c2b7-b619-438c-beb3-44fb17e236eb
       requestBody:
         description: DiscountWeight to update
         content:
@@ -4249,7 +4249,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 6d87b11a-d874-4926-8ed6-c0332c1a9ec4
+            default: fc66d4b6-d558-4a89-b258-a27908274507
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -4319,7 +4319,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: b2396ffa-ac69-4f19-a8f4-d3d55d3f1079
+            default: 20585c8a-8bcb-4a36-ad21-9cc9120c8570
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -4361,7 +4361,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 2f8ed5a1-1790-45d2-bd5e-2e2aaffef4e9
+            default: 4c6f68e7-babb-40ab-ac0e-a8d9a660cb4e
       requestBody:
         description: DiscountWeight to create
         content:
@@ -4435,7 +4435,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 5f5ee694-c9ea-4bc7-b88a-cb95d1a00583
+            default: 2f316237-c75a-44d1-9b51-9195f6c03e5b
       responses:
         '204':
           description: >-
@@ -4492,7 +4492,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: db61a60f-6714-4df4-8746-4f1fc6db1eef
+            default: d5944075-7a38-459e-b558-86f1751de2bb
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -4550,7 +4550,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 41db9d87-f3ee-4689-b4c2-a645b1a57ad2
+            default: 38adf1f8-7d63-4998-ab1d-207ccf2a3e4f
       requestBody:
         description: Atributes values
         content:
@@ -4631,7 +4631,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a0e11f58-409a-493d-876f-7f0ee61bb245
+            default: 37bbc07e-f54d-4eca-855a-7455a9ca36d1
       requestBody:
         description: DistribuitionCenter to update
         content:
@@ -4728,7 +4728,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 0ab1cb65-255e-4553-9e0a-66e71d62087f
+            default: 9d4911b2-c2d1-4d50-b054-3bc097c9c64e
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -4800,7 +4800,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: f0844203-d577-486c-be70-2c279ec2ed4d
+            default: 3fb8db4d-878f-4b9f-a88e-b48965952bc9
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -4842,7 +4842,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 3b36db16-8939-4ba4-852c-fd5df35b7d18
+            default: fed6326c-6583-48c8-b401-d1bcfab3b374
       requestBody:
         description: DistribuitionCenter to create
         content:
@@ -4916,7 +4916,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: f6fbb4ca-f3f8-45bb-83ba-f7d0c0e10aff
+            default: e3177997-7fb9-46fd-ab6f-506035dfa809
       responses:
         '204':
           description: >-
@@ -4973,7 +4973,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 8c3b6325-50f6-4c22-b540-5ca4d01f6f02
+            default: 22fb0cc5-13d9-4e17-9b12-5213c27351f7
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -5032,7 +5032,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 4902eada-2a6c-49c4-a201-19b7877a3335
+            default: b9c1b699-1948-4c06-bf92-221bdce55cd4
       requestBody:
         description: Atributes values
         content:
@@ -5113,7 +5113,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: f8c2d9c6-2587-4821-9113-10c634a3475d
+            default: 6adb0afa-281d-4f2c-81e1-68e71ad47f41
       requestBody:
         description: DistribuitionCenterClientAddress to update
         content:
@@ -5216,7 +5216,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: b22d7c4a-7676-4d65-85e5-56c82a3ac792
+            default: 53721d37-3c0e-4cd5-b3f6-9d54037d5b59
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -5295,7 +5295,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 423634c4-9f40-406f-9382-a52118402c2f
+            default: 9c4260e1-e9b1-4bef-93f6-7ccf05a66714
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -5338,7 +5338,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 21de90e4-e666-4cb3-adce-c4f96effebaf
+            default: 80fa9ca1-ceb8-4ca8-906a-85c47f7ab72e
       requestBody:
         description: DistribuitionCenterClientAddress to create
         content:
@@ -5413,7 +5413,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: bafa5673-3edd-48a7-9ac3-3eacbc315a91
+            default: 161854ad-e755-4af7-be0c-f9d4b9c90949
       responses:
         '204':
           description: >-
@@ -5470,7 +5470,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 7dce08ea-fc95-4253-b9e5-8211ed637e9d
+            default: 29860c28-781f-4c41-bfb6-aa03a9f8d0be
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -5528,7 +5528,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: ab942045-1f10-40bf-a399-e294154889f4
+            default: 566bd413-101a-4e57-ba2d-d8c3b517d018
       requestBody:
         description: Atributes values
         content:
@@ -5609,7 +5609,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 2ba80a0b-e170-418c-b991-82c431a2a224
+            default: be4b6746-6f31-447b-9b24-6ece00b8f082
       requestBody:
         description: FreightConversionFactor to update
         content:
@@ -5712,7 +5712,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 0aac4e73-5e42-4eb3-a03a-d64ae3449e4b
+            default: cff4aef9-3101-4acb-aea4-ed04bd4025a6
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -5790,7 +5790,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: ae9b77a1-52d8-427f-81d4-2f3ba1f82897
+            default: b6fa7b55-fed6-43fb-9a46-5c221eaa9d2d
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -5833,7 +5833,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 73031e43-31aa-4eec-8e1d-e6a685a06ece
+            default: dd471963-4916-413c-90e8-61555b8da81b
       requestBody:
         description: FreightConversionFactor to create
         content:
@@ -5907,7 +5907,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: f4ddae44-334f-4546-9f52-c846e60995c1
+            default: f4765d0a-fa88-4f23-9e94-2049ac3bb55b
       responses:
         '204':
           description: >-
@@ -5964,7 +5964,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: beeeb9bf-58c3-4f5a-9b87-a0b3508a2337
+            default: 811e18bb-31cb-42bb-be59-0becd88affd3
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -6022,7 +6022,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: c3401948-c7cb-4fde-8ce3-5a5349b5f79f
+            default: 92f53d59-62aa-4f42-8334-9a9b414410b4
       requestBody:
         description: Atributes values
         content:
@@ -6103,7 +6103,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: c201d9ef-a6ce-4eaf-9169-d885324a10d5
+            default: 811a1cd4-f9ac-4db7-923b-904a76bc8139
       requestBody:
         description: FreightTable to update
         content:
@@ -6219,7 +6219,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 611ecf7c-853c-4e6a-ba22-6aaeb09e93b2
+            default: e5e7794b-20eb-4a63-b699-267f771d9cbe
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -6310,7 +6310,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: de688c1d-f8eb-415d-b409-c96989fd07eb
+            default: bbc68018-8863-4499-8235-fb3d18bc8524
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -6352,7 +6352,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: f6bb1317-4066-497c-9cbd-534d372abe16
+            default: f7881a79-90a7-475e-bfeb-44c47ccdc3f0
       requestBody:
         description: FreightTable to create
         content:
@@ -6426,7 +6426,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 4bc1c9ed-7d07-4f65-95a2-252c151d0112
+            default: b1df071d-f5c2-4424-9772-b8aaee7d5d6c
       responses:
         '204':
           description: >-
@@ -6483,7 +6483,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 0fdc6c92-5744-4b18-822b-3a24d2156275
+            default: ff58637d-92e4-46f9-a291-b4563264e2e8
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -6541,7 +6541,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 845dbadd-7b09-4b78-83ed-42ded4a34b06
+            default: ca182a52-e0cb-4ccf-af56-511b4b49dd02
       requestBody:
         description: Atributes values
         content:
@@ -6622,7 +6622,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: b3cde1bd-f191-4fa9-9713-35c428b6753b
+            default: 23327e79-8ed3-4c76-b9ed-f9c69c2d82a5
       requestBody:
         description: IntegrationConfig to update
         content:
@@ -6707,7 +6707,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 6e3d2ba8-7607-42f9-9a26-947341f7908d
+            default: 66448aba-fab6-401e-baf3-0c51bae79c61
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -6767,7 +6767,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: def2370d-79f1-4bfe-b797-b8552878e79f
+            default: 51945902-e645-43d2-859c-7cedf36ae294
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -6809,7 +6809,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 7a8128bf-696d-465e-87ba-636958c5bc20
+            default: db74e718-b454-4014-b770-b61620528438
       requestBody:
         description: IntegrationConfig to create
         content:
@@ -6883,7 +6883,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: caae7381-5b49-4e1c-8316-8f2aa10ede13
+            default: bfccd6c2-15bf-4a01-9903-4e6ad3af7b21
       responses:
         '204':
           description: >-
@@ -6940,7 +6940,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: c1c022e8-07e4-4e68-b466-d683b0f6ca57
+            default: d536c25f-26b9-4745-b0ca-af7a107aadda
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -6998,7 +6998,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 42292ca2-3a1c-48db-b9c4-e252d80ba8de
+            default: f813315c-0f2c-48d4-b9cc-a4630cb1507b
       requestBody:
         description: Atributes values
         content:
@@ -7079,7 +7079,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: b302aaa7-f878-4033-bfa5-7bfdd221dd1e
+            default: 3c456103-8676-4d0d-a50d-4cbbdb4ca2d0
       requestBody:
         description: IntegrationStatus to update
         content:
@@ -7185,7 +7185,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 98e77692-7d04-42d8-80fe-b92af73adf55
+            default: 81aabfcd-1965-40d3-88de-f90c4352c41a
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -7266,7 +7266,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: cfe11f6a-aa0e-4c90-ba1e-117588c72b85
+            default: ac763a47-8ad6-4a36-be11-fe4e575b26ad
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -7308,7 +7308,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: ca4e48ba-bcc0-42a8-bfca-0be6dbe3dfd0
+            default: de29ef53-a1cd-4d1d-a058-9cc6400cf4b1
       requestBody:
         description: IntegrationStatus to create
         content:
@@ -7382,7 +7382,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 5a7f6953-7fcf-4694-965e-8efbd64fcffc
+            default: 8b29761a-5d2f-43d2-984a-10bb114da811
       responses:
         '204':
           description: >-
@@ -7439,7 +7439,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a4ec51f4-f7b9-4f5b-87c2-f117fb479afa
+            default: 2a20e9f0-3c9f-45c5-a042-fefc745acc6d
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -7497,7 +7497,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: ccc6faa6-cf65-4281-981b-bb9e9fada48b
+            default: 4ece6d45-62de-4750-9c44-b0e6dd2bb3d9
       requestBody:
         description: Atributes values
         content:
@@ -7578,7 +7578,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 52f3362b-5ebb-4b04-a751-c0b3cd2f1477
+            default: ad04c7bd-52e3-4099-bdd8-c5ae4bcdecbe
       requestBody:
         description: Notification to update
         content:
@@ -7690,7 +7690,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a0ac4225-7b73-4e77-975b-207ba18ce514
+            default: ac9f34bb-527a-4a0b-b3a1-9a6d068805f9
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -7731,7 +7731,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 4c0e66cb-2b2c-4fef-a141-c07e59c36cda
+            default: 5b4c14e1-6253-4c70-b083-c30fc01a78c7
       requestBody:
         description: Notification to create
         content:
@@ -7805,7 +7805,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 856509e9-7360-4f3a-b894-242c15c0bade
+            default: 420cdebd-3d50-44f7-aad4-bdfa0a8f80d0
       responses:
         '204':
           description: >-
@@ -7862,7 +7862,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 738f17f2-fd0a-451e-b5d4-f848e233483a
+            default: 08dfe689-5e66-427b-9715-7dc70fdad1b6
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -7920,7 +7920,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 68877a04-d0a7-4c01-a1c1-5f791e04a5df
+            default: 073e70ef-be99-4c48-8242-11dbf43e5f03
       requestBody:
         description: Atributes values
         content:
@@ -8001,7 +8001,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: c4742143-f4b2-43f1-b7cd-0eb17c5680e9
+            default: a9edba55-2765-41bc-a7c0-b46ca26cb417
       requestBody:
         description: PaymentCondition to update
         content:
@@ -8106,7 +8106,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 764b1b20-cc8d-4151-b1c7-674e567a5f92
+            default: 90c73311-82ee-4ead-b5a4-1ba1656da391
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -8178,7 +8178,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 593706ca-bfa3-4f80-b439-83e1b5926fd6
+            default: 6d902a04-0096-4591-a753-4d6ee89648fb
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -8222,7 +8222,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: dedcada8-bb2f-4d49-b91d-98d40e80f31b
+            default: d96c8fd3-d9fd-478e-b30e-7fd178e3c86b
       requestBody:
         description: PaymentCondition to create
         content:
@@ -8296,7 +8296,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 09103ac3-52a0-41bf-9508-88194831973a
+            default: fe86592d-94d8-4c45-820a-bd45f9b055f6
       responses:
         '204':
           description: >-
@@ -8353,7 +8353,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 995e3c73-d078-4400-ab26-f0fa2a53273b
+            default: f3a4e807-0a6c-4f42-97bf-e212f107d86c
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -8411,7 +8411,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 1f807605-5259-4d92-a296-88d46dec9ab5
+            default: 220dd834-d009-453c-957d-6bc29a3e3f77
       requestBody:
         description: Atributes values
         content:
@@ -8492,7 +8492,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 85de5c5f-784b-47a2-af8b-5f15fb3062b2
+            default: 12b7435a-993d-4b07-b431-fab3d2e74b85
       requestBody:
         description: PaymentPriceTable to update
         content:
@@ -8598,7 +8598,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 7cb380ae-af58-4471-8c22-f0fed7c06af5
+            default: 8bcc0f52-4b9c-4821-9749-a7385133bb71
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -8671,7 +8671,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 5c6cb2f3-c28d-4ac8-a1e2-a2ff975a9a6a
+            default: 8833e48f-921b-4020-a047-c265f8607ee0
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -8715,7 +8715,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 8594f8e2-8cd4-4384-8a49-10dd3bff6951
+            default: d0ef6f6f-1828-4db5-9beb-7856167d9f98
       requestBody:
         description: PaymentPriceTable to create
         content:
@@ -8789,7 +8789,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 11df7da0-75bc-4d8b-b6d8-59a363932d9d
+            default: 5d5b2b51-fe54-43e8-99b5-16a3b693b7de
       responses:
         '204':
           description: >-
@@ -8846,7 +8846,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 27f2a39c-151f-472a-bb01-5a049f3e1807
+            default: c734a641-7cb0-44e9-b3eb-2ab25c4609bb
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -8904,7 +8904,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: f4dce1da-7ef1-4409-8e65-1086f0e40e95
+            default: 4c430f34-1ad9-4711-a821-f3d7264e3467
       requestBody:
         description: Atributes values
         content:
@@ -8985,7 +8985,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 0591d033-4b2c-4b99-81d5-ec463889a9d4
+            default: 2bf4183b-93fd-4711-85da-16521fd6cf7d
       requestBody:
         description: PriceTable to update
         content:
@@ -9099,7 +9099,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 643d2599-f09f-4fa5-abf3-b73684ae44a5
+            default: 60b376dd-2bc4-43dc-9abe-67c479e68499
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -9180,7 +9180,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 1ac51303-5fee-464d-ab4d-440bc1da31d7
+            default: ee4ffbee-5d49-4fb4-9471-de00b2ec1f3c
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -9224,7 +9224,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 8366bd53-d721-4e94-8647-05eddc52bfd2
+            default: f99a7639-cf5b-4d5c-ba57-a21b8f30b5a3
       requestBody:
         description: PriceTable to create
         content:
@@ -9298,7 +9298,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 6c836bee-e11d-4ab2-80c2-89a5bbb426f6
+            default: 84b7a28c-3b92-4e99-8e5a-2e9c11385fa6
       responses:
         '204':
           description: >-
@@ -9355,7 +9355,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a2abbe76-0c7e-4f39-935e-14af77536da8
+            default: f7c8a572-526d-4406-81f7-f87904cc18ce
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -9413,7 +9413,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 5fca7204-a0a5-48b1-8731-c40ae525bba5
+            default: 00552df8-f731-4eb8-aed0-4ab4ec69dcae
       requestBody:
         description: Atributes values
         content:
@@ -9494,7 +9494,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a7c5dae0-cab3-4f69-bc7b-ae331d9110bc
+            default: c2be75b5-6307-44d8-a781-3988e651b1ad
       requestBody:
         description: PriceTableItem to update
         content:
@@ -9600,7 +9600,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: d81442fb-c1e4-4866-983c-fa4f1134363d
+            default: 923a27d3-6fdb-4270-bfef-48a13d889ec8
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -9673,7 +9673,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: f3fabfec-f234-42c5-a61d-7c3d643a31f1
+            default: 4a3e72a3-fc67-4b7f-bdb9-87778059c461
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -9717,7 +9717,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: cc2a7627-dc72-41d3-958d-02a8f3f58445
+            default: 4fbef963-2387-49c2-baac-27164938af3d
       requestBody:
         description: PriceTableItem to create
         content:
@@ -9791,7 +9791,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: b053d796-a38a-4791-82b2-f36708ee11b2
+            default: be821256-d34b-43a9-bed0-a8f5a8c738a5
       responses:
         '204':
           description: >-
@@ -9848,7 +9848,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a1ff9b70-5d4c-4865-905a-11eb479c863a
+            default: 9a9f58c9-8742-400b-b66d-f5d153e35730
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -9906,7 +9906,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 7bb74cda-0d22-4af7-bb2a-82cbb0aadaac
+            default: bd3bab65-329c-4857-a289-85d7a747963c
       requestBody:
         description: Atributes values
         content:
@@ -9987,7 +9987,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: c5ebceaf-54cb-44b3-bae0-8fba7dfd6be0
+            default: cdc3a371-32d1-4503-8bb2-f11f35c0b875
       requestBody:
         description: PriceTableUnloading to update
         content:
@@ -10093,7 +10093,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 71840a86-c0ab-4ad4-a321-4ccb1f2229c5
+            default: d2af5d12-d873-40d7-a5bf-e9da5d8ed1c2
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -10166,7 +10166,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a82dbeb7-7ad6-4a3a-a880-e2f740787d35
+            default: d232c593-4de8-4229-a814-d47ee4aae21a
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -10210,7 +10210,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: c4036414-8e5b-4133-8a0b-42af844cb57a
+            default: 9e14ed5e-1f74-4c1e-befc-1e77d57e8556
       requestBody:
         description: PriceTableUnloading to create
         content:
@@ -10284,7 +10284,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: b21ae5c1-2cab-44a4-81be-d70b73e6d9a1
+            default: 013c14d4-75b2-4ac6-aacf-743f4bd89743
       responses:
         '204':
           description: >-
@@ -10341,7 +10341,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 63fcfa7b-1204-47ba-b4b7-30e557ded041
+            default: 8e7fe6bb-a7f5-48a6-94d8-390602ee06b1
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -10399,7 +10399,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 651f7125-399d-4576-99b0-c3ea83b28ce8
+            default: 9e7241d9-0653-49a8-8858-6e146bd74d76
       requestBody:
         description: Atributes values
         content:
@@ -10480,7 +10480,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 53541a7d-de1f-496d-b969-f1c6895818d9
+            default: 9718ee79-bbc4-479e-8cbd-f2bca66ac9dd
       requestBody:
         description: Product to update
         content:
@@ -10598,7 +10598,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: e4f01887-49d5-44b5-83f1-a3de86fef1eb
+            default: 672942d3-e0a5-4bf4-b5fb-3baeef4294c7
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -10683,7 +10683,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 79a0bba0-cc4c-4ebe-945f-f9e162d8d344
+            default: d31379da-49f2-48c3-a8c1-573396f8facf
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -10727,7 +10727,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: d0c4642d-3aeb-4d17-8196-06bfc2cfdcf5
+            default: d375693c-0ba7-4820-9387-6bdc093f3e2e
       requestBody:
         description: Product to create
         content:
@@ -10801,7 +10801,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 3bf4d936-e5bc-49f8-9b55-1c09fefa3dae
+            default: c890e063-bdff-4ebb-8cdc-382523fd7b6d
       responses:
         '204':
           description: >-
@@ -10858,7 +10858,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 4b37e077-c1f1-4593-8c27-3f3dcc892fcb
+            default: 4a44ed4d-f37b-4c08-901e-270cc9a6aea5
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -10916,7 +10916,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 42ecc848-ab36-482c-af17-e29686a4f7b6
+            default: f14947e4-b4e8-4bdd-80f8-46b1b3c7567c
       requestBody:
         description: Atributes values
         content:
@@ -10997,7 +10997,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 52d771ea-6e20-4c0c-b949-35c50b0b0748
+            default: 79df4e69-cf1a-4134-990f-e53a3e9f62d3
       requestBody:
         description: ProductGroup to update
         content:
@@ -11097,7 +11097,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 175ee79f-3f8f-43ce-8690-e0ab3239757f
+            default: 9a08945f-0038-48ca-8c61-c6b27563ccff
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -11164,7 +11164,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 03ee5c53-7119-40e0-b5d3-4b6b160c846d
+            default: 6cfc276a-3e70-4f73-90e8-7cfe0d93a3b7
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -11215,7 +11215,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 63add806-84ba-43ae-831c-26091bebb9fd
+            default: 40f041b7-b8a7-46bb-ad7b-3db4b91e90c6
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -11266,7 +11266,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 640e8778-6495-4177-833d-5118fe9a5e15
+            default: 2536ca47-0fec-4ae1-87f1-c207ff57b2ad
       requestBody:
         description: ProductGroup to create
         content:
@@ -11340,7 +11340,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a732019f-7722-4b08-9e88-411dfe84590b
+            default: 780beea6-de90-4e19-8536-daa4932d3b6e
       responses:
         '204':
           description: >-
@@ -11397,7 +11397,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 1cb04b00-6601-4e6d-8ac6-3016932f3f2b
+            default: e524b837-5645-4f79-93c1-0ada88e20dab
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -11455,7 +11455,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 82271c31-381e-4b73-bef1-78b03aa8cda9
+            default: 4fccab83-8b4f-41a1-a4c1-9c906b0c7506
       requestBody:
         description: Atributes values
         content:
@@ -11536,7 +11536,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 08e8ca4a-cc0f-47e3-9097-dada877fc0c2
+            default: 882b0131-cf65-4c1a-8bbc-b8c63a837a19
       requestBody:
         description: ProductLine to update
         content:
@@ -11636,7 +11636,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 836116d4-01ee-4dc9-b101-2af0ee825abb
+            default: c862c8a3-a711-4543-baf6-faf3154db80b
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -11703,7 +11703,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: a5c5ef13-d79c-4a06-90c1-5b43f3605ed3
+            default: 03e47ce0-41b9-481f-ac44-b15467b9065f
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -11747,7 +11747,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 8547ed88-bad6-453b-92d9-650428819e8f
+            default: 176f1b24-384c-454c-a78f-c08672b92419
       requestBody:
         description: ProductLine to create
         content:
@@ -11821,7 +11821,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 6fb23dd7-149c-4672-b173-ef0c20c4eb90
+            default: f08adbcb-c310-4de0-af94-569068a0934c
       responses:
         '204':
           description: >-
@@ -11878,7 +11878,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 634c1b4b-83a3-4c47-ae45-f84151cdfe2f
+            default: 77d7a047-0628-4733-a47f-b28ac777b085
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -11936,7 +11936,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 07f391ff-5a2b-4b0c-8fea-6815b808cf5f
+            default: bad70021-eb11-451c-af9f-3e21cc717724
       requestBody:
         description: Atributes values
         content:
@@ -12017,7 +12017,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 2a2c23bf-b521-4e4e-be8e-fd0906def720
+            default: df46fc16-a314-4fda-bf17-72c416d372d6
       requestBody:
         description: PurchaseOrder to update
         content:
@@ -12132,7 +12132,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 406b77fc-7ae8-42e5-92bc-119f3fd7c02a
+            default: 9db3f244-b399-4693-8c98-85f5245de48a
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -12214,7 +12214,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 413fdac8-86cc-4443-9dbb-54881074fd10
+            default: 70c2b43f-5cd7-40c8-9709-f78b10094435
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -12265,7 +12265,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: f1d60186-ab00-457f-a118-8c8045c24f7f
+            default: 94018528-20d3-4ab0-b708-9d568be642c6
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -12322,7 +12322,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 52ec9671-0b83-40d0-8bda-d2b5421fc439
+            default: 2fdf96ba-87a8-415c-b744-61c86f42bb70
       requestBody:
         description: PostCancelPurchaseOrderRequest
         content:
@@ -12378,7 +12378,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: bd82e876-dae4-4d41-9f12-423c21222831
+            default: 04b5ac50-76c6-4d73-a4b9-31cd7c476480
       requestBody:
         description: PurchaseOrder to create
         content:
@@ -12452,7 +12452,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 31fb9b71-be0e-4966-9b7e-31277d0c27ed
+            default: 3d9b4193-93b0-46c5-b237-2c9bb306d548
       requestBody:
         description: Post Refused PurchaseOrderRequest
         content:
@@ -12520,7 +12520,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 02a16d16-5d35-424e-b890-1867253e2793
+            default: 4d1082c0-7c5e-4b02-9dec-c3cf9cad97ce
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -12577,7 +12577,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: fac92ca0-46ab-4e43-9e20-4fad82f47a78
+            default: 1baf54fa-34dd-412c-bccf-58ab86a8ebba
       responses:
         '204':
           description: >-
@@ -12634,7 +12634,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 64ab1104-0806-494d-a217-73e86ae9ad42
+            default: de855a0a-0c77-495a-bc6b-7a7091475977
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -12692,7 +12692,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: ef6b89ad-9278-422f-8eb8-cd1f5039ade2
+            default: fb5f19cd-1ca5-41f6-96e7-5c4c3a1a113e
       requestBody:
         description: Atributes values
         content:
@@ -12773,7 +12773,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: bb01d312-962b-4a2d-97ec-b92b06bb49d3
+            default: fea9491e-64e9-4d37-9d67-0c4b2271e6bc
       requestBody:
         description: ReasonCancel to update
         content:
@@ -12877,7 +12877,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 90de062c-c048-4102-b1ac-69a3a17ea55a
+            default: 5e7a4d0c-a15a-4673-ae44-a8ac9fc7c155
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -12948,7 +12948,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 0eb835c4-4706-4a71-be11-44b9bf6dc0ea
+            default: 666869a1-da4c-4dc5-84c0-fa953fe5059f
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -12992,7 +12992,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 0d6fad6d-8375-43c0-9c37-28768c324fbf
+            default: e193a2cc-e3cb-4f07-9bc6-21ad860615ad
       requestBody:
         description: ReasonCancel to create
         content:
@@ -13066,7 +13066,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 2f38e2ce-2d16-4e71-b5c3-99c9832f164a
+            default: 0e4a4390-333c-4ceb-85eb-7738074d6a59
       responses:
         '204':
           description: >-
@@ -13123,7 +13123,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: c61cf3b3-cf8e-4b0c-a3fd-1af7740a8745
+            default: 956fb9a1-23c0-4df5-b5f7-683035238aa2
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -13181,7 +13181,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: c40398f0-a0e8-4a62-a614-f9fb479fbe4e
+            default: 678ab198-8443-438c-8d40-f771a9adee04
       requestBody:
         description: Atributes values
         content:
@@ -13262,7 +13262,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: fd1d9060-815d-413c-bd6d-9a61a770a499
+            default: 45e924a8-2a95-4a42-972f-6ca061facddf
       requestBody:
         description: ReasonVisit to update
         content:
@@ -13354,7 +13354,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: c4e45b68-f652-4001-94c8-947540fb62cc
+            default: 6b5f64a8-b46a-4552-a417-4beab7b4ee1d
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -13413,7 +13413,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 3e438597-c25c-4f78-97fa-ab0bf3d9a848
+            default: 5d676b07-cce3-4017-9d00-a2d819d6f134
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -13457,7 +13457,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 865d0c15-31e9-41f8-8721-cbfbc153c406
+            default: 023ee6a1-c2f9-4153-9c4e-956698e12714
       requestBody:
         description: ReasonVisit to create
         content:
@@ -13531,7 +13531,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 063d6a39-10e0-4579-a22f-a3c2709dfc75
+            default: 531c5120-95ea-4ac1-b42a-5552616bbf0f
       responses:
         '204':
           description: >-
@@ -13588,7 +13588,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: b423819e-ad86-404e-8b46-e751d58f2233
+            default: a3bf3855-b59f-4312-869e-e861b23b37ed
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -13646,7 +13646,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: b9742280-6d21-4bc2-9cb7-f5ae777d2193
+            default: 75003fd6-fc07-4295-8bb2-a7099206e323
       requestBody:
         description: Atributes values
         content:
@@ -13727,7 +13727,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 3de80801-a16c-4f6f-9137-ce3345cf88b4
+            default: 454e3400-c2fe-4f69-882f-f944a56a4583
       requestBody:
         description: Template to update
         content:
@@ -13819,7 +13819,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: c4c69b27-4810-423c-bbe1-5f79c9d78eac
+            default: bd548938-2105-452d-a21b-a2484462db9c
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -13878,7 +13878,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: ba8d9e77-02fb-436e-b98d-9afe6d6b48ea
+            default: c5a3e2d5-51cf-4c47-a0b7-ac02b3044f57
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -13922,7 +13922,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: b331c762-82be-4707-a93a-bdd3236e3ea5
+            default: 726ff7af-db3b-46f9-bef8-f53eea795864
       requestBody:
         description: Template to create
         content:
@@ -13996,7 +13996,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 62e15d5d-024a-477c-bb0c-4060a848404a
+            default: 24df0177-6b77-4e9c-a640-a9581bf9b1b6
       responses:
         '204':
           description: >-
@@ -14053,7 +14053,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: e772366b-d56a-411b-943c-4e030b95cbc4
+            default: 0da373c6-ce57-4a25-838b-c3dc496d9e1a
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -14111,7 +14111,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 47520b14-494d-42d7-a4f5-add48e801577
+            default: 117abee9-a461-483c-9036-6ab230193854
       requestBody:
         description: Atributes values
         content:
@@ -14192,7 +14192,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 49353da2-5a95-469e-835a-1e52cee3f129
+            default: a5fcd5f1-bef1-4f27-8a1c-9016e9286ac3
       requestBody:
         description: User to update
         content:
@@ -14307,7 +14307,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: cfff4d15-80c9-45c9-9a6e-5908a7c5b254
+            default: 43f51ee1-6f91-4151-874b-e50eb5616d7a
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -14388,7 +14388,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: f6ff8341-42c3-4c1b-8814-735a671b70a5
+            default: 8d968209-4e66-4996-b999-2226cac59dc3
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -14433,14 +14433,14 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 4b3b2ea8-2b9b-48b1-873f-44fbabee52a5
+            default: 5506b1c8-1231-467c-b6ad-a3feed2321b2
       responses:
         '200':
           description: Ok - The request has succeeded.
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetAllUserResponse'
+                $ref: '#/components/schemas/GetUserInfoResponse'
         '400':
           description: Bad Request – This means that client-side input fails validation.
         '401':
@@ -14484,42 +14484,22 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 7057319f-6db3-44d7-a223-3b9376f9a4cf
+            default: 9cf22f16-d006-4983-b4a5-63a8b1f77245
       requestBody:
         content:
           multipart/form-data:
             schema:
+              required:
+                - images
               type: object
               properties:
-                contentType:
-                  type: string
-                contentDisposition:
-                  type: string
-                headers:
-                  type: object
-                  additionalProperties:
-                    type: array
-                    items:
-                      type: string
-                length:
-                  type: integer
-                  format: int64
-                name:
-                  type: string
-                fileName:
-                  type: string
+                images:
+                  type: array
+                  items:
+                    type: string
+                    format: binary
             encoding:
-              contentType:
-                style: form
-              contentDisposition:
-                style: form
-              headers:
-                style: form
-              length:
-                style: form
-              name:
-                style: form
-              fileName:
+              images:
                 style: form
       responses:
         '201':
@@ -14611,7 +14591,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: ad9974ed-548e-4f93-9b44-5fd1d2ff924a
+            default: 9e04a78b-e333-4e9c-8a66-8b170f0defd8
       requestBody:
         description: User to create
         content:
@@ -14678,7 +14658,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 603eb8ee-3e48-4ef1-bccb-e0ee8a47a996
+            default: 3ac87d95-bc3c-4688-a906-241d958c3d50
       requestBody:
         description: Force Change Password
         content:
@@ -14742,7 +14722,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 6be08f6a-7473-45e5-b10e-e8144308d64b
+            default: af8c553d-51b0-4eb3-a310-c8c325c98654
       requestBody:
         description: FCM Token
         content:
@@ -14832,7 +14812,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: d35c4763-e22d-4a8a-90ba-48166a3e2f72
+            default: 26b1856e-d342-4cc8-9b03-fcdeea5eb2cf
       requestBody:
         description: Reset Password
         content:
@@ -14896,7 +14876,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: f7a9bedc-96b8-4a7c-9408-aa11c53334fa
+            default: ee744630-bb94-4b21-b5cb-9c2a65468f45
       requestBody:
         description: User to create
         content:
@@ -14960,7 +14940,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 6cecda15-66a1-4c7e-a117-9cd82fcfd594
+            default: a7feeef6-3a6d-4878-8507-65e0e3898e82
       requestBody:
         description: User to create
         content:
@@ -15008,6 +14988,105 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorDetails'
+  /tepsales/v1/users/photo:
+    put:
+      tags:
+        - User
+      summary: Update User Photo
+      parameters:
+        - name: x-api-key
+          in: header
+          description: Your Api Key
+          schema:
+            type: string
+        - name: x-csrf-token
+          in: header
+          description: CSRF Protection
+          schema:
+            type: string
+            default: 6eae2a6e-d02a-4ee6-9ffc-c86ed9080143
+      requestBody:
+        description: User to update
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/PutProfilePhotoRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutProfilePhotoRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/PutProfilePhotoRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/PutProfilePhotoRequest'
+      responses:
+        '204':
+          description: >-
+            No Content - There is no content to send for this request, but the
+            headers may be useful. The user-agent may update its cached headers
+            for this resource with the new ones.
+        '400':
+          description: Bad Request – This means that client-side input fails validation.
+        '401':
+          description: >-
+            Unauthorized – This means the user isn’t not authorized to access a
+            resource. It usually returns when the user isn’t authenticated.
+        '403':
+          description: >-
+            Forbidden – This means the user is authenticated, but it’s not
+            allowed to access a resource.
+        '404':
+          description: >-
+            Not Found – The server can not find requested resource. In the
+            browser, this means the URL is not recognized. In an API, this can
+            also mean that the endpoint is valid but the resource itself does
+            not exist. Servers may also send this response instead of 403 to
+            hide the existence of a resource from an unauthorized client. This
+            response code is probably the most famous one due to its frequent
+            occurence on the web.
+        '412':
+          description: >-
+            Precondition Failed - The client has indicated preconditions in its
+            headers which the server does not meet.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ErrorDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDetails'
+        '422':
+          description: >-
+            Unprocessable Entity - The request was well-formed but was unable to
+            be followed due to semantic errors.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ErrorDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDetails'
+        '500':
+          description: >-
+            Intertal Server Error - The server has encountered a situation it
+            doesn't know how to handle.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/ErrorDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ErrorDetails'
   /tepsales/v1/vehicleTypes/{id}:
     delete:
       tags:
@@ -15031,7 +15110,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 472a2d82-65f9-4639-8dd9-3fbc16f76cbc
+            default: c0127931-16aa-44c9-abcf-cfb48a096a12
       responses:
         '204':
           description: >-
@@ -15088,7 +15167,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: aad2f08c-7d6f-4f3b-80a1-1fadbe884b26
+            default: 0cc1d7e8-bd43-4b37-aa0f-ec856cf0e519
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -15146,7 +15225,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 69e82c9e-b835-4d0f-99f3-607651cb1346
+            default: 89e83551-d4cc-4b13-8f82-31d2842afc40
       requestBody:
         description: Atributes values
         content:
@@ -15227,7 +15306,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 7ea7004f-3f53-4db9-af88-8d09800b3b50
+            default: e41537c8-dab9-4cff-a57e-dd347609958b
       requestBody:
         description: VehicleType to update
         content:
@@ -15327,7 +15406,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 8b7658fc-a0c0-47b6-8ca6-c219387fb414
+            default: cebf5d10-c1d3-420d-a3b4-40c8eba0775e
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -15394,7 +15473,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: be31bec7-0a8a-433f-8455-6fa871d00688
+            default: e73732a4-f3dd-4251-8632-b6e61cde0672
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -15438,7 +15517,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: 7b875cdc-67d0-4ebc-8766-b6b3817276fc
+            default: 1a5394da-91c4-4a0d-be0b-f067ee6cbc10
       requestBody:
         description: VehicleType to create
         content:
@@ -15505,7 +15584,7 @@ paths:
           description: CSRF Protection
           schema:
             type: string
-            default: f2f7c665-f2b5-4188-bb8e-eac16053adf1
+            default: a1281a13-5cf9-45d2-bf47-191e73d91c8a
       responses:
         '200':
           description: Ok - The request has succeeded.
@@ -15715,6 +15794,33 @@ components:
         - 1
       type: integer
       format: int32
+    CompanyModelBase:
+      type: object
+      properties:
+        createdAt:
+          type: string
+          format: date-time
+          nullable: true
+        updatedAt:
+          type: string
+          format: date-time
+          nullable: true
+        userCreated:
+          type: string
+          nullable: true
+        userUpdated:
+          type: string
+          nullable: true
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+          nullable: true
+        document:
+          type: string
+          nullable: true
+      additionalProperties: false
     DatabaseCollector:
       type: object
       properties:
@@ -17860,6 +17966,9 @@ components:
         documentId:
           type: string
           nullable: true
+        photo:
+          type: string
+          nullable: true
         phone:
           type: string
           nullable: true
@@ -17918,6 +18027,61 @@ components:
           nullable: true
         status:
           $ref: '#/components/schemas/VehicleTypeStatus'
+      additionalProperties: false
+    GetUserInfoResponse:
+      type: object
+      properties:
+        createdAt:
+          type: string
+          format: date-time
+          nullable: true
+        updatedAt:
+          type: string
+          format: date-time
+          nullable: true
+        userCreated:
+          type: string
+          nullable: true
+        userUpdated:
+          type: string
+          nullable: true
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+          nullable: true
+        documentId:
+          type: string
+          nullable: true
+        photo:
+          type: string
+          nullable: true
+        phone:
+          type: string
+          nullable: true
+        email:
+          type: string
+          nullable: true
+        isActive:
+          type: boolean
+        isAdmin:
+          type: boolean
+        isSuperAdmin:
+          type: boolean
+        isSalesman:
+          type: boolean
+        isIntegration:
+          type: boolean
+        isRegionManager:
+          type: boolean
+        externalCode:
+          type: string
+          nullable: true
+        status:
+          $ref: '#/components/schemas/UserStatus'
+        company:
+          $ref: '#/components/schemas/CompanyModelBase'
       additionalProperties: false
     GetWidgetsDto:
       type: object
@@ -20236,6 +20400,9 @@ components:
         documentId:
           type: string
           nullable: true
+        photo:
+          type: string
+          nullable: true
         phone:
           type: string
           nullable: true
@@ -20313,6 +20480,9 @@ components:
           type: string
           nullable: true
         documentId:
+          type: string
+          nullable: true
+        photo:
           type: string
           nullable: true
         phone:
@@ -21598,6 +21768,19 @@ components:
             $ref: '#/components/schemas/ProductEspecification'
           nullable: true
       additionalProperties: false
+    PutProfilePhotoRequest:
+      required:
+        - data
+        - extension
+      type: object
+      properties:
+        data:
+          type: string
+          format: byte
+        extension:
+          minLength: 1
+          type: string
+      additionalProperties: false
     PutPurchaseOrderRequest:
       type: object
       properties:
@@ -21805,6 +21988,9 @@ components:
           type: string
           nullable: true
         documentId:
+          type: string
+          nullable: true
+        photo:
           type: string
           nullable: true
         phone:

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **id** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **documentId** | **String** |  | [optional] 
+**photo** | **String** |  | [optional] 
 **phone** | **String** |  | [optional] 
 **email** | **String** |  | [optional] 
 **isActive** | **bool** |  | [optional] 

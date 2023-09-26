@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'CreatedAt.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '03d36a98-07a4-4323-81f4-46d4f8de8e46']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '9e4939b4-177e-4296-9efa-44c1b2540f0f']
 
 ### Return type
 
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**|  | [optional] 
  **sort** | **String**| Sorting atributes, sample: id.desc,name.asc | [optional] [default to 'CreatedAt.desc']
  **xApiKey** | **String**| Your Api Key | [optional] 
- **xCsrfToken** | **String**| CSRF Protection | [optional] [default to '797fc0c3-d884-4d9e-bd21-6563030dbfc4']
+ **xCsrfToken** | **String**| CSRF Protection | [optional] [default to 'd3d921df-5644-40ab-93e2-03bd0789de06']
 
 ### Return type
 

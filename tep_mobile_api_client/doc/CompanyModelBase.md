@@ -1,4 +1,4 @@
-# tep_mobile_api_client.model.PostUserRequest
+# tep_mobile_api_client.model.CompanyModelBase
 
 ## Load the model package
 ```dart
@@ -14,19 +14,7 @@ Name | Type | Description | Notes
 **userUpdated** | **String** |  | [optional] 
 **id** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
-**documentId** | **String** |  | [optional] 
-**photo** | **String** |  | [optional] 
-**phone** | **String** |  | [optional] 
-**email** | **String** |  | [optional] 
-**isActive** | **bool** |  | [optional] 
-**isAdmin** | **bool** |  | [optional] 
-**isSuperAdmin** | **bool** |  | [optional] 
-**isSalesman** | **bool** |  | [optional] 
-**isIntegration** | **bool** |  | [optional] 
-**isRegionManager** | **bool** |  | [optional] 
-**externalCode** | **String** |  | [optional] 
-**status** | [**UserStatus**](UserStatus.md) |  | [optional] 
-**password** | **String** |  | [optional] 
+**document** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

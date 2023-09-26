@@ -50,6 +50,7 @@ export 'package:tep_mobile_api_client/src/model/client.dart';
 export 'package:tep_mobile_api_client/src/model/client_contact_calendar_status.dart';
 export 'package:tep_mobile_api_client/src/model/client_status.dart';
 export 'package:tep_mobile_api_client/src/model/commission_status.dart';
+export 'package:tep_mobile_api_client/src/model/company_model_base.dart';
 export 'package:tep_mobile_api_client/src/model/database_collector.dart';
 export 'package:tep_mobile_api_client/src/model/database_connection.dart';
 export 'package:tep_mobile_api_client/src/model/database_queries.dart';
@@ -123,6 +124,7 @@ export 'package:tep_mobile_api_client/src/model/get_all_reason_visit_response.da
 export 'package:tep_mobile_api_client/src/model/get_all_template_response.dart';
 export 'package:tep_mobile_api_client/src/model/get_all_user_response.dart';
 export 'package:tep_mobile_api_client/src/model/get_all_vehicle_type_response.dart';
+export 'package:tep_mobile_api_client/src/model/get_user_info_response.dart';
 export 'package:tep_mobile_api_client/src/model/get_widgets_dto.dart';
 export 'package:tep_mobile_api_client/src/model/group_purchase_order_dto.dart';
 export 'package:tep_mobile_api_client/src/model/integration_status_actions.dart';
@@ -236,6 +238,7 @@ export 'package:tep_mobile_api_client/src/model/put_price_table_unloading_reques
 export 'package:tep_mobile_api_client/src/model/put_product_group_request.dart';
 export 'package:tep_mobile_api_client/src/model/put_product_line_request.dart';
 export 'package:tep_mobile_api_client/src/model/put_product_request.dart';
+export 'package:tep_mobile_api_client/src/model/put_profile_photo_request.dart';
 export 'package:tep_mobile_api_client/src/model/put_purchase_order_request.dart';
 export 'package:tep_mobile_api_client/src/model/put_reason_cancel_request.dart';
 export 'package:tep_mobile_api_client/src/model/put_reason_visit_request.dart';

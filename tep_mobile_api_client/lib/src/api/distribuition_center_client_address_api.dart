@@ -45,7 +45,7 @@ class DistribuitionCenterClientAddressApi {
   Future<Response<GetAllDistribuitionCenterClientAddressResponse>> getByIdDistribuitionCenterClientAddress({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '8c3b6325-50f6-4c22-b540-5ca4d01f6f02',
+    String? xCsrfToken = '22fb0cc5-13d9-4e17-9b12-5213c27351f7',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -143,7 +143,7 @@ class DistribuitionCenterClientAddressApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'b22d7c4a-7676-4d65-85e5-56c82a3ac792',
+    String? xCsrfToken = '53721d37-3c0e-4cd5-b3f6-9d54037d5b59',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -241,7 +241,7 @@ class DistribuitionCenterClientAddressApi {
   Future<Response<void>> tepsalesV1DistribuitionCenterClientAddressIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'f6fbb4ca-f3f8-45bb-83ba-f7d0c0e10aff',
+    String? xCsrfToken = 'e3177997-7fb9-46fd-ab6f-506035dfa809',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -303,7 +303,7 @@ class DistribuitionCenterClientAddressApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '4902eada-2a6c-49c4-a201-19b7877a3335',
+    String? xCsrfToken = 'b9c1b699-1948-4c06-bf92-221bdce55cd4',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -384,7 +384,7 @@ class DistribuitionCenterClientAddressApi {
   Future<Response<void>> tepsalesV1DistribuitionCenterClientAddressIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'f8c2d9c6-2587-4821-9113-10c634a3475d',
+    String? xCsrfToken = '6adb0afa-281d-4f2c-81e1-68e71ad47f41',
     PutDistribuitionCenterClientAddressRequest? putDistribuitionCenterClientAddressRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -477,7 +477,7 @@ class DistribuitionCenterClientAddressApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '423634c4-9f40-406f-9382-a52118402c2f',
+    String? xCsrfToken = '9c4260e1-e9b1-4bef-93f6-7ccf05a66714',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -575,7 +575,7 @@ class DistribuitionCenterClientAddressApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostDistribuitionCenterClientAddressResponse>> tepsalesV1DistribuitionCenterClientAddressPost({ 
     String? xApiKey,
-    String? xCsrfToken = '21de90e4-e666-4cb3-adce-c4f96effebaf',
+    String? xCsrfToken = '80fa9ca1-ceb8-4ca8-906a-85c47f7ab72e',
     PostDistribuitionCenterClientAddressRequest? postDistribuitionCenterClientAddressRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

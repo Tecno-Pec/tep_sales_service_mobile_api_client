@@ -1,4 +1,4 @@
-# tep_mobile_api_client.model.PostUserRequest
+# tep_mobile_api_client.model.GetUserInfoResponse
 
 ## Load the model package
 ```dart
@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **isRegionManager** | **bool** |  | [optional] 
 **externalCode** | **String** |  | [optional] 
 **status** | [**UserStatus**](UserStatus.md) |  | [optional] 
-**password** | **String** |  | [optional] 
+**company** | [**CompanyModelBase**](CompanyModelBase.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

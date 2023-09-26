@@ -45,7 +45,7 @@ class ClientContactCalendarApi {
   Future<Response<GetAllClientContactCalendarResponse>> getByIdClientContactCalendar({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'a01059e5-94cf-4176-a85d-3646e571ade3',
+    String? xCsrfToken = '80a08227-5adf-4ad8-9242-25c0ab43ed90',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -153,7 +153,7 @@ class ClientContactCalendarApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '008f6da6-8c8a-414b-b221-2bca029bc078',
+    String? xCsrfToken = 'c2393c51-1a2b-4fa2-9ab8-71aaa8f94f2c',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -256,7 +256,7 @@ class ClientContactCalendarApi {
   Future<Response<void>> tepsalesV1ClientcontactcalendarIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'c639fbd6-b829-4044-89d1-e4cbc8d54c97',
+    String? xCsrfToken = '7fac9b29-1d53-45d4-8f23-62d77caebe9c',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -318,7 +318,7 @@ class ClientContactCalendarApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'a2c3be43-e491-462e-abf1-60e28305e058',
+    String? xCsrfToken = '1e1fead1-17ee-499f-9afa-4153c4ffd6bd',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -399,7 +399,7 @@ class ClientContactCalendarApi {
   Future<Response<void>> tepsalesV1ClientcontactcalendarIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'dbc7612b-f03a-478e-9cc6-a144cf727ff0',
+    String? xCsrfToken = 'fd3f9472-203c-4a50-af84-6dd8f08bc92f',
     PutClientContactCalendarRequest? putClientContactCalendarRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -502,7 +502,7 @@ class ClientContactCalendarApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'd45fcb77-c020-4fa6-a5fb-9912e14c01ed',
+    String? xCsrfToken = '86f9cc24-0577-4c4f-994b-8bfd4319e670',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -605,7 +605,7 @@ class ClientContactCalendarApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostClientContactCalendarResponse>> tepsalesV1ClientcontactcalendarPost({ 
     String? xApiKey,
-    String? xCsrfToken = '7a9f712f-3938-43a2-9d86-fb5f493f9207',
+    String? xCsrfToken = '36970d54-3b95-490d-9a15-416e743ae7f1',
     PostClientContactCalendarRequest? postClientContactCalendarRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

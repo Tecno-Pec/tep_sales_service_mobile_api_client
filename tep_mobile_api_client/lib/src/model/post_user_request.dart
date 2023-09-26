@@ -19,6 +19,7 @@ part 'post_user_request.g.dart';
 /// * [id] 
 /// * [name] 
 /// * [documentId] 
+/// * [photo] 
 /// * [phone] 
 /// * [email] 
 /// * [isActive] 
@@ -52,6 +53,9 @@ abstract class PostUserRequest implements Built<PostUserRequest, PostUserRequest
 
   @BuiltValueField(wireName: r'documentId')
   String? get documentId;
+
+  @BuiltValueField(wireName: r'photo')
+  String? get photo;
 
   @BuiltValueField(wireName: r'phone')
   String? get phone;
@@ -156,6 +160,13 @@ class _$PostUserRequestSerializer implements PrimitiveSerializer<PostUserRequest
       yield r'documentId';
       yield serializers.serialize(
         object.documentId,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.photo != null) {
+      yield r'photo';
+      yield serializers.serialize(
+        object.photo,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -313,6 +324,14 @@ class _$PostUserRequestSerializer implements PrimitiveSerializer<PostUserRequest
           ) as String?;
           if (valueDes == null) continue;
           result.documentId = valueDes;
+          break;
+        case r'photo':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.photo = valueDes;
           break;
         case r'phone':
           final valueDes = serializers.deserialize(

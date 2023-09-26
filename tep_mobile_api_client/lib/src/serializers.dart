@@ -22,6 +22,7 @@ import 'package:tep_mobile_api_client/src/model/client.dart';
 import 'package:tep_mobile_api_client/src/model/client_contact_calendar_status.dart';
 import 'package:tep_mobile_api_client/src/model/client_status.dart';
 import 'package:tep_mobile_api_client/src/model/commission_status.dart';
+import 'package:tep_mobile_api_client/src/model/company_model_base.dart';
 import 'package:tep_mobile_api_client/src/model/database_collector.dart';
 import 'package:tep_mobile_api_client/src/model/database_connection.dart';
 import 'package:tep_mobile_api_client/src/model/database_queries.dart';
@@ -95,6 +96,7 @@ import 'package:tep_mobile_api_client/src/model/get_all_reason_visit_response.da
 import 'package:tep_mobile_api_client/src/model/get_all_template_response.dart';
 import 'package:tep_mobile_api_client/src/model/get_all_user_response.dart';
 import 'package:tep_mobile_api_client/src/model/get_all_vehicle_type_response.dart';
+import 'package:tep_mobile_api_client/src/model/get_user_info_response.dart';
 import 'package:tep_mobile_api_client/src/model/get_widgets_dto.dart';
 import 'package:tep_mobile_api_client/src/model/group_purchase_order_dto.dart';
 import 'package:tep_mobile_api_client/src/model/integration_status_actions.dart';
@@ -208,6 +210,7 @@ import 'package:tep_mobile_api_client/src/model/put_price_table_unloading_reques
 import 'package:tep_mobile_api_client/src/model/put_product_group_request.dart';
 import 'package:tep_mobile_api_client/src/model/put_product_line_request.dart';
 import 'package:tep_mobile_api_client/src/model/put_product_request.dart';
+import 'package:tep_mobile_api_client/src/model/put_profile_photo_request.dart';
 import 'package:tep_mobile_api_client/src/model/put_purchase_order_request.dart';
 import 'package:tep_mobile_api_client/src/model/put_reason_cancel_request.dart';
 import 'package:tep_mobile_api_client/src/model/put_reason_visit_request.dart';
@@ -235,6 +238,7 @@ part 'serializers.g.dart';
   ClientContactCalendarStatus,
   ClientStatus,
   CommissionStatus,
+  CompanyModelBase,
   DatabaseCollector,
   DatabaseConnection,
   DatabaseQueries,
@@ -308,6 +312,7 @@ part 'serializers.g.dart';
   GetAllTemplateResponse,
   GetAllUserResponse,
   GetAllVehicleTypeResponse,
+  GetUserInfoResponse,
   GetWidgetsDto,
   GroupPurchaseOrderDto,
   IntegrationStatusActions,
@@ -421,6 +426,7 @@ part 'serializers.g.dart';
   PutProductGroupRequest,
   PutProductLineRequest,
   PutProductRequest,
+  PutProfilePhotoRequest,
   PutPurchaseOrderRequest,
   PutReasonCancelRequest,
   PutReasonVisitRequest,

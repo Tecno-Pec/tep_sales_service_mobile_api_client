@@ -18,7 +18,7 @@ For more information, please visit [https://github.com/jefersonmlopes](https://g
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  tep_mobile_api_client: 3.0.1
+  tep_mobile_api_client: 3.0.2
 ```
 
 ### Github
@@ -275,6 +275,7 @@ Class | Method | HTTP request | Description
 [*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersIdPatch**](doc\UserApi.md#tepsalesv1usersidpatch) | **PATCH** /tepsales/v1/users/{id} | Update part of User
 [*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersIdPut**](doc\UserApi.md#tepsalesv1usersidput) | **PUT** /tepsales/v1/users/{id} | Update User
 [*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersPagedGet**](doc\UserApi.md#tepsalesv1userspagedget) | **GET** /tepsales/v1/users/paged | Get All User by filter with pagination
+[*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersPhotoPut**](doc\UserApi.md#tepsalesv1usersphotoput) | **PUT** /tepsales/v1/users/photo | Update User Photo
 [*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersPhotoUploadPost**](doc\UserApi.md#tepsalesv1usersphotouploadpost) | **POST** /tepsales/v1/users/photo/upload | Create User
 [*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersPost**](doc\UserApi.md#tepsalesv1userspost) | **POST** /tepsales/v1/users | Create User
 [*UserApi*](doc\UserApi.md) | [**tepsalesV1UsersPushtokenPost**](doc\UserApi.md#tepsalesv1userspushtokenpost) | **POST** /tepsales/v1/users/pushtoken | Add User Push Token
@@ -301,6 +302,7 @@ Class | Method | HTTP request | Description
  - [ClientContactCalendarStatus](doc\ClientContactCalendarStatus.md)
  - [ClientStatus](doc\ClientStatus.md)
  - [CommissionStatus](doc\CommissionStatus.md)
+ - [CompanyModelBase](doc\CompanyModelBase.md)
  - [DatabaseCollector](doc\DatabaseCollector.md)
  - [DatabaseConnection](doc\DatabaseConnection.md)
  - [DatabaseQueries](doc\DatabaseQueries.md)
@@ -374,6 +376,7 @@ Class | Method | HTTP request | Description
  - [GetAllTemplateResponse](doc\GetAllTemplateResponse.md)
  - [GetAllUserResponse](doc\GetAllUserResponse.md)
  - [GetAllVehicleTypeResponse](doc\GetAllVehicleTypeResponse.md)
+ - [GetUserInfoResponse](doc\GetUserInfoResponse.md)
  - [GetWidgetsDto](doc\GetWidgetsDto.md)
  - [GroupPurchaseOrderDto](doc\GroupPurchaseOrderDto.md)
  - [IntegrationStatusActions](doc\IntegrationStatusActions.md)
@@ -487,6 +490,7 @@ Class | Method | HTTP request | Description
  - [PutProductGroupRequest](doc\PutProductGroupRequest.md)
  - [PutProductLineRequest](doc\PutProductLineRequest.md)
  - [PutProductRequest](doc\PutProductRequest.md)
+ - [PutProfilePhotoRequest](doc\PutProfilePhotoRequest.md)
  - [PutPurchaseOrderRequest](doc\PutPurchaseOrderRequest.md)
  - [PutReasonCancelRequest](doc\PutReasonCancelRequest.md)
  - [PutReasonVisitRequest](doc\PutReasonVisitRequest.md)

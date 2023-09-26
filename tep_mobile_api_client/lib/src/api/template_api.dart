@@ -44,7 +44,7 @@ class TemplateApi {
   Future<Response<GetAllTemplateResponse>> getByIdTemplate({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'b423819e-ad86-404e-8b46-e751d58f2233',
+    String? xCsrfToken = 'a3bf3855-b59f-4312-869e-e861b23b37ed',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -136,7 +136,7 @@ class TemplateApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'ba8d9e77-02fb-436e-b98d-9afe6d6b48ea',
+    String? xCsrfToken = 'c5a3e2d5-51cf-4c47-a0b7-ac02b3044f57',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -231,7 +231,7 @@ class TemplateApi {
   Future<Response<void>> tepsalesV1TemplatesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '063d6a39-10e0-4579-a22f-a3c2709dfc75',
+    String? xCsrfToken = '531c5120-95ea-4ac1-b42a-5552616bbf0f',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -293,7 +293,7 @@ class TemplateApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = 'b9742280-6d21-4bc2-9cb7-f5ae777d2193',
+    String? xCsrfToken = '75003fd6-fc07-4295-8bb2-a7099206e323',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -374,7 +374,7 @@ class TemplateApi {
   Future<Response<void>> tepsalesV1TemplatesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '3de80801-a16c-4f6f-9137-ce3345cf88b4',
+    String? xCsrfToken = '454e3400-c2fe-4f69-882f-f944a56a4583',
     PutTemplateRequest? putTemplateRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -461,7 +461,7 @@ class TemplateApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'c4c69b27-4810-423c-bbe1-5f79c9d78eac',
+    String? xCsrfToken = 'bd548938-2105-452d-a21b-a2484462db9c',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -556,7 +556,7 @@ class TemplateApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostTemplateResponse>> tepsalesV1TemplatesPost({ 
     String? xApiKey,
-    String? xCsrfToken = 'b331c762-82be-4707-a93a-bdd3236e3ea5',
+    String? xCsrfToken = '726ff7af-db3b-46f9-bef8-f53eea795864',
     PostTemplateRequest? postTemplateRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

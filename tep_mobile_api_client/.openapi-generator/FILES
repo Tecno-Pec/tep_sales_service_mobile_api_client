@@ -16,6 +16,7 @@ doc/CommissionApi.md
 doc/CommissionStatus.md
 doc/CompanyApi.md
 doc/CompanyGlobalParameterApi.md
+doc/CompanyModelBase.md
 doc/DashboardApi.md
 doc/DatabaseCollector.md
 doc/DatabaseConnection.md
@@ -96,6 +97,7 @@ doc/GetAllReasonVisitResponse.md
 doc/GetAllTemplateResponse.md
 doc/GetAllUserResponse.md
 doc/GetAllVehicleTypeResponse.md
+doc/GetUserInfoResponse.md
 doc/GetWidgetsDto.md
 doc/GroupPurchaseOrderDto.md
 doc/IntegrationConfigApi.md
@@ -221,6 +223,7 @@ doc/PutPriceTableUnloadingRequest.md
 doc/PutProductGroupRequest.md
 doc/PutProductLineRequest.md
 doc/PutProductRequest.md
+doc/PutProfilePhotoRequest.md
 doc/PutPurchaseOrderRequest.md
 doc/PutReasonCancelRequest.md
 doc/PutReasonVisitRequest.md
@@ -290,6 +293,7 @@ lib/src/model/client.dart
 lib/src/model/client_contact_calendar_status.dart
 lib/src/model/client_status.dart
 lib/src/model/commission_status.dart
+lib/src/model/company_model_base.dart
 lib/src/model/database_collector.dart
 lib/src/model/database_connection.dart
 lib/src/model/database_queries.dart
@@ -364,6 +368,7 @@ lib/src/model/get_all_reason_visit_response.dart
 lib/src/model/get_all_template_response.dart
 lib/src/model/get_all_user_response.dart
 lib/src/model/get_all_vehicle_type_response.dart
+lib/src/model/get_user_info_response.dart
 lib/src/model/get_widgets_dto.dart
 lib/src/model/group_purchase_order_dto.dart
 lib/src/model/integration_status_actions.dart
@@ -477,6 +482,7 @@ lib/src/model/put_price_table_unloading_request.dart
 lib/src/model/put_product_group_request.dart
 lib/src/model/put_product_line_request.dart
 lib/src/model/put_product_request.dart
+lib/src/model/put_profile_photo_request.dart
 lib/src/model/put_purchase_order_request.dart
 lib/src/model/put_reason_cancel_request.dart
 lib/src/model/put_reason_visit_request.dart
@@ -495,4 +501,6 @@ lib/src/model/vehicle_type_status.dart
 lib/src/serializers.dart
 lib/tep_mobile_api_client.dart
 pubspec.yaml
-test/client_contact_calendar_status_test.dart
+test/company_model_base_test.dart
+test/get_user_info_response_test.dart
+test/put_profile_photo_request_test.dart

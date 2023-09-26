@@ -46,7 +46,7 @@ class AddressApi {
   Future<Response<GetAllAddressResponse>> getByIdAddress({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '8b3b191e-237b-46e2-82e4-2b347ec8f8a5',
+    String? xCsrfToken = '3e8d0ae3-d6d9-4f91-ab26-9f056f1ca4bf',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -148,7 +148,7 @@ class AddressApi {
     int? limit = 100,
     String? sort = 'Id.asc',
     String? xApiKey,
-    String? xCsrfToken = '00b85f7d-1d91-405c-aa7c-3afbcdcc77f5',
+    String? xCsrfToken = '741e542f-65d9-4c73-9723-4198914965ed',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -248,7 +248,7 @@ class AddressApi {
   Future<Response<void>> tepsalesV1AddressesIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '91d3fb8d-c692-4239-87e7-16278ab20ad7',
+    String? xCsrfToken = 'd73d2230-f3e1-4521-b627-f72d8662dfd3',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -310,7 +310,7 @@ class AddressApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '688000e8-a7e4-435a-9bd0-27fef7709553',
+    String? xCsrfToken = 'd0b39983-5db0-4597-a969-a61ef130be60',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -391,7 +391,7 @@ class AddressApi {
   Future<Response<void>> tepsalesV1AddressesIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'a605c308-bec7-4728-a0f4-1ff39e56187c',
+    String? xCsrfToken = '22d24e7f-36fe-451f-9fee-0235893b7e5e',
     PutAddressRequest? putAddressRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -488,7 +488,7 @@ class AddressApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '709d49db-5b70-4766-a2bb-29255ab72646',
+    String? xCsrfToken = 'd67deac1-ae89-46e8-a162-8c516d993857',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -588,7 +588,7 @@ class AddressApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostAddressResponse>> tepsalesV1AddressesPost({ 
     String? xApiKey,
-    String? xCsrfToken = '8b24f984-c9ff-4013-aba7-cd361fc31aa9',
+    String? xCsrfToken = '2c2e76ca-6f7e-4fd0-ae5e-21f76d417b26',
     PostAddressRequest? postAddressRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

@@ -44,7 +44,7 @@ class DiscountWeightApi {
   Future<Response<GetAllDiscountWeightResponse>> getByIdDiscountWeight({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'e299c23a-91b4-4271-86ee-0905ca66f618',
+    String? xCsrfToken = '6b71b8cf-823e-4add-9e99-6d268b254d1d',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -138,7 +138,7 @@ class DiscountWeightApi {
     int? limit = 100,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = '6d87b11a-d874-4926-8ed6-c0332c1a9ec4',
+    String? xCsrfToken = 'fc66d4b6-d558-4a89-b258-a27908274507',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -234,7 +234,7 @@ class DiscountWeightApi {
   Future<Response<void>> tepsalesV1DiscountWeightsIdDelete({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = '7304fa01-36df-4ec6-a7bb-5f8675e45ad5',
+    String? xCsrfToken = 'de2d6093-1112-4499-bba1-aa1d318bd46e',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -296,7 +296,7 @@ class DiscountWeightApi {
     required String id,
     required BuiltList<Operation> operation,
     String? xApiKey,
-    String? xCsrfToken = '67d824b8-83a6-40f9-9bf8-d55fce2f76a4',
+    String? xCsrfToken = 'fb14f28a-6a2d-402c-8f51-764f18b5a721',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -377,7 +377,7 @@ class DiscountWeightApi {
   Future<Response<void>> tepsalesV1DiscountWeightsIdPut({ 
     required String id,
     String? xApiKey,
-    String? xCsrfToken = 'b9d8f3e0-eb3e-4ecd-9af1-b41e6c80e450',
+    String? xCsrfToken = '2575c2b7-b619-438c-beb3-44fb17e236eb',
     PutDiscountWeightRequest? putDiscountWeightRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -466,7 +466,7 @@ class DiscountWeightApi {
     int? pageSize,
     String? sort = 'Id.desc',
     String? xApiKey,
-    String? xCsrfToken = 'b2396ffa-ac69-4f19-a8f4-d3d55d3f1079',
+    String? xCsrfToken = '20585c8a-8bcb-4a36-ad21-9cc9120c8570',
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -562,7 +562,7 @@ class DiscountWeightApi {
   /// Throws [DioError] if API call or serialization fails
   Future<Response<PostDiscountWeightResponse>> tepsalesV1DiscountWeightsPost({ 
     String? xApiKey,
-    String? xCsrfToken = '2f8ed5a1-1790-45d2-bd5e-2e2aaffef4e9',
+    String? xCsrfToken = '4c6f68e7-babb-40ab-ac0e-a8d9a660cb4e',
     PostDiscountWeightRequest? postDiscountWeightRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

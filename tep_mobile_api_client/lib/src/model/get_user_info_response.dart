@@ -3,13 +3,14 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:tep_mobile_api_client/src/model/company_model_base.dart';
 import 'package:tep_mobile_api_client/src/model/user_status.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'post_user_response.g.dart';
+part 'get_user_info_response.g.dart';
 
-/// PostUserResponse
+/// GetUserInfoResponse
 ///
 /// Properties:
 /// * [createdAt] 
@@ -30,8 +31,9 @@ part 'post_user_response.g.dart';
 /// * [isRegionManager] 
 /// * [externalCode] 
 /// * [status] 
+/// * [company] 
 @BuiltValue()
-abstract class PostUserResponse implements Built<PostUserResponse, PostUserResponseBuilder> {
+abstract class GetUserInfoResponse implements Built<GetUserInfoResponse, GetUserInfoResponseBuilder> {
   @BuiltValueField(wireName: r'createdAt')
   DateTime? get createdAt;
 
@@ -87,27 +89,30 @@ abstract class PostUserResponse implements Built<PostUserResponse, PostUserRespo
   UserStatus? get status;
   // enum statusEnum {  0,  1,  };
 
-  PostUserResponse._();
+  @BuiltValueField(wireName: r'company')
+  CompanyModelBase? get company;
 
-  factory PostUserResponse([void updates(PostUserResponseBuilder b)]) = _$PostUserResponse;
+  GetUserInfoResponse._();
+
+  factory GetUserInfoResponse([void updates(GetUserInfoResponseBuilder b)]) = _$GetUserInfoResponse;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(PostUserResponseBuilder b) => b;
+  static void _defaults(GetUserInfoResponseBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<PostUserResponse> get serializer => _$PostUserResponseSerializer();
+  static Serializer<GetUserInfoResponse> get serializer => _$GetUserInfoResponseSerializer();
 }
 
-class _$PostUserResponseSerializer implements PrimitiveSerializer<PostUserResponse> {
+class _$GetUserInfoResponseSerializer implements PrimitiveSerializer<GetUserInfoResponse> {
   @override
-  final Iterable<Type> types = const [PostUserResponse, _$PostUserResponse];
+  final Iterable<Type> types = const [GetUserInfoResponse, _$GetUserInfoResponse];
 
   @override
-  final String wireName = r'PostUserResponse';
+  final String wireName = r'GetUserInfoResponse';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    PostUserResponse object, {
+    GetUserInfoResponse object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.createdAt != null) {
@@ -236,12 +241,19 @@ class _$PostUserResponseSerializer implements PrimitiveSerializer<PostUserRespon
         specifiedType: const FullType(UserStatus),
       );
     }
+    if (object.company != null) {
+      yield r'company';
+      yield serializers.serialize(
+        object.company,
+        specifiedType: const FullType(CompanyModelBase),
+      );
+    }
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    PostUserResponse object, {
+    GetUserInfoResponse object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -252,7 +264,7 @@ class _$PostUserResponseSerializer implements PrimitiveSerializer<PostUserRespon
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required PostUserResponseBuilder result,
+    required GetUserInfoResponseBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -395,6 +407,13 @@ class _$PostUserResponseSerializer implements PrimitiveSerializer<PostUserRespon
           ) as UserStatus;
           result.status = valueDes;
           break;
+        case r'company':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(CompanyModelBase),
+          ) as CompanyModelBase;
+          result.company.replace(valueDes);
+          break;
         default:
           unhandled.add(key);
           unhandled.add(value);
@@ -404,12 +423,12 @@ class _$PostUserResponseSerializer implements PrimitiveSerializer<PostUserRespon
   }
 
   @override
-  PostUserResponse deserialize(
+  GetUserInfoResponse deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = PostUserResponseBuilder();
+    final result = GetUserInfoResponseBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(
